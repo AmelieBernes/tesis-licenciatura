@@ -1,0 +1,28 @@
+I'm implementing a Python script whose input is an integer n.
+I inted to run it for values of n up to 200, but even for "small" values of n, running the
+script would imply computing a great amount of factorials (ex. if n=4, I need to compute 20 factorials).
+The good thing is that if the input is n, the program needs to compute factorials of integers no greater than n.
+
+That's why I implemented a factorial function using dynamic programming:
+
+
+memo={0: 1, 1:1} #A dictionary in which I will save all the factorials computed during execution.
+#The key is an int>=0, and the value it stores is the factorial of such integer.
+
+def factorial(n, memoria=memo):
+    try: 
+        return memoria[n]
+    except KeyError: #Error raised if the factorial of n was not yet computed. 
+		#In this case we need to compute it and then store it in "memo"
+        resultado=n*factorial(n-1)
+        memoria[n]=resultado
+        return resultado
+
+
+I thought doing this will improve the speed of my algorithm, but after finishing it
+and testing it against a second version that uses the built in Python function factorial, 
+I find that the time of execution is almost the same!
+
+I'm not a computer science major, but a math major, and besides the time of execution/memory
+needed to execute a program I don't know which other metrics can be useful to determine
+how "good" the performance of a program is.
