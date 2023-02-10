@@ -1,0 +1,49 @@
+\documentclass[a4paper,oneside,11pt]{extreport}
+\input{paquetes_tesis}
+
+
+
+\makeindex
+\begin{document}
+\maketitle
+
+
+\input{agradecimientos}
+\input{pendientes_tesis}
+
+
+%--- Disclaimer.
+
+\begin{center}
+\TODO{Aquí explica, a grandes rasgos, de qué va todo.}
+Este trabajo fue escrito en \LaTeX.
+El lenguaje de programación de nuestra elección
+para el desarrollo de la parte computacional 
+fue Python.
+La mayoría de las imágenes aquí presentadas fueron,
+a su vez, programadas en Python, y en algunas ocasiones
+retocadas (o dibujadas completamente) en Krita. 
+\TODO{dar créditos por las brochas? Amelie}
+\end{center}
+
+
+%--Índice
+\tableofcontents
+
+%-- Cuerpo
+%- Nota: prefiero no anidar los archivos .tex en carpetas,
+% sino en archivos:) por ejemplo, los input de este .tex
+% tiene sólamente inputs; en esos inputs está todo el escrito.
+% Así que puedes pensar a los input de este archivo como carpetas.
+\input{ConstruccionBases}
+\input{expresiones_legendre}
+\input{simetrias_codigos}
+\input{Teoria}
+\input{Notacion}
+
+
+
+\bibliographystyle{alpha}
+\bibliography{Referencias}
+
+\end{document}

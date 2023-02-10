@@ -1,0 +1,134 @@
+\section{Revisión de literatura y artículos relacionados}
+
+Hicimos una búsqueda en la literatura
+para saber si bases parecidas a la
+de Legendre discreta
+(i.e. a la definida en 
+\ref{def: base de Legendre discreta})
+ya habían sido 
+consideradas antes y, en caso afirmativo, las propiedades
+conocidas sobre ellas. 
+
+
+\begin{itemize}
+\item Encontramos el artículo \textit{``Discrete (Legendre) 
+orthogonal polynomials -a survey''} ~\cite{Neuman}, en el que se habla de
+ciertos polinomios ortogonales de variable independiente
+discreta; fijado un entero $n$,
+se afirma (pero no demuestra) la existencia de únicas funciones
+\[
+P_{k}(\cdot ,n)=P_{k}(m,n), \hspace{1cm} 0 \leq k \leq n
+\]
+de variable discreta $0 \leq m \leq n $, tales que
+
+
+\begin{equation}
+\suma{m=0}{n}{P_{k}(m,n) P_{l}(m,n)} =0
+\hspace{0.3cm} \text{si} \hspace{0.2cm} m \neq l \tag{DLOP-1[n]} \label{eq:dlop1}
+\end{equation}
+y 
+\begin{equation}
+\text{para toda} \hspace{0.3cm} 0 \leq k \leq n, \hspace{0.3cm} P_{k}(0, n)=1.   \tag{DLOP-2[n]} \label{eq:dlop2}
+\end{equation}
+
+
+Pensando en los 
+$n+1$ vectores de $\IR^{n+1}$ que resultan
+de evaluar estas funciones discretas en su rango,
+es decir, en los vectores
+\begin{equation}
+y_{k}:= (P_{k}(m, n))_{m=0}^{m=n}, \hspace{0.2cm}
+0 \leq k \leq m,
+\end{equation}
+las condiciones \eqref{eq:dlop1} y \eqref{eq:dlop2}
+se reinterpretan como
+\begin{equation}
+\{ y_{k}: \hspace{0.2cm} 0 \leq k \leq n\}
+\hspace{0.3cm} \text{es una
+base ortogonal de} \hspace{0.2cm} \IR^{n}
+\tag{DLOP'-1[n]} \label{eq:dlop'1}
+\end{equation}
+y 
+\begin{equation}
+\text{la primera
+entrada de todo} \hspace{0.2cm} y_{k} \hspace{0.2cm}
+\text{es uno.} 
+\tag{DLOP'-2[n]} \label{eq:dlop'2}
+\end{equation}
+
+
+Los autores de este estudio recopilan y derivan expresiones
+analíticas (que dependen de $n$ y $k$) para estas funciones
+discretas $P_{k}(\cdot ,n)$ y, del notar que los coeficientes
+numéricos de estos son, salvo por posibles cambios de signo,
+los de los polinomios de Legendre trasladados [
+\textcolor{red}{aquí referencia a Wikipedia}] se refieren a 
+estos como \textbf{polinomios ortogonales
+discretos de Legendre} \footnote{El término empleado en el artículo,
+escrito en inglés, es ``discrete Legendre orthogonal
+polynomials''}, usando para designarlos la abreviatura
+ ``DLOP's''. \\
+
+Aparte de mencionar en la introducción que
+`` variantes de estos polinomios fueron consideradas por primera
+vez por Chebyshev en 1858 y más tarde por Gram en 1915 '', no se
+da un marco teórico como el desarrollado por nosotros, sólo 
+se dan expresiones analíticas para la aplicación de estos
+(expresiones que nos interesa, después de efectuar los
+cambios necesarios, utilizar; volveremos a esta cuestión más
+adelante). Los trabajos originales de Chebyshev y Gram
+no están citados en las referencias del artículo, y 
+nosotros no fuimos capaces de 
+encontrarlos. 
+
+
+\item  Una segunda mención importante a los DLOP's se encuentra en 
+la tesis ``Cross directional control of basis weight on paper machines
+using Gram polynomials'', tesis en la que la motivación para la consideración de
+polinomios ortogonales en un conjunto finito de puntos se
+introduce como sigue: \\
+
+
+Si $\hat{x}$ es un vector de $n$ entradas, digamos
+\[
+\hat{x}=(x(1), \ldots , x(n)),
+\]
+donde las entradas representan tiempos de medición,
+si $\hat{y}=\hat{y}(\hat{x})$ es el vector de las medidas 
+observadas en los tiempos dados por las entradas del vector $\hat{x}$,
+fijado un entero $m$, si para $j=0, \ldots , n-1$
+$p_{j}$ es un polinomio de grado $j$, se busca determinar escalares
+$c_{j}$ tales que, asociando pesos $w(x(i))$ a los tiempos $x(i)$,
+la función polinomial
+\[
+\suma{j=0}{m}{c_{j}P_{j}}
+\]
+aproxime ``lo mejor posible'' a $\hat{y}$ en los tiempos $x(i)$, 
+entiendo por esto el que la expresión
+
+\[
+\suma{i=0}{n-1}{w(x(i))}\left[ y(x(i))- 
+\suma{j=0}{m}{c_{j}P_{j}}(x(i)) \right]
+\]
+
+alcance un mínimo. \\
+Se observa que la determinación de estos escalares se
+simplifica si los polinomios $P_{j}$ son ortogonales
+entre sí en los tiempos $x(1), \ldots , x(n)$ (entendiendo
+por esto que los vectores de $\IR^{n}$ que resultan de evaluar
+a las funciones polinomiales en ellos son ortogonales entre sí). \\
+La obtención de polinomios ortogonales en un
+conjunto de puntos $x(1), \ldots , x(n)$ se hace en el 
+libro `` Rabinowitz, a first course in numerical analysis ''
+p. 255: lo que hacen los autores es
+considerar $m$ polinomios
+\[
+q_{j}=q_{j}(x),\hspace{1cm} j=0, \ldots , m-1,
+\]
+
+siendo $q_{j}$ un polinomio de grado $j$, 
+tales que los vectores de $\IR^{n}$ que resultan de evaluar
+a estos en los puntos $x(1), \ldots , x(n)$ son linealmente
+independientes. \TODO{luego hacen lo mismo que nosotros, verdad?
+Después derivan unas fórmulas por recurrencia que no entendí.}
+\end{itemize}
