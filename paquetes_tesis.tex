@@ -1,0 +1,176 @@
+%%%% Mis paquetes %%%%
+\usepackage[utf8]{inputenc}
+\usepackage{comment} %para comentar párrafos largos
+						
+
+				
+\usepackage[most]{tcolorbox} %para encerrar texto en cajas de colores
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage{mathtools}% http://ctan.org/pkg/mathtool
+\usepackage{amsthm} 
+
+
+\usepackage{subcaption, threeparttable}
+\usepackage{graphicx} 
+\graphicspath{{./imagenes}}
+\DeclareCaptionFormat{custom}
+{
+    \textbf{#1#2}\textit{\small #3}
+}
+\captionsetup{format=custom}
+\usepackage[font=small,labelfont=bf]{caption} %para que los nombres 'Figura x' estén en negritas.
+
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{epstopdf}
+
+%Gilles C. paquetes para imagenes con Inkscape
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./imagenes}{#1.pdf_tex}}
+
+\usepackage{amsmath,bm}
+\usepackage{marginnote} %Para escribir en los márgenes
+\usepackage{xcolor, color, soul}
+\DeclareRobustCommand{\hlAME}[2]{{\sethlcolor{#1}\hl{#2}}}
+
+%mis colores
+\definecolor{ameMorado}{HTML}{816780}
+\definecolor{ameDorado}{HTML}{e4bc8c}
+\definecolor{ameRosa}{HTML}{FF69B4}
+\definecolor{ameAzul}{HTML}{41BBE0}
+
+\usepackage{tikz}
+\usepackage[toc,page]{appendix}  
+\usepackage{enumerate}
+\usepackage{lscape} %Para tablas horizontales.
+\usepackage{verbatim}
+
+
+\usepackage{natbib}
+%\usepackage{chngcntr}
+%\counterwithin{equation}{section}
+
+
+%Para escribir pseudocódigo
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\code}[1]{\texttt{#1}}
+%\swapnumbers %Para tener un solo contador para TODOS los 'equation' environment.
+
+\usepackage{amssymb}
+\usepackage{mdframed} %Símbolos en cajas
+\usepackage{amsmath} %it is best to load this package if doing any serious mathematical layout with LaTeX
+\usepackage{cases}
+\usepackage{bm} %Bold math text
+\usepackage{marvosym}
+\usepackage{fancyref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage{imakeidx}
+\usepackage{scalerel}
+\usepackage[margin=1.3in,footskip=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{subfiles} % Best loaded last in the preamble
+
+%%%% Mis macros %%%%
+
+			%% Secciones:
+			%Pongo a todas el contador de 'teo'
+			\newtheorem{teo}{Teorema}[section]
+			\newtheorem{lema}[teo]{Lema}
+			\newtheorem{prop}[teo]{Proposición}
+			\newtheorem{obs}[teo]{Observación}
+			%\newtheorem{dem}[teo]{Demostración}
+			\newtheorem{cor}[teo]{Corolario}
+			\newtheorem{defi}[teo]{Definición}
+			\newtheorem{ej}[teo]{Ejemplo}
+			\newtheorem{notacion}[teo]{Notación}
+			\newtheorem{listaObj}[teo]{Lista de objetivos}
+			
+			%\theoremstyle{definition}
+			\newtheorem{nota}[teo]{Nota}
+			%\newtheorem{teo}[equation]{\textbf{Lema}}
+			%\newtheorem{lema}[equation]{\textbf{Lema}}
+			%\newtheorem{prop}[equation]{\bf Proposición}
+			%\newtheorem{obs}[equation]{\bf Observación}
+			%\newtheorem{dem}[equation]{\bf Demostración}
+			%\newtheorem{cor}[equation]{\bf Corolario}
+			%\newtheorem{defi}[equation]{\bf Definición}
+			%\newtheorem{ej}[equation]{\bf Ejemplo}
+			%\newtheorem{notacion}[equation]{\bf Notación}
+
+			
+			%\theoremstyle{definition}
+			%\newtheorem{nota}[equation]{\bf Nota}
+
+			%% Símbolos matemáticos
+			
+			\newcommand{\demostracion}{\textbf{Demostración.} \hspace*{0.1cm}}
+			\newcommand*{\QEDA}{\null\nobreak\hfill\ensuremath{\blacksquare}}%
+			\newcommand*{\QEDB}{\null\nobreak\hfill\ensuremath{\square}}%
+			
+			\newcommand{\TODO}[1]{\textcolor{purple}{#1}}
+			\newcommand{\bien}[1]{\textcolor{blue}{Revisado.}}
+			
+			\newcommand*{\final}{\null\nobreak\hfill\ensuremath{\diamond}}
+			\newcommand{\IR}{\mathbb{R}}
+			\newcommand{\IC}{\mathbb{C}}
+			\newcommand{\IN}{\mathbb{N}}
+			\newcommand{\IP}{\mathbb{P}}
+			\newcommand{\IZ}{\mathbb{Z}}
+
+			\newcommand{\La}{\Lambda}			
+			
+			\newcommand{\suma}[3]{\sum\limits_{#1}^{#2}#3} %Sumas y series
+			\newcommand{\union}[3]{\bigcup\limits_{#1}^{#2}{#3}} %uniones
+			\newcommand{\producto}[3]{\prod_{#1}^{#2}{#3}} %productos
+			\newcommand{\limite}[2]{\lim\limits_{#1}{#2}} %límites
+			\newcommand{\limsu}[2]{\lim\limits_{#1 \rightarrow \infty }#2_{#1}}
+			%para límites de sucesiones
+			\newcommand{\Om}{\Omega}
+			\newcommand{\cali}[1]{\mathcal{#1}} %Letras caligráficas
+			\newcommand{\cont}[2]{$\mathcal{C} [#1, #2]$}
+			\newcommand{\integ}[3]{\int_{#1}^{#2}{#3}}
+			\newcommand{\ldos}{\mathit{l}^{2}}
+
+
+			\DeclareMathOperator*{\ameboxplus}{{\boxplus}}
+
+
+
+%macros Moisés
+\newcommand{\aplica}[5]{\text{${\begin{array}{crcl} #1: & #2 & \longrightarrow & #3 \\ \, & #4 & \longmapsto & #5 \end{array}}$}} %Notación para la definición de una aplicación.
+\newcommand{\demo}[1]{\textbf{Demostración:} #1 \nopagebreak[4] $\square$ \\}
+			
+			
+%Source: https://tex.stackexchange.com/questions/68010/how-to-create-multilevel-colored-boxes-using-tcolorbox-any-other-package
+\makeatletter
+\newcommand{\DrawLine}{%
+  \begin{tikzpicture}
+  \path[use as bounding box] (0,0) -- (\linewidth,0);
+  \draw[color=black,dashed,dash phase=2pt]
+        (0-\kvtcb@leftlower-\kvtcb@boxsep,0)--
+        (\linewidth+\kvtcb@rightlower+\kvtcb@boxsep,0);
+  \end{tikzpicture}%
+  }
+\makeatother
+
+
+
+
+%%%% Datos generales del archivo %%%%
+\title{Tesis}
+\author{Amélie Bernès}

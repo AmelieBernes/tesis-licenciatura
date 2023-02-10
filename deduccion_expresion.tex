@@ -1,0 +1,308 @@
+\section{Deducción de la expresión analítica de la base $\cali{L}^{n}$}
+
+\noindent Fijada una dimensión $n$, planeamos usar las fórmulas
+dadas en ~\cite{Neuman}
+para establecer expresiones analíticas
+de los vectores de nuestra base $\cali{L}^{n}$; queremos,
+pues, a partir de las expresiones dadas de los
+elementos de la base
+\begin{equation}
+\label{eq: base DLOP}
+\{
+y_{k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1}
+: \hspace{0.2cm} 0 \leq k \leq n-1
+\}
+\end{equation}
+
+\noindent
+obtener las de la base de Legendre discreta
+\begin{equation}
+\label{eq: base Legendre}
+\cali{L}^{n}=
+\{
+\cali{L}^{n,k}: \hspace{0.2cm} 0 \leq k \leq n-1
+\}.
+\end{equation}
+
+\begin{lema}
+\label{prop: legendre y DLOPS son paralelos}
+Sea $n \in \IN$. 
+Considere a 
+las bases de $\IR^{n}$
+\begin{equation}
+\label{eq0: base DLOP}
+\{
+y_{k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1} \in \IR^{n}
+: \hspace{0.2cm} 0 \leq k \leq n-1
+\},
+\end{equation}
+donde las funciones $P_{k}(\cdot , n-1)= P_{k}(m , n-1)$ de variable 
+$0 \leq m \leq n-1$
+son las únicas que satisfacen las condiciones
+\eqref{eq:dlop1} y \eqref{eq:dlop2},
+y la base de Legendre discreta de dimensión $n$
+\begin{equation}
+\label{eq0: base de Legendre discreta}
+\cali{L}^{n}=\{ \cali{L}^{n,k}= (\cali{L}_{m}^{n,k})_{m=0}^{n-1} \in \IR^{n} : 
+\hspace{0.1cm} 0 \leq k \leq n-1\}.
+\end{equation}
+Para todo $0 \leq k \leq n-1$, los vectores 
+$y_{k}$ y $\cali{L}^{n,k}$ son paralelos.
+\end{lema}
+\noindent
+\textbf{Demostración.}
+Procedemos por inducción sobre $k$.
+\begin{itemize}
+	\item  (Base de inducción) ys habíamos calculado que
+	$\cali{L}^{n,0}=\frac{1}{\sqrt{n}}(1, \ldots , 1)$; 
+	según ~\cite{Neuman}
+	\TODO{[Survey], eq},
+	 $P_{0}(\cdot , n-1)$ es función discreta constante uno, 
+	luego, $y_{0}=(1, \ldots , 1)$. 
+	Es	
+	claro entonces que $\cali{L}^{n,0}$ 
+	y $y_{0}$	
+	son paralelos.
+	
+	\item (Paso inductivo) supongamos cierta la proposición para
+	todo entero entre cero y $k-1$ (inclusivo).	\\
+	Según la fórmula
+	~\cite{Neuman}[7], $y_{k}$ es
+	un polinomio discreto con dominio 
+	uniforme, donde la máxima potencia
+	del polinomio discretizado para obtenerse 
+	$y_{k}$ es $k$, luego,
+	\[
+	y_{k} \in W_{n,k}.
+	\]	
+	Según la condición \eqref{eq:dlop'1}, $y_{k}$ es ortogonal a
+	los $k$ vectores
+	\[
+	y_{l}, \hspace{0.2cm} 0 \leq l \leq k-1;
+	\] 
+	como estos, según
+	nuestra hipótesis de inducción, son paralelos (respectivamente)
+	a los
+	\[
+	\cali{L}^{n, l}, \hspace{0.2cm} 0 \leq l \leq k-1,
+	\] 
+	tenemos que $y_{k}$ es ortogonal a todos estos vectores,
+	vectores que conforman una base del espacio $W_{n,k-1}$
+	(c.f. corolario \ref{cor: BON de legendre para espacios Wk}); así,
+	\[
+	y_{k} \in W_{n,k} 
+	\ominus W_{n,k-1}=\text{span}(\cali{L}^{n,k});
+	\]
+	de esto se concluye, como queríamos, que los vectores 
+	$y_{k}$ y $\cali{L}^{n,k}$
+	son paralelos. \QEDB 
+\end{itemize}
+\vspace{0.2cm}
+
+
+
+\noindent Del paralelismo
+establecido en este último lema
+\ref{prop: legendre y DLOPS son paralelos}
+podemos establecer una igualdad 
+entre los vectores $y_{k}$ y los $\cali{L}^{n,k}$.
+
+\begin{prop}
+\label{prop: igualdad entre los de legendre y los del survey}
+Sean $n \in \IN$ y sean las bases 
+\eqref{eq0: base DLOP} y 
+\eqref{eq0: base de Legendre discreta} de $\IR^{n}$.
+Para toda $0 \leq k \leq n-1$, 
+\begin{equation}
+\label{eq9: 2Dic}
+\cali{L}^{n,k}= (-1)^{k} \cdot \frac{y_{k}}{||y_{k}||}.
+\end{equation}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Sea $0 \leq k \leq n-1$. Del lema
+\ref{prop: legendre y DLOPS son paralelos}
+y el que el vector
+$\cali{L}^{n,k}$ sea unitario
+se deduce la existencia de un escalar $a_{k}$
+tal que 
+\begin{equation}
+\label{eq10: 2Dic}
+a_{k}\cali{L}^{n,k}= y_{k}, \hspace{0.5cm}
+\text{con} \hspace{0.2cm} a_{k} \in \{ \pm || y_{k} || \}.
+\end{equation}
+Determinemos el signo de $a_{k}$. \\
+
+\noindent Puesto que $\cali{L}^{n,k}$ es ortogonal a todos los polinomios
+discretos de grado menor a $k$
+(c.f. corolario
+\ref{cor: Ln,k ortogonal a todo pol discreto de grado menor a k}), aplicando la bilinealidad
+del producto punto en $\IR^{n}$ y usando la fórmula 
+\TODO{[Survey(7)]},
+tenemos que
+
+\begin{align*}
+a_{k}= & a_{k} \cdot 1 = 
+a_{k} 
+\cdot  \langle  \cali{L}^{n,k} , \cali{L}^{n,k} \rangle \\
+= & \langle a_{k} \cali{L}^{n,k} , \cali{L}^{n,k} \rangle \\
+= & \langle y_{k} , \cali{L}^{n,k} \rangle \\
+= & \langle (P_{k}(m, n-1))_{m=0}^{n-1} 
+\hspace{0.1cm}, \hspace{0.1cm} \cali{L}^{n,k} \rangle \\
+= &
+\left\langle
+\frac{(-1)^{k}\binom{2k}{k}}{(n-1)^{(k)}} \hspace{0.1cm} \cdot
+v_{k} , \cali{L}^{n,k}
+\right\rangle, \\
+= & \frac{(-1)^{k}\binom{2k}{k}}{(n-1)^{(k)}} \hspace{0.1cm}
+\langle v_{k} , \cali{L}^{n,k} \rangle ,
+\end{align*}
+donde $v_{k}$ es,
+como siempre, el vector 
+dado por \eqref{vectores vk}.
+En resumen, hemos llegado a que
+\begin{equation}
+\label{eq1: 9Nov}
+a_{k}= (-1)^{k}\cdot 
+\frac{\binom{2k}{k}}{(n-1)^{(k)}}\cdot 
+\langle v_{k} , \cali{L}^{n,k}
+\rangle.
+\end{equation}
+Como $\frac{\binom{2k}{k}}{(n-1)^{(k)}}$
+es un número positivo, sólo los factores $(-1)^{k}$ y 
+$\langle v_{k} , \cali{L}^{n,k} \rangle$
+determinan el signo de $a_{k}$.
+\noindent 
+Recuerde ahora que,
+según nuestra construcción inicial,
+los polinomios discretos de Legendre
+de dimensión $n$ (i.e.
+los elementos del conjunto 
+\eqref{eq0: base de Legendre discreta}) 
+se obtienen 
+al ortonormalizar con el proceso
+de Gram-Schmidt a la base 
+de $\IR^{n}$ formada por
+los vectores $v_{k}$; 
+podemos entonces aplicar el lema \ref{Lema1} para 
+concluir que el signo del producto punto 
+$\langle v_{m} , \cali{L}^{n,m} \rangle$
+es positivo; así,
+según \eqref{eq1: 9Nov},
+el signo de $a_{k}$ 
+es $(-1)^{k}$;
+puesto que $a_{k}$ sólo podía ser
+$||y_{k}||$ o $-||y_{k}||$ 
+(c.f. \eqref{eq10: 2Dic})
+y por ser la norma
+de un vector es no negativa, concluimos que
+$a=(-1)^{k}||y_{k}||$; sustituyendo esto en
+\eqref{eq10: 2Dic},
+concluimos lo deseado.
+\\
+\QEDB
+\vspace{0.2cm}
+
+
+\noindent 
+
+Recuerde que nuestro objetivo es determinar expresiones
+de los vectores $\cali{L}^{n,k}$; 
+después de lo demostrado en 
+la proposición
+\ref{prop: igualdad entre los de legendre y los del survey}
+estamos en posición de hacer esto, pues
+en base a la relación de ortogonalidad 
+~\cite{Neuman}, p. 746
+podemos calcular el cuadrado
+de la norma de cada vector $y_{k}$ (o sea,
+el valor absoluto de $a_{k}$)
+y  en base a 
+~\cite{Neuman}[7]
+podemos
+obtener una expresión para $y_{k}$.
+
+Planteamos, por fin, una expresión para
+todo vector de la forma
+$\cali{L}^{n,k}$ en el siguiente teorema.
+Para su formulación necesitamos antes
+definir el concepto de ``fading factorial''
+usado en el artículo ~\cite{Neuman}.
+\begin{defi}
+\label{def: fading factorial}
+Sean $K, m \in \overline{\IN}$. Se define
+\footnote{Esta es la definición de
+fading factorial dada en ~\cite{Neuman}, p.745 }
+el \textbf{fading factorial} $K^{(m)}$ como sigue:
+\[
+K^{(m)}= K \cdot (K-1) \cdot \cdots \cdot (K-(m-1)),
+\]
+es decir,\begin{align*}
+K^{(m)}= \begin{cases}
+\frac{K!}{(K-m)!} & \hspace{0.2cm} \text{si } K \geq m, \\
+0 & \hspace{0.2cm} \text{en otro caso.} 
+\end{cases}
+\end{align*}
+\end{defi}
+
+\begin{tcolorbox}
+\begin{teo}
+\label{teo: expresión analítica de BON de Legendre}
+Sea $n\in \IN$. Para toda $0 \leq k \leq n-1$,
+\begin{equation}
+\label{eq0: 6En}
+\cali{L}^{n,k}_{m}= (-1)^{k} \sqrt{\frac{(2k+1)(n-1)^{(k)}}{(n+k)^{(k+1)}}}
+\suma{j=0}{k}{(-1)^{j}\binom{k}{j}\binom{k+j}{j}
+\frac{m^{(j)}}{(n-1)^{(j)}}},
+\end{equation}
+donde $\cali{L}^{n,k}=(\cali{L}_{m}^{n,k})_{m=0}^{n-1}$
+es el vector de la definición
+\ref{def: base de Legendre discreta}.
+\end{teo}  
+\end{tcolorbox}
+\noindent
+\textbf{Demostración.}
+Basta hacer los siguientes cambios de variable
+(siendo la variable de la izquierda la que se
+usa originalmente en ~\cite{Neuman} y la de la 
+derecha la adoptada por nosotros);
+\[
+m=k, \hspace{0.2cm} K=m,
+N=n-1, \hspace{0.2cm} l=m.
+\]
+Según la fórmula de ortogonalidad,
+\begin{equation}
+\label{eq12: 2Dic}
+||y||_{k}^{2}= \suma{m=0}{n-1}{P_{k}(m, n-1)^{2}}
+= \frac{1}{2k+1} \cdot \frac{(n+k)^{(k+1)}}{(n-1)^{(k)}}.
+\end{equation}
+Además, 
+\begin{equation}
+\label{eq13: 2Dic}
+y_{k}= (P_{k}(m, n-1))_{m=0}^{m=n-1}
+= \left(
+\suma{j=0}{k}{(-1)^{j}\binom{k}{j}\binom{k+j}{j}
+\frac{m^{(j)}}{(n-1)^{(j)}}}
+\right)_{m=0}^{n-1}.
+\end{equation}
+Sustituyendo \eqref{eq12: 2Dic}
+y \eqref{eq13: 2Dic} en la expresión
+\eqref{eq10: 2Dic} obtenida
+en la proposición
+\ref{prop: igualdad entre los de legendre y los del survey},
+concluimos que
+
+\[
+(\cali{L}_{m}^{n,k})_{m=0}^{n-1}
+= \cali{L}^{n,k}
+= (-1)^{k} \cdot 
+\sqrt{\frac{(2k+1)(n-1)^{(k)}}{(n+k)^{(k+1)}}}
+\left(
+\suma{j=0}{k}{(-1)^{j}\binom{k}{j}\binom{k+j}{j}
+\frac{m^{(j)}}{(n-1)^{(j)}}}
+\right)_{m=0}^{n-1}.
+\]
+
+
+\QEDB 
+\vspace{0.2cm}

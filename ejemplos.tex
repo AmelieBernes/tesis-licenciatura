@@ -1,0 +1,520 @@
+\section{Ejemplos}
+\label{sec: ejemplos}
+Definidas ya las bases de Legendre discretas
+para toda dimensión $n$ 
+(c.f. definición  
+\ref{def: base de Legendre discreta}) y estudiadas algunas de sus 
+propiedades, planteemos algunos ejemplos
+para constatar en dimensiones concretas algunos de los
+resultados demostrados en subsecciones anteriores
+y empezar a comprobar la utilidad de estas bases para el 
+estudio morfológico de señales finitas.
+
+
+\begin{ej}
+A continuación, mostramos las gráficas de los
+elementos de las bases $\cali{L}^{2}$ y $\cali{L}^{3}$.
+Para dibujar las gráficas usamos los valores
+calculados en la tabla
+\ref{formulas explicitas para Ln con n de 2 hasta 6}.
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.5]{graficasLegendre2} 
+		\caption{Gráficas de los dos elementos de $\cali{L}^{2}
+		\subseteq \IR^{2}$}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.32]{graficasLegendre3} 
+		\caption{Gráficas de los tres elementos de $\cali{L}^{3}
+		\subseteq \IR^{3}$}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+
+En el caso $n=2$, el único subespacio de polinomios
+discretos no trivial es 
+\begin{align*}
+W_{2,0}= & span \left\{ 
+\left(\frac{1}{\sqrt2}, \frac{1}{\sqrt2} \right) \right\} \\
+= & \{ (x,x) \in \IR^{2}: \hspace{0.2cm} x \in \IR \},
+\end{align*}
+
+pues
+
+\begin{equation}
+\label{eq1: 1Dic}
+W_{2,1}= \IR^{2}.
+\end{equation}
+
+
+En el caso $n=3$, calculamos que
+\begin{align*}
+W_{3,0}= & span \left\{
+\left( \frac{1}{\sqrt3}, \frac{1}{\sqrt3},
+\frac{1}{\sqrt3} \right) \right\}  \\
+= & \{ (x,x,x) \in \IR^{3}: \hspace{0.2cm} x \in \IR \},
+\end{align*}
+
+\begin{align}
+\label{eq2: 1Dic}
+W_{3,1}= & span \left\{ \left( \frac{1}{\sqrt3}, \frac{1}{\sqrt3},
+\frac{1}{\sqrt3} \right) ,
+\left( -\frac{1}{\sqrt2}, 0,  \frac{1}{\sqrt2} \right) \right\}
+\nonumber \\
+= & \{ (x,y,2y-x) \in \IR^{3}: \hspace{0.2cm} x,y \in \IR \},
+\end{align}
+y
+\[
+W_{3,2}=\IR^{3}.
+\]
+
+	\begin{figure}[H]
+	\centering\captionsetup{format = hang}
+		\begin{measuredfigure}
+			\includegraphics[scale=1]{ legendre2y3} 
+			\caption{
+			\TODO{cambia nombres espacios.}			
+			Se muestran gráficamente al subespacio
+			$W_{2,0} \subseteq \IR^{2}$
+			y a los subespacios $W_{3,0}$ y $W_{3,1}$ de $\IR^{3}$ que
+			son, respectivamente, una recta y un plano (ambos pasando
+			por el origen); observe que, efectivamente,
+			$W_{3,0} \subseteq W_{3,1}$. En ambas dimensiones se han 
+			dibujado en {\color{ameMorado}{morado}} a los hiperplanos
+			de polinomios discretos correspondientes, que en efecto
+			dividen en dos regiones ajenas a los respectivos espacios 
+			ambiente. Puede recordar la definición de hiperplano
+			en la sección \ref{section: hiperplanos}.} 
+	 	\end{measuredfigure}
+	 \end{figure}	
+\final
+\end{ej}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ej}
+Considere al siguiente conjunto de cinco
+puntos del plano:
+\begin{equation} \label{eq: conjunto cinco puntos}
+\{ (0,-0.5), (1,2.4), (2, 1.6), (3,1.7), (4, 2.3) \}.
+\end{equation}
+
+\begin{minipage}{0.5\textwidth}
+Como tenemos cinco puntos, trabajamos
+en el espacio $\IR^{5}$. 
+La regresión lineal calculada a partir
+del conjunto de datos
+\eqref{eq: conjunto cinco puntos}
+es la recta
+con ecuación cartesiana
+
+\begin{equation} \label{eq: recta minimos cuadrados}
+y=0.49x+0.52.
+\end{equation}
+
+El vector cuyas entradas
+son las cinco mediciones (dadas por las ordenadas
+de los puntos del conjunto \eqref{eq: conjunto cinco puntos})
+es
+\begin{equation}
+\label{eq0: 29Nov}
+x=(-0.5, 2.4, 1.6, 1.7, 2.3).
+\end{equation}
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.3]{graficaX_31Oct} 
+		\caption{Gráfica de la señal $x$.}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+\end{minipage}
+
+\vspace{1cm}
+
+Nos interesa
+dar explícitamente a 
+la señal $\Pi_{W_{5,1}}(x) \in W_{5,1} \leq \IR^{5}$.
+En realidad, por ser $\cali{L}^{5}$ 
+una base ortonormal de $\IR^{5}$ y por ser
+$W_{5,1}$ el subespacio generado por los
+dos primeros vectores de esta base, 
+se sabe de inmediato que
+\[
+\Pi_{W_{5,1}}(x)=  \langle \Pi_{W_{5,1}}(x), \cali{L}^{5,0} \rangle \cali{L}^{5,0}
++ \langle \Pi_{W_{5,1}}(x), \cali{L}^{5,1} \rangle \cali{L}^{5,1};
+\]
+de todas formas, como ilustración, planteemos un sistema
+de ecuaciones para llegar a una expresión para
+$\Pi_{W_{5,1}}(x)$.
+Usando las expresiones para los vectores
+de $\cali{L}^{5}$
+dadas en \ref{subsect:Formulas explicitas},
+tenemos que
+\[
+W_{5,1}=span\{ (1,1,1,1,1,1), (-2, -1, 0, 1, 2) \},
+\]
+
+y 
+\[
+W_{5,1}^{\perp}=span\{ (2,-1,-2,-1,2), (-1,2,0,-2,1), (1,-4,6,-4,1)\}.
+\]
+Según el teorema de la proyección ortogonal \ref{Teo:proyOrt},
+$\Pi_{W_{5,1}}(x)$ es el único elemento de $W_{5,1}$ para el 
+que 
+
+\[
+x-\Pi_{W_{5,1}}(x) \in W_{5,1}^{\perp};
+\]
+esto se 
+traduce en la existencia de 
+únicos escalares $c_{1}$, $c_{2}$,
+$a_{1}$, $a_{2}$ y $a_{3}$ tales que
+\begin{align*}
+x-c_{1}(1,1,1,1,1)-c_{2}(-2, -1, 0, 1, 2)
+= &\\
+&  a_{1}(2,-1,-2,-1,2)+a_{2}(-1,2,0,-2,1)
++ a_{3}(1,-4,6,-4,1),
+\end{align*}
+\noindent
+o sea, tales que
+
+\begin{equation*}
+\begin{cases}
+-0.5-(c_{1}-2c_{2})=2a_{1}-a_{2}+a_{3}, \\
+2.4-(c_{1}-c_{2})=-a_{1}+2a_{2}-4a_{3}, \\
+1.6-c_{1}=-2a_{1}+6a_{3},\\
+1.7-(c_{1}+c_{2})=-a_{1}-2a_{2}-4a_{3}, \\
+2.3-(c_{1}+2c_{2})=2a_{1}+a_{2}+a_{3}.
+\end{cases}
+\end{equation*}
+Resolviendo este sistema
+de ecuaciones, encontramos que
+$c_{1}=1.5$ y $c_{2}=0.49$. Así,
+
+
+
+
+\begin{align}
+\label{eq5: 23Oct}
+\Pi_{W_{5,1}}(x) =& c_{1} (1,1,1,1,1) + c_{2}(-2-1,0,1,2) \nonumber \\
+= & (0.52, 1.01, 1.5, 1.99, 2.48 );
+\end{align}
+observe que \eqref{eq5: 23Oct} es, 
+en efecto, la discretización de 
+la recta \eqref{eq: recta minimos cuadrados}
+en la malla uniforme $\cali{P}_{5}$.
+De forma análoga se calcula la parte cuadrática de
+la señal $s$.
+
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{parteAfinCuadr}
+		\caption{Mostramos las gráficas de $x$, 
+		$\Pi_{W_{5,0}}(x)$, $\Pi_{W_{5,1}}(x)$ y $\Pi_{W_{5,2}}(x)$.}
+	\end{figure}	
+\final
+\end{ej}
+
+\TODO{Sería bueno notar que estas dando un
+algoritmo de transformación de la raw data
+via una proyección lineal (proceso mediante
+en cual se destruye información). Nada de ML, 
+esto es más bien symbolic AI (deep learning with
+python, p.35)}
+
+
+
+En el siguiente ejemplo 
+damos dos propuestas naturales,
+usando los espacios de polinomios discretos $W_{n,k}$,
+para poder dar no sólo respuestas del tipo
+``sí/no'' a preguntas sobre la morfología de una señal, sino,
+de forma más general, del tipo ``qué tanto sí'' o
+``qué tanto no''.
+
+
+
+
+
+\begin{ej} \label{ej: donde muestro como cuantificamos la morfologia de una senal}
+Hagamos $n=3$.  
+Como se calculó en \eqref{eq2: 1Dic},
+el subespacio $W_{3,1} \leq \IR^{3}$ de señales afines es el plano
+de ecuación cartesiana
+
+\[
+W_{3,1}: \hspace{0.2cm} x-2y+z=0.
+\]
+Sea 
+\begin{equation*}
+\label{eq0: 9Feb}
+x=a_{0}\cali{L}^{3,0}+a_{1}\cali{L}^{3,1}+a_{2}\cali{L}^{3,2}
+\end{equation*}
+un vector del espacio.
+Como se argumentó ya, las proposiciones
+\begin{center}
+``$x \in \IR^{3}$ es afín'' \hspace{0.2cm} y \hspace{0.2cm} 
+``$x \in W_{3,1}$''
+\end{center} 
+son equivalentes.
+Observe que es ``poco probable'' que, al seleccionar al azar
+un vector de $\IR^{3}$, este sea afín (pues el 
+subconjunto $W_{3,1}$ de $\IR^{3}$,
+un plano, tiene
+medida de Lebesgue cero); sin embargo, provistos
+de nociones como las de norma y ortogonalidad, es fácil dar 
+propuestas legítimas de
+\textbf{medidas} de ``qué tan afín'' es la señal $x$,
+o, en términos matemáticos, de qué tanto se aleja
+$x$ del espacio de señales afines de su correspondiente
+espacio ambiente.
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=1]{18Sept_1} 
+		\caption{Esquema de dos formas en las que uno puede intentar medir
+	qué tan afín es una señal $x$. \TODO{cambia nombres.}}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+\begin{itemize}
+\item[a)] Una forma obvia de proceder es calcular la norma
+del vector 
+\[
+x - \Pi_{W_{3,1}}(x)= a_{2} \cali{L}^{3,2},
+\]
+es decir, tomar al número no negativo
+\[
+|a_{2}|
+\]
+como una medida de qué tanto se aleja $x$ del plano $W_{3,1}$
+(o sea, de qué tanto se aleja $x$ de ser afín.)
+
+\item[b)] Otro acercamiento podría ser preguntarse por
+el ángulo $\alpha \in [0, \frac{\pi}{2}]$ 
+que forma el vector $x$ con el espacio 
+$W_{3,1}$. Los casos extremos $\alpha=0$ y $\alpha= \frac{\pi}{2}$
+corresponden, respectivamente, a que $x$ sea afín y
+a que $x$ sea múltiplo escalar de $\cali{L}^{3,2}$, luego,
+a que sea ortogonal a cualquier señal afín de dimensión 3.
+
+Como las dimensiones de $\IR^{3}$ y $W_{3,1}$ 
+difieren por uno,
+este útimo es un hiperplano
+del primero (puede recordar la definición
+de hiperplano en la sección
+\ref{section: hiperplanos}); como $\cali{L}^{3,2}$
+es un vector normal a $W_{3,1}$
+(c.f. corolario \ref{cor: Ln,k ortogonal a todo pol discreto de grado menor a k}), 
+si $\varphi: \IR^{3} \longrightarrow \IR$ es la función
+definida como
+\begin{equation}
+\label{eq: funcion phi ejemplo}
+\varphi(x)= \langle \cali{L}^{3,2} , x \rangle =a_{2},
+\end{equation}
+
+
+
+las tres regiones ajenas en las
+que $W_{3,1}$ divide al espacio
+$\IR^{3}$ son 
+
+
+\begin{itemize}
+\item[I)] $\{ x \in \IR^{3} : \varphi(x)>0 \}$,
+región a la que pertenece $\cali{L}^{3,2}$,
+\item[II)] $W_{3,1}= Ker(\varphi)$, y 
+\item[III)] $\{ x \in \IR^{3} : \varphi(x)<0 \}$,
+región a la que pertenece $-\cali{L}^{3,2}$.
+\end{itemize}
+
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.85]{2Dic_4} 
+		\caption{Se ilustran las tres 
+		regiones en las que $W_{3,1} \subseteq \IR^{3}$ divide al espacio,
+		clasificadas según el signo que tome 
+		la función $\varphi$ como se definió en
+		\eqref{eq: funcion phi ejemplo}. En
+		{\color{ameDorado}{dorado}} se muestra al vector
+		$\cali{L}^{3,2}$, en {\color{ameRosa}{rosa}}
+		un elemento de la región citada, y en 
+		{\color{ameMorado}{morado}} la proyección de este
+		al espacio $W_{3,1}$.
+		}
+ 	\end{measuredfigure}
+ \end{figure}
+
+Es fácil obtener una expresión para el coseno del ángulo
+$\alpha$ en términos de los coeficientes de $x$ respecto a $\cali{L}^{3}$:
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.7]{2Dic_3} 
+		\caption{\TODO{por qué ese ángulo era recto?}}
+ 	\end{measuredfigure}
+ \end{figure}
+
+De las relaciones de la figura \TODO{ref}
+obtenemos una igualdad que relaciona el ángulo 
+$\alpha$ que forma una señal $x \in \IR^{3}$ 
+con su proyección al espacio $W_{3,1}$
+con los coeficientes $a_{i}$
+de $x$ respecto a $\cali{L}^{3}$:
+\begin{equation}
+\label{eq0: 3Dic}
+cos(\alpha)= \sqrt{\frac{a_{0}^{2}+a_{1}^{2}}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}}}.
+\end{equation}
+
+Para un ejemplo aún más concreto, hagamos 
+\begin{equation}
+\label{eq1: 19Sept}
+a_{0}= \sqrt{3}, \hspace{0.2cm} a_{1}= \sqrt{2},
+\end{equation}
+
+
+
+es decir, consideremos a todos los vectores de $\IR^{3}$
+cuya proyección al plano $W_{3,1}$ es 
+el vector
+\begin{equation}
+\label{eq1: 6Dic}
+(0,1,2).
+\end{equation}
+Es obvio que el conjunto de los puntos
+del espacio cuyas proyecciones a 
+$W_{3,1}$ es \eqref{eq1: 6Dic} de hecho es la recta
+con ecuación vectorial
+\begin{equation}
+\label{eq0: 6Dic}
+l_{(0,1,2)} := (0,1,2)+c(1,-2,1), \hspace{0.2cm} c \in \IR.
+\end{equation}
+
+Sustituyendo
+los valores \eqref{eq1: 19Sept} en \eqref{eq0: 3Dic} y
+despejando, obtenemos 
+\[
+|a_{2}|= \sqrt{5 tg^{2}(\alpha)};
+\]
+el signo del coeficiente $a_{2}$ (que corresponde a la dirección
+de $\cali{L}^{3,2}$ en la descomposición de $x$) se determina por
+la región en la que se encuentre $x$;
+
+\begin{itemize}
+\item el signo de $a_{2}$ es positivo si $x$ es elemento de la región I,
+\item $a_{2}=0$ si $x$ es elemento de la región II, y
+\item el signo de $a_{2}$ es negativo si $x$ es elemento de la región III.
+\end{itemize}
+
+
+Grafiquemos ahora algunos elementos
+de la recta \eqref{eq0: 6Dic}; en los pies
+de la figura se especifica el ángulo
+$\alpha$ que forma con su proyección así
+como la región del espacio a la que pertenece.
+Los valores de las entradas de $x$, en la
+mayoría de los casos, han sido redondeados.
+\end{itemize}
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.33]{6Dic_0} 
+		\caption{Aquí se considera al vector 
+		$x=(1.58, -2.16,3.58)$ que forma un ángulo $\alpha=\pi/3$
+		con el plano $W_{3,1}$ y que se ubica en la región I.
+		\TODO{te faltó graficar al vector normal L3,2.}}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.33]{6Dic_1} 
+		\caption{Aquí se considera al vector 
+		$x=(0.91,-0.82,2.91)$ que forma un ángulo $\alpha=\pi/4$
+		con el plano $W_{3,1}$ y que se ubica en la región I.}
+ 	\end{measuredfigure}
+ \end{figure}
+ 
+ 
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.33]{6Dic_2} 
+		\caption{Aquí se considera al vector 
+		$x=(0,1,2)$ que forma un ángulo $\alpha=0$
+		con el plano $W_{3,1}$ y que se ubica en la región II.}
+ 	\end{measuredfigure}
+ \end{figure}
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.33]{6Dic_3} 
+		\caption{Aquí se considera al vector
+		$x=(-1.58,4.16,0.41)$ que forma un ángulo $\alpha=\pi/3$
+		con el plano $W_{3,1}$ y que se ubica en la región III.}
+ 	\end{measuredfigure}
+ \end{figure}
+ 
+ 
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.33]{6Dic_4} 
+		\caption{Aquí se considera al vector 
+		$x=(-1.83,4.66,0.16)$ que forma un ángulo $\alpha=6\pi/17$
+		con el plano $W_{3,1}$ y que se ubica en la región III.}
+ 	\end{measuredfigure}
+ \end{figure}
+ 
+ 
+\begin{nota} 
+Veamos por qué, en realidad, la alternativa $b)$
+descrita arriba es mucho mejor que la $a)$ para cuantificar 
+la morfología de una señal finita.
+
+ 
+ 
+ 
+\end{nota}
+\final
+\end{ej}
