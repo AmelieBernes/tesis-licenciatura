@@ -1,0 +1,104 @@
+\section{El teorema de Gram-Schmidt}
+
+\begin{teo} \label{Teo:Gram-Schmidt}
+\TODO{Mejor empieza a enumerar desde el cero!}
+(\textbf{de Gram-Schmidt}): Sean $V$ un espacio vectorial
+con producto punto, $S=\{ v_{1}, \ldots ,v_{n} \}$ un
+subconjunto linealmente independiente de $V$. 
+Defínanse los vectores
+
+\[
+\begin{split}
+w_{1}:= & v_{1}, \\
+w_{k} := & v_{k} - \suma{j=1}{k-1}{
+\frac{\langle v_{k} , w_{j} \rangle}{
+\langle w_{j} , w_{j} \rangle}  w_{j}},
+\hspace{0.2cm} k=2, \ldots ,n;
+\end{split}
+\]
+\noindent
+$S'=\{ w_{1}, \ldots , w_{n} \}$ es un subconjunto
+ortogonal que genera el mismo espacio que $S$. \TODO{[Friedberg]}
+\end{teo}
+
+
+La esencia del teorema de Gram-Schmidt es el reemplazar una base
+$S=\{ v_{1}, \ldots ,v_{n} \}$ de un subespacio 
+$U := span(S)$ cualquiera de $V$ 
+por una base ortogonal $S'$ para este. \\
+Muchas veces nos interesa normalizar a la base $S'$
+para así obtener una base ortonormal del espacio; llamaremos
+a este el ``proceso de ortonormalización de Gram-Schmidt'',
+y lo abreviaremos como ``G-S''. \TODO{AA} \\
+
+La ventaja de la formulación del Teorema
+de Gram-Schmidt dada en \ref{Teo:Gram-Schmidt}
+es que esta
+da explícitamente la forma de calcular a los
+vectores $w_{k}$, pero,
+para nuestros fines, una formulación que
+involucre proyecciones ortogonales sobre espacios
+será preferible, pues de este modo la geometría
+que hay detrás del proceso puede
+vislumbrase mejor. 
+
+
+\begin{prop} \label{Prop:Gram-Schmidt2}
+\textbf{(versión del teorema de Gram-Scmidt en términos de
+proyecciones)}
+(\TODO{cambia la notación. Usa $v$ y $\xi$}.)
+Sean $V$ un espacio vectorial con producto punto,
+\[
+S=\{ v_{1}, \ldots , v_{n}\}
+\] un subconjunto
+linealmente independiente de $V$ y
+\[
+S'=\{ w_{1}, \ldots , w_{n}\}
+\] el subconjunto
+ortogonal que resulta de aplicar el proceso de
+Gram-Schmidt \ref{Teo:Gram-Schmidt} a $S$. \\
+Si 
+\[
+W_{k}=span(v_{1}, \ldots , v_{k}), 
+\]
+con $k \in \{ 2, \ldots n\}$, entonces
+\begin{center}
+\framebox{ $w_{k+1}=v_{k+1}- \Pi_{W_{k}}(v_{k+1})$.}
+\end{center}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Según el teorema de Gram-Schmidt (\ref{Teo:Gram-Schmidt}),
+\[
+W_{k}=span(w_{1}, \ldots , w_{k}).
+\]
+Si mostramos que
+\begin{itemize}
+	\item el vector $v_{k+1}-w_{k+1}$ es elemento
+	del espacio $W_{k}$, y que
+	\item $w_{k+1}=v_{k+1}-(v_{k+1}-w_{k+1})$
+	es elemento de $W_{k}^{\perp}$,
+\end{itemize}
+por la unicidad establecida en
+el teorema de la proyección ortogonal \ref{Teo:proyOrt}
+podremos concluir la igualdad deseada. \\
+Lo primero es claro, pues, según las fórmulas
+dadas en el teorema \ref{Teo:Gram-Schmidt},
+\[
+v_{k+1}-w_{k+1}= 
+\suma{j=1}{k}{
+\left( \frac{v_{k} \cdot w_{j}}{w_{j} \cdot w_{j}} \right) w_{j}} \in W_{k}.
+\]
+Lo segundo se sigue de observar que
+$w_{k+1}$ es ortogonal a los vectores $w_{1}, \ldots , w_{k}$;
+como estos conforman una base para $W_{k}$, concluimos
+que $w_{k+1} \in W_{k}^{\perp}$.
+\begin{figure}[ht]
+    \centering
+    \incfig{ConFab}
+\end{figure}
+
+\QEDB
+\vspace{0.2cm}
+
+\newpage

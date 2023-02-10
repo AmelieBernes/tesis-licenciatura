@@ -1,0 +1,88 @@
+\section{Definición de ángulo entre un punto y un plano en un espacio euclideo}
+
+Como vimos en \TODO{(ref: justo después de C-S di 
+que es gracias a esta desigualdad que puedes definir el
+ángulo entre vectores)}, una de las grandes ventajas de tener
+definido en un espacio vectorial $V$ un producto punto es
+que este conlleva una definición natural de ángulo entre
+vectores.
+
+Si además $W$ es un subespacio cerrado de $V$
+(lo que, recuerde, siempre ocurre en caso de que
+$V$ sea finito dimensional \TODO{ref.}), entonces también
+es posible definir el ángulo entre un punto $x \in V$
+del espacio y $W$.
+
+\begin{defi} \label{def: angulo punto subespacio}
+Sea $(V, \langle \cdot , \cdot \rangle)$ un espacio con 
+producto punto. Sean $W \leq V$ un subespacio cerrado de $V$
+y $x \in V$. Definimos el \textbf{ángulo entre $x$ y $W$}
+como el ángulo que forma 
+$x$ con su proyección a $W$, es decir,
+\[
+\measuredangle (x, W):= \measuredangle(x, \Pi_{W}(x)).
+\]
+\end{defi}
+
+Una caracterización del ángulo entre un punto y un subespacio
+se da a continuación.
+
+\begin{prop}
+Si $V$, $W$ y $x$ son como en la definición 
+\ref{def: angulo punto subespacio}, entonces
+\[
+\measuredangle (x, W) = min \{ \measuredangle(x,w) \hspace{0.1cm} :
+ \hspace{0.1cm} w \in W \}.
+\]
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Sea $w$ un elemento cualquiera de $W$.
+Puesto que el ángulo entre dos vectores es
+preservado bajo multiplicación por escalares
+(c.f. \TODO{debes poner en el apéndice este resultado, 
+luego lo citas en el ejemplo}), sin pérdida de generalidad
+podemos suponer que 
+\begin{equation}
+\label{eq1: 9Feb}
+||w||= || \Pi_{W}(x)||.
+\end{equation}
+
+De la definición del vector $\Pi_{W}(x)$ se sigue que
+\[
+|| x -\Pi_{W}(x) ||^{2} \leq  || x - w||^{2};
+\]
+expresando ambos lados de la desigualdad como un producto
+punto (c.f. \TODO{referencia}) y aplicando la
+bilinealidad del producto punto, llegamos a que
+\[
+\langle x , x \rangle -2 \langle x, \Pi_{W}(x) \rangle +
+\langle \Pi_{W}(x) , \Pi_{W}(x) \rangle \leq 
+\langle x , x \rangle  -2 \langle x , w \rangle 
++ \langle w , w \rangle ;
+\]
+usando \eqref{eq1: 9Feb}, podemos simplificar esta
+última desigualdad para llegar a 
+\[
+\langle x, w \rangle \leq \langle x, \Pi_{W}(x) \rangle,
+\]
+de donde se sigue, usando nuevamente \eqref{eq1: 9Feb},
+que 
+\[
+cos \left( \measuredangle (x,w) \right) =
+\frac{\langle x , w \rangle}{||x||\cdot ||w||} \leq
+\frac{\langle x ,  \Pi_{W}(x)  \rangle}{||x||\cdot ||w||} =
+cos \left( \measuredangle \left(x, \Pi_{W}(x) \right) \right);
+\]
+del que la función coseno sea decreciente en el intervalo
+$[0, \pi]$ se concluye de esta última desigualdad que
+$ \measuredangle \left(x, \Pi_{W}(x) \right) \leq 
+\measuredangle (x,w)$.
+\QEDB
+\vspace{0.2cm}
+
+
+
+\TODO{Pon ejemplos gráficos en dimensión 2 y 3.
+Creo que en dimensión 2 el ángulo entre $x$ y un vector
+de $W$ es siempre el mismo.}

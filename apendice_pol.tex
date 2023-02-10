@@ -1,0 +1,175 @@
+\section{Polinomios y teorema fundamental del álgebra}
+
+En general, si $R$ es un anillo, se define a partir de 
+él un nuevo anillo denominado en \textbf{anillo de polinomios
+con coeficientes en $R$} como sigue:
+
+
+En el contexto del álgebra, la definición inicial se hace
+
+el objetivo de hacerlo de esta forma es, a partir de los
+elementos de $K$ construir elementos $f$ tales que
+(pues la idea es de tal forma que los coeficientes sean 
+casi todos cero (o sea, que el conjunto de coeficientes no cero 
+sea finito) y que estos determinen unívocamente al polinomio).
+(comentarios de Jacobson!) \TODO{aquí define
+evaluación de un polinomio en un elemento del anillo.}
+
+\begin{defi}
+Sean $K$ un anillo, $f(x)= \suma{k=0}{n}{a_{k}x^{k}} \in K[x]$
+con $a_{n}$ un elemento no cero del anillo $K$.
+\begin{itemize}
+\item Al elemento $a_{n} \in K$ se le llama el \textbf{coeficiente
+principal} del polinomio $f$, y
+\item a $n \in \overline{\IN}$ se le llama el \textbf{grado de $f$}.
+\end{itemize}
+Todo elemento $r \in K$ tal que $f(r)=0$ se llamará 
+una \textbf{raíz de $f$}. \TODO{Aquí di que, por lo general,
+se dice que el grado del polinomio cero no está definido o que es $- \infty$,
+pero que nosotros, al igual que muchos autores, vamos a convenir en
+pensar que el polinomio cero, al igual que todo polinomio
+constante, tiene grado cero. Esto lo hacemos simplemente para alsfj
+y da referencias al trabajo principal en el que esta convención sea útil.}
+\end{defi}
+
+\TODO{Sólo usa campos ahora!}
+
+A partir de ahora, nos interesa sólo tratar con 
+campos $K$. De hecho, para este trabajo
+sólo usaremos $K$ igual a $\IR$.
+
+\TODO{Regla de suma de los grados de los factores ! La uso
+muchas veces.}
+
+Es una consecuencia inmediata del algoritmo de la división
+(c.f. Rotman p. 131) el que, si $K$ es un campo
+y $f(x) \in K[x]$ es un polinomio de grado $n>0$, 
+entonces $f$ tiene a lo más $n$ raíces (el argumento es
+relacionar raíces de un polinomio con divisores lineales
+de este, y argumentar que, puesto que cuando el anillo de
+coeficientes $K$ es un dominio entero, el grado de un 
+producto de polinomios es igual a la suma de los grados de los
+factores (c.f Rotman \TODO{ref}), si el grado de $f$
+es $n$ entonces este no se puede factorizar como el producto
+de más de $n$ factores lineales, luego, no puede tener más de 
+$n$ raíces).
+
+Se tiene pues una cota superior para la cantidad
+de raíces de un polinomio basada en 
+su grado, sin embargo, esta cota bien puede no
+alcanzarse. De hecho, como muestra el siguiente ejemplo,
+puede ser que un polinomio no constante con coeficientes en un campo
+no tenga ninguna raíz.
+
+\begin{ej}
+Considere al anillo $\IZ_{5}$ de enteros módulo $5$. Como
+$5$ es un número primo, $\IZ_{5}$ es un campo (c.f. \TODO{ref.}).
+Sea $f(x)=x^{2}-2 \in \IZ_{5}[x]$; evaluar a este polinomio
+en cada uno de los cinco elementos de $\IZ_{5}$
+nunca da lugar al cero del campo, luego, $f$ es un polinomio
+de grado dos con coeficientes en $\IZ_{5}$ sin raíces.
+\final
+\end{ej}
+
+
+
+\begin{ej}
+El ejemplo canónico de polinomio con coeficientes reales
+sin raíces (reales) es $p(x)=x^{2}+1$. No puede tener raíces por
+ser el cuadrado de todo número real no negativo. 
+\final 
+\end{ej}
+
+%\marginpar{amelei}
+
+\begin{teo}
+\label{teo: fundamental del algebra}
+\textbf{(Teorema fundamental del álgebra)}: Todo polinomio
+$f(x)$ de coeficientes complejos
+y grado al menos uno
+tiene al menos una raíz compleja.
+(\TODO{Kurosh, p. 143})
+\end{teo}
+
+Como se hace notar en la referencia, es difícil exagerar
+la importancia que tiene este teorema no sólo en el álgebra, 
+sino en la matemática en general; se resalta también el hecho
+de que, hasta el momento, todas las pruebas de este teorema
+hacen uso no sólo de la estructura algebráica del dominio entero
+$\IC[x]$, sino de propiedades topológicas de este (obtenidas
+al definir en él una norma) o de otra índole, agregando estructura
+extra a $\IC[x]$. Hay, sin embargo, construcciones puramente algebraicas
+del campo $\IC$ basadas en la idea de ``completar'' al campo
+de los números reales \TODO{cita a Godement.}
+
+
+De un simple argumento inductivo, usando el teorema 
+\ref{teo: fundamental del algebra} se demuestra que 
+el que 
+todo polinomio no constante con coeficientes en $\IC$
+tenga al menos una raíz compleja \textbf{equivale} a que
+tenga tantas raíces como su grado.
+
+\begin{teo}
+\label{teo: alt del fundamental del algebra}
+Todo polinomio $f(x) \in \IC[x]$ 
+de grado $n>0$
+tiene exactamente $n$ raíces complejas
+(contando multiplicidades).
+\end{teo}
+\noindent
+\textbf{Demostración.}
+Procedemos por inducción sobre $n$, el grado del polinomio.
+Sea $f$ un polinomio con coeficientes
+complejos y de grado $n=1$. Según el teorema 
+\ref{teo: fundamental del algebra}, $f$ tiene al menos
+una raíz $r_{1}$, luego,
+el polinomio lineal $x-r_{1}$
+divide a $f$. Ahora bien, si $f$ tuviese una segunda
+raíz $r_{2}$, el polinomio 
+de grado dos $(x-r_{1})(x-r_{2})$
+dividiría a $f$, pero esto contradice el que 
+todos los divisores de un polinomio $f$ con coeficientes
+en un campo tengan grado menor o igual al de $f$. 
+Con esto comprobamos la validez del teorema para $n=1$.
+
+Supongamos ahora el teorema cierto para $n \geq 1$.
+Sea $f \in \IC[x]$ un polinomio de grado uno; según 
+\ref{teo: fundamental del algebra}, $f$ tiene al menos
+una raíz $r_{1}$, luego,
+\begin{equation}
+\label{eq0: 11Dic}
+f(x)= (x-r_{1}) g(x), 
+\end{equation}
+con $g(x)$ algún polinomio de coeficientes complejos y grado
+$n$. Por hipótesis de inducción, $g$ tiene exactamente
+$n$ raíces complejas (contando multiplicidades); puesto que,
+según la ecuación \eqref{eq0: 11Dic}, las raíces de $f$
+son $r_{1}$ y las raíces de $g$ (pues, en un campo, el producto
+de dos elementos del campo es cero sí y sólo si alguno de 
+estos es cero), concluimos, como queríamos, que, salvo
+multiplicidades, $f$ tiene $n+1$ raíces complejas.
+\null\nobreak\hfill\ensuremath{\square} %final dem
+\vspace{0.2cm}
+
+La siguiente consecuencia inmediata del teorema fundamental del
+álgebra es (como se puede apreciar en el mapa \TODO{referencia}),
+una de las piezas angulares del trabajo desarrollado en esta tesis.
+
+\begin{prop}
+\label{prop: cita TFA}
+Sea $f(x) \in \IR[x]$ un polinomio con coeficientes reales
+de grado a lo más $n$. Si $f$ tiene más de $n$ raíces reales, entonces
+$f$ es el polinomio cero.
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, si $f$ tuviese grado mayor a cero, entonces, 
+según el teorema \ref{teo: alt del fundamental del algebra},
+$f$ tendría exactamente $n$ raíces reales,
+pero, por hipótesis, $f$ tiene más de $n$; así, $f$
+debe tener grado cero, o sea, debe  ser un polinomio constante.
+Puesto que el único polinomio constante con al menos una raíz
+es el polinomio cero, concluimos que $f=0$.
+\null\nobreak\hfill\ensuremath{\square} %final dem
+\vspace{0.2cm}
