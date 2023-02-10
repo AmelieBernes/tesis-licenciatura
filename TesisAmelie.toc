@@ -1,0 +1,38 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Desarrollo de herramientas para el estudio morfológico de señales finitas}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introducción: planteamiento y motivación}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Construcción canónica}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Discretización puntual, polinomios discretos y espacios asociados}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Una definición del concepto de grado para señales finitas}{16}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Construcción de la base de Legendre discreta via ortogonalización de bases de espacios de polinomios discretos}{19}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Algunas propiedades de las bases de Legendre discretas}{20}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}{20}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{21}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Ejemplos}{24}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{34}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Generalización que involucra a la discretización $\Omega _{n}$}{34}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{41}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Comentarios finales sobre la construcción}{46}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Revisión de literatura y artículos relacionados}{47}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{49}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{51}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{52}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{53}{subsection.1.8.3}%
+\contentsline {section}{\numberline {1.9}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{57}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Estudio para dimensiones impares}{59}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}Estudio para dimensiones pares}{62}{subsection.1.9.2}%
+\contentsline {section}{\numberline {1.10}Implementación computacional de las bases discretas de Legendre}{63}{section.1.10}%
+\contentsline {subsection}{\numberline {1.10.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{65}{subsection.1.10.1}%
+\contentsline {subsection}{\numberline {1.10.2}Código en Python}{66}{subsection.1.10.2}%
+\contentsline {chapter}{\numberline {2}Estudio espectral de los polinomios discretos de Legendre}{69}{chapter.2}%
+\contentsline {chapter}{\numberline {A}Teoría}{72}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Introducción}{72}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Polinomios y teorema fundamental del álgebra}{72}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Definiciones básicas}{74}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}Hiperplanos de espacios con producto punto de dimensión finita}{76}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}El teorema de la proyección ortogonal}{77}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{80}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un plano en un espacio euclideo}{82}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{83}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{89}{section.Alph1.9}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{96}{appendix.Alph2}%
