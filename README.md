@@ -1,7 +1,8 @@
 # tesis-licenciatura
 Archivos tex, scripts (en python) e imágenes correspondientes a mi tesis de licenciatura. Aún en construcción.
 
-**TODO**: subir también los archivos del CIMA y del video.
+**TODO**: subir también los archivos del CIMA y del video.<br />
+**TODO**: revisar por qué el índice y la bibliografía no cargan.<br />
 
 ### Estructura de los archivos .tex
 Los archivos .tex no se han anidado en subcarpetas, pero algunos de estos
