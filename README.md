@@ -2,44 +2,44 @@
 Archivos tex e imágenes correspondientes a mi tesis de licenciatura. Aún en construcción.
 TODO: subir también los archivos del CIMA y del video.
 
-##Estructura de los archivos .tex
+### Estructura de los archivos .tex
 Los archivos .tex no se han anidado en subcarpetas, pero algunos de estos
 (marcados en negritas en el mapa de abajo) tienen la misma función que una
 carpeta, pues sólo tienen comandos input; en ellos importo otros archivos .tex
 en los que está escrita la teoría.
 
 
-paquetes_tesis
-agradecimientos
-pendientes_tesis #provisional
+paquetes_tesis<br />
+agradecimientos<br />
+pendientes_tesis #provisional<br />
 
-**ConstruccionBases**
-	introduccion
-	construccion_canonica
-	propiedades_legendre
-	ejemplos
-	definiciones_altern
-	comentarios_finales
+**ConstruccionBases**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	introduccion <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	construccion_canonica <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	propiedades_legendre <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ejemplos <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	definiciones_altern <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	comentarios_finales <br />
 
-**expresiones_legendre**
-	revision_literatura
-	deduccion_expresion
-	formulas_graficas
+**expresiones_legendre**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	revision_literatura<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	deduccion_expresion <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	formulas_graficas <br />
 
-**simetrias_codigos**
-	simetrias
-	codigo
-	espectral
+**simetrias_codigos**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	simetrias<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	codigo<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	espectral<br />
 
-**Teoria**
-	apendice_pol
-	apendice_def
-	apendice_hiperpl
-	apendice_proyOrt
-	apendice_gramSchm
-	apendice_anguloPuntoPlano
-	apendice_BONhilbert
-	apendice_sumOrt
+**Teoria**<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_pol<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_def<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_hiperpl<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_proyOrt<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_gramSchm<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_anguloPuntoPlano<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_BONhilbert<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	apendice_sumOrt<br />
 
-Notacion
-Referencias.bib
+Notacion<br />
+Referencias.bib<br />
