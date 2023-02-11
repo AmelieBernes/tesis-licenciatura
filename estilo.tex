@@ -1,0 +1,33 @@
+%Estilo de página. Tengo una pequeña columna vertical, en la que agrego imágenes, nota, texto... lo que quiera.
+%Gilles Castel.
+
+\captionsetup{font=footnotesize, skip=4pt}
+
+\geometry{
+paperwidth=210mm,
+paperheight=297mm,
+left=72pt,
+top=42pt,
+textwidth=360pt,
+marginparsep=20pt,
+marginparwidth=110pt,
+textheight=650pt,
+footskip=40pt,
+}
+
+\renewcommand{\normalsize}{\fontsize{10pt}{13pt}\selectfont}%
+\renewcommand{\footnotesize}{\fontsize{8pt}{10pt}\selectfont}%
+% fullwidth environment, text across textwidth+marginparsep+marginparwidth
+\newlength{\overhang}
+\setlength{\overhang}{\marginparwidth}
+\addtolength{\overhang}{\marginparsep}
+%
+\newenvironment{fullwidth}
+  {\ifthenelse{\boolean{@twoside}}%
+     {\begin{adjustwidth*}{}{-\overhang}}%
+     {\begin{adjustwidth}{}{-\overhang}}%
+  }%
+  {\ifthenelse{\boolean{@twoside}}%
+    {\end{adjustwidth*}}%
+    {\end{adjustwidth}}%
+  }

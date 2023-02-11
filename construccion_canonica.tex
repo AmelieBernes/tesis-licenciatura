@@ -5,6 +5,12 @@ Comenzamos planteando algunas definiciones.
 \subsection{Discretización puntual, polinomios discretos y espacios asociados}
 \label{discretizacion puntual, polinomios discretos y espacios asociados}
 
+\begin{marginfigure}
+\includegraphics[scale=0.9]{1En_1} 
+		\caption{Ejemplo concreto con $n=4$.}
+\end{marginfigure}
+
+
 \begin{defi}
 \label{def: operador de discretizacion puntual}
 (\textbf{Operador de discretización} $\Omega_{n,\cali{P}}$)
@@ -21,20 +27,20 @@ de la malla $\cali{P}$
 consistirá en evaluarla en cada uno de los
 puntos de la malla:
 
+
 \begin{center}
 $\Omega_{n,\cali{P}}(f) := (f(t_{j}))_{j=0}^{n-1}.$
 \end{center}
 \end{defi}
 
 
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=1.3]{1En_1} 
-		\caption{Ejemplo concreto con $n=4$.}
- 	\end{measuredfigure}
- \end{figure}
+%\begin{figure}[H]
+%\centering\captionsetup{format = hang}
+%	\begin{measuredfigure}
+%		\includegraphics[scale=1.3]{1En_1} 
+%		\caption{Ejemplo concreto con $n=4$.}
+% 	\end{measuredfigure}
+% \end{figure}
 
 \noindent $\Omega_{n,\cali{P}}$
 puede pensarse como una aplicación con dominio
@@ -300,10 +306,8 @@ de esto podemos concluir la pertenencia de
 $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.3]{mall} 
-		    \caption{
+	\includegraphics[scale=0.3]{mall} 
+	\caption{
 	Ejemplo haciendo $n=11$, $\cali{P}$ la malla
 	uniforme de $11$ puntos con punto inicial $-2$
 	y paso $h=0.5$.	    
@@ -316,7 +320,6 @@ $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
     uniforme a partir de los de otra, les llamaremos
     \textbf{funciones de cambio
 	de malla}.}
- 	\end{measuredfigure}
  \end{figure}
 \QEDB
 \vspace{0.2cm}
@@ -331,10 +334,13 @@ con $0 \leq i \leq n-1$ entero,
 \textbf{es} el espacio de
 los polinomios discretos
 de dimensión $n$ con dominio uniforme y
-de grado a lo más $i$ (una contención se 
+de grado a lo más $i$ 
+\sidenote{
+Una contención se 
 prueba en la proposición 
 \ref{obs: s en Wi sii es la discretizacion en malla Pn de un pol de grado a lo más i}
-y la otra en la proposición \ref{Obs1}).
+y la otra en la proposición \ref{Obs1}.
+}
 
 
 Como mostramos en el siguiente teorema, los vectores
@@ -595,16 +601,11 @@ en el siguiente resultado.
 %	\end{figure}	
 
 
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.6]{25Nov_1} 
-		\caption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se quita la restricción en los grados de los polinomios a discretizar.}
- 	\end{measuredfigure}
- \end{figure}
-
-
-
+\begin{SCfigure}[\sidecaptionrelwidth][H]
+	\parbox{\textwidth}{\centering\includegraphics[scale=0.5]{25Nov_1}}
+	%\includegraphics[scale=0.5]{25Nov_1} 
+	\sidecaption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se omite la restricción en los grados de los polinomios a discretizar.}
+\end{SCfigure}
 
 
 

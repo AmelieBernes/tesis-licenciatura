@@ -1,5 +1,7 @@
 \chapter{Desarrollo de herramientas para el estudio morfológico de señales finitas}
 \section{Introducción: planteamiento y motivación}
+
+\TODO{Hacer mucho más pequeñas las letras de inicio de capítulo.}
 En este capítulo consideraremos señales
 finitas
 (digamos, de
@@ -41,11 +43,13 @@ que la señal es \textbf{cuadrática}.
 
 \TODO{En lo que sigue, usaremos los nombres 
 de 'vector' y 'señal' como sinónimos.}
+
+
+
+
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.6]{ejemplo_intro} 
-		\caption{En la figura se pintan las gráficas
+	\includegraphics[scale=0.5]{ejemplo_intro} 
+	\sidecaption{En la figura se pintan las gráficas
 	de dos señales de dimensión 30. La gráfica de cruces 
 	(resp. la de puntos)
 	sugiere la forma de una recta (resp. una parábola).
@@ -53,7 +57,6 @@ de 'vector' y 'señal' como sinónimos.}
 	de curvas (y no, por ejemplo, trozos de circunferencias)
 	sólo porque son buenos ejemplos de curvas con una sola 
 	convexidad.}
- 	\end{measuredfigure}
  \end{figure}
 
 
@@ -168,18 +171,18 @@ y por la condición de normalización
 \[
 \int_{-1}^{1}{P_{k}(t)^{2}} dt = 1.
 \]
-A los polinomios $P_{k}$ así resultantes
-se les conoce como \textbf{polinomios de Legendre.}
-\footnote{Muchas veces
+A los polinomios $P_{k}$ que resultan
+se les conoce como \textbf{polinomios de Legendre}
+\sidenote{Muchas veces
 esta condición de normalización cambia; algunos 
 prefieren tomar como condiciones de ortonormalización a 
 \[
-\int_{-1}^{1}{P_{k}(t)^{2}} dt = 1.
+\int_{-1}^{1}{P_{k}(t)P_{m}(t)} dt = \frac{2 \delta_{km}}{2n+1}.
 \]
 Por eso las fórmulas que usualmente uno encuentra para
 los polinomios de Legendre (por ejemplo \TODO{Wikipedia})
 son distintas a las presentadas aquí. \TODO{Pero son múltiplos
-escalares?}} (c.f. definición \TODO{Friedberg, p.346})
+escalares?}} (c.f. definición \TODO{Friedberg, p.346}).
 
 Se calcula fácilmente que los primeros cuatro 
 polinomios de Legendre son
