@@ -13,6 +13,7 @@ en los que está escrita la teoría.
 
 TesisAmelie %Documento maestro.<br />
 paquetes_tesis<br />
+estilo %WIP <br />
 agradecimientos<br />
 pendientes_tesis #provisional<br />
 
