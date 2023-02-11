@@ -11,6 +11,7 @@ carpeta, pues sólo tienen comandos input; en ellos importo otros archivos .tex
 en los que está escrita la teoría.
 
 
+TesisAmelie %Documento maestro.<br />
 paquetes_tesis<br />
 agradecimientos<br />
 pendientes_tesis #provisional<br />
