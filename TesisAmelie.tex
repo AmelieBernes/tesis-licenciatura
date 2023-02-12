@@ -1,5 +1,5 @@
 %Documento maestro.
-\documentclass[a4paper,oneside,11pt]{extreport} %no funcionó tufle-book. Demasiada incompatibilidad con lo que tengo... mejor lo dejamos aspi.
+\documentclass[a4paper,oneside,11pt]{article} %no funcionó tufle-book. Demasiada incompatibilidad con lo que tengo... mejor lo dejamos aspi. Original: extreport
 \input{paquetes_tesis}
 \input{estilo}
 
@@ -11,7 +11,7 @@
 
 \input{agradecimientos}
 \input{pendientes_tesis}
-
+ 
 
 %--- Disclaimer.
 
@@ -37,12 +37,13 @@ Edward Tufte.
 % sino en archivos:) por ejemplo, los input de este .tex
 % tiene sólamente inputs; en esos inputs está todo el escrito.
 % Así que puedes pensar a los input de este archivo como carpetas.
-\input{ConstruccionBases}
-\input{expresiones_legendre}
-\input{simetrias_codigos}
-\input{Teoria}
-\input{Notacion}
 
+
+\input{ConstruccionBases}
+\input{expresiones_legendre} %Sí compila.
+\input{simetrias_codigos} %Sí compila.
+\input{Teoria} %Sí compila.
+\input{Notacion} %Sí compila.
 
 
 \bibliographystyle{alpha}

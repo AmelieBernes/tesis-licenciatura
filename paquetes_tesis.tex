@@ -8,8 +8,7 @@
 \usepackage[spanish]{babel}
 \decimalpoint
 \usepackage{mathtools}% http://ctan.org/pkg/mathtool
-\usepackage{amsthm} 
-
+\usepackage{amsthm, amsmath, bm} 
 
 \usepackage{subcaption, threeparttable}
 \usepackage{graphicx} 
@@ -27,16 +26,16 @@
 \usepackage{epstopdf}
 
 %Gilles C. paquetes para imagenes con Inkscape
-\usepackage{import}
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
+%\usepackage{import}
+%\usepackage{xifthen}
+%\usepackage{pdfpages}
+%\usepackage{transparent}
 
-\newcommand{\incfig}[1]{%
-    \def\svgwidth{\columnwidth}
-    \import{./imagenes}{#1.pdf_tex}}
+%\newcommand{\incfig}[1]{%
+%    \def\svgwidth{\columnwidth}
+%    \import{./imagenes}{#1.pdf_tex}}
 
-\usepackage{amsmath,bm}
+
 %\usepackage{marginnote} %Para escribir en los márgenes, old
 \usepackage{xcolor, color, soul}
 \DeclareRobustCommand{\hlAME}[2]{{\sethlcolor{#1}\hl{#2}}}
@@ -67,6 +66,7 @@
 \newcommand{\code}[1]{\texttt{#1}}
 %\swapnumbers %Para tener un solo contador para TODOS los 'equation' environment.
 
+
 \usepackage{amssymb}
 \usepackage{mdframed} %Símbolos en cajas
 \usepackage{amsmath} %it is best to load this package if doing any serious mathematical layout with LaTeX
@@ -77,7 +77,6 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{blindtext}
 \usepackage{titlesec}
 \usepackage{imakeidx}
 \usepackage{scalerel}
@@ -96,34 +95,52 @@
 
 %%%% Mis macros %%%%
 
-			%% Secciones:
-			%Pongo a todas el contador de 'teo'
-			\newtheorem{teo}{Teorema}[section]
-			\newtheorem{lema}[teo]{Lema}
-			\newtheorem{prop}[teo]{Proposición}
-			\newtheorem{obs}[teo]{Observación}
-			%\newtheorem{dem}[teo]{Demostración}
-			\newtheorem{cor}[teo]{Corolario}
-			\newtheorem{defi}[teo]{Definición}
-			\newtheorem{ej}[teo]{Ejemplo}
-			\newtheorem{notacion}[teo]{Notación}
-			\newtheorem{listaObj}[teo]{Lista de objetivos}
-			
-			%\theoremstyle{definition}
-			\newtheorem{nota}[teo]{Nota}
-			%\newtheorem{teo}[equation]{\textbf{Lema}}
-			%\newtheorem{lema}[equation]{\textbf{Lema}}
-			%\newtheorem{prop}[equation]{\bf Proposición}
-			%\newtheorem{obs}[equation]{\bf Observación}
-			%\newtheorem{dem}[equation]{\bf Demostración}
-			%\newtheorem{cor}[equation]{\bf Corolario}
-			%\newtheorem{defi}[equation]{\bf Definición}
-			%\newtheorem{ej}[equation]{\bf Ejemplo}
-			%\newtheorem{notacion}[equation]{\bf Notación}
+%% Secciones:
+%Pongo a todas el contador de 'teo'
 
-			
-			%\theoremstyle{definition}
-			%\newtheorem{nota}[equation]{\bf Nota}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fuentes: %https://tex.stackexchange.com/questions/513107/what-is-this-fancy-theorem-environment 
+%https://tex.stackexchange.com/questions/521597/how-to-spare-selected-theorems-from-thmbox-styles
+
+%\usepackage{amsthm} %Creo que ya lo definí antes.
+
+
+\let\newemptytheorem\newtheorem
+\usepackage{thmbox}
+
+\newemptytheorem{ejemplo}{Ejemplo}
+
+
+			\newtheorem[M]{teo}{Teorema}[section]
+			%Pongo a todas el contador de 'teo'
+			\newtheorem[M]{listaObj}[teo]{Lista de objetivos}
+			\newtheorem[M]{lema}[teo]{Lema}
+			\newtheorem[M]{prop}[teo]{Proposición}
+			\newtheorem[M]{obs}[teo]{Observación}
+			\newtheorem[M]{cor}[teo]{Corolario}
+			\newtheorem[M]{defi}[teo]{Definición}
+			\newtheorem[M]{notacion}[teo]{Notación}
+			\newtheorem[M]{nota}[teo]{Nota}
+
+
+
+%Sí compila. Mi lugar seguro jaja.
+%			\newtheorem{teo}{Teorema}[section]
+%			%Pongo a todas el contador de 'teo'
+%			\newtheorem{listaObj}[teo]{Lista de objetivos}
+%			\newtheorem{lema}[teo]{Lema}
+%			\newtheorem{prop}[teo]{Proposición}
+%			\newtheorem{obs}[teo]{Observación}
+%			\newtheorem{cor}[teo]{Corolario}
+%			\newtheorem{defi}[teo]{Definición}
+%			\newtheorem{notacion}[teo]{Notación}
+%			\newtheorem{nota}[teo]{Nota}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 
 			%% Símbolos matemáticos
 			
