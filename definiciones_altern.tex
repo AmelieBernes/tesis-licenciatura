@@ -714,13 +714,20 @@ construiremos una base del espacio $\IR^{n}$
 que, como probaremos, es $\cali{L}^{n}$.
 
 
-
 \begin{defi}
 (\textbf{Operador de discretización $\Delta_{n,a,b}$})
 Dados dos números reales $a<b$, se divide
 regularmente al intervalo $[a,b]$ en 
 $n$ subintervalos de longitud $h=\frac{b-a}{n}$,
 es decir, consideramos la partición
+
+
+\begin{marginfigure}
+\includegraphics[scale=0.9]{1En_2} 
+		\caption{Ejemplo con $n=4$, $a=-1$, $b=2$ y
+		$f(t)= t^{6}-2t^{5}+0.01t^{3}+2$}
+\end{marginfigure}
+
 
 \begin{equation}
 \label{eq1: 2En}
@@ -740,19 +747,6 @@ donde, para toda $1 \leq j \leq n$,
 $u_{n,j}:= \integ{t_{j-1}}{t_{j}}{f(t)dt}$.
 \end{center}
 \end{defi}
-
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=1.5]{1En_2} 
-		\caption{Ejemplo con $n=4$, $a=-1$, $b=2$ y
-		$f(t)= t^{6}-2t^{5}+0.01t^{3}+2$}
- 	\end{measuredfigure}
- \end{figure}
-
-
-
 
 
 

@@ -1,3 +1,5 @@
+#Gráficas rosas para el final de la discusión de las formas alternativas para la definición de la BON discreta de Legendre.
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pylab

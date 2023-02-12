@@ -18,26 +18,27 @@ Para dibujar las gráficas usamos los valores
 calculados en la tabla
 \ref{formulas explicitas para Ln con n de 2 hasta 6}.
 
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de los elementos de $\cali{L}^{2}
+	\subseteq \IR^{2}$
+	\label{fig: graficas elementos L2}
+	}
+	\centering
+	\includegraphics[scale=0.5]{graficasLegendre2} 
+\end{figure}	
+
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.5]{graficasLegendre2} 
-		\caption{Gráficas de los dos elementos de $\cali{L}^{2}
-		\subseteq \IR^{2}$}
- 	\end{measuredfigure}
- \end{figure}
+	\sidecaption{
+	Gráficas de los elementos de $\cali{L}^{3} 
+	\subseteq \IR^{3}$
+	\label{fig: graficas elementos L2}
+	}
+	\centering
+	\includegraphics[scale=0.26]{graficasLegendre3} 
+\end{figure}	
 
-
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.32]{graficasLegendre3} 
-		\caption{Gráficas de los tres elementos de $\cali{L}^{3}
-		\subseteq \IR^{3}$}
- 	\end{measuredfigure}
- \end{figure}
 
 
 
@@ -78,25 +79,30 @@ y
 W_{3,2}=\IR^{3}.
 \]
 
-	\begin{figure}[H]
-	\centering\captionsetup{format = hang}
-		\begin{measuredfigure}
-			\includegraphics[scale=1]{ legendre2y3} 
-			\caption{
-			\TODO{cambia nombres espacios.}			
-			Se muestran gráficamente al subespacio
-			$W_{2,0} \subseteq \IR^{2}$
-			y a los subespacios $W_{3,0}$ y $W_{3,1}$ de $\IR^{3}$ que
-			son, respectivamente, una recta y un plano (ambos pasando
-			por el origen); observe que, efectivamente,
-			$W_{3,0} \subseteq W_{3,1}$. En ambas dimensiones se han 
-			dibujado en {\color{ameMorado}{morado}} a los hiperplanos
-			de polinomios discretos correspondientes, que en efecto
-			dividen en dos regiones ajenas a los respectivos espacios 
-			ambiente. Puede recordar la definición de hiperplano
-			en la sección \ref{section: hiperplanos}.} 
-	 	\end{measuredfigure}
-	 \end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de 
+	$W_{2,0} \subseteq \IR^{2}$
+	y de los subespacios
+	$W_{3,0}$ y $W_{3,1}$ de $\IR^{3}$ que
+	son, respectivamente, una recta y un plano;
+	observe que
+	$W_{3,0} \subseteq W_{3,1}$. 
+	En ambas dimensiones se han 
+	dibujado en {\color{ameMorado}{morado}} a los hiperplanos
+	de polinomios discretos correspondientes, que en efecto
+	dividen en dos regiones ajenas a los respectivos espacios 
+	ambiente. La definición de hiperplano se da en
+	\ref{section: hiperplanos}.
+	\label{fig: graficas espacios W para dimensiones 2 y 3}
+	}
+	\centering
+	\includegraphics[scale= 1]{legendre2y3} 
+\end{figure}	
+
+	 
+	 
+	 
 \final
 \end{ej}
 
@@ -121,7 +127,7 @@ puntos del plano:
 \{ (0,-0.5), (1,2.4), (2, 1.6), (3,1.7), (4, 2.3) \}.
 \end{equation}
 
-\begin{minipage}{0.5\textwidth}
+
 Como tenemos cinco puntos, trabajamos
 en el espacio $\IR^{5}$. 
 La regresión lineal calculada a partir
@@ -143,20 +149,14 @@ es
 x=(-0.5, 2.4, 1.6, 1.7, 2.3).
 \end{equation}
 
-\end{minipage} \hfill
-\begin{minipage}{0.45\textwidth}
+
+\begin{marginfigure}
+\centering
+\includegraphics[scale=0.25 ]{graficaX_31Oct}
+\caption{Gráfica de la señal $x$.}
+\end{marginfigure}
 
 
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.3]{graficaX_31Oct} 
-		\caption{Gráfica de la señal $x$.}
- 	\end{measuredfigure}
- \end{figure}
-
-
-\end{minipage}
 
 \vspace{1cm}
 
@@ -198,12 +198,15 @@ esto se
 traduce en la existencia de 
 únicos escalares $c_{1}$, $c_{2}$,
 $a_{1}$, $a_{2}$ y $a_{3}$ tales que
-\begin{align*}
+\[
 x-c_{1}(1,1,1,1,1)-c_{2}(-2, -1, 0, 1, 2)
-= &\\
-&  a_{1}(2,-1,-2,-1,2)+a_{2}(-1,2,0,-2,1)
+\]
+es igual a 
+
+\[
+a_{1}(2,-1,-2,-1,2)+a_{2}(-1,2,0,-2,1)
 + a_{3}(1,-4,6,-4,1),
-\end{align*}
+\]
 \noindent
 o sea, tales que
 
@@ -235,13 +238,18 @@ en la malla uniforme $\cali{P}_{5}$.
 De forma análoga se calcula la parte cuadrática de
 la señal $s$.
 
-
-	\begin{figure}[H]
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de $x$, 
+	$\Pi_{W_{5,0}}(x)$, $\Pi_{W_{5,1}}(x)$ y $\Pi_{W_{5,2}}(x)$.
+	\label{fig: partes afin, lineal y cuadratica} 
+	}
 	\centering
 	\includegraphics[scale=0.6]{parteAfinCuadr}
-		\caption{Mostramos las gráficas de $x$, 
-		$\Pi_{W_{5,0}}(x)$, $\Pi_{W_{5,1}}(x)$ y $\Pi_{W_{5,2}}(x)$.}
-	\end{figure}	
+\end{figure}	
+
+
+
 \final
 \end{ej}
 
@@ -299,16 +307,20 @@ o, en términos matemáticos, de qué tanto se aleja
 $x$ del espacio de señales afines de su correspondiente
 espacio ambiente.
 
-
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=1]{18Sept_1} 
-		\caption{Esquema de dos formas en las que uno puede intentar medir
-	qué tan afín es una señal $x$. \TODO{cambia nombres.}}
- 	\end{measuredfigure}
- \end{figure}
+	\sidecaption{
+	Esquema de dos formas en las que uno puede intentar medir
+	qué tan afín es una señal $x$.
+	\label{fig: dos formas de medir distancia a plano}
+	}
+	\centering
+	\includegraphics[scale= 1]{ 18Sept_1} 
+\end{figure}	
 
+\TODO{
+Recuerda que debes de notar que la distancia al plano en realidad
+no es la mejor forma de dar una medida de qué tan afín
+es $x$.}
 
 \begin{itemize}
 \item[a)] Una forma obvia de proceder es calcular la norma
@@ -334,9 +346,10 @@ a que sea ortogonal a cualquier señal afín de dimensión 3.
 Como las dimensiones de $\IR^{3}$ y $W_{3,1}$ 
 difieren por uno,
 este útimo es un hiperplano
-del primero (puede recordar la definición
-de hiperplano en la sección
-\ref{section: hiperplanos}); como $\cali{L}^{3,2}$
+\sidenote{Puede recordar la definición
+de hiperplano en 
+\ref{section: hiperplanos}.}
+del primero; como $\cali{L}^{3,2}$
 es un vector normal a $W_{3,1}$
 (c.f. corolario \ref{cor: Ln,k ortogonal a todo pol discreto de grado menor a k}), 
 si $\varphi: \IR^{3} \longrightarrow \IR$ es la función

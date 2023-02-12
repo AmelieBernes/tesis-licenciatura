@@ -306,20 +306,17 @@ de esto podemos concluir la pertenencia de
 $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
 
 \begin{figure}[H]
-	\includegraphics[scale=0.3]{mall} 
-	\caption{
+	\includegraphics[scale=0.24]{mall} 
+	\sidecaption{
 	Ejemplo haciendo $n=11$, $\cali{P}$ la malla
 	uniforme de $11$ puntos con punto inicial $-2$
 	y paso $h=0.5$.	    
 	A la izquierda se dibuja la gráfica de 
 	$f(t)=t^{3}-3t+1$
 	y su discretización puntual en $\cali{P}$.
-	A la derecha, la gráfica de $\phi(t)=0.5t-2$. En lo que sigue, a  
-    funciones lineales como $\phi$, que se
-    definen para obtener los puntos de una malla
-    uniforme a partir de los de otra, les llamaremos
-    \textbf{funciones de cambio
-	de malla}.}
+	A la derecha, la gráfica de $\phi(t)=0.5t-2$. A  
+    una tal función lineal $\phi$ le llamaremos, en este contexto,
+    \textbf{función de cambio de malla}.}
  \end{figure}
 \QEDB
 \vspace{0.2cm}
@@ -333,14 +330,16 @@ W_{n,i}= span\{ v_{k} : 0 \leq k \leq i \},
 con $0 \leq i \leq n-1$ entero,
 \textbf{es} el espacio de
 los polinomios discretos
-de dimensión $n$ con dominio uniforme y
-de grado a lo más $i$ 
+de dimensión $n$ con dominio uniforme 
 \sidenote{
 Una contención se 
 prueba en la proposición 
 \ref{obs: s en Wi sii es la discretizacion en malla Pn de un pol de grado a lo más i}
 y la otra en la proposición \ref{Obs1}.
 }
+y
+de grado a lo más $i$.
+
 
 
 Como mostramos en el siguiente teorema, los vectores
@@ -593,21 +592,13 @@ Comprobamos que esto no ocurre
 en el siguiente resultado.
 
 
-%	\begin{figure}[H]
-%	\captionsetup{width=0.6\linewidth}
-%	\centering
-%	\includegraphics[scale=1]{25Nov_1} 
-%	\caption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se quita la restricción en los grados de los polinomios a discretizar.}
-%	\end{figure}	
-
-
-\begin{SCfigure}[\sidecaptionrelwidth][H]
-	\parbox{\textwidth}{\centering\includegraphics[scale=0.5]{25Nov_1}}
-	%\includegraphics[scale=0.5]{25Nov_1} 
-	\sidecaption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se omite la restricción en los grados de los polinomios a discretizar.}
-\end{SCfigure}
-
-
+\begin{figure}[H]
+	\sidecaption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se quita la restricción en los grados de los polinomios a discretizar.
+	\label{fig: restriccion en grado pol}
+	}
+	\centering
+	\includegraphics[scale=0.52]{25Nov_1} 
+\end{figure}	
 
 
 \begin{prop}

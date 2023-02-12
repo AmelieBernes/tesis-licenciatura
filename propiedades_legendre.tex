@@ -123,7 +123,7 @@ Si $x \in \IR^{n}$ y
 i=0,1,2
 \end{equation}
 son las proyecciones ortogonales
-\footnote{Puede recordar la definición
+\sidenote{Puede recordar la definición
 de proyección ortogonal, basada en la unicidad
 establecida en el 
 teorema de la proyección ortogonal \label{Teo:proyOrt},
@@ -199,22 +199,21 @@ sea mínima.
 
 
 \begin{figure}[H]
-\label{fig: rmc}
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.6]{2Dic_1} 
-		\caption{Partimos del conjunto
-		de cinco puntos
-		$
-		G=\{ (0, 5), (1,3.2), (2, 4.6),
-		(3,0), (4, -0.3) \}
-		$ y calculamos la
-		recta de mínimos cuadrados correspondiente
-		a este conjunto, que resulta ser 
-		$l_{min}=-1.38x+5.26$.
-		}
- 	\end{measuredfigure}
- \end{figure}
+	\sidecaption{
+	Partimos del conjunto $G$
+	cuyos elementos son $(0, 5)$,
+	$(1, 3.2)$, $(2, 4.6)$, $(3,0)$
+	y $(4,-0.3)$, y
+	calculamos la
+	recta de mínimos cuadrados correspondiente
+	a este conjunto, que resulta ser 
+	$l_{min}=-1.38x+5.26$.
+	\label{fig: proyeccion vs minimos cuadrados 1}
+	}
+	\centering
+	\includegraphics[scale= 0.5]{2Dic_1} 
+\end{figure}	
+
 
 \item Considerar al vector $x=(x_{j})_{j=0}^{n-1}$
 de $\IR^{n}$, proyectarlo al espacio $W_{n,1}$ 
@@ -232,25 +231,25 @@ grado a lo más uno, c.f.
 teorema \ref{cor: propiedades importantes de espacios Wi})
 como aproximación lineal del conjunto \eqref{eq: Halloween!}.
 
+
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.6]{2Dic_2} 
-		\caption{
-		\TODO{cambia nombre del espacio $W_{n}$}		
+	\sidecaption{	
 		El vector formado a partir
 		del conjunto $G$ 
-		introducido en la imagen
-		\ref{fig: rmc}
+		de la figura 
+		\ref{fig: proyeccion vs minimos cuadrados 1}
 		es $x=(5,3.2,4.6,0,-0.3)$.
 		Su proyección al espacio $W_{5,1}$ es
 		$\Pi_{W_{5,1}}(x)= (5.26, 3.88,
 		2.5, 1.12, -0.26)$, y la recta
 		cuya discretización en $\cali{P}_{5}$	
 		es la señal $\Pi_{W_{5,1}}(x)$ es
-		$l_{x}=-1.38x+5.26$.}
- 	\end{measuredfigure}
- \end{figure}
+		$l_{x}=-1.38x+5.26$.
+	\label{fig: proyeccion vs minimos cuadrados 2}
+	}
+	\centering
+	\includegraphics[scale= 0.5]{2Dic_2 } 
+\end{figure}	
 
 \end{enumerate}
 
