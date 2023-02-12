@@ -26,6 +26,8 @@ dimensiones concretas.
 
 \subsection{Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}
 \label{Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}
+
+
 Ahora que contamos con bases ortonormales
 para los espacios de polinomios discretos
 (c.f. corolario \ref{cor: BON de legendre para espacios Wk}),
@@ -37,7 +39,16 @@ no en términos de pertenencia a espacios de polinomios
 discretos,
 sino en términos de coeficientes.
 
-\begin{obs} \label{obs: condiciones necesarias y suficientes sobre la forma de x en terminos de los espacios Wi}
+\sidenote{Los productos punto entre $x$
+y los elementos de la base de Legendre discreta
+son, en efecto, los coeficientes de $x$
+respecto a $\cali{L}^{n}$ por ser
+esta última una BON de $\IR^{n}$.
+\TODO{referencia al apéndice.}}
+
+
+\begin{obs} 
+\label{obs: condiciones necesarias y suficientes sobre la forma de x en terminos de los espacios Wi}
 Sean $n \in \IN$, $\cali{L}^{n}$
 la base de Legendre discreta de dimensión $n$
 definida en 
@@ -48,12 +59,7 @@ a_{k}=<x, \cali{L}^{n,k}>, \hspace{0.2cm} 0 \leq k \leq n-1
 \]
 los coeficientes de $x$
 respecto
-\footnote{Los productos punto entre $x$
-y los elementos de la base de Legendre discreta
-son, en efecto, los coeficientes de $x$
-respecto a $\cali{L}^{n}$ por ser
-esta última una BON de $\IR^{n}$.
-\TODO{referencia al apéndice.}} a $\cali{L}^{n}$,
+a $\cali{L}^{n}$,
 de tal forma que se tiene la descomposición
 \begin{equation}
 \label{eq5: 1Dic}
@@ -104,7 +110,6 @@ seguimos pudiendo \TODO{... Parseval. Tal vez esto
 debería ir en el apéndice.} 
 
 
-
 \noindent A la luz del teorema de la proyección ortogonal, 
 las proyecciones de $x$ sobre los espacios 
 $W_{n,0}$, $W_{n,1}$
@@ -114,6 +119,11 @@ distancia euclidea usual)
 a $x$; es natural entonces formular
 las siguientes definiciones.
 
+\sidenote{Puede recordar la definición
+de proyección ortogonal, basada en la unicidad
+establecida en el 
+teorema de la proyección ortogonal \label{Teo:proyOrt},
+en \eqref{eq3: 1Dic}.}
 
 \begin{defi}
 Si $x \in \IR^{n}$ y
@@ -123,11 +133,6 @@ Si $x \in \IR^{n}$ y
 i=0,1,2
 \end{equation}
 son las proyecciones ortogonales
-\sidenote{Puede recordar la definición
-de proyección ortogonal, basada en la unicidad
-establecida en el 
-teorema de la proyección ortogonal \label{Teo:proyOrt},
-en \eqref{eq3: 1Dic}.}
 a los espacios 
 $W_{n,0}$, $W_{n,1}$ y $W_{n,2}$, a los vectores
 \[
@@ -157,6 +162,16 @@ que $a_{k}= \langle x, \cali{L}^{n,j} \rangle$.
 Use el corolario \ref{cor: proyeccion en terminos de una BON}.
 \QEDB 
 \vspace{0.2cm}
+
+
+
+
+
+
+
+
+
+%-----------------------------------------------------
 
 \subsection{Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}
 \label{Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}
@@ -198,28 +213,28 @@ $l_{min}(x):=m_{0}x+b_{0}$
 sea mínima. 
 
 
-%\begin{figure}[H]
-%	\sidecaption{
-%	Partimos del conjunto $G$
-%	cuyos elementos son $(0, 5)$,
-%	$(1, 3.2)$, $(2, 4.6)$, $(3,0)$
-%	y $(4,-0.3)$, y
-%	calculamos la
-%	recta de mínimos cuadrados correspondiente
-%	a este conjunto, que resulta ser 
-%	$l_{min}=-1.38x+5.26$.
-%	\label{fig: proyeccion vs minimos cuadrados 1}
-%	}
-%	\centering
-%	\includegraphics[scale= 0.5]{2Dic_1} 
-%\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	Partimos del conjunto $G$
+	cuyos elementos son $(0, 5)$,
+	$(1, 3.2)$, $(2, 4.6)$, $(3,0)$
+	y $(4,-0.3)$, y
+	calculamos la
+	recta de mínimos cuadrados correspondiente
+	a este conjunto, que resulta ser 
+	$l_{min}=-1.38x+5.26$.
+	\label{fig: proyeccion vs minimos cuadrados 1}
+	}
+	\centering
+	\includegraphics[scale= 0.5]{2Dic_1} 
+\end{figure}	
 
 
 \item Considerar al vector $x=(x_{j})_{j=0}^{n-1}$
 de $\IR^{n}$, proyectarlo al espacio $W_{n,1}$ 
 de polinomios discretos de dimensión $n$ y grado uno,
-\footnote{\TODO{ver si siempre hablo de la dimensión
-de un polinomio discreto. Esto es importante.}}
+\TODO{ver si siempre hablo de la dimensión
+de un polinomio discreto. Esto es importante.}
 y usar
 a la recta $l_{x}$ cuya discretización en 
 $\cali{P}_{n}$ sea esta proyección
@@ -232,24 +247,24 @@ teorema \ref{cor: propiedades importantes de espacios Wi})
 como aproximación lineal del conjunto \eqref{eq: Halloween!}.
 
 
-%\begin{figure}[H]
-%	\sidecaption{	
-%		El vector formado a partir
-%		del conjunto $G$ 
-%		de la figura 
-%		\ref{fig: proyeccion vs minimos cuadrados 1}
-%		es $x=(5,3.2,4.6,0,-0.3)$.
-%		Su proyección al espacio $W_{5,1}$ es
-%		$\Pi_{W_{5,1}}(x)= (5.26, 3.88,
-%		2.5, 1.12, -0.26)$, y la recta
-%		cuya discretización en $\cali{P}_{5}$	
-%		es la señal $\Pi_{W_{5,1}}(x)$ es
-%		$l_{x}=-1.38x+5.26$.
-%	\label{fig: proyeccion vs minimos cuadrados 2}
-%	}
-%	\centering
-%	\includegraphics[scale= 0.5]{2Dic_2 } 
-%\end{figure}	
+\begin{figure}[H]
+	\sidecaption{	
+		El vector formado a partir
+		del conjunto $G$ 
+		de la figura 
+		\ref{fig: proyeccion vs minimos cuadrados 1}
+		es $x=(5,3.2,4.6,0,-0.3)$.
+		Su proyección al espacio $W_{5,1}$ es
+		$\Pi_{W_{5,1}}(x)= (5.26, 3.88,
+		2.5, 1.12, -0.26)$, y la recta
+		cuya discretización en $\cali{P}_{5}$	
+		es la señal $\Pi_{W_{5,1}}(x)$ es
+		$l_{x}=-1.38x+5.26$.
+	\label{fig: proyeccion vs minimos cuadrados 2}
+	}
+	\centering
+	\includegraphics[scale= 0.5]{2Dic_2 } 
+\end{figure}	
 
 \end{enumerate}
 

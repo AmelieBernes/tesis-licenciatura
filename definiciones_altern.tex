@@ -79,22 +79,24 @@ g_{1}(t):=\frac{1}{2}t+1,
 g_{2}(t):=t^{2}+2t+3 \right\}.
 \end{equation}
 
+Las colecciones \eqref{eq11: 10Dic} y \eqref{eq12: 10Dic}
+tienen en común que contienen, por cada $0 \leq k \leq 2$,
+un polinomio de grado $k$ y coeficiente principal positivo.
 
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.6]{EsquemaGral} 
-		\caption{Ejemplo concreto del proceso tomando 
+	\sidecaption{
+	Ejemplo concreto del proceso tomando 
 		las dos colecciones
-    de polinomios \eqref{eq11: 10Dic} y \eqref{eq12: 10Dic},
-    (que tienen en común que contienen, por cada $0 \leq k \leq 2$,
-    un polinomio de grado $k$ y coeficiente principal positivo), y
+    de polinomios \eqref{eq11: 10Dic} y \eqref{eq12: 10Dic}, 
     discretizándolas, respectivamente, en las mallas uniformes 
-    $\cali{P}_{3}$ y $\cali{P} =\{-2, -\frac{1}{2}, 1 \}$.}
- 	\end{measuredfigure}
- \end{figure}
-
+    $\cali{P}_{3}$ y $\cali{P} =\{-2, -\frac{1}{2}, 1 \}$.
+    \TODO{Poner a color!}
+	\label{fig: generalizacion def basada en discr puntual}
+	}
+	\centering
+	\includegraphics[scale=0.6]{EsquemaGral} 
+\end{figure}	
 
 Afirmamos que, si
 \begin{itemize}
@@ -306,9 +308,11 @@ sigue inmediantamente lo siguiente:
 
 \begin{obs}
 \label{obs: los xi y los etai son elementos de Wni}
-Sea $n \in \IN$. Para cada $0 \leq i \leq n-1$, los vectores
+Sea $n \in \IN$. 
+Para cada $0 \leq i \leq n-1$, los vectores
 $\xi_{i}$ y $\eta_{i}$ 
-definidos en \eqref{eq0: 1En} son elementos del
+definidos en \eqref{eq0: 1En} \\
+son elementos del
 subespacio $W_{n, i}$ de $\IR^{n}$.
 \end{obs}
 
@@ -327,7 +331,7 @@ demostración de la siguiente proposición.
 \begin{prop} \label{prop:signo}
 Sea $n \in \IN$.
 Para $0 \leq i \leq n-1$, sean los vectores $\xi_{i}$
-y $\eta_{i}$ como en \eqref{eq4: 31Oct}.
+y $\eta_{i}$ como en \eqref{eq4: 31Oct}. \\
 Para toda $i$, $\xi_{i}= \pm \eta_{i}$.
 \end{prop}
 \noindent
@@ -710,16 +714,11 @@ en las subsecciones \TODO{ref},
 construiremos una base del espacio $\IR^{n}$
 que, como probaremos, es $\cali{L}^{n}$.
 
-
-\begin{figure}[H]
-	\sidecaption{
-	Ejemplo con $n=4$, $a=-1$, $b=2$ y
-		$f(t)= t^{6}-2t^{5}+0.01t^{3}+2$
-	\label{fig: definicion discretizacion integral}
-	}
-	\centering
-	\includegraphics[scale=1]{1En_2} 
-\end{figure}	
+\begin{marginfigure}
+\includegraphics[scale=1]{1En_2} 
+		\caption{Ejemplo con $n=4$, $a=-1$, $b=2$ y
+		$f(t)= t^{6}-2t^{5}+0.01t^{3}+2$}
+\end{marginfigure}
 
 
 \begin{defi}
