@@ -14,10 +14,10 @@
 \contentsline {subsection}{\numberline {1.5.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{39}{subsection.1.5.2}%
 \contentsline {section}{\numberline {1.6}Comentarios finales sobre la construcción}{43}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Revisión de literatura y artículos relacionados}{44}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{46}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{45}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{48}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{49}{subsection.1.8.2}%
-\contentsline {subsection}{\numberline {1.8.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{50}{subsection.1.8.3}%
+\contentsline {subsection}{\numberline {1.8.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{49}{subsection.1.8.3}%
 \contentsline {section}{\numberline {1.9}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{53}{section.1.9}%
 \contentsline {subsection}{\numberline {1.9.1}Estudio para dimensiones impares}{55}{subsection.1.9.1}%
 \contentsline {subsection}{\numberline {1.9.2}Estudio para dimensiones pares}{58}{subsection.1.9.2}%

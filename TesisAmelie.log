@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.20)  11 FEB 2023 20:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.20)  12 FEB 2023 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,10 +732,6 @@ Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
 Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 )
-(/usr/share/texmf-dist/tex/latex/marginnote/marginnote.sty
-Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count328
-)
 (/usr/share/texmf-dist/tex/generic/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks51
@@ -750,9 +746,9 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 )
 (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count329
-\c@@ppsavesec=\count330
-\c@@ppsaveapp=\count331
+\c@@pps=\count328
+\c@@ppsavesec=\count329
+\c@@ppsaveapp=\count330
 )
 (/usr/share/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
@@ -763,7 +759,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip62
 \bibsep=\skip63
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count332
+\c@NAT@ctr=\count331
 )
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -771,21 +767,21 @@ nment
 
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count333
+\c@float@type=\count332
 \float@exts=\toks57
 \float@box=\box84
 \@float@everytoks=\toks58
 \@floatcapt=\box85
 )
 \@float@every@algorithm=\toks59
-\c@algorithm=\count334
+\c@algorithm=\count333
 )
 (/usr/share/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count335
-\c@ALC@line=\count336
-\c@ALC@rem=\count337
-\c@ALC@depth=\count338
+\c@ALC@unique=\count334
+\c@ALC@line=\count335
+\c@ALC@rem=\count336
+\c@ALC@depth=\count337
 \ALC@tlm=\skip64
 \algorithmicindent=\skip65
 )
@@ -820,14 +816,14 @@ Package zref Info: New property: page on input line 769.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\c@abspage=\count339
+\c@abspage=\count338
 Package zref Info: New property: abspage on input line 65.
 )
 (/usr/share/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip66
-\c@mdf@globalstyle@cnt=\count340
+\c@mdf@globalstyle@cnt=\count339
 \mdf@skipabove@length=\skip67
 \mdf@skipbelow@length=\skip68
 \mdf@leftmargin@length=\skip69
@@ -903,16 +899,16 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@horizontalspaceofbox=\skip130
 \mdfsubtitleheight=\skip131
 \mdfsubsubtitleheight=\skip132
-\c@mdfcountframes=\count341
+\c@mdfcountframes=\count340
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count342
-\c@mdf@env@i=\count343
-\c@mdf@env@ii=\count344
-\c@mdf@zref@counter=\count345
+\mdf@envdepth=\count341
+\c@mdf@env@i=\count342
+\c@mdf@env@ii=\count343
+\c@mdf@zref@counter=\count344
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/usr/share/texmf-dist/tex/latex/cases/cases.sty
@@ -927,7 +923,7 @@ Package: fancyref 1999/02/03 v0.9c Fancy cross-referencing
 
 (/usr/share/texmf-dist/tex/latex/tools/varioref.sty
 Package: varioref 2021/07/07 v1.6f package for extended references (FMi)
-\c@vrcnt=\count346
+\c@vrcnt=\count345
 ))
 (/usr/share/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -935,24 +931,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count347
-\c@Blindtext=\count348
-\c@blind@countparstart=\count349
-\blind@countxx=\count350
-\blindtext@numBlindtext=\count351
-\blind@countyy=\count352
-\c@blindlist=\count353
-\c@blindlistlevel=\count354
-\c@blindlist@level=\count355
-\blind@listitem=\count356
-\c@blind@listcount=\count357
-\c@blind@levelcount=\count358
-\blind@mathformula=\count359
-\blind@Mathformula=\count360
-\c@blind@randomcount=\count361
-\c@blind@randommax=\count362
-\c@blind@pangramcount=\count363
-\c@blind@pangrammax=\count364
+\c@blindtext=\count346
+\c@Blindtext=\count347
+\c@blind@countparstart=\count348
+\blind@countxx=\count349
+\blindtext@numBlindtext=\count350
+\blind@countyy=\count351
+\c@blindlist=\count352
+\c@blindlistlevel=\count353
+\c@blindlist@level=\count354
+\blind@listitem=\count355
+\c@blind@listcount=\count356
+\c@blind@levelcount=\count357
+\blind@mathformula=\count358
+\blind@Mathformula=\count359
+\c@blind@randomcount=\count360
+\c@blind@randommax=\count361
+\c@blind@pangramcount=\count362
+\c@blind@pangrammax=\count363
 )
 (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
@@ -978,7 +974,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks61
 \XKV@tempa@toks=\toks62
 )
-\XKV@depth=\count365
+\XKV@depth=\count364
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -989,14 +985,14 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
-\c@tracingmulticols=\count366
+\c@tracingmulticols=\count365
 \mult@box=\box92
 \multicol@leftmargin=\dimen299
-\c@unbalance=\count367
-\c@collectmore=\count368
-\doublecol@number=\count369
-\multicoltolerance=\count370
-\multicolpretolerance=\count371
+\c@unbalance=\count366
+\c@collectmore=\count367
+\doublecol@number=\count368
+\multicoltolerance=\count369
+\multicolpretolerance=\count370
 \full@width=\dimen300
 \page@free=\dimen301
 \premulticols=\dimen302
@@ -1046,15 +1042,15 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box132
 \@tempa=\box133
 \@tempa=\box134
-\c@minrows=\count372
-\c@columnbadness=\count373
-\c@finalcolumnbadness=\count374
+\c@minrows=\count371
+\c@columnbadness=\count372
+\c@finalcolumnbadness=\count373
 \last@try=\dimen305
 \multicolovershoot=\dimen306
 \multicolundershoot=\dimen307
 \mult@nat@firstbox=\box135
 \colbreak@box=\box136
-\mc@col@check@num=\count375
+\mc@col@check@num=\count374
 ))
 (/usr/share/texmf-dist/tex/latex/scalerel/scalerel.sty
 Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
@@ -1073,9 +1069,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count376
-\Gm@cntv=\count377
-\c@Gm@tempcnt=\count378
+\Gm@cnth=\count375
+\Gm@cntv=\count376
+\c@Gm@tempcnt=\count377
 \Gm@bindingoffset=\dimen308
 \Gm@wd@mp=\dimen309
 \Gm@odd@mp=\dimen310
@@ -1092,6 +1088,10 @@ Package: l3keys2e 2022-01-12 LaTeX2e option processing using LaTeX3 keys
 )
 Package: sidenotes 2016/04/21 v1.00 rich text in the margin for LaTeX
 
+(/usr/share/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count378
+)
 (/usr/share/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count379
@@ -1464,33 +1464,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--307
 File: ./imagenes/mall.png Graphic file (type png)
 <use ./imagenes/mall.png>
 Package pdftex.def Info: ./imagenes/mall.png  used on input line 309.
-(pdftex.def)             Requested size: 333.02696pt x 175.7064pt.
+(pdftex.def)             Requested size: 360.76334pt x 190.34023pt.
 Package marginnote Info: Margin note 14.1 is on absolute page 15 on input line 
 320.
 Package marginnote Info: right page because not two side mode on input line 320
 .
-Package marginnote Info: xpos seems to be 408.36029pt on input line 320.
+Package marginnote Info: xpos seems to be 72.0pt on input line 320.
+
+Overfull \hbox (0.76334pt too wide) in paragraph at lines 309--320
+[][]
+ []
+
 [12]
 Underfull \hbox (badness 2435) in paragraph at lines 339--339
 []$[]$  \OT1/cmr/m/n/10 Una con-ten-ci^^Son se
  []
 
 [13 <./imagenes/mall.png>]
-<./imagenes/nuevas_lupas.png, id=398, 346.4142pt x 171.7617pt>
+<./imagenes/nuevas_lupas.png, id=397, 346.4142pt x 171.7617pt>
 File: ./imagenes/nuevas_lupas.png Graphic file (type png)
 <use ./imagenes/nuevas_lupas.png>
 Package pdftex.def Info: ./imagenes/nuevas_lupas.png  used on input line 477.
 (pdftex.def)             Requested size: 346.41335pt x 171.76128pt.
  [14] [15 <./imagenes/nuevas_lupas.png>]
 Package marginnote Info: Margin note 18.1 is on absolute page 18 on input line 
-599.
-Package marginnote Info: right page because not two side mode on input line 599
+601.
+Package marginnote Info: right page because not two side mode on input line 601
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 599.
+Package marginnote Info: xpos seems to be 72.0pt on input line 601.
 <./imagenes/25Nov_1.png, id=429, 688.0104pt x 346.1733pt>
 File: ./imagenes/25Nov_1.png Graphic file (type png)
 <use ./imagenes/25Nov_1.png>
-Package pdftex.def Info: ./imagenes/25Nov_1.png  used on input line 600.
+Package pdftex.def Info: ./imagenes/25Nov_1.png  used on input line 602.
 (pdftex.def)             Requested size: 357.76747pt x 180.01114pt.
  [16 <./imagenes/25Nov_1.png>] [17]) (./propiedades_legendre.tex [18]
 
@@ -1842,16 +1847,36 @@ mr/m/n/10 )\OML/cmm/m/it/10 ;
  []
 
 [41]
-<./imagenes/5Dic_1.png, id=874, 738.5994pt x 732.0951pt>
+Package marginnote Info: Margin note 44.1 is on absolute page 44 on input line 
+1031.
+Package marginnote Info: right page because not two side mode on input line 103
+1.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1031.
+<./imagenes/5Dic_1.png, id=874, 609.02531pt x 645.16031pt>
 File: ./imagenes/5Dic_1.png Graphic file (type png)
 <use ./imagenes/5Dic_1.png>
-Package pdftex.def Info: ./imagenes/5Dic_1.png  used on input line 1024.
-(pdftex.def)             Requested size: 295.43452pt x 292.83284pt.
-<./imagenes/5Dic_2.png, id=875, 475.5366pt x 443.7378pt>
+Package pdftex.def Info: ./imagenes/5Dic_1.png  used on input line 1032.
+(pdftex.def)             Requested size: 365.418pt x 387.09917pt.
+
+Overfull \hbox (5.418pt too wide) in paragraph at lines 1032--1033
+ [][] 
+ []
+
+Package marginnote Info: Margin note 44.2 is on absolute page 45 on input line 
+1059.
+Package marginnote Info: right page because not two side mode on input line 105
+9.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1059.
+
+Underfull \hbox (badness 1320) in paragraph at lines 1059--1059
+\OT1/cmr/m/n/8 de-sa-rro-lla-da, fi-ja-da una di-
+ []
+
+<./imagenes/5Dic_2.png, id=875, 595.47469pt x 636.87938pt>
 File: ./imagenes/5Dic_2.png Graphic file (type png)
 <use ./imagenes/5Dic_2.png>
-Package pdftex.def Info: ./imagenes/5Dic_2.png  used on input line 1040.
-(pdftex.def)             Requested size: 337.63335pt x 315.05603pt.
+Package pdftex.def Info: ./imagenes/5Dic_2.png  used on input line 1060.
+(pdftex.def)             Requested size: 297.7366pt x 318.4389pt.
 ) (./comentarios_finales.tex [42 <./imagenes/5Dic_1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 3--20
 
@@ -1866,8 +1891,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--25
 Package natbib Warning: Citation `Neuman' on page 43 undefined on input line 27
 .
 
-) [43 <./imagenes/5Dic_2.png>]) (./expresiones_legendre.tex
-(./revision_literatura.tex
+)) (./expresiones_legendre.tex (./revision_literatura.tex [43 <./imagenes/5Dic_
+2.png>]
 
 Package natbib Warning: Citation `Neuman' on page 44 undefined on input line 15
 .
@@ -1877,30 +1902,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--71
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
+
+ []
+
 [44
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7.
 67}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
-     
+l.95 \]
+       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7.
 67}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
-     
+l.95 \]
+       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.1.7.
 68}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.83 
-     ]
-Underfull \hbox (badness 10000) in paragraph at lines 85--90
-
- []
-
-
+l.95 \]
+       ]
 Overfull \hbox (7.91951pt too wide) in paragraph at lines 114--125
 \OT1/cmr/m/n/10 La ob-ten-ci^^Son de po-li-no-mios or-to-go-na-les en un con-ju
 n-to de pun-tos $\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; [] ; x
@@ -1937,11 +1962,12 @@ Package natbib Warning: Citation `Neuman' on page 46 undefined on input line 67
 Package natbib Warning: Citation `Neuman' on page 46 undefined on input line 79
 .
 
-[46]
+
 Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
 
+[46]
 
 Package natbib Warning: Citation `Neuman' on page 47 undefined on input line 22
 5.
@@ -1983,12 +2009,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[48]
+
 Overfull \hbox (166.83844pt too wide) detected at line 24
 \OMS/cmsy/m/n/10 L[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] [] \OML/cmm/m/it/
 10 :
  []
 
+[48]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 43.
@@ -2050,7 +2077,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 161.
 
-<./imagenes/graf_L2.png, id=963, 1387.584pt x 732.0951pt>
+<./imagenes/graf_L2.png, id=961, 1387.584pt x 732.0951pt>
 File: ./imagenes/graf_L2.png Graphic file (type png)
 <use ./imagenes/graf_L2.png>
 Package pdftex.def Info: ./imagenes/graf_L2.png  used on input line 169.
@@ -2061,7 +2088,7 @@ Overfull \hbox (56.27841pt too wide) in paragraph at lines 169--170
  []
 
 [49]
-<./imagenes/graf_L3.png, id=968, 1384.6932pt x 349.0641pt>
+<./imagenes/graf_L3.png, id=966, 1384.6932pt x 349.0641pt>
 File: ./imagenes/graf_L3.png Graphic file (type png)
 <use ./imagenes/graf_L3.png>
 Package pdftex.def Info: ./imagenes/graf_L3.png  used on input line 175.
@@ -2071,7 +2098,7 @@ Overfull \hbox (55.41118pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
-<./imagenes/graf_L4.png, id=969, 688.0104pt x 726.3135pt>
+<./imagenes/graf_L4.png, id=967, 688.0104pt x 726.3135pt>
 File: ./imagenes/graf_L4.png Graphic file (type png)
 <use ./imagenes/graf_L4.png>
 Package pdftex.def Info: ./imagenes/graf_L4.png  used on input line 181.
@@ -2082,7 +2109,7 @@ Overfull \hbox (52.80943pt too wide) in paragraph at lines 181--182
  []
 
 [50 <./imagenes/graf_L2.png> <./imagenes/graf_L3.png>]
-<./imagenes/graficasLegendre_5.png, id=978, 462.528pt x 346.896pt>
+<./imagenes/graficasLegendre_5.png, id=976, 462.528pt x 346.896pt>
 File: ./imagenes/graficasLegendre_5.png Graphic file (type png)
 <use ./imagenes/graficasLegendre_5.png>
 Package pdftex.def Info: ./imagenes/graficasLegendre_5.png  used on input line 
@@ -2094,7 +2121,7 @@ Overfull \hbox (10.02289pt too wide) in paragraph at lines 186--187
  []
 
 [51 <./imagenes/graf_L4.png>]
-<./imagenes/graf_L6.png, id=986, 688.0104pt x 726.3135pt>
+<./imagenes/graf_L6.png, id=984, 688.0104pt x 726.3135pt>
 File: ./imagenes/graf_L6.png Graphic file (type png)
 <use ./imagenes/graf_L6.png>
 Package pdftex.def Info: ./imagenes/graf_L6.png  used on input line 191.
@@ -2106,7 +2133,7 @@ Overfull \hbox (52.80943pt too wide) in paragraph at lines 191--192
 
 [52 <./imagenes/graficasLegendre_5.png>])) (./simetrias_codigos.tex
 (./simetrias.tex
-<./imagenes/simetrias_Legendre.png, id=995, 222.5916pt x 152.9715pt>
+<./imagenes/simetrias_Legendre.png, id=993, 222.5916pt x 152.9715pt>
 File: ./imagenes/simetrias_Legendre.png Graphic file (type png)
 <use ./imagenes/simetrias_Legendre.png>
 Package pdftex.def Info: ./imagenes/simetrias_Legendre.png  used on input line 
@@ -2152,32 +2179,38 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 54 undefine
 d on input line 118.
 
-<./imagenes/10Dic_1.png, id=1006, 385.1991pt x 205.4877pt>
+<./imagenes/10Dic_1.png, id=1004, 385.1991pt x 205.4877pt>
 File: ./imagenes/10Dic_1.png Graphic file (type png)
 <use ./imagenes/10Dic_1.png>
 Package pdftex.def Info: ./imagenes/10Dic_1.png  used on input line 119.
 (pdftex.def)             Requested size: 308.15968pt x 164.39037pt.
 [54 <./imagenes/simetrias_legendre.png>] [55 <./imagenes/10Dic_1.png>]
-<./imagenes/simetria1.png, id=1041, 322.0833pt x 83.8332pt>
+(./codigo_imagenes.tex)
+<./imagenes/simetria1.png, id=1039, 554.82281pt x 118.94438pt>
 File: ./imagenes/simetria1.png Graphic file (type png)
 <use ./imagenes/simetria1.png>
-Package pdftex.def Info: ./imagenes/simetria1.png  used on input line 261.
-(pdftex.def)             Requested size: 322.0825pt x 83.83298pt.
- [56 <./imagenes/simetria1.png>] [57]
-<./imagenes/simetria2.png, id=1075, 289.8027pt x 85.7604pt>
-File: ./imagenes/simetria2.png Graphic file (type png)
-<use ./imagenes/simetria2.png>
-Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 445.
-(pdftex.def)             Requested size: 376.74345pt x 111.48848pt.
+Package pdftex.def Info: ./imagenes/simetria1.png  used on input line 262.
+(pdftex.def)             Requested size: 388.37332pt x 83.26048pt.
 
-Overfull \hbox (16.74345pt too wide) in paragraph at lines 445--453
+Overfull \hbox (28.37332pt too wide) in paragraph at lines 262--270
  [] 
  []
 
-<./imagenes/10Dic_3.png, id=1076, 226.6869pt x 113.4639pt>
+[56 <./imagenes/simetria1.png>] [57]
+<./imagenes/simetria2.png, id=1073, 289.8027pt x 85.7604pt>
+File: ./imagenes/simetria2.png Graphic file (type png)
+<use ./imagenes/simetria2.png>
+Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 446.
+(pdftex.def)             Requested size: 376.74345pt x 111.48848pt.
+
+Overfull \hbox (16.74345pt too wide) in paragraph at lines 446--454
+ [] 
+ []
+
+<./imagenes/10Dic_3.png, id=1074, 226.6869pt x 113.4639pt>
 File: ./imagenes/10Dic_3.png Graphic file (type png)
 <use ./imagenes/10Dic_3.png>
-Package pdftex.def Info: ./imagenes/10Dic_3.png  used on input line 467.
+Package pdftex.def Info: ./imagenes/10Dic_3.png  used on input line 468.
 (pdftex.def)             Requested size: 226.68634pt x 113.46361pt.
 [58 <./imagenes/simetria2.png>]) (./codigo.tex
 Package marginnote Info: Margin note 61.1 is on absolute page 61 on input line 
@@ -2185,18 +2218,13 @@ Package marginnote Info: Margin note 61.1 is on absolute page 61 on input line
 Package marginnote Info: right page because not two side mode on input line 33.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 33.
-<./imagenes/7En_1.png, id=1087, 301.3659pt x 121.4136pt>
+<./imagenes/7En_1.png, id=1085, 444.15938pt x 181.42781pt>
 File: ./imagenes/7En_1.png Graphic file (type png)
 <use ./imagenes/7En_1.png>
 Package pdftex.def Info: ./imagenes/7En_1.png  used on input line 34.
-(pdftex.def)             Requested size: 361.63727pt x 145.69559pt.
-
-Overfull \hbox (1.63727pt too wide) in paragraph at lines 34--35
- [][] 
- []
-
-[59 <./imagenes/10Dic_3.png> <./imagenes/7En_1.png>]
-<./imagenes/matriz_lim_suc.png, id=1106, 271.0125pt x 137.0721pt>
+(pdftex.def)             Requested size: 310.90944pt x 126.9986pt.
+ [59 <./imagenes/10Dic_3.png> <./imagenes/7En_1.png>]
+<./imagenes/matriz_lim_suc.png, id=1105, 271.0125pt x 137.0721pt>
 File: ./imagenes/matriz_lim_suc.png Graphic file (type png)
 <use ./imagenes/matriz_lim_suc.png>
 Package pdftex.def Info: ./imagenes/matriz_lim_suc.png  used on input line 190.
@@ -2207,15 +2235,15 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 257.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
 98.
-
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 298.
-) (./espectral.tex [61 <./imagenes/matriz_lim_suc.png>] [62] [63]
+)
+(./espectral.tex [61 <./imagenes/matriz_lim_suc.png>] [62] [63]
 Cap\'{\i }tulo 2.
-<./imagenes/oscil1.png, id=1193, 688.0104pt x 726.3135pt>
+<./imagenes/oscil1.png, id=1191, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil1.png Graphic file (type png)
 <use ./imagenes/oscil1.png>
 Package pdftex.def Info: ./imagenes/oscil1.png  used on input line 14.
@@ -2230,7 +2258,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 12--27
 []$[]$  $[]$ 
  []
 
-<./imagenes/oscil2.png, id=1194, 688.0104pt x 726.3135pt>
+<./imagenes/oscil2.png, id=1192, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil2.png Graphic file (type png)
 <use ./imagenes/oscil2.png>
 Package pdftex.def Info: ./imagenes/oscil2.png  used on input line 48.
@@ -2248,7 +2276,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 29--51
 [64
 
  <./imagenes/oscil1.png>]
-<./imagenes/oscil3.png, id=1201, 1387.584pt x 732.0951pt>
+<./imagenes/oscil3.png, id=1199, 1387.584pt x 732.0951pt>
 File: ./imagenes/oscil3.png Graphic file (type png)
 <use ./imagenes/oscil3.png>
 Package pdftex.def Info: ./imagenes/oscil3.png  used on input line 69.
@@ -2258,7 +2286,7 @@ Overfull \hbox (56.27841pt too wide) in paragraph at lines 69--70
 [][] 
  []
 
-<./imagenes/oscil4.png, id=1202, 1387.584pt x 732.0951pt>
+<./imagenes/oscil4.png, id=1200, 1387.584pt x 732.0951pt>
 File: ./imagenes/oscil4.png Graphic file (type png)
 <use ./imagenes/oscil4.png>
 Package pdftex.def Info: ./imagenes/oscil4.png  used on input line 74.
@@ -2355,7 +2383,7 @@ Package marginnote Info: Margin note 88.1 is on absolute page 89 on input line
 Package marginnote Info: right page because not two side mode on input line 241
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 241.
-<./imagenes/31Julio_1.png, id=1410, 109.6095pt x 102.6234pt>
+<./imagenes/31Julio_1.png, id=1408, 109.6095pt x 102.6234pt>
 File: ./imagenes/31Julio_1.png Graphic file (type png)
 <use ./imagenes/31Julio_1.png>
 Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
@@ -2407,13 +2435,13 @@ Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
 (rerunfilecheck)             Checksum: A24F5D42FF324366F1A87533E09581DB;12333.
  ) 
 Here is how much of TeX's memory you used:
- 37349 strings out of 478238
- 726231 string characters out of 5850455
- 1080726 words of memory out of 5000000
- 54311 multiletter control sequences out of 15000+600000
+ 37357 strings out of 478238
+ 726408 string characters out of 5850455
+ 1077835 words of memory out of 5000000
+ 54318 multiletter control sequences out of 15000+600000
  494893 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,19n,107p,1152b,1041s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 104i,19n,107p,1152b,1043s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -2443,10 +2471,10 @@ pe1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
 pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on TesisAmelie.pdf (93 pages, 4531569 bytes).
+Output written on TesisAmelie.pdf (93 pages, 4260370 bytes).
 PDF statistics:
- 1710 PDF objects out of 1728 (max. 8388607)
- 1360 compressed objects within 14 object streams
- 458 named destinations out of 1000 (max. 500000)
+ 1707 PDF objects out of 1728 (max. 8388607)
+ 1357 compressed objects within 14 object streams
+ 456 named destinations out of 1000 (max. 500000)
  663 words of extra memory for PDF output out of 10000 (max. 10000000)
 

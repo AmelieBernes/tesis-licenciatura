@@ -1019,44 +1019,43 @@ discreta definida en
 \ref{def: base de Legendre discreta}.
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.4]{5Dic_1} 
-	\caption{Al comenzar este
+	\sidecaption{
+	Al comenzar este
 	trabajo de tesis,
 	nuestra definición original de la base $\cali{L}^{n}$
 	consistía en discretizar a los polinomios
 	$f_{k}$, $0 \leq k \leq n-1$ con el operador $\Delta_{n,-1,1}$.
-	En la figura se ilustra este proceso para cuando $n=4$.}
- 	\end{measuredfigure}
- \end{figure}
+	En la figura se ilustra este proceso para cuando $n=4$.
+	\label{fig: definicion original legendre discreto}
+	}
+	\centering
+	\includegraphics[scale=0.6]{5Dic_1} 
+\end{figure}	
+
         
-     
-    
-    
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.71]{5Dic_2} 
-		\caption{Según la teoría
-		 desarrollada en esta sección, 
-		 fijada una dimensión $n$, podemos
+	\sidecaption{
+	Según la teoría
+	desarrollada, 
+	fijada una dimensión $n$ podemos
 	cambiar tanto la malla uniforme como el método 
 	de discretización; después
 	de ortonormalizar, salvo por cambios de signo,
-	obtendremos a la
+	llegaremos a la
 	base $\cali{L}^{n}$. 
 	Es el coeficiente principal del polinomio
-	discretizado para obtener al vector $v_{k}$ 
+	que se discretizará
 	el que determina
 	el signo correcto. Para el ejemplo mostrado
 	en la imagen (donde se ha fijado $n=4$), se
 	han considerado a los polinomios
 	$h_{0}(t)=0.3$, $h_{1}(t)=-0.4t+1$,
-	$h_{2}(t)=0.25t^{2}-0.5t$ y $h_{3}(t)=-t^{3}+2t^{2}+t-2$.
+	$h_{2}(t)=0.5t^{2}-0.5t$ y $h_{3}(t)=-t^{3}+2t^{2}+t-2$.
 	Como se destaca, los polinomios con coeficiente principal
-	negativo (en este caso, los de grados $1$ y $3$)
+	negativo 
 	dan lugar a los respectivos polinomios de Legendre
-	discretos con signo negativo.}
- 	\end{measuredfigure}
- \end{figure}
+	discretos con signo negativo.  
+	\label{fig: aahm}}
+	\centering
+	\includegraphics[scale=0.5]{5Dic_2} 
+\end{figure}	
