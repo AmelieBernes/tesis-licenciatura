@@ -47,3 +47,8 @@ pendientes_tesis #provisional<br />
 
 Notacion<br />
 Referencias.bib<br />
+
+
+##Más código:
+https://colab.research.google.com/drive/1mvmNBov_v21d4KwBQL2MmyUwvnzx8pJm#scrollTo=rRgSid2dblO1  <br />
+https://colab.research.google.com/drive/1l9XebLQtzbNxdpgyIrCG7Dt2DqGdRecc#scrollTo=L-RypNkjyOsy  <br />
