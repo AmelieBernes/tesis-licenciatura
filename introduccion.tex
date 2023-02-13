@@ -2,17 +2,19 @@
 \section{Desarrollo de herramientas para el estudio morfológico de señales finitas}
 \section{Introducción: planteamiento y motivación}
 
-\TODO{Hacer mucho más pequeñas las letras de inicio de capítulo.}
 Durante todo este trabajo trataremos con señales
 finitas
 (digamos, de
 longitud $n$), y las pensaremos como elementos de $\IR^{n}$.
 En la práctica, por lo general
 una señal es un conjunto de mediciones tomadas
-a intervalos regulares de tiempo; por el momento no vamos
-a considerar la localización temporal, por lo que dicha
+a intervalos regulares de tiempo.
+Puesto que por el momento no vamos
+a considerar la localización temporal, dicha
 información perfectamente puede expresarse como 
-una $n-$tupla.
+una $n-$tupla. En lo que sigue, a menos que se diga
+lo contrario, usaremos indistíntamente los nombres
+``vector'' y ``señal'.'
 
 Es costumbre empezar
 a enumerar las entradas de un vector
@@ -20,6 +22,7 @@ de $x \in \IR^{n}$ a partir de uno, pero
 para nuestros fines,
 como se verá más adelante, es más 
 conveniente empezar desde el cero.
+Adoptamos pues esta convención.
 
 \sidenote{\TODO{Di por qué prefieres
 evitar el nombre ``'lineal'. Baja la nota a
@@ -47,14 +50,9 @@ $y=ax^{2}+ bx +c$, donde $a \neq 0$, diremos
 que la señal es \textbf{cuadrática}.
 \end{defi}
 
-\TODO{En lo que sigue, usaremos los nombres 
-de 'vector' y 'señal' como sinónimos.}
-
-
-
 
 \begin{figure}[H]
-	\includegraphics[scale=0.53]{ejemplo_intro} 
+	\includegraphics[scale=0.6]{ejemplo_intro} 
 	\sidecaption{En la figura se pintan las gráficas
 	de dos señales de dimensión 30. La gráfica de cruces 
 	(resp. la de puntos)
@@ -65,19 +63,74 @@ de 'vector' y 'señal' como sinónimos.}
 	convexidad.}
  \end{figure}
 
+Puesto que el espacio subyacente de 
+la teoría es el $\IR-$ espacio vectorial 
+$\IR^{n}$, tenemos la ventaja de contar con
+bases (subconjuntos de $\IR^{n}$ linealmente
+independientes y generadores de todo el espacio),
+que pensamos en este contexto como sistemas
+de representación: si 
+\begin{equation}
+\label{eq0: 13Feb}
+\cali{B}=\{v_{k}
+ \hspace{0.1cm} |
+\hspace{0.1cm} 0 \leq k \leq n-1 \} 
+\subseteq \IR^{n}
+\end{equation}
+es base del espacio, entonces, dado $x \in \IR^{n}$, 
+\textbf{existe} \textbf{únicos} escalares
+$a_{k} \in \IR$, con $0 \leq k \leq n-1$
+tales que
+
+\begin{equation}
+\label{eq1: 13Feb}
+x = \suma{k=0}{n-1}{a_{k}v_{k}};
+\end{equation}
+observe entonces que $x$ 
+queda completamente determinado por los
+números $a_{k}$. Si lo que nos interesa es
+la forma de la gráfica de $x$, es natural preguntarse lo siguiente:
+
+\begin{preg}
+\label{preg: sist repr}
+Si $\cali{B}$ es como en \eqref{eq0: 13Feb}, $x \in \IR^{n}$
+y $a_{k}$ con $0 \leq k \leq n-1$ son como en 
+\eqref{eq1: 13Feb}, ¿es posible establecer condiciones
+necesarias y suficientes que deban cumplir los coeficientes
+$a_{k}$ para que $x$ sea constante, afín o cuadrática?
+\end{preg}
+
+Después de un poco de reflexión, se llega a que la respuesta 
+a la pregunta \ref{preg: sist repr} depende de la base
+$\cali{B}$, y que por lo general la respuesta es negativa.
+Observe además que, en la formulación de la pregunta,
+se supone que para una señal $x$ se pudo dar
+explícitamente a los coeficientes $a_{k}$ aunque,
+en realidad,  esta es una suposición optimista.
+A pesar de que la existencia y unicidad de tales
+coeficientes está asegurada, el calcularlos
+puede requerir el tener que resolver sistemas cuadrados
+de ecuaciones con una cantidad de parámetros que
+depende linealmente de $n$, sistemas que son computacionalmente
+difíciles de resolver si $n$ es ``grande''.
+
+\TODO{Poner algunos ejemplos}. Esto motiva la
+creación de la siguiente lista de deseos.
+
 
 \noindent 
 \begin{listaObj}
 \label{lista de objetivos}
-\TODO{termina...}
 Fijada una dimensión $n$, 
 buscamos una base 
 \begin{equation}
 \label{eq1: 28Nov}
-\cali{L}^{n}=()
+\cali{L}^{n}=\{ \cali{L}^{n,k} \hspace{0.1cm} |
+\hspace{0.1cm} 0 \leq k \leq n-1  \} \subseteq \IR^{n} 
 \end{equation}
 del espacio vectorial
-$\IR^{n}$ ``adecuada'' para la representación de señales,
+$\IR^{n}$ ``adecuada'' para la representación de señales
+$x \in \IR^{n}$,
 en el sentido que satisfaga
 las siguientes condiciones: 
 
@@ -86,52 +139,87 @@ las siguientes condiciones:
 que
 sea ortonormal, para poder hacer uso de todas
 las bondades que conlleva 
-trabajar con tales bases $\cali{B}=\{ v_{k} \}_{k=0}^{n-1}$, 
+trabajar con tales bases, 
 bondades entre las que se encuentran
 \begin{itemize}
 \item 
 \textbf{\color{ameMorado}{(Los coeficientes de $x$ respecto
 a $\cali{B}$ son muy fáciles de calcular, ...)}}
 el poder no sólo dar explícitamente los coeficientes
-de un vector respecto a la base, sino poder calcular a estos
+de un vector respecto a la base, 
+	\marginnote{$x \in \IR^{n}$, $\cali{L}^{n}$ como en 
+	\eqref{eq1: 28Nov} BON de $\IR^{n}$, entonces identificamos a
+	$x$ con los $n$ números  
+	$a_{k}:= \langle x, \cali{L}^{n,k} \rangle$.}
+sino poder calcular a estos
 de forma relativamente sencilla (a saber, vía productos punto,
-c.f. \TODO{referencia del apéndice}), así como
+c.f. \TODO{referencia del apéndice}); si
+\eqref{eq1: 28Nov} es ortonormal, entonces
+
+\begin{equation}
+\label{eq2: 13Feb}
+x= \suma{k=0}{n-1}{a_{k}\cali{L}^{n,k}},
+\hspace{0.2cm} \text{ donde } \hspace{0.2cm}
+a_{k}= \langle x , \cali{L}^{n,k} \rangle.
+\end{equation}
 \item
 \textbf{\textcolor{ameMorado}{(... dan información sobre el tamaño (norma) de $x$...)}}
-el tener disponible una igualdad de tipo Parseval
+El tener disponible una igualdad de tipo Parseval
 (c.f. \TODO{referencia del apéndice}), igualdad que
 relaciona de manera sencilla (de hecho, lineal)
 el cuadrado de
 la magnitud de una señal $x \in \IR^{n}$ (magnitud dada
 gracias al producto punto definido en $\IR^{n}$)
 con el cuadrado de las magnitudes de sus coeficientes
-respecto a la base. Esto es útil al momento
-de intentar determinar la importancia 
-de cierto vector de la base para describir a $x$, pues 
-\TODO{...}. También es bueno contar con esta igualdad
-al momento de hacer procesos de síntesis; si un coeficiente
-$b_{i}$ es pequeño en magnitud, retirando el sumando
-$b_{i}v_{i}$ de \TODO{--}, estamos seguros de obtener
+respecto a la base;
+
+\[
+||x||^{2}= \suma{k=0}{n-1}{|a_{k}|^{2}}.
+\]
+
+Esto es útil al momento
+de intentar determinar
+(de forma intuitiva) 
+	\marginnote{
+		Si $x':= \suma{k=0, }{n-1}{a_{k} \cali{L}^{n,k}}$
+	y $|a_{i}|$ es un número ``cercano a cero'', entonces
+	$||x '|| \approx ||x||$. Pensando en la norma de $x$ como
+	la cantidad de información que tenía, parafraseamos esto
+	como ``quitar coeficientes pequeños no hace que se
+	pierda mucha información''	
+	.}
+la importancia 
+de cierto vector de la base para describir a $x$.
+También es bueno contar con esta igualdad
+al momento de hacer procesos de síntesis,
+es decir, de modificación de la señal
+via cambios en sus coeficientes respecto
+a un sistema de representación; si un coeficiente
+$a_{k}$ es pequeño en magnitud, retirando el sumando
+$a_{k} \cali{L}^{n,k}$ de \eqref{eq2: 13Feb}, 
+estamos seguros de obtener
 un vector $x'$ similar al vector original $x$
 en magnitud.
 \end{itemize}
 \item \textbf{
 \textcolor{ameMorado}{(...y sobre la forma de la
-gráfica de $x$.)}} el que,
-dada $x = \suma{k=0}{n-1}{b_{k}v_{k}}$,
+gráfica de $x$.)}} El que,
+dada la expresión \eqref{eq2: 13Feb},
 sea posible establecer
-una relación sencilla entre los coeficientes $b_{k}$
-(en base a su tamaño y signo) y la forma de la gráfica de la señal.
+una relación sencilla entre \textbf{los coeficientes }
+$a_{k}$
+(en base a su tamaño y signo) y
+\textbf{la forma de la gráfica de la señal}.
 En particular, nos gustaría encontrar condiciones
 necesarias y suficientes 
-en términos de los coeficientes $b_{k}$ para determinar
+en términos de los coeficientes $a_{k}$ para determinar
 si la gráfica de $x$ es afín o cuadrática.
-Queremos pues que los coeficientes $b_{k}$
-\textit{reflejen atributos geométricos de esta};
+Queremos pues que los coeficientes $a_{k}$
+\textit{reflejen atributos geométricos de $x$};
 de esta forma, 
-con herramientas del álgebra lineal lograremos \textbf{cuantificar}
+\textbf{con herramientas del álgebra lineal lograremos cuantificar
 la propiedad geométrica intuitiva de ``parecerse a''
-una recta o una parábola.
+una recta o una parábola.}
 \end{enumerate} 
 
 \end{listaObj}
@@ -220,7 +308,7 @@ puntual, c.f definición \TODO{ref}), es decir,
 pasar del ``contexto continuo'' en el que se han
 definido los polinomios de Legendre a uno discreto.
 
-
+sínte
 Para partir de
 objetos en el espacio ambiente
 $\IR^{n}$ de nuestro interés,
@@ -236,17 +324,6 @@ que interesa es tener condiciones de ortogonalidad
 en el espacio $\IR^{n}$, es obvio que 
 el camino a seguir debe ser uno parecido al segundo.
 
-\newpage
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\label{fig: ortogonalizacion, discretizacion}
-		\includegraphics[scale=1.3]{discr_ortog} 
-		\caption{Como se aprecia, las operaciones de
-		ortogonalización y discretización no son conmutativas.}
- 	\end{measuredfigure}
- \end{figure}
 
 Escogida pues la opción de primero 
 discretizar polinomios para posteriormente
@@ -257,7 +334,7 @@ Elegimos empezar
 con discretizaciones puntuales de polinomios.
 En base a estos objetos lograremos definir
 una base ortonormal de $\IR^{n}$ que cumple satisfactoriamente
-los requisitos explicados en la lista de objetivos  
+los requisitos explicados en la lista de deseos
 \ref{lista de objetivos}, y a la que llamaremos
 la \textbf{base de Legendre discreta de dimensión $n$}.
 
@@ -273,3 +350,15 @@ que, como se ilustra en la subsección de ejemplos
 \ref{subsec: ejemplos}
 resulta ser un sistema de representación
 realmente útil para el estudio morfológico de señales finitas.
+
+\newpage %Nueva página para la figura enorme que sigue.
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\label{fig: ortogonalizacion, discretizacion}
+		\includegraphics[scale=1.3]{discr_ortog} 
+		\caption{Como se aprecia, las operaciones de
+		ortogonalización y discretización no son conmutativas.}
+ 	\end{measuredfigure}
+ \end{figure}

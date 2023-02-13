@@ -36,7 +36,9 @@
 %    \import{./imagenes}{#1.pdf_tex}}
 
 
-%\usepackage{marginnote} %Para escribir en los márgenes, old
+\usepackage{marginnote} %Para escribir en los márgenes
+%IMPORTANTE: sidenotes no son aceptadas dentro de ambientes de thmbox, pero marginnotes sí!
+
 \usepackage{xcolor, color, soul}
 \DeclareRobustCommand{\hlAME}[2]{{\sethlcolor{#1}\hl{#2}}}
 
@@ -114,7 +116,8 @@
 
 			\newtheorem[M]{teo}{Teorema}[section]
 			%Pongo a todas el contador de 'teo'
-			\newtheorem[M]{listaObj}[teo]{Lista de objetivos}
+			\newtheorem[M]{listaObj}[teo]{Lista de deseos}
+			\newtheorem[M]{preg}[teo]{Pregunta}
 			\newtheorem[M]{lema}[teo]{Lema}
 			\newtheorem[M]{prop}[teo]{Proposición}
 			\newtheorem[M]{obs}[teo]{Observación}
@@ -125,7 +128,7 @@
 
 
 
-%Sí compila. Mi lugar seguro jaja.
+%Ambientes de teorema antiguos.
 %			\newtheorem{teo}{Teorema}[section]
 %			%Pongo a todas el contador de 'teo'
 %			\newtheorem{listaObj}[teo]{Lista de objetivos}
