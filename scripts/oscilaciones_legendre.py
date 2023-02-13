@@ -3,7 +3,7 @@
 import math 
 import numpy as np
 import matplotlib.pyplot as plt
-from statistics import mean
+import pylab
 
 import calculo_basesLegendre_NUEVO as legendre
 import baseFourier as fourier
@@ -21,6 +21,34 @@ def esperanza(dominio, mediciones):
 		esp+=dominio[i]*mediciones[i]
 	return esp
 
+
+def graficando_esperanzas(N):
+	"""
+	Función que calcula las esperanzas de las N distribuciones de los coeficientes al cuadrado
+	correspondientes a cada grado 0 leq k leq N-1. 
+	"""
+	baseFourier=fourier.base_Fourier(N)
+	baseLegendre=legendre.base_Legendre(N)
+	dominio=[t for t in range(N)]
+
+	esperanzas=[] #inicializando el vector de esperanzas
+	for k in range(N): #iterando en la variable de grado
+		vectorLegendre=baseLegendre[k]
+		coeficientes_Fourier=[np.dot(vectorLegendre, baseFourier[v])**2 for v in range(N)]
+		esperanza_coefFourier=esperanza(dominio, coeficientes_Fourier)
+		esperanzas.append(esperanza_coefFourier)
+
+	plt.scatter(dominio, esperanzas, s=100, color="mediumpurple", marker="*")
+	plt.grid()
+	plt.axhline(y=0, color='black')
+	plt.axvline(x=0, color='black')
+
+	plt.title("Esperanzas de las distribuciones para $N= $"+str(N))
+	#Agregar un título!
+	plt.show()
+
+
+graficando_esperanzas(90)
 
 #--------------------------------------
 
@@ -55,10 +83,5 @@ plt.scatter(dominio, coeficientes_Fourier, s=200)
 plt.scatter(esperanza_coefFourier, 0, s=200, color='red')
 plt.axvline(x=esperanza_coefFourier, color='red', linestyle='dotted')
 
-plt.grid()
-plt.show()
-
-
-#print(coeficientes_Fourier) 
-#print(type(legendre.base_Legendre(6)))
-#print(legendre.base_Legendre(6)[0])
+#plt.grid()
+#plt.show()
