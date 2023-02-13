@@ -144,12 +144,15 @@ con producto punto.
 (\textbf{Desigualdad de Cauchy-Schwarz}) \label{Teo:CauchySchwarz}
 Sea $V$ un $\IR-$espacio vectorial con producto punto 
 $ \langle \cdot  , \cdot  \rangle$.
-\[
+\begin{equation}
+\label{eq0: 12Feb}
 \forall v , w \in V : \hspace{0.5cm}
 |\langle  v , w \rangle | \leq ||v|| \cdot ||w||,
-\] 
+\end{equation}
 siendo $|| \cdot ||$
 la norma inducida por el producto punto.
+\TODO{Además, la igualdad en \eqref{eq0: 12Feb} se da
+sí y sólo si $v$ es múltiplo escalar de $w$.}
 \end{teo}
 \noindent
 \textbf{Demostración.}
@@ -355,3 +358,44 @@ V = \overline{B} \subseteq \overline{span}(B)
 \QEDB
 \end{dem}
 \end{comment}
+
+\subsection{Ángulo entre elementos de un espacio con producto punto}
+
+Es gracias a la desigualdad de Cauchy-Schwarz
+que es posible introducir una de las nociones
+más valiosas con las que se cuenta en un espacio
+vectorial con producto punto, a saber, la de ángulo entre dos
+vectores.
+
+Si $v$ y $w$ son dos elementos no cero de $V$, entonces,
+según el teorema \ref{Teo:CauchySchwarz},
+\[
+-1 \leq \frac{\langle v, w \rangle}{||v|| \cdot ||w||} \leq 1,
+\]
+luego, puesto que la función coseno es una biyección
+del intervalo $[0, \pi]$ al intervalo $[-1,1]$,
+tenemos que existe un único elemento 
+$\theta \in [0, \pi]$ tal que
+
+\[
+cos(\theta)= \frac{\langle v, w \rangle}{||v|| \cdot ||w||};
+\]
+a tal número $\theta$ se le denomina el 
+\textbf{ángulo formado por los vectores $v$ y $w$}.
+
+\begin{marginfigure}
+\includegraphics[scale=0.1]{coseno}
+\end{marginfigure}
+
+Si alguno de estos dos vectores fuese cero, definimos
+el ángulo entre estos como cero. \TODO{Aquí deberías
+de poner qué significan los casos extremos. Recuerda
+la teoría de Spivak, cálculo en varias variables.}
+
+
+
+
+
+
+
+

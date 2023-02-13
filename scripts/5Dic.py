@@ -6,15 +6,14 @@ import matplotlib.pyplot as plt
 import pylab
 import math
 import flechas_2D
-
+#import formato
 
 #-----------------------------------
 
 #Intento de cambiar el tipo de fuente
-#TODO: si funciona, haz esto un script e impórtalo en todas partes:)
 
-#plt.style.use('seaborn-v0_8-poster') 
-plt.style.use('seaborn-v0_8-pastel') 
+plt.style.use('seaborn-v0_8-poster') 
+#plt.style.use('seaborn-v0_8-pastel') 
 params = {"ytick.color" : "black",
           "xtick.color" : "black",
           "axes.labelcolor" : "black",

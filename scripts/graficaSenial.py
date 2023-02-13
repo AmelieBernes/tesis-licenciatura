@@ -13,7 +13,12 @@ Script para dibujar la gráfica de una señal.
 """
 
 #el input: un array de mediciones, de longitud cualquiera.
-mediciones=[-0.5, 2.4, 1.6, 1.7, 2.3]
+x=np.array([0,1.1,1.1,3,5,0.5])
+
+#mediciones=x
+#mediciones=2*x
+mediciones=-3*x
+
 n=len(mediciones)
 dominio=[]#inicializamos el dominio..
 #...y lo llenamos
@@ -21,6 +26,8 @@ for i in range(n):
     dominio.append(i)
 
 
-plt.scatter(dominio, mediciones, s=150, color='goldenrod')
+plt.scatter(dominio, mediciones, s=150, color='hotpink')
 plt.grid()
+
+
 plt.show()

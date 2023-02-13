@@ -30,7 +30,9 @@
 \contentsline {section}{\numberline {C}Definiciones básicas}{68}{appendix.Alph3}%
 \contentsline {section}{\numberline {D}Hiperplanos de espacios con producto punto de dimensión finita}{70}{appendix.Alph4}%
 \contentsline {section}{\numberline {E}El teorema de la proyección ortogonal}{71}{appendix.Alph5}%
-\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{74}{appendix.Alph6}%
-\contentsline {section}{\numberline {G}Definición de ángulo entre un punto y un plano en un espacio euclideo}{76}{appendix.Alph7}%
-\contentsline {section}{\numberline {H}Bases ortonormales de espacios de Hilbert}{77}{appendix.Alph8}%
-\contentsline {section}{\numberline {I}Sumas ortogonales de espacios de Hilbert}{83}{appendix.Alph9}%
+\contentsline {subsection}{\numberline {E.1}Ángulo entre elementos de un espacio con producto punto}{74}{subsection.Alph5.1}%
+\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{75}{appendix.Alph6}%
+\contentsline {subsection}{\numberline {F.1}Ángulo entre elementos de un espacio con producto punto}{76}{subsection.Alph6.1}%
+\contentsline {subsection}{\numberline {F.2}Definición de ángulo entre un punto y un plano en un espacio euclideo}{77}{subsection.Alph6.2}%
+\contentsline {section}{\numberline {G}Bases ortonormales de espacios de Hilbert}{78}{appendix.Alph7}%
+\contentsline {section}{\numberline {H}Sumas ortogonales de espacios de Hilbert}{84}{appendix.Alph8}%
