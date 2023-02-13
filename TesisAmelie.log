@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  13 FEB 2023 10:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  13 FEB 2023 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1558,7 +1558,7 @@ Package marginnote Info: Margin note 12.1 is on absolute page 13 on input line
 319.
 Package marginnote Info: right page because not two side mode on input line 319
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 319.
+Package marginnote Info: xpos seems to be 409.65692pt on input line 319.
 [12]
 Underfull \hbox (badness 2435) in paragraph at lines 338--338
 []$[]$  \OT1/cmr/m/n/10 Una con-ten-ci^^Son se
@@ -2061,13 +2061,314 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--25
 Package natbib Warning: Citation `Neuman' on page 43 undefined on input line 27
 .
 
-)) (simetrias_codigos.tex (simetrias.tex
+)) (expresiones_legendre.tex (revision_literatura.tex [43 <./imagenes/5Dic_2.pn
+g>]
+
+Package natbib Warning: Citation `Neuman' on page 44 undefined on input line 15
+.
+
+
+LaTeX Warning: Reference `eq:dlop1' on page 44 undefined on input line 43.
+
+
+LaTeX Warning: Reference `eq:dlop2' on page 44 undefined on input line 43.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--90
+
+ []
+
+[44
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8.69
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.95 \]
+       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8.69
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.95 \]
+       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.8.70
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.95 \]
+       ]
+Overfull \hbox (7.91951pt too wide) in paragraph at lines 114--125
+\OT1/cmr/m/n/10 La ob-ten-ci^^Son de po-li-no-mios or-to-go-na-les en un con-ju
+n-to de pun-tos $\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; [] ; x
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )$
+ []
+
+) (deduccion_expresion.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package natbib Warning: Citation `Neuman' on page 45 undefined on input line 12
+.
+
+
+Package natbib Warning: Citation `Neuman' on page 45 undefined on input line 13
+.
+
+
+LaTeX Warning: Reference `eq:dlop1' on page 45 undefined on input line 51.
+
+
+LaTeX Warning: Reference `eq:dlop2' on page 45 undefined on input line 51.
+
+[45]
+
+Package natbib Warning: Citation `Neuman' on page 46 undefined on input line 67
+.
+
+
+Package natbib Warning: Citation `Neuman' on page 46 undefined on input line 79
+.
+
+
+LaTeX Warning: Reference `eq:dlop'1' on page 46 undefined on input line 87.
+
+
+LaTeX Warning: Reference `prop: legendre y DLOPS son paralelos' on page 46 unde
+fined on input line 115.
+
+
+LaTeX Warning: Reference `eq0: base DLOP' on page 46 undefined on input line 12
+2.
+
+
+LaTeX Warning: Reference `eq0: base de Legendre discreta' on page 46 undefined 
+on input line 123.
+
+
+Underfull \vbox (badness 5475) detected at line 129
+ []
+
+
+LaTeX Warning: Reference `prop: legendre y DLOPS son paralelos' on page 46 unde
+fined on input line 133.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--144
+
+ []
+
+[46]
+
+LaTeX Warning: Reference `eq0: base de Legendre discreta' on page 47 undefined 
+on input line 190.
+
+
+LaTeX Warning: Reference `eq1: 9Nov' on page 47 undefined on input line 200.
+
+
+LaTeX Warning: Reference `eq10: 2Dic' on page 47 undefined on input line 205.
+
+
+LaTeX Warning: Reference `eq10: 2Dic' on page 47 undefined on input line 209.
+
+
+LaTeX Warning: Reference `prop: igualdad entre los de legendre y los del survey
+' on page 47 undefined on input line 222.
+
+
+Package natbib Warning: Citation `Neuman' on page 47 undefined on input line 22
+5.
+
+
+Package natbib Warning: Citation `Neuman' on page 47 undefined on input line 23
+0.
+
+
+Package natbib Warning: Citation `Neuman' on page 47 undefined on input line 23
+9.
+
+[47]
+
+Package natbib Warning: Citation `Neuman' on page 48 undefined on input line 27
+3.
+
+
+LaTeX Warning: Reference `eq12: 2Dic' on page 48 undefined on input line 294.
+
+
+LaTeX Warning: Reference `eq13: 2Dic' on page 48 undefined on input line 295.
+
+
+LaTeX Warning: Reference `eq10: 2Dic' on page 48 undefined on input line 296.
+
+
+LaTeX Warning: Reference `prop: igualdad entre los de legendre y los del survey
+' on page 48 undefined on input line 298.
+
+
+Overfull \hbox (30.59445pt too wide) detected at line 310
+\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 L[]\OT1/cmr/m/n/10 )[] = \OMS/cmsy/m/n/10 L[]
+ \OT1/cmr/m/n/10 = (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1)[] \OMS/cmsy/m/n/10 ^
+^A [] [][] \OML/cmm/m/it/10 :
+ []
+
+) (formulas_graficas.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Overfull \hbox (166.83844pt too wide) detected at line 24
+\OMS/cmsy/m/n/10 L[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] [] \OML/cmm/m/it/
+10 :
+ []
+
+[48]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 43.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 43.
+
+
+Overfull \hbox (17.47008pt too wide) in paragraph at lines 73--105
+ [] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 161.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 161.
+
+<./imagenes/graf_L2.png, id=832, 1387.584pt x 732.0951pt>
+File: ./imagenes/graf_L2.png Graphic file (type png)
+<use ./imagenes/graf_L2.png>
+Package pdftex.def Info: ./imagenes/graf_L2.png  used on input line 169.
+(pdftex.def)             Requested size: 416.27841pt x 219.63022pt.
+
+Overfull \hbox (56.27841pt too wide) in paragraph at lines 169--170
+ [][] 
+ []
+
+[49]
+<./imagenes/graf_L3.png, id=838, 1384.6932pt x 349.0641pt>
+File: ./imagenes/graf_L3.png Graphic file (type png)
+<use ./imagenes/graf_L3.png>
+Package pdftex.def Info: ./imagenes/graf_L3.png  used on input line 175.
+(pdftex.def)             Requested size: 415.41118pt x 104.72003pt.
+
+Overfull \hbox (55.41118pt too wide) in paragraph at lines 175--176
+ [][] 
+ []
+
+<./imagenes/graf_L4.png, id=839, 688.0104pt x 726.3135pt>
+File: ./imagenes/graf_L4.png Graphic file (type png)
+<use ./imagenes/graf_L4.png>
+Package pdftex.def Info: ./imagenes/graf_L4.png  used on input line 181.
+(pdftex.def)             Requested size: 412.80943pt x 435.79147pt.
+
+Overfull \hbox (52.80943pt too wide) in paragraph at lines 181--182
+ [][] 
+ []
+
+[50 <./imagenes/graf_L2.png> <./imagenes/graf_L3.png>]
+<./imagenes/graficasLegendre_5.png, id=849, 462.528pt x 346.896pt>
+File: ./imagenes/graficasLegendre_5.png Graphic file (type png)
+<use ./imagenes/graficasLegendre_5.png>
+Package pdftex.def Info: ./imagenes/graficasLegendre_5.png  used on input line 
+186.
+(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
+
+Overfull \hbox (10.02289pt too wide) in paragraph at lines 186--187
+ [][] 
+ []
+
+[51 <./imagenes/graf_L4.png>]
+<./imagenes/graf_L6.png, id=856, 688.0104pt x 726.3135pt>
+File: ./imagenes/graf_L6.png Graphic file (type png)
+<use ./imagenes/graf_L6.png>
+Package pdftex.def Info: ./imagenes/graf_L6.png  used on input line 191.
+(pdftex.def)             Requested size: 412.80943pt x 435.79147pt.
+
+Overfull \hbox (52.80943pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+[52 <./imagenes/graficasLegendre_5.png>])) (simetrias_codigos.tex
+(simetrias.tex
 
 LaTeX Warning: Reference `formulas explicitas para Ln con n de 2 hasta 6' on pa
-ge 43 undefined on input line 11.
+ge 53 undefined on input line 11.
 
-[43 <./imagenes/5Dic_2.png>]
-<./imagenes/simetrias_Legendre.png, id=784, 222.5916pt x 152.9715pt>
+<./imagenes/simetrias_Legendre.png, id=864, 222.5916pt x 152.9715pt>
 File: ./imagenes/simetrias_Legendre.png Graphic file (type png)
 <use ./imagenes/simetrias_Legendre.png>
 Package pdftex.def Info: ./imagenes/simetrias_Legendre.png  used on input line 
@@ -2078,16 +2379,17 @@ Overfull \hbox (18.4041pt too wide) in paragraph at lines 22--34
  [] 
  []
 
+[53 <./imagenes/graf_L6.png>]
 
 LaTeX Warning: Reference `teo: expresión analítica de BON de Legendre' on pag
-e 44 undefined on input line 39.
+e 54 undefined on input line 39.
 
 
 Package caption Warning: \label without proper reference on input line 32.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 44 undefine
+LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 54 undefine
 d on input line 42.
 
 
@@ -2095,19 +2397,15 @@ Overfull \hbox (17.47008pt too wide) in paragraph at lines 74--106
  [] 
  []
 
-[44 <./imagenes/simetrias_Legendre.png>]
-Package marginnote Info: Margin note 45.1 is on absolute page 45 on input line 
-118.
 Package marginnote Info: right page because not two side mode on input line 118
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 118.
-
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 118.
 
 Package caption Warning: \label without proper reference on input line 32.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 45 undefine
+LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 54 undefine
 d on input line 118.
 
 
@@ -2115,20 +2413,17 @@ Package caption Warning: \label without proper reference on input line 32.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 45 undefine
+LaTeX Warning: Reference `fig: simetrias entradas Legendre' on page 54 undefine
 d on input line 118.
 
-<./imagenes/10Dic_1.png, id=796, 385.1991pt x 205.4877pt>
+<./imagenes/10Dic_1.png, id=874, 385.1991pt x 205.4877pt>
 File: ./imagenes/10Dic_1.png Graphic file (type png)
 <use ./imagenes/10Dic_1.png>
 Package pdftex.def Info: ./imagenes/10Dic_1.png  used on input line 119.
 (pdftex.def)             Requested size: 308.15968pt x 164.39037pt.
-
-Overfull \vbox (6.58423pt too high) detected at line 177
- []
-
-[45 <./imagenes/10Dic_1.png>] (codigo_imagenes.tex) [46]
-<./imagenes/simetria1.png, id=828, 554.82281pt x 118.94438pt>
+[54 <./imagenes/simetrias_Legendre.png>] [55 <./imagenes/10Dic_1.png>]
+(codigo_imagenes.tex)
+<./imagenes/simetria1.png, id=913, 554.82281pt x 118.94438pt>
 File: ./imagenes/simetria1.png Graphic file (type png)
 <use ./imagenes/simetria1.png>
 Package pdftex.def Info: ./imagenes/simetria1.png  used on input line 262.
@@ -2138,8 +2433,8 @@ Overfull \hbox (28.37332pt too wide) in paragraph at lines 262--270
  [] 
  []
 
-[47 <./imagenes/simetria1.png>]
-<./imagenes/simetria2.png, id=856, 289.8027pt x 85.7604pt>
+[56] [57 <./imagenes/simetria1.png>]
+<./imagenes/simetria2.png, id=951, 289.8027pt x 85.7604pt>
 File: ./imagenes/simetria2.png Graphic file (type png)
 <use ./imagenes/simetria2.png>
 Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 445.
@@ -2149,55 +2444,58 @@ Overfull \hbox (16.74345pt too wide) in paragraph at lines 445--453
  [] 
  []
 
-[48]
-<./imagenes/10Dic_3.png, id=862, 226.6869pt x 113.4639pt>
+[58]
+<./imagenes/10Dic_3.png, id=960, 226.6869pt x 113.4639pt>
 File: ./imagenes/10Dic_3.png Graphic file (type png)
 <use ./imagenes/10Dic_3.png>
 Package pdftex.def Info: ./imagenes/10Dic_3.png  used on input line 466.
 (pdftex.def)             Requested size: 226.68634pt x 113.46361pt.
 ) (codigo.tex
+Overfull \hbox (7.3846pt too wide) in paragraph at lines 1--1
+|[]\OT1/cmr/bx/n/14.4 Implementaci^^Son compu-tacio-nal de las ba-ses dis-
+ []
+
 
 LaTeX Warning: Reference `teo: expresión analítica de BON de Legendre' on pag
-e 49 undefined on input line 6.
+e 59 undefined on input line 6.
 
-Package marginnote Info: Margin note 49.1 is on absolute page 50 on input line 
-33.
 Package marginnote Info: right page because not two side mode on input line 33.
 
-Package marginnote Info: xpos seems to be 72.0pt on input line 33.
-<./imagenes/7En_1.png, id=864, 444.15938pt x 181.42781pt>
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 33.
+<./imagenes/7En_1.png, id=962, 444.15938pt x 181.42781pt>
 File: ./imagenes/7En_1.png Graphic file (type png)
 <use ./imagenes/7En_1.png>
 Package pdftex.def Info: ./imagenes/7En_1.png  used on input line 34.
 (pdftex.def)             Requested size: 310.90944pt x 126.9986pt.
-[49 <./imagenes/simetria2.png> <./imagenes/10Dic_3.png>]
+[59 <./imagenes/simetria2.png> <./imagenes/10Dic_3.png>]
 
-LaTeX Warning: Reference `eq0: 6En' on page 50 undefined on input line 44.
+LaTeX Warning: Reference `eq0: 6En' on page 60 undefined on input line 44.
 
 
-LaTeX Warning: Reference `def: fading factorial' on page 50 undefined on input 
+LaTeX Warning: Reference `def: fading factorial' on page 60 undefined on input 
 line 69.
 
-<./imagenes/matriz_lim_suc.png, id=883, 271.0125pt x 137.0721pt>
+<./imagenes/matriz_lim_suc.png, id=981, 271.0125pt x 137.0721pt>
 File: ./imagenes/matriz_lim_suc.png Graphic file (type png)
 <use ./imagenes/matriz_lim_suc.png>
 Package pdftex.def Info: ./imagenes/matriz_lim_suc.png  used on input line 190.
 
 (pdftex.def)             Requested size: 352.3162pt x 178.19368pt.
-[50 <./imagenes/7En_1.png>]
+[60 <./imagenes/7En_1.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 257.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-98.
+put line 261.
+ [61 <./imagenes/matriz_lim_suc.png>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
+02.
 
 (C:\Users\inves\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 298.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 302.
 )
-(espectral.tex [51 <./imagenes/matriz_lim_suc.png>] [52] [53]
-<./imagenes/oscil1.png, id=970, 688.0104pt x 726.3135pt>
+(espectral.tex [62] [63]
+<./imagenes/oscil1.png, id=1075, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil1.png Graphic file (type png)
 <use ./imagenes/oscil1.png>
 Package pdftex.def Info: ./imagenes/oscil1.png  used on input line 14.
@@ -2212,7 +2510,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 12--27
 []$[]$  $[]$ 
  []
 
-<./imagenes/oscil2.png, id=971, 688.0104pt x 726.3135pt>
+<./imagenes/oscil2.png, id=1076, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil2.png Graphic file (type png)
 <use ./imagenes/oscil2.png>
 Package pdftex.def Info: ./imagenes/oscil2.png  used on input line 48.
@@ -2227,8 +2525,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 29--51
 []$[]$  $[]$ 
  []
 
-[54 <./imagenes/oscil1.png> <./imagenes/oscil2.png>]
-<./imagenes/oscil3.png, id=980, 1387.584pt x 732.0951pt>
+<./imagenes/oscil3.png, id=1077, 1387.584pt x 732.0951pt>
 File: ./imagenes/oscil3.png Graphic file (type png)
 <use ./imagenes/oscil3.png>
 Package pdftex.def Info: ./imagenes/oscil3.png  used on input line 69.
@@ -2238,7 +2535,8 @@ Overfull \hbox (56.27841pt too wide) in paragraph at lines 69--70
 [][] 
  []
 
-<./imagenes/oscil4.png, id=981, 1387.584pt x 732.0951pt>
+[64 <./imagenes/oscil1.png> <./imagenes/oscil2.png>]
+<./imagenes/oscil4.png, id=1087, 1387.584pt x 732.0951pt>
 File: ./imagenes/oscil4.png Graphic file (type png)
 <use ./imagenes/oscil4.png>
 Package pdftex.def Info: ./imagenes/oscil4.png  used on input line 74.
@@ -2248,12 +2546,329 @@ Overfull \hbox (56.27841pt too wide) in paragraph at lines 74--75
 [][] 
  []
 
-))
+)) (Teoria.tex (apendice_pol.tex [65 <./imagenes/oscil3.png> <./imagenes/oscil4
+.png>] [66]
+
+LaTeX Warning: Reference `teo: fundamental del algebra' on page 67 undefined on
+ input line 105.
+
+
+LaTeX Warning: Reference `teo: fundamental del algebra' on page 67 undefined on
+ input line 123.
+
+
+LaTeX Warning: Reference `teo: fundamental del algebra' on page 67 undefined on
+ input line 136.
+
+
+LaTeX Warning: Reference `eq0: 11Dic' on page 67 undefined on input line 145.
+
+
+LaTeX Warning: Reference `teo: alt del fundamental del algebra' on page 67 unde
+fined on input line 166.
+
+) (apendice_def.tex
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 11--22
+
+ []
+
+[68] [69]) (apendice_hiperpl.tex
+
+LaTeX Warning: Reference `eq1: 29Nov' on page 70 undefined on input line 63.
+
+
+LaTeX Warning: Reference `eq1: 29Nov' on page 70 undefined on input line 64.
+
+[70]) (apendice_proyOrt.tex
+
+Package natbib Warning: Citation `Nimark' on page 71 undefined on input line 5.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--37
+
+ []
+
+
+Package natbib Warning: Citation `Kreyszig' on page 71 undefined on input line 
+44.
+
+
+LaTeX Warning: Reference `prop: continuidad del producto punto' on page 71 unde
+fined on input line 81.
+
+[71]
+
+LaTeX Warning: Reference `eq3: 1En' on page 72 undefined on input line 105.
+
+
+LaTeX Warning: Reference `eq4: 1En' on page 72 undefined on input line 105.
+
+
+LaTeX Warning: Reference `eq0: 12Feb' on page 72 undefined on input line 155.
+
+
+Package natbib Warning: Citation `Lang' on page 72 undefined on input line 160.
+
+
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 72 undefined on input line 
+178.
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 197--200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--220
+
+ []
+
+
+LaTeX Warning: Reference `Teo:CauchySchwarz' on page 73 undefined on input line
+ 249.
+
+[73]
+
+LaTeX Warning: Reference `Teo:CauchySchwarz' on page 74 undefined on input line
+ 371.
+
+<./imagenes/coseno.png, id=1170, 688.0104pt x 346.1733pt>
+File: ./imagenes/coseno.png Graphic file (type png)
+<use ./imagenes/coseno.png>
+Package pdftex.def Info: ./imagenes/coseno.png  used on input line 387.
+(pdftex.def)             Requested size: 68.80507pt x 34.61935pt.
+) (apendice_gramSchm.tex
+Underfull \hbox (badness 10000) in paragraph at lines 25--33
+
+ []
+
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 74 undefined on input line 
+35.
+
+[74 <./imagenes/coseno.png>]
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 75 undefined on input line 
+59.
+
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 75 undefined on input line 
+71.
+
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 75 undefined on input line 
+86.
+
+[75]) (apendice_anguloPuntoPlano.tex
+
+LaTeX Warning: Reference `def: angulo punto subespacio' on page 76 undefined on
+ input line 32.
+
+
+LaTeX Warning: Reference `eq1: 9Feb' on page 76 undefined on input line 64.
+
+
+LaTeX Warning: Reference `eq1: 9Feb' on page 76 undefined on input line 69.
+
+) (apendice_BONhilbert.tex [76]
+
+LaTeX Warning: Reference `Teo:Gram-Schmidt' on page 77 undefined on input line 
+45.
+
+
+LaTeX Warning: Reference `defi: BON y base de Hamel' on page 77 undefined on in
+put line 84.
+
+[77]
+Overfull \vbox (7.02567pt too high) detected at line 149
+ []
+
+[78]
+
+LaTeX Warning: Reference `prop: continuidad del producto punto' on page 79 unde
+fined on input line 187.
+
+
+LaTeX Warning: Reference `eq 0: 8Agosto' on page 79 undefined on input line 212
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
+
+ []
+
+
+LaTeX Warning: Reference `eq 2: 8Agosto' on page 79 undefined on input line 241
+.
+
+
+LaTeX Warning: Reference `eq 1: 8Agosto' on page 79 undefined on input line 241
+.
+
+
+LaTeX Warning: Reference `eq 2: 8Agosto' on page 79 undefined on input line 241
+.
+
+
+LaTeX Warning: Reference `eq 1: 8Agosto' on page 79 undefined on input line 241
+.
+
+
+Overfull \hbox (94.52574pt too wide) detected at line 241
+[]
+ []
+
+[79]
+
+LaTeX Warning: Reference `eq 3: 8Agosto' on page 80 undefined on input line 282
+.
+
+
+LaTeX Warning: Reference `eq 3: 8Agosto' on page 80 undefined on input line 282
+.
+
+
+Overfull \hbox (56.33772pt too wide) detected at line 282
+[]
+ []
+
+[80]
+
+LaTeX Warning: Reference `thm: Coway, 4.13' on page 81 undefined on input line 
+351.
+
+
+Underfull \vbox (badness 10000) detected at line 374
+ []
+
+[81]
+
+LaTeX Warning: Reference `teo: Kol 6, p.149' on page 82 undefined on input line
+ 426.
+
+
+Underfull \vbox (badness 10000) detected at line 434
+ []
+
+[82]
+
+LaTeX Warning: Reference `cor: proyeccion en terminos de una BON' on page 83 un
+defined on input line 447.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--455
+
+ []
+
+
+LaTeX Warning: Reference `ecuacion teor kolmogorov' on page 83 undefined on inp
+ut line 466.
+
+
+LaTeX Warning: Reference `teo: Kol 6, p.149' on page 83 undefined on input line
+ 467.
+
+) (apendice_sumOrt.tex
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
+
+ []
+
+[83] [84]
+
+LaTeX Warning: Reference `eq 1:lema BON de sumas ortogonales' on page 85 undefi
+ned on input line 125.
+
+
+LaTeX Warning: Reference `eq 2:lema BON de sumas ortogonales' on page 85 undefi
+ned on input line 126.
+
+
+LaTeX Warning: Reference `lema: BONs de sumas ortogonales' on page 85 undefined
+ on input line 182.
+
+[85]
+
+LaTeX Warning: Reference `eq 1: lema: proyección sobre la suma ortogonal' on p
+age 86 undefined on input line 214.
+
+Package marginnote Info: right page because not two side mode on input line 241
+.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 241.
+<./imagenes/31Julio_1.png, id=1261, 109.6095pt x 102.6234pt>
+File: ./imagenes/31Julio_1.png Graphic file (type png)
+<use ./imagenes/31Julio_1.png>
+Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
+(pdftex.def)             Requested size: 186.33531pt x 174.45901pt.
+
+LaTeX Warning: Reference `lema: BONs de sumas ortogonales' on page 86 undefined
+ on input line 266.
+
+[86 <./imagenes/31Julio_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 300--303
+
+ []
+
+
+LaTeX Warning: Reference `eq 1:prop elemento de la suma ortogonal de subespacio
+s' on page 87 undefined on input line 311.
+
+
+LaTeX Warning: Reference `eq 2:prop elemento de la suma ortogonal de subespacio
+s' on page 87 undefined on input line 312.
+
+
+LaTeX Warning: Reference `eq 3:prop elemento de la suma ortogonal de subespacio
+s' on page 87 undefined on input line 313.
+
+[87]
+
+LaTeX Warning: Reference `lema: proyección sobre la suma ortogonal' on page 88
+ undefined on input line 374.
+
+
+LaTeX Warning: Reference `prop: continuidad del producto punto' on page 88 unde
+fined on input line 418.
+
+
+LaTeX Warning: Reference `prop: continuidad del producto punto' on page 88 unde
+fined on input line 418.
+
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 431--433
+
+ []
+
+
+LaTeX Warning: Reference `prop: continuidad del producto punto' on page 89 unde
+fined on input line 449.
+
+[89])) (Notacion.tex
+Overfull \hbox (340.46333pt too wide) in paragraph at lines 17--43
+[][]
+ []
+
+
+Package natbib Warning: Citation `Neuman' on page 90 undefined on input line 54
+.
+
+
+Overfull \hbox (55.48686pt too wide) in paragraph at lines 50--58
+[][] 
+ []
+
+[90] [91])
 No file TesisAmelie.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[55 <./imagenes/oscil3.png> <./imagenes/oscil4.png>] (TesisAmelie.aux
+(TesisAmelie.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
@@ -2263,67 +2878,153 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
-(rerunfilecheck)             Checksum: A3284C72B43DF36ABB157D80A3892A1D;7454.
+
+Package rerunfilecheck Warning: File `TesisAmelie.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TesisAmelie.out':
+(rerunfilecheck)             Before: A3284C72B43DF36ABB157D80A3892A1D;7454
+(rerunfilecheck)             After:  5081CBF23038D68D4EA568529D4ED489;12158.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 333 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36325 strings out of 475385
- 718661 string characters out of 2776908
- 1102552 words of memory out of 3000000
- 56631 multiletter control sequences out of 15000+600000
+ 36731 strings out of 475385
+ 726490 string characters out of 2776908
+ 1111553 words of memory out of 3000000
+ 56833 multiletter control sequences out of 15000+600000
  496911 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,14n,107p,1116b,946s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 104i,19n,107p,1116b,1014s stack positions out of 10000i,1000n,20000p,200000b,80000s
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{teo.8.5} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{equation.9.82} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.9.81} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.9.80} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{teo.8.4} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{equation.8.76} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{teo.8.3} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{equation.8.77} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{teo.8.1} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{teo.8.2} has been referenced but does not exist, re
+placed by a fixed one
+
+
+pdfTeX warning (dest): name{equation.8.72} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{equation.8.71} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.38} has been referenced but does not
+ exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.8.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.8.1} has been referenced but does not ex
+ist, replaced by a fixed one
 
  <C:\Users\inves\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
 00.pk> <C:\Users\inves\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
 tcti1000.pk><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmbx12.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/inves/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/inves/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/inves/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users
-/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-<C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmext
-ra/cmex8.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/inves/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/inves/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/inves/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/inves/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
-s/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+ts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/inves/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/inves/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Users/inves/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/i
+nves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cmextra/cmex8.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/inves/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/inves/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/inves/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/inves/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/User
+s/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 <C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r17.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr6.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/inves/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/inves/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/inves/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/inve
-s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Us
-ers/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
+r12.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr5.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr6.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/inves/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/inves/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/inves/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/inves
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Us
+ers/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pf
 b><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmti8.pfb><C:/Users/inves/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/inves/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/inves/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on TesisAmelie.pdf (55 pages, 4522152 bytes).
+cmsy6.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/inves/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/inves/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/inv
+es/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+<C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msbm7.pfb>
+Output written on TesisAmelie.pdf (91 pages, 4951648 bytes).
 PDF statistics:
- 1202 PDF objects out of 1440 (max. 8388607)
- 315 named destinations out of 1000 (max. 500000)
- 515 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1554 PDF objects out of 1728 (max. 8388607)
+ 470 named destinations out of 1000 (max. 500000)
+ 550 words of extra memory for PDF output out of 10000 (max. 10000000)
 
