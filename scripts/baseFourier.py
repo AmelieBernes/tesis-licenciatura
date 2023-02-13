@@ -1,7 +1,7 @@
 import numpy as np #numpy tiene funciones seno y coseno.
 import math #para sqrt y ceiling function
 
-
+pi=math.pi
 # Definición de vectores ------------------------------------------------------
 
 def vector_c_N_v(N, v):

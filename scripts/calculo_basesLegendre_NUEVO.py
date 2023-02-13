@@ -4,7 +4,7 @@ import numpy as np
 import sys
 import cProfile
 
-
+#TODO no ejecutes nada aquí. En este script sólo almacena definiciones de objetos o funciones.
 
 ########## Funciones sumatoria (versión 1) y sumando (versiones 1.0 y 1.1)--------------------
 
@@ -245,5 +245,5 @@ def comparando_resultados(dim):
 #print(comparando_resultados(30)) #Los resultados coincidieron todos!
 
 
-print(sys.getsizeof(base_Legendre(100, sumatoria=sumatoria_V2)))
-cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
+#print(sys.getsizeof(base_Legendre(100, sumatoria=sumatoria_V2)))
+#cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
