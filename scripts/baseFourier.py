@@ -5,12 +5,16 @@ pi=math.pi
 # Definición de vectores ------------------------------------------------------
 
 def vector_c_N_v(N, v):
+  #El único caso especial: N par, v=N/2. TODO: comenta por qué se hace esto en la teoría.
+  if N%2==0 and v==N/2:
+    resultado= [(-1)**mu/math.sqrt(N) for mu in range(N)]
+
   if v==0:
     return (1/math.sqrt(N))*np.ones([N])
   else:
     resultado=np.empty(0) #inicializamos el vector
     for mu in range(N):
-      resultado=np.append( (math.sqrt(2/N)) * math.cos(2*pi*v*mu/N), resultado)
+      resultado=np.append( (math.sqrt(2/N)) * math.cos(2*pi*v*mu/N), resultado )
   return resultado
 
 
@@ -36,6 +40,10 @@ def base_Fourier(N):
     return base_F
 
 
+# TODO : no he cambiado la expresión para el último 
+#vector de la base de Fourier para cuando N es par.  Pero, así
+#como lo he definido, ya tiene norma uno, entonces no sé
+#por qué debería cambiar la expresión.
 
 #Comprobando ortonormalidad ---------------------------------------------------------
 
@@ -46,4 +54,7 @@ def comprobar_BON(N, i, j):
   de la base de Fourier F de dimensión N.
   """
   base=base_Fourier(N)
-  print(np.dot(base[i], base[j]))
+  print(np.dot(base[i], base[j])) 
+
+#print(base_Fourier(8)[7])
+#comprobar_BON(8, 4,4)
