@@ -73,11 +73,12 @@ def graficando_sigmasYesp(N,k):
 	#graficando la esperanza (un solo punto).
 	plt.scatter(esp, 0, s=100, color="darkgoldenrod", marker="^") #elegí la forma de una cuña (esperanza como punto de equilibrio)
 
+	plt.xlabel("Degree")
 	plt.grid()
 	plt.axhline(y=0, color='gray')	
 	plt.axvline(x=0, color='gray')
 
-	plt.title("Coeficientes sigma del pol. discrete de Legendre de dim. "+str(N)+" y grado "+str(k))
+	plt.title("The distribution $\sigma_{30,15}$ ad its mean")
 
 
 def graficando_esperanzas(N):
@@ -97,8 +98,9 @@ def graficando_esperanzas(N):
 	X=np.linspace(0, N, 100)
 	plt.plot(X, X/2, color="black", linestyle='dashed', label="Gráfica de la recta $y=\\frac{1}{2}k$")
 
-	plt.xlabel("Grado k")
-	plt.ylabel("Esperanza de la distribución NAME")
+	#plt.xlabel("Grado k")
+	plt.xlabel("Degree")
+	#plt.ylabel("Degree")
 	plt.legend()
 	plt.grid()
 	plt.axhline(y=0, color='gray')	
@@ -108,8 +110,8 @@ def graficando_esperanzas(N):
 
 #graficando_sigmasYesp(50,25)
 #graficando_esperanzas(20)
-graficando_sigmasYesp(60,5)
-#graficando_esperanzas(80)
+graficando_sigmasYesp(30,15)
+#graficando_esperanzas(30)
 plt.show()
 
 
@@ -161,27 +163,34 @@ plt.show()
 
 
 
-#def graficando_esperanzas(N):
-#	"""
-#	Función que calcula las esperanzas de las N distribuciones de los coeficientes al cuadrado
-#	correspondientes a cada grado 0 leq k leq N-1. 
-#	"""
-#	baseFourier=fourier.base_Fourier(N)
-#	baseLegendre=legendre.base_Legendre(N)
-#	dominio=[t for t in range(N)]
+def graficando_esperanzas(N):
+	"""
+	Función que calcula las esperanzas de las N distribuciones de los coeficientes al cuadrado
+	correspondientes a cada grado 0 leq k leq N-1. 
+	"""
+	baseFourier=fourier.base_Fourier(N)
+	baseLegendre=legendre.base_Legendre(N)
+	dominio=[t for t in range(N)]
 
-#	esperanzas=[] #inicializando el vector de esperanzas
-#	for k in range(N): #iterando en la variable de grado
-#		vectorLegendre=baseLegendre[k]
-#		coeficientes_Fourier=[np.dot(vectorLegendre, baseFourier[v])**2 for v in range(N)]
-#		esperanza_coefFourier=esperanza(dominio, coeficientes_Fourier)
-#		esperanzas.append(esperanza_coefFourier)
+	esperanzas=[] #inicializando el vector de esperanzas
+	for k in range(N): #iterando en la variable de grado
+		vectorLegendre=baseLegendre[k]
+		coeficientes_Fourier=[np.dot(vectorLegendre, baseFourier[v])**2 for v in range(N)]
+		esperanza_coefFourier=esperanza(dominio, coeficientes_Fourier)
+		esperanzas.append(esperanza_coefFourier)
 
-#	plt.scatter(dominio, esperanzas, s=100, color="mediumpurple", marker="*")
-#	plt.grid()
-#	plt.axhline(y=0, color='black')
-#	plt.axvline(x=0, color='black')
+	plt.scatter(dominio, esperanzas, s=100, color="mediumpurple", marker="*")
+	plt.grid()
+	plt.axhline(y=0, color='black')
+	plt.axvline(x=0, color='black')
 
-#	plt.title("Esperanzas de las distribuciones para $N= $"+str(N))
-#	#Agregar un título!
-#	plt.show()
+	plt.title("Means of the $\sigma$ distributions of 15-dim. discrete Legendre polynomials$")
+	plt.xlabel("Degree")
+	plt.ylabel("Means")
+	#plt.title("Esperanzas de las distribuciones para $N= $"+str(N))
+    
+	#Agregar un título!
+	plt.show()
+
+
+graficando_esperanzas(15)
