@@ -73,12 +73,12 @@ def graficando_sigmasYesp(N,k):
 	#graficando la esperanza (un solo punto).
 	plt.scatter(esp, 0, s=100, color="darkgoldenrod", marker="^") #elegí la forma de una cuña (esperanza como punto de equilibrio)
 
-	plt.xlabel("Degree")
+	plt.xlabel("Grado $k$")
 	plt.grid()
 	plt.axhline(y=0, color='gray')	
 	plt.axvline(x=0, color='gray')
 
-	plt.title("The distribution $\sigma_{30,15}$ ad its mean")
+	plt.title("La distribución $\\sigma_{30,15}$ y su media")
 
 
 def graficando_esperanzas(N):
@@ -98,9 +98,7 @@ def graficando_esperanzas(N):
 	X=np.linspace(0, N, 100)
 	plt.plot(X, X/2, color="black", linestyle='dashed', label="Gráfica de la recta $y=\\frac{1}{2}k$")
 
-	#plt.xlabel("Grado k")
-	plt.xlabel("Degree")
-	#plt.ylabel("Degree")
+	plt.xlabel("Grado $k$")
 	plt.legend()
 	plt.grid()
 	plt.axhline(y=0, color='gray')	
@@ -183,8 +181,7 @@ def graficando_esperanzas(N):
 	plt.grid()
 	plt.axhline(y=0, color='black')
 	plt.axvline(x=0, color='black')
-
-	plt.title("Means of the $\sigma$ distributions of 15-dim. discrete Legendre polynomials$")
+	plt.title("Esperanzas de las distribuciones $\\sigma$ de los pol. de Legendre discretos de dimensión {dimen}".format(dimen=str(N)))
 	plt.xlabel("Degree")
 	plt.ylabel("Means")
 	#plt.title("Esperanzas de las distribuciones para $N= $"+str(N))
