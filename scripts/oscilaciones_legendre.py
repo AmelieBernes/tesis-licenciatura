@@ -6,8 +6,9 @@ import pylab
 import calculo_basesLegendre_NUEVO as legendre
 import baseFourier as fourier
 
-#--------------------------------------------------------
+#-----------------------------------------------------------------------------------
 
+#Función auxiliar
 def esperanza(dominio, mediciones):
 	"""
 	Función que calcula la esperanza de la variable aleatoria cuyo dominio es la lista
@@ -21,6 +22,8 @@ def esperanza(dominio, mediciones):
 		esp+=dominio[i]*mediciones[i]
 	return esp
 
+#-----------------------------------------------------------------------------------
+#Funciones principales del programa
 def calculando_sigmasYesp(N,k):
 	"""
 	Función que calcula los coeficientes sigma
@@ -78,7 +81,7 @@ def graficando_sigmasYesp(N,k):
 	plt.axhline(y=0, color='gray')	
 	plt.axvline(x=0, color='gray')
 
-	plt.title("La distribución $\\sigma_{30,15}$ y su media")
+	plt.title("La distribución $\\sigma_{{ {0} , {1} }}$ y su media".format(str(N), str(k)) )
 
 
 def graficando_esperanzas(N):
@@ -104,20 +107,16 @@ def graficando_esperanzas(N):
 	plt.axhline(y=0, color='gray')	
 	plt.axvline(x=0, color='gray')
 
-	plt.title("Esperanzas de las distribuciones sigma de los pol. de Legendre de dim. "+str(N))
+	plt.title("Esperanzas de las distribuciones sigma de los pol. de Legendre de dimensión {0}".format(str(N)))
 
 #graficando_sigmasYesp(50,25)
 #graficando_esperanzas(20)
-graficando_sigmasYesp(30,15)
-#graficando_esperanzas(30)
+#graficando_sigmasYesp(12,3)
+graficando_esperanzas(40) 
 plt.show()
 
 
-#plt.clf()
-#graficando_sigmasYesp(10,2)
-#graficando_sigmasYesp(10,3)
-#plt.show()
-
+#Intento fallido de guardar en lugar de mostrar gráficas.
 #for k in range(10):
 #	fig, ax =plt.subplots(1,1)
 #	graficando_sigmasYesp(10,k, fig, ax)
@@ -125,7 +124,12 @@ plt.show()
 #	plt.close()
 
 
-#--------------------------------------
+
+#-------------------------------------------------------------------------------------------------------#
+
+                          #Funciones viejas: No sé si sea buena idea usarlas!
+
+#-------------------------------------------------------------------------------------------------------#
 
 
 ##Calculamos la base de Fourier de dimensión n
@@ -160,11 +164,11 @@ plt.show()
 #plt.show()
 
 
-
 def graficando_esperanzas(N):
 	"""
 	Función que calcula las esperanzas de las N distribuciones de los coeficientes al cuadrado
 	correspondientes a cada grado 0 leq k leq N-1. 
+	TODO: Esta es una función antigua, no sé qué tan bueno sea usarla.
 	"""
 	baseFourier=fourier.base_Fourier(N)
 	baseLegendre=legendre.base_Legendre(N)
@@ -190,4 +194,4 @@ def graficando_esperanzas(N):
 	plt.show()
 
 
-graficando_esperanzas(15)
+#graficando_esperanzas(15)
