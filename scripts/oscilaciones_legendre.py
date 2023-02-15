@@ -5,6 +5,10 @@ import pylab
 
 import calculo_basesLegendre_NUEVO as legendre
 import baseFourier as fourier
+import proyecciones #para calcular rectas de mínimos cuadrados.
+
+#TODO: recuerda que, para poder importar mejor, en un script en el que sólo quieres definir funciones debes
+#evitar ejecutar cosas.
 
 #-----------------------------------------------------------------------------------
 
@@ -88,18 +92,25 @@ def graficando_esperanzas(N):
 	"""
 	Función que calcula las esperanzas de los coeficientes sigma de cada uno de los N polinomios
 	discretos de Legendre de grado N.
+	
+	NOTA: Observa cómo el primer punto siempre es cero. Esto se corresponde con el hecho
+	de que todo polinomio discreto de Legendre de grado cero no tiene oscilaciones.
+	TODO: fue bueno usar numpy arrays en lugar de arrays. Tienes que hacer esto para las demás funciones también.
 	"""
 	#Cambia el nombre del eje horizontal a k.
 	baseFourier=fourier.base_Fourier(N)
 	baseLegendre=legendre.base_Legendre(N)
 
-	dominio=[t for t in range(N)] 
-	esperanzas=[calculando_sigmasYesp(N,k)[1] for k in range(N)] #iteramos en la variable de grado 'k'.
+	dominio=np.array([t for t in range(N)])
+	esperanzas=np.array([calculando_sigmasYesp(N,k)[1] for k in range(N)]) #iteramos en la variable de grado 'k'.
 
 	plt.scatter(dominio, esperanzas, s=100, color="darkgoldenrod", marker="^")
 
+	#Graficando la recta f(k)=k/2
 	X=np.linspace(0, N, 100)
 	plt.plot(X, X/2, color="black", linestyle='dashed', label="Gráfica de la recta $y=\\frac{1}{2}k$")
+	b0, b1= proyecciones.coef_RMC(dominio, esperanzas)
+	plt.plot(X, b1*X+b0, color="mediumblue", linestyle='dashed', label='Ajuste lineal de mínimos cuadrados')
 
 	plt.xlabel("Grado $k$")
 	plt.legend()
@@ -112,7 +123,7 @@ def graficando_esperanzas(N):
 #graficando_sigmasYesp(50,25)
 #graficando_esperanzas(20)
 #graficando_sigmasYesp(12,3)
-graficando_esperanzas(40) 
+graficando_esperanzas(14) 
 plt.show()
 
 

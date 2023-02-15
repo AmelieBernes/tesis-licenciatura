@@ -9,9 +9,9 @@ import legendre #En este archivo de python se guardan las BON de Legendre discre
 
 def coef_RMC(x,y):
     """
-    dados x y y (ambos np.arrays del mismo tamaño), se dan la ordenada al origen y
-    la pendiente de la recta de mínimos cuadrados del conjunto de puntos con abscisas 
-    las entradas de x y ordenadas las de y. Obtuve las fórmulas de internet.
+    dados 'x' y 'y' (ambos np.arrays del mismo tamaño), se dan la ordenada al origen y
+    la pendiente de la recta de mínimos cuadrados (en ese orden) del conjunto de puntos con abscisas 
+    las entradas de 'x' y ordenadas las de 'y'. Obtuve las fórmulas de internet.
     """
     dim=np.size(x)
     
