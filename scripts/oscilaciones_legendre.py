@@ -8,7 +8,7 @@ import baseFourier_V0 as fourier_V0
 import proyecciones #para calcular rectas de mínimos cuadrados.
 
 #TODO: recuerda que, para poder importar mejor, en un script en el que sólo quieres definir funciones debes
-#evitar ejecutar cosas.
+#evitar ejecutar cosas. UPDATE: acabo de descubrir el idiom if __name__ == "__main__".
 
 #TODO: como ahora tengo más de una versión de base de Fourier (base de frecuencias), tengo que poner a esta
 #como argumento en las funciones de abajo.
@@ -31,18 +31,20 @@ def esperanza(dominio, mediciones):
 
 #-----------------------------------------------------------------------------------
 #Funciones principales del programa
-def calculando_sigmasYesp(N,k):
+def calculando_sigmasYesp(N,k, fourier=fourier_V0):
 	"""
 	Función que calcula los coeficientes sigma
 	del polinomio discreto de Legendre de dimensión N
 	y grado k, junto con la esperanza de la distribución
 	que ellos forman.
+	"fourier" es un script en el que se ha definido una base de fourier
+	(i.e. una base ortonormal de frecuencias).
 	"""
 
 	M=math.ceil(N/2)
 
 	#inicializamos las bases de Fourier y Legendre discreta de dim N
-	baseFourier=fourier_V0.base_Fourier(N)
+	baseFourier=fourier.base_Fourier(N)
 	baseLegendre=legendre.base_Legendre(N)
 
 	#Llamamos al vector de Legendre de dim N y grado k
@@ -83,15 +85,16 @@ def graficando_sigmasYesp(N,k):
 	#graficando la esperanza (un solo punto).
 	plt.scatter(esp, 0, s=100, color="darkgoldenrod", marker="^") #elegí la forma de una cuña (esperanza como punto de equilibrio)
 
-	plt.xlabel("Grado $k$")
+	plt.xlabel("Frecuencia $\\omega$")
+	plt.ylabel(r"$\sigma_{{\omega}}^{{ {0} }}( \mathcal{{ L }}^{{ {0} , {1} }} )$".format(str(N), str(k)) )
 	plt.grid()
 	plt.axhline(y=0, color='gray')	
 	plt.axvline(x=0, color='gray')
+	plt.title("La distribución $\\sigma_{{ {0} , {1} }}$ y su esperanza".format(str(N), str(k)) )
+	
 
-	plt.title("La distribución $\\sigma_{{ {0} , {1} }}$ y su media".format(str(N), str(k)) )
 
-
-def graficando_esperanzas(N):
+def graficando_esperanzas(N, fourier=fourier_V0):
 	"""
 	Función que calcula las esperanzas de los coeficientes sigma de cada uno de los N polinomios
 	discretos de Legendre de grado N.
@@ -123,11 +126,13 @@ def graficando_esperanzas(N):
 
 	plt.title("Esperanzas de las distribuciones sigma de los pol. de Legendre de dimensión {0}".format(str(N)))
 
-#graficando_sigmasYesp(50,25)
-#graficando_esperanzas(20)
-#graficando_sigmasYesp(12,3)
-graficando_esperanzas(14) 
-plt.show()
+
+if __name__ == "__main__":
+	#graficando_sigmasYesp(50,25)
+	#graficando_esperanzas(20)
+	graficando_sigmasYesp(30, 3)
+	#graficando_esperanzas(20) 
+	plt.show()
 
 
 #Intento fallido de guardar en lugar de mostrar gráficas.

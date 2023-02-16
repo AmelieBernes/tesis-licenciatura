@@ -1,4 +1,5 @@
 import numpy as np #numpy tiene funciones seno y coseno.
+import matplotlib.pyplot as plt
 import math #para sqrt y ceiling function
 
 pi=math.pi
@@ -39,12 +40,6 @@ def base_Fourier(N):
     base_F.append(vector_c_N_v(N, M))
     return base_F
 
-
-# TODO : no he cambiado la expresión para el último 
-#vector de la base de Fourier para cuando N es par.  Pero, así
-#como lo he definido, ya tiene norma uno, entonces no sé
-#por qué debería cambiar la expresión.
-
 #Comprobando ortonormalidad ---------------------------------------------------------
 
 def comprobar_BON(N, i, j):
@@ -58,3 +53,20 @@ def comprobar_BON(N, i, j):
 
 #print(base_Fourier(8)[7])
 #comprobar_BON(8, 4,4)
+
+
+def graficando_Fourier_v0(N,k):
+  """
+  Función que grafica al k-ésimo elemento de la base de Fourier (versión v0) de dimensión N.
+  0 leq k leq N-1.
+  """
+  dominio=[t for t in range(N)]
+  vector_fourier=base_Fourier(N)[k]
+  plt.scatter(dominio, vector_fourier)
+
+  plt.grid()
+  return plt.show()
+
+
+if __name__ == "__main__":
+  graficando_Fourier_v0(10,8)
