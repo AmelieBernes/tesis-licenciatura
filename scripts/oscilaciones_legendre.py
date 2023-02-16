@@ -4,11 +4,14 @@ import matplotlib.pyplot as plt
 import pylab
 
 import calculo_basesLegendre_NUEVO as legendre
-import baseFourier as fourier
+import baseFourier_V0 as fourier_V0
 import proyecciones #para calcular rectas de mínimos cuadrados.
 
 #TODO: recuerda que, para poder importar mejor, en un script en el que sólo quieres definir funciones debes
 #evitar ejecutar cosas.
+
+#TODO: como ahora tengo más de una versión de base de Fourier (base de frecuencias), tengo que poner a esta
+#como argumento en las funciones de abajo.
 
 #-----------------------------------------------------------------------------------
 
@@ -39,7 +42,7 @@ def calculando_sigmasYesp(N,k):
 	M=math.ceil(N/2)
 
 	#inicializamos las bases de Fourier y Legendre discreta de dim N
-	baseFourier=fourier.base_Fourier(N)
+	baseFourier=fourier_V0.base_Fourier(N)
 	baseLegendre=legendre.base_Legendre(N)
 
 	#Llamamos al vector de Legendre de dim N y grado k
