@@ -28,7 +28,7 @@ def vector_s_N_v(N, v):
 
 # Base de Fourier de dimensión N ------------------------------------------------
 
-def base_Fourier(N):
+def calculo_base(N):
   M=math.ceil(N/2)
   base_F=[vector_c_N_v(N, 0)] #inicializando la base, que será un array. Ya incluimos la primera entrada
   for v in range(1,M):
@@ -55,6 +55,7 @@ def comprobar_BON(N, i, j):
 #comprobar_BON(8, 4,4)
 
 
+#NOTA: tal vez ya no use esta función
 def graficando_Fourier_v0(N,k, fig, ax):
   """
   Función que ayuda a graficar al k-ésimo elemento de la base de Fourier (versión v0) de dimensión N.
