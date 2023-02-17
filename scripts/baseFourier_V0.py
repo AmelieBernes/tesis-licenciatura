@@ -55,17 +55,17 @@ def comprobar_BON(N, i, j):
 #comprobar_BON(8, 4,4)
 
 
-def graficando_Fourier_v0(N,k):
+def graficando_Fourier_v0(N,k, fig, ax):
   """
-  Función que grafica al k-ésimo elemento de la base de Fourier (versión v0) de dimensión N.
+  Función que ayuda a graficar al k-ésimo elemento de la base de Fourier (versión v0) de dimensión N.
   0 leq k leq N-1.
+  i y j son índices para el axis.
   """
   dominio=[t for t in range(N)]
   vector_fourier=base_Fourier(N)[k]
-  plt.scatter(dominio, vector_fourier)
-
-  plt.grid()
-  return plt.show()
+  ax.set_title("Fourier: dimensión " +str(N)+", grado "+str(k))
+  ax.grid()
+  return ax.scatter(dominio, vector_fourier, color='hotpink')
 
 
 if __name__ == "__main__":

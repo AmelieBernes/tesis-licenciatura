@@ -1,8 +1,12 @@
-#pruebas str python
 import matplotlib.pyplot as plt
 import numpy as np
 import pylab
 
+
+"""
+
+#pruebas str python
+#16 Febrero
 X=np.linspace(-1,1,100)
 Y=2*X
 
@@ -26,7 +30,21 @@ plt.title(r"$\sigma_{{\omega}}^{{0}}( \mathcal{{ L }}^{{ {0} , {1} }} )$".format
 
 
 plt.show()
+"""
 
 
+#17 Febrero
 
 
+fig, axis= plt.subplots(1,2)
+
+X=np.linspace(-1,1,100)
+Y=2*X
+Z=0.5*X 
+
+axis[0].plot(X, Y)
+axis[1].plot(X, Z)
+
+plt.show()
+plt.clf()
+plt.show()
