@@ -20,6 +20,8 @@ entero es un int n mayor a uno y cuyo output es un array con n arrays, cada uno
 conteniendo la información de los vectores de la base cuyo nombre se establece en
 el título del script.
 
+
+#Creé una rama en Github para seguir editando esto. Veamos si funciona como creo.
 """
 
 import base_fourier_V0
