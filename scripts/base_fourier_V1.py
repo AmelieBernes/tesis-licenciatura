@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np #numpy tiene funciones seno y coseno.
 import math #para sqrt y ceiling function
-import baseFourier_V0
 
 """
 Aquí voy a definir la segunda base de Fourier (BON de oscilaciones). 

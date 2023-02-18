@@ -206,7 +206,7 @@ def base_Legendre_dimensionPar(n, sumatoria=sumatoria_V1):
     return BaseLegendre
 
 
-def base_Legendre(n, sumatoria=sumatoria_V1):
+def calculo_base(n, sumatoria=sumatoria_V1):
     """
     Dada una dimensión n (int>1), esta función regresa un array con n arrays, siendo estos
     los vectores de la base de Legendre discreta de la dimensión n especificada.
@@ -214,9 +214,6 @@ def base_Legendre(n, sumatoria=sumatoria_V1):
     if n%2==0:
         return base_Legendre_dimensionPar(n)
     return base_Legendre_dimensionImpar(n)
-
-base_Legendre(4)
-
 
 
 
@@ -247,3 +244,6 @@ def comparando_resultados(dim):
 
 #print(sys.getsizeof(base_Legendre(100, sumatoria=sumatoria_V2)))
 #cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
+
+if __name__ == "__main__":
+    base_Legendre(4)
