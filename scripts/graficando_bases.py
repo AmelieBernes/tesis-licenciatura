@@ -20,6 +20,8 @@ entero es un int n mayor a uno y cuyo output es un array con n arrays, cada uno
 conteniendo la información de los vectores de la base cuyo nombre se establece en
 el título del script.
 
+'k' siempre se pensará como una variable de grado.
+
 """
 
 import base_fourier_V0
@@ -49,6 +51,17 @@ def graficando_en_axis(vector, fig, ax):
 #inicializamos la figura y cuatro axis, acomodados en un arreglo de 2x2
 fig, axis=plt.subplots(2,2) 
 
+
+
+def graficando_cuatro_axis(fig, N, k, base, nombre_base):
+	for i in range(2):
+		for j in range(2):
+			vector=base[k]
+			graficando_en_axis(vector, fig, axis[i,j])
+			axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
+			k+=1 #aumentamos en uno la variable de grado
+
+
 #TODO: para que este script tenga sentido, debes de asegurarte que en TODOS los scripts en los que estas
 #definiendo una base, la función que calcula la base se llame 'calculo_base'. 
 def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0)' ,ruta=None):
@@ -60,16 +73,9 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 	"""
 	base=modulo_base.calculo_base(N)
 	k=0
+
 	for u in range(N//4): #Creando, de ser posible, imágenes con los cuatro axis llenos.
-		for i in range(2):
-			for j in range(2):
-				vector=base[k] #extrayendo el k-ésimo elemento de la base.
-				graficando_en_axis(vector, fig, axis[i,j])
-				axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
-				k+=1 #aumentamos en uno la variable de grado
-		#plt.legend() #TODO: por qué no corre el script con esta linea?
-
-
+		graficando_cuatro_axis(fig, N, k, base, nombre_base)
 		#Guardando la imagen
 		if ruta==None: 
 			plt.savefig("AMELIA_1.png") #El archivo se guarda en la carpeta en la que está este script.
@@ -78,7 +84,28 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 		#plt.show()
 		plt.clf()
 
-	#if N-N//4=!0: #si aún faltan grados que graficar, llenamos una última figura.
+
+	#r=N%4
+
+	#k=(N//4)*4-1
+	#while r!=0:
+	#	for i in range(2):
+	#		for j in range(2):
+	#			vector=base[k] #extrayendo el k-ésimo elemento de la base.
+	#			graficando_en_axis(vector, fig, axis[i,j])
+	#			axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
+	#			k+=1 #aumentamos en uno la variable de grado
+	#			r=r-1 
+		#plt.legend() #TODO: por qué no corre el script con esta linea?
+
+		#Guardando la imagen
+		#if ruta==None: 
+		#	plt.savefig("AMELIA_2.png") #El archivo se guarda en la carpeta en la que está este script.
+		#else:
+		#	plt.savefig(ruta+"AMELIA_2.png")
+		##plt.show()
+		#plt.clf()
+
 
 
 
