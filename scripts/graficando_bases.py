@@ -1,4 +1,4 @@
-import numpy as np #numpy tiene funciones seno y coseno.
+import numpy as np 
 import matplotlib.pyplot as plt
 import math 
 #import formato
@@ -40,6 +40,7 @@ import base_legendreDiscreta
 plt.style.use('seaborn-v0_8-poster') 
 #plt.style.use('seaborn-v0_8-pastel') 
 params = {"ytick.color" : "black",
+					"font.size": 16,
           "xtick.color" : "black",
           "axes.labelcolor" : "black",
           "axes.edgecolor" : "black",
@@ -70,8 +71,8 @@ def guardando_cuatro_axis(fig, axis, N, k, u, base, nombre_base, ruta):
 			axis[i,j].axvline(x=0, color='gray')
 			k+=1 #aumentamos en uno la variable de grado
 	#Guardando la imagen
-	nombre_imagen= nombre_base +": dimensión"+str(N)+", figura "+str(u)
-	fig.suptitle(nombre_imagen)
+	nombre_imagen= nombre_base +": dimensión "+str(N)+" (figura " + str(u) + ")"
+	fig.suptitle(nombre_imagen, fontsize=20)
 	if ruta==None: 
 		plt.savefig(nombre_imagen) #El archivo se guarda en la carpeta en la que está este script.
 	else:
@@ -91,8 +92,8 @@ def guardando_cuatro_axis_finales(fig, axis, N, k, u, base, nombre_base, ruta):
 			if k==N: #si ya graficamos el último elemento de la base...
 				break #salimos del ciclo for.
 	#Guardando la imagen
-	nombre_imagen= nombre_base +": dimensión"+str(N)+", figura "+str(u)
-	fig.suptitle(nombre_imagen)
+	nombre_imagen= nombre_base +": dimensión "+str(N)+" (figura "+str(u) + ")"
+	fig.suptitle(nombre_imagen, fontsize=20)
 	if ruta==None: 
 		plt.savefig(nombre_imagen) #El archivo se guarda en la carpeta en la que está este script.
 	else:
@@ -135,4 +136,4 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 #TODO: hacer otra función 'imprimiendo gráficas' :)
 
 if __name__ == "__main__":
-	guardando_graficas(8, base_legendreDiscreta, 'BLD',"/home/ame/GitHub/tesis-licenciatura/imagenes/bases/")
+	guardando_graficas(10, base_fourier_V1, 'Fourier (v1)',"/home/ame/GitHub/tesis-licenciatura/imagenes/bases/")
