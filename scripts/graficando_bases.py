@@ -132,4 +132,4 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 #TODO: hacer otra función 'imprimiendo gráficas' :)
 
 if __name__ == "__main__":
-	guardando_graficas(10, base_fourier_V1, 'Fourier (v1)',"/home/ame/GitHub/tesis-licenciatura/imagenes/bases/")
+	guardando_graficas(11, base_fourier_V1, 'Fourier (v1)',"/home/ame/GitHub/tesis-licenciatura/imagenes/bases/")
