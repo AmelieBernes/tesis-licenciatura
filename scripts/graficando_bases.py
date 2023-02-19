@@ -24,8 +24,8 @@ input es un int n mayor a uno y cuyo output es un array con n arrays, cada uno
 conteniendo la información de los vectores de la base cuyo nombre se establece en
 el título del script y cuya dimensión es n.
 
-
 #Rama de Github dedicada para la edición de esta colección de scripts: 'script_graficas'.
+'k' siempre se pensará como una variable de grado.
 """
 
 #Importando scipts en los que se han definido las bases de interés:
@@ -100,8 +100,6 @@ def guardando_cuatro_axis_finales(fig, axis, N, k, u, base, nombre_base, ruta):
 		plt.savefig(ruta+nombre_imagen)
 
 
-#---------------------------------------------------------------------------------------
- 
 def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0)' ,ruta=None):
 	"""
 	N: tipo int, mayor a uno. Representa una dimensión.
@@ -129,8 +127,6 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 	if r!=0: #si aún faltan grados que graficar, llenamos una última figura. Nota que $r \in \{ 1,2,3 \}$.
 		fig, axis=plt.subplots(2,2)  #inicializamos pues la figura y cuatro axis en ella. Seguro no los llenamos todos.
 		guardando_cuatro_axis_finales(fig, axis, N, k, u, base, nombre_base, ruta)
-
-
 
 
 #TODO: hacer otra función 'imprimiendo gráficas' :)
