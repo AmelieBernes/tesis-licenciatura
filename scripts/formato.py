@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pylab
 
-def formato_amelie():
+def formato_amelie(fig, axis):
     plt.style.use('seaborn-v0_8-poster') 
     params = {"ytick.color" : "black",
               "xtick.color" : "black",

@@ -1,14 +1,18 @@
-import numpy as np #numpy tiene funciones seno y coseno.
+import numpy as np 
 import matplotlib.pyplot as plt
 import math 
+#import formato
+
+#ESTATUS: FUNCIONA CORRECTAMENTE.
+
 
 """
 
 Programa hecho para graficar, de cuatro en cuatro, los elementos de 
 bases de R^{n}; se planea usar este script para graficar
 
-1.- Bases de Frecuencia (i.e. de Fourier),
-2.- Bases de Legendre discretas
+1.- bases de Frecuencia (i.e. de Fourier), y
+2.- bases de Legendre discretas.
 
 Estas bases se calculan en los scripts
 1.0 base_fourier_v0
@@ -16,26 +20,38 @@ Estas bases se calculan en los scripts
 2. base_legendreDiscreta
 
 En todos estos scripts se ha definido una función llamada 'calculo_base', cuyo
-entero es un int n mayor a uno y cuyo output es un array con n arrays, cada uno
+input es un int n mayor a uno y cuyo output es un array con n arrays, cada uno
 conteniendo la información de los vectores de la base cuyo nombre se establece en
-el título del script.
+el título del script y cuya dimensión es n.
 
+#Rama de Github dedicada para la edición de esta colección de scripts: 'script_graficas'.
 'k' siempre se pensará como una variable de grado.
-
 """
 
+#Importando scipts en los que se han definido las bases de interés:
 import base_fourier_V0
 import base_fourier_V1
 import base_legendreDiscreta
 
 
+#Comandos para cambiar el tipo de letra. TODO: averigua por qué esto no funciona cuando intento
+#importarlo como un script.
 
-#TODO: graficar, para dimensiones pequeñas, las graficos
-#Quiero graficar de cuatro en cuatro; cuando los cuatro axis de la figura se llenen, quiero guardarla
-#y limpiarla para empezar de nuevo.
-
+plt.style.use('seaborn-v0_8-poster') 
+#plt.style.use('seaborn-v0_8-pastel') 
+params = {"ytick.color" : "black",
+					"font.size": 16,
+          "xtick.color" : "black",
+          "axes.labelcolor" : "black",
+          "axes.edgecolor" : "black",
+          "text.usetex" : True,
+          "font.family" : "serif",
+          "font.serif" : ["Computer Modern Serif"]}
+plt.rcParams.update(params)
 
 #---------------------------------------------------------------------------------------
+
+
 
 def graficando_en_axis(vector, fig, ax):
   """
@@ -45,71 +61,75 @@ def graficando_en_axis(vector, fig, ax):
   ax.grid()
   return ax.scatter(dominio, vector, color='hotpink')
 
-
-#---------------------------------------------------------------------------------------
-
-#inicializamos la figura y cuatro axis, acomodados en un arreglo de 2x2
-fig, axis=plt.subplots(2,2) 
-
-
-
-def graficando_cuatro_axis(fig, N, k, base, nombre_base):
+def guardando_cuatro_axis(fig, axis, N, k, u, base, nombre_base, ruta):
 	for i in range(2):
 		for j in range(2):
 			vector=base[k]
 			graficando_en_axis(vector, fig, axis[i,j])
 			axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
+			axis[i,j].axhline(y=0, color='gray')
+			axis[i,j].axvline(x=0, color='gray')
 			k+=1 #aumentamos en uno la variable de grado
+	#Guardando la imagen
+	nombre_imagen= nombre_base +": dimensión "+str(N)+" (figura " + str(u) + ")"
+	fig.suptitle(nombre_imagen, fontsize=20)
+	if ruta==None: 
+		plt.savefig(nombre_imagen) #El archivo se guarda en la carpeta en la que está este script.
+	else:
+		plt.savefig(ruta+nombre_imagen)
+
+def guardando_cuatro_axis_finales(fig, axis, N, k, u, base, nombre_base, ruta):
+	for i in range(2):
+		if k==N: #Si ya llegamos al último grado 
+			break #salimos
+		for j in range(2):
+			vector=base[k]
+			graficando_en_axis(vector, fig, axis[i,j])
+			axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
+			axis[i,j].axhline(y=0, color='gray')
+			axis[i,j].axvline(x=0, color='gray')
+			k+=1 #aumentamos en uno la variable de grado
+			if k==N: #si ya graficamos el último elemento de la base...
+				break #salimos del ciclo for.
+	#Guardando la imagen
+	nombre_imagen= nombre_base +": dimensión "+str(N)+" (figura "+str(u) + ")"
+	fig.suptitle(nombre_imagen, fontsize=20)
+	if ruta==None: 
+		plt.savefig(nombre_imagen) #El archivo se guarda en la carpeta en la que está este script.
+	else:
+		plt.savefig(ruta+nombre_imagen)
 
 
-#TODO: para que este script tenga sentido, debes de asegurarte que en TODOS los scripts en los que estas
-#definiendo una base, la función que calcula la base se llame 'calculo_base'. 
 def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0)' ,ruta=None):
 	"""
 	N: tipo int, mayor a uno. Representa una dimensión.
 
-	'funcion_base' es un módulo en el que se ha definido una función llamada 'calculo_base', función
-	que calcula la base cuyos elementos se quieren graficar (output: np.array o array. #TODO: homogeiniza esto). 
+	'modulo_base' es un script en el que se ha definido una función llamada 'calculo_base', función
+	que calcula la base cuyos elementos se quieren graficar (output: np.array o array. 
+	#TODO: homogeiniza esto). 
+
+	#NOTA: por el momento esta función sólo funciona para cuando N=4 (también cuando N es múltiplo de 4??)
 	"""
+	q=N//4
+	r=N%4 #(por lo tanto, N=q*4+r)
 	base=modulo_base.calculo_base(N)
 	k=0
+	for u in range(q): #Creando, de ser posible, imágenes con los cuatro axis llenos.
 
-	for u in range(N//4): #Creando, de ser posible, imágenes con los cuatro axis llenos.
-		graficando_cuatro_axis(fig, N, k, base, nombre_base)
-		#Guardando la imagen
-		if ruta==None: 
-			plt.savefig("AMELIA_1.png") #El archivo se guarda en la carpeta en la que está este script.
-		else:
-			plt.savefig(ruta+"AMELIA_1.png")
-		#plt.show()
-		plt.clf()
+		#inicializamos la figura y cuatro axis, acomodados en un arreglo de 2x2
+		fig, axis=plt.subplots(2,2) 
+		fig.tight_layout(pad=3.0) #para cambiar el espacio entre los axis de la figura.
+		guardando_cuatro_axis(fig, axis, N, k, u, base, nombre_base, ruta)
+		k+=4
+		plt.close() #para cerrar la VENTANA! Por lo tanto, la figura y los axis.
 
-
-	#r=N%4
-
-	#k=(N//4)*4-1
-	#while r!=0:
-	#	for i in range(2):
-	#		for j in range(2):
-	#			vector=base[k] #extrayendo el k-ésimo elemento de la base.
-	#			graficando_en_axis(vector, fig, axis[i,j])
-	#			axis[i,j].set_title( nombre_base +": dimensión " +str(N)+", grado "+str(k)) #TODO: pedir la primera parte del título (Fourier, Legendre) como input
-	#			k+=1 #aumentamos en uno la variable de grado
-	#			r=r-1 
-		#plt.legend() #TODO: por qué no corre el script con esta linea?
-
-		#Guardando la imagen
-		#if ruta==None: 
-		#	plt.savefig("AMELIA_2.png") #El archivo se guarda en la carpeta en la que está este script.
-		#else:
-		#	plt.savefig(ruta+"AMELIA_2.png")
-		##plt.show()
-		#plt.clf()
-
-
+	u= N//4 #necesito redefinir u por si N era menor a cuatro.
+	if r!=0: #si aún faltan grados que graficar, llenamos una última figura. Nota que $r \in \{ 1,2,3 \}$.
+		fig, axis=plt.subplots(2,2)  #inicializamos pues la figura y cuatro axis en ella. Seguro no los llenamos todos.
+		guardando_cuatro_axis_finales(fig, axis, N, k, u, base, nombre_base, ruta)
 
 
 #TODO: hacer otra función 'imprimiendo gráficas' :)
 
 if __name__ == "__main__":
-	guardando_graficas(4, base_legendreDiscreta, 'LegDis' ,"/home/ame/GitHub/tesis-licenciatura/imagenes/")
+	guardando_graficas(10, base_fourier_V1, 'Fourier (v1)',"/home/ame/GitHub/tesis-licenciatura/imagenes/bases/")

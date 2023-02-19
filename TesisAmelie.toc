@@ -18,20 +18,20 @@
 \contentsline {subsection}{\numberline {9.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{49}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{50}{subsection.9.2}%
 \contentsline {subsection}{\numberline {9.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{51}{subsection.9.3}%
-\contentsline {section}{\numberline {10}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{54}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Estudio para dimensiones impares}{56}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Estudio para dimensiones pares}{59}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Implementación computacional de las bases discretas de Legendre}{60}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{62}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Código en Python}{63}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Estudio espectral de los polinomios discretos de Legendre}{65}{section.12}%
-\contentsline {section}{\numberline {A}Introducción}{66}{appendix.Alph1}%
-\contentsline {section}{\numberline {B}Polinomios y teorema fundamental del álgebra}{67}{appendix.Alph2}%
-\contentsline {section}{\numberline {C}Definiciones básicas}{69}{appendix.Alph3}%
-\contentsline {section}{\numberline {D}Hiperplanos de espacios con producto punto de dimensión finita}{71}{appendix.Alph4}%
-\contentsline {section}{\numberline {E}El teorema de la proyección ortogonal}{72}{appendix.Alph5}%
-\contentsline {subsection}{\numberline {E.1}Ángulo entre elementos de un espacio con producto punto}{75}{subsection.Alph5.1}%
-\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{75}{appendix.Alph6}%
-\contentsline {subsection}{\numberline {F.1}Definición de ángulo entre un punto y un plano en un espacio euclideo}{77}{subsection.Alph6.1}%
-\contentsline {section}{\numberline {G}Bases ortonormales de espacios de Hilbert}{78}{appendix.Alph7}%
-\contentsline {section}{\numberline {H}Sumas ortogonales de espacios de Hilbert}{84}{appendix.Alph8}%
+\contentsline {section}{\numberline {10}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{56}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Estudio para dimensiones impares}{58}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Estudio para dimensiones pares}{61}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Implementación computacional de las bases discretas de Legendre}{62}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{64}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Código en Python}{65}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Estudio espectral de los polinomios discretos de Legendre}{67}{section.12}%
+\contentsline {section}{\numberline {A}Introducción}{69}{appendix.Alph1}%
+\contentsline {section}{\numberline {B}Polinomios y teorema fundamental del álgebra}{69}{appendix.Alph2}%
+\contentsline {section}{\numberline {C}Definiciones básicas}{71}{appendix.Alph3}%
+\contentsline {section}{\numberline {D}Hiperplanos de espacios con producto punto de dimensión finita}{73}{appendix.Alph4}%
+\contentsline {section}{\numberline {E}El teorema de la proyección ortogonal}{74}{appendix.Alph5}%
+\contentsline {subsection}{\numberline {E.1}Ángulo entre elementos de un espacio con producto punto}{77}{subsection.Alph5.1}%
+\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{78}{appendix.Alph6}%
+\contentsline {subsection}{\numberline {F.1}Definición de ángulo entre un punto y un plano en un espacio euclideo}{80}{subsection.Alph6.1}%
+\contentsline {section}{\numberline {G}Bases ortonormales de espacios de Hilbert}{81}{appendix.Alph7}%
+\contentsline {section}{\numberline {H}Sumas ortogonales de espacios de Hilbert}{87}{appendix.Alph8}%

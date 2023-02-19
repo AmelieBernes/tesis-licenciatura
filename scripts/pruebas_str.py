@@ -32,19 +32,45 @@ plt.title(r"$\sigma_{{\omega}}^{{0}}( \mathcal{{ L }}^{{ {0} , {1} }} )$".format
 plt.show()
 """
 
-
+#----------------------------------------------------------------------------------
 #17 Febrero
 
 
-fig, axis= plt.subplots(1,2)
+#fig, axis= plt.subplots(1,2)
 
-X=np.linspace(-1,1,100)
-Y=2*X
-Z=0.5*X 
+#X=np.linspace(-1,1,100)
+#Y=2*X
+#Z=0.5*X 
 
-axis[0].plot(X, Y)
-axis[1].plot(X, Z)
+#axis[0].plot(X, Y)
+#axis[1].plot(X, Z)
 
-plt.show()
-plt.clf()
-plt.show()
+#plt.show()
+#plt.clf()
+#plt.show()
+
+#----------------------------------------------------------------------------------
+#18 Febrero
+#r=0
+#for i in range(8):
+#	for j in range(3):
+#		r+=1
+#		print(i+j)
+#		if r==4:
+#			break
+
+
+print('-----------------------')
+
+#Y si mejor pongo dos break? Para salir de los dos for loops!
+r=0
+for i in range(6):
+	if r==5:
+		break
+	for j in range(2):
+		print("i= "+str(i)+", j="+str(j))
+		r+=1
+		if r==5:
+			break 
+	#r+=1
+
