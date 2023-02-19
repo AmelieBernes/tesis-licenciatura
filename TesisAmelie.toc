@@ -25,13 +25,13 @@
 \contentsline {subsection}{\numberline {11.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{62}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Código en Python}{63}{subsection.11.2}%
 \contentsline {section}{\numberline {12}Estudio espectral de los polinomios discretos de Legendre}{65}{section.12}%
-\contentsline {section}{\numberline {A}Introducción}{66}{appendix.Alph1}%
+\contentsline {section}{\numberline {A}Introducción}{67}{appendix.Alph1}%
 \contentsline {section}{\numberline {B}Polinomios y teorema fundamental del álgebra}{67}{appendix.Alph2}%
 \contentsline {section}{\numberline {C}Definiciones básicas}{69}{appendix.Alph3}%
 \contentsline {section}{\numberline {D}Hiperplanos de espacios con producto punto de dimensión finita}{71}{appendix.Alph4}%
 \contentsline {section}{\numberline {E}El teorema de la proyección ortogonal}{72}{appendix.Alph5}%
 \contentsline {subsection}{\numberline {E.1}Ángulo entre elementos de un espacio con producto punto}{75}{subsection.Alph5.1}%
-\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{75}{appendix.Alph6}%
-\contentsline {subsection}{\numberline {F.1}Definición de ángulo entre un punto y un plano en un espacio euclideo}{77}{subsection.Alph6.1}%
-\contentsline {section}{\numberline {G}Bases ortonormales de espacios de Hilbert}{78}{appendix.Alph7}%
-\contentsline {section}{\numberline {H}Sumas ortogonales de espacios de Hilbert}{84}{appendix.Alph8}%
+\contentsline {section}{\numberline {F}El teorema de Gram-Schmidt}{76}{appendix.Alph6}%
+\contentsline {subsection}{\numberline {F.1}Definición de ángulo entre un punto y un plano en un espacio euclideo}{78}{subsection.Alph6.1}%
+\contentsline {section}{\numberline {G}Bases ortonormales de espacios de Hilbert}{79}{appendix.Alph7}%
+\contentsline {section}{\numberline {H}Sumas ortogonales de espacios de Hilbert}{85}{appendix.Alph8}%
