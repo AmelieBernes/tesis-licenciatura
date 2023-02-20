@@ -131,8 +131,8 @@ def graficando_esperanzas(N, fourier=base_fourier_V1):
 
 if __name__ == "__main__":
 	#graficando_sigmasYesp(50,25)
-	graficando_esperanzas(60)
-	#graficando_sigmasYesp(55, 12)
+	#graficando_esperanzas(60)
+	graficando_sigmasYesp(50, 13)
 	plt.show()
 
 
