@@ -31,7 +31,7 @@ def esperanza(dominio, mediciones):
 	return esp
 
 #-----------------------------------------------------------------------------------
-#Funciones principales del programa
+#Funciones principales del script
 def calculando_sigmasYesp(N,k, fourier=base_fourier_V1):
 	"""
 	Función que calcula los coeficientes sigma
@@ -70,14 +70,14 @@ def calculando_sigmasYesp(N,k, fourier=base_fourier_V1):
 		esp= esperanza(dominio, sigma)
 		return (sigma, esp) #para calcular esp necesito a sigma, por lo que no creo poder separar estos outputs
 
-def graficando_sigmasYesp(N,k):
+def graficando_sigmasYesp(N,k, fourier=base_fourier_V1):
 	"""
 	Función que grafica los coeficientes sigma
 	del polinomio discreto de Legendre de dimensión N
 	y grado k, junto con la esperanza de la distribución
 	que ellos forman.
 	"""
-	sigma, esp = calculando_sigmasYesp(N,k) #calculamos los datos
+	sigma, esp = calculando_sigmasYesp(N,k, fourier) #calculamos los datos
 	dominio=[t for t in range(len(sigma))]  #calculamos len(sigma) para no tener que hacer un if-else con la paridad.
 
 	#graficando las sigmas
@@ -110,7 +110,7 @@ def graficando_esperanzas(N, fourier=base_fourier_V1):
 	baseLegendre=legendre.calculo_base(N)
 
 	dominio=np.array([t for t in range(N)])
-	esperanzas=np.array([calculando_sigmasYesp(N,k)[1] for k in range(N)]) #iteramos en la variable de grado 'k'.
+	esperanzas=np.array([calculando_sigmasYesp(N,k, fourier)[1] for k in range(N)]) #iteramos en la variable de grado 'k'.
 
 	plt.scatter(dominio, esperanzas, s=100, color="darkgoldenrod", marker="^")
 
@@ -130,9 +130,8 @@ def graficando_esperanzas(N, fourier=base_fourier_V1):
 
 
 if __name__ == "__main__":
-	#graficando_sigmasYesp(50,25)
-	#graficando_esperanzas(60)
-	graficando_sigmasYesp(50, 13)
+	#graficando_esperanzas(12, base_fourier_V0) 
+	#graficando_sigmasYesp(20,3, base_fourier_V0) 
 	plt.show()
 
 
