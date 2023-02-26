@@ -15,14 +15,14 @@ def vector_c_N_v(N, v):
   else:
     resultado=np.empty(0) #inicializamos el vector
     for mu in range(N):
-      resultado=np.append( (math.sqrt(2/N)) * math.cos(2*pi*v*mu/N), resultado )
+      resultado=np.append(resultado, [math.sqrt(2/N)) * math.cos(2*pi*v*mu/N)])
   return resultado
 
 
 def vector_s_N_v(N, v):
   resultado=np.empty(0) #inicializamos el vector
   for mu in range(N):
-      resultado=np.append( (math.sqrt(2/N)) * math.sin(2*pi*v*mu/N), resultado)
+      resultado=np.append(resultado, [math.sqrt(2/N) * math.sin(2*pi*v*mu/N) ])
   return resultado
 
 
