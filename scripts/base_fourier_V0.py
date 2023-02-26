@@ -15,7 +15,7 @@ def vector_c_N_v(N, v):
   else:
     resultado=np.empty(0) #inicializamos el vector
     for mu in range(N):
-      resultado=np.append(resultado, [math.sqrt(2/N)) * math.cos(2*pi*v*mu/N)])
+      resultado=np.append(resultado, [math.sqrt(2/N) * math.cos(2*pi*v*mu/N)])
   return resultado
 
 

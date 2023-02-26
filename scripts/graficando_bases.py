@@ -131,6 +131,8 @@ def guardando_graficas(N, modulo_base=base_fourier_V0, nombre_base= 'Fourier (v0
 
 #TODO: hacer otra función 'imprimiendo gráficas' 
 
-if __name__ == "__main__":
-	ruta="D:/tesis-licenciatura/imagenes/bases/"  #Ruta en Windows COI.
-	guardando_graficas(5, base_fourier_V1, 'Fourier (v1)', ruta)
+if __name__=='__main__':
+	#ruta='D:/tesis-licenciatura/imagenes/bases/' #ruta windows COI 
+	ruta='/home/ame/GitHub/tesis-licenciatura/imagenes/'
+	guardando_graficas(11, base_fourier_V0, 'Fourier (v0)', ruta)
+
