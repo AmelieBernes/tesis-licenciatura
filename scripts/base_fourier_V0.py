@@ -26,7 +26,7 @@ def vector_s_N_v(N, v):
   return resultado
 
 
-# Base de Fourier de dimensión N ------------------------------------------------
+# Base de Fourier de dimensión N ----------------------------------------------
 
 def calculo_base(N):
   M=math.ceil(N/2)
