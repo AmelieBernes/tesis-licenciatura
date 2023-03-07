@@ -186,7 +186,10 @@ def base_Legendre(n, sumatoria=sumatoria_V1):
 
 
 if __name__ == "__main__":
-    print(base_Legendre(4))
+    #print(base_Legendre(30))
+    print(np.linalg.norm(base_Legendre(18)[15])) #no tiene norma uno !!
+    print(np.linalg.norm(base_Legendre(11)[10]))
+
 
 
 

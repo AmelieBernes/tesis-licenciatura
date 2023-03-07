@@ -17,9 +17,6 @@ La figura consta de cuatro axis:
     Esto no era necesario cuando usabas la base clásica de oscilaciones de Fourier, pero puesto que nuestras modificaciones
     pueden no ser BON's, ya no estas segura de obtener de inmediato con las sigmas una distribución discreta de probabilidad.
 
-    3.- axis[1][0]: Recta de centros de masa para todos los 0 \leq k \leq n-1, con el punto correspondiente al 'k' del input resaltado.
-
-    4.- axis[1][1]: Gráfica de los puntos max_1, max_2 y min para todos los 0 \leq k \keq n-1.
 """
 
 import numpy as np
@@ -33,22 +30,20 @@ import oscilaciones_legendre as osc
 import proyecciones as proy
 
 colores_amelie=['hotpink', 'mediumpurple', 'darkgoldenrod']
-n=30
-k=3
+n=11
+k=10
 
 
 
 
 
-
-fig, axis= plt.subplots(2,2)
+fig, axis= plt.subplots(2,1)
 fig.suptitle(r"Análisis oscilatorio del polinomio discreto $ \mathcal{{ L }}^{{ {0} , {1} }} \in \mathbb{{ R }}^{{ {0}  }}$".format(str(n), str(k)) )
 
-for i in range(2):
-    for j in range(2):
-        axis[i,j].axhline(y=0, color='gray')
-        axis[i,j].axvline(x=0, color='gray')
-        axis[i,j].grid(True)
+for j in range(1):
+    axis[j].axhline(y=0, color='gray')
+    axis[j].axvline(x=0, color='gray')
+    axis[j].grid(True)
 
 
 
@@ -56,20 +51,22 @@ for i in range(2):
 
 dominio=[k/n for k in range(n)]
 vector_legendre=legendre.base_Legendre(n)[k] #Calculamos el vector de legendre de interés para el análisis.
-axis[0,0].scatter(dominio, vector_legendre, color=colores_amelie[0])
+axis[0].scatter(dominio, vector_legendre, color=colores_amelie[0])
 
 
 
 #----------- Axis[0,1]: WIP -------------------------
 (sigma, esp)= osc.calculando_sigmasYesp(n, k)
 dominio_sigma=[t for t in range(len(sigma))]
+sigma_max=max(sigma)
+print(sigma_max)
 #TODO falta realizar normalizaciones en el vector de sigmas para que calcular la esperanza tenga sentido siempre.
 
-axis[0,1].scatter(dominio_sigma, sigma, s=100, color=colores_amelie[1], marker="*")
-axis[0,1].scatter(esp, 0, s=100, color=colores_amelie[2], marker="^", label='Esperanza: '+str(esp.round(4))) 
+axis[1].scatter(dominio_sigma, sigma, s=100, color=colores_amelie[1], marker="*")
+axis[1].scatter(esp, 0, s=100, color=colores_amelie[2], marker="^", label='Esperanza: '+str(esp.round(4))) 
 
 
 
 
-
+plt.grid()
 plt.show()

@@ -32,7 +32,7 @@ def esperanza(dominio, mediciones):
 
 #-----------------------------------------------------------------------------------
 #Funciones principales del script
-def calculando_sigmasYesp(N,k, fourier=base_fourier_V1):
+def calculando_sigmasYesp(N,k, fourier=base_fourier_V0):
 	"""
 	Función que calcula los coeficientes sigma
 	del polinomio discreto de Legendre de dimensión N
@@ -70,7 +70,7 @@ def calculando_sigmasYesp(N,k, fourier=base_fourier_V1):
 		esp= esperanza(dominio, sigma)
 		return (sigma, esp) #para calcular esp necesito a sigma, por lo que no creo poder separar estos outputs
 
-def graficando_sigmasYesp(N,k, fourier=base_fourier_V1):
+def graficando_sigmasYesp(N,k, fourier=base_fourier_V0):
 	"""
 	Función que grafica los coeficientes sigma
 	del polinomio discreto de Legendre de dimensión N
@@ -96,7 +96,7 @@ def graficando_sigmasYesp(N,k, fourier=base_fourier_V1):
 	
 
 
-def graficando_esperanzas(N, fourier=base_fourier_V1):
+def graficando_esperanzas(N, fourier=base_fourier_V0):
 	"""
 	Función que calcula las esperanzas de los coeficientes sigma de cada uno de los N polinomios
 	discretos de Legendre de grado N.
