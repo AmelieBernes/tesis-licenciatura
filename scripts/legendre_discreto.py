@@ -184,19 +184,34 @@ def base_Legendre(n, sumatoria=sumatoria_V1):
         return base_Legendre_dimensionPar(n)
     return base_Legendre_dimensionImpar(n)
 
-base_Legendre(4)
 
-#PROBANDO EL ALGORITMO CON LA FUNCIÓN SUMATORIA_V2
-def base_Legendre(n, sumatoria=sumatoria_V2):
-    """
-    Dada una dimensión n (int>1), esta función regresa un array con n arrays, siendo estos
-    los vectores de la base de Legendre discreta de la dimensión n especificada.
-    """
-    if n%2==0:
-        return base_Legendre_dimensionPar(n)
-    return base_Legendre_dimensionImpar(n)
+if __name__ == "__main__":
+    print(base_Legendre(4))
 
-base_Legendre(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """**Comparando los dos enfoques**"""
 
@@ -231,4 +246,4 @@ import sys
 
 import cProfile
 
-cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
+#cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
