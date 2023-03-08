@@ -23,6 +23,13 @@ import numpy as np
 #es mejor (y tal vez incluso use un algoritmo parecido al que implementabas tú).
 #TODO: pregunta sobre esto en MSE!
 
+
+#TODO (8 de Marzo, 2023): hay un error en este código. Los vectores de Legendre calculados con este script
+#no tienen norma uno! El script que tengo en el jupyter notebook parece funcionar correctamente.
+
+#TODO: DÓNDE ESTÁ LA FUNCIÓN 'calculo_base' ?????????????????
+
+
 """**Funciones sumatoria y sumando: versión 1**"""
 
 #SUMATORIA: VERSION 1. En la que implemento algunos de los detalles que discutimos juntos.
@@ -137,7 +144,7 @@ def base_Legendre_dimensionImpar(n, sumatoria=sumatoria_V2):
             vector_Legendre[N]=0
         else:
             suma=sumatoria(n,k,N)
-            vector_Legendre[N]=(-1)**k*A_nk*suma
+            vector_Legendre[N]=(-1)**k*A_nk*suma #TODO: por qué este (-1)**k??
         BaseLegendre.append(vector_Legendre)
         
     return BaseLegendre
@@ -188,7 +195,10 @@ def base_Legendre(n, sumatoria=sumatoria_V1):
 if __name__ == "__main__":
     #print(base_Legendre(30))
     print(np.linalg.norm(base_Legendre(18)[15])) #no tiene norma uno !!
-    print(np.linalg.norm(base_Legendre(11)[10]))
+    print('-----------------------')
+    print(np.linalg.norm(base_Legendre(11)[7])) #sí tiene norma uno
+    print('-----------------------')
+    print(np.linalg.norm(base_Legendre(20)[10])) #no tiene normal uno:(
 
 
 

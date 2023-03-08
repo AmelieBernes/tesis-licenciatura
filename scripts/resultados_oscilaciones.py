@@ -30,8 +30,8 @@ import oscilaciones_legendre as osc
 import proyecciones as proy
 
 colores_amelie=['hotpink', 'mediumpurple', 'darkgoldenrod']
-n=11
-k=10
+n=50
+k=9
 
 
 

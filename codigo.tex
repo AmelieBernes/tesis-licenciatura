@@ -228,14 +228,18 @@ y \ref{prop: simetrias en dimensiones pares}.
 Para empezar, damos dos algoritmos que pueden
 usarse para calcular la sumatoria 
 \[
-\suma{j=0}{min(k,m)}{B_{n,k,m,k}}.
+\suma{j=0}{min(k,m)}{B_{n,k,m,j}}.
 \] 
 Uno de ellos usa
 directamente la expresión \eqref{eq4: 6En}, mientras
 que en el otro se simplifican los factoriales que
-aparecen en \eqref{eq4: 6En} para llegar a la expresión
+aparecen en la definición \eqref{eq4: 6En}
+de $B_{n,k,m,j}$
+para llegar a la expresión
 \[
-(-1)^{j} \frac{m! (k+j)!(n-j-1)!}{(n-1)!(j!)^{2}(k-j)!(m-j)!}
+(-1)^{j}
+\frac{m!}{(n-1)!}
+ \frac{(k+j)!(n-j-1)!}{(j!)^{2}(k-j)!(m-j)!}
 = (-1)^{j}
 \frac{\left( \producto{\mu=m-j+1}{m}{\mu} \right)
 \left( \producto{\mu=k-j+1}{k+1}{\mu} \right)
