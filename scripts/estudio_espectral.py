@@ -25,13 +25,14 @@ import pylab #Para usar LaTeX en captions
 import math
 
 
-import legendre_discreto as legendre 
-import oscilaciones_legendre as osc
-import proyecciones as proy
+#import legendre_discreto as legendre #ESTAS IMPORTANDO EL MÓDULO INCORRECTO. UGH.
+import base_legendreDiscreta as legendre
+import funciones_estudioEspectral as osc
+import minimos_cuadrados
 
 colores_amelie=['hotpink', 'mediumpurple', 'darkgoldenrod']
-n=50
-k=9
+n=8
+k=3
 
 
 
@@ -50,7 +51,7 @@ for j in range(1):
 #----------- Axis[0,0]: WIP -------------------------
 
 dominio=[k/n for k in range(n)]
-vector_legendre=legendre.base_Legendre(n)[k] #Calculamos el vector de legendre de interés para el análisis.
+vector_legendre=legendre.calculo_base(n)[k] #Calculamos el vector de legendre de interés para el análisis.
 axis[0].scatter(dominio, vector_legendre, color=colores_amelie[0])
 
 

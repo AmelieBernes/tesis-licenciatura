@@ -4,7 +4,7 @@ import numpy as np
 import sys
 import cProfile
 
-#TODO no ejecutes nada aquí. En este script sólo almacena definiciones de objetos o funciones.
+
 
 ########## Funciones sumatoria (versión 1) y sumando (versiones 1.0 y 1.1)--------------------
 
@@ -131,7 +131,7 @@ A continuación se dan los algoritmos
 
 base_Legendre_dimensionImpar 
 base_Legendre_dimensionPar 
-base_Legendre 
+calculo_base
 
 """
 def base_Legendre_dimensionImpar(n, sumatoria=sumatoria_V1):
@@ -217,7 +217,6 @@ def calculo_base(n, sumatoria=sumatoria_V1):
 
 
 
-
 ############### Comparando los dos enfoque entre sí y el desempeño de cada uno.
 
 
@@ -246,4 +245,5 @@ def comparando_resultados(dim):
 #cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
 
 if __name__ == "__main__":
-    base_Legendre(4)
+	print(np.dot(calculo_base(20)[10], calculo_base(20)[10]))
+    #base_Legendre(4)

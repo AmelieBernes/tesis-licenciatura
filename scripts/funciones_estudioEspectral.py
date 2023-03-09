@@ -6,7 +6,7 @@ import pylab
 import base_legendreDiscreta as legendre
 import base_fourier_V0 
 import base_fourier_V1 
-import proyecciones #para calcular rectas de mínimos cuadrados.
+import minimos_cuadrados
 
 #TODO: recuerda que, para poder importar mejor, en un script en el que sólo quieres definir funciones debes
 #evitar ejecutar cosas. UPDATE: acabo de descubrir el idiom if __name__ == "__main__".
@@ -117,7 +117,7 @@ def graficando_esperanzas(N, fourier=base_fourier_V0):
 	#Graficando la recta f(k)=k/2
 	X=np.linspace(0, N, 100)
 	plt.plot(X, X/2, color="black", linestyle='dashed', label="Gráfica de la recta $y=\\frac{1}{2}k$")
-	b0, b1= proyecciones.coef_RMC(dominio, esperanzas)
+	b0, b1= minimos_cuadrados.coef_RMC(dominio, esperanzas)
 	plt.plot(X, b1*X+b0, color="mediumblue", linestyle='dashed', label='Ajuste lineal de mínimos cuadrados')
 
 	plt.xlabel("Grado $k$")
