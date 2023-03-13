@@ -124,3 +124,15 @@ def coeficientes_sigma(x):
     return sigmas
 
 
+def esperanza(dominio, mediciones):
+  """
+  Función que calcula la esperanza de la variable aleatoria cuyo dominio es la lista
+  'dominio' y que toma los valores del vector 'mediciones'.
+  Claro que se supone que las listas 'dominio' y 'mediciones' tienen la misma longitud,
+  y que el i-ésimo valor de 'dominio' es mapeado al i-ésimo
+  vector de 'mediciones'.'
+  """
+  esp=0 #inicializamos la esperanza
+  for i in range(len(dominio)):
+    esp+=dominio[i]*mediciones[i]
+  return esp
