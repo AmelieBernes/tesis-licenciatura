@@ -37,17 +37,17 @@ import base_legendreDiscreta
 #Comandos para cambiar el tipo de letra. TODO: averigua por qué esto no funciona cuando intento
 #importarlo como un script.
 
-#plt.style.use('seaborn-v0_8-poster') #TODO: por qué no funciona en windows
-#plt.style.use('seaborn-v0_8-pastel') 
-#params = {"ytick.color" : "black",
-#					"font.size": 16,
-#          "xtick.color" : "black",
-#          "axes.labelcolor" : "black",
-#          "axes.edgecolor" : "black",
-#          "text.usetex" : True,
-#          "font.family" : "serif",
-#          "font.serif" : ["Computer Modern Serif"]}
-#plt.rcParams.update(params)
+plt.style.use('seaborn-v0_8-poster') #TODO: por qué no funciona en windows
+plt.style.use('seaborn-v0_8-pastel') 
+params = {"ytick.color" : "black",
+					"font.size": 16,
+          "xtick.color" : "black",
+          "axes.labelcolor" : "black",
+          "axes.edgecolor" : "black",
+          "text.usetex" : True,
+          "font.family" : "serif",
+          "font.serif" : ["Computer Modern Serif"]}
+plt.rcParams.update(params)
 
 #---------------------------------------------------------------------------------------
 
