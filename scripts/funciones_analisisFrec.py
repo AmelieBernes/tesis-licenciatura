@@ -5,7 +5,7 @@ via una función llamada 'calculo_base'
 
 
 
-Aqupi ejecuta todos los análisis, no en los scripts en los que
+Aquí ejecuta todos los análisis, no en los scripts en los que
 defines las bases!
 
 """
