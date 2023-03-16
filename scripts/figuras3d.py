@@ -5,7 +5,7 @@ import pylab
 import matplotlib.pyplot as plt
 import ame_flecha
 import flechas_2D
-import legendre
+import legendre #recuerda cambiar esto, pues eliminaste este script, que sólo contenía un diccionario.
 import proyecciones as proy
 
 #Recuerda que si quieres llamar a este script en otro para usar funciones aquí definidas NO es bueno que este scritp, en sí mismo, haga algo. 

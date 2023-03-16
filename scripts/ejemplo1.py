@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pylab
 import math
-import legendre
+import legendre #recuerda que eliminaste este script.
 import proyecciones as proy
 
 #(no muy importante) script para dibujar algunas de las gráficas del Ejemplo 1 de la tesis.

@@ -1,5 +1,7 @@
 import math 
 import numpy as np
+from tqdm import tqdm
+
 
 import sys
 import cProfile
@@ -142,11 +144,8 @@ def base_Legendre_dimensionImpar(n, sumatoria=sumatoria_V1):
     """ 
     N=n//2 #Damos el entero N tal que n=2*N+1
 
-    #primero, calculamos y guardamos en una matriz los límites de sumación. 
-    #Recuerde que tales límites son simplemente min(k,m) 
-
     BaseLegendre=[]
-    for k in range(n): #iteramos primero en la variable de grado.
+    for k in tqdm(range(n)): #iteramos primero en la variable de grado.
         #como a estas alturas del algoritmo ya se han fijado 'n' y 'k', calculamos A_nk
         A_nk=((-1)**k)*math.factorial(n-1)*math.sqrt((2*k+1)/(math.factorial(n-k-1)*math.factorial(n+k)))
 
@@ -179,17 +178,9 @@ def base_Legendre_dimensionPar(n, sumatoria=sumatoria_V1):
     Output: array con n arrays, siendo estos los vectores de la base de Legendre discreta de la dimensión n especificada.
     """ 
     N=n//2
-    matriz_limite_sumacion=[]
-    for m in range(N+1):
-        row=[] #inicializamos la m-ésima fila.
-        #ahora, lo llenamos.
-        for k in range(n):
-            row.append(min(m,k))
-        #por último, lo agregamos a la matriz_limite_sumacion
-        matriz_limite_sumacion.append(row)
     
     BaseLegendre=[]
-    for k in range(n): #iteramos primero en la variable de grado.
+    for k in tqdm(range(n)): #iteramos primero en la variable de grado.
         A_nk=((-1)**k)*math.factorial(n-1)*math.sqrt((2*k+1)/(math.factorial(n-k-1)*math.factorial(n+k)))
         vector_Legendre=[0]*n #inicializamos el vector de Legendre de grado k
         #vamos a calcular la m-ésima entrada del vector.
@@ -245,5 +236,6 @@ def comparando_resultados(dim):
 #cProfile.run('base_Legendre(50, sumatoria=sumatoria_V2)')
 
 if __name__ == "__main__":
-	print(np.dot(calculo_base(20)[10], calculo_base(20)[10]))
-    #base_Legendre(4)
+	#print(np.dot(calculo_base(20)[10], calculo_base(20)[10]))
+	base=calculo_base(4)
+	print(base)
