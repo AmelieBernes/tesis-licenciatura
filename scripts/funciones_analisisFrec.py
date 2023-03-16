@@ -99,15 +99,18 @@ def coeficientes_espectrales(x, script_sistFreq=base_fourier_V0):
 
 def reconstruirS_coefFrec(x, script_sistFreq=base_fourier_V0):
   """
-  No funciona.
-  Sólo tiene sentido cuando el sistema de frecuencias de hecho es una BON de Rn.
-  
   Reconstruyendo a x (un array de dimensión n mayor a uno) a partir de sus coeficientes de frecuencia
+  (i.e. productos puntos con el sistema de frecuencias 
+  calculado con la función calculo base definida en el script script_sistFreq. )
+  
+  Sólo tiene sentido realizar este proceso de síntesis cuando el sistema
+  de frecuencias es de hecho BON de Rn (con n= len(x)).
+ 
   """
   n=len(x)
   M=math.ceil(n/2)
 
-  base_frecuencias=calculo_base(n)
+  base_frecuencias=script_sistFreq.calculo_base(n)
   coef_cosenos, coef_senos= coeficientes_espectrales(x, script_sistFreq)
 
   sintesis=escXarr(coef_cosenos[0],base_frecuencias[0]) #inicializando la síntesis
@@ -116,8 +119,8 @@ def reconstruirS_coefFrec(x, script_sistFreq=base_fourier_V0):
   for i in range(M-1):
     sintesis=sumando_arrays( sintesis,escXarr(coef_senos[i],base_frecuencias[2*i+2]) )
 
-  for i in range(1, M-1):
-    sintesis=sumando_arrays( sintesis,escXarr(coef_cosenos[i],base_frecuencias[2*i+1]) )
+  for i in range(1, M):
+    sintesis=sumando_arrays( sintesis,escXarr(coef_cosenos[i],base_frecuencias[2*i-1]) )
 
   if n%2==0:
     sintesis=sumando_arrays( sintesis,escXarr(coef_cosenos[M],base_frecuencias[n-1]) )
