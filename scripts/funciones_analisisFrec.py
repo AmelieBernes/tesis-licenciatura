@@ -66,6 +66,14 @@ def esperanza(dominio, mediciones):
 	return esp
 	
 	
+#Funciones coseno y seno a partir de las que se construye todo lo que sigue.
+
+def c_w(n,t, w):
+  return math.sqrt(1/n)*np.cos(2*pi*w*t)
+
+def s_w(n,t, w):
+  return math.sqrt(1/n)*np.sin(2*pi*w*t)	
+	
 	
 #------------------------------------------------------------------------------------
 
@@ -178,6 +186,35 @@ def grafica_dominio_frecuencia(x, script_sistFreq=base_fourier_V0):
   return plt.show()
   
   
+  
+def sintesis_funcionContinua(x, t, modulo_baseFrec):
+  """
+  x es el array de mediciones
+
+  't' es el argumento de la función.
+
+  Se grafica la función que es la combinación lineal formada con los coeficientes de x (i.e. productos punto) respecto al sistema de frecuencias calculado en 'modulo_baseFrec' y las funciones a partir de las cuales se define tal base.
+
+  Sólo se tiene la seguridad de que la gráfica de la función output ajuste la de x si 
+  el sistema de frecuencias calculado en modulo_baseFrec es una BON de Rn.
+  """
+  n=len(x)
+  M=math.ceil(n/2)
+  coef_cosenos, coef_senos = coeficientes_espectrales(x)
+
+  print(coef_cosenos)
+  print(coef_senos)
+
+  res= coef_cosenos[0]/math.sqrt(n)
+  for w in range(1, M):
+    res+= coef_cosenos[w]*math.sqrt(2)*c_w(n,t,w)+ coef_senos[w-1]*math.sqrt(2)*s_w(n,t,w)
+
+  if n%2==1:
+    return res
+  else:
+    res+= coef_cosenos[M]*math.sqrt(2)*c_w(n,t,M)
+    return res
+
  
   
 def coeficientes_sigma(x, script_sistFreq=base_fourier_V0):
