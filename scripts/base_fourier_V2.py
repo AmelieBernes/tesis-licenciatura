@@ -38,7 +38,7 @@ def calculo_base(n, omegas):
 
   dominio=[k/n for k in range(n)]
 
-  base_F=[(1/math.sqrt(N))*np.ones([N])] #inicializamos la base, que será un array. Ya incluimos la primera entrada.
+  base_F=[(1/math.sqrt(n))*np.ones([n])] #inicializamos la base, que será un array. Ya incluimos la primera entrada.
 
   for w in omegas: 
     f_w=[]
@@ -50,3 +50,16 @@ def calculo_base(n, omegas):
     base_F.append(g_w)
     
     return base_F 
+    
+    
+    
+def coeficientes_sistFourier2(x, omegas):
+  n=len(x)
+  sistema_frecuencias= calculo_base(n, omegas)
+  coef_cosenos, coef_senos= [], [] #inicializamos las listas de coeficientes
+
+  for i in range(len(omegas)):
+    coef_cosenos.append(np.dot(x, sistema_frecuencias[2*i]))
+    coef_cosenos.append(np.dot(x, sistema_frecuencias[2*i+1]))
+
+  return coef_cosenos, coef_senos 
