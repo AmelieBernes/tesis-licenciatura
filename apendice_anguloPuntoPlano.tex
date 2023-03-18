@@ -24,20 +24,30 @@ $x$ con su proyección a $W$, es decir,
 \]
 \end{defi}
 
-Una caracterización del ángulo entre un punto y un subespacio
-se da a continuación.
+Una definición alternativa del ángulo entre un punto y un subespacio,
+así como una caracterización sencilla del coseno de este,
+se dan a continuación.
 
 \begin{prop}
 Si $V$, $W$ y $x$ son como en la definición 
 \ref{def: angulo punto subespacio}, entonces
-\[
+
+\begin{itemize}
+\item \[
 \measuredangle (x, W) = min \{ \measuredangle(x,w) \hspace{0.1cm} :
- \hspace{0.1cm} w \in W \}.
+ \hspace{0.1cm} w \in W \},
 \]
+y 
+
+\item $cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}$.
+\end{itemize}
+
+
 \end{prop}
 \noindent
 \textbf{Demostración.}
-Sea $w$ un elemento cualquiera de $W$.
+\begin{itemize}
+\item  Sea $w$ un elemento cualquiera de $W$.
 Puesto que el ángulo entre dos vectores es
 preservado bajo multiplicación por escalares
 (c.f. \TODO{debes poner en el apéndice este resultado, 
@@ -78,8 +88,30 @@ del que la función coseno sea decreciente en el intervalo
 $[0, \pi]$ se concluye de esta última desigualdad que
 $ \measuredangle \left(x, \Pi_{W}(x) \right) \leq 
 \measuredangle (x,w)$.
+
+\item Según el corolario 
+\ref{cor: x como suma de proyecciones}, 
+$x$ puede expresarse como la suma entre su proyección
+a $W$ y su proyección a $W^{\perp}$, luego,
+según la definición \ref{def: angulo punto subespacio}
+y la linealidad del producto punto, concluimos que
+
+\begin{align*}
+cos \left( \measuredangle (x, W) \right) = &
+cos \left( \measuredangle (x, \Pi_{W}(x)) \right)  \\
+= & 
+\frac{\langle x , \Pi_{W}(x) \rangle}{||x|| \cdot || \Pi_{W}(x)||}  \\
+= & 
+\frac{\langle \Pi_{W}(x)+\Pi_{W\perp}(x) , \Pi_{W}(x) \rangle}{||x|| \cdot || \Pi_{W}(x)||}\\
+= & \frac{\langle \Pi_{W}(x) , \Pi_{W}(x) \rangle}{||x|| \cdot || \Pi_{W}(x)||}\\
+= & \frac{|| \Pi_{W}(x) ||^{2}}{||x|| \cdot || \Pi_{W}(x)||}\\
+= & \frac{|| \Pi_{W}(x) ||}{||x||}.
+\end{align*}
+\end{itemize}
+
 \QEDB
 \vspace{0.2cm}
+
 
 
 
