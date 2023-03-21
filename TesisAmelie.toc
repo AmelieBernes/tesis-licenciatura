@@ -25,15 +25,16 @@
 \contentsline {subsection}{\numberline {4.0.2}Código en Python}{68}{subsection.4.0.2}%
 \contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{69}{chapter.5}%
 \contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{71}{subsection.5.0.1}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{74}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{74}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{76}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{78}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{79}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{82}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}Ángulo entre elementos de un espacio con producto punto}{84}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un plano en un espacio euclideo}{84}{section.Alph1.7}%
-\contentsline {subsection}{\numberline {A.7.1}Caso particular en el que el subespacio en cuestión es un plano}{86}{subsection.Alph1.7.1}%
-\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{87}{section.Alph1.8}%
-\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{93}{section.Alph1.9}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{100}{appendix.Alph2}%
+\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{74}{subsection.5.0.2}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{75}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{75}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{77}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{79}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{80}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{83}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}Ángulo entre elementos de un espacio con producto punto}{85}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un plano en un espacio euclideo}{85}{section.Alph1.7}%
+\contentsline {subsection}{\numberline {A.7.1}Caso particular en el que el subespacio en cuestión es un plano}{87}{subsection.Alph1.7.1}%
+\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{88}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{94}{section.Alph1.9}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{101}{appendix.Alph2}%

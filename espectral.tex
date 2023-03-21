@@ -143,12 +143,15 @@ Fijados $n$ y $\omega$,
 el espacio que generan los vectores de frecuencia $\omega$
 $f_{n, \omega}$ y $g_{n, \omega}$ es
 
-\begin{align*}
-P_{\omega}:= span(f_{n, \omega}, g_{n, \omega}) = & 
+\begin{align}
+\label{eq2: 20Marzo}
+P_{\omega}:= & span(f_{n, \omega}, g_{n, \omega}) \\ 
+= &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
-\hspace{0.2cm} a, b \in \IR \},
-\end{align*}
+\hspace{0.2cm} a, b \in \IR \} \\ \nonumber
+\end{align}
+
 luego, $P$ es el plano que consiste de las señales
 $n-$dimensionales de frecuencia (pura) $\omega$;
 \sidenote{\TODO{Deberías poner esta definición más arriba}} 
@@ -179,6 +182,10 @@ es
 cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}
 \in [0,1].
 \end{equation}
+
+\TODO{Por casualidad encontré la página de ``cosine similarity'' en wikipedia.
+Habla de esta forma de medir similitudes en base a cosenos de ángulos. 
+Deberías citarla.}
 
 \begin{figure}[H]
 	\sidecaption{
@@ -336,4 +343,91 @@ fórmula \eqref{eq3: 19Marzo} en nuestra situación particular para llegar a que
 		  \right) ^{1/2}
 \]
 
+\TODO{Di que estas son las nuevas sigmas que graficas.}
 
+\subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
+
+Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija, 
+buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$; puesto que
+$\Pi_{P_{\omega}}(x)$ (donde $P_{\omega}$ es como se definió en 
+\eqref{eq2: 20Marzo}) es la señal de frecuencia $\omega$ que está a menor
+distancia euclidea de $x$, claro que el desfase $\phi$ buscado es de hecho
+el número entre cero y uno tal que 
+\[
+\Pi_{P_{\omega}}(x) = \alpha (cos(2 \pi \omega (t - \phi)))_{t \in I_{n}}
+\]
+para alguna amplitud $\alpha$.
+
+La ecuación \eqref en nuestro contexto se reescribe como
+
+\begin{equation}
+\label{eq3: 20Marzo}
+\Pi_{P_{\omega}}(x)= c (cos (2 \pi \omega t))_{t \in I_{n}} + d 
+(sin (2 \pi \omega t))_{t \in I_{n}},
+\end{equation}
+donde
+
+\begin{equation}
+\label{eq4: 20Marzo}
+c= \frac{
+\langle x, f_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle
+\langle x, g_{n, \omega} \rangle
+}{1-\langle f_{n, \omega}, g_{n, \omega} \rangle^{2}} \xi_{n, \omega}
+\end{equation}
+y
+\begin{equation}
+\label{eq5: 20Marzo}
+d= \frac{
+\langle x, g_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle
+\langle x, f_{n, \omega} \rangle
+}{1-\langle f_{n, \omega}, g_{n, \omega} \rangle^{2}} \eta_{n, \omega}.
+\end{equation}
+
+Nos conviene más reescribir a \eqref{eq3: 20Marzo} como
+\begin{equation}
+\label{eq6: 20Marzo}
+\Pi_{P_{\omega}}(x)= 
+\sqrt{c^{2}+d^{2}}
+\left(
+C (cos (2 \pi \omega t))_{t \in I_{n}} +
+D (sen (2 \pi \omega t))_{t \in I_{n}} 
+\right),
+\end{equation}
+
+donde
+\[
+C:= \frac{c}{\sqrt{c^{2}+d^{2}}}
+\]
+y 
+\[
+D:= \frac{d}{\sqrt{c^{2}+d^{2}}},
+\]
+pues, como $C^{2} + D^{2}=1$, existe un único
+$\phi \in [0,1]$ (\TODO{mejor cámbiale el nombre}) tal que
+\begin{equation}
+\label{eq7: 20Marzo}
+C= cos(2 \pi \phi), \hspace{0.2cm} 
+D= sin(2 \pi \phi).
+\end{equation}
+
+Sustituyendo \eqref{eq7: 20Marzo} en \eqref{eq6: 20Marzo},
+llegamos a que
+
+\begin{align*}
+\Pi_{P_{\omega}}(x) = & 
+\sqrt{c^{2}+d^{2}} \left(
+cos(2 \pi \phi) \cdot (cos (2 \pi \omega t))_{t \in I_{n}} +
+sin(2 \pi \phi) \cdot (sin (2 \pi \omega t))_{t \in I_{n}} 
+\right) \\
+= & 
+\sqrt{c^{2}+d^{2}} 
+((cos(2 \pi \phi) \cdot cos (2 \pi \omega t) +
+sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
+= & 
+\sqrt{c^{2}+d^{2}} 
+\left(
+cos \left( 2 \pi \omega \left( t - \frac{\phi}{\omega}
+\right) 
+\right) 
+\right)_{t \in I_{n}}
+\end{align*}
