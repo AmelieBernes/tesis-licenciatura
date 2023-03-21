@@ -25,7 +25,7 @@ Tal ínfimo existe por estar el conjunto descrito acotado inferiormente,
 por ejemplo, por el cero. El teorema de la proyección 
 \ref{Teo:proyOrt} nos dice entonces que,
 en el contexto de espacios de Hilbert, si $W$ es un subespacio de $H$
-que además es cerrado \footnote{Cuidado aquí: hay dos nociones distintas de 
+que además es cerrado \sidenote{Cuidado aquí: hay dos nociones distintas de 
 cerradura involucradas. Como el espacio métrico $H$ es un espacio vectorial
 normado, con ``subespacio'' nos referimos a un subespacio vectorial de $H$,
 no a un mero subconjunto de este; es decir, requerimos que $W$ sea cerrado bajo
@@ -359,40 +359,6 @@ V = \overline{B} \subseteq \overline{span}(B)
 \QEDB
 \end{dem}
 \end{comment}
-
-\subsection{Ángulo entre elementos de un espacio con producto punto}
-
-Es gracias a la desigualdad de Cauchy-Schwarz
-que es posible introducir una de las nociones
-más valiosas con las que se cuenta en un espacio
-vectorial con producto punto, a saber, la de ángulo entre dos
-vectores.
-
-Si $v$ y $w$ son dos elementos no cero de $V$, entonces,
-según el teorema \ref{Teo:CauchySchwarz},
-\[
--1 \leq \frac{\langle v, w \rangle}{||v|| \cdot ||w||} \leq 1,
-\]
-luego, puesto que la función coseno es una biyección
-del intervalo $[0, \pi]$ al intervalo $[-1,1]$,
-tenemos que existe un único elemento 
-$\theta \in [0, \pi]$ tal que
-
-\[
-cos(\theta)= \frac{\langle v, w \rangle}{||v|| \cdot ||w||};
-\]
-a tal número $\theta$ se le denomina el 
-\textbf{ángulo formado por los vectores $v$ y $w$}.
-
-\begin{marginfigure}
-\includegraphics[scale=0.1]{coseno}
-\end{marginfigure}
-
-Si alguno de estos dos vectores fuese cero, definimos
-el ángulo entre estos como cero. \TODO{Aquí deberías
-de poner qué significan los casos extremos. Recuerda
-la teoría de Spivak, cálculo en varias variables.}
-
 
 
 

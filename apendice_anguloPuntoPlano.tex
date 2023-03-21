@@ -1,4 +1,41 @@
-\subsection{Definición de ángulo entre un punto y un plano en un espacio euclideo}
+
+\section{Ángulo entre elementos de un espacio con producto punto}
+
+Es gracias a la desigualdad de Cauchy-Schwarz
+que es posible introducir una de las nociones
+más valiosas con las que se cuenta en un espacio
+vectorial con producto punto, a saber, la de ángulo entre dos
+vectores.
+
+Si $v$ y $w$ son dos elementos no cero de $V$, entonces,
+según el teorema \ref{Teo:CauchySchwarz},
+\[
+-1 \leq \frac{\langle v, w \rangle}{||v|| \cdot ||w||} \leq 1,
+\]
+luego, puesto que la función coseno es una biyección
+del intervalo $[0, \pi]$ al intervalo $[-1,1]$,
+tenemos que existe un único elemento 
+$\theta \in [0, \pi]$ tal que
+
+\[
+cos(\theta)= \frac{\langle v, w \rangle}{||v|| \cdot ||w||};
+\]
+a tal número $\theta$ se le denomina el 
+\textbf{ángulo formado por los vectores $v$ y $w$}.
+
+\begin{marginfigure}
+\includegraphics[scale=0.1]{coseno}
+\end{marginfigure}
+
+Si alguno de estos dos vectores fuese cero, definimos
+el ángulo entre estos como cero. \TODO{Aquí deberías
+de poner qué significan los casos extremos. Recuerda
+la teoría de Spivak, cálculo en varias variables.}
+
+
+
+
+\section{Definición de ángulo entre un punto y un plano en un espacio euclideo}
 
 Como vimos en \TODO{(ref: justo después de C-S di 
 que es gracias a esta desigualdad que puedes definir el
@@ -29,6 +66,7 @@ así como una caracterización sencilla del coseno de este,
 se dan a continuación.
 
 \begin{prop}
+\label{prop: algunos hechos sobre el angulo entre un vector y un subespacio}
 Si $V$, $W$ y $x$ son como en la definición 
 \ref{def: angulo punto subespacio}, entonces
 
@@ -118,3 +156,94 @@ cos \left( \measuredangle (x, \Pi_{W}(x)) \right)  \\
 \TODO{Pon ejemplos gráficos en dimensión 2 y 3.
 Creo que en dimensión 2 el ángulo entre $x$ y un vector
 de $W$ es siempre el mismo.}
+
+
+\subsection{Caso particular en el que el subespacio en cuestión es un plano}
+
+Para terminar este apartado, vamos a
+agregar unos resultados que serán usados en la teoría
+\TODO{mejora descripción.}
+
+
+La situación es la siguiente: $V$ es un $\IR-$espacio
+de Hilbert, $u$ y $v$ son elementos de $V$,
+unitarios y linealmente
+independientes entre sí. El espacio que ellos generan
+es pues un plano, digamos,
+
+
+\[
+P= span \{ u, v \}
+\]
+
+Dado $x \in V$ unitario, nos gustaría dar una medida
+de la cercanía de $x$ con el espacio $P$; si tomamos
+al coseno del ángulo como una tal medida, según la proposición
+\ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio},
+
+\begin{equation}
+\label{eq0: 19Marzo}
+cos \left( \measuredangle (x, P) \right) = || \Pi_{P}(x) ||;
+\end{equation}
+para lograr expresar el lado derecho de la igualdad en términos
+sólo de $u$, $v$ y $x$ (que son los elementos básicos de
+nuestra discusión), conviene primero considerar una base
+ortonormal del espacio $P$.
+
+
+\begin{obs}
+Si $u, v \in V$ son unitarios y linealmente independientes, y $P$
+es el plano que generan, entonces
+$\{ u, z \}$, donde
+
+\begin{equation}
+\label{eq2: 19Marzo}
+z:= \frac{v- \langle u, v \rangle u}{||v- \langle u, v \rangle u||}
+\end{equation}
+es una BON de $P$
+\end{obs}
+\noindent
+\textbf{Demostración.}
+Basta aplicar el teorema de Gram-Schmidt 
+\ref{Teo:Gram-Schmidt}.
+\QEDB
+\vspace{0.2cm}
+
+Teniendo una BON de $P$ se obtiene, via la prop.
+y la expresión \eqref{eq0: 19Marzo},
+\TODO{ref; debes de poner la discusión de BON mucho antes!!}
+se obtiene una expresión de la proyección de $x$ al plano $P$ en función
+de $x$, $u$ y $z$;
+
+\begin{equation}
+\label{eq1: 19Marzo}
+\Pi_{P}(x)= \langle x, u \rangle u + \langle x, z \rangle z;
+\end{equation}
+
+puesto que, según la definición \eqref{eq2: 19Marzo} de 
+$z$ este vector es función de $u$ y $v$, fácilmente se
+deriva una expresión de $\Pi_{P}(x)$ (y, por lo tanto, una
+medida de la cercanía de $x$ al plano $P$) en función sólo
+de $x$, $u$ y $v$.
+
+	\begin{prop}
+	\label{prop: formulas 20Marzo}
+	si $x, u, v \in V$ y $P \subseteq V$ son como en la discusión anterior,
+	entonces 
+
+		\begin{equation}
+		\label{eq3: 19Marzo}
+		\Pi_{P}(x)= \frac{\langle x, u \rangle -\langle u, v \rangle \langle x, v \rangle }{1-\langle u, v \rangle^{2}} u + \frac{\langle x, v \rangle -\langle u, v \rangle \langle x, u \rangle }{1-\langle u, v \rangle^{2}} v
+		\end{equation}
+	y 
+		\begin{equation}
+		\label{eq3: 19Marzo}
+		  || \Pi_{P}(x) ||^{2}=
+		  \frac{1}{1- \langle u, v \rangle^{2}} \left(  
+	       \langle x, u \rangle^{2} +  \langle x, v \rangle^{2}	
+	       -2  \langle x, u \rangle^{2} \langle x, v \rangle^{2} \langle u, v \rangle^{2}	  
+		  \right).
+		\end{equation}
+ 
+	\end{prop}
+
