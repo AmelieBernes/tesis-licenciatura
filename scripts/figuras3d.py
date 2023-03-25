@@ -5,7 +5,6 @@ import pylab
 import matplotlib.pyplot as plt
 import ame_flecha
 import flechas_2D
-import legendre #recuerda cambiar esto, pues eliminaste este script, que sólo contenía un diccionario.
 import proyecciones as proy
 
 #Recuerda que si quieres llamar a este script en otro para usar funciones aquí definidas NO es bueno que este scritp, en sí mismo, haga algo. 
@@ -84,28 +83,28 @@ def dibuja_W1_de_R3(n, Color='hotpink'):
 #figuras en 3d para algunos ejemplos de tal sección.
 
 
-#fig=plt.figure()
-#axis=plt.axes(projection='3d')
-#dibuja_W2_de_R3(3)
-#dibuja_ejes(5)
-#axis.quiver(0,0,0,1,-2,1,color=colores_ame[0]) #vector que apuntan en la dirección L_32
-#axis.scatter(1,-2,1,color=colores_ame[0])
-#
-#axis.quiver(0,0,0,1,-2,4,color=colores_ame[1]) #vector x
-#axis.scatter(1,-2,4, color=colores_ame[1])
-#axis.quiver(0,0,0,-0.5,1,2.5,color=colores_ame[3]) #proyección al espacio W_{1}
-#axis.scatter(-0.5,1,2.5,color=colores_ame[1])
-#axis.plot([-0.5,1],[1,-2],[2.5,4], linestyle='--',color=colores_ame[1])
+fig=plt.figure()
+axis=plt.axes(projection='3d')
+dibuja_W2_de_R3(3)
+dibuja_ejes(5)
+axis.quiver(0,0,0,1,-2,1,color=colores_ame[0]) #vector que apuntan en la dirección L_32
+axis.scatter(1,-2,1,color=colores_ame[0])
+
+axis.quiver(0,0,0,1,-2,4,color=colores_ame[1]) #vector x
+axis.scatter(1,-2,4, color=colores_ame[1])
+axis.quiver(0,0,0,-0.5,1,2.5,color=colores_ame[3]) #proyección al espacio W_{1}
+axis.scatter(-0.5,1,2.5,color=colores_ame[1])
+axis.plot([-0.5,1],[1,-2],[2.5,4], linestyle='--',color=colores_ame[1])
 
 #segunda sección
-#axis.quiver(0,0,0,-1,1,3,color=colores_ame[1]) #vector x
-#axis.scatter(-1,1,3, color=colores_ame[1])
+axis.quiver(0,0,0,-1,1,3,color=colores_ame[1]) #vector x
+axis.scatter(-1,1,3, color=colores_ame[1])
 
 #tercera sección
-#axis.quiver(0,0,0,-3,3,-3,color=colores_ame[1]) #vector x
-#axis.scatter(-3,3,-3,color=colores_ame[1])
-#axis.quiver(0,0,0,-1,-1,-1,color=colores_ame[3]) #proyección al espacio W_{1}
-#axis.scatter(-1,-1,-1,color=colores_ame[1])
-#axis.plot([-3,-1],[3,-1],[-3,-1], linestyle='--',color=colores_ame[1])
+axis.quiver(0,0,0,-3,3,-3,color=colores_ame[1]) #vector x
+axis.scatter(-3,3,-3,color=colores_ame[1])
+axis.quiver(0,0,0,-1,-1,-1,color=colores_ame[3]) #proyección al espacio W_{1}
+axis.scatter(-1,-1,-1,color=colores_ame[1])
+axis.plot([-3,-1],[3,-1],[-3,-1], linestyle='--',color=colores_ame[1])
 
 
