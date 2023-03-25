@@ -1,3 +1,5 @@
+#Script usado para dibujar en el axis de una figura los ejes x y y con flechas en las ramas positivas.
+
 #Gracias a Felix Hoffman. https://stackoverflow.com/questions/17646247/how-to-make-fuller-axis-arrows-with-matplotlib
 
 def dibujar_flechas_2d(fig, axis):
