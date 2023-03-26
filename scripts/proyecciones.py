@@ -2,8 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pylab
 import math
-import legendre #En este archivo de python se guardan las BON de Legendre discretas de dimensión desde 2 hasta 6
-
+import base_legendreDiscreta as legendre
 
 #------------------------------------ FUNCIONES --------------------------------------------------------
 
@@ -42,7 +41,8 @@ def proyeccion(x, i):
     es un np.array
     """
     dim=len(x) #determinamos la dimensión
-    baseLegendre=legendre.BON_L[dim] #llamamos a la base de dimensión adecuada
+    baseLegendre=legendre.calculo_base(dim) #llamamos a la base de dimensión adecuada
+    baseLegendre=[np.asarray(vector) for vector in baseLegendre] #pasamos a numpy. TODO esto no debería ser necesario cuando cambies el script de legendre.
     proyeccion=np.zeros(dim) #inicializamos el vector proyección.
     for j in range(i+1): #sumamos las componentes necesarias.
         #print(proyeccion)

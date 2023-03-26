@@ -7,11 +7,9 @@ import ame_flecha
 import flechas_2D
 import proyecciones as proy
 
-#Recuerda que si quieres llamar a este script en otro para usar funciones aquí definidas NO es bueno que este scritp, en sí mismo, haga algo. 
+#Script con funciones útiles para dibujar gráficas en 3d
 
 colores_ame=['goldenrod', 'hotpink', 'rebeccapurple', 'blueviolet']
-
-#estoy trabajando este script de manera que sólo tenga funciones útiles a la hora de graficar cosas en tercera dimensión.
 
 def dibuja_ejes(axis, m):
     """
@@ -50,61 +48,5 @@ def dibuja_plano(axis,a,b,Color='mediumpurple',n=3):
     coord_z=a*xx+b*yy
     axis.plot_surface(xx,yy,coord_z, color=Color, alpha=0.6)
     axis.plot_wireframe(xx,yy,coord_z, color='white', alpha=0.4)
-#creo que las siguientes funciones, por ser tan específicas, son inútiles.
-
-
-def dibuja_W2_de_R3(n, Color='mediumpurple'):
-    xx, yy=np.meshgrid(range(-n,n),range(-n,n))
-    espacio_W2=2*yy-xx
-    axis.plot_surface(xx,yy, espacio_W2, color=Color, alpha=0.6)
-    axis.plot_wireframe(xx,yy, espacio_W2, color='white', alpha=0.4)
-
-def dibuja_W1_de_R3(n, Color='hotpink'):
-    X=np.arange(-n,n,0.5)
-    axis.plot(X,X,X, color='hotpink')
-
-
-#Después deberías quitar estos comentarios.
-
-#def dibuja_espaciosLegendre_R3(m, n):
-#    global fig
-#    fig=plt.figure()
-#    global axis
-#    axis=plt.axes(projection='3d')
-#    dibuja_W2_de_R3(n)
-#    dibuja_ejes(m)
-#    
-#    axis.invert_zaxis() #para que la orientación del espacio sea la correcta!! No sé por qué esto no es así por default
-#    plt.show()
-
-
-#----------------------------------------------------------------------------------------
-
-#figuras en 3d para algunos ejemplos de tal sección.
-
-
-fig=plt.figure()
-axis=plt.axes(projection='3d')
-dibuja_W2_de_R3(3)
-dibuja_ejes(5)
-axis.quiver(0,0,0,1,-2,1,color=colores_ame[0]) #vector que apuntan en la dirección L_32
-axis.scatter(1,-2,1,color=colores_ame[0])
-
-axis.quiver(0,0,0,1,-2,4,color=colores_ame[1]) #vector x
-axis.scatter(1,-2,4, color=colores_ame[1])
-axis.quiver(0,0,0,-0.5,1,2.5,color=colores_ame[3]) #proyección al espacio W_{1}
-axis.scatter(-0.5,1,2.5,color=colores_ame[1])
-axis.plot([-0.5,1],[1,-2],[2.5,4], linestyle='--',color=colores_ame[1])
-
-#segunda sección
-axis.quiver(0,0,0,-1,1,3,color=colores_ame[1]) #vector x
-axis.scatter(-1,1,3, color=colores_ame[1])
-
-#tercera sección
-axis.quiver(0,0,0,-3,3,-3,color=colores_ame[1]) #vector x
-axis.scatter(-3,3,-3,color=colores_ame[1])
-axis.quiver(0,0,0,-1,-1,-1,color=colores_ame[3]) #proyección al espacio W_{1}
-axis.scatter(-1,-1,-1,color=colores_ame[1])
-axis.plot([-3,-1],[3,-1],[-3,-1], linestyle='--',color=colores_ame[1])
 
 

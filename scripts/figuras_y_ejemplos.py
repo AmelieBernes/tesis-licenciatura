@@ -6,9 +6,12 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import pylab #TODO creo que no uso este módulo
+import pylab #Para poder usar LaTeX? TODO creo que no 
 import math
 import flechas_2D
+
+import random
+from random import uniform
 
 
 #Código para cambiar el tipo de fuente
@@ -24,8 +27,29 @@ params = {"ytick.color" : "black",
           "font.serif" : ["Computer Modern Serif"]}
 plt.rcParams.update(params)
 
-colores=['hotpink', 'rebeccapurple']
+colores=['hotpink', 'rebeccapurple','goldenrod','gray']
 
+def figura_introduccion():
+    X=np.arange(0, 30.5, 0.05)
+    dominio=[]
+    for i in range(30):
+        dominio.append(i)
+   
+   #usamos la función random.uniform para agregar ruido a la figura.
+    mediciones_parabola=[]
+    for i in range(30):
+        x=dominio[i]
+        mediciones_parabola.append((0.23*x-2)**2-10+random.uniform(-0.5, 0.5))
+    
+    mediciones_recta=[]
+    for i in range(30):
+        x=dominio[i]
+        mediciones_recta.append(-0.7*x+5+random.uniform(-0.5, 0.5))
+    
+    plt.scatter(dominio, mediciones_parabola, color='hotpink')
+    plt.scatter(dominio, mediciones_recta, color='hotpink', marker='x')
+    plt.grid()
+    return plt.show()
 
 
 def figura_discretizacionIntegral():
@@ -126,7 +150,131 @@ def figura_cambioDeMalla():
 
     return plt.show()
 
+def figura_coseno():
+
+    fig=plt.figure()
+    ax=fig.add_subplot(1,1,1)
+    
+    X=np.linspace(0,3.15,100)
+    plt.plot(X, np.cos(X), color="gray", linestyle="dotted", label="$y=cos(\\theta)$")
+    
+    plt.scatter(0, 0, marker="o", color="gray", s=200, label="$v$ y $w$ son paralelos")
+    plt.scatter(3.14, 0, marker="o", color="gray", s=200)
+    plt.scatter(3.14/2, 0, marker="s", color="gray", s=200, label="$v$ y $w$ son perpendiculares")
+    plt.scatter(0.7, np.cos(0.7), marker="*", color="gray", s=300, label="$\\frac{\langle v, w \\rangle}{||v|| \cdot ||w||}$")
+    
+    
+    plt.text(0,0.1,"0", fontsize=17)
+    plt.text(3.14,0.1,"$\pi$", fontsize=17)
+    plt.text(3.14/2,0.1,"$\\frac{\pi}{2}$", fontsize=17)
+    
+    flechas_2D.dibujar_flechas_2d(fig, ax)
+    
+    plt.grid()
+    plt.legend()
+    return plt.show()
+
+
+def figura_demSimetrias(n=7):
+    """
+    'n' sólo puede tomar el valor 7 o 4.
+    """
+    fig, axis= plt.subplots()
+    
+    axis.set_xlim(-1.3,1.3)
+    axis.set_ylim(-1.3,1.3)
+    flechas_2D.dibujar_flechas_2d(fig, axis)
+    
+    
+    x=[-1,-1,1]
+    y=[1,-1,1]
+    plt.scatter(x,y, color='black')
+    
+    if n==7:
+        X=np.arange(-1.2, 1.2, 0.05)
+        x=[-1,-2/3, -1/3, 0, 1/3, 2/3, 1]
+        for i in range(7):
+            plt.plot(X, X**i, color=colores[i%2])
+            y=[t**i for t in x]
+            plt.scatter(x,y, color=colores[i%2])
+        
+        y=[0,0,0,0,0,0,0]
+        plt.scatter(x,y, marker='x', color='black')
+    
+    else: #n=4
+        X=np.arange(-1.2, 1.2, 0.05)
+        x=[-1,-1/3,1/3,1]
+        for i in range(4):
+            plt.plot(X, X**i, color=colores[i%2])
+            y=[t**i for t in x]
+            plt.scatter(x,y, color=colores[i%2])
+        
+        y=[0,0,0,0]
+        plt.scatter(x,y, marker='x', color='black')
+    
+    plt.grid()
+    return plt.show()
+
+def figura_discret_ortog(disc=True):
+    """
+    disc==True: discretizacion
+    disc==False: ortogonalización
+    """
+    fig, axis=plt.subplots(2,2)
+    X=np.arange(-1.2,1.2,0.05)
+    
+    def f0(x):
+        return 0*x+1
+    
+    def f1(x):
+        return x
+    
+    def f2(x):
+        return x**2
+    
+    def f3(x):
+        return x**3
+    
+    mallaP=[-1,-1/3,1/3,1]
+   
+    if disc==True:
+        fig.suptitle('Discretización')
+        discretizaciones=[]
+        for f in funciones_f:
+            discretizaciones.append([f(p) for p in mallaP])
+        
+        for i in range(2):
+            for j in range(2):
+                axis[i][j].scatter(mallaP, discretizaciones[2*i+j], color=colores_ame[2*i+j], s=100)
+                axis[i][j].set_title('Grado '+str(2*i+j))
+                axis[i][j].set_xlim([-1.2,1.2])
+                axis[i][j].set_ylim([-1.2,1.2])
+                axis[i][j].grid("True")
+                axis[i][j].axhline(y=0, color='gray')
+                axis[i][j].axvline(x=0, color='gray')
+    
+    
+    if disc==False
+        fig.suptitle('Ortonormalización en $\mathbb{R}^{n}$')
+        legendre_4=legendre.calculo_base(4) #calculamos la base de legendre discreta de dimensión 4
+        for i in range(2):
+            for j in range(2):
+                axis[i][j].scatter(mallaP, legendre_4[2*i+j], color=colores_ame[2*i+j], s=100)
+                axis[i][j].set_title('Grado '+str(2*i+j))
+                axis[i][j].set_xlim([-1.2,1.2])
+                axis[i][j].set_ylim([-1.2,1.2])
+                axis[i][j].grid("True")
+                axis[i][j].axhline(y=0, color='gray')
+                axis[i][j].axvline(x=0, color='gray')
+
+    return plt.show()
+
 
 if __name__=='__main__':
     #figura_discretizacionPuntual()
-    figura_cambioDeMalla()
+    #figura_cambioDeMalla()
+    #figura_introduccion()
+    #figura_coseno()
+    #figura_demSimetrias(4)
+    #figura_discret_ortog(True) #no reconoce el True/False...
+
