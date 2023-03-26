@@ -109,6 +109,7 @@ parte_afin= math.sqrt(3)*legendre_3[0] +math.sqrt(2)*legendre_3[1] #es [0,1,2]
 alphas=[pi/3, pi/4, 0, pi/3, 6*pi/17]
 signos=[1,1,0,-1,-1] #lista de signos (para determinar la región.)
 
+#TODO parece qie hay un error en la toeria; calculas mal a2 a partir de a1 y  a0.
 def grafica_vector_3D_y_2D(parte_afin, alpha, signo):
 
     """
