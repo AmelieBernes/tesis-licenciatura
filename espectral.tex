@@ -94,8 +94,24 @@ una señal.}
 $\{ \frac{\mu }{n}  : 0 \leq \mu \leq n-1 \}$.}
 
 \begin{defi}
-Si $n \geq 2$ es un entero y $\omega \geq 0$ es un número no negativo
-\TODO{y no múltiplo escalar de $n$}, entonces a los vectores
+Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
+
+Si $n$ divide a w, definimos a los siguientes vectores de $\IR^{n}$
+\begin{equation}
+\label{eq0: 27Marzo23}
+f_{n, \omega} = \left( 
+\frac{1}{\sqrt{n}}, \ldots , \frac{1}{\sqrt{n}}
+\right)  \IR^{n}
+\end{equation}
+y
+\begin{equation}
+\label{eq1: 27Marzo23}
+g_{n, \omega} = \left( 
+0,  \ldots , 0
+\right) \IR^{n}.
+\end{equation}
+
+En caso contrario, definimos a los vectores
 
 	\begin{equation}
 	\label{eq5: 19Marzo}
@@ -113,15 +129,10 @@ donde
 
 \begin{equation}
 \label{eq7: 19Marzo}
-\xi_{n, \omega}= 
-\left\{
-	\begin{array}{ll}
-		\sqrt{2} \cdot \left( N + \frac{sen(2 \pi \omega)
+	\xi_{n, \omega}= 
+	\sqrt{2} \cdot \left( N + \frac{sen(2 \pi \omega)
 	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}  & \mbox{si } n \nmid \omega,  \\
-		\frac{1}{\sqrt{n}} & \mbox{si } n \mid \omega,
-	\end{array}
-\right.
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
 \end{equation}
 y
 
@@ -134,8 +145,7 @@ y
 
 \noindent	
 les llamaremos los \textbf{vectores base de frecuencia $\omega$}.
-\TODO{$g_{n, \omega}$ es el vector cero cuando $\omega$ es múltiplo
-de $n$. Por el momento, en lo que sigue sólo voy a considerar frecuencias
+\TODO{Por el momento, en lo que sigue sólo voy a considerar frecuencias
 que no sean múltiplos de la dimensión.}
 \end{defi}
 
@@ -149,9 +159,8 @@ P_{\omega}:= & span(f_{n, \omega}, g_{n, \omega}) \\
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
-\hspace{0.2cm} a, b \in \IR \} \\ \nonumber
+\hspace{0.2cm} a, b \in \IR \}, \\ \nonumber
 \end{align}
-
 luego, $P$ es el plano que consiste de las señales
 $n-$dimensionales de frecuencia (pura) $\omega$;
 \sidenote{\TODO{Deberías poner esta definición más arriba}} 
@@ -174,7 +183,7 @@ Es razonable pues
 medir la cercanía de una señal $n-$dimensional $x \in \IR^{n}$
 a tener frecuencia $\omega$
 con el ángulo que $x$ forma con el plano $P_{\omega}$,
-coseno que, según la proposición
+cuyo coseno, según la proposición
 \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}
 es
 \begin{equation}
@@ -219,6 +228,7 @@ para su producto punto, en la siguiente proposición.
 
 
 \begin{prop}
+\label{prop: producto punto entre f y g}
 Fijados $n \geq 2$ y $\omega \geq 0$, los vectores
 $f_{n, \omega}$ y $g_{n, \omega}$, como se definieron
 en \eqref{eq5: 19Marzo}
@@ -334,7 +344,7 @@ Podemos ya usar la
 fórmula \eqref{eq3: 19Marzo} en nuestra situación particular para llegar a que
 
 \[
-|| \Pi_{P}(x) ||=
+|| \Pi_{P_{\omega}}(x) ||=
 		\left(		  
 		  \frac{1}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}} \left(  
 	       \langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
@@ -346,6 +356,7 @@ fórmula \eqref{eq3: 19Marzo} en nuestra situación particular para llegar a que
 \TODO{Di que estas son las nuevas sigmas que graficas.}
 
 \subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
+\TODO{$\omega$ no múltiplo escalar de $n$.}
 
 Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija, 
 buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$; puesto que
@@ -358,7 +369,10 @@ el número entre cero y uno tal que
 \]
 para alguna amplitud $\alpha$.
 
-La ecuación \eqref en nuestro contexto se reescribe como
+Como los vectores $f_{n, \omega}$ y $g_{n, \omega}$ 
+son linealmente independientes (c.f. proposición \ref{prop: producto punto entre f y g}),
+podemos usar la ecuación \eqref{eq3: 19Marzo}
+para escribir a la proyección de $x$ en $P_{\omega}$ como sigue
 
 \begin{equation}
 \label{eq3: 20Marzo}
@@ -383,6 +397,7 @@ d= \frac{
 }{1-\langle f_{n, \omega}, g_{n, \omega} \rangle^{2}} \eta_{n, \omega}.
 \end{equation}
 
+\noindent 
 Nos conviene más reescribir a \eqref{eq3: 20Marzo} como
 \begin{equation}
 \label{eq6: 20Marzo}
@@ -394,6 +409,7 @@ D (sen (2 \pi \omega t))_{t \in I_{n}}
 \right),
 \end{equation}
 
+\noindent 
 donde
 \[
 C:= \frac{c}{\sqrt{c^{2}+d^{2}}}
@@ -429,5 +445,18 @@ sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
 cos \left( 2 \pi \omega \left( t - \frac{\phi}{\omega}
 \right) 
 \right) 
-\right)_{t \in I_{n}}
+\right)_{t \in I_{n}}.
 \end{align*}
+
+Además, de \eqref{eq7: 20Marzo} se deduce que
+$$
+\phi =
+\begin{cases}
+\frac{tan^{-1}(D/C) }{2 \pi}  \hspace{0.4cm}    \text{   si }   D, C > 0  \\
+\frac{tan^{-1}(D/C) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  D, C < 0  \\
+\frac{tan^{-1}(D/C) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  D>0,  C < 0  \\
+\frac{tan^{-1}(D/C) + 2\pi }{2 \pi} \hspace{0.2cm}  \text{si }  D>0,  C < 0 
+\end{cases}
+$$
+
+
