@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-import legendre
 import proyecciones as proy
 
 """
@@ -28,4 +27,4 @@ proy.graficas_senial_parteAfin(mediciones)
 
 
 
-#print(proy.proyeccion(mediciones,3)) 
+print(proy.proyeccion(mediciones,3)) 

@@ -4,6 +4,8 @@ import pylab
 import math
 import base_legendreDiscreta as legendre
 
+colores=['goldenrod', 'hotpink', 'rebeccapurple', 'blueviolet', 'lawngreen', 'darkturquoise', 'mediumpurple', 'gray']
+
 #------------------------------------ FUNCIONES --------------------------------------------------------
 
 def coef_RMC(x,y):
@@ -65,23 +67,22 @@ def graficas_senial_parteAfin_parteCuadratica(mediciones):
     dominio=np.zeros(dim)
     for i in range(dim):
         dominio[i]=i
-    colores_ame=['goldenrod', 'hotpink', 'rebeccapurple']
 
     #Graficamos la señal. Los puntos son más grandes que los demás.
-    plt.scatter(dominio, mediciones, s=100, color=colores_ame[0], label='Gráfica de x')
+    plt.scatter(dominio, mediciones, s=100, color=colores[1], label='Gráfica de x')
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
-    plt.scatter(dominio, proyW1, s=50, color=colores_ame[1], label='Parte afin de x')
+    plt.scatter(dominio, proyW1, s=50, color=colores[5], label='Parte afin de x')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores_ame[1], linestyle='dotted')
+    plt.plot(dominio, y, color=colores[5], linestyle='dotted')
     
     #Calculamos su parte cuadratica y graficamos, junto con la parabola de minimos cuadrados.
     proyW2=proyeccion(mediciones,2)
-    plt.scatter(dominio, proyW2, s=50, color=colores_ame[2], label='Parte cuadrática de x')
+    plt.scatter(dominio, proyW2, s=50, color=colores[2], label='Parte cuadrática de x')
     parab=parab3Puntos([proyW2[0], proyW2[1], proyW2[2]])
-    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores_ame[2], linestyle='dotted')
+    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[2], linestyle='dotted')
 
     #Graficamos
     plt.grid()
@@ -104,41 +105,38 @@ def graficas_senial_parteCte_Afin_Cuadratica(mediciones):
     dominio=np.zeros(dim)
     for i in range(dim):
         dominio[i]=i
-    colores_ame=['goldenrod', 'hotpink', 'rebeccapurple', 'gray']
 
     #Graficamos la señal. Los puntos son más grandes que los demás.
-    plt.scatter(dominio, mediciones, s=100, color=colores_ame[0], label='Gráfica de x')
+    plt.scatter(dominio, mediciones, s=100, color=colores[1], label='Gráfica de x')
 
     #Calculamos su parte constante.
     proyW0=proyeccion(mediciones,0)
-    plt.scatter(dominio, proyW0, s=50, color=colores_ame[3], label='Parte afin de x')
-    plt.plot(dominio, proyW0, color=colores_ame[3], linestyle='dotted')
+    plt.scatter(dominio, proyW0, s=50, color=colores[7], label='Parte constante de x')
+    plt.plot(dominio, proyW0, color=colores[7], linestyle='dotted')
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
-    plt.scatter(dominio, proyW1, s=50, color=colores_ame[1], label='Parte afin de x')
+    plt.scatter(dominio, proyW1, s=50, color=colores[5], label='Parte afin de x')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores_ame[1], linestyle='dotted')
+    plt.plot(dominio, y, color=colores[5], linestyle='dotted')
     
     #Calculamos su parte cuadratica y graficamos, junto con la parabola de minimos cuadrados.
     proyW2=proyeccion(mediciones,2)
-    plt.scatter(dominio, proyW2, s=50, color=colores_ame[2], label='Parte cuadrática de x')
+    plt.scatter(dominio, proyW2, s=50, color=colores[2], label='Parte cuadrática de x')
     parab=parab3Puntos([proyW2[0], proyW2[1], proyW2[2]])
-    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores_ame[2], linestyle='dotted')
+    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[2], linestyle='dotted')
 
     #Graficamos
     plt.grid()
     plt.legend()
     plt.show()
 
-#3 de diciembre ------------------------------------------------------------------------
 
 def graficas_senial_rectaMC(mediciones):
     """
-    Dimensión mínima de 'mediciones':3
-    Dimensión máxima de 'mediciones':6
-    Esta función dibuja la gráfica de la señal 'mediciones', junto con su parte afín
+    Esta función dibuja la gráfica de la señal 'mediciones', junto con su
+    recta de mínimos cuadrados
     """
     #inicializamos algunos objetos
     dim=len(mediciones)
@@ -146,15 +144,14 @@ def graficas_senial_rectaMC(mediciones):
     dominio=np.zeros(dim)
     for i in range(dim):
         dominio[i]=i
-    colores_ame=['goldenrod', 'hotpink', 'rebeccapurple']
 
     #Graficamos la señal. Los puntos son más grandes que los demás.
-    plt.scatter(dominio, mediciones, s=100, color=colores_ame[0], label='Conjunto $G_{x}$')
+    plt.scatter(dominio, mediciones, s=100, color=colores[1], label='Conjunto $G_{x}$')
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores_ame[1], linestyle='dotted', label='Recta de mínimos cuadrados')
+    plt.plot(dominio, y, color=colores[7], linestyle='dotted', label='Recta de mínimos cuadrados')
     print('Ordenada al origen: '+str(b[0]))
     print('Pendiente: '+str(b[1]))
 
@@ -164,9 +161,7 @@ def graficas_senial_rectaMC(mediciones):
     
 
 def graficas_senial_parteAfin(mediciones):
-    """
-    Dimensión mínima de 'mediciones':3
-    Dimensión máxima de 'mediciones':6
+    """    
     Esta función dibuja la gráfica de la señal 'mediciones', junto con su parte
     afín.
     """
@@ -176,16 +171,15 @@ def graficas_senial_parteAfin(mediciones):
     dominio=np.zeros(dim)
     for i in range(dim):
         dominio[i]=i
-    colores_ame=['goldenrod', 'hotpink', 'rebeccapurple', 'gray']
 
     plt.grid()
     #Graficamos la señal. Los puntos son más grandes que los demás.
-    plt.scatter(dominio, mediciones, s=100, color=colores_ame[0], label='Gráfica de $x \in \mathbb{R}^{n}$')
+    plt.scatter(dominio, mediciones, s=100, color=colores[1], label='Gráfica de $x \in \mathbb{R}^{n}$')
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
     print(proyW1)
-    plt.scatter(dominio, proyW1, s=50, color=colores_ame[1], label='Gráfica de $\Pi_{W_{1}}(x) \in \mathbb{R}^{n}$')
+    plt.scatter(dominio, proyW1, s=50, color=colores[7], label='Gráfica de $\Pi_{W_{1}}(x) \in \mathbb{R}^{n}$')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
     #plt.plot(dominio, y, color=colores_ame[1], linestyle='dotted')
@@ -205,7 +199,6 @@ def graficas_senial_parteCuadrV2(mediciones):
     dominio=np.zeros(dim)
     for i in range(dim):
         dominio[i]=i
-    colores_ame=['goldenrod', 'hotpink', 'rebeccapurple']
 
     #Graficamos la señal. Los puntos son más grandes que los demás.
     plt.scatter(dominio, mediciones, s=100, color=colores_ame[0])
