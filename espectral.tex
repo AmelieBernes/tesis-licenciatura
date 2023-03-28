@@ -178,8 +178,6 @@ y
 
 \noindent	
 les llamaremos los \textbf{vectores unitarios base de frecuencia $\omega$}.
-\TODO{Por el momento, en lo que sigue sólo voy a considerar frecuencias
-que no sean múltiplos de la dimensión.}
 \end{defi}
 
 
@@ -547,20 +545,29 @@ $P_{\omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
 \subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
 \TODO{$\omega$ no múltiplo escalar de $n$.}
 
-Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija, 
-buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$; puesto que
+Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija
+con $n \nmid \omega$, 
+buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$.
+
+\TODO{Aquí deberías poner una imagen con un
+ejemplo artificial. Agrega un poco de ruido a un sinusoide trasladado
+y grafica con algunos desfases.}
+
+Puesto que
 $\Pi_{P_{\omega}}(x)$ (donde $P_{\omega}$ es como se definió en 
 \eqref{eq2: 20Marzo}) es la señal de frecuencia $\omega$ que está a menor
 distancia euclidea de $x$, claro que el desfase $\phi$ buscado es de hecho
 el número entre cero y uno tal que 
 \[
-\Pi_{P_{\omega}}(x) = \alpha (cos(2 \pi \omega (t - \phi)))_{t \in I_{n}}
+\Pi_{P_{\omega}}(x) = A (cos(2 \pi \omega t -  2 \pi \phi ))_{t \in I_{n}}
 \]
-para alguna amplitud $\alpha$.
+para alguna amplitud $A$.
+
 
 Como los vectores $f_{n, \omega}$ y $g_{n, \omega}$ 
-son linealmente independientes (c.f. proposición \ref{prop: producto punto entre f y g}),
-podemos usar la ecuación \eqref{eq3: 19Marzo}
+son linealmente independientes (c.f. observación
+\ref{obs: f y g son l.i. y de norma uno}),
+podemos usar la ecuación \eqref{eq2: 19Marzo}
 para escribir a la proyección de $x$ en $P_{\omega}$ como sigue
 
 \begin{equation}
@@ -600,21 +607,22 @@ D (sen (2 \pi \omega t))_{t \in I_{n}}
 
 \noindent 
 donde
-\[
-C:= \frac{c}{\sqrt{c^{2}+d^{2}}}
-\]
-y 
-\[
-D:= \frac{d}{\sqrt{c^{2}+d^{2}}},
-\]
+
+\begin{equation}
+\label{eq3: 28Marz23}
+C:= \frac{c}{\sqrt{c^{2}+d^{2}}} \hspace{0.2cm} \text{y}
+\hspace{0.2cm} D:= \frac{d}{\sqrt{c^{2}+d^{2}}},
+\end{equation}
+
 pues, como $C^{2} + D^{2}=1$, existe un único
-$\phi \in [0,1]$ (\TODO{mejor cámbiale el nombre}) tal que
+$\phi \in [0,1]$ tal que
 \begin{equation}
 \label{eq7: 20Marzo}
 C= cos(2 \pi \phi), \hspace{0.2cm} 
 D= sin(2 \pi \phi).
 \end{equation}
 
+\noindent 
 Sustituyendo \eqref{eq7: 20Marzo} en \eqref{eq6: 20Marzo},
 llegamos a que
 
@@ -630,22 +638,37 @@ sin(2 \pi \phi) \cdot (sin (2 \pi \omega t))_{t \in I_{n}}
 sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
 = & 
 \sqrt{c^{2}+d^{2}} 
-\left(
-cos \left( 2 \pi \omega \left( t - \frac{\phi}{\omega}
-\right) 
-\right) 
-\right)_{t \in I_{n}}.
+(cos(2 \pi \omega t - 2 \pi \phi))_{t \in I_{n}}.
 \end{align*}
 
-Además, de \eqref{eq7: 20Marzo} se deduce que
-$$
+\noindent
+Además, de \eqref{eq7: 20Marzo} y \eqref{eq7: 20Marzo} 
+se deduce que
+\begin{equation}
 \phi =
 \begin{cases}
-\frac{tan^{-1}(D/C) }{2 \pi}  \hspace{0.4cm}    \text{   si }   D, C > 0  \\
-\frac{tan^{-1}(D/C) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  D, C < 0  \\
-\frac{tan^{-1}(D/C) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  D>0,  C < 0  \\
-\frac{tan^{-1}(D/C) + 2\pi }{2 \pi} \hspace{0.2cm}  \text{si }  D>0,  C < 0 
+\frac{tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c > 0,  \\
+\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d, c < 0,  \\
+\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d>0,  c < 0,  \\
+\frac{tan^{-1}(d/c) + 2\pi }{2 \pi} \hspace{0.2cm}  \text{si }  d>0,  c < 0. 
 \end{cases}
-$$
+\end{equation}
+
+Hemos probado el siguiente
+\begin{teo}
+Dados $n \geq 2$, $\omega > 0$ con $n \nmid \omega$ y $x \in \IR^{n}$
+unitario, 
+\begin{equation}
+\label{ec: desfase explicito}
+\Pi_{P_{\omega}} (x) = \sqrt{c^{2}+d^{2}} \cdot (
+cos (2 \pi \omega t - 2 \pi \phi)
+)_{t \in I_{n}} \in \IR^{n},
+\end{equation}
+
+\noindent
+donde $c$ y $d$ son como en \eqref{eq4: 20Marzo} y 
+\eqref{eq5: 20Marzo}, respectivamente, y $\phi$ está 
+dado por \eqref{ec: desfase explicito}.
+\end{teo}
 
 

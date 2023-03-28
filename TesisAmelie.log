@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  28 MAR 2023 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  28 MAR 2023 11:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2490,38 +2490,38 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 [71 <./imagenes/oscil4.png>] [72]
 Package marginnote Info: Margin note 73.1 is on absolute page 73 on input line 
-339.
-Package marginnote Info: right page because not two side mode on input line 339
+337.
+Package marginnote Info: right page because not two side mode on input line 337
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 339.
+Package marginnote Info: xpos seems to be 72.0pt on input line 337.
 <./imagenes/20Mar23_1.png, id=1299, 319.1925pt x 153.4533pt>
 File: ./imagenes/20Mar23_1.png Graphic file (type png)
 <use ./imagenes/20Mar23_1.png>
-Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 340.
+Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 338.
 (pdftex.def)             Requested size: 319.19171pt x 153.4529pt.
  [73 <./imagenes/20Mar23_1.png>]
-Overfull \hbox (2.56145pt too wide) detected at line 469
+Overfull \hbox (2.56145pt too wide) detected at line 467
 []
  []
 
 [74]
-Overfull \hbox (0.42325pt too wide) detected at line 494
+Overfull \hbox (0.42325pt too wide) detected at line 492
 \OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 
 f[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 g[];
  []
 
 
-Underfull \vbox (badness 10000) detected at line 530
+Underfull \vbox (badness 10000) detected at line 528
  []
 
 [75]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 547.
+(hyperref)                removing `math shift' on input line 545.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 547.
+(hyperref)                removing `math shift' on input line 545.
 
 [76])) (Teoria.tex [77]
 Ap\'{e}ndice A.
@@ -2592,7 +2592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
  []
 
 [86] [87]) (apendice_anguloPuntoPlano.tex
-<./imagenes/coseno.png, id=1446, 688.0104pt x 346.1733pt>
+<./imagenes/coseno.png, id=1454, 688.0104pt x 346.1733pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 27.
@@ -2641,7 +2641,7 @@ e 241.
 Package marginnote Info: right page because not two side mode on input line 241
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 241.
-<./imagenes/31Julio_1.png, id=1576, 109.6095pt x 102.6234pt>
+<./imagenes/31Julio_1.png, id=1584, 109.6095pt x 102.6234pt>
 File: ./imagenes/31Julio_1.png Graphic file (type png)
 <use ./imagenes/31Julio_1.png>
 Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
@@ -2697,10 +2697,10 @@ Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
 ### simple group (level 1) entered at line 333 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36984 strings out of 475385
- 736600 string characters out of 2776908
- 1121607 words of memory out of 3000000
- 57021 multiletter control sequences out of 15000+600000
+ 36990 strings out of 475385
+ 736692 string characters out of 2776908
+ 1121853 words of memory out of 3000000
+ 57023 multiletter control sequences out of 15000+600000
  496911 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,19n,107p,1119b,996s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2767,9 +2767,9 @@ fb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
 mbols/msbm7.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfrm1000.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/cm-super/sfti1000.pfb>
-Output written on TesisAmelie.pdf (105 pages, 5116717 bytes).
+Output written on TesisAmelie.pdf (105 pages, 5118195 bytes).
 PDF statistics:
- 1889 PDF objects out of 2073 (max. 8388607)
- 521 named destinations out of 1000 (max. 500000)
+ 1898 PDF objects out of 2073 (max. 8388607)
+ 525 named destinations out of 1000 (max. 500000)
  729 words of extra memory for PDF output out of 10000 (max. 10000000)
 
