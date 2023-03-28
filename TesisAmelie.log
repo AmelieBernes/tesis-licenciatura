@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  27 MAR 2023 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2023.2.9)  28 MAR 2023 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2488,45 +2488,46 @@ Overfull \hbox (56.27841pt too wide) in paragraph at lines 75--76
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 80.
 
-[71 <./imagenes/oscil4.png>]
-Underfull \hbox (badness 1215) in paragraph at lines 166--166
-[]$[]$ []\OT1/cmr/m/n/10 De-ber^^S^^Pas po-ner es-ta
- []
-
-Package marginnote Info: Margin note 72.1 is on absolute page 72 on input line 
-207.
-Package marginnote Info: right page because not two side mode on input line 207
+[71 <./imagenes/oscil4.png>] [72]
+Package marginnote Info: Margin note 73.1 is on absolute page 73 on input line 
+339.
+Package marginnote Info: right page because not two side mode on input line 339
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 207.
-<./imagenes/20Mar23_1.png, id=1277, 319.1925pt x 153.4533pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 339.
+<./imagenes/20Mar23_1.png, id=1299, 319.1925pt x 153.4533pt>
 File: ./imagenes/20Mar23_1.png Graphic file (type png)
 <use ./imagenes/20Mar23_1.png>
-Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 208.
+Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 340.
 (pdftex.def)             Requested size: 319.19171pt x 153.4529pt.
-[72 <./imagenes/20Mar23_1.png>]
-Overfull \hbox (2.56145pt too wide) detected at line 336
+ [73 <./imagenes/20Mar23_1.png>]
+Overfull \hbox (2.56145pt too wide) detected at line 469
 []
  []
 
-[73]
-Overfull \hbox (49.96283pt too wide) detected at line 354
-\OMS/cmsy/m/n/10 jj\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OM
-S/cmsy/m/n/10 jj \OT1/cmr/m/n/10 = [][]
+[74]
+Overfull \hbox (0.42325pt too wide) detected at line 494
+\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 
+f[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 g[];
  []
 
 
+Underfull \vbox (badness 10000) detected at line 530
+ []
+
+[75]
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 358.
+(hyperref)                removing `math shift' on input line 547.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 358.
+(hyperref)                removing `math shift' on input line 547.
 
-[74])) (Teoria.tex [75]
+[76])) (Teoria.tex [77]
 Ap\'{e}ndice A.
-(apendice_pol.tex [76
+(apendice_pol.tex [78
 
-] [77]) (apendice_def.tex
+] [79]) (apendice_def.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
@@ -2540,9 +2541,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--22
 Overfull \vbox (9.14738pt too high) detected at line 47
  []
 
-[78] [79]) (apendice_hiperpl.tex [80]) (apendice_proyOrt.tex
+[80] [81]) (apendice_hiperpl.tex [82]) (apendice_proyOrt.tex
 
-Package natbib Warning: Citation `Nimark' on page 81 undefined on input line 5.
+Package natbib Warning: Citation `Nimark' on page 83 undefined on input line 5.
 
 
 
@@ -2565,14 +2566,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--37
 
  []
 
-[81]
+[83]
 
-Package natbib Warning: Citation `Kreyszig' on page 82 undefined on input line 
+Package natbib Warning: Citation `Kreyszig' on page 84 undefined on input line 
 44.
 
-[82]
+[84]
 
-Package natbib Warning: Citation `Lang' on page 83 undefined on input line 161.
+Package natbib Warning: Citation `Lang' on page 85 undefined on input line 161.
 
 
 
@@ -2585,23 +2586,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--221
 
  []
 
-[83]) (apendice_gramSchm.tex
+[85]) (apendice_gramSchm.tex
 Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-[84] [85]) (apendice_anguloPuntoPlano.tex
-<./imagenes/coseno.png, id=1420, 688.0104pt x 346.1733pt>
+[86] [87]) (apendice_anguloPuntoPlano.tex
+<./imagenes/coseno.png, id=1446, 688.0104pt x 346.1733pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 27.
 (pdftex.def)             Requested size: 68.80507pt x 34.61935pt.
- [86 <./imagenes/coseno.png>] [87])
-(apendice_BONhilbert.tex [88] [89]
+ [88 <./imagenes/coseno.png>] [89])
+(apendice_BONhilbert.tex [90] [91]
 Overfull \vbox (7.02567pt too high) detected at line 149
  []
 
-[90]
+[92]
 Underfull \hbox (badness 10000) in paragraph at lines 219--222
 
  []
@@ -2611,20 +2612,20 @@ Overfull \hbox (94.52574pt too wide) detected at line 241
 []
  []
 
-[91]
+[93]
 Overfull \hbox (63.91286pt too wide) detected at line 282
 []
  []
 
-[92]
+[94]
 Underfull \vbox (badness 10000) detected at line 374
  []
 
-[93]
+[95]
 Underfull \vbox (badness 10000) detected at line 434
  []
 
-[94]
+[96]
 Underfull \hbox (badness 10000) in paragraph at lines 451--455
 
  []
@@ -2634,28 +2635,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-[95] [96] [97]
-Package marginnote Info: Margin note 98.1 is on absolute page 98 on input line 
-241.
+[97] [98] [99]
+Package marginnote Info: Margin note 100.1 is on absolute page 100 on input lin
+e 241.
 Package marginnote Info: right page because not two side mode on input line 241
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 241.
-<./imagenes/31Julio_1.png, id=1550, 109.6095pt x 102.6234pt>
+<./imagenes/31Julio_1.png, id=1576, 109.6095pt x 102.6234pt>
 File: ./imagenes/31Julio_1.png Graphic file (type png)
 <use ./imagenes/31Julio_1.png>
 Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
 (pdftex.def)             Requested size: 186.33531pt x 174.45901pt.
- [98 <./imagenes/31Julio_1.png>]
+ [100 <./imagenes/31Julio_1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 300--303
 
  []
 
-[99] [100]
+[101] [102]
 Underfull \hbox (badness 10000) in paragraph at lines 431--433
 
  []
 
-[101])) (Notacion.tex
+[103])) (Notacion.tex
 Ap\'{e}ndice B.
 
 Overfull \hbox (340.46333pt too wide) in paragraph at lines 17--43
@@ -2663,7 +2664,7 @@ Overfull \hbox (340.46333pt too wide) in paragraph at lines 17--43
  []
 
 
-Package natbib Warning: Citation `Neuman' on page 102 undefined on input line 5
+Package natbib Warning: Citation `Neuman' on page 104 undefined on input line 5
 4.
 
 
@@ -2671,9 +2672,9 @@ Overfull \hbox (55.48686pt too wide) in paragraph at lines 50--58
 [][] 
  []
 
-[102
+[104
 
-] [103])
+] [105])
 No file TesisAmelie.bbl.
 
 Package natbib Warning: There were undefined citations.
@@ -2696,10 +2697,10 @@ Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
 ### simple group (level 1) entered at line 333 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36968 strings out of 475385
- 736284 string characters out of 2776908
- 1120835 words of memory out of 3000000
- 57015 multiletter control sequences out of 15000+600000
+ 36984 strings out of 475385
+ 736600 string characters out of 2776908
+ 1121607 words of memory out of 3000000
+ 57021 multiletter control sequences out of 15000+600000
  496911 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,19n,107p,1119b,996s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2766,9 +2767,9 @@ fb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
 mbols/msbm7.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/cm-super/sfrm1000.pfb><C:/Users/inves/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/cm-super/sfti1000.pfb>
-Output written on TesisAmelie.pdf (103 pages, 5105542 bytes).
+Output written on TesisAmelie.pdf (105 pages, 5116717 bytes).
 PDF statistics:
- 1862 PDF objects out of 2073 (max. 8388607)
- 511 named destinations out of 1000 (max. 500000)
+ 1889 PDF objects out of 2073 (max. 8388607)
+ 521 named destinations out of 1000 (max. 500000)
  729 words of extra memory for PDF output out of 10000 (max. 10000000)
 

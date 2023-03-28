@@ -90,8 +90,41 @@ esta una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
 \TODO{Cita el ejemplo en el que haces esto para medir qué tan afín es
 una señal.}
 
+Antes de empezar, 
 \sidenote{Para simplificar la notación, denotamos por $I_{n}$ al intervalo
 $\{ \frac{\mu }{n}  : 0 \leq \mu \leq n-1 \}$.}
+digamos qué es lo que 
+entendemos por ``señales de frecuencia pura''.
+\begin{defi}
+Sean $n \in \IN$,  $\omega>0$, $\phi \in [0,1]$.  A toda señal $n-$
+dimensional  
+de la forma
+
+\begin{equation}
+A \left(
+cos \left(  2 \pi \omega t + 2 \pi \phi
+\right)
+\right)_{t \in I_{n}}
+\end{equation}
+y
+
+\begin{equation}
+A \left(
+sin \left(  2 \pi \omega t + 2 \pi \phi
+\right)
+\right)_{t \in I_{n}},
+\end{equation}
+
+\noindent
+con $A \in \IR$, se le llamará
+\textbf{señal $n-$dimensional de frecuencia
+pura $\omega$}. En este contexto,
+a $\phi$ se le llama el \textbf{desfase normalizado}
+de la señal, y a $A$ la \textbf{amplitud}.
+\end{defi}
+\TODO{Aquí deberías de poner una figura en la que enseñes que para formar
+a estos vectores muestreas uniformemente sinusoides.}
+
 
 \begin{defi}
 Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
@@ -101,14 +134,14 @@ Si $n$ divide a w, definimos a los siguientes vectores de $\IR^{n}$
 \label{eq0: 27Marzo23}
 f_{n, \omega} = \left( 
 \frac{1}{\sqrt{n}}, \ldots , \frac{1}{\sqrt{n}}
-\right)  \IR^{n}
+\right) \in  \IR^{n}
 \end{equation}
 y
 \begin{equation}
 \label{eq1: 27Marzo23}
 g_{n, \omega} = \left( 
 0,  \ldots , 0
-\right) \IR^{n}.
+\right) \in \IR^{n}.
 \end{equation}
 
 En caso contrario, definimos a los vectores
@@ -130,7 +163,7 @@ donde
 \begin{equation}
 \label{eq7: 19Marzo}
 	\xi_{n, \omega}= 
-	\sqrt{2} \cdot \left( N + \frac{sen(2 \pi \omega)
+	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
 	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
 	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
 \end{equation}
@@ -138,45 +171,144 @@ y
 
 	\begin{equation}
 	\label{eq8: 19Marzo}
-	\eta_{n, \omega}= \sqrt{2} \cdot \left( N - \frac{sen(2 \pi \omega)
+	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
 	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
 	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}
 	\end{equation}
 
 \noindent	
-les llamaremos los \textbf{vectores base de frecuencia $\omega$}.
+les llamaremos los \textbf{vectores unitarios base de frecuencia $\omega$}.
 \TODO{Por el momento, en lo que sigue sólo voy a considerar frecuencias
 que no sean múltiplos de la dimensión.}
 \end{defi}
 
-Fijados $n$ y $\omega$,
-el espacio que generan los vectores de frecuencia $\omega$
-$f_{n, \omega}$ y $g_{n, \omega}$ es
+
+\begin{obs}
+\label{obs: f y g son l.i. y de norma uno}
+Sean $n \geq 2$ entero, $\omega >0$ con $n \nmid \omega$.
+Si $f_{n, \omega}$ y $g_{n, \omega}$ son como en 
+\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}, respectivamente,
+entonces estos son vectores unitarios y linealmente independientes entre sí.
+\end{obs}
+\noindent
+\textbf{Demostración.}
+
+El que los
+vectores $f_{n, \omega}$ y $g_{n, \omega}$ sean 
+linealmente independientes
+se deduce del que la primera entrada de $f_{n, \omega}$ no sea cero
+mientras que la primera entrada de $g_{n, \omega}$ sea cero, pero no
+todas sus entradas sean cero. 
+
+Los números $\xi_{n, \omega}$ y $\eta_{n, \omega}$
+mostrados en \eqref{eq7: 19Marzo} y \eqref{eq8: 19Marzo}
+se definieron de tal forma que $f_{n, \omega}$ y $g_{n, \omega}$ tuviesen norma uno;
+la forma de obtener a estos escalares de normalización de forma explícita fue
+totalmente análoga a las operaciones que se realizan en la prueba de la proposición
+\ref{prop: producto punto entre f y g}, por lo que omitimos los detalles.
+\QEDB
+\vspace{0.2cm}
+
+
+Por ser $f_{n, \omega}$ y $g_{n, \omega}$ (cuando $n \nmid \omega$)
+linealmente independientes, el espacio $P_{\omega}$ que generan
 
 \begin{align}
 \label{eq2: 20Marzo}
-P_{\omega}:= & span(f_{n, \omega}, g_{n, \omega}) \\ 
+P_{\omega}:= & span(f_{n, \omega}, g_{n, \omega}) \notag  \\  
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
-\hspace{0.2cm} a, b \in \IR \}, \\ \nonumber
+\hspace{0.2cm} a, b \in \IR \}. 
 \end{align}
-luego, $P$ es el plano que consiste de las señales
-$n-$dimensionales de frecuencia (pura) $\omega$;
-\sidenote{\TODO{Deberías poner esta definición más arriba}} 
-en efecto, si $\phi$ es un desfase cualquiera, entonces,
-por la regla del coseno de la suma,
+
+\noindent
+es un plano \sidenote{O sea, un subespacio
+de dimensión 2.} de $\IR^{n}$.
+\TODO{Como te dijeron, tienes que hacer énfasis en que los ajustes
+que siguen son todos necesarios por no necesariamente ser
+f y g ortogonales.}
+
+\begin{prop}
+\label{prop: Pw consta de las señales de frecuencia omega}
+Sean $n \in \IN$, $\omega>0$ un real positivo no múltiplo
+de $n$. El espacio $P_{\omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
+de las señales $n$ dimensionales de frecuencia $\omega$.
+\end{prop}
+
+\noindent
+\textbf{Demostración.}
+
+Sea $\phi \in [0,1]$ un desfase cualquiera y $A \in \IR$
+una amplitud cualquiera; por la regla
+del coseno de la suma de dos ángulos, tenemos que
 \[
-(cos (2 \pi \omega (t + \phi)))_{t \in I_{n}}
-= a  (cos(2 \pi \omega t))_{t \in I_{n}} -
-b  (sen(2 \pi \omega t))_{t \in I_{n}} \in P_{\omega},
+A(cos (2 \pi \omega (t + \phi)))_{t \in I_{n}}
+= Aa  (cos(2 \pi \omega t))_{t \in I_{n}} +
+Ab  (sen(2 \pi \omega t))_{t \in I_{n}} \in P_{\omega} \in P_{\omega}
 \]
 donde
-$a:= cos(2 \pi \omega \phi)$ y $b= sen(2 \pi \omega \phi)$;
-similarmente se deduce que todo vector de $\IR^{n}$ 
-de la forma $(sin (2 \pi \omega (t + \phi)))_{t \in I_{n}}$
-es elemento de $P_{\omega}$.
+\[
+a := cos (2 \pi \phi) \hspace{0.2cm} \text{y}
+\hspace{0.2cm} b := sin (2 \pi  \phi);
+\]
+como la función seno es una traslación de la función coseno,
+claro que de esto se sigue también que toda señal de la forma 
+$(sin (2 \pi \omega (t + \phi)))_{t \in I_{n}}$ es elemento de
+$P_{\omega}$.
 
+Recíprocamente, si $a, b \in \IR$ son escalares cualesquiera, 
+el elemento genérico
+$x=  a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
+b ( sen (2 \pi \omega t ))_{t \in I_{n}} $ de $P_{w}$ puede
+expresarse como sigue:
+
+\begin{equation}
+\label{eq1: 28Mar23}
+x = \sqrt{a^{2}+b^{2}} \left(
+A  \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
+B  \left( sin \left(2 \pi \omega t \right) \right)_{t \in I_{n}}
+\right),
+\end{equation}
+
+\noindent
+donde
+\[
+A := \frac{a}{\sqrt{a^{2}+b^{2}}} \hspace{0.2cm} \text{y} \hspace{0.2cm}
+B := \frac{b}{\sqrt{a^{2}+b^{2}}}.
+\]
+Como $A^{2}+ B^{2}=1$, existe $\phi \in [0,1]$ tal que
+\begin{equation}
+\label{eq0: 28Mar23}
+A = cos (2 \pi \phi) \hspace{0.2cm} \text{y}  \hspace{0.2cm}
+B = sin (2 \pi \phi);
+\end{equation}
+sustituyendo \eqref{eq0: 28Mar23} en \eqref{eq1: 28Mar23}, llegamos
+a que
+
+\begin{align*}
+x = &  \sqrt{a^{2}+b^{2}} (
+cos(2 \pi \phi) \cdot (cos (2 \pi \omega t))_{t \in I_{n}} + 
+sin(2 \pi \phi) \cdot (sin (2 \pi \omega t))_{t \in I_{n}} 
+) \\
+= & \sqrt{a^{2}+b^{2}} (
+cos(2 \pi \phi) \cdot cos (2 \pi \omega t) +
+sin(2 \pi \phi) \cdot sin (2 \pi \omega t) 
+)_{t \in I_{n}}  \\
+= &  \sqrt{a^{2}+b^{2}} (
+cos (2 \pi \omega t - 2 \pi \phi)
+)_{t \in I_{n}}.
+\end{align*}
+
+\QEDB
+\vspace{0.2cm}
+
+
+\noindent 
+Según la proposición
+\ref{prop: Pw consta de las señales de frecuencia omega},
+$P_{\omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
+de dimensión $n$ y frecuencia (pura) $\omega$.
 
 
 Es razonable pues
@@ -199,7 +331,7 @@ Deberías citarla.}
 \begin{figure}[H]
 	\sidecaption{
 	Según la relación \eqref{eq0: 20Mar}, 
-	si $\frac{||\Pi_{P_{\omega}}(x)}{||x||}$ es cercano 
+	si $\frac{||\Pi_{P_{\omega}}(x)||}{||x||}$ es cercano 
 	a uno (resp. a cero), entonces $x$ es muy parecido a una señal de frecuencia $\omega$
 	(resp. se aleja de ser una señal de frecuencia $\omega$).
 	\label{fig: 20Mar23_1}
@@ -220,12 +352,19 @@ cos \left( \measuredangle (x, W) \right) = || \Pi_{W}(x) ||
 \hspace{0.5cm} (x \hspace{0.1cm} \text{unitario).}
 \end{equation}
 
-Para usar las fórmulas establecidas en 
-la proposición \ref{prop: formulas 20Marzo}, debemos comprobar
-que los vectores $f_{n, \omega}$ y $g_{n, \omega}$
-son unitarios; hacemos esto, además de dar una fórmula
-para su producto punto, en la siguiente proposición.
+\textbf{Usaremos pues, para dar una medida de qué tanto
+reacciona una señal unitaria $x \in \IR^{n}$ a una frecuencia
+$\omega >0$ (con $n \nmid \omega$), la norma de la proyección
+de $x$ al espacio $P_{\omega} \subseteq \IR^{n}$ 
+de señales n-dimensionales de frecuencia $n$.}
 
+Para usar los
+resultados expuestos en el apéndice
+\ref{ap: Caso particular en el que el subespacio en cuestión es un plano}
+conviente establecer una fórmula para
+el producto punto entre 
+los vectores $f_{n, \omega}$ y $g_{n, \omega}$.
+Hacemos esto a continuación.
 
 \begin{prop}
 \label{prop: producto punto entre f y g}
@@ -248,14 +387,6 @@ sen(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi
 \end{prop}
 \noindent
 \textbf{Demostración.}
-El que los
-vectores $f_{n, \omega}$ y $g_{n, \omega}$ sean ortogonales
-se deduce del que la primera entrada de $f_{n, \omega}$ no sea cero
-mientras que la primera entrada de $g_{n, \omega}$ sea cero, pero no
-todas sus entradas sean cero. El que ambos vectores tengan norma
-uno se deduce de unas operaciones análogas a las que realizaremos a
-continuación para demostrar que en efecto se tiene la igualdad 
-\eqref{eq9: 19Marzo}, por lo que omitiremos esos argumentos.
 
 
 Aquí usaremos las siguientes tres igualdades:
@@ -282,6 +413,8 @@ sen(z)= \frac{e^{iz}-e^{-iz}}{2i}
 \suma{\mu=0}{n-1}{a^{r}}= \frac{1-a^{n}}{1-a}.
 \end{equation}
 
+\noindent
+Tenemos que
 
 \begin{align*}
 \langle f_{n,\omega} , g_{n, \omega} \rangle = &
@@ -340,20 +473,76 @@ sen \left( 2 \pi \omega  \left( 1- \frac{1}{n} \right) \right). \\
 \vspace{0.2cm}
 
 
-Podemos ya usar la
-fórmula \eqref{eq3: 19Marzo} en nuestra situación particular para llegar a que
+Podemos ya usar las fórmulas establecidas
+en la proposición \ref{prop: formulas 20Marzo}
+en nuestra situación particular para llegar a que
 
 \[
-|| \Pi_{P_{\omega}}(x) ||=
-		\left(		  
-		  \frac{1}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}} \left(  
-	       \langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle^{2} \langle x, g_{n, \omega } \rangle^{2} \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}	  
-		  \right)
-		  \right) ^{1/2}
+ \Pi_{P_{\omega}}(x) = 
+\frac{
+\langle x, f_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle 
+\langle x, g_{n, \omega} \rangle
+}
+{1-|\langle f_{n, \omega}, g_{n, \omega} \rangle |^{2}  }
+f_{n, \omega} +
+\frac{
+\langle x, g_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle 
+\langle x, f_{n, \omega} \rangle
+}
+{1-|\langle f_{n, \omega}, g_{n, \omega} \rangle |^{2}  }
+g_{n, \omega},
 \]
 
-\TODO{Di que estas son las nuevas sigmas que graficas.}
+\noindent
+y
+
+\TODO{Nota que como el ángulo siempre está entre cero y pi/2, el coseno
+está entre cero y uno, pero tal vez deberías de considerar un signo que diga
+de qué lado del plano se encuentra? No creo que pueda hacer esto, pues para
+una dimensión general el plano $P_{\omega}$ no es un hiperplano de $\IR^{n}$...}
+
+\begin{align*}
+cos (\measuredangle (x, P_{\omega})) = & || \Pi_{P_{\omega}}(x) ||  \\
+= & 
+\left(		  
+		  \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
+	       -2  \langle x, f_{n, \omega } \rangle^{2} \langle x, g_{n, \omega } \rangle^{2} \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
+\right) ^{1/2}.
+\end{align*}
+
+
+\begin{defi}
+Sean $n \geq 2$ entero, $\omega >0$ con $n \nmid \omega$.
+Definimos a la función $\sigma_{n , \omega}: \mathcal{B}_{n}(1) \longrightarrow [0,1]$
+\TODO{Pon la notación para la bola unitaria!}
+\begin{equation}
+\label{eq: def sigmas}
+\sigma_{n, \omega}(x) : = 
+\left(	
+\frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
+	       -2  \langle x, f_{n, \omega } \rangle^{2} \langle x, g_{n, \omega } \rangle^{2} \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
+ \right) ^{1/2},
+\end{equation}
+
+\noindent
+donde $f_{n, \omega}$ y $g_{n, \omega}$ son como en 
+\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}.
+\end{defi}
+
+
+Según todo lo discutido hasta ahora, dado $x \in \IR^{n}$ unitario
+y fijada una frecuencia $\omega >0$ con $n \nmid \omega$,
+\begin{itemize}
+\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a cero, $\omega$ no
+es una frecuencia con la que es razonable aproximar a $x$ (pues $x$ será
+cercano a ser ortogonal a toda señal de dimensión $n$ y frecuencia 
+$\omega$),  mientras que
+
+\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a uno, también es muy cercano
+(hablando en términos de distancia euclídea) a su proyección al espacio
+$P_{\omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
+\end{itemize}
+
 
 \subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
 \TODO{$\omega$ no múltiplo escalar de $n$.}
