@@ -23,7 +23,7 @@ por ejemplo, el caso $n=4$.
 \frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{1}{2}
 \right).
 \]
-\end{minipage}
+\end{minipage} 
 
 
 \begin{minipage}{0.5\textwidth}
@@ -549,9 +549,18 @@ Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija
 con $n \nmid \omega$, 
 buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$.
 
-\TODO{Aquí deberías poner una imagen con un
-ejemplo artificial. Agrega un poco de ruido a un sinusoide trasladado
-y grafica con algunos desfases.}
+\begin{figure}[H]
+	\sidecaption{
+	Aquí se grafica una misma señal $x \in \IR^{16}$ y se 
+	compara con dos funciones sinusoidales, una con 
+	desfase (normalizado) 0.8 y otra con 0.32. Observe que
+	la primera parece ajustar mucho mejor la gráfica de $x$.
+	\label{fig: ejemplo desfase}
+	}
+	\centering
+	\includegraphics[scale=0.4]{desfase_ejemplo} 
+\end{figure}	
+
 
 Puesto que
 $\Pi_{P_{\omega}}(x)$ (donde $P_{\omega}$ es como se definió en 
