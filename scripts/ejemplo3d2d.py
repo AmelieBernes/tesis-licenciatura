@@ -45,7 +45,7 @@ def dibujar_espaciosLegendre_R2_R3(m, n):
     
     # --- Graficando en R2 a W_{2,1}
     axis = fig.add_subplot(1,2,1) 
-    X=np.arange(-n,n,0.5)
+    X=np.arange(-1.0,1.0,0.05)
     axis.plot(X, X, color=colores[5], label='$W_{2,0}= \{(u,u): u \in \mathbb{R}  \}$') #TODO después cambia este color
     flechas_2D.dibujar_flechas_2d(fig, axis)
     axis.set_title("$\mathbb{R}^{2}$")
@@ -55,9 +55,9 @@ def dibujar_espaciosLegendre_R2_R3(m, n):
     # --- Graficando en R3 a W_{3,1} y a W_{3,2}
     axis = fig.add_subplot(1,2,2, projection='3d')
 
-    dibujar_W30_de_R3(axis, n+1)
-    dibujar_W31_de_R3(axis, n+1)
-    funciones_figuras3d.dibuja_ejes(axis,m+1)
+    dibujar_W30_de_R3(axis, n)
+    dibujar_W31_de_R3(axis, n)
+    funciones_figuras3d.dibuja_ejes(axis,m-1)
     axis.invert_zaxis() #para que la orientación del espacio sea la correcta!! No sé por qué esto no es así por default
     axis.set_title("$\mathbb{R}^{3}$")
     plt.legend()
@@ -74,7 +74,7 @@ def dibujar_espaciosLegendre_R2_R3(m, n):
 def tres_regiones():
     fig=plt.figure()
     axis = fig.add_subplot(1,3,1,projection='3d')
-    dibujar_W31_de_R3(axis, 5)
+    dibujar_W31_de_R3(axis, 4)
     funciones_figuras3d.dibuja_ejes(axis, 6)
     axis.quiver(0,0,0,1,-2,1,color=colores[0]) #vector que apuntan en la dirección L_32
     axis.scatter(1,-2,1,color=colores[0])
@@ -151,7 +151,7 @@ def grafica_vector_3D_y_2D(parte_afin, alpha, signo):
     ax.quiver(0,0,0,1,-2,1,color=colores[0]) #vector que apuntan en la dirección L_32
     ax.scatter(1,-2,1,color=colores[0])
     
-    ax.quiver(0,0,0,parte_afin[0],parte_afin[1],parte_afin[2],color='black') #vector parte afin  
+    ax.quiver(0,0,0,float(parte_afin[0]) ,float (parte_afin[1]), float(parte_afin[2]),color='black') #vector parte afin  
     ax.scatter(parte_afin[0],parte_afin[1],parte_afin[2], color='black', label='$\Pi_{W_{3,1}}(x)=$'+str(np.around(parte_afin, 2)))
 
     X=np.arange(-3,3,0.05)
@@ -184,19 +184,22 @@ def grafica_vector_3D_y_2D(parte_afin, alpha, signo):
     return plt.show()
 
 
-
-
-
-
 if __name__=='__main__':
     legendre_3=legendre.calculo_base(3)
     legendre_3=[np.asarray(vector) for vector in legendre_3] #convertimos a numpy para poder hacer operaciones como suma o multiplicación por escalar
     
     parte_afin= math.sqrt(3)*legendre_3[0] +math.sqrt(2)*legendre_3[1] #es [0,1,2]  
+    print(parte_afin)
+    print(parte_afin[0])
     alphas=[pi/3, pi/4, 0, pi/3, 6*pi/17]
     signos=[1,1,0,-1,-1] #lista de signos (para determinar la región.)
+    
+    for i in range(5):
+        grafica_vector_3D_y_2D(parte_afin, alphas[i], signos[i])
+
+
     #tres_regiones()
-    dibujar_espaciosLegendre_R2_R3(7,5)
+    #dibujar_espaciosLegendre_R2_R3(7,5)
     #parte_afin=generador_senAfinesR3(math.sqrt(3), math.sqrt(2), legendre_3) #es (0,1,2)
-    parte_afin=generador_senAfinesR3(-4.5, 0.7, legendre_3)
+    #parte_afin=generador_senAfinesR3(-4.5, 0.7, legendre_3)
     #grafica_vector_3D_y_2D(parte_afin, 0.9, 1)

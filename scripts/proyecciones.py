@@ -73,21 +73,21 @@ def graficas_senial_parteAfin_parteCuadratica(mediciones):
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
-    plt.scatter(dominio, proyW1, s=50, color=colores[5], label='Parte afin de x')
+    plt.scatter(dominio, proyW1, s=50, color=colores[2], label='Parte afin de x')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores[5], linestyle='dotted')
+    plt.plot(dominio, y, color=colores[2], linestyle='dotted')
     
     #Calculamos su parte cuadratica y graficamos, junto con la parabola de minimos cuadrados.
     proyW2=proyeccion(mediciones,2)
-    plt.scatter(dominio, proyW2, s=50, color=colores[2], label='Parte cuadrática de x')
+    plt.scatter(dominio, proyW2, s=50, color=colores[7], label='Parte cuadrática de x')
     parab=parab3Puntos([proyW2[0], proyW2[1], proyW2[2]])
-    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[2], linestyle='dotted')
+    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[7], linestyle='dotted')
 
     #Graficamos
     plt.grid()
     plt.legend()
-    plt.show()
+    return plt.show()
 
 def graficas_senial_parteCte_Afin_Cuadratica(mediciones):
     """
@@ -111,26 +111,28 @@ def graficas_senial_parteCte_Afin_Cuadratica(mediciones):
 
     #Calculamos su parte constante.
     proyW0=proyeccion(mediciones,0)
-    plt.scatter(dominio, proyW0, s=50, color=colores[7], label='Parte constante de x')
-    plt.plot(dominio, proyW0, color=colores[7], linestyle='dotted')
+    plt.scatter(dominio, proyW0, s=50, color=colores[5], label='Parte constante de x')
+    plt.plot(dominio, proyW0, color=colores[5], linestyle='dotted')
 
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
-    plt.scatter(dominio, proyW1, s=50, color=colores[5], label='Parte afin de x')
+    plt.scatter(dominio, proyW1, s=50, color=colores[2], label='Parte afin de x')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores[5], linestyle='dotted')
+    plt.plot(dominio, y, color=colores[2], linestyle='dotted')
     
     #Calculamos su parte cuadratica y graficamos, junto con la parabola de minimos cuadrados.
     proyW2=proyeccion(mediciones,2)
-    plt.scatter(dominio, proyW2, s=50, color=colores[2], label='Parte cuadrática de x')
+    plt.scatter(dominio, proyW2, s=50, color=colores[7], label='Parte cuadrática de x')
     parab=parab3Puntos([proyW2[0], proyW2[1], proyW2[2]])
-    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[2], linestyle='dotted')
+    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[7], linestyle='dotted')
 
     #Graficamos
     plt.grid()
     plt.legend()
-    plt.show()
+
+    plt.suptitle(r'$x = a_{0} \mathcal{L}^{n,0} +a_{1} \mathcal{L}^{n,1}+a_{2} \mathcal{L}^{n,2}+\ldots + a_{n-1} \mathcal{L}^{n, n-1} \in \mathbb{R}^{n}$', fontsize = 14)
+    return plt.show()
 
 
 def graficas_senial_rectaMC(mediciones):
@@ -157,7 +159,7 @@ def graficas_senial_rectaMC(mediciones):
 
     plt.grid()
     plt.legend()
-    plt.show()
+    return plt.show()
     
 
 def graficas_senial_parteAfin(mediciones):
@@ -179,12 +181,10 @@ def graficas_senial_parteAfin(mediciones):
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     proyW1=proyeccion(mediciones,1)
     print(proyW1)
-    plt.scatter(dominio, proyW1, s=50, color=colores[7], label='Gráfica de $\Pi_{W_{1}}(x) \in \mathbb{R}^{n}$')
+    plt.scatter(dominio, proyW1, s=50, color=colores[2], label='Gráfica de $\Pi_{W_{1}}(x) \in \mathbb{R}^{n}$')
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    #plt.plot(dominio, y, color=colores_ame[1], linestyle='dotted')
-    #plt.legend()
-    #plt.show()
+    return plt.show()
 
 
 #con las modificaciones necesarias para ser usada en mi ejemplo final.
@@ -211,4 +211,9 @@ def graficas_senial_parteCuadrV2(mediciones):
 
     plt.grid()
     plt.legend()
-    plt.show()
+    return plt.show()
+
+
+if __name__ == '__main__':
+    mediciones = [-0.5, 2.4, 1.6, 1.7, 2.3]
+    graficas_senial_parteCte_Afin_Cuadratica(mediciones)

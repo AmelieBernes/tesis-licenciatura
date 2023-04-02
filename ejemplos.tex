@@ -94,17 +94,13 @@ W_{3,2}=\IR^{3}.
 	$W_{3,0}$ y $W_{3,1}$ de $\IR^{3}$ que
 	son, respectivamente, una recta y un plano;
 	observe que
-	$W_{3,0} \subseteq W_{3,1}$. 
-	En ambas dimensiones se han 
-	dibujado en {\color{ameMorado}{morado}} a los hiperplanos
-	de polinomios discretos correspondientes, que en efecto
-	dividen en dos regiones ajenas a los respectivos espacios 
-	ambiente. La definición de hiperplano se da en
-	\ref{section: hiperplanos}.
+	$W_{3,0} \subseteq W_{3,1}$ y que tanto 
+	$W_{2,0}$ como $W_{3,1}$ dividen en dos regiones
+	ajenas a sus correspondientes espacios ambiente.
 	\label{fig: graficas espacios W para dimensiones 2 y 3}
 	}
 	\centering
-	\includegraphics[scale= 1]{legendre2y3} 
+	\includegraphics[scale= 0.38]{legendre2y3} 
 \end{figure}	
 	 
 \final
@@ -239,6 +235,7 @@ la señal $s$.
 	\sidecaption{
 	Gráficas de $x$, 
 	$\Pi_{W_{5,0}}(x)$, $\Pi_{W_{5,1}}(x)$ y $\Pi_{W_{5,2}}(x)$.
+	\TODO{cambiar colores!!}
 	\label{fig: partes afin, lineal y cuadratica} 
 	}
 	\centering
@@ -400,13 +397,8 @@ región a la que pertenece $\cali{L}^{3,2}$,
 región a la que pertenece $-\cali{L}^{3,2}$.
 \end{itemize}
 
-
-
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.85]{2Dic_4} 
-		\caption{Se ilustran las tres 
+	\sidecaption{Se ilustran las tres 
 		regiones en las que $W_{3,1} \subseteq \IR^{3}$ divide al espacio,
 		clasificadas según el signo que tome 
 		la función $\varphi$ como se definió en
@@ -416,9 +408,11 @@ región a la que pertenece $-\cali{L}^{3,2}$.
 		un elemento de la región citada, y en 
 		{\color{ameMorado}{morado}} la proyección de este
 		al espacio $W_{3,1}$.
-		}
- 	\end{measuredfigure}
- \end{figure}
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{2Dic_4} 
+\end{figure}
 
 Es fácil obtener una expresión para el coseno del ángulo
 $\alpha$ en términos de los coeficientes de $x$ respecto a $\cali{L}^{3}$:
@@ -452,7 +446,7 @@ a_{0}= \sqrt{3}, \hspace{0.2cm} a_{1}= \sqrt{2},
 \end{equation}
 
 
-
+\noindent
 es decir, consideremos a todos los vectores de $\IR^{3}$
 cuya proyección al plano $W_{3,1}$ es 
 el vector
@@ -469,6 +463,7 @@ con ecuación vectorial
 l_{(0,1,2)} := (0,1,2)+c(1,-2,1), \hspace{0.2cm} c \in \IR.
 \end{equation}
 
+\noindent
 Sustituyendo
 los valores \eqref{eq1: 19Sept} en \eqref{eq0: 3Dic} y
 despejando
@@ -491,67 +486,63 @@ la región en la que se encuentre $x$;
 
 
 Grafiquemos ahora algunos elementos
-de la recta \eqref{eq0: 6Dic}; en los pies
-de la figura se especifica el ángulo
-$\alpha$ que forma con su proyección así
-como la región del espacio a la que pertenece.
+de la recta \eqref{eq0: 6Dic}.
 Los valores de las entradas de $x$, en la
 mayoría de los casos, han sido redondeados.
 
+
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.33]{6Dic_0} 
-		\caption{Aquí se considera al vector 
-		$x=(1.58, -2.16,3.58)$ que forma un ángulo $\alpha=\pi/3$
+	\sidecaption{Aquí se considera al vector 
+		$x$ que forma un ángulo $\alpha=\pi/3$
 		con el plano $W_{3,1}$ y que se ubica en la región I.
-		\TODO{te faltó graficar al vector normal L3,2.}}
- 	\end{measuredfigure}
- \end{figure}
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{6Dic_0}
+\end{figure}
 
 
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.33]{6Dic_1} 
-		\caption{Aquí se considera al vector 
-		$x=(0.91,-0.82,2.91)$ que forma un ángulo $\alpha=\pi/4$
-		con el plano $W_{3,1}$ y que se ubica en la región I.}
- 	\end{measuredfigure}
- \end{figure}
- 
- 
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.33]{6Dic_2} 
-		\caption{Aquí se considera al vector 
-		$x=(0,1,2)$ que forma un ángulo $\alpha=0$
-		con el plano $W_{3,1}$ y que se ubica en la región II.}
- 	\end{measuredfigure}
- \end{figure}
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.33]{6Dic_3} 
-		\caption{Aquí se considera al vector
-		$x=(-1.58,4.16,0.41)$ que forma un ángulo $\alpha=\pi/3$
-		con el plano $W_{3,1}$ y que se ubica en la región III.}
- 	\end{measuredfigure}
- \end{figure}
- 
- 
+	\sidecaption{Aquí se considera al vector 
+		$x$ que forma un ángulo $\alpha=\pi/3$
+		con el plano $W_{3,1}$ y que se ubica en la región I.
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{6Dic_1}
+\end{figure}
+
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.33]{6Dic_4} 
-		\caption{Aquí se considera al vector 
-		$x=(-1.83,4.66,0.16)$ que forma un ángulo $\alpha=6\pi/17$
-		con el plano $W_{3,1}$ y que se ubica en la región III.}
- 	\end{measuredfigure}
- \end{figure}
- 
+	\sidecaption{Aquí se considera al vector 
+		$x$ que forma un ángulo $\alpha=0$
+		con el plano $W_{3,1}$ y que se ubica en la región II.
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{6Dic_2}
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{Aquí se considera al vector 
+		$x$ que forma un ángulo $\alpha=\pi/3$
+		con el plano $W_{3,1}$ y que se ubica en la región III.
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{6Dic_3}
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{Aquí se considera al vector 
+		$x$ que forma un ángulo $\alpha=6\pi/17$
+		con el plano $W_{3,1}$ y que se ubica en la región III.
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.3]{6Dic_4}
+\end{figure}
+
 
 \final
 \end{ejemplo}
