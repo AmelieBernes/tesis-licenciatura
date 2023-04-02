@@ -35,7 +35,7 @@ la teoría de Spivak, cálculo en varias variables.}
 
 
 
-\section{Definición de ángulo entre un punto y un plano en un espacio euclideo}
+\section{Definición de ángulo entre un punto y un subespacio en un espacio euclideo}
 
 Como vimos en \TODO{(ref: justo después de C-S di 
 que es gracias a esta desigualdad que puedes definir el
@@ -151,12 +151,96 @@ cos \left( \measuredangle (x, \Pi_{W}(x)) \right)  \\
 \vspace{0.2cm}
 
 
-
+\TODO{Deberías de exĺicar por qué $\measuredangle (x, W) \in [0, \frac{\pi}{2}]$
+y no $\measuredangle (x, W) \in [0, \pi]$.}
 
 \TODO{Pon ejemplos gráficos en dimensión 2 y 3.
 Creo que en dimensión 2 el ángulo entre $x$ y un vector
 de $W$ es siempre el mismo.}
 
+
+\subsection{Cosine similarity}
+\label{cosine similarity}
+
+Sea $V$ un espacio euclideo. \TODO{Ve si siempre usas este
+nombre. Creo que siempre lo cambias jaja.}
+Sean $W \subseteq V$ un subespacio cerrado de $V$ y 
+$x$ un elemento cualquiera de $V$. Hay dos formas ``naturales''
+de intentar medir la cercanía de $x$ a $W$:
+\begin{itemize}
+\item[a)] \textbf{Usando la distancia euclidea
+de $x$ a $W$}, es decir, tomando la norma del vector
+$x - \Pi_{W}(x)$ (\TODO{referencia que diga que así se mide
+la distncia. Tal vez Ana Irene lo tenga.}) como una medida
+de qué tanto pertenece $x$ a $W$.
+\item[b)] \textbf{Usando el ángulo que $x$ forma con $W$}: como ya
+vimos en la sección \TODO{ref.}, el ángulo 
+$\measuredangle (x, W) \in [0, \frac{\pi}{2}]$
+entre $x$ y $W$
+está definido como el ángulo entre $x$ y su proyección
+$\Pi_{W}(x)$ a $W$, luego, 
+	\begin{itemize}
+		\item entre más cercano a cero sea $\measuredangle (x, W)$,
+		$x$ se aleja más del plano $W$, pues es casi perpendicular 
+		al elemento de $W$ más cercano a $x$, y
+		
+		\item entre más cercano a uno sea $\measuredangle (x, W)$,
+		más se acerca $x$ a ser paralelo a su representante en $W$,
+		luego, más se acerca $x$ a pertenecer a $W$.
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+	\sidecaption{
+	Esquema de dos formas en las que uno puede intentar medir
+	qué tan afín es una señal $x$.
+	\label{fig: dos formas de medir distancia a plano}
+	}
+	\centering
+	\includegraphics[scale= 1]{ 18Sept_1} 
+\end{figure}	
+
+El primer enfoque se basa en la definición de distancia de $x$
+a $W$; el segundo, en el ángulo que $x$ forma con $W$. Este segundo
+enfoque es conocido como ``\textbf{cosine similarity}'' en
+inglés (c.f. \TODO{ref. wikipedia}). Una ventaja que será clave
+para nosotros del segundo método sobre el primero se
+expone en el siguiente resultado.
+
+
+\begin{prop}
+\label{prop: angulo se conserva bajo mult. esc.}
+Sean $V$ un espacio euclideo, $W \subseteq V$ cerrado, $x \in V$,
+$a \in \IR - \{ 0 \}$. Si $|a| \neq 1$, la distancia euclídea 
+de $a \cdot x$ a $W$ es distinta
+a la de $x$ a $W$, mientras que el ángulo que forman $a \cdot x$ y $x$
+con $W$ es el mismo.
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, 
+
+\[
+|| a \cdot x - \Pi_{W}(a \cdot x) || = |a| \cdot || x - \Pi_{W}(x) ||, 
+\]
+y
+
+\begin{align*}
+\measuredangle (a \cdot x, W_{n,1}):=& \measuredangle(a \cdot x, \Pi_{W_{n,1}}(a \cdot x)) \\
+= & \frac{\langle a \cdot x , \Pi_{W_{n,1}}(a \cdot x) \rangle}{|| a \cdot x || \cdot 
+|| \Pi_{W_{n,1}}(a \cdot x)  ||} \\
+= & \frac{a^{2}  \langle   x , \Pi_{W_{n,1}}(x) \rangle}{a^{2} ||  x || \cdot 
+|| \Pi_{W_{n,1}}( x)  ||}  \\
+= & \measuredangle (x, W_{n,1}).
+\end{align*}
+
+
+\QEDB
+\vspace{0.2cm}
+
+Así el criterio $b)$ no se ve afectado por multiplicación escalar,
+mientras que el $a)$ sí.
+ 
 
 \subsection{Caso particular en el que el subespacio en cuestión es un plano}
 \label{ap: Caso particular en el que el subespacio en cuestión es un plano}

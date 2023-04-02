@@ -271,7 +271,89 @@ de forma más general, del tipo ``qué tanto sí'' o
 %Inicio ejemplo 3--------------------------------------------
 
 \begin{ejemplo}
-Hagamos $n=3$.  
+Sea $x \in \IR^{n}$. Digamos que 
+\[
+x = \suma{k=0}{n-1}{a_{k} \cali{L}^{n, k}}.
+\]
+
+
+Como se argumentó ya, las proposiciones
+\begin{center}
+``$x \in \IR^{n}$ es afín'' \hspace{0.2cm} y \hspace{0.2cm} 
+``$x \in W_{n,1}$''
+\end{center} 
+son equivalentes.
+Observe que, aún cuando no se cumpla el caso
+extremos de que $x$ sea elemento 
+de $W_{n,1}$ (y, por lo tanto, no podamos aseverar que
+$x$ es afín), provistos
+de nociones como las de norma y ortogonalidad, es fácil dar 
+una propuesta legítima de
+\textbf{medidas} de ``qué tan afín'' es la señal $x$,
+o, en términos matemáticos, de qué tanto se aleja
+$x$ del espacio de señales afines de su correspondiente
+espacio ambiente.
+
+Como se argumentó en la subsección \ref{cosine similarity}, hay
+dos formas plausibles de dar medidas de qué tan cerca está
+$x$ del plano $W_{n,1}$;
+
+\begin{itemize}
+\item[a)] Una forma obvia de proceder es calcular la norma
+del vector 
+\[
+x - \Pi_{W_{3,1}}(x)= \suma{k=2}{n-1}{a_{k} \cali{L}^{n, k}},
+\]
+es decir, tomar al número no negativo
+\[
+\sqrt{ \suma{k=2}{n-1}{a_{k}^{2}}}
+\]
+como una medida de qué tanto se aleja $x$ del plano $W_{n,1}$
+(o sea, de qué tanto se aleja $x$ de ser afín).
+
+\item[b)] Otro acercamiento podría ser preguntarse por
+el ángulo $\alpha \in [0, \frac{\pi}{2}]$ 
+que forma el vector $x$ con
+$W_{n,1}$, el espacio de señales afines $n-$dimensionales.
+\end{itemize}
+Veamos por qué la segunda (la que corresponde a medir
+el ángulo que forma $x$ con su proyección al espacio de señales afines)
+es la mejor forma de proceder.
+
+Si $x \in \IR^{n}$ es una señal de dimensión $n$ y 
+$a \in \IR-\{ 0 \}$ es un escalar cualquiera,
+la gráfica de $a \cdot x$ no es más que la gráfica 
+de $x$ reescalada por un factor de $a$ cuando este
+último es positivo; en caso contrario, es la gráfica
+de $x$ reescalada pero además reflejada respecto al eje
+horizontal.
+
+La morfología de la gráfica de $x$ es entonces,
+salvo reflexiones horizontales, invariante bajo multiplicación
+escalar; otro atributo de $x$ que no se ve afectado por esta acción
+es el ángulo que forma con el plano $W_{n,1}$ de señales afines
+(c.f. proposición \ref{prop: angulo se conserva bajo mult. esc.}), 
+aunque la distancia euclidea de la señal
+al plano $W_{n,1}$ por lo general sí es afectada por multiplicaciones escalares.
+
+
+\begin{figure}[H]
+	\sidecaption{ Para $n=3$,
+	se grafica a $x$ junto con algunos múltiplos escalares de $x$.
+	Observe que, salvo reflexiones horizontales, la gráfica de estas
+	señales tiene la misma forma.
+	\label{fig: aaa} 
+	}
+	\centering
+	\includegraphics[scale=0.18]{borrador}
+\end{figure}
+
+\textbf{Tomamos pues al coseno del ángulo que forma $x$ con su proyección
+al plano $W_{n,1}$ como una medida de cercanía de $x$ a la propiedad de 
+ser afín.}
+
+
+Para dar un ejemplo concreto, fijemos $n=3$.
 Como se calculó en \eqref{eq2: 1Dic},
 el subespacio $W_{3,1} \leq \IR^{3}$ de señales afines es el plano
 de ecuación cartesiana
@@ -285,59 +367,7 @@ Sea
 x=a_{0}\cali{L}^{3,0}+a_{1}\cali{L}^{3,1}+a_{2}\cali{L}^{3,2}
 \end{equation*}
 un vector del espacio.
-Como se argumentó ya, las proposiciones
-\begin{center}
-``$x \in \IR^{3}$ es afín'' \hspace{0.2cm} y \hspace{0.2cm} 
-``$x \in W_{3,1}$''
-\end{center} 
-son equivalentes.
-Observe que es ``poco probable'' que, al seleccionar al azar
-un vector de $\IR^{3}$, este sea afín (pues el 
-subconjunto $W_{3,1}$ de $\IR^{3}$,
-un plano, tiene
-medida de Lebesgue cero); sin embargo, provistos
-de nociones como las de norma y ortogonalidad, es fácil dar 
-propuestas legítimas de
-\textbf{medidas} de ``qué tan afín'' es la señal $x$,
-o, en términos matemáticos, de qué tanto se aleja
-$x$ del espacio de señales afines de su correspondiente
-espacio ambiente.
 
-\begin{figure}[H]
-	\sidecaption{
-	Esquema de dos formas en las que uno puede intentar medir
-	qué tan afín es una señal $x$.
-	\label{fig: dos formas de medir distancia a plano}
-	}
-	\centering
-	\includegraphics[scale= 1]{ 18Sept_1} 
-\end{figure}	
-
-\TODO{
-Recuerda que debes de notar que la distancia al plano en realidad
-no es la mejor forma de dar una medida de qué tan afín
-es $x$.}
-
-\begin{itemize}
-\item[a)] Una forma obvia de proceder es calcular la norma
-del vector 
-\[
-x - \Pi_{W_{3,1}}(x)= a_{2} \cali{L}^{3,2},
-\]
-es decir, tomar al número no negativo
-\[
-|a_{2}|
-\]
-como una medida de qué tanto se aleja $x$ del plano $W_{3,1}$
-(o sea, de qué tanto se aleja $x$ de ser afín.)
-
-\item[b)] Otro acercamiento podría ser preguntarse por
-el ángulo $\alpha \in [0, \frac{\pi}{2}]$ 
-que forma el vector $x$ con el espacio 
-$W_{3,1}$. Los casos extremos $\alpha=0$ y $\alpha= \frac{\pi}{2}$
-corresponden, respectivamente, a que $x$ sea afín y
-a que $x$ sea múltiplo escalar de $\cali{L}^{3,2}$, luego,
-a que sea ortogonal a cualquier señal afín de dimensión 3.
 
 Como las dimensiones de $\IR^{3}$ y $W_{3,1}$ 
 difieren por uno,
@@ -394,14 +424,17 @@ Es fácil obtener una expresión para el coseno del ángulo
 $\alpha$ en términos de los coeficientes de $x$ respecto a $\cali{L}^{3}$:
 
 \begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.7]{2Dic_3} 
-		\caption{\TODO{por qué ese ángulo era recto?}}
- 	\end{measuredfigure}
- \end{figure}
+	\sidecaption{Encontrando una fórmula explícita del 
+	ángulo que forma $x$ con $\Pi_{W_{3,1}}(x)$.
+	\label{fig: angulo x y proy} 
+	}
+	\centering
+	\includegraphics[scale=0.7]{2Dic_3}
+\end{figure}
 
-De las relaciones de la figura \TODO{ref}
+
+De las relaciones de la figura 
+\ref{fig: angulo x y proy} 
 obtenemos una igualdad que relaciona el ángulo 
 $\alpha$ que forma una señal $x \in \IR^{3}$ 
 con su proyección al espacio $W_{3,1}$
@@ -464,7 +497,7 @@ $\alpha$ que forma con su proyección así
 como la región del espacio a la que pertenece.
 Los valores de las entradas de $x$, en la
 mayoría de los casos, han sido redondeados.
-\end{itemize}
+
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
 	\begin{measuredfigure}
@@ -519,20 +552,6 @@ mayoría de los casos, han sido redondeados.
  	\end{measuredfigure}
  \end{figure}
  
- 
-
-Veamos por qué, en realidad, la alternativa $b)$
-descrita arriba es mucho mejor que la $a)$ para cuantificar 
-la morfología de una señal finita.
-
-Si $x \in \IR^{n}$ es una señal de dimensión $n$ y 
-$\lambda \in \IR-\{ 0 \}$ es un escalar cualquiera,
-la gráfica de $\lambda x$ no es más que la gráfica 
-de $x$ reescalada por un factor de $\lambda$ cuando este
-último es positivo; en caso contrario, es la gráfica
-de $x$ reescalada pero además reflejada respecto al eje
-horizontal.
-
 
 \final
 \end{ejemplo}

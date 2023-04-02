@@ -33,8 +33,9 @@
 \contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{83}{section.Alph1.4}%
 \contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{86}{section.Alph1.5}%
 \contentsline {section}{\numberline {A.6}Ángulo entre elementos de un espacio con producto punto}{88}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un plano en un espacio euclideo}{88}{section.Alph1.7}%
-\contentsline {subsection}{\numberline {A.7.1}Caso particular en el que el subespacio en cuestión es un plano}{90}{subsection.Alph1.7.1}%
-\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{91}{section.Alph1.8}%
-\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{97}{section.Alph1.9}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{104}{appendix.Alph2}%
+\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un subespacio en un espacio euclideo}{88}{section.Alph1.7}%
+\contentsline {subsection}{\numberline {A.7.1}Cosine similarity}{90}{subsection.Alph1.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}Caso particular en el que el subespacio en cuestión es un plano}{91}{subsection.Alph1.7.2}%
+\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{92}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{98}{section.Alph1.9}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{105}{appendix.Alph2}%
