@@ -249,18 +249,45 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \end{algorithmic}
 \end{algorithm}
 
+\begin{algorithm}
+\caption{$sumandoV2$}
+\begin{algorithmic} [1]
+\REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
+$0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
+\ENSURE El número \eqref{eq0: 1Abril}
+\STATE $B1, B2, B3, B4 \leftarrow []$
+\FOR {$t=m-j-1$ a $t=m$} 
+\STATE $APPEND(B1, t)$
+\ENDFOR
+\FOR {$t=k-j+1$ a $t=k+j$} 
+\STATE $APPEND(B2, t)$
+\ENDFOR
+\FOR {$t=n-j$ a $t=n$} 
+\STATE $APPEND(B3, t)$
+\ENDFOR
+\FOR {$t=1$ a $t=j$} 
+\STATE $APPEND(B4, t)$
+\ENDFOR
+\STATE $num \leftarrow CONCATENATE(B1, B2)$
+\STATE $den \leftarrow CONCATENATE(B3, B4)$
+\STATE $den \leftarrow CONCATENATE(den, B4)$
+\STATE $numerador = PRODUCT(num)$
+\STATE $denominador = PRODUCT(den)$
+\RETURN $numerador/denominador$
+\end{algorithmic}
+\end{algorithm}
 
 \begin{algorithm}
 \caption{$sumatoriaV1$}
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
-\ENSURE El número \eqref{eq0: 1Abril}
+\ENSURE AAA
 
 \STATE $limite \leftarrow minimo(m,k)$
 \STATE $factor \leftarrow \frac{m!}{(n-1)!}$
-\STATE $sumandos_pares \leftarrow []$
-\STATE $sumandos_impares \leftarrow []$
+\STATE $sumandos\_pares \leftarrow []$
+\STATE $sumandos\_impares \leftarrow []$
 \FOR {$j=0$ a $j=limite$ y $j$ par} 
 \STATE $APPEND$($sumandos\_pares$, $sumandoV1(n,k,m,j)$)
 \ENDFOR
@@ -270,6 +297,28 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \STATE $suma\_pares \leftarrow SUM(sumandos\_pares)$
 \STATE $suma\_impares \leftarrow SUM(sumandos\_impares)$
 \RETURN $factor * (suma\_pares - suma\_impares)$
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{$sumatoriaV2$}
+\begin{algorithmic} [1]
+\REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
+$0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
+\ENSURE AAA
+
+\STATE $limite \leftarrow minimo(m,k)$
+\STATE $sumandos\_pares \leftarrow []$
+\STATE $sumandos\_impares \leftarrow []$
+\FOR {$j=0$ a $j=limite$ y $j$ par} 
+\STATE $APPEND$($sumandos\_pares$, $sumandoV2(n,k,m,j)$)
+\ENDFOR
+\FOR {$j=0$ a $j=limite$ y $j$ impar} 
+\STATE $APPEND$($sumandos\_impares$, $sumandoV2(n,k,m,j)$)
+\ENDFOR
+\STATE $suma\_pares \leftarrow SUM(sumandos\_pares)$
+\STATE $suma\_impares \leftarrow SUM(sumandos\_impares)$
+\RETURN $suma\_pares - suma\_impares$
 \end{algorithmic}
 \end{algorithm}
 
