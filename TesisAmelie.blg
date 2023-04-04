@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TesisAmelie.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: alpha.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Database file #1: Referencias.bib
+Warning--to sort, need author, editor, or key in Kreyszig
+Warning--to sort, need author, editor, or key in Lang
+Warning--empty author and editor in Kreyszig
+Warning--empty author and editor in Lang
+You've used 4 entries,
+            2543 wiz_defined-function locations,
+            582 strings with 4894 characters,
+and the built_in function-call counts, 1117 in all, are:
+= -- 106
+> -- 29
+< -- 1
++ -- 9
+- -- 8
+* -- 77
+:= -- 179
+add.period$ -- 10
+call.type$ -- 4
+change.case$ -- 17
+chr.to.int$ -- 4
+cite$ -- 10
+duplicate$ -- 56
+empty$ -- 103
+format.name$ -- 11
+if$ -- 228
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 21
+num.names$ -- 6
+pop$ -- 23
+preamble$ -- 1
+purify$ -- 23
+quote$ -- 0
+skip$ -- 39
+stack$ -- 0
+substring$ -- 56
+swap$ -- 3
+text.length$ -- 1
+text.prefix$ -- 1
+top$ -- 0
+type$ -- 24
+warning$ -- 4
+while$ -- 7
+width$ -- 6
+write$ -- 46
+(There were 4 warnings)

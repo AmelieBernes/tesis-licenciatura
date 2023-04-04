@@ -1,0 +1,22 @@
+\begin{thebibliography}{Lan97}
+
+\bibitem[Kre91]{Kreyszig}
+{\em Introductory functional analysis with applications}.
+\newblock John Wiley \& Sons, 1991.
+
+\bibitem[Lan97]{Lang}
+{\em Undergraduate Analysis}.
+\newblock Springer New York, NY, 1997.
+
+\bibitem[Nim]{Nimark}
+Kristoffer Nimark.
+\newblock The projection theorem.
+\newblock http://www.kris-nimark.net/pdf/ProjectionTheorem.pdf.
+
+\bibitem[NS74]{Neuman}
+Charles~P Neuman and Dave~I Schonbach.
+\newblock Discrete (legendre) orthogonal polynomials—a survey.
+\newblock {\em International Journal for Numerical Methods in Engineering},
+  8(4):743--770, 1974.
+
+\end{thebibliography}
