@@ -1,22 +1,98 @@
-\begin{thebibliography}{Lan97}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem[Kre91]{Kreyszig}
-{\em Introductory functional analysis with applications}.
-\newblock John Wiley \& Sons, 1991.
+\datalist[entry]{anyt/global//global/global}
+  \entry{Kreyszig}{book}{}
+    \list{publisher}{1}{%
+      {John Wiley \& Sons}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Kre}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Introductory functional analysis with applications}
+    \field{year}{1991}
+  \endentry
 
-\bibitem[Lan97]{Lang}
-{\em Undergraduate Analysis}.
-\newblock Springer New York, NY, 1997.
+  \entry{Lang}{book}{}
+    \list{publisher}{1}{%
+      {Springer New York, NY}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Lan}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Undergraduate Analysis}
+    \field{year}{1997}
+  \endentry
 
-\bibitem[Nim]{Nimark}
-Kristoffer Nimark.
-\newblock The projection theorem.
-\newblock http://www.kris-nimark.net/pdf/ProjectionTheorem.pdf.
+  \entry{Nimark}{unpublished}{}
+    \name{author}{1}{}{%
+      {{hash=NK}{%
+         family={Nimark},
+         familyi={N\bibinitperiod},
+         given={Kristoffer},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NK1}
+    \strng{fullhash}{NK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Nim}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{note}{http://www.kris-nimark.net/pdf/ProjectionTheorem.pdf}
+    \field{title}{The Projection Theorem}
+  \endentry
 
-\bibitem[NS74]{Neuman}
-Charles~P Neuman and Dave~I Schonbach.
-\newblock Discrete (legendre) orthogonal polynomials—a survey.
-\newblock {\em International Journal for Numerical Methods in Engineering},
-  8(4):743--770, 1974.
-
-\end{thebibliography}
+  \entry{Neuman}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NCP}{%
+         family={Neuman},
+         familyi={N\bibinitperiod},
+         given={Charles\bibnamedelima P},
+         giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=SDI}{%
+         family={Schonbach},
+         familyi={S\bibinitperiod},
+         given={Dave\bibnamedelima I},
+         giveni={D\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{NCPSDI1}
+    \strng{fullhash}{NCPSDI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{NS74}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{4}
+    \field{pages}{743\bibrangedash 770}
+    \field{title}{Discrete (Legendre) orthogonal polynomials—a survey}
+    \field{volume}{8}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1974}
+  \endentry
+\enddatalist
+\endinput

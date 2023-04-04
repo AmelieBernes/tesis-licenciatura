@@ -58,8 +58,14 @@
 \usepackage{lscape} %Para tablas horizontales.
 \usepackage{verbatim}
 
+\usepackage{url}
 
-\usepackage{natbib}
+%Bilbiografía
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+\addbibresource{Referencias.bib}
+
+
+%\usepackage{natbib} %no me funciona.
 %\usepackage{chngcntr}
 %\counterwithin{equation}{section}
 
@@ -84,7 +90,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{titlesec}
-\usepackage{imakeidx}
+\usepackage{imakeidx} 
 \usepackage{scalerel}
 
 %Paquetes usados en estilo.tex
