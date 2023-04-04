@@ -26,7 +26,6 @@
 \contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{62}{subsection.3.0.2}%
 \contentsline {chapter}{\numberline {4}Implementación computacional de las bases discretas de Legendre}{63}{chapter.4}%
 \contentsline {subsection}{\numberline {4.0.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{64}{subsection.4.0.1}%
-\contentsline {subsection}{\numberline {4.0.2}Código en Python}{65}{subsection.4.0.2}%
 \contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{69}{chapter.5}%
 \contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{71}{subsection.5.0.1}%
 \contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{75}{subsection.5.0.2}%

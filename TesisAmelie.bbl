@@ -17,6 +17,30 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
+  \entry{friedberg}{book}{}
+    \name{author}{1}{}{%
+      {{hash=FSH}{%
+         family={Friedberg},
+         familyi={F\bibinitperiod},
+         given={Stephen\bibnamedelima H.},
+         giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson}%
+    }
+    \strng{namehash}{FSH1}
+    \strng{fullhash}{FSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Fri02}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{edition}{4th edition}
+    \field{title}{Linear Algebra}
+    \field{year}{2002}
+  \endentry
+
   \entry{Kreyszig}{book}{}
     \list{publisher}{1}{%
       {John Wiley \& Sons}%
@@ -27,6 +51,45 @@
     \field{sortinithash}{K}
     \field{title}{Introductory functional analysis with applications}
     \field{year}{1991}
+  \endentry
+
+  \entry{DSML}{book}{}
+    \name{author}{4}{}{%
+      {{hash=KDP}{%
+         family={Kroese},
+         familyi={K\bibinitperiod},
+         given={Dirk\bibnamedelima P.},
+         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=BZI}{%
+         family={Botev},
+         familyi={B\bibinitperiod},
+         given={Zdravko\bibnamedelima I.},
+         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Taimre},
+         familyi={T\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=VR}{%
+         family={Vaisman},
+         familyi={V\bibinitperiod},
+         given={Radislav},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KDP+1}
+    \strng{fullhash}{KDPBZITTVR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Kro+22}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Data science and machine learning: mathematical and
+  statistical methods}
+    \field{year}{2022}
   \endentry
 
   \entry{Lang}{book}{}

@@ -238,9 +238,8 @@ se justifican,
 respectivamente, con los teoremas \ref{prop: simetrias en dimensiones impares}
 y \ref{prop: simetrias en dimensiones pares}.
 
-
 \begin{algorithm}
-\caption{$sumandoV1$}
+\caption{$sumandoV1$}\label{alg: sumandoV1}
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
@@ -250,7 +249,7 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \end{algorithm}
 
 \begin{algorithm}
-\caption{$sumandoV2$}
+\caption{$sumandoV2$}\label{alg: sumandoV2}
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
@@ -278,14 +277,13 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \end{algorithm}
 
 
-\TODO{No he terminado de escribir aquí los algoritmos :) }
 
 \begin{algorithm}
-\caption{$sumatoriaV1$}
+\caption{$sumatoriaV1$}\label{alg: sumatoriaV1}
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
-\ENSURE AAA
+\ENSURE La suma \eqref{eq1: 1Abril}
 
 \STATE $limite \leftarrow minimo(m,k)$
 \STATE $factor \leftarrow \frac{m!}{(n-1)!}$
@@ -304,11 +302,11 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \end{algorithm}
 
 \begin{algorithm}
-\caption{$sumatoriaV2$}
+\caption{$sumatoriaV2$}\label{alg: sumatoriaV2}
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
-\ENSURE AAA
+\ENSURE La suma \eqref{eq1: 1Abril}
 
 \STATE $limite \leftarrow minimo(m,k)$
 \STATE $sumandos\_pares \leftarrow []$
@@ -326,33 +324,13 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \end{algorithm}
 
 
-\begin{algorithm}
-\caption{AAA}
-\begin{algorithmic}[1] 
-\REQUIRE $n$, $k$, $m$ todas de tipo int, con $n \geq 2$, 
-$0 \leq k, m \leq n-1$.
-\ENSURE la sumatoria que aparece en el lado derecho de la
-ecuación \eqref{eq5: 6En}
-para los correspondientes valores de $n$, $k$ y $m$.
-
-\STATE $limite \leftarrow minimo(m,k)$
-\STATE $factor \leftarrow \frac{m!}{(n-1)!}$
-\STATE $suma \leftarrow 0$
-\FOR {$j=0$ a $j=limite$} 
-\STATE $suma \leftarrow suma + 
-(-1)^{j} \frac{(k+j)!(n-j-1)!}{(j!)^{2}(k-j)!(m-j)!}$
-\ENDFOR
-\STATE $resultado \leftarrow factor*suma$
-\RETURN $resultado$
-\end{algorithmic}
-\end{algorithm}
-
 %-----------------------------------------------------------------
 
 \begin{algorithm}
-\caption{base$\_$legendre$\_$dimImpar}\label{alg: legendre Impar}
+\caption{base$\_$legendre$\_$dimImpar}\label{alg: legendre impar}
 \begin{algorithmic}[1] 
-\REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 1 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$
+\REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 1 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
+\TODO{ref} y \TODO{ref}.
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
 la $k-$ésima lista las $n$ entradas del polinomio discreto de Legendre de
 grado $k$ y dimensión $n$.
@@ -391,9 +369,10 @@ grado $k$ y dimensión $n$.
 
 
 \begin{algorithm}
-\caption{base$\_$legendre$\_$dimPar}\label{alg: legendre Par}
+\caption{base$\_$legendre$\_$dimPar}\label{alg: legendre par}
 \begin{algorithmic} [1]
-\REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 0 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$
+\REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 0 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
+\TODO{ref} y \TODO{ref}.
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
 la $k-$ésima lista las $n$ entradas del polinomio discreto de Legendre de
 grado $k$ y dimensión $n$.
@@ -428,7 +407,7 @@ grado $k$ y dimensión $n$.
 
 
 \begin{algorithm}
-\caption{Calcular la base de Legendre de dimensión $n$}
+\caption{Calcular la base de Legendre de dimensión $n$}\label{alg: legendre}
 \begin{algorithmic} [1]
 \REQUIRE $n$, variable de tipo int, $n \geq 2$.
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
@@ -443,45 +422,11 @@ grado $k$ y dimensión $n$.
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Código en Python}
-\TODO{Recuerda cambiar el código para usar np.arrays.
-Vectorizar datos?}
-
-
-
-Para empezar, damos dos algoritmos que pueden
-usarse para calcular la sumatoria 
-\[
-\suma{j=0}{min(k,m)}{B_{n,k,m,j}}.
-\] 
-Uno de ellos usa
-directamente la expresión \eqref{eq4: 6En}, mientras
-que en el otro se simplifican los factoriales que
-aparecen en la definición \eqref{eq4: 6En}
-de $B_{n,k,m,j}$
-para llegar a la expresión
-\[
-(-1)^{j}
-\frac{m!}{(n-1)!}
- \frac{(k+j)!(n-j-1)!}{(j!)^{2}(k-j)!(m-j)!}
-= (-1)^{j}
-\frac{\left( \producto{\mu=m-j+1}{m}{\mu} \right)
-\left( \producto{\mu=k-j+1}{k+1}{\mu} \right)
-}{
-\left( \producto{\mu=n-j}{n-1}{\mu} \right)
-\left( \producto{\mu=n-j}{n-1}{\mu} \right)^{2}
-}
-\]
-y, para simplificar aún más los cálculos, el algoritmo
-busca qué factores se repiten en el numerador y en el denominador,
-para así eliminarlos y sólo calcular el producto de los 
-números restantes. Observe que en ambos algoritmos, antes
-de realizar la suma se calculan y guardan todos los sumandos
-en una lista, pues queremos antes ordenarlos de menor a mayor.
-\TODO{explica por qué.}
-\TODO{termina de escribir los pseudocódigos.}
-
 \TODO{Recuerda que debes explicar que ordenas
 de menor a mayor para evitar lo más que se pueda errores
 de redondeo. Puedes citar el artículo de la Recherche.}
 
+Las implementaciones en Python de todos estos algoritmos
+se compartieron en \TODO{referencia.}
+\TODO{Recuerda cambiar el código para usar np.arrays.
+Vectorizar datos?}
