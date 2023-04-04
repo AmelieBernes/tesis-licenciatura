@@ -1,27 +1,32 @@
-\section{Ejemplos}
+\chapter{Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}
 \label{sec: ejemplos}
 
-\TODO{Como esto es muy importante, deberías hacer esta sección un capítulo;
-para no romper con el flujo de la redacción, deberías de mover
-más abajo este texto. Para ello, deberías de checar las secciones de abajo
-no pongan referencias a esta!}
+\TODO{Como moví de lugar esto, debo ver que las referncias quedaron bien.}
 
 Definidas ya las bases de Legendre discretas
 para toda dimensión $n$ 
 (c.f. definición  
 \ref{def: base de Legendre discreta}) y estudiadas algunas de sus 
-propiedades, planteemos algunos ejemplos
-para constatar en dimensiones concretas algunos de los
-resultados demostrados en subsecciones anteriores
-y empezar a comprobar la utilidad de estas bases para el 
-estudio morfológico de señales finitas.
+propiedades en el capítulo 
+\ref{cap: def de los pol de legendre discretos},{
+en este capítulo vamos a desarrollar algunos ejemplos 
+para ilustrar, en dimensiones concretas, algunos de los
+resultados demostrados antes.
+Comprobaremos la utilidad de 
+representar señales finitas $ x \in \IR^{n}$ respecto
+a las respectivas bases de Legendre discretas para
+estudiar la morfología de sus gráficas $G_{x}$
+\sidenote{Puede recordar la definición de ``gráfica
+de una señal'' en \ref{def: grafica senial}.}.
 
 
 %Inicio ejemplo 1--------------------------------------------
-\begin{ejemplo}
+\subsection{Ejemplo 1}
+\label{subs: ejm 1}
+
 A continuación, mostramos las gráficas de los
 elementos de las bases $\cali{L}^{2}$ y $\cali{L}^{3}$.
-Para dibujar las gráficas usamos los valores
+Para dibujarlas usamos los valores
 calculados en la tabla
 \ref{formulas explicitas para Ln con n de 2 hasta 6}.
 
@@ -104,16 +109,15 @@ W_{3,2}=\IR^{3}.
 \end{figure}	
 	 
 \final
-\end{ejemplo}
+
 %final ejemplo 1--------------------------------------------
 
 
 
 
+\subsection{Ejemplo 2}
+\label{subs: ejm 2}
 
-%Inicio ejemplo 2--------------------------------------------
-
-\begin{ejemplo}
 Considere al siguiente conjunto de cinco
 puntos del plano:
 \begin{equation} \label{eq: conjunto cinco puntos}
@@ -241,7 +245,7 @@ la señal $s$.
 	\includegraphics[scale=0.6]{parteAfinCuadr}
 \end{figure}	
 \final
-\end{ejemplo}
+
 %Final ejemplo 2--------------------------------------------
 
 
@@ -253,6 +257,8 @@ esto es más bien symbolic AI (deep learning with
 python, p.35)}
 
 
+\subsection{Ejemplo 3}
+\label{subs: ejm 3}
 
 En el siguiente ejemplo 
 damos dos propuestas naturales,
@@ -266,7 +272,6 @@ de forma más general, del tipo ``qué tanto sí'' o
 
 %Inicio ejemplo 3--------------------------------------------
 
-\begin{ejemplo}
 Sea $x \in \IR^{n}$. Digamos que 
 \[
 x = \suma{k=0}{n-1}{a_{k} \cali{L}^{n, k}}.
@@ -544,5 +549,4 @@ mayoría de los casos, han sido redondeados.
 
 
 \final
-\end{ejemplo}
 %Final ejemplo 3--------------------------------------------
