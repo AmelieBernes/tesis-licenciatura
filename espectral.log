@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.3.3)  28 MAR 2023 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.1)  6 APR 2023 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **espectral.tex
 (./espectral.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-04-10>
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
 ! Undefined control sequence.
-l.2 \chapter
+l.1 \chapter
             {Estudio espectral de los polinomios discretos de Legendre}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -22,7 +22,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2 \chapter{E
+l.1 \chapter{E
               studio espectral de los polinomios discretos de Legendre}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -78,7 +78,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 2--3
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
 []
  []
 
@@ -3210,7 +3210,20 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1
+! Undefined control sequence.
+<write> ...l{chap: estudio espectral}{{}{\thepage 
+                                                  }}
+l.182 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{chap: estudio espectral}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 ! Undefined control sequence.
 <write> \newlabel{eq0: 27Marzo23}{{3}{\thepage 
                                                }}
@@ -9507,140 +9520,6 @@ Overfull \hbox (5.71527pt too wide) in paragraph at lines 548--551
 \OML/cmm/m/it/10 x$ 
  []
 
-! Undefined control sequence.
-l.552 \TODO
-           {Aquí deberías poner una imagen con un
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no A in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no j in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no . in font nullfont!
-
-Overfull \hbox (22.77779pt too wide) in paragraph at lines 552--555
-[]\/cmr/m/n/10 ^^S^^P
- []
-
-
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 552--555
-\/cmr/m/n/10 ^^S^^P
- []
-
 
 ! LaTeX Error: Environment figure undefined.
 
@@ -9648,7 +9527,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.556 \begin{figure}
+l.552 \begin{figure}
                     [H]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -9658,7 +9537,7 @@ Missing character: There is no [ in font nullfont!
 Missing character: There is no H in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.557 	\sidecaption
+l.553 	\sidecaption
                    {
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9691,7 +9570,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 ! Undefined control sequence.
-l.558 ...í se grafica una misma señal $x \in \IR
+l.554 ...í se grafica una misma señal $x \in \IR
                                                   ^{16}$ y se
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9833,8 +9712,8 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.565 	\includegraphics
-                       [scale=0.8]{desfase_ejemplo}
+l.561 	\includegraphics
+                       [scale=0.4]{desfase_ejemplo}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9850,7 +9729,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 8 in font nullfont!
+Missing character: There is no 4 in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -9862,13 +9741,13 @@ Missing character: There is no e in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.565 	\includegraphics[scale=0.8]{desfase_
+l.561 	\includegraphics[scale=0.4]{desfase_
                                            ejemplo}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.565 ...cludegraphics[scale=0.8]{desfase_ejemplo}
+l.561 ...cludegraphics[scale=0.4]{desfase_ejemplo}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -9883,7 +9762,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.566 \end{figure}
+l.562 \end{figure}
                   	
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -9892,7 +9771,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.566 \end{figure}
+l.562 \end{figure}
                   	
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9903,7 +9782,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.566 \end{figure}
+l.562 \end{figure}
                   	
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9912,37 +9791,37 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 556--567
+Overfull \hbox (20.0pt too wide) in paragraph at lines 552--563
 []
  []
 
 
-Overfull \hbox (2.77779pt too wide) in paragraph at lines 556--567
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 552--563
 \/cmr/m/n/10 ^^S^^P
  []
 
 
-Overfull \hbox (5.55557pt too wide) in paragraph at lines 556--567
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 552--563
 \/cmr/m/n/10 ~n
  []
 
 
-Overfull \hbox (23.63193pt too wide) in paragraph at lines 556--567
+Overfull \hbox (23.63193pt too wide) in paragraph at lines 552--563
 \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2[]$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 556--567
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 552--563
 \/cmr/m/n/10 ^^Sa
  []
 
 
-Overfull \hbox (5.71527pt too wide) in paragraph at lines 556--567
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 552--563
 \OML/cmm/m/it/10 x$
  []
 
 
-Overfull \hbox (35.48006pt too wide) in paragraph at lines 556--567
+Overfull \hbox (35.48006pt too wide) in paragraph at lines 552--563
 []\OML/cmm/m/it/10 jemplo$ 
  []
 
@@ -9978,7 +9857,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.571 \eqref
+l.567 \eqref
             {eq2: 20Marzo}) es la señal de frecuencia $\omega$ que está a ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10110,57 +9989,57 @@ Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 569--574
+Overfull \hbox (20.0pt too wide) in paragraph at lines 565--570
 []
  []
 
 
-Overfull \hbox (31.69556pt too wide) in paragraph at lines 569--574
+Overfull \hbox (31.69556pt too wide) in paragraph at lines 565--570
 \/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (12.20906pt too wide) in paragraph at lines 569--574
+Overfull \hbox (12.20906pt too wide) in paragraph at lines 565--570
 \OML/cmm/m/it/10 P[]$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 565--570
 \/cmr/m/n/10 ^^So
  []
 
 
-Overfull \hbox (5.55557pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 565--570
 \/cmr/m/n/10 ~n
  []
 
 
-Overfull \hbox (6.58331pt too wide) in paragraph at lines 569--574
+Overfull \hbox (6.58331pt too wide) in paragraph at lines 565--570
 \OML/cmm/m/it/10 !$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 565--570
 \/cmr/m/n/10 ^^Sa
  []
 
 
-Overfull \hbox (5.71527pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 565--570
 \OML/cmm/m/it/10 x$
  []
 
 
-Overfull \hbox (5.95834pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.95834pt too wide) in paragraph at lines 565--570
 \OML/cmm/m/it/10 ^^^$
  []
 
 
-Overfull \hbox (5.55557pt too wide) in paragraph at lines 569--574
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 565--570
 \/cmr/m/n/10 ^^Su
  []
 
 
-Overfull \hbox (145.35324pt too wide) detected at line 576
+Overfull \hbox (145.35324pt too wide) detected at line 572
 \/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\/cmr/m/n/10 ) = \OML/cmm/m/it/10 A\/cmr/m
 /n/10 (\OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y!t \OMS/cmsy/m/n/
 10 ^^@ \/cmr/m/n/10 2\OML/cmm/m/it/10 ^^Y^^^\/cmr/m/n/10 ))[]
@@ -10186,7 +10065,7 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (7.50002pt too wide) in paragraph at lines 576--578
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 572--574
    $\OML/cmm/m/it/10 A$ 
  []
 
@@ -10252,7 +10131,7 @@ Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
 <write> ... l.i. y de norma uno' on page \thepage 
                                                   \space undefined\on@line .
-l.582 \ref{obs: f y g son l.i. y de norma uno}
+l.578 \ref{obs: f y g son l.i. y de norma uno}
                                               ),
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10262,7 +10141,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `obs: f y g son l.i. y de norma uno' on page  undefine
-d on input line 582.
+d on input line 578.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -10287,7 +10166,7 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.583 podemos usar la ecuación \eqref
+l.579 podemos usar la ecuación \eqref
                                       {eq2: 19Marzo}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10344,57 +10223,57 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 580--585
+Overfull \hbox (20.0pt too wide) in paragraph at lines 576--581
 []
  []
 
 
-Overfull \hbox (18.00311pt too wide) in paragraph at lines 580--585
+Overfull \hbox (18.00311pt too wide) in paragraph at lines 576--581
 \OML/cmm/m/it/10 f[]$
  []
 
 
-Overfull \hbox (17.87694pt too wide) in paragraph at lines 580--585
+Overfull \hbox (17.87694pt too wide) in paragraph at lines 576--581
 \OML/cmm/m/it/10 g[]$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 580--585
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 576--581
 \/cmr/m/n/10 ^^So
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 580--585
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 576--581
 []
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 580--585
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 576--581
 \/cmr/m/n/10 ^^So
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 580--585
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 576--581
 \/cmr/m/n/10 ^^So
  []
 
 
-Overfull \hbox (5.71527pt too wide) in paragraph at lines 580--585
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 576--581
 \OML/cmm/m/it/10 x$
  []
 
 
-Overfull \hbox (12.20906pt too wide) in paragraph at lines 580--585
+Overfull \hbox (12.20906pt too wide) in paragraph at lines 576--581
 \OML/cmm/m/it/10 P[]$
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 586--586
+Overfull \hbox (20.0pt too wide) in paragraph at lines 582--582
 [] 
  []
 
 
-Overfull \hbox (201.44795pt too wide) detected at line 590
+Overfull \hbox (201.44795pt too wide) detected at line 586
 []\/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\/cmr/m/n/10 ) = \OML/cmm/m/it/10 c\/cmr
 /m/n/10 (\OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y!t\/cmr/m/n/10 
 ))[] + \OML/cmm/m/it/10 d\/cmr/m/n/10 (\OML/cmm/m/it/10 sin\/cmr/m/n/10 (2\OML/
@@ -10407,18 +10286,18 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 593--593
+Overfull \hbox (20.0pt too wide) in paragraph at lines 589--589
 [] 
  []
 
 
-Overfull \hbox (169.62247pt too wide) detected at line 599
+Overfull \hbox (169.62247pt too wide) detected at line 595
 []\OML/cmm/m/it/10 c \/cmr/m/n/10 = []\OML/cmm/m/it/10 ^^X[]
  []
 
 Missing character: There is no y in font nullfont!
 
-Overfull \hbox (173.86784pt too wide) detected at line 607
+Overfull \hbox (173.86784pt too wide) detected at line 603
 []\OML/cmm/m/it/10 d \/cmr/m/n/10 = []\OML/cmm/m/it/10 ^^Q[]:
  []
 
@@ -10447,7 +10326,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
-l.610 Nos conviene más reescribir a \eqref
+l.606 Nos conviene más reescribir a \eqref
                                            {eq3: 20Marzo} como
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10471,12 +10350,12 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no o in font nullfont!
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 609--611
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 605--607
   \/cmr/m/n/10 ^^Sa
  []
 
 
-Overfull \hbox (265.82832pt too wide) detected at line 619
+Overfull \hbox (265.82832pt too wide) detected at line 615
 []\/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10 
 ;
  []
@@ -10487,12 +10366,12 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 624--624
+Overfull \hbox (20.0pt too wide) in paragraph at lines 620--620
 [] 
  []
 
 ! Undefined control sequence.
-l.626 ...{\sqrt{c^{2}+d^{2}}} \hspace{0.2cm} \text
+l.622 ...{\sqrt{c^{2}+d^{2}}} \hspace{0.2cm} \text
                                                   {y}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10501,7 +10380,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (150.9821pt too wide) detected at line 628
+Overfull \hbox (150.9821pt too wide) detected at line 624
 []\OML/cmm/m/it/10 C \/cmr/m/n/10 := [] \OML/cmm/m/it/10 y D \/cmr/m/n/10 := []
 \OML/cmm/m/it/10 ;
  []
@@ -10535,42 +10414,42 @@ Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 630--632
+Overfull \hbox (20.0pt too wide) in paragraph at lines 626--628
 []
  []
 
 
-Overfull \hbox (20.12642pt too wide) in paragraph at lines 630--632
+Overfull \hbox (20.12642pt too wide) in paragraph at lines 626--628
 \OML/cmm/m/it/10 C[] \/cmr/m/n/10 +
  []
 
 
-Overfull \hbox (23.59859pt too wide) in paragraph at lines 630--632
+Overfull \hbox (23.59859pt too wide) in paragraph at lines 626--628
 \OML/cmm/m/it/10 D[] \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 630--632
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 626--628
 \/cmr/m/n/10 1$
  []
 
 
-Overfull \hbox (5.55557pt too wide) in paragraph at lines 630--632
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 626--628
 \/cmr/m/n/10 ^^Su
  []
 
 
-Overfull \hbox (15.40274pt too wide) in paragraph at lines 630--632
+Overfull \hbox (15.40274pt too wide) in paragraph at lines 626--628
 \OML/cmm/m/it/10 ^^^ \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (20.00002pt too wide) in paragraph at lines 630--632
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 626--628
 \/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \/cmr/m/n/10 1]$
  []
 
 
-Overfull \hbox (133.58623pt too wide) detected at line 636
+Overfull \hbox (133.58623pt too wide) detected at line 632
 []\OML/cmm/m/it/10 C \/cmr/m/n/10 = \OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm
 /m/it/10 ^^Y^^^\/cmr/m/n/10 )\OML/cmm/m/it/10 ;  D \/cmr/m/n/10 = \OML/cmm/m/it
 /10 sin\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y^^^\/cmr/m/n/10 )\OML/cmm/m/it/10 :
@@ -10589,7 +10468,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no o in font nullfont!
 ! Undefined control sequence.
-l.639 Sustituyendo \eqref
+l.635 Sustituyendo \eqref
                          {eq7: 20Marzo} en \eqref{eq6: 20Marzo},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10611,7 +10490,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.639 Sustituyendo \eqref{eq7: 20Marzo} en \eqref
+l.635 Sustituyendo \eqref{eq7: 20Marzo} en \eqref
                                                  {eq6: 20Marzo},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10650,7 +10529,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.642 \begin{align*}
+l.638 \begin{align*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10659,14 +10538,24 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.643 \Pi
+l.639 \Pi
          _{P_{\omega}}(x) = &
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.643 \Pi_{P_{\omega}}(x) = &
+l.639 \Pi_{P_{\omega}}(x) = &
                              
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.644 = &
+         
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -10684,16 +10573,6 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-! Misplaced alignment tab character &.
-l.652 = &
-         
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 
 ! LaTeX Error: \begin{document} ended by \end{align*}.
 
@@ -10701,7 +10580,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.655 \end{align*}
+l.651 \end{align*}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10710,7 +10589,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.655 \end{align*}
+l.651 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10719,55 +10598,55 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (62.25107pt too wide) in paragraph at lines 643--656
+Overfull \hbox (62.25107pt too wide) in paragraph at lines 639--652
 []$\/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\/cmr/m/n/10 ) =
  []
 
 
-Overfull \hbox (290.75647pt too wide) in paragraph at lines 643--656
+Overfull \hbox (290.75647pt too wide) in paragraph at lines 639--652
 [] [] [] 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 643--656
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 639--652
 \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (88.27327pt too wide) in paragraph at lines 643--656
+Overfull \hbox (88.27327pt too wide) in paragraph at lines 639--652
 []\/cmr/m/n/10 ((\OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y^^^\/cm
 r/m/n/10 ) \OMS/cmsy/m/n/10 ^^A
  []
 
 
-Overfull \hbox (50.67139pt too wide) in paragraph at lines 643--656
+Overfull \hbox (50.67139pt too wide) in paragraph at lines 639--652
 \OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y!t\/cmr/m/n/10 ) +
  []
 
 
-Overfull \hbox (41.70798pt too wide) in paragraph at lines 643--656
+Overfull \hbox (41.70798pt too wide) in paragraph at lines 639--652
 \OML/cmm/m/it/10 sin\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y^^^\/cmr/m/n/10 ) \OMS/c
 msy/m/n/10 ^^A
  []
 
 
-Overfull \hbox (64.41302pt too wide) in paragraph at lines 643--656
+Overfull \hbox (64.41302pt too wide) in paragraph at lines 639--652
 \OML/cmm/m/it/10 sin\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y!t\/cmr/m/n/10 ))[][] 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 643--656
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 639--652
 \/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (89.73157pt too wide) in paragraph at lines 643--656
+Overfull \hbox (89.73157pt too wide) in paragraph at lines 639--652
 []\/cmr/m/n/10 (\OML/cmm/m/it/10 cos\/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^Y!t \OMS/
 cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (44.93085pt too wide) in paragraph at lines 643--656
+Overfull \hbox (44.93085pt too wide) in paragraph at lines 639--652
 \/cmr/m/n/10 2\OML/cmm/m/it/10 ^^Y^^^\/cmr/m/n/10 ))[]\OML/cmm/m/it/10 :$ 
  []
 
@@ -10780,7 +10659,7 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.658 Además, de \eqref
+l.654 Además, de \eqref
                         {eq7: 20Marzo} y \eqref{eq7: 20Marzo}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10801,7 +10680,7 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
-l.658 Además, de \eqref{eq7: 20Marzo} y \eqref
+l.654 Además, de \eqref{eq7: 20Marzo} y \eqref
                                                {eq7: 20Marzo}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10832,14 +10711,14 @@ Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 657--660
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 653--656
 \/cmr/m/n/10 ^^Sa
  []
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10850,14 +10729,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10868,14 +10747,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10886,14 +10765,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10904,14 +10783,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10922,14 +10801,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10940,14 +10819,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10958,14 +10837,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10976,14 +10855,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -10994,14 +10873,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11012,14 +10891,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11030,14 +10909,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11048,14 +10927,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11066,14 +10945,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11084,14 +10963,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11102,14 +10981,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11120,14 +10999,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11138,14 +11017,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11156,14 +11035,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11174,14 +11053,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11192,14 +11071,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11210,14 +11089,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11228,14 +11107,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11246,14 +11125,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11264,14 +11143,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11282,14 +11161,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11300,14 +11179,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11318,14 +11197,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11336,14 +11215,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11354,14 +11233,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11372,14 +11251,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11390,14 +11269,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11408,14 +11287,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11426,14 +11305,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11444,14 +11323,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11462,14 +11341,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11480,14 +11359,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11498,14 +11377,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11516,14 +11395,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11534,14 +11413,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11552,14 +11431,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11570,14 +11449,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11588,14 +11467,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11606,14 +11485,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11624,14 +11503,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11642,14 +11521,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11660,14 +11539,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11678,14 +11557,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11696,14 +11575,14 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I'm guessing that you meant to end an alignment here.
 
 ! Misplaced \cr.
 <inserted text> \cr 
                     
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -11714,16 +11593,16 @@ might try typing `S' now just to see what is salvageable.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.663 \frac
+l.659 \frac
            {tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c >...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 54 strings out of 478238
- 939 string characters out of 5850457
- 317088 words of memory out of 5000000
- 18389 multiletter control sequences out of 15000+600000
- 469567 words of font info for 29 fonts, out of 8000000 for 9000
+ 54 strings out of 476025
+ 939 string characters out of 5796533
+ 1873388 words of memory out of 5000000
+ 20603 multiletter control sequences out of 15000+600000
+ 512595 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 25i,7n,32p,213b,120s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,7n,32p,213b,122s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

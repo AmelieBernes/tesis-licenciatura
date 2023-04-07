@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {4.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{60}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{65}{chapter.5}%
 \contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{67}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{71}{subsection.5.0.2}%
+\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{72}{subsection.5.0.2}%
 \contentsline {chapter}{\numberline {A}Apéndice: teoría}{74}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{74}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{76}{section.Alph1.2}%

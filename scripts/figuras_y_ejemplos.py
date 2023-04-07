@@ -13,6 +13,8 @@ import flechas_2D
 import random
 from random import uniform
 
+import base_legendreDiscreta as legendre
+
 
 #Código para cambiar el tipo de fuente
 
@@ -220,6 +222,7 @@ def figura_discret_ortog(disc=True):
     disc==True: discretizacion
     disc==False: ortogonalización
     """
+    colores = ['goldenrod', 'mediumpurple', 'darkturquoise', 'limegreen']
     fig, axis=plt.subplots(2,2)
     X=np.arange(-1.2,1.2,0.05)
     
@@ -236,6 +239,7 @@ def figura_discret_ortog(disc=True):
         return x**3
     
     mallaP=[-1,-1/3,1/3,1]
+    funciones_f=[f0, f1, f2, f3]
    
     if disc==True:
         fig.suptitle('Discretización')
@@ -245,7 +249,7 @@ def figura_discret_ortog(disc=True):
         
         for i in range(2):
             for j in range(2):
-                axis[i][j].scatter(mallaP, discretizaciones[2*i+j], color=colores_ame[2*i+j], s=100)
+                axis[i][j].scatter(mallaP, discretizaciones[2*i+j], color=colores[2*i+j], s=100)
                 axis[i][j].set_title('Grado '+str(2*i+j))
                 axis[i][j].set_xlim([-1.2,1.2])
                 axis[i][j].set_ylim([-1.2,1.2])
@@ -254,12 +258,12 @@ def figura_discret_ortog(disc=True):
                 axis[i][j].axvline(x=0, color='gray')
     
     
-    if disc==False
-        fig.suptitle('Ortonormalización en $\mathbb{R}^{n}$')
+    if disc==False:
+        fig.suptitle('Ortonormalización') #en \IRn
         legendre_4=legendre.calculo_base(4) #calculamos la base de legendre discreta de dimensión 4
         for i in range(2):
             for j in range(2):
-                axis[i][j].scatter(mallaP, legendre_4[2*i+j], color=colores_ame[2*i+j], s=100)
+                axis[i][j].scatter(mallaP, legendre_4[2*i+j], color=colores[2*i+j], s=100)
                 axis[i][j].set_title('Grado '+str(2*i+j))
                 axis[i][j].set_xlim([-1.2,1.2])
                 axis[i][j].set_ylim([-1.2,1.2])
@@ -270,11 +274,172 @@ def figura_discret_ortog(disc=True):
     return plt.show()
 
 
+def figura_ortogYoscil(k):
+    """
+    Figuras para la discusión de relación entre ortogonalidad y oscilaciones.
+    'k' puede valer 0,1,2 o 3; indica qué gráfica se quiere.
+    """
+    colores=['hotpink', 'gray']
+    X=np.arange(0,3, 0.05)
+
+    base_legendre = legendre.calculo_base(4) #Calculamos la base de Legendre discreta de dim. 4
+    
+    if k == 0: 
+         #Constante
+         plt.scatter(eje, base_legendre[0], color=colores_ame[0], s=200)
+         plt.plot(eje, base_legendre[0], color=colores_ame[0], linestyle='dotted')
+     
+         plt.plot([-0.5,3.5], [0,0], color=colores_ame[1])
+         plt.plot([0,0], [-2.5,3.5], color=colores_ame[1])
+         plt.title("Gráfica de $\mathcal{L}^{4,0}$", fontsize=16)
+         plt.ylim([-1,1])
+         plt.grid()
+         return plt.show()
+     
+     
+    if k ==1: 
+         #Constante
+         plt.scatter(eje, base_legendre[0], color=colores_ame[1], s=200)
+         plt.plot(eje, base_legendre[0], color=colores_ame[1], linestyle='dotted')
+         #Lineal
+         plt.scatter(eje, base_legendre[1], color=colores_ame[0], s=200)
+         plt.plot(eje, base_legendre[1], color=colores_ame[0], linestyle='dotted')
+     
+         plt.plot([-0.5,3.5], [0,0], color=colores_ame[1])
+         plt.plot([0,0], [-2.5,3.5], color=colores_ame[1])
+         plt.title("Gráficas de $\mathcal{L}^{4,0}$ y $\mathcal{L}^{4,1}$", fontsize=16)
+         plt.ylim([-1.2,1.2])
+         plt.xlim([-.2,3.2])
+         plt.grid()
+         return plt.show()
+     
+    if k ==2:
+        fig, axis=plt.subplots(1,2)
+        axis[0].set_title("Gráficas de $\mathcal{L}^{4,0}, \mathcal{L}^{4,1}$ y algunos elementos de $W_{4,2}$",fontsize=12)
+        axis[1].set_title("Gráficas de $\mathcal{L}^{4,0}, \mathcal{L}^{4,1} y \mathcal{L}^{4,2}$", fontsize=12) 
+        #Constante
+        for i in range(2):
+            axis[i].scatter(eje, base_legendre[0], color=colores_ame[1], s=100)
+            axis[i].plot(eje, base_legendre[0], color=colores_ame[1], linestyle='dotted')
+        #Lineal
+        for i in range(2):
+            axis[i].scatter(eje, base_legendre[1], color=colores_ame[1], s=100)
+            axis[i].plot(eje, base_legendre[1], color=colores_ame[1], linestyle='dotted')
+        #Cuadráticas equivocadas
+        axis[0].scatter(eje, [0.5*t**2-1.5*t-1.3 for t in range(4)] , color=colores_ame[0], s=100)
+        axis[0].plot(X, 0.5*X**2-1.5*X-1.2, color=colores_ame[0], linestyle='dotted')
+    
+        axis[0].scatter(eje, [-(0.7*t-1)**2+1.7 for t in range(4)] , color=colores_ame[0], s=100)
+        axis[0].plot(X, -(0.7*X-1)**2+1.7, color=colores_ame[0], linestyle='dotted')
+    
+        #Cuadrática Legendre
+        axis[1].scatter(eje, base_legendre[2], color=colores_ame[0], s=100)
+        #coeficientes de la parábola que pasa por los puntos anteriores
+        coef=pr.parab3Puntos([base_legendre[2][i] for i in range(4) ])
+        axis[1].plot(X,coef[0]*X**2+coef[1]*X+coef[2],color=colores_ame[0], linestyle='dotted')
+        
+        for i in range(2):
+            axis[i].plot([-0.5,3.5], [0,0], color=colores_ame[1])
+            axis[i].plot([0,0], [-2.5,3.5], color=colores_ame[1])
+            axis[i].grid()
+        plt.xlim([-0.1,3.1])
+        plt.ylim([-2.2,2.2])
+        return plt.show()
+    
+    
+    if k == 3:
+         fig, axis=plt.subplots(1,2)
+         #Constante Legendre
+         axis[0].set_title("Gráficas de $\mathcal{L}^{4,0}, \mathcal{L}^{4,1}, \mathcal{L}^{4,2}$ y un elemento de $W_{4,3}$",fontsize=12)
+         axis[1].set_title("Gráficas de $\mathcal{L}^{4,0}, \mathcal{L}^{4,1}, \mathcal{L}^{4,2}$ y $\mathcal{L}^{4,3}$", fontsize=12) 
+         for i in range(2):
+             axis[i].scatter(eje, base_legendre[0], color=colores_ame[1], s=100)
+             axis[i].plot(eje, base_legendre[0], color=colores_ame[1], linestyle='dotted')
+         #Lineal Legendre
+         for i in range(2):
+             axis[i].scatter(eje, base_legendre[1], color=colores_ame[1], s=100)
+             axis[i].plot(eje, base_legendre[1], color=colores_ame[1], linestyle='dotted')
+         #Cuadrática Legendre
+         coef=pr.parab3Puntos([base_legendre[2][j] for j in range(4) ])
+         for i in range(2):
+             axis[i].scatter(eje, base_legendre[2], color=colores_ame[1], s=100)
+             #coeficientes de la parábola que pasa por los puntos anteriores
+             axis[i].plot(X,coef[0]*X**2+coef[1]*X+coef[2],color=colores_ame[1], linestyle='dotted')
+        
+         #Cúbica equivocada
+         axis[0].scatter(eje, [0.17*t**3-0.7*t**2+2*t-2 for t in range(4)],color=colores_ame[0], s=100)
+         axis[0].plot(X, 0.17*X**3-0.7*X**2+2*X-2, color=colores_ame[0], linestyle='dotted')
+     
+         #Cúbica Legendre
+         axis[1].scatter(eje, base_legendre[3],color=colores_ame[0], s=100)
+         axis[1].plot(X, 0.745*X**3-3.35*X**2+3.5*X-0.22, color=colores_ame[0], linestyle='dotted')
+     
+     
+         for i in range(2):
+             axis[i].plot([-0.5,3.5], [0,0], color=colores_ame[1])
+             axis[i].plot([0,0], [-2.5,3.5], color=colores_ame[1])
+             axis[i].grid()
+         plt.xlim([-0.1,3.1])
+         plt.ylim([-2.2,2.2])
+         return plt.show()
+
+
+def figura_defGrado():
+
+    colores_ame=['hotpink','rebeccapurple','goldenrod','gray']
+    
+    def f(x):
+        return 0*x+1
+    
+    def g(x):
+        return 1-5*x*(x-0.4)*(x-0.8)*(x-1)*(x-2)
+    
+    def h(x):
+        return 1+3*x*(x-1)*(x-2)
+    
+    def i(x):
+        return 1-3*x*(x-1)*(x-2)
+    
+    
+    def p(x):
+        return 1+x*(x-1)*(x-2.5)
+    
+    def q(x):
+        return -0.5*x**2+0.5*x+1 
+    
+    fig, axis= plt.subplots(1,2)
+    X=np.arange(-0.2,2.2,0.05)
+    dominio=[0,1,2]
+    
+    senial=[1,1,1]
+    
+    axis[0].plot(X,g(X), color=colores_ame[1], linestyle=':')
+    axis[0].plot(X,h(X), color=colores_ame[2], linestyle=':')
+    
+    axis[0].plot(X,f(X), color=colores_ame[0])
+    axis[0].scatter(dominio,senial, color=colores_ame[0], label='$x=(1,1,1) \in \mathbb{R}^{3}$')
+    
+    #--------------------------------------
+    senial=[1,1,0]
+    axis[1].plot(X,p(X) , color=colores_ame[1], linestyle=':')
+    
+    axis[1].plot(X,q(X), color=colores_ame[0])
+    axis[1].scatter(dominio,senial, color=colores_ame[0], label='$x=(1,1,0) \in \mathbb{R}^{3}$')
+    
+    
+    
+    for i in range(2):
+        flechas_2D.dibujar_flechas_2d(fig, axis[i])
+        axis[i].grid(True)
+        axis[i].legend()
+    return plt.show()
+
 if __name__=='__main__':
     #figura_discretizacionPuntual()
     #figura_cambioDeMalla()
     #figura_introduccion()
     #figura_coseno()
     #figura_demSimetrias(4)
-    #figura_discret_ortog(True) #no reconoce el True/False...
+    #figura_ortogYoscil(2)  
+    figura_defGrado()
 
