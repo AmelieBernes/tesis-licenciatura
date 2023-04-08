@@ -305,7 +305,7 @@ Se tiene que
 \item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
 \item $\cali{L}^{n,k} \in S_{n,-}$ si $k$ es impar,
 \end{itemize}
-es decir, que para toda $0 \leq m \leq N-1$ 
+es decir, que para toda $0 \leq k \leq n-1$ ,
 \begin{itemize}
 \item para toda $0 \leq m \leq M-2$ se tiene que 
 $\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{n-m-1}$ si $k$ es par y
@@ -329,11 +329,35 @@ $\cali{L}^{n, k}_{M-1}=0$ si $k$ es impar.
  	\end{measuredfigure}
  \end{figure}
 
+
+
+{\huge{$\cali{L}^{n,k} = 
+\left(
+\cali{L}^{n,k}_{0} , \cali{L}^{n,k}_{1}, \ldots ,
+\cali{L}^{n,k}_{M-2}, \cali{L}^{n,k}_{M-1}, \cali{L}^{n,k}_{M},
+\ldots , \cali{L}^{n,k}_{n-2}, \cali{L}^{n,k}_{n-1}
+\right)
+$}}
+
+\vspace{2cm}
+
+{\huge{$\cali{L}^{n,k} = 
+\left(
+\cali{L}^{n,k}_{0} , \cali{L}^{n,k}_{1}, \ldots ,
+\cali{L}^{n,k}_{M-1}, \cali{L}^{n,k}_{M},
+\ldots , \cali{L}^{n,k}_{n-2}, \cali{L}^{n,k}_{n-1}
+\right)
+$}}
+
+
+
+
 \noindent
 \textbf{Demostración.}
 Sean los vectores $w_{k}$ como en la observación 
 \ref{obs: pertenencia}.
-Según lo demostrado en la subsección \TODO{ref}, si
+Según lo demostrado en la subsección 
+\ref{Generalización que involucra a la discretización Omega n}, si
 \[
 \{ \overline{\eta}_{k} : \hspace{0.2cm} 0 \leq k \leq n-1 \}
 \]
@@ -352,7 +376,7 @@ o sea, si
 y si
 
 \begin{equation}
-\label{eq3: 19En}
+\label{eq4: 19En}
 \forall \hspace{0.1cm} 1 \leq k \leq n-1: 
 \hspace{0.2cm}
 \overline{\eta}_{k}= w_{k}-
@@ -373,12 +397,13 @@ $\overline{\eta}_{k}$ son múltiplos escalares uno del otro.
 
 Afirmamos que ocurre que
 $\overline{\eta}_{k} \in S_{+}$ (resp. que
-$\overline{\eta}_{k} \in S_{-,0}$) si $k$ es par
-(resp. impar); por ser $S_{+}$
-y $S_{-,0}$ cerrado bajo multiplicación
+$\overline{\eta}_{k} \in S_{n,-}$) si $k$ es par
+(resp. impar); por ser $S_{n,+}$
+y $S_{n,-}$ cerrados bajo multiplicación
 por escalares (c.f. observación 
 \ref{obs: espacios de senales sim y antisim}),
 si logramos demostrar esta afirmación podremos concluir lo deseado.
+
 
 
 Procedemos a demostrar esto por inducción sobre $k$.
@@ -390,7 +415,7 @@ Procedemos a demostrar esto por inducción sobre $k$.
 \ref{obs: pertenencia}, la afirmación 
 es trivialmente cierta para $k=0$, el menor grado par.
 Considere ahora a $k=1$, el menor grado impar. Según 
-\eqref{eq3: 19En}, 
+\eqref{eq4: 19En}, 
 \begin{equation}
 \label{eq5: 19En}
 \overline{\eta}_{1}= w_{1}
@@ -405,17 +430,17 @@ es cero; sustituyendo esto en \eqref{eq5: 19En}
 se infiere que 
 \[
 \overline{\eta}_{1} = w_{1} + 0 \cdot \overline{\eta}_{0}=
-w_{1} \in S_{-}.
+w_{1} \in S_{n,-}.
 \]
 Digamos pues que
 
 \[
 \overline{\eta}_{1} = 
-(a_{0}, \ldots , a_{N-1}, a_{N}, -a_{N-1}, \ldots , -a_{0} );
+(a_{0}, \ldots , a_{M-2}, a_{M-1}, -a_{M-2}, \ldots , -a_{0} );
 \]
 para completar la base de inducción debemos de mostrar
-que $a_{N}$, la entrada central de $\overline{\eta}_{1}$,
-es cero. Según \eqref{eq2: 19En} y
+que $a_{M-1}$, la entrada central de $\overline{\eta}_{1}$,
+es cero. Según \eqref{eq3: 19En} y
 la definición del polinomio discreto $w_{0}$, 
 $\overline{\eta}_{0}$ es el vector constante uno de $\IR^{n}$;
 ahora bien, puesto que $\overline{\eta}_{0}$
@@ -425,8 +450,8 @@ son ortogonales entre sí, llegamos, como queríamos, a que
 \[
 0 = \langle \overline{\eta}_{0}, \overline{\eta}_{1}\rangle
 = \suma{m=0}{n-1}{a_{m}} = 
-\suma{m=0}{N-1}{a_{m}} +a_{N} -
-\suma{m=0}{N-1}{a_{m}} = a_{N}.
+\suma{m=0}{M-2}{a_{m}} + a_{M-1} -
+\suma{m=0}{M-2}{a_{m}} = a_{M-1}.
 \]
 
 
@@ -434,14 +459,14 @@ son ortogonales entre sí, llegamos, como queríamos, a que
 \item (Paso inductivo) sea $0 \leq k \leq n-1$ par, y
 supongamos la afirmación cierta para todo polinomio de Legendre
 discreto de dimensión $n$ y grado menor a $k$;
-mostremos que $\overline{\eta}_{k}$ es elemento de $S_{+}$.
-La fórmula \eqref{eq3: 19En} nos da una expresión
+mostremos que $\overline{\eta}_{k}$ es elemento de $S_{n,+}$.
+La fórmula \eqref{eq4: 19En} nos da una expresión
 para $\overline{\eta}_{k}$.
 Puesto que
 para toda $0 \leq j \leq k-1$ impar se tiene 
 (por hipótesis de inducción) 
-que $\overline{\eta}_{j} \in S_{-,0}$
-y como $w_{k} \in S_{+}$ (c.f. observación 
+que $\overline{\eta}_{j} \in S_{n,-}$
+y como $w_{k} \in S_{n,+}$ (c.f. observación 
 \ref{obs: pertenencia}), tenemos, según el lema
 \ref{lema: ortogonalidad entre sim y antisim}, que
 para todo $0 \leq j \leq k-1$ impar, 
@@ -449,9 +474,7 @@ $\langle w_{k}, \overline{\eta}_{j} \rangle=0$;
 sustituyendo esto en la expresión para 
 $\overline{\eta}_{k}$, llegamos a que
 \begin{equation}
-\label{eq3: 19En}
-\forall \hspace{0.1cm} 1 \leq k \leq n-1: 
-\hspace{0.2cm}
+\label{eq0: 7ab}
 \overline{\eta}_{k}= w_{k}-
 \suma{
 \substack{ {j=0}, \\  {j\text{ par}}}
@@ -462,9 +485,9 @@ $\overline{\eta}_{k}$, llegamos a que
 \end{equation}
 según la observación \ref{obs: pertenencia}
 y nuestra hipótesis de inducción, 
-\eqref{eq3: 19En} expresa al vector 
+\eqref{eq0: 7ab} expresa al vector 
 $\overline{\eta}_{k}$ como combinación lineal
-de elementos de $S_{+}$, luego, lo expone como
+de elementos de $S_{n,+}$, luego, lo expone como
 elemento de este espacio vectorial. De un argumento
 dual se sigue la veracidad de la afirmación también
 cuando se supone $k$ impar.
@@ -488,16 +511,26 @@ correspondiente a dimensiones pares.
 
 \begin{teo}
 \label{prop: simetrias en dimensiones pares}
-\textbf{(Para dimensiones pares)}. Sea $n \in \IN$ par, digamos,
-
-$n=2N$, con $N \geq 1$. Sea $0 \leq k \leq n-1$ y
+\textbf{(Sobre simetrías
+en los polinomios discretos de Legendre de dimensión par)}.
+Sea $n \in \IN$ par, digamos,
+$n=2M$, con $M \geq 1$. Sea $0 \leq k \leq n-1$ y
 considere al vector $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})_{m=0}^{n-1}$
 como se ha definido en \eqref{def: base de Legendre discreta}.
-Para toda $0 \leq m \leq N-1$ se tiene que
+Se tiene que 
 \begin{itemize}
-\item $\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{2N-m-1}$ si $k$ es par y
-\item $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m-1}$ si $k$ es impar.
+\item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
+\item $\cali{L}^{n,k} \in S_{n,-}$ si $k$ es impar,
 \end{itemize}
+es decir, que para toda $0 \leq k \leq n-1$ 
+
+\begin{itemize}
+\item para toda $0 \leq m \leq M-1$ se tiene que 
+$\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{n-m-1}$ si $k$ es par y
+\item para toda $0 \leq m \leq M-1$ 
+se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m}$ si $k$ es impar.
+\end{itemize}
+
 \end{teo}
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
@@ -518,12 +551,3 @@ el cálculo de las $n$ entradas del vector $\cali{L}^{n,k}$
 se reduce al cálculo de la mitad de estas, pues las otras pueden
 deducirse de las primeras con un cambio de signo que está completamente
 determinado por la paridad del grado $k$.
-
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=1]{10Dic_3} 
-		\caption{\TODO{aaa}}
- 	\end{measuredfigure}
- \end{figure}

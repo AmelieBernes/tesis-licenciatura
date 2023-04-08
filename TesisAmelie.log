@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  7 APR 2023 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  7 APR 2023 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1496,12 +1496,6 @@ LaTeX Warning: Label `eq0: 5Dic' multiply defined.
 LaTeX Warning: Label `eq0: 5Dic' multiply defined.
 
 
-LaTeX Warning: Label `eq3: 19En' multiply defined.
-
-
-LaTeX Warning: Label `eq3: 19En' multiply defined.
-
-
 LaTeX Warning: Label `Teo:proyOrt' multiply defined.
 
 
@@ -2513,44 +2507,40 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 283.
 
 [55 <./imagenes/sim_antisim.png>]
-<./imagenes/simetria1.png, id=1122, 554.82281pt x 118.94438pt>
+<./imagenes/simetria1.png, id=1122, 361.35pt x 74.9199pt>
 File: ./imagenes/simetria1.png Graphic file (type png)
 <use ./imagenes/simetria1.png>
 Package pdftex.def Info: ./imagenes/simetria1.png  used on input line 320.
-(pdftex.def)             Requested size: 388.37332pt x 83.26048pt.
+(pdftex.def)             Requested size: 252.94327pt x 52.44356pt.
 
-Overfull \hbox (28.37332pt too wide) in paragraph at lines 320--330
- [] 
+Overfull \hbox (154.7529pt too wide) in paragraph at lines 334--341
+[]$\OMS/cmsy/m/n/20.74 L[] \OT1/cmr/m/n/20.74 = []$ 
  []
 
-[56 <./imagenes/simetria1.png>]
 
-LaTeX Warning: Reference `eq2: 19En' on page 57 undefined on input line 418.
+Overfull \hbox (97.4555pt too wide) in paragraph at lines 344--351
+[]$\OMS/cmsy/m/n/20.74 L[] \OT1/cmr/m/n/20.74 = []$ 
+ []
 
-[57]
-<./imagenes/simetria2.png, id=1157, 289.8027pt x 85.7604pt>
+[56 <./imagenes/simetria1.png>] [57]
+<./imagenes/simetria2.png, id=1159, 289.8027pt x 85.7604pt>
 File: ./imagenes/simetria2.png Graphic file (type png)
 <use ./imagenes/simetria2.png>
-Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 505.
+Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 538.
 (pdftex.def)             Requested size: 376.74345pt x 111.48848pt.
 
-Overfull \hbox (16.74345pt too wide) in paragraph at lines 505--513
+Overfull \hbox (16.74345pt too wide) in paragraph at lines 538--546
  [] 
  []
 
-<./imagenes/10Dic_3.png, id=1158, 226.6869pt x 113.4639pt>
-File: ./imagenes/10Dic_3.png Graphic file (type png)
-<use ./imagenes/10Dic_3.png>
-Package pdftex.def Info: ./imagenes/10Dic_3.png  used on input line 526.
-(pdftex.def)             Requested size: 226.68634pt x 113.46361pt.
-) (./codigo.tex [58 <./imagenes/simetria2.png> <./imagenes/10Dic_3.png>]
+) (./codigo.tex [58 <./imagenes/simetria2.png>]
 Cap\'{\i }tulo 4.
 Package marginnote Info: Margin note 65.1 is on absolute page 65 on input line 
 33.
 Package marginnote Info: right page because not two side mode on input line 33.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 33.
-<./imagenes/7En_1.png, id=1172, 444.15938pt x 181.42781pt>
+<./imagenes/7En_1.png, id=1170, 444.15938pt x 181.42781pt>
 File: ./imagenes/7En_1.png Graphic file (type png)
 <use ./imagenes/7En_1.png>
 Package pdftex.def Info: ./imagenes/7En_1.png  used on input line 34.
@@ -2578,7 +2568,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 ) (./espectral.tex [61]
 [62] [63] [64]
 Cap\'{\i }tulo 5.
-<./imagenes/oscil1.png, id=1316, 688.0104pt x 726.3135pt>
+<./imagenes/oscil1.png, id=1314, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil1.png Graphic file (type png)
 <use ./imagenes/oscil1.png>
 Package pdftex.def Info: ./imagenes/oscil1.png  used on input line 17.
@@ -2588,7 +2578,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 15--31
 []$[]$  $[]$ 
  []
 
-<./imagenes/oscil2.png, id=1317, 688.0104pt x 726.3135pt>
+<./imagenes/oscil2.png, id=1315, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil2.png Graphic file (type png)
 <use ./imagenes/oscil2.png>
 Package pdftex.def Info: ./imagenes/oscil2.png  used on input line 52.
@@ -2606,7 +2596,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 33--55
 [65
 
  <./imagenes/oscil1.png>]
-<./imagenes/oscil3.png, id=1324, 688.0104pt x 346.1733pt>
+<./imagenes/oscil3.png, id=1322, 688.0104pt x 346.1733pt>
 File: ./imagenes/oscil3.png Graphic file (type png)
 <use ./imagenes/oscil3.png>
 Package pdftex.def Info: ./imagenes/oscil3.png  used on input line 75.
@@ -2616,7 +2606,7 @@ Overfull \hbox (52.80943pt too wide) in paragraph at lines 75--76
 [][] 
  []
 
-<./imagenes/oscil4.png, id=1327, 597.6729pt x 333.1647pt>
+<./imagenes/oscil4.png, id=1325, 597.6729pt x 333.1647pt>
 File: ./imagenes/oscil4.png Graphic file (type png)
 <use ./imagenes/oscil4.png>
 Package pdftex.def Info: ./imagenes/oscil4.png  used on input line 98.
@@ -2642,7 +2632,7 @@ Package marginnote Info: Margin note 75.1 is on absolute page 76 on input line
 Package marginnote Info: right page because not two side mode on input line 375
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 375.
-<./imagenes/20Mar23_1.png, id=1375, 319.1925pt x 153.4533pt>
+<./imagenes/20Mar23_1.png, id=1373, 319.1925pt x 153.4533pt>
 File: ./imagenes/20Mar23_1.png Graphic file (type png)
 <use ./imagenes/20Mar23_1.png>
 Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 376.
@@ -2672,7 +2662,7 @@ Package marginnote Info: Margin note 78.1 is on absolute page 78 on input line
 Package marginnote Info: right page because not two side mode on input line 598
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 598.
-<./imagenes/desfase_ejemplo.png, id=1411, 773.289pt x 377.2494pt>
+<./imagenes/desfase_ejemplo.png, id=1409, 773.289pt x 377.2494pt>
 File: ./imagenes/desfase_ejemplo.png Graphic file (type png)
 <use ./imagenes/desfase_ejemplo.png>
 Package pdftex.def Info: ./imagenes/desfase_ejemplo.png  used on input line 599
@@ -2732,7 +2722,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
  []
 
 [82] [83]) (./apendice_anguloPuntoPlano.tex
-<./imagenes/coseno.png, id=1541, 688.0104pt x 346.1733pt>
+<./imagenes/coseno.png, id=1539, 688.0104pt x 346.1733pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 27.
@@ -2744,7 +2734,7 @@ Package marginnote Info: Margin note 92.1 is on absolute page 92 on input line
 Package marginnote Info: right page because not two side mode on input line 199
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 199.
-<./imagenes/18Sept_1.png, id=1559, 285.7074pt x 157.7895pt>
+<./imagenes/18Sept_1.png, id=1557, 285.7074pt x 157.7895pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
 Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 200.
@@ -2788,7 +2778,7 @@ e 241.
 Package marginnote Info: right page because not two side mode on input line 241
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 241.
-<./imagenes/31Julio_1.png, id=1678, 109.6095pt x 102.6234pt>
+<./imagenes/31Julio_1.png, id=1676, 109.6095pt x 102.6234pt>
 File: ./imagenes/31Julio_1.png Graphic file (type png)
 <use ./imagenes/31Julio_1.png>
 Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
@@ -2852,10 +2842,10 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 ### simple group (level 1) entered at line 333 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44038 strings out of 476025
- 870684 string characters out of 5796533
+ 44026 strings out of 476025
+ 870406 string characters out of 5796533
  1899388 words of memory out of 5000000
- 63051 multiletter control sequences out of 15000+600000
+ 63042 multiletter control sequences out of 15000+600000
  539562 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,19n,107p,1912b,2388s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2908,10 +2898,10 @@ ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pf
 b></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (107 pages, 4925489 bytes).
+Output written on TesisAmelie.pdf (107 pages, 4907559 bytes).
 PDF statistics:
- 2004 PDF objects out of 2073 (max. 8388607)
+ 2002 PDF objects out of 2073 (max. 8388607)
  1612 compressed objects within 17 object streams
- 569 named destinations out of 1000 (max. 500000)
- 771 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 567 named destinations out of 1000 (max. 500000)
+ 766 words of extra memory for PDF output out of 10000 (max. 10000000)
 
