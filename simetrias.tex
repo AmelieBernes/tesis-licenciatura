@@ -15,170 +15,216 @@ de los vectores de la forma $\cali{L}^{n,k} \in \IR^{n}$
 que, recordamos, se han definido en 
 \ref{def: base de Legendre discreta}.
 
-
-\begin{figure}[H] \label{fig: simetrias entradas Legendre}
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=1.7]{simetrias_Legendre} 
-		\caption{ 
-		Se muestran en la tabla las bases de Legendre
-		discreta de dimensiones entre dos y seis. 		
-		Para las dimensiones $n$ marcadas
-		puede apreciarse que, en el vector,
-		 $\cali{L}^{n,k} = \left( \cali{L}^{n,k}_{m} \right)_{m=0}^{n-1}$,
-		las entradas a la derecha son iguales a las de la izquierda,
-		con un cambio de signo que depende del
-		grado $k$ del polinomio discreto de Legendre.}
-		\label{fig: simetrias entradas Legendre}
- 	\end{measuredfigure} 
- \end{figure}
+ 
+Más abajo se muestran dos tablas con las bases de Legendre
+discreta de dimensiones entre dos y seis. 		
+Para las dimensiones $n$ marcadas
+puede apreciarse que, en el vector,
+$\cali{L}^{n,k} = \left( \cali{L}^{n,k}_{m} \right)_{m=0}^{n-1}$,
+las entradas a la derecha son iguales a las de la izquierda,
+con un cambio de signo que depende del
+grado $k$ del polinomio discreto de Legendre.
 
 A pesar de que, a estas alturas, ya contamos
 con expresiones para los vectores $\cali{L}^{n,k}$
 (para cualesquiera entero $n \geq 2$ y $0 \leq k \leq n-1$,
 c.f. teorema \ref{teo: expresión analítica de BON de Legendre}),
 no será usando estas que podremos demostrar que, en efecto,
-se tienen las simetrías sugeridas en la figura
-~\ref{fig: simetrias entradas Legendre}.
+se tienen las simetrías sugeridas en las tablas.
 Conviene
 usar una de las múltiples definiciones iniciales
 que dimos para la base $\cali{L}^{n}$, a saber, una
 que involucre discretizaciones puntuales de polinomios 
 que dé lugar a vectores $w_{k}$ que ya presenten 
-este tipo de simetrías; por lo demostrado en secciones anteriores,
-no perdemos generalidad al hacer esto. 
+este tipo de simetrías.
 
-
-%Tabla para n=2,3,4
+%Tabla coloreada para n=2,3,4
 \begin{center}
 \begin{tabular}{ c c c c c c }
 k $\backslash$ n & 2 & 3 & 4   \\ 
 \hline
 
 0 & $\left(
-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$ & 
-$\left(\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right)$ & 
-$\left(\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{1}{2} \right)$ \\ 
-1 & $\left(-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\right)$ & 
-$\left(-\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \right) $ & 
-$\left(-\frac{3}{2\sqrt{5}}, -\frac{1}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}} \right)$  \\ 
-2 & $---$ & $\left(\frac{1}{\sqrt{6}}, -\sqrt{\frac{2}{3}}, \frac{1}{\sqrt{6}} \right) $ & 
-$\left(\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, \frac{1}{2} \right)$ \\ 
+{\color{red}{\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
+\right)$ & 
+$\left(
+{\color{red}{\frac{1}{\sqrt{3}}}}, 
+\frac{1}{\sqrt{3}}, 
+{\color{red}{\frac{1}{\sqrt{3}}}} 
+\right)$ &   
+$\left(
+{\color{red}{\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{1}{2}}}
+\right)$ \\ 
+1 & 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
+\right)$ & 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{2}}}}, 0, 
+{\color{blue}{\frac{1}{\sqrt{2}}}} 
+\right) $ & 
+$\left(
+{\color{blue}{-\frac{3}{2\sqrt{5}}, -\frac{1}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}}} 
+\right)$  \\ 
+2 & $---$ & $\left(
+{\color{red}{\frac{1}{\sqrt{6}}}}, -\sqrt{\frac{2}{3}}, 
+{\color{red}{\frac{1}{\sqrt{6}}}} \right) $ & 
+$\left(
+{\color{red}{\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, \frac{1}{2}}} 
+\right)$ \\ 
 3 & $---$ & $---$ & 
-$\left(-\frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}, -\frac{3}{2\sqrt{5}}, \frac{1}{2\sqrt{5}} \right)$  \\ 
+$\left(
+{\color{blue}{-\frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}, -\frac{3}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}}}
+\right)$  \\ 
 \end{tabular}
 \end{center} 
  
-%Tabla para n=5,6
+%Tabla coloreada para n=5,6
 \begin{center}
 \begin{tabular}{ c c c c c c }
 k $\backslash$ n & 5 & 6  \\ 
 \hline
 0 & 
-$\left(\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}},
-\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}} \right)$ 
-& $\left(\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}},
-\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}} \right)$ \\ 
+$\left(
+{\color{red}{\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}}}}, \frac{1}{\sqrt{5}},
+{\color{red}{\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}}}} 
+\right)$ 
+& $\left(
+{\color{red}{\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}},
+\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}}} 
+\right)$ \\ 
 1 &  
-$\left(-\sqrt{\frac{2}{5}}, -\frac{1}{\sqrt{10}}, 0,
-\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}} \right)$  & 
-$\left(-\sqrt{\frac{5}{14}}, -\frac{3}{\sqrt{70}}, -\frac{1}{\sqrt{70}},
-\frac{1}{\sqrt{70}}, \frac{3}{\sqrt{70}}, \sqrt{\frac{5}{14}} \right)$ \\ 
+$\left(
+{\color{blue}{-\sqrt{\frac{2}{5}}, -\frac{1}{\sqrt{10}}}}, 0,
+{\color{blue}{\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}}}} 
+\right)$  & 
+$\left(
+{\color{blue}{-\sqrt{\frac{5}{14}}, -\frac{3}{\sqrt{70}}, -\frac{1}{\sqrt{70}},
+\frac{1}{\sqrt{70}}, \frac{3}{\sqrt{70}}, \sqrt{\frac{5}{14}} }}
+\right)$ \\ 
 2 & 
-$\left(\sqrt{\frac{2}{7}}, -\frac{1}{\sqrt{14}}, -\sqrt{\frac{2}{7}},
--\frac{1}{\sqrt{14}}, \sqrt{\frac{2}{7}} \right)$ 
-& $\left(\frac{5}{2\sqrt{21}}, -\frac{1}{2\sqrt{21}}, -\frac{2}{\sqrt{21}},
--\frac{2}{\sqrt{21}}, -\frac{1}{2\sqrt{21}}, \frac{5}{2\sqrt{21}} \right)$ \\ 
+$\left(
+{\color{red}{\sqrt{\frac{2}{7}}, -\frac{1}{\sqrt{14}}}}, -\sqrt{\frac{2}{7}},
+{\color{red}{-\frac{1}{\sqrt{14}}, \sqrt{\frac{2}{7}}}} \right)$ 
+& $\left(
+{\color{red}{\frac{5}{2\sqrt{21}}, -\frac{1}{2\sqrt{21}}, -\frac{2}{\sqrt{21}},
+-\frac{2}{\sqrt{21}}, -\frac{1}{2\sqrt{21}}, \frac{5}{2\sqrt{21}}}} 
+\right)$ \\ 
 3 & 
-$\left(-\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}}, 0,
--\sqrt{\frac{2}{5}}, \frac{1}{\sqrt{10}} \right)$ &
-$\left(-\frac{\sqrt{5}}{6}, \frac{7}{6\sqrt{5}}, \frac{2}{3\sqrt{5}},
--\frac{2}{3\sqrt{5}}, -\frac{7}{6\sqrt{5}}, \frac{\sqrt{5}}{6} \right)$ \\ 
-4 & $\left(\frac{1}{\sqrt{70}}, -\frac{2\sqrt{2}}{\sqrt{35}}, 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}}}}, 0,
+{\color{blue}{-\sqrt{\frac{2}{5}}, \frac{1}{\sqrt{10}}}} 
+\right)$ &
+$\left(
+{\color{blue}{-\frac{\sqrt{5}}{6}, \frac{7}{6\sqrt{5}}, \frac{2}{3\sqrt{5}},
+-\frac{2}{3\sqrt{5}}, -\frac{7}{6\sqrt{5}}, \frac{\sqrt{5}}{6}}}
+\right)$ \\ 
+4 & $\left(
+{\color{red}{\frac{1}{\sqrt{70}}, -\frac{2\sqrt{2}}{\sqrt{35}}}}, 
 \frac{3\sqrt{2}}{\sqrt{35}},
--\frac{2\sqrt{2}}{\sqrt{35}}, \frac{1}{\sqrt{70}} \right) $ & 
-$\left(\frac{1}{2\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{\sqrt{7}},
-\frac{1}{\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{2\sqrt{7}} \right)$ \\ 
+{\color{red}{-\frac{2\sqrt{2}}{\sqrt{35}}, \frac{1}{\sqrt{70}}}} 
+\right) $ & 
+$\left( 
+{\color{red}{\frac{1}{2\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{\sqrt{7}},
+\frac{1}{\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{2\sqrt{7}}}} 
+\right)$ \\ 
 5 & $---$ & 
-$\left(-\frac{1}{6\sqrt{7}}, \frac{5}{6\sqrt{7}}, -\frac{5}{3\sqrt{7}},
-\frac{5}{3\sqrt{7}}, -\frac{5}{6\sqrt{7}}, \frac{1}{6\sqrt{7}} \right)$ 
+$\left(
+{\color{blue}{-\frac{1}{6\sqrt{7}}, \frac{5}{6\sqrt{7}}, -\frac{5}{3\sqrt{7}},
+\frac{5}{3\sqrt{7}}, -\frac{5}{6\sqrt{7}}, \frac{1}{6\sqrt{7}}}} 
+\right)$ 
 \end{tabular}
 \end{center}
+
 
 \begin{figure}[H]
 	\sidecaption{
 	En la figura se ilustran los polinomios y las
 		mallas uniformes que escogeremos cuando las dimensiones sean
 		$n=4$ (dimensión par) y $n=7$ (dimensión impar). Observe que
-		las discretizaciones obtenidas con estas elecciones presentan
-		las simetrías descritas en la figura 
-		\ref{fig: simetrias entradas Legendre}.
+		las discretizaciones obtenidas con estas elecciones tienen
+		las simetrías presentes en las dos tablas de arriba.
 	\label{fig: simetrias polinomiales}
 	}
 	\centering
-	\includegraphics[scale=0.8]{10Dic_1} 
+	\includegraphics[scale=0.28]{10Dic_1} 
 \end{figure}	
 
+Antes de empezar nuestro análisis, damos definiciones
+para las simetrías que parecen aparecer en las entradas
+de los polinomios discretos de Legendre.
 
-\subsection{Estudio para dimensiones impares}
-A lo largo de esta subsección vamos a fijar
-una dimensión 
-$n \in \IN$ impar; digamos que
+\begin{marginfigure}
+\includegraphics[scale=0.7]{n_parImpar} 
+\end{marginfigure}
 
-\begin{equation}
-\label{eq1: 19En}
-n=2N +1 \hspace{0.2cm} \text{ con } N \in \IN.
-\end{equation}
-Estudiemos las simetrías presentes en las entradas
-de los vectores $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$.
 
-Para la discusión que sigue será conveniente definir
-a los siguientes subconjuntos de $\IR^{n}$;
+\begin{defi}
+\label{def: espacios de seniales simetricas y antisimetricas}
+Sea $n \in \IN$, $n \geq 2$. 
+Sea $M = \lceil \frac{n}{2} \rceil$.
+Definimos al 
+\textbf{espacios de señales antisimétricas} $S_{n,-}$ como 
+	\begin{equation}
+	\label{eq1: 5Dic}
+	S_{n, -}:= \{ x=(x_{m})_{m=0}^{n-1}  \in \IR^{n}
+	\hspace{0.2cm} |
+	\hspace{0.2cm} \forall  
+	\hspace{0.1cm}
+	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= -x_{n-m-1}\}
+	\end{equation}
 
-\begin{equation}
-\label{eq0: 5Dic}
-S_{+}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
-| \hspace{0.2cm} \forall  
-\hspace{0.1cm}
-0 \leq m \leq N-1 : \hspace{0.2cm} x_{m}= x_{2N-m}\},
-\end{equation}
-a cuyos elementos los denominaremos
-\textbf{señales simétricas} de dimensión $n$,
-\begin{equation}
-\label{eq1: 5Dic}
-S_{-}:= \{ x=(x_{m})_{m=0}^{n-1}  \in \IR^{n}
-\hspace{0.2cm} |
-\hspace{0.2cm} \forall  
-\hspace{0.1cm}
-0 \leq m \leq N-1 : \hspace{0.2cm} x_{m}= -x_{2N-m}\},
-\end{equation}
-llamando \textbf{señales antisimétricas} de dimensión $n$
-a sus elementos, 
-y también a
-\begin{equation}
-\label{eq2: 19En}
-S_{-,0}:= \{ x=(x_{m})_{m=0}^{n-1}| \hspace{0.2cm} \forall  
-\hspace{0.1cm}
-0 \leq m \leq N-1 : \hspace{0.2cm} x_{m}= -x_{2N-m} 
-\hspace{0.2cm} \text{y } x_{N}=0
-\},
-\end{equation}
-el conjunto de señales antisimétricas de dimensión $n$
-y entrada central nula.
+\noindent	
+y, además, definimos al
+\textbf{espacios de señales simétricas} $S_{n,+}$ como sigue:
+
+\begin{itemize}
+	\item si $n$ es par, 
+	\begin{equation}
+	\label{eq0: 5Dic}
+	S_{n, +}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
+	| \hspace{0.2cm} \forall  
+	\hspace{0.1cm}
+	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= x_{n-m-1}\},
+	\end{equation}
+	y,
+	
+	\item si $n$ es impar,
+	\begin{equation}
+	\label{eq0: 5Dic}
+	S_{n, +}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
+	| \hspace{0.2cm} \forall  
+	\hspace{0.1cm}
+	0 \leq m \leq M-2 : \hspace{0.2cm} x_{m}= x_{n-m-1}\},
+	\end{equation}
+	
+\end{itemize}
+\end{defi}
+
+
+\begin{figure}[H]
+	\sidecaption{
+	Figura que ilustra las definiciones de los
+	espcios $S_{n,+}$ y $S_{n,-}$ para distintas paridades
+	de $n$.
+	\label{fig: sim_antisim}
+	}
+	\centering
+	\includegraphics[scale=0.8]{sim_antisim} 
+\end{figure}	
 
 Las siguientes dos observaciones se siguen de inmediato.
-
 \begin{obs}
 \label{obs: espacios de senales sim y antisim}
-Sea $n$ como en \eqref{eq1: 19En}. 
-Los conjuntos definidos en 
-\eqref{eq0: 5Dic}, \eqref{eq1: 5Dic} y  \eqref{eq2: 19En}
+Sea $n \geq 2$ entero.  
+Los conjuntos $S_{n,+}$ y $S_{n,-}$ definidos como en  
+\ref{def: espacios de seniales simetricas y antisimetricas}. 
 son subespacios de $\IR^{n}$.
 \end{obs}
 
 \begin{obs}
 \label{obs: pertenencia}
-Sea $n$ como en \eqref{eq1: 19En}. 
+Sea $n \geq 2$ entero.  
 Sea $\cali{P}$ la malla
 uniforme de $n$ puntos con puntos extremos $-1$ y $1$.
 Para toda $0 \leq k \leq n-1$, sean
@@ -191,10 +237,10 @@ donde $\Omega_{n, \cali{P}}$ es el operador definido en
 \ref{def: operador de discretizacion puntual}.
 Para toda $0 \leq k \leq n-1$ se tiene que
 \begin{itemize}
-\item $w_{k} \in S_{+}$ si $k$ es par, y
-\item $w_{k} \in S_{-,0}$ si $k$ es impar,
+\item $w_{k} \in S_{n,+}$ si $k$ es par, y
+\item $w_{k} \in S_{n,-}$ si $k$ es impar,
 \end{itemize}
-donde $S_{+}$ y $S_{-,0}$ son como en 
+donde $S_{n,+}$ y $S_{n,-}$ son como en 
 \eqref{eq0: 5Dic} y \eqref{eq2: 19En}.
 \end{obs}
 
@@ -204,37 +250,47 @@ Hacemos esto a continuación
 
 \begin{lema}
 \label{lema: ortogonalidad entre sim y antisim}
-Sean $S_{+}$ y $S_{-,0}$ como en 
-\eqref{eq0: 5Dic} y \eqref{eq2: 19En}. Para cualesquiera 
-$u \in S_{+}$ y $v \in S_{-,0}$ se tiene que
+Sea $n \geq 2$.
+Sean $S_{n,+}$ y $S_{n,-}$ como en la definición
+\ref{def: espacios de seniales simetricas y antisimetricas}.
+Para cualesquiera 
+$u \in S_{m,+}$ y $v \in S_{n,-}$ se tiene que
 $\langle u, v \rangle=0$.
 \end{lema}
 \noindent
 \textbf{Demostración.}
-Digamos que 
+Supongamos que $n$ es impar; digamos entonces que
+$n = 2M-1$, 
 \begin{equation*}
-u=(a_{0}, \ldots , a_{N-1}, a_{N}, a_{N-1}, \ldots a_{0}),
+u=(a_{0}, \ldots , a_{M-2}, a_{M-1}, a_{M-2}, \ldots a_{0}),
 \end{equation*}
 y que 
 \begin{equation*}
-v=(b_{0}, \ldots , b_{N-1}, 0, b_{N-1}, \ldots b_{0}).
+v=(b_{0}, \ldots , b_{M-2}, 0, -b_{M-2}, \ldots -b_{0}).
 \end{equation*}
 Se calcula directamente que 
 
 \[
-\langle u, v \rangle = \suma{m=0}{N-1}{a_{m} \cdot b_{m}} + a_{N} \cdot 0
--\suma{m=0}{N-1}{a_{m} \cdot b_{m}} =0.
+\langle u, v \rangle = \suma{m=0}{M-2}{a_{m} \cdot b_{m}} + a_{N} \cdot 0
+-\suma{m=0}{M-2}{a_{m} \cdot b_{m}} =0.
 \]
 
+\noindent
+El argumento para $n$ par es análogo.
 \QEDB
 \vspace{0.2cm}
 
-\input{codigo_imagenes}
+\subsection{Estudio para dimensiones impares}
+A lo largo de esta subsección vamos 
+estudiar las simetrías presentes en las entradas
+de los PDL $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$
+cuando la dimensión $n$ es impar;
+$n \in \IN$ impar; digamos que
 
-Ya tenemos todo lo necesario para demostrar que las
-señales de Legendre discretas de dimensión $n$ y grado
-par son simétricas, mientras que las de grado
-impar son antisimétricas.
+\begin{equation}
+\label{eq1: 19En}
+n=2M - 1 \hspace{0.2cm} \text{ con } M \in \IN.
+\end{equation}
 
 \begin{teo}
 \label{prop: simetrias en dimensiones impares}
@@ -246,21 +302,25 @@ considere al vector $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})_{m=0}^{n-1}$
 como se ha definido en \eqref{def: base de Legendre discreta}. 
 Se tiene que 
 \begin{itemize}
-\item $\cali{L}^{n,k} \in S_{+}$ si $k$ es par, y que
-\item $\cali{L}^{n,k} \in S_{-,0}$ si $k$ es impar,
+\item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
+\item $\cali{L}^{n,k} \in S_{n,-}$ si $k$ es impar,
 \end{itemize}
-es decir, que para toda $0 \leq m \leq N-1$ se tiene que
+es decir, que para toda $0 \leq m \leq N-1$ 
 \begin{itemize}
-\item $\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{2N-m}$ si $k$ es par y
-\item $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m}$ y 
-$\cali{L}^{n, k}_{N}=0$ si $k$ es impar.
+\item para toda $0 \leq m \leq M-2$ se tiene que 
+$\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{n-m-1}$ si $k$ es par y
+\item para toda $0 \leq m \leq M-2$ 
+se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m}$ y 
+$\cali{L}^{n, k}_{M-1}=0$ si $k$ es impar.
 \end{itemize}
 \end{teo}
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
 	\begin{measuredfigure}
 		\includegraphics[scale=0.7]{simetria1} 
-		\caption{Fijadas una dimensión impar $n=2N+1$ 
+		\caption{
+		\TODO{Corregir!!}		
+		Fijadas una dimensión impar $n=2N+1$ 
 		y un grado $0 \leq k \leq n-1$,
 		en esta proposición se da una relación simple entre las parejas 
 		de entradas de $\cali{L}^{n,m}$ con índices $m$ y $2N-m$ 

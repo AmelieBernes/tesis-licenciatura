@@ -177,44 +177,38 @@ def figura_coseno():
     return plt.show()
 
 
-def figura_demSimetrias(n=7):
-    """
-    'n' sólo puede tomar el valor 7 o 4.
-    """
-    fig, axis= plt.subplots()
+def figura_demSimetrias():
+    colores = ['red', 'blue']
+
+    fig, axis= plt.subplots(1,2)
+    for i in range(2):
+        axis[i].set_xlim(-1.3,1.3)  
+        axis[i].set_ylim(-1.3,1.3)
+        flechas_2D.dibujar_flechas_2d(fig, axis[i])
+        x=[-1,-1,1]
+        y=[1,-1,1]
+        axis[i].scatter(x,y, color='black')
+        axis[i].grid(True)
+   
+    X=np.arange(-1.2, 1.2, 0.05)
+    x=[-1,-2/3, -1/3, 0, 1/3, 2/3, 1]
+    for i in range(7):
+        axis[1].plot(X, X**i, color = colores[i%2])
+        y=[t**i for t in x]
+        axis[1].scatter(x,y, color =  colores[i%2])
     
-    axis.set_xlim(-1.3,1.3)
-    axis.set_ylim(-1.3,1.3)
-    flechas_2D.dibujar_flechas_2d(fig, axis)
+    y=[0,0,0,0,0,0,0]
+    axis[1].scatter(x,y, marker='x', color = 'black')
     
+    x=[-1,-1/3,1/3,1]
+    for i in range(4):
+        axis[0].plot(X, X**i, color = colores[i%2])
+        y=[t**i for t in x]
+        axis[0].scatter(x,y, color = colores[i%2])
     
-    x=[-1,-1,1]
-    y=[1,-1,1]
-    plt.scatter(x,y, color='black')
+    y=[0,0,0,0]
+    axis[0].scatter(x,y, marker='x', color='black')
     
-    if n==7:
-        X=np.arange(-1.2, 1.2, 0.05)
-        x=[-1,-2/3, -1/3, 0, 1/3, 2/3, 1]
-        for i in range(7):
-            plt.plot(X, X**i, color=colores[i%2])
-            y=[t**i for t in x]
-            plt.scatter(x,y, color=colores[i%2])
-        
-        y=[0,0,0,0,0,0,0]
-        plt.scatter(x,y, marker='x', color='black')
-    
-    else: #n=4
-        X=np.arange(-1.2, 1.2, 0.05)
-        x=[-1,-1/3,1/3,1]
-        for i in range(4):
-            plt.plot(X, X**i, color=colores[i%2])
-            y=[t**i for t in x]
-            plt.scatter(x,y, color=colores[i%2])
-        
-        y=[0,0,0,0]
-        plt.scatter(x,y, marker='x', color='black')
-    
-    plt.grid()
     return plt.show()
 
 def figura_discret_ortog(disc=True):
@@ -439,7 +433,7 @@ if __name__=='__main__':
     #figura_cambioDeMalla()
     #figura_introduccion()
     #figura_coseno()
-    #figura_demSimetrias(4)
+    figura_demSimetrias()
     #figura_ortogYoscil(2)  
-    figura_defGrado()
+    #figura_defGrado() #problemas
 

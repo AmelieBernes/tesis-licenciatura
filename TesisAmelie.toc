@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.0.2}Ejemplo 2}{46}{subsection.2.0.2}%
 \contentsline {subsection}{\numberline {2.0.3}Ejemplo 3}{47}{subsection.2.0.3}%
 \contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{53}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{54}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{56}{subsection.3.0.1}%
 \contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{58}{subsection.3.0.2}%
 \contentsline {chapter}{\numberline {4}Implementación computacional de las bases discretas de Legendre}{59}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{60}{section.4.1}%
