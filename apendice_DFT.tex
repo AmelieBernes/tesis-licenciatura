@@ -1,21 +1,110 @@
 \section{La transformada discreta de Fourier y estudios espectrales de señales finitas}
 
 \TODO{aquí una introducción}
+\TODO{La teoría se basa en el libro de Algoritmos.}
+
+La teoría de esta sección se apoya en la existencia de las raíces
+$n-$ésimas de la unidad (garantizada por el teorema fundamental
+del álgebra \ref{teo: fundamental del algebra}) 
+y propiedades de estas que hacen posible
+tener un método eficiente de calcular lo que después llamaremos
+la ``transformada discreta'' de un elemento de $\IC^{n}$.
+
+\subsection{Raíces $n-$ésimas de la unidad y propiedades de estas}
+
+\TODO{Habla sobre la exponencial compleja; tal vez pon su definición,
+pero di que no entras en detalles (estos pueden consultarse, por ejemplo, en Marsden), sólo citamos unas propiedades de esta función de $\IC$ a $\IC$
+que necesitaremos}
+
+\TODO{Tal vez puedes hablar de cómo esta forma involucra al ángulo y
+a la norma para representar a un punto, y por qué esto es útil
+para hablar de mulitplicación y conjugados! También tienes que definir
+la norma en $\IC^{n}$, esto no es trivial y de hecho me estaba dando
+problemas.}
+
+\begin{prop}
+\label{prop: propiedades exp compleja}
+(\textbf{Propiedades de la exponencial compleja}) a
+	\begin{itemize}
+	\item $exp(z) = 1$ si y sólo si $z= 2K \pi i$ para algún $K \in \IZ$
+	\item Para todo $\omega \in \IZ$ y todo $z \in \IC$, $(exp(z))^{\omega} = 			exp(\omega z)$ \TODO{ve si $\omega$ puede de hecho ser cualquier complejo? 			tiene sentido esto?}
+	\item Para cualesquiera $z_{1}, z_{2} \in \IC$, 
+	$\frac{exp(z_{1})}{exp(z_{2})} = exp(z_{1} - z_{2})$.
+	\item Para todo entero $n$ y todo real $b$,
+	$(exp(bi))^{m} = exp (mb i)$
+	\item \TODO{pon lo de exponencial de la suma.}
+	\end{itemize}
+\end{prop}
+
+
+\begin{defi}
+\label{defi: raices n esimas de la unidad}
+Sea $n \in \IN$. A las $n$ raíces del polinomio
+$p_{n}(t)= t^{n}-1$ se les denominará las \textbf{raíces $n-$ésimas de la unidad.}
+\end{defi}
+
+
+Las raíces $n-$ésimas de la unidad son pues los números complejos
+tales que, elevados a la potencia $n$, son iguales a 1; según el 
+teorema fundamental
+del álgebra \ref{teo: fundamental del algebra}, sí hay números complejos
+que satisfacen la definición \ref{defi: raices n esimas de la unidad}, y además
+son a lo más $n$. Es fácil establecer, como hacemos a continuación, 
+fórmulas explícitas \TODO{continua.}
+
+\begin{prop}
+Sea $n \in \IN$, $n \geq 2$. Hay exactamente $n$ raíces $n-$ésimas de la
+unidad, y estas son los números complejos
+ 	\begin{equation}
+	\label{eq3: 8ab}
+	z_{n, \omega} : = exp \left( \frac{2 \pi i }{n} \omega
+	\right), \hspace*{0.2cm} \textit{con} 
+	\hspace*{0.2cm} \omega \in \{0, 1, \ldots, n-1 \}.
+	\end{equation}
+	
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Por las propiedades expresadas en la proposición
+\ref{prop: propiedades exp compleja}, es fácil ver que 
+$z_{n,1} :=  exp \left( \frac{2 \pi i }{n} \right)$ es raíz $n-$ésima
+de la unidad, pues
+\[
+(z_{n,1})^{n} = exp(2 \pi i ) = 1.
+\]
+Además, para todo $\omega \in \{ 0, \cdots , n-1 \}$, el número
+\[
+z_{n, \omega} : = (z_{n,1})^{\omega} = exp \left( \frac{2 \pi i }{n} \omega \right)
+\]
+también es es raíz $n-$ésima de la unidad, ya que
+
+\[
+(z_{n, \omega})^{n} = ((z_{n,1})^{\omega} )^{n} = 
+((z_{n,1})^{n} )^{\omega} = 1^{\omega}=1. 
+\]
+Note ahora que los $n$ números complejos $z_{n, \omega}$ son todos 
+distintos entre sí, pues si $\omega_{1}$ y $\omega_{2}$ son enteros
+entre $0$ y $n-1$ tales que $z_{n, \omega_{1}} = z_{n, \omega_{2}}$,
+o sea, tales que 
+$exp \left( \frac{2 \pi i }{n} \omega_{1} \right) = 
+exp \left( \frac{2 \pi i }{n} \omega_{1} \right)$, entonces, según el tercer
+punto de la proposición \ref{prop: propiedades exp compleja},
+$1 = exp \left( \frac{2 \pi i }{n} (\omega_{1}-\omega_{2}) \right)$, luego, 
+según el primer punto de esta misma proposición, $\frac{\omega_{1}-\omega_{2}}{n}$
+es entero, o sea, $n$ divide a $\omega_{1}-\omega_{2}$; por el rango de 
+$\omega_{1}$ y $\omega_{2}$, esto sólo ocurre si $\omega_{1}-\omega_{2}$ es
+cero, o sea, si $\omega_{1}$ y $\omega_{2}$
+son iguales.
+\QEDB
+\vspace{0.2cm}
+
+\TODO{Aquí la figura de siempre:)}
+
+
 
 \subsection{DFT}
 
-\begin{notacion}
-Sea $n \in \IN$ mayor a dos.
-Si $0 \leq \omega \leq n-1$, denotaremos por $z_{n, \omega}$
-a la $\omega-$ésima raíz $n-$ésima de la unidad, es decir, 
 
-	\begin{equation}
-	\label{eq3: 8ab}
-	z_{n, \omega} : = exp \left( \frac{2 \pi i }{n} \omega
-	\right).
-	\end{equation}
-
-\end{notacion}
 
 
 \begin{prop}
@@ -38,8 +127,50 @@ vectorial $\IC^{n}$.
 
 \noindent
 \textbf{Demostración.}
-\TODO{pendiente.}
+Calculemos el producto punto de dos elementos
+$e_{\omega_{1}}$ y $e_{\omega_{2}}$ del conjunto \eqref{eq2: 8ab};
+si $\omega := \omega_{1}-\omega_{2}$,
+\begin{align*}
+\langle e_{w_{1}}, e_{w_{2}} \rangle = &
+\frac{1}{n}
+\suma{m=0}{n-1}{exp \left( 2 \pi i \frac{m}{n} \omega_{1} \right)
+\cdot \overline{ exp \left( 2 \pi i \frac{m}{n} \omega_{2} \right) }} \\
+= & \frac{1}{n}
+\suma{m=0}{n-1}{\left( 2 \pi i \frac{m}{n} (\omega_{1}-\omega_{2}) \right)} \\
+= & \frac{1}{n}\suma{m=0}{n-1}{exp\left( 2 \pi i \frac{\omega}{n} m \right)} \\
+= & \frac{1}{n}\suma{m=0}{n-1}{exp\left( 2 \pi i \frac{\omega}{n}  \right)^{m}} \\
+= & \frac{1}{n}\suma{m=0}{n-1}{(z_{n, \omega})^{m}};
+\end{align*}
 
+\noindent
+esta última es una suma geométrica. 
+\begin{itemize}
+	\item Si $\omega_{1} \neq \omega_{2}$, entonces $n$ no puede dividir 
+	a $\omega = \omega_{1}-\omega_{2}$ (pues, por el rango en el que se encuentran
+	$\omega_{1}$ y $\omega_{2}$, $w \in [-(n-1), n-1]$, y el único múltiplo
+	de $n$ en este intervalo es cero), luego, $z_{n, \omega} \neq 1$.
+	En este caso se tiene entonces que 
+	\[
+	\langle e_{w_{1}}, e_{w_{2}} \rangle = 
+	\frac{1}{n}\suma{m=0}{n-1}{(z_{n, \omega})^{m}}
+	= \frac{1}{n} \cdot \frac{(z_{n, \omega})^{n}-1}{z_{n, \omega}-1}=
+	\frac{1}{n} \cdot \frac{1-1}{z_{n, \omega}-1}=0.
+	\]
+	
+	\item SI $\omega_{1} = \omega_{2}$, entonces $\omega = 0$, y
+	\[
+	\langle e_{w_{1}}, e_{w_{2}} \rangle = 
+	\frac{1}{n}\suma{m=0}{n-1}{(z_{n, 0})^{m}}
+	= \frac{1}{n}\suma{m=0}{n-1}{1} = \frac{1}{n} \cdot n = 1.
+	\]
+\end{itemize}
+
+Demostramos así que los elementos de $\cali{B}_{n}$
+tienen norma uno (c.f. \TODO{ref ec. norma en $\IC^{n}$}) y que además
+son ortogonales
+dos a dos, luego, según \TODO{ref}, $\cali{B}_{n}$ es un subconjunto l.i. 
+de $\IC^{n}$; como $\IC^{n}$ es un $\IC-$ espacio vectorial de 
+dimensión $n$, concluimos lo deseado.
 \QEDB
 \vspace{0.2cm}
 
