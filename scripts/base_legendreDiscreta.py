@@ -7,6 +7,8 @@ import sys
 import cProfile
 
 
+#TODO actualizar. Cambiaste el jupyter notebook, pero no este script.
+
 
 ########## Funciones sumatoria (versión 1) y sumando (versiones 1.0 y 1.1)--------------------
 

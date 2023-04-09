@@ -24,10 +24,9 @@ vector $\cali{L}^{n,k}$.
 
 \begin{figure}[H]
 	\sidecaption{
-	Se ilustran el input y el output
-		esperados del algoritmo para $n=5$. En el programa
-		que escribimos más abajo
-		no se pidió redondeo a cuatro decimales.
+		Se ilustran el input y el output
+		esperados del algoritmo para $n=5$. En los scripts
+		que escribimos no se pidió redondeo a cuatro decimales.
 	\label{fig: input y output deseados}
 	}
 	\centering
@@ -188,8 +187,16 @@ simetrías estudiadas en la sección
 A continuación mostramos los pseudocódigos para calcular 
 los polinomios discretos de Legendre.
 
+Las implementaciones en Python de todos estos algoritmos
+se compartieron en \TODO{referencia.}
+\TODO{Recuerda que debes explicar que ordenas
+de menor a mayor para evitar lo más que se pueda errores
+de redondeo. Puedes citar el artículo de la Recherche.}
+
 \begin{itemize}
-\item Damos dos algoritmos (\TODO{citas}) para calcular el número
+\item Damos los algoritmos \textbf{sumandoV1} y 
+\textbf{sumandoV2} (c.f. \ref{alg: sumandoV1},
+\ref{alg: sumandoV2}) para calcular el número
 \begin{equation}
 \label{eq0: 1Abril}
 B_{n, k, m, j};
@@ -210,33 +217,41 @@ para llegar a la expresión
 }{
 \left( \producto{\mu=n-j}{n-1}{\mu} \right)
 \left( \producto{\mu=n-j}{n-1}{\mu} \right)^{2}
-}
+}.
 \]
-y, para simplificar aún más los cálculos, el algoritmo
-busca qué factores se repiten en el numerador y en el denominador,
-para así eliminarlos y sólo calcular el producto de los 
-números restantes.
-\item Damos dos algoritmos (\TODO{ref}) para calcular a la suma
+
+\item Damos dos algoritmos \textbf{sumatoriaV1}
+y \textbf{sumatoriaV2} (c.f. \ref{alg: sumatoriaV1}
+y c.f. \ref{alg: sumatoriaV2}) para calcular a la suma
 \begin{equation}
 \label{eq1: 1Abril}
 \suma{j=0}{min(k,m)}{B_{n, k, m, j}};
 \end{equation}
-\TODO{di cuál se corresponde con cuál.}
-\item Los algoritmos \TODO{ref} para calcular, usando alguna
-de las dos versiones de ``sumatoria'', la base de Legendre discreta
-de dimensión $n$.
+observe en la definición de estos que 
+\textbf{sumatoriaV1} hace referencia a
+\textbf{sumandoV1}, mientras que \textbf{sumatoriaV2}
+hace referencia a \textbf{sumandoV2}
+
+
+\item Los algoritmos 
+\textbf{baseLegendre$\_$dimImpar} y
+\textbf{baseLegendre$\_$dimPar} 
+(c.f. \ref{alg: legendre impar} y \ref{alg: legendre par} )
+que sirven para calcular, usando ya sea el algoritmo
+\textbf{sumatoriaV1} o \textbf{sumatoriaV2},
+la base de Legendre discreta de dimensión $n$; se usa el primero
+si $n$ es impar y el segundo si $n$ es par.
+Las lineas 10 de estos 
+algoritmos se justifican,
+respectivamente, con los teoremas 
+\ref{prop: simetrias en dimensiones impares}
+y \ref{prop: simetrias en dimensiones pares}.
+Por último, tenemos el sencillo algoritmo \textbf{calculo$\_$base},
+que, en base a la paridad de la dimensión $n$, decide si usar
+el algoritmo \ref{alg: legendre impar} o el \ref{alg: legendre par}
+para calcular la BDL de dimensión $n$.
 \end{itemize}
 
-Observe cómo
-en los algoritmos \ref{alg: legendre Impar} y \ref{alg: legendre Par}
-primero iteramos sobre $k$, la variable de grado, y
-luego sobre $m$, la variable de posición. \TODO{No me gusta usar
-$\leftarrow$ para cambiar los números almacenados en vector legendre.}.
-Las lineas 10 de estos 
-algoritmos 
-se justifican,
-respectivamente, con los teoremas \ref{prop: simetrias en dimensiones impares}
-y \ref{prop: simetrias en dimensiones pares}.
 
 \begin{algorithm}
 \caption{$sumandoV1$}\label{alg: sumandoV1}
@@ -255,13 +270,13 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \ENSURE El número \eqref{eq0: 1Abril}
 \STATE $B1, B2, B3, B4 \leftarrow []$
-\FOR {$t=m-j-1$ a $t=m$} 
+\FOR {$t=m-j+1$ a $t=m$} 
 \STATE $APPEND(B1, t)$
 \ENDFOR
 \FOR {$t=k-j+1$ a $t=k+j$} 
 \STATE $APPEND(B2, t)$
 \ENDFOR
-\FOR {$t=n-j$ a $t=n$} 
+\FOR {$t=n-j$ a $t=n-1$} 
 \STATE $APPEND(B3, t)$
 \ENDFOR
 \FOR {$t=1$ a $t=j$} 
@@ -327,19 +342,19 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 %-----------------------------------------------------------------
 
 \begin{algorithm}
-\caption{base$\_$legendre$\_$dimImpar}\label{alg: legendre impar}
+\caption{baseLegendre$\_$dimImpar}\label{alg: legendre impar}
 \begin{algorithmic}[1] 
 \REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 1 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
-\TODO{ref} y \TODO{ref}.
+\ref{alg: sumatoriaV1} y \ref{alg: sumatoriaV2}.
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
 la $k-$ésima lista las $n$ entradas del polinomio discreto de Legendre de
 grado $k$ y dimensión $n$.
 %\ENSURE $y = x^n$
-\STATE $N \leftarrow n//2$
+\STATE $M \leftarrow CEIL(n/2)$
 \STATE $base\_legendre=[ \hspace{0.2cm} ]$ 
-
+\STATE $signo \leftarrow 1$ 
 \FOR {$k=0$ a $k=n-1$} 
-\STATE $A\_nk \leftarrow (-1)^{k}*(n-1)!*
+\STATE $A\_nk \leftarrow signo * (n-1)!*
 \sqrt{\frac{
 2k+1
 }{
@@ -347,20 +362,19 @@ grado $k$ y dimensión $n$.
 }}$
 
 \STATE $vector\_legendre \leftarrow [ 0, \ldots , 0]$ \COMMENT{Lista con $n$ ceros} 
-\FOR {$m=0$ a $m=N-1$} 
-\STATE $suma \leftarrow sumatoria(n,k,m)$
-\STATE $entrada\_legendre=A\_nk * suma$
-\STATE $vector\_legendre[m] \leftarrow entrada\_legendre$ 
-\STATE $vector\_legendre[2N-m] \leftarrow (-1)^{k}*entrada\_legendre$ 
+\FOR {$m=0$ a $m=M-2$} 
+\STATE $entrada \leftarrow A\_nk * sumatoria(n,k,m)$
+\STATE $vector\_legendre[m] \leftarrow entrada$ 
+\STATE $vector\_legendre[n-m-1] \leftarrow signo*entrada$ 
 \ENDFOR
 
 \IF{$k \equiv 1 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$}
-\STATE $vector\_legendre[N] \leftarrow 0$
+\STATE $vector\_legendre[M-1] \leftarrow 0$
 \ELSE
-\STATE $suma \leftarrow sumatoria(n,k,N)$
-\STATE $vector\_legendre[N] \leftarrow (-1)^{k}*A\_nk * suma$
+\STATE $vector\_legendre[M-1] \leftarrow A\_nk * sumatoria(n,k,M-1)$
 \ENDIF
-\STATE Agregar $vector\_legendre$ a la lista $base\_legendre$
+\STATE $APPEND(base\_legendre, vector\_legendre)$
+\STATE $signo \leftarrow signo * -1$
 \ENDFOR
 \RETURN $base\_legendre$
 \end{algorithmic}
@@ -369,20 +383,21 @@ grado $k$ y dimensión $n$.
 
 
 \begin{algorithm}
-\caption{base$\_$legendre$\_$dimPar}\label{alg: legendre par}
+\caption{baseLegendre$\_$dimPar}\label{alg: legendre par}
 \begin{algorithmic} [1]
 \REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 0 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
-\TODO{ref} y \TODO{ref}.
+\ref{alg: sumatoriaV1} y \ref{alg: sumatoriaV2}.
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
 la $k-$ésima lista las $n$ entradas del polinomio discreto de Legendre de
 grado $k$ y dimensión $n$.
 
 
-\STATE $N \leftarrow n//2$
-\STATE $base\_legendre=[ \hspace{0.2cm} ]$
+\STATE $M \leftarrow CEIL(n/2)$
+\STATE $base\_legendre=[ \hspace{0.2cm} ]$ 
+\STATE $signo \leftarrow 1$ 
 
 \FOR {$k=0$ a $k=n-1$} 
-\STATE $A\_nk \leftarrow (-1)^{k}*(n-1)!*
+\STATE $A\_nk \leftarrow signo * (n-1)!*
 \sqrt{\frac{
 2k+1
 }{
@@ -390,15 +405,14 @@ grado $k$ y dimensión $n$.
 }}$
 
 \STATE $vector\_legendre \leftarrow [ 0, \ldots , 0]$ \COMMENT{Lista con $n$ ceros} 
-\FOR {$m=0$ a $m=N-1$} 
-\STATE $suma \leftarrow sumatoria(n,k,m)$
-\STATE $entrada\_legendre=A\_nk * suma$
-\STATE $vector\_legendre[m] \leftarrow entrada\_legendre$ \COMMENT{Agregamos en la $m-$ésima posición}
-\STATE $vector\_legendre[2N-m-1] \leftarrow (-1)^{k}*entrada\_legendre$
+\FOR {$m=0$ a $m=M-1$} 
+\STATE $entrada \leftarrow A\_nk * sumatoria(n,k,m)$
+\STATE $vector\_legendre[m] \leftarrow entrada$ \COMMENT{Agregamos en la $m-$ésima posición}
+\STATE $vector\_legendre[n-m-1] \leftarrow signo *entrada\_legendre$
 \ENDFOR
 
-
-\STATE Agregar $vector\_legendre$ a la lista $base\_legendre$
+\STATE $APPEND(base\_legendre, vector\_legendre)$
+\STATE $signo \leftarrow signo * -1$
 \ENDFOR
 \RETURN $base\_legendre$
 \end{algorithmic}
@@ -407,9 +421,9 @@ grado $k$ y dimensión $n$.
 
 
 \begin{algorithm}
-\caption{Calcular la base de Legendre de dimensión $n$}\label{alg: legendre}
+\caption{calculo$\_$base}\label{alg: legendre}
 \begin{algorithmic} [1]
-\REQUIRE $n$, variable de tipo int, $n \geq 2$.
+\REQUIRE $n$, variable de tipo int, $n \geq 2$, función ``sumatoria''
 \ENSURE lista cuyos elementos son $n$ listas, conteniendo
 la $k-$ésima lista las $n$ entradas del polinomio discreto de Legendre de
 grado $k$ y dimensión $n$.
@@ -422,11 +436,4 @@ grado $k$ y dimensión $n$.
 \end{algorithmic}
 \end{algorithm}
 
-\TODO{Recuerda que debes explicar que ordenas
-de menor a mayor para evitar lo más que se pueda errores
-de redondeo. Puedes citar el artículo de la Recherche.}
 
-Las implementaciones en Python de todos estos algoritmos
-se compartieron en \TODO{referencia.}
-\TODO{Recuerda cambiar el código para usar np.arrays.
-Vectorizar datos?}

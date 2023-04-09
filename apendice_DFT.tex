@@ -1,0 +1,121 @@
+\section{La transformada discreta de Fourier y estudios espectrales de señales finitas}
+
+\TODO{aquí una introducción}
+
+\subsection{DFT}
+
+\begin{notacion}
+Sea $n \in \IN$ mayor a dos.
+Si $0 \leq \omega \leq n-1$, denotaremos por $z_{n, \omega}$
+a la $\omega-$ésima raíz $n-$ésima de la unidad, es decir, 
+
+	\begin{equation}
+	\label{eq3: 8ab}
+	z_{n, \omega} : = exp \left( \frac{2 \pi i }{n} \omega
+	\right).
+	\end{equation}
+
+\end{notacion}
+
+
+\begin{prop}
+Sea $n \in \IN$. El conjunto
+
+\begin{equation}
+\label{eq2: 8ab}
+\cali{B}_{n} : = \{
+e_{\omega} = \left(
+\frac{1}{\sqrt{n}} exp \left(
+2 \pi i \omega \frac{m}{n}
+\right)
+\right)_{0 \leq m \leq n-1}
+: \hspace{0.2cm} 0 \leq \omega \leq n-1
+ \}
+\end{equation}
+es una base ortonormal del $\IC-$espacio
+vectorial $\IC^{n}$.
+\end{prop}
+
+\noindent
+\textbf{Demostración.}
+\TODO{pendiente.}
+
+\QEDB
+\vspace{0.2cm}
+
+Por ser \eqref{eq2: 8ab} una BON de $\IC^{n}$, siempre es
+posible expresar a un vector $x = (x_{m})_{0 \leq m \leq n-1} \in \IC^{n}$
+como combinación lineal de los elementos de \eqref{eq2: 8ab}
+y además los coeficientes están dados por los productos puntos
+de $x$ y los elementos de \eqref{eq2: 8ab}, que son
+
+\begin{align*}
+\langle x, w_{\omega} \rangle = & 
+\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
+2 \pi i \omega \frac{m}{n}
+\right)} \\
+= & 
+\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} 
+\left(
+exp \left( \frac{2 \pi i }{n} \omega
+\right) \right)^{m}} \\
+= & A_{x}(z_{n, \omega}),
+\end{align*}
+
+
+\noindent
+donde $z_{n, \omega}$ es como en \eqref{eq3: 8ab} y 
+$A_{x} = A_{x}(t) \in \IC[t]$ es el polinomio de 
+coeficientes complejos definido 
+a partir de $x$ como sigue:
+
+	\begin{equation}
+		\label{eq4: 8ab}
+		A_{x}(t) = \suma{m=0}{n-1}{\frac{x_{m}}{\sqrt{n}} t }\in \IC[t];
+	\end{equation}
+
+\noindent
+así, \textbf{calcular los coeficientes de $x \in \IC^{n}$ respecto
+a la BON $\cali{B}_{n}$ es lo mismo que evaluar al polinomio 
+$A_{x}$ de grado $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
+$n-$ésimas de la unidad.} Un algoritmo para evaluar eficientemente
+polinomios es pues necesario.
+
+\begin{defi}
+Al proceso de calcular los coeficientes de $x$
+respecto a $\cali{B}_{n}$
+se le conoce como el \textbf{cálculo de la 
+transformada discreta de $x$}
+\end{defi}
+
+\TODO{cita el FFT}
+
+Dada la motivación de antes, es claro cómo usar la transformada
+discreta de 
+
+\textbf{a esto se le llama un análisis espectral.}
+
+\subsection{FFT}
+
+\TODO{Para esto puedes apoyarte mucho en las notas del libro 
+de Algorithms. Eso sí lo entendí bien.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -310,26 +310,28 @@ es decir, que para toda $0 \leq k \leq n-1$ ,
 \item para toda $0 \leq m \leq M-2$ se tiene que 
 $\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{n-m-1}$ si $k$ es par y
 \item para toda $0 \leq m \leq M-2$ 
-se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m}$ y 
+se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{n-m-1}$ y 
 $\cali{L}^{n, k}_{M-1}=0$ si $k$ es impar.
 \end{itemize}
 \end{teo}
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
 	\begin{measuredfigure}
-		\includegraphics[scale=0.7]{simetria1} 
-		\caption{
-		\TODO{Corregir!!}		
+		\includegraphics[scale=1]{simetria1} 
+		\caption{	
 		Fijadas una dimensión impar $n=2N+1$ 
 		y un grado $0 \leq k \leq n-1$,
-		en esta proposición se da una relación simple entre las parejas 
-		de entradas de $\cali{L}^{n,m}$ con índices $m$ y $2N-m$ 
-		(donde los índices $0 \leq m \leq N-1$ son los de las primeras
-		$N$ entradas).}
+		el teorema \ref{prop: simetrias en dimensiones impares}
+		da una relación simple entre las parejas 
+		de entradas de $\cali{L}^{n,k}$ con índices $m$ y $2n-m-1$ 
+		(donde los índices $0 \leq m \leq M-2$ son los de las primeras
+		$M-1$ entradas).}
  	\end{measuredfigure}
  \end{figure}
 
 
+
+\begin{comment}
 
 {\huge{$\cali{L}^{n,k} = 
 \left(
@@ -349,6 +351,7 @@ $}}
 \right)
 $}}
 
+\end{comment}
 
 
 
@@ -528,16 +531,16 @@ es decir, que para toda $0 \leq k \leq n-1$
 \item para toda $0 \leq m \leq M-1$ se tiene que 
 $\cali{L}^{n,k}_{m} = \cali{L}^{n,k}_{n-m-1}$ si $k$ es par y
 \item para toda $0 \leq m \leq M-1$ 
-se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{2N-m}$ si $k$ es impar.
+se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{n-m-1}$ si $k$ es impar.
 \end{itemize}
 
 \end{teo}
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
 	\begin{measuredfigure}
-		\includegraphics[scale=1.3]{simetria2} 
-		\caption{Fijadas una dimensión par $n=2N$ 
-		y un grado $0 \leq k \leq n-1$,
+		\includegraphics[scale=1]{simetria2} 
+		\caption{Fijadas una dimensión par $n=2M$ 
+		y un grado $0 \leq k \leq n-1$ ,
 		en esta proposición se da una relación simple entre las parejas 
 		de entradas de $\cali{L}^{n,m}$ con índices $m$ y $2N-m-1$ 
 		(donde los índices $0 \leq m \leq N-1$ son los de las primeras

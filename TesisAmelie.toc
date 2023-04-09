@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {1.3}Algunas propiedades de las bases de Legendre discretas}{18}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}{18}{subsection.1.3.1}%
 \contentsline {subsection}{\numberline {1.3.2}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{19}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{21}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{22}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Generalización que involucra a la discretización $\Omega _{n}$}{22}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{28}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{29}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Comentarios finales sobre la construcción}{33}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Revisión de literatura y artículos relacionados}{34}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{35}{section.1.7}%
@@ -41,4 +41,7 @@
 \contentsline {subsection}{\numberline {A.7.2}Caso particular en el que el subespacio en cuestión es un plano}{87}{subsection.Alph1.7.2}%
 \contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{88}{section.Alph1.8}%
 \contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{94}{section.Alph1.9}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{101}{appendix.Alph2}%
+\contentsline {section}{\numberline {A.10}La transformada discreta de Fourier y estudios espectrales de señales finitas}{101}{section.Alph1.10}%
+\contentsline {subsection}{\numberline {A.10.1}DFT}{101}{subsection.Alph1.10.1}%
+\contentsline {subsection}{\numberline {A.10.2}FFT}{102}{subsection.Alph1.10.2}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{103}{appendix.Alph2}%

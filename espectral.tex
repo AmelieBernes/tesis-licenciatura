@@ -122,11 +122,15 @@ al estudio de frecuencias enteras, \TODO{Aquí dí por qué}
 sino el poder elegir una frecuencia $\omega \geq 0$ respecto
 a la cual comparar a la señal. A pesar
 de que ya no contaremos con la seguridad de trabajar con bases
-ortonormales de $\IR^{n}$, queremos considerar espacios de frecuencias
-en base a los cuales medir la distancia de $x$ a estos, siendo
-esta una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
-\TODO{Cita el ejemplo en el que haces esto para medir qué tan afín es
-una señal.}
+ortonormales de $\IR^{n}$, queremos considerar espacios de frecuencias.
+
+Recuerde que antes, en la subsección \ref{subs: ejm 3},
+usamos el coseno del ángulo que forma una señal $x \in \IR^{n}$
+con el plano $W_{n,1}$ para dar una medida de qué tan afín es $x$;
+queremos ahora hacer algo similar, y usar el coseno de $x$ con espacios
+de frecuencias $\omega >0$ como
+una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
+
 
 Antes de empezar, 
 \sidenote{Para simplificar la notación, denotamos por $I_{n}$ al intervalo
@@ -160,8 +164,20 @@ pura $\omega$}. En este contexto,
 a $\phi$ se le llama el \textbf{desfase normalizado}
 de la señal, y a $A$ la \textbf{amplitud}.
 \end{defi}
-\TODO{Aquí deberías de poner una figura en la que enseñes que para formar
-a estos vectores muestreas uniformemente sinusoides.}
+
+\begin{figure}[H]
+	\sidecaption{
+	Se grafica a la función 
+	$f(t) = cos(2 \pi \cdot \frac{5}{2} t + 2 \pi \cdot 0.3)$;
+	muestreando este sinusoide de forma uniforme en el 
+	intervalo [0,1] obtenemos una señal de frecuencia pura
+	$\omega = \frac{5}{2}$. En la figura, $n=5$.
+	\label{fig: muestreo coseno}
+	}
+	\centering
+	\includegraphics[scale= 0.55]{muestreo_coseno} 
+\end{figure}	
+
 
 
 \begin{defi}

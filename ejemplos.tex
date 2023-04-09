@@ -48,7 +48,7 @@ calculados en la tabla
 	\label{fig: graficas elementos L2}
 	}
 	\centering
-	\includegraphics[scale=0.26]{graficasLegendre3} 
+	\includegraphics[scale=0.3]{graficasLegendre3} 
 \end{figure}	
 
 
@@ -64,10 +64,10 @@ W_{2,0}= & span \left\{
 
 pues
 
-\begin{equation}
+\begin{equation*}
 \label{eq1: 1Dic}
 W_{2,1}= \IR^{2}.
-\end{equation}
+\end{equation*}
 
 
 En el caso $n=3$, calculamos que
@@ -125,15 +125,6 @@ puntos del plano:
 
 Como tenemos cinco puntos, trabajamos
 en el espacio $\IR^{5}$. 
-La regresión lineal calculada a partir
-del conjunto de datos
-\eqref{eq: conjunto cinco puntos}
-es la recta
-con ecuación cartesiana
-
-\begin{equation} \label{eq: recta minimos cuadrados}
-y=0.49x+0.52.
-\end{equation}
 
 El vector cuyas entradas
 son las cinco mediciones (dadas por las ordenadas
@@ -222,12 +213,25 @@ $c_{1}=1.5$ y $c_{2}=0.49$. Así,
 
 
 \begin{align}
-\label{eq5: 23Oct}
+\label{eq0: 8ab}
 \Pi_{W_{5,1}}(x) =& c_{1} (1,1,1,1,1) + c_{2}(-2-1,0,1,2) \nonumber \\
 = & (0.52, 1.01, 1.5, 1.99, 2.48 );
 \end{align}
-observe que \eqref{eq5: 23Oct} es, 
-en efecto, la discretización de 
+
+observe que 
+la regresión lineal calculada a partir
+del conjunto de datos
+\eqref{eq: conjunto cinco puntos}
+es la recta
+con ecuación cartesiana
+
+\begin{equation} \label{eq: recta minimos cuadrados}
+y=0.49x+0.52
+\end{equation}
+
+y que \eqref{eq0: 8ab} es, 
+como se asegura en la proposición
+\ref{prop: discretizacion recta minimos cuadrados}, la discretización de 
 la recta \eqref{eq: recta minimos cuadrados}
 en la malla uniforme $\cali{P}_{5}$.
 De forma análoga se calcula la parte cuadrática de
@@ -257,7 +261,7 @@ python, p.35)}
 \subsection{Ejemplo 3}
 \label{subs: ejm 3}
 
-En el siguiente ejemplo 
+En este ejemplo 
 damos dos propuestas naturales,
 usando los espacios de polinomios discretos $W_{n,k}$,
 para poder dar no sólo respuestas del tipo
@@ -292,15 +296,17 @@ o, en términos matemáticos, de qué tanto se aleja
 $x$ del espacio de señales afines de su correspondiente
 espacio ambiente.
 
-Como se argumentó en la subsección \ref{cosine similarity}, hay
+Como se explica en la subsección \ref{cosine similarity}, hay
 dos formas plausibles de dar medidas de qué tan cerca está
 $x$ del plano $W_{n,1}$;
 
 \begin{itemize}
-\item[a)] Una forma obvia de proceder es calcular la norma
+\item[a)] Una forma obvia de proceder es calcular
+la distancia de $x$ al espacio $W_{n,1}$, que por definición es 
+la norma
 del vector 
 \[
-x - \Pi_{W_{3,1}}(x)= \suma{k=2}{n-1}{a_{k} \cali{L}^{n, k}},
+x - \Pi_{W_{n,1}}(x)= \suma{k=2}{n-1}{a_{k} \cali{L}^{n, k}},
 \]
 es decir, tomar al número no negativo
 \[
@@ -314,8 +320,7 @@ el ángulo $\alpha \in [0, \frac{\pi}{2}]$
 que forma el vector $x$ con
 $W_{n,1}$, el espacio de señales afines $n-$dimensionales.
 \end{itemize}
-Veamos por qué la segunda (la que corresponde a medir
-el ángulo que forma $x$ con su proyección al espacio de señales afines)
+Veamos por qué la segunda
 es la mejor forma de proceder.
 
 Si $x \in \IR^{n}$ es una señal de dimensión $n$ y 

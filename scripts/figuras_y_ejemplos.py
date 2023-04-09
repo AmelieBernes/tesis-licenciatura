@@ -428,12 +428,43 @@ def figura_defGrado():
         axis[i].legend()
     return plt.show()
 
+
+
+def figura_cosenoMuestreo(w, phi, n):
+    """
+    'w' es un real mayor a cero (la frecuencia), 'phi' \\in[0,1] es el desfase normalizado.
+    'n', entero mayor a uno, indica la cantidad de muestras a tomar'
+    """
+    pi = math.pi 
+
+    dominio = [t/n for t in range(n)]
+    valores = [np.cos(2 * pi * w * t+ 2*pi*phi) for t in dominio]
+
+    fig, axis = plt.subplots(1,1)
+    X1 = np.arange(-0.3,0,0.01)
+    X2 = np.arange(0,1,0.01)
+    X3 = np.arange(1,1.3,0.01)
+
+    axis.plot(X1, np.cos(2 * pi * w * X1 + 2*pi*phi), color = 'black', linestyle = 'dotted')
+    axis.plot(X2, np.cos(2 * pi * w * X2+ 2*pi*phi), color = 'red', linestyle = 'dotted')
+    axis.scatter(dominio, valores, color = 'red')
+    axis.plot(X3, np.cos(2 * pi * w * X3+ 2*pi*phi), color = 'black', linestyle = 'dotted')
+    axis.axhline(y=0, color = 'gray')
+    axis.axvline(x=0, color = 'gray')
+    axis.grid(True)
+    
+    return plt.show()
+
+
+
+
 if __name__=='__main__':
     #figura_discretizacionPuntual()
     #figura_cambioDeMalla()
     #figura_introduccion()
     #figura_coseno()
-    figura_demSimetrias()
+    #figura_demSimetrias()
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
+    figura_cosenoMuestreo(5/2, 0.3,5)
 
