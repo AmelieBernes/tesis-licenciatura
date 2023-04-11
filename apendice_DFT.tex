@@ -181,7 +181,7 @@ y además los coeficientes están dados por los productos puntos
 de $x$ y los elementos de \eqref{eq2: 8ab}, que son
 
 \begin{align*}
-\langle x, w_{\omega} \rangle = & 
+\langle x, e_{\omega} \rangle = & 
 \frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
 2 \pi i \omega \frac{m}{n}
 \right)} \\
@@ -210,7 +210,7 @@ así, \textbf{calcular los coeficientes de $x \in \IC^{n}$ respecto
 a la BON $\cali{B}_{n}$ es lo mismo que evaluar al polinomio 
 $A_{x}$ de grado $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
 $n-$ésimas de la unidad.} Un algoritmo para evaluar eficientemente
-polinomios es pues necesario.
+polinomios es pues necesario.\TODO{cita el FFT}
 
 \begin{defi}
 Al proceso de calcular los coeficientes de $x$
@@ -219,15 +219,229 @@ se le conoce como el \textbf{cálculo de la
 transformada discreta de $x$}
 \end{defi}
 
-\TODO{cita el FFT}
+{\Huge{\textcolor{red}{Dominio: tiempo}}} 
+
+
+{\Huge{\textcolor{red}{Dominio: frecuencia}}}
+
+{\Huge{ $x = (x_{m})_{0 \leq m \leq n-1}$ }}
+
+{\Huge{ $\langle x, e_{\omega} \rangle$, $0 \leq \omega \leq n-1 $ }}
+
+
 
 Dada la motivación de antes, es claro cómo usar la transformada
 discreta de 
 
 \textbf{a esto se le llama un análisis espectral.}
 
-\subsection{FFT}
 
+\subsection{Versión real de la DFT}
+
+En el caso en el que todas las entradas de un vector
+$x = (x_{m})_{0 \leq m \leq n-1}$ sean reales, se puede definir
+una base ortonormal de $\IR^{n}$ que se defina en base a muestreos uniformes
+de sinusoides de frecuencias enteras.
+Esta base será entonces, así como lo era \TODO{ref} para el 
+caso complejo, un sistema de representación en el que 
+
+\TODO{sintetizar una señal en términos de frecuencias.}
+
+\begin{prop}
+\label{prop: base de fourier version real}
+Sean $n \in \IN$ mayor a uno, $M = \lceil \frac{n}{2} \rceil$.
+Para cualquier $\omega >0$, sean los vectores 
+
+	\begin{equation}
+	\label{eq0: 10ab}
+	c_{n, \omega} := \left( \sqrt{\frac{2}{n}} cos
+	\left(2 \pi \omega \frac{m}{n}
+	\right) \right)_{0 \leq m \leq n-1}
+	\hspace{0.2cm} \textit{y} \hspace{0.2cm} 
+	s_{n, \omega} := \left( \sqrt{\frac{2}{n}} sin
+	\left(2 \pi \omega \frac{m}{n}
+	\right) \right)_{0 \leq m \leq n-1}.
+	\end{equation}
+
+El subconjunto $\cali{F}_{n}$ de $\IR^{n}$ definido como
+
+	\begin{itemize}
+	\item $\cali{F}_{n} : = \{ c_{n,0}, c_{n,1}, s_{n,1},
+	\ldots , c_{n,M-1}, s_{n,M-1}, c_{n,M} \}$ si $n$ es par
+	(o sea, si $n=2M$), y como
+	\item $\cali{F}_{n} : = \{ c_{n,0}, c_{n,1}, s_{n,1},
+	\ldots , c_{n,M-1}, s_{n,M-1} \}$ si $n$ es impar
+	(o sea, si $n=2M-1$)
+	\end{itemize}
+	
+es una base ortonormal del $\IR-$espacio vectorial $\IR^{n}$.
+\end{prop}
+
+\TODO{Deberías poner una imagen de cómo muestreas sinusoides para
+obtener los vectores de la base. Tal vez deberías introducir el 
+término ``vector de frecuencia''.}
+
+\noindent
+\textbf{Demostración.}
+Supongamos $n$ par. Si $0 \leq \omega_{1}, \omega_{2} \leq M$
+son enteros, entonces
+$\omega_{1} + \omega_{2}$ sólo es divisible por $n$ si ambos números
+son iguales a $M$. Si suponemos a $\omega_{1}$ y $\omega_{2}$ distintos, 
+entonces
+
+\begin{align*}
+\langle c_{, \omega_{1}} , c_{n, \omega_{2}} \rangle = &
+\frac{1}{n} \suma{m=0}{n-1}{cos \left(2 \pi \omega_{1} \frac{m}{n} \right) \cdot 
+cos \left(2 \pi \omega_{2} \frac{m}{n} \right)} \\
+= &\frac{1}{2n} \left(
+cos \left(2 \pi (\omega_{1} + \omega_{2}) \frac{m}{n} \right) +
+cos \left(2 \pi (\omega_{1} - \omega_{2}) \frac{m}{n} \right)
+\right) \\
+= & \frac{1}{4n} (
+\suma{m=0}{n-1}{
+(exp(2 \pi m(\omega_{1}+\omega_{2})i/n) +
+exp(-2 \pi m(\omega_{1}+\omega_{2})i) } \\
+&  + exp(2 \pi m(\omega_{1}-\omega_{2})i/n) +
+exp(-2 \pi m(\omega_{1}-\omega_{2})i)) )\\
+\textit{(suma geométrica)} = & 
+\frac{exp(2 \pi i (\omega_{1}+\omega_{2}))-1}{4n (exp(2 \pi i (\omega_{1}+\omega_{2})/n)-1)} +
+\frac{exp(- 2 \pi i (\omega_{1}+\omega_{2}))-1}{4n (exp(-2 \pi i (\omega_{1}+\omega_{2})/n)-1)}
+\\
+& + 
+\frac{exp(2 \pi i (\omega_{1}-\omega_{2}))-1}{4n (exp(2 \pi i (\omega_{1}-\omega_{2})/n)-1)} +
+\frac{exp(- 2 \pi i (\omega_{1}-\omega_{2}))-1}{4n (exp(-2 \pi i (\omega_{1}-\omega_{2})/n)-1)};
+\\
+\end{align*}
+
+\noindent
+puesto que $\omega_{1}+\omega_{2}$ y $\omega_{1}-\omega_{2}$
+son ambos enteros, según la proposición 
+\ref{prop: propiedades exp compleja} las exponenciales de los numeradores
+de esta última expresión son todas iguales a uno, luego, 
+$\langle c_{n, \omega_{1}} , c_{n, \omega_{2}} \rangle  =0$. 
+
+
+Con argumentos similares se prueba 
+que todos los elementos de $\cali{F}_{n}$ tienen norma uno, así como
+la ortogonalidad entre dos elementos
+distintos del conjunto $\cali{F}_{n}$, por lo tanto, la independencia lineal de
+este conjunto, luego, el que $\cali{F}_{n}$ sea base 
+(ortonormal) de $\IR^{n}$.
+
+
+\QEDB
+\vspace{0.2cm}
+
+
+
+\begin{defi}
+Sea $n \in \IN$, $n \geq 2$. Llamaremos a la BON
+$\cali{F}_{n}$ de $\IR^{n}$ definida en \ref{prop: base de fourier version real}
+la \textbf{base de Fourier real de dimensión $n$}.
+\end{defi}
+
+Observe que $\cali{F}_{n}$, a diferencia de $\cali{B}_{n} \subseteq \IC^{n}$, 
+considera frecuencias enteras no mayores a $M := \lceil \frac{n}{2} \rceil$
+(cuando $n$ es par) o a $M-1$ (cuando $n$ es impar), mientras que
+en $\cali{B}_{n}$ se consideran las frecuencias enteras entre $0$
+y $n-1$ (inclusivo). Es decir, si 
+\TODO{vamos a sintentizar a una señal respecto a menos frecuencias enteras.} 
+
+
+
+\textbf{Ejemplo:} Consideremos a la señal 
+\begin{equation}
+\label{eq2: 10ab}
+x=(-0.5,-8,-5.3,15,-0.3,6,4) \in \IR^{7}.
+\end{equation}
+
+Según la construcción de $\cali{F}_{7}$ (c.f. 
+proposición \ref{prop: base de fourier version real}),
+una expresión de $x$ respecto a $\cali{F}_{7}$ 
+es una síntesis de $x$ a partir de señales 
+de frecuencias $\omega = 0,1,2,3$. En la imágen de abajo
+se muestran los coeficientes de $x$ respecto a $\cali{F}_{7}$.
+
+\begin{figure}[H]
+	\sidecaption{
+	Se muestran la gráfica de $x$ junto con la gráfica de los
+	coeficientes de $x$ respecto a la BON $\cali{F}_{7}$. Observe 
+	que, por definición, sólo un vector de $\cali{F}_{7}$ tiene frecuencia
+	cero (i.e. es constante), mientras que para las otras frecuencias
+	tenemos dos vectores de la misma frecuencia, uno construido a partir de un 			coseno y otro a partir de un seno.
+	\label{fig: ejFrecuencia 1}
+	}
+	\centering
+	\includegraphics[scale=0.4]{ejFrecuencia_1} 
+\end{figure}	
+
+Se tiene la siguiente descomposición
+\sidenote{Se redondearon los coeficientes.} de $x$;
+
+\[
+x = 4.12 c_{0} - 8.76c_{1} -7.35s_{1}+
+4.77c_{2}-10s_{2}+0.14c_{3}+9.91s_{3}.
+\]
+A continuación mostramos las gráficas
+de los sinusoides que fueron discretizados
+para obtener los vectores de frecuencia
+$0,1,2$ y $3$ en los que descompusimos a $x$.
+
+\begin{figure}[H]
+	\sidecaption{
+	Aporte de frecuencia $0$.
+	\label{fig: ejFrecuencia 2}
+	}
+	\centering
+	\includegraphics[scale=0.4]{ejFrecuencia_2} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Aporte de frecuencia $1$.
+	\label{fig: ejFrecuencia 3}
+	}
+	\centering
+	\includegraphics[scale=0.4]{ejFrecuencia_3} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Aporte de frecuencia $2$.
+	\label{fig: ejFrecuencia 4}
+	}
+	\centering
+	\includegraphics[scale=0.4]{ejFrecuencia_4} 
+\end{figure}	
+
+
+\begin{figure}[H]
+	\sidecaption{
+	Aporte de frecuencia $3$.
+	\label{fig: ejFrecuencia 5}
+	}
+	\centering
+	\includegraphics[scale=0.4]{ejFrecuencia_5} 
+\end{figure}	
+
+Sumando todas las gráficas de la derecha, obviamente
+obtenemos una función de cosenos y senos tal que,
+al muestrearla uniformemente en $[0,1]$, obtenemos
+al vector $x$ \eqref{eq2: 10ab}.
+
+\begin{figure}[H]
+	\sidecaption{
+	En morado se muestra la gráfica de la función suma
+	de las gráficas derechas en las figuras anteriores.
+	\label{fig: ejFrecuencia 6}
+	}
+	\centering
+	\includegraphics[scale=0.45]{ejFrecuencia_6} 
+\end{figure}	
+
+
+\TODO{Tal vez el algoritmos de la FFT no merezca una subsección. Mejor sólo 
+exboza los detalles y cite al libro.}
 \TODO{Para esto puedes apoyarte mucho en las notas del libro 
 de Algorithms. Eso sí lo entendí bien.}
 
