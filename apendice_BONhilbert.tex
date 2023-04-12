@@ -1,12 +1,12 @@
 \section{Bases ortonormales de espacios de Hilbert}
-
-
-
-
+\label{Bases ortonormales de espacios de Hilbert}
 
 En general, dado un $F-$espacio vectorial $V$,
 si uno acepta el axioma de elección, siempre cuenta con 
-bases para este espacio; la importancia de 
+bases para este espacio,
+es decir, de subconjuntos de $V$ que son tanto linealmente
+independientes (término abreviado como ``l.i.'') como generadores
+de todo el espacio; la importancia de 
 estas es obvia pues, por definición, una base permite representar
 de forma única a un elemento $v \in V$ por medio
 de una colección de escalares. 
@@ -15,11 +15,11 @@ de una colección de escalares.
 Puede demostrarse
 que, dado $A \subseteq V$, el que $A$ sea base de $V$
 equivale a que $A$ sea un maximal linealmente
-independiente \TODO{referencia
-a este resultado}; esto último significa
+independiente (c.f. sección 1.7 de \cite{friedberg}), es decir,
 que todo subconjunto  linealmente
-independiente $A'$ de $V$ que contenga
+independiente de $V$ que contenga
 a $A$ de hecho coincide con $A$.
+
 
 El tener además en $V$ definido un producto punto
 dota de estructura extra al espacio, en particular, 
@@ -33,12 +33,34 @@ la siguiente pregunta: en un $F-$espacio vectorial $V$
 con producto punto
 cualquiera, ¿es cierto que todo ortonormal maximal es también
 maximal l.i., o sea, una base
-del espacio? Como se establece 
+del espacio? 
+
+Antes de proceder, 
+conviene dejar por escrito estos dos conceptos.
+
+\begin{defi} \label{defi: BON y base de Hamel}
+Sea $V$ un espacio vectorial con producto punto.
+Si $A$ es un subconjunto de $V$ que es 
+maximal con respecto a la propiedad de
+\begin{itemize}
+\item ser linealmente independiente, entonces lo llamaremos
+\textbf{base de Hamel} de $V$
+\item ser ortonormal, entonces lo llamaremos
+\textbf{base ortonormal} de $V$ (y abreviamos este
+nombre como \textbf{BON}).
+\end{itemize}
+\end{defi}
+
+
+Como se establece 
 fácilmente en la siguiente proposición,
-en el caso finito dimensional, la respuesta a esta
-pregunta es positiva.
+\textit{en el caso finito dimensional}, la respuesta a la pregunta
+planteada es positiva.
 
 \begin{prop}
+\textbf{(en espacios de Hilbert de dimensión finita, toda BON es
+base de Hamel)}
+\label{prop: en dimension finita toda BON es base de Hamel}
 Sea $V$ un espacio finito dimensional
 con producto punto. Si $A$
 es un subconjunto ortonormal maximal de $V$, entonces
@@ -64,28 +86,12 @@ a $A$ (contradicción).
 \QEDB
 \vspace{0.2cm}
 
-Conviene dejar por escrito los dos conceptos discutidos
-antes en una definición. 
-
-\begin{defi} \label{defi: BON y base de Hamel}
-Sea $V$ un espacio vectorial con producto punto.
-Si $A$ es un subconjunto de $V$ que es 
-maximal con respecto a la propiedad de
-\begin{itemize}
-\item ser linealmente independiente, entonces lo llamaremos
-\textbf{base de Hamel} de $V$
-\item ser ortonormal, entonces lo llamaremos
-\textbf{base ortonormal} de $V$ (y abreviamos este
-nombre como \textbf{BON}).
-\end{itemize}
-\end{defi}
-
 
 Como se comenta en \cite{mse1},
 en el caso en el que el espacio de Hilbert $V$
-no sea infinito-dimensional, una base 
-Hamel de este espacio \textbf{no} puede ser una
-base ortonormal del espacio.
+no sea infinito-dimensional, \textbf{una base 
+Hamel de este espacio no puede ser una
+base ortonormal del espacio.}
 
 Así, en general los sistemas de representación
 descritos en la definición 
@@ -323,6 +329,7 @@ Llegamos entonces a la siguiente contradicción:
 
 
 \begin{nota}
+\label{nota: sobre la identidad de parseval}
 \textbf{(sobre la identidad de Parseval en el
 caso finito dimensional)}
 Puesto que, para el desarrollo teórico de este trabajo de tesis,
@@ -330,9 +337,7 @@ se tratará siempre con espacios de Hilbert finito dimensionales, luego, con
 bases ortonormales finitas, conviene
 reescribir algunos puntos del teorema 
 \ref{thm: Coway, 4.13} en este caso particular.
-Digamos que $dim(\cali{H})=n$ (\TODO{aquí debes de haber
-discutido ya la compatibilidad de conceptos para el caso
-de dimensión finita}); si 
+Digamos que $dim(\cali{H})=n$; si 
 $\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
 BON del espacio de Hilbert $\cali{H}$, entonces, para todo
 $h \in \cali{H}$, se tiene que 
@@ -523,6 +528,7 @@ Conway demuestra esto en p. 15.}
 \end{cor}
 
 \begin{cor}
+\label{cor: proyeccion en terminos de BON}
 \textbf{(Caso particular de \ref{cor: proyeccion en terminos de una BON} para
 espacios de dimensión finita)}
 Sean $V$ un espacio de Hilbert, $W$ un subespacio cerrado de $V$

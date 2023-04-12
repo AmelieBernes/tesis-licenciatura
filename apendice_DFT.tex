@@ -98,9 +98,19 @@ son iguales.
 \QEDB
 \vspace{0.2cm}
 
-\TODO{Aquí la figura de siempre:)}
-
-
+\begin{figure}[H]
+	\sidecaption{
+	Para construir gráficamente a las raíces $n-$ésimas de la
+	unidad, se debe dividir, a partir del punto $(0,1)$, a la
+	circunferencia unitaria en $n$ partes iguales. Según esta construcción
+	y la interpretación geométrica de la multiplicación compleja, es claro
+	que multiplicando a $z_{n,1}$ consigo misma se obtienen a
+	todas las demás raíces $n-$ésimas.
+	\label{fig: raices unidad}
+	}
+	\centering
+	\includegraphics[scale=0.53]{raices_unidad} 
+\end{figure}	
 
 \subsection{DFT}
 
@@ -108,12 +118,13 @@ son iguales.
 
 
 \begin{prop}
+\label{prop: construccion Bn}
 Sea $n \in \IN$. El conjunto
 
 \begin{equation}
 \label{eq2: 8ab}
 \cali{B}_{n} : = \{
-e_{\omega} = \left(
+e_{n,\omega} = \left(
 \frac{1}{\sqrt{n}} exp \left(
 2 \pi i \omega \frac{m}{n}
 \right)
@@ -128,10 +139,10 @@ vectorial $\IC^{n}$.
 \noindent
 \textbf{Demostración.}
 Calculemos el producto punto de dos elementos
-$e_{\omega_{1}}$ y $e_{\omega_{2}}$ del conjunto \eqref{eq2: 8ab};
+$e_{n,\omega_{1}}$ y $e_{n,\omega_{2}}$ del conjunto \eqref{eq2: 8ab};
 si $\omega := \omega_{1}-\omega_{2}$,
 \begin{align*}
-\langle e_{w_{1}}, e_{w_{2}} \rangle = &
+\langle e_{n,w_{1}}, e_{n,w_{2}} \rangle = &
 \frac{1}{n}
 \suma{m=0}{n-1}{exp \left( 2 \pi i \frac{m}{n} \omega_{1} \right)
 \cdot \overline{ exp \left( 2 \pi i \frac{m}{n} \omega_{2} \right) }} \\
@@ -151,7 +162,7 @@ esta última es una suma geométrica.
 	de $n$ en este intervalo es cero), luego, $z_{n, \omega} \neq 1$.
 	En este caso se tiene entonces que 
 	\[
-	\langle e_{w_{1}}, e_{w_{2}} \rangle = 
+	\langle e_{n,w_{1}}, e_{n,w_{2}} \rangle = 
 	\frac{1}{n}\suma{m=0}{n-1}{(z_{n, \omega})^{m}}
 	= \frac{1}{n} \cdot \frac{(z_{n, \omega})^{n}-1}{z_{n, \omega}-1}=
 	\frac{1}{n} \cdot \frac{1-1}{z_{n, \omega}-1}=0.
@@ -159,7 +170,7 @@ esta última es una suma geométrica.
 	
 	\item Si $\omega_{1} = \omega_{2}$, entonces $\omega = 0$, y
 	\[
-	\langle e_{w_{1}}, e_{w_{2}} \rangle = 
+	\langle e_{n,w_{1}}, e_{n,w_{2}} \rangle = 
 	\frac{1}{n}\suma{m=0}{n-1}{(z_{n, 0})^{m}}
 	= \frac{1}{n}\suma{m=0}{n-1}{1} = \frac{1}{n} \cdot n = 1.
 	\]
@@ -168,7 +179,7 @@ esta última es una suma geométrica.
 Demostramos así que los elementos de $\cali{B}_{n}$
 tienen norma uno (c.f. \TODO{ref ec. norma en $\IC^{n}$}) y que además
 son ortogonales
-dos a dos, luego, según \TODO{ref}, $\cali{B}_{n}$ es un subconjunto l.i. 
+dos a dos, luego, $\cali{B}_{n}$ es un subconjunto l.i. 
 de $\IC^{n}$; como $\IC^{n}$ es un $\IC-$espacio vectorial de 
 dimensión $n$, concluimos lo deseado.
 \QEDB
@@ -178,45 +189,13 @@ Por ser \eqref{eq2: 8ab} una BON de $\IC^{n}$, siempre es
 posible expresar a un vector $x = (x_{m})_{0 \leq m \leq n-1} \in \IC^{n}$
 como combinación lineal de los elementos de \eqref{eq2: 8ab}
 y además los coeficientes están dados por los productos puntos
-de $x$ y los elementos de \eqref{eq2: 8ab}, que son
-
-\begin{align*}
-\langle x, e_{\omega} \rangle = & 
-\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
-2 \pi i \omega \frac{m}{n}
-\right)} \\
-= & 
-\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} 
-\left(
-exp \left( \frac{2 \pi i }{n} \omega
-\right) \right)^{m}} \\
-= & A_{x}(z_{n, \omega}),
-\end{align*}
-
-
-\noindent
-donde $z_{n, \omega}$ es como en \eqref{eq3: 8ab} y 
-$A_{x} = A_{x}(t) \in \IC[t]$ es el polinomio de 
-coeficientes complejos definido 
-a partir de $x$ como sigue:
-
-	\begin{equation}
-		\label{eq4: 8ab}
-		A_{x}(t) := \suma{m=0}{n-1}{\frac{x_{m}}{\sqrt{n}} t }\in \IC[t];
-	\end{equation}
-
-\noindent
-así, \textbf{calcular los coeficientes de $x \in \IC^{n}$ respecto
-a la BON $\cali{B}_{n}$ es lo mismo que evaluar al polinomio 
-$A_{x}$ de grado $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
-$n-$ésimas de la unidad.} Un algoritmo para evaluar eficientemente
-polinomios es pues necesario.\TODO{cita el FFT}
+de $x$ y los elementos de \eqref{eq2: 8ab}.
 
 \begin{defi}
 Al proceso de calcular los coeficientes de $x$
 respecto a $\cali{B}_{n}$
 se le conoce como el \textbf{cálculo de la 
-transformada discreta de $x$}
+transformada discreta de Fourier de $x$}
 \end{defi}
 
 
@@ -241,7 +220,7 @@ transformada discreta de $x$}
 		\includegraphics[scale=0.8]{tiempo_freq.png} 
 		\caption{Usualmente uno representa a una señal discreta
 		$x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio
-		de la representación es el tiempo. Pero, según lo explicado,
+		de la representación es el tiempo. Pero
 		también se puede representar unívocamente a $x$ con sus
 		coeficientes respecto a la base de frecuencias 
 		$\cali{B}_{n}$; en este caso, puesto que cada coeficiente da
@@ -252,19 +231,63 @@ transformada discreta de $x$}
  \end{figure}
 
 
+Calcular entonces la transformada discreta de Fourier
+de $x$ consiste en calcular a los productos
+punto $\langle x, e_{n,\omega} \rangle $, que son
+
+\begin{align*}
+\langle x, e_{n,\omega} \rangle = & 
+\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
+2 \pi i \omega \frac{m}{n}
+\right)} \\
+= & 
+\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} 
+\left(
+exp \left( \frac{2 \pi i }{n} \omega
+\right) \right)^{m}} \\
+= & A_{x}(z_{n, \omega}),
+\end{align*}
+
+
+\noindent
+donde $z_{n, \omega}$ es como en \eqref{eq3: 8ab} y 
+$A_{x} = A_{x}(t) \in \IC[t]$ es el polinomio de 
+coeficientes complejos definido 
+a partir de $x$ como sigue:
+
+	\begin{equation}
+		\label{eq4: 8ab}
+		A_{x}(t) := \suma{m=0}{n-1}{\frac{x_{m}}{\sqrt{n}} t }\in \IC[t];
+	\end{equation}
+
+\noindent
+así, \textbf{calcular la transformada
+discreta de Fourier de $x$ es lo mismo que evaluar al polinomio 
+$A_{x}$ de grado $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
+$n-$ésimas de la unidad.} 
+
+
+\begin{nota}
+\textbf{(la transformada rápida de Fourier)}
+Según este último párrafo, calcular transformadas discretas
+de Fourier requiere de algoritmos eficientes para evaluar
+polinomios en raíces $n-$ésimas de la unidad.
+\end{nota}
+
+
 Al usar a $\cali{B}_{n}$ como sistema de representación en
 $\IC^{n}$, lo que estamos haciendo es representar a
 un $x = (x_{m})_{0 \leq m \leq n-1}$ como combinación
 lineal de los vectores 
 
 \[
-e_{\omega} = \frac{1}{\sqrt{n}} \left( cos
+e_{n,\omega} = \frac{1}{\sqrt{n}} \left( cos
 \left( 2 \pi \omega \frac{m}{n} \right)
 + i sen \left( 2 \pi \omega \frac{m}{n}\right) \right)_{0\leq m \leq n-1},
 \hspace{0.2cm} 0 \leq \omega \leq n-1;
 \]
 observe que las partes reales de las
-entradas de $e_{\omega} \in \IC^{n}$ se obtienen de tomar $n$
+entradas de $e_{n,\omega} \in \IC^{n}$ se obtienen de tomar $n$
 muestras uniformes de la función 
 $c_{\omega}(t) := \frac{1}{\sqrt{n}} cos (2 \pi \omega t)$ (o sea, de la función
 coseno de amplitud $\frac{1}{\sqrt{n}}$, frecuencia $\omega$ y desfase $0$)
@@ -272,9 +295,6 @@ y, similarmente,
 las partes imaginarias de las entradas se obtienen muestreando
 uniformemente a la función 
 $s_{\omega}(t) := \frac{1}{\sqrt{n}}  sin (2 \pi \omega t)$.
-
-\TODO{En los vectores $e_{\omega}$ deberías poner la dependencia
-a la dimensión $n$...}
 
 \begin{figure}[H]
 	\sidecaption{
@@ -289,23 +309,24 @@ a la dimensión $n$...}
 	\includegraphics[scale=0.44]{construccion_Bn} 
 \end{figure}	
 
-Según esto, el vector $e_{\omega}$ se construye a partir
+Según esto, el vector $e_{n,\omega}$ se construye a partir
 de funciones de frecuencia $\omega$; considerando esto
 y el que $\cali{B}_{n}$ sea una BON de $\IC^{n}$ (luego, el
-que se valga la igualdad de Parseval \TODO{ref}), tenemos que
+que se valga la identidad de Parseval,
+c.f. nota \ref{nota: sobre la identidad de parseval}), tenemos que
 la síntesis
 
 \[
-x = \suma{\omega=0}{n-1}{\langle x, e_{\omega} \rangle e_{\omega}}
+x = \suma{\omega=0}{n-1}{\langle x, e_{n,\omega} \rangle e_{n,\omega}}
 \]
 
 es una expresión de $x$ en términos de vectores de frecuencia
 $\omega$ y que los respectivos coeficientes 
-$\langle x, e_{\omega} \rangle$ indican qué tanto 
+$\langle x, e_{n,\omega} \rangle$ indican qué tanto 
 contribuye la frecuencia $\omega$ para construir a $x$.
 
 Es por eso que al proceso de considerar representaciones
-de señales complejas finitas respecto a las bases de Fourie
+de señales complejas finitas respecto a las bases de Fourier
 se le conoce como  
 \textbf{realizar un análisis espectral.}
 
@@ -314,12 +335,11 @@ se le conoce como
 
 En el caso en el que todas las entradas de un vector
 $x = (x_{m})_{0 \leq m \leq n-1}$ sean reales, se puede definir
-una base ortonormal de $\IR^{n}$ que se defina en base a muestreos uniformes
+una base ortonormal de $\IR^{n}$, 
+análoga a la BON $\cali{B}_{n}$ de $\IC^{n}$ construida en 
+\ref{prop: construccion Bn},
+a partir de muestreos uniformes
 de sinusoides de frecuencias enteras.
-Esta base será entonces, así como lo era \TODO{ref} para el 
-caso complejo, un sistema de representación en el que 
-
-\TODO{sintetizar una señal en términos de frecuencias.}
 
 \begin{prop}
 \label{prop: base de fourier version real}
@@ -414,10 +434,12 @@ Observe que $\cali{F}_{n}$, a diferencia de $\cali{B}_{n} \subseteq \IC^{n}$,
 considera frecuencias enteras no mayores a $M := \lceil \frac{n}{2} \rceil$
 (cuando $n$ es par) o a $M-1$ (cuando $n$ es impar), mientras que
 en $\cali{B}_{n}$ se consideran las frecuencias enteras entre $0$
-y $n-1$ (inclusivo). Es decir, si 
-\TODO{vamos a sintentizar a una señal respecto a menos frecuencias enteras.} 
-
-
+y $n-1$ (inclusivo); así, si decidimos representar
+a una señal $x \in \IR^{n}$ en base a $\cali{F}_{n} \subseteq \IR^{n}$
+y no en base a $\cali{B}_{n} \subseteq \IC^{n}$, sintetizaremos a $x$
+respecto a frecuencias enteras acotadas por $M$ o por $M-1$ 
+(dependiendo de la paridad de $n$), y no respecto a frecuencias
+menores a $n$.
 
 \textbf{Ejemplo:} Consideremos a la señal 
 \begin{equation}
@@ -445,8 +467,8 @@ se muestran los coeficientes de $x$ respecto a $\cali{F}_{7}$.
 	\includegraphics[scale=0.4]{ejFrecuencia_1} 
 \end{figure}	
 
-Se tiene la siguiente descomposición
-\sidenote{Se redondearon los coeficientes.} de $x$;
+Redondeando los coeficientes, 
+se tiene la siguiente descomposición de $x$;
 
 \[
 x = 4.12 c_{0} - 8.76c_{1} -7.35s_{1}+
@@ -508,29 +530,3 @@ al vector $x$ \eqref{eq2: 10ab}.
 	\centering
 	\includegraphics[scale=0.44]{ejFrecuencia_6} 
 \end{figure}	
-
-
-\TODO{Tal vez el algoritmos de la FFT no merezca una subsección. Mejor sólo 
-exboza los detalles y cite al libro.}
-\TODO{Para esto puedes apoyarte mucho en las notas del libro 
-de Algorithms. Eso sí lo entendí bien.}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

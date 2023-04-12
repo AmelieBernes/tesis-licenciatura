@@ -4,7 +4,7 @@
 Es gracias a la desigualdad de Cauchy-Schwarz
 que es posible introducir una de las nociones
 más valiosas con las que se cuenta en un espacio
-vectorial con producto punto, a saber, la de ángulo entre dos
+vectorial con producto punto, a saber, la de \textbf{ángulo} entre dos
 vectores.
 
 Si $v$ y $w$ son dos elementos no cero de $V$, entonces,
@@ -21,21 +21,40 @@ $\theta \in [0, \pi]$ tal que
 cos(\theta)= \frac{\langle v, w \rangle}{||v|| \cdot ||w||};
 \]
 a tal número $\theta$ se le denomina el 
-\textbf{ángulo formado por los vectores $v$ y $w$}.
+\textbf{ángulo formado por los vectores $v$ y $w$},
+y lo denotamos por $\measuredangle (v, w)$
 
-\begin{marginfigure}
-\includegraphics[scale=0.1]{coseno}
-\end{marginfigure}
+Si alguno de los vectores $v$ o $w$ fuese cero, definimos
+el ángulo entre estos como cero.
 
-Si alguno de estos dos vectores fuese cero, definimos
-el ángulo entre estos como cero. \TODO{Aquí deberías
-de poner qué significan los casos extremos. Recuerda
-la teoría de Spivak, cálculo en varias variables.}
+\begin{figure}[H]
+	\sidecaption{
+	Si $\theta$ es el ángulo entre $v$ y $w$,
+	los casos extremos en los que $\theta \in \{ 0, \pi \}$
+	son aquellos en los que $v$ y $w$ son múltiplos escalares
+	uno del otro, mientras que, si $cos(\theta)=0$, o sea, 
+	si $\theta = \frac{\pi}{2}$, entonces $v$ y $w$ son perpendiculares.
+ 	\label{fig:coseno}
+	}
+	\centering
+	\includegraphics[scale=0.5]{coseno} 
+\end{figure}	
 
 
+Terminamos esta sección con una sencilla observación, que es 
+consecuencia de la linealidad del producto punto y de la norma.
 
+\begin{obs}
+\label{obs: angulo se preserva por mult. esc.}
+\textbf{(El ángulo entre dos vectores no se ve afectado
+por multiplicación por un mismo escalar)}
+Sean $V$ un espacio de Hilbert, $u, v \in V$ no cero.
+Si $a \in F$ es un escalar no cero, entonces
+$\measuredangle (v, w) = \measuredangle (a \cdot v, a \cdot w)$
+\end{obs}
 
-\section{Definición de ángulo entre un punto y un subespacio en un espacio euclideo}
+\section{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}
+\label{sec: def del angulo entre un punto y un subespacio cerrado}
 
 Ya vimos en \ref{angulo entre elementos de un espacio con producto punto}
 cómo definir el ángulo entre dos elementos de un espacio
@@ -68,11 +87,9 @@ Si $V$, $W$ y $x$ son como en la definición
 \ref{def: angulo punto subespacio}, entonces
 
 \begin{itemize}
-\item \[
-\measuredangle (x, W) = min \{ \measuredangle(x,w) \hspace{0.1cm} :
- \hspace{0.1cm} w \in W \},
-\]
-y 
+\item 
+$\measuredangle (x, W) = min \{ \measuredangle(x,w) \hspace{0.1cm} :
+ \hspace{0.1cm} w \in W \}$, y
 
 \item $cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}$.
 \end{itemize}
@@ -85,8 +102,8 @@ y
 \item  Sea $w$ un elemento cualquiera de $W$.
 Puesto que el ángulo entre dos vectores es
 preservado bajo multiplicación por escalares
-(c.f. \TODO{debes poner en el apéndice este resultado, 
-luego lo citas en el ejemplo}), sin pérdida de generalidad
+(c.f. observación
+\ref{obs: angulo se preserva por mult. esc.}), sin pérdida de generalidad
 podemos suponer que 
 \begin{equation}
 \label{eq1: 9Feb}
@@ -116,7 +133,7 @@ que
 \[
 cos \left( \measuredangle (x,w) \right) =
 \frac{\langle x , w \rangle}{||x||\cdot ||w||} \leq
-\frac{\langle x ,  \Pi_{W}(x)  \rangle}{||x||\cdot ||w||} =
+\frac{\langle x ,  \Pi_{W}(x)  \rangle}{||x||\cdot ||\Pi_{W}(x) ||} =
 cos \left( \measuredangle \left(x, \Pi_{W}(x) \right) \right);
 \]
 del que la función coseno sea decreciente en el intervalo
@@ -147,105 +164,25 @@ cos \left( \measuredangle (x, \Pi_{W}(x)) \right)  \\
 \QEDB
 \vspace{0.2cm}
 
-
-\TODO{Deberías de exĺicar por qué $\measuredangle (x, W) \in [0, \frac{\pi}{2}]$
-y no $\measuredangle (x, W) \in [0, \pi]$.}
-
-\TODO{Pon ejemplos gráficos en dimensión 2 y 3.
-Creo que en dimensión 2 el ángulo entre $x$ y un vector
-de $W$ es siempre el mismo.}
-
-
-\subsection{Cosine similarity}
-\label{cosine similarity}
-
-Sea $V$ un espacio euclideo. \TODO{Ve si siempre usas este
-nombre. Creo que siempre lo cambias jaja.}
-Sean $W \subseteq V$ un subespacio cerrado de $V$ y 
-$x$ un elemento cualquiera de $V$. Hay dos formas ``naturales''
-de intentar medir la cercanía de $x$ a $W$:
-\begin{itemize}
-\item[a)] \textbf{Usando la distancia euclidea
-de $x$ a $W$}, es decir, tomando la norma del vector
-$x - \Pi_{W}(x)$ (\TODO{referencia que diga que así se mide
-la distncia. Tal vez Ana Irene lo tenga.}) como una medida
-de qué tanto pertenece $x$ a $W$.
-\item[b)] \textbf{Usando el ángulo que $x$ forma con $W$}: como ya
-vimos en la sección \TODO{ref.}, el ángulo 
-$\measuredangle (x, W) \in [0, \frac{\pi}{2}]$
-entre $x$ y $W$
-está definido como el ángulo entre $x$ y su proyección
-$\Pi_{W}(x)$ a $W$, luego, 
-	\begin{itemize}
-		\item entre más cercano a cero sea $\measuredangle (x, W)$,
-		$x$ se aleja más del plano $W$, pues es casi perpendicular 
-		al elemento de $W$ más cercano a $x$, y
-		
-		\item entre más cercano a uno sea $\measuredangle (x, W)$,
-		más se acerca $x$ a ser paralelo a su representante en $W$,
-		luego, más se acerca $x$ a pertenecer a $W$.
-	\end{itemize}
-\end{itemize}
-
-\begin{figure}[H]
-	\sidecaption{
-	Esquema de dos formas en las que uno puede intentar medir
-	qué tan afín es una señal $x$.
-	\label{fig: dos formas de medir distancia a plano}
-	}
-	\centering
-	\includegraphics[scale= 1]{ 18Sept_1} 
-\end{figure}	
-
-El primer enfoque se basa en la definición de distancia de $x$
-a $W$; el segundo, en el ángulo que $x$ forma con $W$. Este segundo
-enfoque es conocido como ``\textbf{cosine similarity}'' en
-inglés (c.f. \TODO{ref. wikipedia}). Una ventaja que será clave
-para nosotros del segundo método sobre el primero se
-expone en el siguiente resultado.
-
-
-\begin{prop}
-\label{prop: angulo se conserva bajo mult. esc.}
-Sean $V$ un espacio euclideo, $W \subseteq V$ cerrado, $x \in V$,
-$a \in \IR - \{ 0 \}$. Si $|a| \neq 1$, la distancia euclídea 
-de $a \cdot x$ a $W$ es distinta
-a la de $x$ a $W$, mientras que el ángulo que forman $a \cdot x$ y $x$
-con $W$ es el mismo.
-\end{prop}
-\noindent
-\textbf{Demostración.}
-En efecto, 
-
-\[
-|| a \cdot x - \Pi_{W}(a \cdot x) || = |a| \cdot || x - \Pi_{W}(x) ||, 
-\]
-y
-
-\begin{align*}
-\measuredangle (a \cdot x, W_{n,1}):=& \measuredangle(a \cdot x, \Pi_{W_{n,1}}(a \cdot x)) \\
-= & \frac{\langle a \cdot x , \Pi_{W_{n,1}}(a \cdot x) \rangle}{|| a \cdot x || \cdot 
-|| \Pi_{W_{n,1}}(a \cdot x)  ||} \\
-= & \frac{a^{2}  \langle   x , \Pi_{W_{n,1}}(x) \rangle}{a^{2} ||  x || \cdot 
-|| \Pi_{W_{n,1}}( x)  ||}  \\
-= & \measuredangle (x, W_{n,1}).
-\end{align*}
-
-
-\QEDB
-\vspace{0.2cm}
-
-Así el criterio $b)$ no se ve afectado por multiplicación escalar,
-mientras que el $a)$ sí.
- 
+\begin{nota}
+Observe que, según el segundo punto de la proposición 
+\ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}, 
+el coseno entre un vector $x$ y un subespacio cerrado $W$ es
+siempre no negativo; esto nos permite acotar el rango en el que
+se encuentra el ángulo (que, por definición, es $[0, \pi]$)
+y afirmar que $\measuredangle(x, W) \in [0, \frac{\pi}{2}]$.
+\end{nota}
 
 \subsection{Caso particular en el que el subespacio en cuestión es un plano}
 \label{ap: Caso particular en el que el subespacio en cuestión es un plano}
 
-Para terminar este apartado, vamos a
-agregar unos resultados que serán usados en la teoría
-\TODO{mejora descripción.}
-
+Necesitaremos concetrarnos en el caso
+particular en el que el subespacio cerrado $W$ es 
+un plano,\sidenote{O sea, un subespacio
+de dimensión $2$.} por lo que elaboremos un poco más
+la teoría de la sección 
+\ref{angulo entre elementos de un espacio con producto punto}
+para este caso particular.
 
 La situación es la siguiente: $V$ es un $\IR-$espacio
 de Hilbert, $u$ y $v$ son elementos de $V$,
@@ -255,12 +192,12 @@ es pues un plano, digamos,
 
 
 \[
-P= span \{ u, v \}
+P := span \{ u, v \}
 \]
 
-Dado $x \in V$ unitario, nos gustaría dar una medida
-de la cercanía de $x$ con el espacio $P$; si tomamos
-al coseno del ángulo como una tal medida, según la proposición
+Dado $x \in V$ unitario, 
+el coseno del ángulo entre $x$ y $W$ es,
+según la proposición
 \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio},
 
 \begin{equation}
@@ -291,28 +228,28 @@ Basta aplicar el teorema de Gram-Schmidt
 \QEDB
 \vspace{0.2cm}
 
-Teniendo una BON de $P$ se obtiene, via la prop.
-y la expresión \eqref{eq0: 19Marzo},
-\TODO{ref; debes de poner la discusión de BON mucho antes!!}
-se obtiene una expresión de la proyección de $x$ al plano $P$ en función
-de $x$, $u$ y $z$;
+Teniendo una BON de $P$, según el 
+corolario 
+\ref{cor: proyeccion en terminos de BON}, se tiene la siguiente
+expresión para la proyección de $x$ en $P$;
 
 \begin{equation}
 \label{eq1: 19Marzo}
 \Pi_{P}(x)= \langle x, u \rangle u + \langle x, z \rangle z;
 \end{equation}
 
+\noindent
 puesto que, según la definición \eqref{eq2: 19Marzo} de 
 $z$ este vector es función de $u$ y $v$, fácilmente se
-deriva una expresión de $\Pi_{P}(x)$ (y, por lo tanto, una
-medida de la cercanía de $x$ al plano $P$) en función sólo
+puede derivar, a partir de \eqref{eq1: 19Marzo},
+una expresión de $\Pi_{P}(x)$ en función sólo
 de $x$, $u$ y $v$.
 
 	\begin{prop}
 	\label{prop: formulas 20Marzo}
-	si $x, u, v \in V$ y $P \subseteq V$ son como en la discusión anterior
-	(\TODO{pon aquí las hipótesis!}),
-	entonces 
+	Sean $V$ un espacio de Hilbert, $x \in V$ unitario,
+	$u,v \in V$ linealmente independientes. Si $P$ es el plano
+	que generan, entonces,
 
 		\begin{equation}
 		\label{eq3: 19Marzo}
@@ -329,4 +266,89 @@ de $x$, $u$ y $v$.
 		\end{equation}
  
 	\end{prop}
+
+
+
+\section{Similitud coseno}
+\label{cosine similarity}
+
+Sea $V$ un espacio de Hilbert.
+Sean $W \subseteq V$ un subespacio cerrado de $V$ y 
+$x$ un elemento cualquiera de $V$. Hay dos formas ``naturales''
+de intentar medir la cercanía de $x$ a $W$:
+\begin{itemize}
+\item[a)] \textbf{Usando la distancia euclidea
+de $x$ a $W$}, es decir, tomando la norma del vector
+$x - \Pi_{W}(x)$ como una medida
+de qué tanto pertenece $x$ a $W$.
+\item[b)] \textbf{Usando el ángulo que $x$ forma con $W$}: como ya
+vimos en la sección 
+\ref{sec: def del angulo entre un punto y un subespacio cerrado}, el ángulo 
+$\measuredangle (x, W) \in [0, \frac{\pi}{2}]$
+entre $x$ y $W$
+está definido como el ángulo entre $x$ y su proyección
+$\Pi_{W}(x)$ a $W$, luego, 
+	\begin{itemize}
+		\item entre más cercano a cero sea $\measuredangle (x, W)$,
+		$x$ se aleja más del plano $W$, pues es casi perpendicular 
+		al elemento de $W$ más cercano a $x$, y
+		
+		\item entre más cercano a uno sea $\measuredangle (x, W)$,
+		más se acerca $x$ a ser paralelo a su representante en $W$,
+		luego, más se acerca $x$ a pertenecer a $W$.
+	\end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+	\sidecaption{
+	Esquema de dos formas en las que uno puede intentar medir
+	qué tan afín es una señal $x$.
+	\label{fig: dos formas de medir distancia a plano}
+	}
+	\centering
+	\includegraphics[scale= 1]{ 18Sept_1} 
+\end{figure}	
+
+Este segundo
+enfoque es conocido como ``\textbf{cosine similarity}'' en
+inglés (c.f. \cite{cosineSim}). Una ventaja, que será clave
+para nosotros, del segundo método sobre el primero se
+expone en el siguiente resultado.
+
+
+\begin{prop}
+\label{prop: angulo se conserva bajo mult. esc.}
+Sean $V$ un espacio euclideo, $W \subseteq V$ cerrado, $x \in V$,
+$a \in \IR - \{ 0 \}$. Si $|a| \neq 1$, la distancia euclídea 
+de $a \cdot x$ a $W$ es distinta
+a la de $x$ a $W$, mientras que los 
+ángulos que forman $a \cdot x$ y $x$
+con $W$ coinciden.
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, 
+
+\[
+|| a \cdot x - \Pi_{W}(a \cdot x) || = |a| \cdot || x - \Pi_{W}(x) ||, 
+\]
+y
+
+\begin{align*}
+\measuredangle (a \cdot x, W_{n,1}):=& \measuredangle(a \cdot x, \Pi_{W_{n,1}}(a \cdot x)) \\
+= & \frac{\langle a \cdot x , \Pi_{W_{n,1}}(a \cdot x) \rangle}{|| a \cdot x || \cdot 
+|| \Pi_{W_{n,1}}(a \cdot x)  ||} \\
+= & \frac{a^{2}  \langle   x , \Pi_{W_{n,1}}(x) \rangle}{a^{2} ||  x || \cdot 
+|| \Pi_{W_{n,1}}( x)  ||}  \\
+= & \measuredangle (x, W_{n,1}).
+\end{align*}
+
+
+\QEDB
+\vspace{0.2cm}
+
+Así el criterio $b)$ no se ve afectado por multiplicación escalar,
+mientras que el $a)$ sí.
+ 
+
 

@@ -39,30 +39,39 @@
     \field{title}{Introductory real analysis}
   \endentry
 
-  \entry{DSML}{book}{}
+  \entry{conway}{book}{}
     \name{author}{1}{}{%
-      {{hash=DPKTTRVZIB}{%
-         family={Dirk P.\bibnamedelima Kroese},
-         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
-  K\bibinitperiod},
-         suffix={Zdravko I.\bibnamedelima Botev},
-         suffixi={Z\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim
-  B\bibinitperiod},
-         given={Thomas Taimre Radislav\bibnamedelima Vaisman},
-         giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
-  R\bibinitperiod\bibinitdelim V\bibinitperiod},
+      {{hash=CJB}{%
+         family={Conway},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima B},
+         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
       }}%
     }
-    \strng{namehash}{DPKZIBTTRV1}
-    \strng{fullhash}{DPKZIBTTRV1}
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CJB1}
+    \strng{fullhash}{CJB1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{DPK22}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \field{title}{Data science and machine learning: mathematical and
-  statistical methods}
-    \field{year}{2022}
+    \field{labelalpha}{Con90}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{2nd edition}
+    \field{series}{Graduate Texts in Mathematics}
+    \field{title}{A course in functional analysis}
+    \field{year}{1990}
+  \endentry
+
+  \entry{cosineSim}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Cos}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{howpublished}{\url{https://en.wikipedia.org/wiki/Cosine_similarity}}
+    \field{note}{Accessed: 2023-04-11}
+    \field{title}{Cosine similarity}
   \endentry
 
   \entry{friedberg}{book}{}
@@ -113,6 +122,29 @@
     \field{year}{1997}
   \endentry
 
+  \entry{mse1}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mse}
+    \field{extraalpha}{1}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+  \field{howpublished}{\url{https://math.stackexchange.com/questions/13641/an-orthonormal-set-cannot-be-a-basis-in-an-infinite-dimension-vector-space?}}
+    \field{note}{Accessed: 2023-04-11}
+    \field{title}{An orthonormal set cannot be a basis in an infinite dimension
+  vector space?}
+  \endentry
+
+  \entry{mse2}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mse}
+    \field{extraalpha}{2}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+  \field{howpublished}{\url{https://math.stackexchange.com/questions/1653691/why-isnt-every-hamel-basis-a-schauder-basis?}}
+    \field{note}{Accessed: 2023-04-11}
+    \field{title}{Why isn't every Hamel basis a Schauder basis?}
+  \endentry
+
   \entry{Nimark}{unpublished}{}
     \name{author}{1}{}{%
       {{hash=NK}{%
@@ -129,7 +161,7 @@
     \field{labelalpha}{Nim}
     \field{sortinit}{N}
     \field{sortinithash}{N}
-    \field{note}{http://www.kris-nimark.net/pdf/ProjectionTheorem.pdf}
+  \field{howpublished}{\url{http://www.kris-nimark.net/pdf/ProjectionTheorem.pdf}}
     \field{title}{The Projection Theorem}
   \endentry
 

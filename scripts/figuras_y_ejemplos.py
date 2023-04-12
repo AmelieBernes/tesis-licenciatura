@@ -29,6 +29,16 @@ params = {"ytick.color" : "black",
           "font.serif" : ["Computer Modern Serif"]}
 plt.rcParams.update(params)
 
+
+def formato_axis(axis):
+  """
+  Agregando los elementos que me gustan a un axis
+  """
+  axis.axhline(y=0, color='gray')
+  axis.axvline(x=0, color='gray')
+  axis.grid(True)
+  axis.legend()
+
 colores=['hotpink', 'rebeccapurple','goldenrod','gray']
 
 def figura_introduccion():
@@ -158,19 +168,20 @@ def figura_coseno():
     ax=fig.add_subplot(1,1,1)
     
     X=np.linspace(0,3.15,100)
-    plt.plot(X, np.cos(X), color="gray", linestyle="dotted", label="$y=cos(\\theta)$")
+    plt.plot(X, np.cos(X), color="black", linestyle="dotted", label="$y=cos(\\theta)$")
     
-    plt.scatter(0, 0, marker="o", color="gray", s=200, label="$v$ y $w$ son paralelos")
-    plt.scatter(3.14, 0, marker="o", color="gray", s=200)
-    plt.scatter(3.14/2, 0, marker="s", color="gray", s=200, label="$v$ y $w$ son perpendiculares")
-    plt.scatter(0.7, np.cos(0.7), marker="*", color="gray", s=300, label="$\\frac{\langle v, w \\rangle}{||v|| \cdot ||w||}$")
+    plt.scatter(0, 1, marker="o", color="black", s=200, label="$v$ y $w$ son paralelos")
+    plt.scatter(3.14, -1, marker="o", color="black", s=200)
+    plt.scatter(3.14/2, 0, marker="s", color="black", s=200, label="$v$ y $w$ son perpendiculares")
+    plt.scatter(0.7, np.cos(0.7), marker="*", color="black", s=300, label="$\\frac{\langle v, w \\rangle}{||v|| \cdot ||w||}$")
     
     
     plt.text(0,0.1,"0", fontsize=17)
     plt.text(3.14,0.1,"$\pi$", fontsize=17)
     plt.text(3.14/2,0.1,"$\\frac{\pi}{2}$", fontsize=17)
-    
-    flechas_2D.dibujar_flechas_2d(fig, ax)
+   
+    ax.axhline(y=0, color = 'gray')
+    ax.axvline(x=0, color = 'gray')
     
     plt.grid()
     plt.legend()
@@ -456,6 +467,32 @@ def figura_cosenoMuestreo(w, phi, n):
     return plt.show()
 
 
+def figura_raicesUnidad(n1, n2):
+    pi = math.pi
+    fig, axis =plt.subplots(1,2)
+
+    dominio_1 = [k/n1 for k in range(n1)]
+    dominio_2 = [k/n2 for k in range(n2)]
+
+    cosenos_puntos_1=[math.cos(2*pi*t) for t in dominio_1]
+    senos_puntos_1=[math.sin(2*pi*t) for t in dominio_1]
+
+    cosenos_puntos_2=[math.cos(2*pi*t) for t in dominio_2]
+    senos_puntos_2=[math.sin(2*pi*t) for t in dominio_2]
+
+    t = np.linspace(0, 2*np.pi, 500)
+
+    for i in range(2):
+        formato_axis(axis[i])
+        axis[i].plot(np.cos(t), np.sin(t), color='black', linestyle = 'dotted')
+    for i in range(n1):
+        axis[0].scatter(cosenos_puntos_1[i], senos_puntos_1[i], color = colores[1])
+    for i in range(n2):
+        axis[1].scatter(cosenos_puntos_2[i], senos_puntos_2[i], color = colores[1])
+
+    axis[0].set_title('$n={{ {0} }}$'.format(str(n1)))
+    axis[1].set_title('$n={{ {0} }}$'.format(str(n2)))
+    return plt.show()
 
 
 if __name__=='__main__':
@@ -466,5 +503,5 @@ if __name__=='__main__':
     #figura_demSimetrias()
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
-    figura_cosenoMuestreo(5/2, 0.3,5)
-
+    #figura_cosenoMuestreo(5/2, 0.3,5)
+    figura_raicesUnidad(5, 8)
