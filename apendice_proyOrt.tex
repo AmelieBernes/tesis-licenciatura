@@ -1,10 +1,9 @@
 \section{El teorema de la proyección ortogonal}
 \begin{teo} \label{Teo:proyOrt}
-\TODO{cambiar notación.}
 (\textbf{de la proyección ortogonal}
 ~\cite{Nimark}):
-Sean $H$ un espacio de Hilbert, $W$ un subespacio cerrado de $H$. 
-Para todo $x \in H$ existe un único $\hat{x} \in W $ tal que
+Sean $V$ un espacio de Hilbert, $W$ un subespacio cerrado de $V$. 
+Para todo $x \in V$ existe un único $\hat{x} \in W$ tal que
 \[
 ||x- \hat{x}|| = inf_{y \in W}|| x-y ||;
 \]
@@ -13,8 +12,8 @@ tal que $x-\hat{x} \in W^{\perp} $.
 \end{teo}
 
 
-En general, si $H$ es un espacio métrico y W es un subconjunto
-de este, puede definirse la distancia de un punto $x \in H$ a W como
+En general, si $V$ es un espacio métrico y W es un subconjunto
+de este, puede definirse la distancia de un punto $x \in V$ a W como
 el ínfimo del conjunto de distancias entre $x$ y puntos de $W$:
 
 \[
@@ -24,10 +23,10 @@ d(x,W)=inf\{||x-y||: y \in W \}.
 Tal ínfimo existe por estar el conjunto descrito acotado inferiormente,
 por ejemplo, por el cero. El teorema de la proyección 
 \ref{Teo:proyOrt} nos dice entonces que,
-en el contexto de espacios de Hilbert, si $W$ es un subespacio de $H$
+en el contexto de espacios de Hilbert, si $W$ es un subespacio de $V$
 que además es cerrado \sidenote{Cuidado aquí: hay dos nociones distintas de 
-cerradura involucradas. Como el espacio métrico $H$ es un espacio vectorial
-normado, con ``subespacio'' nos referimos a un subespacio vectorial de $H$,
+cerradura involucradas. Como el espacio métrico $V$ es un espacio vectorial
+normado, con ``subespacio'' nos referimos a un subespacio vectorial de $V$,
 no a un mero subconjunto de este; es decir, requerimos que $W$ sea cerrado bajo
 las operaciones de espacio vectorial. Se pide además que $W$ (pensado
 como subconjunto del espacio métrico $H$) sea cerrado, es decir, que contenga
@@ -42,17 +41,17 @@ es $\IR^{n}$ con el producto punto usual; por ser
 este un espacio finito-dimensional, 
 cualquier subespacio de este es cerrado
 (~\cite{Kreyszig}, Thm. 2.4-3),
-luego, el teorema de la proyección siempre aplica. 
+luego, el teorema de la proyección siempre aplica. \\
 
 En general, si $W$ es un subespacio cerrado de
-un espacio de Hilbert $H$, gracias a la unicidad
+un espacio de Hilbert $V$, gracias a la unicidad
 establecida en el teorema \ref{Teo:proyOrt},
 podemos definir la función \textbf{proyección a $W$}
 como sigue:
 
 \begin{equation}
 \label{eq3: 1Dic}
-\aplica{\Pi_{W}}{H}{W}{x}{\hat{x}},
+\aplica{\Pi_{W}}{V}{W}{x}{\hat{x}},
 \end{equation}
 donde $\hat{x}$ es el único vector del que se habla
 en el teorema \ref{Teo:proyOrt}.
@@ -67,22 +66,11 @@ $\Pi_{W}$.
 \begin{cor}
 \label{cor: x como suma de proyecciones}
 Sean $V$ es un espacio de Hilbert, $W$ un subespacio cerrado de 
-$V$ cuyo complemento ortogonal también es cerrado en $V$ 
-\footnote{De hecho, una vez establecida la continuidad
-del producto punto más adelante en la
-proposición \ref{prop: continuidad del producto punto}, podremos
-quitar la hipótesis de que $W^{\perp}$ sea cerrado, pues esto
-será consecuencia de que $W$ lo sea (si $(a_{n})_{n \in \IN}$
-es una sucesión en $W^{\perp}$ convergente a algún $a \in V$,
-entonces, para todo $w \in W$,
-$\langle a, w \rangle = 
-\langle \limite{n \rightarrow \infty}{a_{n}}, w \rangle
-= \limite{n \rightarrow \infty}{\langle a_{n},w \rangle}=
-\limite{n \rightarrow \infty}{0}=0$,
-luego, $a \in W^{\perp}$ ).}. Entonces,
+$V$ cuyo complemento ortogonal también es cerrado en $V$.
+Entonces,
 \begin{itemize}
 \item Para todo $v \in V$, $v= \Pi_{W}(v)+ \Pi_{W^{\perp}}(v)$.
-\item $\Pi_{W}: V \longrightarrow Z$ es un operador autoadjunto.
+\item $\Pi_{W}: V \longrightarrow W$ es un operador autoadjunto.
 \end{itemize}
 \end{cor}
 \noindent
@@ -134,6 +122,23 @@ son vectores mutuamente perpendiculares), y, análogamente,
 \QEDB
 \vspace{0.2cm}
 
+\begin{nota}
+De hecho, una vez establecida la continuidad
+del producto punto más adelante en la
+proposición \ref{prop: continuidad del producto punto}, podremos
+quitar en la formulación del corolario 
+\ref{cor: x como suma de proyecciones}
+la hipótesis de que $W^{\perp}$ sea cerrado, pues esto
+será consecuencia de que $W$ lo sea; si $(a_{n})_{n \in \IN}$
+es una sucesión en $W^{\perp}$ convergente a algún $a \in V$,
+entonces, para todo $w \in W$,
+$\langle a, w \rangle = 
+\langle \limite{n \rightarrow \infty}{a_{n}}, w \rangle
+= \limite{n \rightarrow \infty}{\langle a_{n},w \rangle}=
+\limite{n \rightarrow \infty}{0}=0$,
+luego, $a \in W^{\perp}$.
+\end{nota}
+
 
 \noindent Ya que estamos hablando de proyecciones ortogonales,
 usemos estas para ddemostrar
@@ -152,8 +157,6 @@ $ \langle \cdot  , \cdot  \rangle$.
 \end{equation}
 siendo $|| \cdot ||$
 la norma inducida por el producto punto.
-\TODO{Además, la igualdad en \eqref{eq0: 12Feb} se da
-sí y sólo si $v$ es múltiplo escalar de $w$.}
 \end{teo}
 \noindent
 \textbf{Demostración.}
@@ -206,20 +209,6 @@ V \times V \longrightarrow \IR $ es continua.
 \end{prop}
 \noindent
 \textbf{Demostración.}
-\TODO{mejor pon esta introducción afuera, mucho más arriba:
-Hay que aclarar que $V$ tiene estructura
-de espacio métrico, siendo la métrica inducida por
-la norma $|| \cdot || $(que, a su vez, fue inducida
-por el producto punto $\langle  \cdot , \cdot$ )
-dada por la relación }
-
-\[
-d(v,w)= ||v-w||, \hspace{1cm} v, w \in V.
-\]
-Dotamos al producto cartesiano $V \times V $
-estructura de espacio métrico al \TODO{...} \\
-
-
 Demostrar la continuidad de 
 $\langle  \cdot , \cdot \rangle$ significa entonces
 probar que
@@ -290,7 +279,7 @@ proposiciones son equivalentes:
 expresarse de forma única como combinación lineal finita de elementos de $B$,
 i.e. $span(B)=V$)
 \item El subespacio cerrado de $V$ más pequeño que contiene a $B$
-es él mismo, o sea,
+es él mismo, o sea, 
 \[
  \overline{B}= V,
 \]

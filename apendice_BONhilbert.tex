@@ -1,26 +1,39 @@
 \section{Bases ortonormales de espacios de Hilbert}
 
-En general, dado $V$ un $F-$ espacio vectorial,
-definimos una base como \TODO{AAA}. La importancia 
-de este concepto es obvia; una base permite representar
-de forma única a un elemento $v \in V$ por medio, simplemente,
-de una colección finita de escalares. Puede demostrarse
+
+
+
+
+En general, dado un $F-$espacio vectorial $V$,
+si uno acepta el axioma de elección, siempre cuenta con 
+bases para este espacio; la importancia de 
+estas es obvia pues, por definición, una base permite representar
+de forma única a un elemento $v \in V$ por medio
+de una colección de escalares. 
+
+
+Puede demostrarse
 que, dado $A \subseteq V$, el que $A$ sea base de $V$
-equivale a que $A$ sea un maximal l.i.; esto último significa
-que todo subconjunto l.i. $A'$ de $V$ que contenga
+equivale a que $A$ sea un maximal linealmente
+independiente \TODO{referencia
+a este resultado}; esto último significa
+que todo subconjunto  linealmente
+independiente $A'$ de $V$ que contenga
 a $A$ de hecho coincide con $A$.
 
 El tener además en $V$ definido un producto punto
 dota de estructura extra al espacio, en particular, 
-nos provee de una noción de longitud y también 
-de ortogonalidad entre vectores, luego, en este 
+como dijimos ya,
+nos provee de una noción de longitud (\TODO{ref}) y también 
+de ortogonalidad (\TODO{ref}), luego, en este 
 contexto podemos también hablar de subconjuntos $B$
 ortonormales maximales. Puesto que la ortogonalidad implica
 trivialmente la independencia lineal, es natural plantearse
 la siguiente pregunta: en un $F-$espacio vectorial $V$
 con producto punto
 cualquiera, ¿es cierto que todo ortonormal maximal es también
-maximal l.i.? Como se establece 
+maximal l.i., o sea, una base
+del espacio? Como se establece 
 fácilmente en la siguiente proposición,
 en el caso finito dimensional, la respuesta a esta
 pregunta es positiva.
@@ -37,23 +50,22 @@ Supongamos que $A \subseteq V$ es maximal
 respecto a la propiedad de ser ortonormal pero
 no a la de ser l.i., es decir, que existe
 un subconjunto $A'$ l.i. que contiene a $A$ propiamente.
-Digamos que $A' = A \cup B$ (es decir, ordenamos a 
-los elementos de $A'$ poniendo todos los de $A$ al principio).
+Digamos que $A' = A \cup B$.
 Podemos ortonormalizar a este con el proceso de Gram-Schmidt
-para obtener un subconjunto ortonormal $B$ (que genera
-al mismo espacio que $A'$);
+para obtener un subconjunto ortonormal $A´´$ de
+$V$ que genera 
+el mismo espacio que genera $A'$;
 por las fórmulas del teorema \ref{Teo:Gram-Schmidt}
 y el hecho de que los elementos de $A$ sean ortogonales
 entre sí es claro que los primeros $|A|$ elementos
-son los elementos de $A$ (``intactos''); así $B$
+son los elementos de $A$ (``intactos''); así $A''$
 es un subconjunto ortonormal de $V$ que contiene propiamente
 a $A$ (contradicción).
 \QEDB
 \vspace{0.2cm}
 
-Como veremos en lo que sigue de esta sección,
-la situación cambia radicalmente cuando no se supone
-que la dimensión del espacio sea finita.
+Conviene dejar por escrito los dos conceptos discutidos
+antes en una definición. 
 
 \begin{defi} \label{defi: BON y base de Hamel}
 Sea $V$ un espacio vectorial con producto punto.
@@ -68,54 +80,55 @@ nombre como \textbf{BON}).
 \end{itemize}
 \end{defi}
 
-En base a la teoría que exponemos a continuación
-(que proviene principalmente de \TODO{Conway}),
-veremos que, para los espacios vectoriales con producto
-punto, conviene mucho más trabajar con BONs que con
-bases de Hamel; estamos dispuestos a sacrificar el poder
-representar a todo vector de forma única como combinación lineal
-finita de elementos de $A$ \TODO{AAA}. Es por eso que en la mayoría
+
+Como se comenta en \cite{mse1},
+en el caso en el que el espacio de Hilbert $V$
+no sea infinito-dimensional, una base 
+Hamel de este espacio \textbf{no} puede ser una
+base ortonormal del espacio.
+
+Así, en general los sistemas de representación
+descritos en la definición 
+\ref{defi: BON y base de Hamel} no son equivalentes.
+A pesar de que
+\begin{itemize}
+	\item todo espacio de Hilbert tiene bases de Hamel, aunque
+	no necesariamente bases ortonormales (c.f. 
+	\cite{mse2}), y que
+	
+	\item si $\cali{B}$ es una base Hamel uno \textit{siempre}
+	puede representar cualquier vector $x$ del espacio como combinación
+	lineal \textit{finita} de elementos de $\cali{B}$, mientras que,
+	si $\cali{B}$ es una BON, se tienen no igualdades entre 
+	$x$ y combinaciones lineales de elementos de $\cali{B}$, sino aproximaciones
+	del primero a partir de los segundos (c.f. inciso d)
+	del teorema \ref{thm: Coway, 4.13}),
+\end{itemize}
+
+\noindent
+como mostraremos más adelante, en el contexto de
+espacios de Hilbert, conviene mucho más trabajar con BONs
+(cuando existen para el espacio particular)
+que con bases de Hamel. 
+
+
+Es por eso que en la mayoría
 de los libros de análisis funcional, el nombre ``base''
-suele reservarse para las BONs (pudiendo llegar a confundir
+suele ser sinónimo de 
+``base ortonormal''
+(pudiendo llegar a confundir
 a un lector primerizo, y llevarlo a pensar en
-lo que nosotros hemos llamado bases de Hamel). Puesto que
+bases de Hamel). Puesto que
 nosotros no queremos dar lugar a confusiones de este estilo,
 nos abstenemos de usar el nombre ``base'', y en su lugar ocupamos
 los nombres introducidos en la definición \ref{defi: BON y base de Hamel}.
 
-\[
-----
-\]
 
-Incluimos el siguiente teorema (que es 
-\TODO{[CON, THm 4.13]}) porque en repetidas ocasiones
-usaremos las equivalencias establecidas en él. Nos basamos
-en la demostración dada en el libro, pero completamos todos
-los detalles que no se dan en este. El inciso $c)'$
-es uno añadido por nosotros.
-
-\TODO{AAAAA}
-
-En el siguiente teorema (que es 
-\TODO{[CON, THm 4.13]}) damos algunas equivalencias
-a ser BON; en repetidas ocasiones usaremos las equivalencias
-en él establecidas. Además, gracias a este podremos
-dar un ejemplo de una BON que no es base de Hamel (justificando
-así la distinción que hacemos entre uno y otro concepto).
-Por todas las propiedades expresadas en el teorema, vemos
-que, en el contexto de espacios de Hilbert, es 
-mucho más conveniente usar BONs que bases de Hamel.
-Es por eso que el nombre ``base'' se reserva para
-estos primeros objetos; sin embargo, como
-nosotros no queremos conjundirnos nunca sobre qué bases
-hablamos, evitaremos el nombre ambiguo de ``base'' y en su lugar
-usaremos los nombres completos de ``base de Hamel''
-(entiendiendo por esta un subconjunto l.i. maximal
-de un espacio vectorial) y ``base ortonormal''
-(siendo esta un subconjunto ortonormal maximal
-de un espacio vectorial con producto punto)
-
+\TODO{Espacio de Hilbert = espacio con producto punto completo, verdad?
+Cambia además H por V. Recuerda que debes introducir el concepto
+de ``nets'' de Munkres.}
 \begin{teo} \label{thm: Coway, 4.13}
+\textbf{(Teorema 4.13 de \cite{conway} )}
 Sea $\cali{E}$ un subconjunto ortonormal del espacio
 de hilbert $\cali{H}$.
 Las siguiente proposiciones son equivalentes entre sí:
@@ -124,7 +137,6 @@ Las siguiente proposiciones son equivalentes entre sí:
 \item[b)] Si $h \in \cali{H}$ es ortogonal a todo elemento de 
 $\cali{E}$ entonces es cero.
 \item[c)] $\overline{span}(E)= \cali{H} $.
-\item[c)'] $\overline{E}=\cali{H}$. \TODO{???}
 \item[d)] Para todo $h \in \cali{H}$ se cumple que
 \[
 h = \suma{}{}{\{ <h,e> e | e \in \cali{E} \}}
@@ -140,13 +152,17 @@ Para todo $h \in \cali{H}$ se cumple que
 \]
 \end{itemize}
 \end{teo}
-\begin{nota}
-El inciso $c)$ del listado corresponde a la definición
-de BON dada en \TODO{Kolmogorov}; así, una BON
+
+\sidenote{
+El inciso $c)$ del teorema 
+\ref{thm: Coway, 4.13}
+corresponde a la definición
+de BON dada en \cite{kolmogorov}; así, una BON
 es también un subconjunto ortonormal tal que el menor
 subespacio cerrado de $\cali{H}$ que contiene a $E$ es 
-todo $\cali{H}$.
-\end{nota}
+todo $\cali{H}$. Compare este inciso con el hecho de que
+$E$ es una base de Hamel de $V$ si y sólo si $E$ es
+linealmente independiente y $span(E) = V$.}
 \noindent
 \textbf{Demostración.}
 \begin{itemize}
@@ -174,7 +190,6 @@ Así,
 \[
 h = \Pi_{W}(h) \in W.
 \]
-\item[$c) \iff c)'$]  \TODO{???}
 
 \item[$c) \Rightarrow b)$] Sea $h \in \cali{H}$
 ortogonal a todo elemento de $\cali{E}$; mostremos que
@@ -306,6 +321,65 @@ Llegamos entonces a la siguiente contradicción:
 \end{itemize}
 \vspace{0.2cm}
 
+
+\begin{nota}
+\textbf{(sobre la identidad de Parseval en el
+caso finito dimensional)}
+Puesto que, para el desarrollo teórico de este trabajo de tesis,
+se tratará siempre con espacios de Hilbert finito dimensionales, luego, con
+bases ortonormales finitas, conviene
+reescribir algunos puntos del teorema 
+\ref{thm: Coway, 4.13} en este caso particular.
+Digamos que $dim(\cali{H})=n$ (\TODO{aquí debes de haber
+discutido ya la compatibilidad de conceptos para el caso
+de dimensión finita}); si 
+$\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
+BON del espacio de Hilbert $\cali{H}$, entonces, para todo
+$h \in \cali{H}$, se tiene que 
+
+\begin{equation}
+\label{eq0: 11ap}
+h = \suma{k=0}{n-1}{\langle h , e_{k} \rangle^{2} e_{k}}
+\end{equation}
+y además
+
+\begin{equation}
+\label{eq1: 11ap}
+|| h ||^{2} = \suma{k=0}{n-1}{\langle h , e_{k} \rangle^{2}};
+\hspace{0.4cm} \textit{(Identidad de Parseval)}
+\end{equation}
+
+
+\noindent
+así, si se usa a una BON $\cali{E}$ del espacio como sistema
+de representación (o sea, si se representa a todo $h$ del espacio 
+por medio de sus $n$ coeficientes respecto a $\cali{E}$), se tiene que
+\begin{itemize}
+	\item tales coeficientes son de hecho los productos punto entre
+	$h$ y los elementos de la base $\cali{E}$ (c.f. 
+	\eqref{eq0: 11ap}), y
+	\item se tiene una relación lineal muy sencilla entre el cuadrado
+	de la norma de $h$ y el cuadrado de los coeficientes de la representación
+	(c.f. \eqref{eq0: 11ap}).
+\end{itemize}
+
+Estos dos hechos permiten \textbf{usar la magnitud de un coeficiente en 
+\eqref{eq0: 11ap} para valorar la contribución del respectivo 
+elemento de la base $\cali{B}$ para sintetizar a $h$};
+en efecto, si, por ejemplo, el coeficiente $\langle h, e_{k_{1}} \rangle$
+es ``muy cercano a cero'', digamos $\langle h, e_{k_{1}} \rangle = \epsilon$,  
+entonces el vector 
+$h_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
+\langle h , e_{k} \rangle^{2} e_{k}}$
+es, en la misma medida, cercano al vector inicial $h$, pues
+\[
+|| h - h_{k_{1}} || = || \langle h , e_{k_{1}} \rangle^{2} e_{k_{1}} ||
+= \langle h , e_{k_{1}} \rangle^{2} = \epsilon.
+\]
+\end{nota}
+
+
+\begin{comment}
 Ya estamos listos par dar un ejemplo de una BON que
 no es una base de Hamel.
 
@@ -359,19 +433,36 @@ para demostrar que $\cali{B}$ es BON de $\ell^{2}$.
 \TODO{AAAAA}
 
 \end{ejemplo}
+\end{comment}
 
-\begin{teo} \label{teo: Kol 6, p.149}
-[Kol, 6 p. 149] Si $\{ v_{k} |k \in \IN \}$ es un sistema
-ortonormal \footnote{aquí consideramos la situación de un subespacio
-con BON numerable, pero en el argumento la demostración del resultado ya
-se incluye el caso de una BON finita.} de un espacio con producto
+
+Esta última nota da fuertes razones sobre la utilidad
+de las bases ortonormales como sistema de representación
+en espacios de Hilbert. Veamos ahora cómo
+las BON también son útiles para expresar proyecciones
+de un vector sobre subespacios cerrados en términos del
+vector y la base ortonormal. 
+
+Para la tarea necesitamos el siguiente resultado.
+
+
+\begin{prop} \label{teo: Kol 6, p.149}
+(\cite{kolmogorov}, thm. 6 p. 149)
+Si $\{ v_{k} |k \in \IN \}$ es un sistema
+ortonormal de un espacio con producto
 punto $V$ y $v \in V$, entonces la expresión
 \[
 || v - \suma{k=1}{\infty}{a_{k}v_{k}}  ||
 \]
 alcanza su mínimo para la elección de coeficientes
 $a_{k}= <v , v_{k} > $.
-\end{teo}
+\end{prop}
+
+\noindent
+\textbf{Nota:}
+En esta proposición consideramos la situación de un subespacio
+con BON numerable, pero en la demostración del resultado ya
+se incluye el caso de una BON finita.
 
 \noindent
 \textbf{Demostración.}
@@ -419,11 +510,9 @@ válida para toda $n$:
 
 
 \begin{cor} \label{cor: proyeccion en terminos de una BON}
-\TODO{Tal vez sería bueno poner una versión de este
-para BONs finitas.}
-(dando explícitamente a la proyección de un vector
-a un subespacio cerrado respecto a una BON de este último)
-Con la notación del teorema \ref{teo: Kol 6, p.149},
+\textbf{(Dando explícitamente a la proyección de un vector
+a un subespacio cerrado respecto a una BON de este último)}
+Con la notación de la proposición \ref{teo: Kol 6, p.149},
 para todo $v \in V$
 tenemos que
 \[
@@ -431,6 +520,18 @@ tenemos que
 \]
 donde $W := \overline{\{v_{k}| k \in \IN \}}$. \TODO{de hecho,
 Conway demuestra esto en p. 15.}
+\end{cor}
+
+\begin{cor}
+\textbf{(Caso particular de \ref{cor: proyeccion en terminos de una BON} para
+espacios de dimensión finita)}
+Sean $V$ un espacio de Hilbert, $W$ un subespacio cerrado de $V$
+y de dimensión finita. Si 
+$\cali{B} = \{ e_{k}: \hspace{0.2cm} 0 \leq k \leq n \}$
+es una BON de $W$, entonces, para todo $x \in V$,
+\[
+\Pi_{W}(x) = \suma{k=0}{n-1}{ \langle x, e_{k} \rangle e_{k}}.
+\]  
 \end{cor}
 
 
@@ -449,11 +550,11 @@ proyección es la serie propuesta. \QEDB
 \vspace{0.2cm}
 
 Note que, en el caso en el que $\Delta$ sea infinito numerable,
-¡el orden en que se tome la serie de arriba no importa! esto porque,
+el orden en que se tome la serie de arriba no importa. Esto es porque,
 independientemente del orden que se elija, siempre se tratará con
 una BON del espacio. \\
 
-\begin{cor}(\textbf{desigualdad de Bessel})
+\begin{cor}(\textbf{Desigualdad de Bessel})
 Si $\{ v_{k} | k \in \IN \}$ es un sistema ortonormal en 
 el espacio con producto punto $V$, entonces, para todo $v\in V$,
 \[
@@ -467,3 +568,6 @@ Esto es una consecuencia inmediata de la acotación
 del teorema \ref{teo: Kol 6, p.149}.
 \QEDB
 \vspace{0.2cm}
+
+
+

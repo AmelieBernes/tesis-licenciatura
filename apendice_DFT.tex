@@ -50,7 +50,7 @@ teorema fundamental
 del álgebra \ref{teo: fundamental del algebra}, sí hay números complejos
 que satisfacen la definición \ref{defi: raices n esimas de la unidad}, y además
 son a lo más $n$. Es fácil establecer, como hacemos a continuación, 
-fórmulas explícitas \TODO{continua.}
+fórmulas explícitas para estos números, que de hecho son exactamente $n$.
 
 \begin{prop}
 Sea $n \in \IN$, $n \geq 2$. Hay exactamente $n$ raíces $n-$ésimas de la
@@ -157,7 +157,7 @@ esta última es una suma geométrica.
 	\frac{1}{n} \cdot \frac{1-1}{z_{n, \omega}-1}=0.
 	\]
 	
-	\item SI $\omega_{1} = \omega_{2}$, entonces $\omega = 0$, y
+	\item Si $\omega_{1} = \omega_{2}$, entonces $\omega = 0$, y
 	\[
 	\langle e_{w_{1}}, e_{w_{2}} \rangle = 
 	\frac{1}{n}\suma{m=0}{n-1}{(z_{n, 0})^{m}}
@@ -169,7 +169,7 @@ Demostramos así que los elementos de $\cali{B}_{n}$
 tienen norma uno (c.f. \TODO{ref ec. norma en $\IC^{n}$}) y que además
 son ortogonales
 dos a dos, luego, según \TODO{ref}, $\cali{B}_{n}$ es un subconjunto l.i. 
-de $\IC^{n}$; como $\IC^{n}$ es un $\IC-$ espacio vectorial de 
+de $\IC^{n}$; como $\IC^{n}$ es un $\IC-$espacio vectorial de 
 dimensión $n$, concluimos lo deseado.
 \QEDB
 \vspace{0.2cm}
@@ -202,7 +202,7 @@ a partir de $x$ como sigue:
 
 	\begin{equation}
 		\label{eq4: 8ab}
-		A_{x}(t) = \suma{m=0}{n-1}{\frac{x_{m}}{\sqrt{n}} t }\in \IC[t];
+		A_{x}(t) := \suma{m=0}{n-1}{\frac{x_{m}}{\sqrt{n}} t }\in \IC[t];
 	\end{equation}
 
 \noindent
@@ -219,6 +219,10 @@ se le conoce como el \textbf{cálculo de la
 transformada discreta de $x$}
 \end{defi}
 
+
+\begin{comment}
+{\Huge{\textcolor{red}{TDF}}} 
+
 {\Huge{\textcolor{red}{Dominio: tiempo}}} 
 
 
@@ -228,12 +232,82 @@ transformada discreta de $x$}
 
 {\Huge{ $\langle x, e_{\omega} \rangle$, $0 \leq \omega \leq n-1 $ }}
 
+\end{comment}
 
 
-Dada la motivación de antes, es claro cómo usar la transformada
-discreta de 
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.8]{tiempo_freq.png} 
+		\caption{Usualmente uno representa a una señal discreta
+		$x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio
+		de la representación es el tiempo. Pero, según lo explicado,
+		también se puede representar unívocamente a $x$ con sus
+		coeficientes respecto a la base de frecuencias 
+		$\cali{B}_{n}$; en este caso, puesto que cada coeficiente da
+		el peso que tiene la respectiva frecuencia para construir la 
+		señal original $x$, decimos que el dominio de la representación
+		es el de frecuencia.}
+ 	\end{measuredfigure}
+ \end{figure}
 
-\textbf{a esto se le llama un análisis espectral.}
+
+Al usar a $\cali{B}_{n}$ como sistema de representación en
+$\IC^{n}$, lo que estamos haciendo es representar a
+un $x = (x_{m})_{0 \leq m \leq n-1}$ como combinación
+lineal de los vectores 
+
+\[
+e_{\omega} = \frac{1}{\sqrt{n}} \left( cos
+\left( 2 \pi \omega \frac{m}{n} \right)
++ i sen \left( 2 \pi \omega \frac{m}{n}\right) \right)_{0\leq m \leq n-1},
+\hspace{0.2cm} 0 \leq \omega \leq n-1;
+\]
+observe que las partes reales de las
+entradas de $e_{\omega} \in \IC^{n}$ se obtienen de tomar $n$
+muestras uniformes de la función 
+$c_{\omega}(t) := \frac{1}{\sqrt{n}} cos (2 \pi \omega t)$ (o sea, de la función
+coseno de amplitud $\frac{1}{\sqrt{n}}$, frecuencia $\omega$ y desfase $0$)
+y, similarmente,
+las partes imaginarias de las entradas se obtienen muestreando
+uniformemente a la función 
+$s_{\omega}(t) := \frac{1}{\sqrt{n}}  sin (2 \pi \omega t)$.
+
+\TODO{En los vectores $e_{\omega}$ deberías poner la dependencia
+a la dimensión $n$...}
+
+\begin{figure}[H]
+	\sidecaption{
+	Por ejemplo, si $n=5$, para construir al vector
+	$e_{3}$ de la base $\cali{B}_{n}$ se muestrean uniformemente
+	cosenos y senos de frecuencia $3$ como se muestra en la figura;
+	los puntos rojos representan las partes reales de las entradas
+	y los azules las imaginarias.
+	\label{fig: construccion Bn}
+	}
+	\centering
+	\includegraphics[scale=0.44]{construccion_Bn} 
+\end{figure}	
+
+Según esto, el vector $e_{\omega}$ se construye a partir
+de funciones de frecuencia $\omega$; considerando esto
+y el que $\cali{B}_{n}$ sea una BON de $\IC^{n}$ (luego, el
+que se valga la igualdad de Parseval \TODO{ref}), tenemos que
+la síntesis
+
+\[
+x = \suma{\omega=0}{n-1}{\langle x, e_{\omega} \rangle e_{\omega}}
+\]
+
+es una expresión de $x$ en términos de vectores de frecuencia
+$\omega$ y que los respectivos coeficientes 
+$\langle x, e_{\omega} \rangle$ indican qué tanto 
+contribuye la frecuencia $\omega$ para construir a $x$.
+
+Es por eso que al proceso de considerar representaciones
+de señales complejas finitas respecto a las bases de Fourie
+se le conoce como  
+\textbf{realizar un análisis espectral.}
 
 
 \subsection{Versión real de la DFT}
@@ -276,10 +350,6 @@ El subconjunto $\cali{F}_{n}$ de $\IR^{n}$ definido como
 	
 es una base ortonormal del $\IR-$espacio vectorial $\IR^{n}$.
 \end{prop}
-
-\TODO{Deberías poner una imagen de cómo muestreas sinusoides para
-obtener los vectores de la base. Tal vez deberías introducir el 
-término ``vector de frecuencia''.}
 
 \noindent
 \textbf{Demostración.}
@@ -436,7 +506,7 @@ al vector $x$ \eqref{eq2: 10ab}.
 	\label{fig: ejFrecuencia 6}
 	}
 	\centering
-	\includegraphics[scale=0.45]{ejFrecuencia_6} 
+	\includegraphics[scale=0.44]{ejFrecuencia_6} 
 \end{figure}	
 
 

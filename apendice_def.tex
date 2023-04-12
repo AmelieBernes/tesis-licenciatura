@@ -8,6 +8,19 @@ consideras que el producto punto es positive definite.} \\
 
 
 
+Hay que aclarar que $V$ tiene estructura
+de espacio métrico, siendo la métrica inducida por
+la norma $|| \cdot || $(que, a su vez, fue inducida
+por el producto punto $\langle  \cdot , \cdot$ )
+dada por la relación 
+
+\[
+d(v,w)= ||v-w||, \hspace{1cm} v, w \in V.
+\]
+Dotamos al producto cartesiano $V \times V $
+estructura de espacio métrico al \TODO{...} \\
+
+
 Una de las
 grandes ventajas de considerar
 bases ortogonales sobre bases cualesquiera para un espacio es que
@@ -72,125 +85,7 @@ para todo $k$,
 
 
 
-\begin{ejemplo}
-(de espacios con producto punto, que serán usados después en nuestro trabajo)
 
 \textbf{Dimensión finita: $\IR^{n}$}. \TODO{aquí
 la def del producto punto.}
-
-\textbf{Dimensión infinita: $\ell^{2}(\IZ)$}. 
-\[
-\ell^{2}(\IZ) = \{ x=(x_{k})_{k \in \IZ} \in \IR^{\IZ} :
-\suma{k \in \IZ}{}{|x_{k}|^{2} < \infty }\}.
- \]
- 
-Tenemos que hacer algunos comentarios sobre la forma
-en que hemos expresado al clásico espacio $\ell^{2}(\IZ)$:
-
-\begin{itemize}
-	\item[(I)] $\IZ$ es un conjunto numerable,
-	es decir, es posible establecer una biyección
-	\[
-	\begin{split}
-	f: \IN & \longrightarrow \IZ \\
-	k & \mapsto z_{k}.
-	\end{split}
-	\]
-	Gracias a una tal $f$ podemos hablar de las sumas
-	parciales $\suma{k=1}{n}{|x_{z_{k}}|^{2}}$ de una
-	función $x \in \IR^{\IZ}$ y considerar el límite cuando 
-	$n \rightarrow \infty $, permitiéndonos hablar de
-	la serie $\suma{k \in \IZ}{}{|x_{k}|^{2}}$ que,
-	por ser de términos no negativos, o bien converge a un 
-	número real $L$ o bien diverge a $\infty$ (i.e. las sumas
-	parciales pueden hacerse arbitrariamente grandes).
-	En caso de converger o diverger, lo hace absolutamente, 
-	luego, no importa cuál sera la biyección 
-	$f: \IN \longrightarrow \IZ$ usada para formar
-	las sumas parciales, estas siempre convergen a $L$
-	o divergen, respectivamente. \TODO{cita el teorema
-	correspondiente de Spivak}
-	
-	\item[(II)] Por lo general, por ``sucesión'' se 
-	entiende una función de $\IN$ en $\IR$; sin embargo, lo único 
-	que nos importa a nosotros sobre las sucesiones 
-	$x: \IN \longrightarrow \IR$ es que
-	\begin{enumerate}
-		\item tienen un dominio discreto y numerable, y que
-		\item el conjunto de sucesiones cuadrado-sumables
-		es un $\IR$ -espacio vectorial. 
-	\end{enumerate}
-	Si en cambio consideramos funciones $x$ de
-	$\IZ$ en $\IR$, seguiremos hablando de funciones
-	con dominio discreto y numerable, y el conjunto
-	de aquellas para las que la serie 
-	$\suma{k \in \IZ}{}{|x_{k}|^{2}} $ sea convergente
-	es también un espacio vectorial. La ventaja de usar
-	a $\IZ$ como dominio es que esto hace de las funciones
-	$x$ unas buenas candidatas para representar señales,
-	pues no tendremos que preocuparnos por el inicio de
-	una señal (dificultad que sí se presenta si por dominio
-	se toma al conjunto acotado inferiormente $\IN$).
-\end{itemize}
-
-
-
-Según la desigualdad de Cauchy-Schwarz, para cualesquiera
-$x, y \in \IR^{\IZ}$
-\[
-\left\lvert
-\suma{k \in \IZ}{}{x_{k}y_{k}}
-\right\rvert \leq
-\left( \suma{k \in \IZ}{}{|x_{k}|^{2}} \right)^{1/2}
-\left( \suma{k \in \IZ}{}{|y_{k}|^{2}} \right)^{1/2};
-\]
-
-es esta desigualdad la que justifica la buena definición
-de la función 
-	\[
-	\begin{split}
-	< , >: \ell^{2}(\IZ) \times \ell^{2}(\IZ) & \longrightarrow \IR \\
-	(x,y) & \mapsto \suma{k \in \IZ}{}{x_{k}y_{k}};
-	\end{split}
-	\]
-
-\TODO{Tengo un problema aquí. La serie involucrada para el producto
-punto no es de términos positivos, luego, no aplica el argumento de 
-antes para justificar que  ``podemos usar cualquier
-orden (biyección)''.}
-
-\noindent no es difícil comprobar que $< , >$ es un producto
-punto en el espacio $\ell^{2}(\IZ)$. La norma que
-induce está dada por la relación
-\[
-||x|| = \left[ \suma{k \in \IZ}{}{|x_{k}|^{2}} \right]^{\frac{1}{2}},
-\hspace{0.8cm} x \in \ell^{2}(\IZ).
-\]
-
-\noindent Se demuestra en [\TODO{Kolmogorov}] que, salvo isometrías,
-el espacio con producto interior $(\ell^{2}(\IZ), <, >)$
-es el único completo, separable e infinito dimensional. 
-\final
-\end{ejemplo}
-
-
-
-\begin{defi}
-Si $\delta_{jk}$ es la delta de Kronecker asociada
-a los enteros $j$ y $k$, o sea, el número real definido como
-\begin{align*}
-\delta_{jk} = \begin{cases}
-1 & \text{ si } j=k \\
-0 & o.c., 
-\end{cases}
-\end{align*}
-entonces por $\delta_{j}$ denotamos al elemento 
-de $\ell^{2}(\IZ)$ definido como
-
-\[
-\delta_{j}=(\delta_{jk})_{k \in \IZ}, 
-\hspace{0.5cm} j \in \IZ.
-\]
-\end{defi}
-
 

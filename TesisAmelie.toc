@@ -32,17 +32,17 @@
 \contentsline {chapter}{\numberline {A}Apéndice: teoría}{74}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{74}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{76}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{78}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{79}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{82}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}Ángulo entre elementos de un espacio con producto punto}{84}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}Definición de ángulo entre un punto y un subespacio en un espacio euclideo}{84}{section.Alph1.7}%
-\contentsline {subsection}{\numberline {A.7.1}Cosine similarity}{86}{subsection.Alph1.7.1}%
-\contentsline {subsection}{\numberline {A.7.2}Caso particular en el que el subespacio en cuestión es un plano}{87}{subsection.Alph1.7.2}%
-\contentsline {section}{\numberline {A.8}Bases ortonormales de espacios de Hilbert}{88}{section.Alph1.8}%
-\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{94}{section.Alph1.9}%
-\contentsline {section}{\numberline {A.10}La transformada discreta de Fourier y estudios espectrales de señales finitas}{101}{section.Alph1.10}%
-\contentsline {subsection}{\numberline {A.10.1}Raíces $n-$ésimas de la unidad y propiedades de estas}{101}{subsection.Alph1.10.1}%
-\contentsline {subsection}{\numberline {A.10.2}DFT}{102}{subsection.Alph1.10.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{77}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{78}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}Bases ortonormales de espacios de Hilbert}{81}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{87}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}Ángulo entre elementos de un espacio con producto punto}{89}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Definición de ángulo entre un punto y un subespacio en un espacio euclideo}{89}{section.Alph1.8}%
+\contentsline {subsection}{\numberline {A.8.1}Cosine similarity}{91}{subsection.Alph1.8.1}%
+\contentsline {subsection}{\numberline {A.8.2}Caso particular en el que el subespacio en cuestión es un plano}{92}{subsection.Alph1.8.2}%
+\contentsline {section}{\numberline {A.9}Sumas ortogonales de espacios de Hilbert}{93}{section.Alph1.9}%
+\contentsline {section}{\numberline {A.10}La transformada discreta de Fourier y estudios espectrales de señales finitas}{100}{section.Alph1.10}%
+\contentsline {subsection}{\numberline {A.10.1}Raíces $n-$ésimas de la unidad y propiedades de estas}{100}{subsection.Alph1.10.1}%
+\contentsline {subsection}{\numberline {A.10.2}DFT}{101}{subsection.Alph1.10.2}%
 \contentsline {subsection}{\numberline {A.10.3}Versión real de la DFT}{104}{subsection.Alph1.10.3}%
 \contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{108}{appendix.Alph2}%

@@ -17,6 +17,54 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
+  \entry{kolmogorov}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AKSF}{%
+         family={A.N.\bibnamedelima Kolmogorov},
+         familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+         given={S.V.\bibnamedelima Fomin},
+         giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Dover Publications}%
+    }
+    \strng{namehash}{AKSF1}
+    \strng{fullhash}{AKSF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{AK}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Introductory real analysis}
+  \endentry
+
+  \entry{DSML}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DPKTTRVZIB}{%
+         family={Dirk P.\bibnamedelima Kroese},
+         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
+         suffix={Zdravko I.\bibnamedelima Botev},
+         suffixi={Z\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+         given={Thomas Taimre Radislav\bibnamedelima Vaisman},
+         giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
+  R\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPKZIBTTRV1}
+    \strng{fullhash}{DPKZIBTTRV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DPK22}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Data science and machine learning: mathematical and
+  statistical methods}
+    \field{year}{2022}
+  \endentry
+
   \entry{friedberg}{book}{}
     \name{author}{1}{}{%
       {{hash=FSH}{%
@@ -51,45 +99,6 @@
     \field{sortinithash}{K}
     \field{title}{Introductory functional analysis with applications}
     \field{year}{1991}
-  \endentry
-
-  \entry{DSML}{book}{}
-    \name{author}{4}{}{%
-      {{hash=KDP}{%
-         family={Kroese},
-         familyi={K\bibinitperiod},
-         given={Dirk\bibnamedelima P.},
-         giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=BZI}{%
-         family={Botev},
-         familyi={B\bibinitperiod},
-         given={Zdravko\bibnamedelima I.},
-         giveni={Z\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=TT}{%
-         family={Taimre},
-         familyi={T\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=VR}{%
-         family={Vaisman},
-         familyi={V\bibinitperiod},
-         given={Radislav},
-         giveni={R\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KDP+1}
-    \strng{fullhash}{KDPBZITTVR1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Kro+22}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{title}{Data science and machine learning: mathematical and
-  statistical methods}
-    \field{year}{2022}
   \endentry
 
   \entry{Lang}{book}{}

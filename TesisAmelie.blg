@@ -1,68 +1,168 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2023/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TesisAmelie.aux
-Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: biblatex.bst
-Reallocating 'name_of_file' (item size: 1) to 16 items.
-Reallocating 'name_of_file' (item size: 1) to 12 items.
-Reallocating 'glb_str_end' (item size: 4) to 20 items.
-Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
-Reallocating 'global_strs' (item size: 1) to 4000000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
-Biblatex version: 3.18
-Reallocating 'wiz_functions' (item size: 4) to 9000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 7 entries,
+Biblatex version: 3.19
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2767 of file biblatex.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2815 of file biblatex.bst
+You've used 8 entries,
             6399 wiz_defined-function locations,
-            1238 strings with 9656 characters,
-and the built_in function-call counts, 38117 in all, are:
-= -- 2871
-> -- 528
-< -- 243
-+ -- 828
-- -- 174
-* -- 2621
-:= -- 3920
+            1242 strings with 9730 characters,
+and the built_in function-call counts, 46130 in all, are:
+= -- 3584
+> -- 605
+< -- 294
++ -- 740
+- -- 185
+* -- 3416
+:= -- 4506
 add.period$ -- 0
-call.type$ -- 7
-change.case$ -- 135
+call.type$ -- 8
+change.case$ -- 164
 chr.to.int$ -- 44
-cite$ -- 16
-duplicate$ -- 3673
-empty$ -- 3687
-format.name$ -- 261
-if$ -- 8071
+cite$ -- 18
+duplicate$ -- 3731
+empty$ -- 4681
+format.name$ -- 279
+if$ -- 10031
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 17
 missing$ -- 0
-newline$ -- 159
-num.names$ -- 255
-pop$ -- 2148
+newline$ -- 165
+num.names$ -- 321
+pop$ -- 2434
 preamble$ -- 1
-purify$ -- 146
+purify$ -- 171
 quote$ -- 0
-skip$ -- 1080
+skip$ -- 1303
 stack$ -- 0
-substring$ -- 5392
-swap$ -- 807
-text.length$ -- 189
+substring$ -- 7455
+swap$ -- 906
+text.length$ -- 217
 text.prefix$ -- 9
 top$ -- 1
-type$ -- 226
+type$ -- 260
 warning$ -- 0
-while$ -- 458
+while$ -- 426
 width$ -- 0
-write$ -- 153
+write$ -- 158
+(There were 51 error messages)

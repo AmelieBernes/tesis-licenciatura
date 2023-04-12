@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  10 APR 2023 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  11 APR 2023 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2687,118 +2687,170 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--22
 Overfull \vbox (9.14738pt too high) detected at line 47
  []
 
-[76] [77]) (./apendice_hiperpl.tex [78]) (./apendice_proyOrt.tex
-Underfull \hbox (badness 1406) in paragraph at lines 35--35
+[76]) (./apendice_hiperpl.tex [77]) (./apendice_proyOrt.tex
+Underfull \hbox (badness 1406) in paragraph at lines 34--34
 \OT1/cmr/m/n/10 es un es-pa-cio vec-to-rial
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 35--35
+Underfull \hbox (badness 2368) in paragraph at lines 34--34
 \OT1/cmr/m/n/10 subes-pa-cio vec-to-rial de
  []
 
 
-Underfull \hbox (badness 1215) in paragraph at lines 35--35
+Underfull \hbox (badness 1215) in paragraph at lines 34--34
 \OT1/cmr/m/n/10 (pen-sa-do co-mo sub-con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--37
-
- []
-
-[79] [80]
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
+Underfull \hbox (badness 10000) in paragraph at lines 21--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--221
+Underfull \hbox (badness 10000) in paragraph at lines 37--45
 
  []
 
-[81]) (./apendice_gramSchm.tex
-Underfull \hbox (badness 10000) in paragraph at lines 25--33
+[78]
+Underfull \vbox (badness 10000) detected at line 160
+ []
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
 
  []
 
-[82] [83]) (./apendice_anguloPuntoPlano.tex
-<./imagenes/coseno.png, id=1583, 688.0104pt x 346.1733pt>
+[80]) (./apendice_BONhilbert.tex
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \textasciiacute invalid in math mode on input line 55.
+
+Missing character: There is no ´ in font cmr10!
+Missing character: There is no ´ in font cmr10!
+[81]
+
+LaTeX Warning: Citation 'mse1' on page 82 undefined on input line 84.
+
+
+LaTeX Warning: Citation 'mse2' on page 82 undefined on input line 97.
+
+
+LaTeX Warning: Citation 'conway' on page 82 undefined on input line 130.
+
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+
+Overfull \hbox (94.52574pt too wide) detected at line 255
+[]
+ []
+
+[83]
+Overfull \hbox (63.91286pt too wide) detected at line 296
+[]
+ []
+
+[84] [85]
+Underfull \vbox (badness 10000) detected at line 522
+ []
+
+[86]
+Underfull \hbox (badness 10000) in paragraph at lines 551--555
+
+ []
+
+) (./apendice_gramSchm.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--19
+
+ []
+
+[87]
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+
+ []
+
+<./imagenes/GS_fig.png, id=1653, 557.08125pt x 547.2947pt>
+File: ./imagenes/GS_fig.png Graphic file (type png)
+<use ./imagenes/GS_fig.png>
+Package pdftex.def Info: ./imagenes/GS_fig.png  used on input line 85.
+(pdftex.def)             Requested size: 139.26997pt x 136.82333pt.
+
+Overfull \hbox (29.26997pt too wide) in paragraph at lines 85--87
+[][] 
+ []
+
+[88 <./imagenes/GS_fig.png>]) (./apendice_anguloPuntoPlano.tex
+<./imagenes/coseno.png, id=1666, 688.0104pt x 346.1733pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 27.
 (pdftex.def)             Requested size: 68.80507pt x 34.61935pt.
- [84 <./imagenes/coseno.png>]
-[85]
-Package marginnote Info: Margin note 92.1 is on absolute page 92 on input line 
-199.
-Package marginnote Info: right page because not two side mode on input line 199
+
+
+LaTeX Warning: Reference `angulo entre elementos de un espacio con producto pun
+to' on page 89 undefined on input line 40.
+
+
+Underfull \vbox (badness 10000) detected at line 59
+ []
+
+[89 <./imagenes/coseno.png>] [90]
+Package marginnote Info: Margin note 97.1 is on absolute page 97 on input line 
+196.
+Package marginnote Info: right page because not two side mode on input line 196
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 199.
-<./imagenes/18Sept_1.png, id=1602, 285.7074pt x 157.7895pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 196.
+<./imagenes/18Sept_1.png, id=1684, 285.7074pt x 157.7895pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
-Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 200.
+Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 197.
 (pdftex.def)             Requested size: 285.70668pt x 157.78911pt.
- [86 <./imagenes/18Sept_1.png>]
-Underfull \vbox (badness 10000) detected at line 334
+ [91 <./imagenes/18Sept_1.png>]
+Underfull \vbox (badness 10000) detected at line 286
  []
 
-[87]) (./apendice_BONhilbert.tex [88] [89]
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
-
- []
-
-[90]
-Overfull \hbox (94.52574pt too wide) detected at line 241
-[]
- []
-
-
-Overfull \hbox (63.91286pt too wide) detected at line 282
-[]
- []
-
-[91] [92]
-Underfull \vbox (badness 10000) detected at line 434
- []
-
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 451--455
-
- []
-
-) (./apendice_sumOrt.tex [94]
+[92]) (./apendice_sumOrt.tex [93]
 Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-[95] [96]
-Package marginnote Info: Margin note 103.1 is on absolute page 103 on input lin
+[94] [95]
+Package marginnote Info: Margin note 102.1 is on absolute page 102 on input lin
 e 241.
 Package marginnote Info: right page because not two side mode on input line 241
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 241.
-<./imagenes/31Julio_1.png, id=1720, 109.6095pt x 102.6234pt>
+<./imagenes/31Julio_1.png, id=1730, 109.6095pt x 102.6234pt>
 File: ./imagenes/31Julio_1.png Graphic file (type png)
 <use ./imagenes/31Julio_1.png>
 Package pdftex.def Info: ./imagenes/31Julio_1.png  used on input line 242.
 (pdftex.def)             Requested size: 186.33531pt x 174.45901pt.
- [97 <./imagenes/31Julio_1.png>]
+
+Underfull \vbox (badness 10000) detected at line 262
+ []
+
+[96 <./imagenes/31Julio_1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 300--303
 
  []
 
-
-Underfull \vbox (badness 10000) detected at line 335
- []
-
-[98] [99]
+[97] [98]
 Underfull \hbox (badness 10000) in paragraph at lines 431--433
 
  []
 
-[100]) (./apendice_DFT.tex
+[99]) (./apendice_DFT.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 13.
@@ -2807,90 +2859,104 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 13.
 
-[101] [102] [103]
-Overfull \hbox (6.65848pt too wide) detected at line 264
+[100] [101]
+<./imagenes/tiempo_freq.png, id=1798, 414.1071pt x 119.2455pt>
+File: ./imagenes/tiempo_freq.png Graphic file (type png)
+<use ./imagenes/tiempo_freq.png>
+Package pdftex.def Info: ./imagenes/tiempo_freq.png  used on input line 241.
+(pdftex.def)             Requested size: 331.28612pt x 95.39651pt.
+ [102]
+Package marginnote Info: Margin note 109.1 is on absolute page 109 on input lin
+e 288.
+Package marginnote Info: right page because not two side mode on input line 288
+.
+Package marginnote Info: xpos seems to be 72.0pt on input line 288.
+<./imagenes/construccion_Bn.png, id=1805, 782.925pt x 402.00188pt>
+File: ./imagenes/construccion_Bn.png Graphic file (type png)
+<use ./imagenes/construccion_Bn.png>
+Package pdftex.def Info: ./imagenes/construccion_Bn.png  used on input line 289
+.
+(pdftex.def)             Requested size: 344.48807pt x 176.88136pt.
+ [103 <./imagenes/tiempo_freq.png> <./imagenes/construccion_Bn.png>]
+Overfull \hbox (6.65848pt too wide) detected at line 338
 [][][]\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 := [][]  [] \OML/cmm/m/it/10 s[] \OT
 1/cmr/m/n/10 := [][] \OML/cmm/m/it/10 :
  []
 
 
-Overfull \hbox (23.4596pt too wide) detected at line 314
+Overfull \hbox (23.4596pt too wide) detected at line 384
 []
  []
 
 [104]
 Package marginnote Info: Margin note 111.1 is on absolute page 111 on input lin
-e 374.
-Package marginnote Info: right page because not two side mode on input line 374
+e 444.
+Package marginnote Info: right page because not two side mode on input line 444
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 374.
-<./imagenes/ejFrecuencia_1.png, id=1804, 778.3479pt x 367.8543pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 444.
+<./imagenes/ejFrecuencia_1.png, id=1824, 778.3479pt x 367.8543pt>
 File: ./imagenes/ejFrecuencia_1.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_1.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_1.png  used on input line 375.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_1.png  used on input line 445.
 
 (pdftex.def)             Requested size: 311.33363pt x 147.1391pt.
 Package marginnote Info: Margin note 111.2 is on absolute page 111 on input lin
-e 395.
-Package marginnote Info: right page because not two side mode on input line 395
+e 465.
+Package marginnote Info: right page because not two side mode on input line 465
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 395.
-<./imagenes/ejFrecuencia_2.png, id=1805, 755.9442pt x 353.4003pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 465.
+<./imagenes/ejFrecuencia_2.png, id=1825, 755.9442pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_2.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_2.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_2.png  used on input line 396.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_2.png  used on input line 466.
 
 (pdftex.def)             Requested size: 302.37231pt x 141.3576pt.
 Package marginnote Info: Margin note 111.3 is on absolute page 112 on input lin
-e 404.
-Package marginnote Info: right page because not two side mode on input line 404
+e 474.
+Package marginnote Info: right page because not two side mode on input line 474
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 404.
-<./imagenes/ejFrecuencia_3.png, id=1806, 773.289pt x 353.4003pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 474.
+<./imagenes/ejFrecuencia_3.png, id=1826, 773.289pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_3.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_3.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_3.png  used on input line 405.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_3.png  used on input line 475.
 
 (pdftex.def)             Requested size: 309.31012pt x 141.3576pt.
  [105 <./imagenes/ejFrecuencia_1.png> <./imagenes/ejFrecuencia_2.png>]
 Package marginnote Info: Margin note 112.1 is on absolute page 112 on input lin
-e 413.
-Package marginnote Info: right page because not two side mode on input line 413
+e 483.
+Package marginnote Info: right page because not two side mode on input line 483
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 413.
-<./imagenes/ejFrecuencia_4.png, id=1819, 763.8939pt x 353.4003pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 483.
+<./imagenes/ejFrecuencia_4.png, id=1839, 763.8939pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_4.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_4.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_4.png  used on input line 414.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_4.png  used on input line 484.
 
 (pdftex.def)             Requested size: 305.55214pt x 141.3576pt.
 Package marginnote Info: Margin note 112.2 is on absolute page 112 on input lin
-e 423.
-Package marginnote Info: right page because not two side mode on input line 423
+e 493.
+Package marginnote Info: right page because not two side mode on input line 493
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 423.
-<./imagenes/ejFrecuencia_5.png, id=1820, 779.7933pt x 353.4003pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 493.
+<./imagenes/ejFrecuencia_5.png, id=1840, 779.7933pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_5.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_5.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_5.png  used on input line 424.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_5.png  used on input line 494.
 
 (pdftex.def)             Requested size: 311.91179pt x 141.3576pt.
 Package marginnote Info: Margin note 112.3 is on absolute page 113 on input lin
-e 438.
-Package marginnote Info: right page because not two side mode on input line 438
+e 508.
+Package marginnote Info: right page because not two side mode on input line 508
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 438.
-
-Underfull \hbox (badness 1308) in paragraph at lines 438--438
-[]\OT1/cmr/m/n/8 Figura A.8: |En mo-ra-do se
- []
-
-<./imagenes/ejFrecuencia_6.png, id=1822, 791.3565pt x 354.123pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 508.
+<./imagenes/ejFrecuencia_6.png, id=1842, 791.3565pt x 354.123pt>
 File: ./imagenes/ejFrecuencia_6.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_6.png>
-Package pdftex.def Info: ./imagenes/ejFrecuencia_6.png  used on input line 439.
+Package pdftex.def Info: ./imagenes/ejFrecuencia_6.png  used on input line 509.
 
-(pdftex.def)             Requested size: 356.10713pt x 159.35387pt.
+(pdftex.def)             Requested size: 348.19794pt x 155.81459pt.
+
 [106 <./imagenes/ejFrecuencia_3.png> <./imagenes/ejFrecuencia_4.png> <./imagene
 s/ejFrecuencia_5.png>])) (./Notacion.tex [107 <./imagenes/ejFrecuencia_6.png>]
 Ap\'{e}ndice B.
@@ -2900,14 +2966,14 @@ Overfull \hbox (340.46333pt too wide) in paragraph at lines 17--43
  []
 
 
-Overfull \hbox (69.77863pt too wide) in paragraph at lines 50--58
+Overfull \hbox (69.77863pt too wide) in paragraph at lines 50--59
 [][] 
  []
 
 [108
 
 ] [109])
-Overfull \hbox (144.96437pt too wide) in paragraph at lines 100--100
+Overfull \hbox (142.71436pt too wide) in paragraph at lines 100--100
 []\OT1/cmr/m/n/10 Kristoffer Ni-mark. ``The Pro-jec-tion Theo-rem''. http://www
 .kris-nimark.net/pdf/ProjectionTheorem.pdf. 
  []
@@ -2926,7 +2992,12 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
-(rerunfilecheck)             Checksum: 9C1F3B0C55E48EF6A699E93531318CC8;16412.
+(rerunfilecheck)             Checksum: 09C9C9847E96345E60AFC51641773332;16412.
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                TesisAmelie
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 \openout1 = `TesisAmelie.run.xml'.
 
@@ -2937,21 +3008,13 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 ### simple group (level 1) entered at line 333 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44175 strings out of 476025
- 873958 string characters out of 5796533
+ 44219 strings out of 476025
+ 875177 string characters out of 5796533
  1899388 words of memory out of 5000000
- 63148 multiletter control sequences out of 15000+600000
- 539562 words of font info for 129 fonts, out of 8000000 for 9000
+ 63185 multiletter control sequences out of 15000+600000
+ 539203 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 106i,19n,107p,1912b,2414s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
-, replaced by a fixed one
-
+ 106i,17n,107p,1912b,2417s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
 , replaced by a fixed one
@@ -2993,10 +3056,10 @@ ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pf
 b></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (114 pages, 5270369 bytes).
+Output written on TesisAmelie.pdf (114 pages, 5492851 bytes).
 PDF statistics:
- 2129 PDF objects out of 2487 (max. 8388607)
- 1716 compressed objects within 18 object streams
- 600 named destinations out of 1000 (max. 500000)
- 833 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2150 PDF objects out of 2487 (max. 8388607)
+ 1732 compressed objects within 18 object streams
+ 604 named destinations out of 1000 (max. 500000)
+ 848 words of extra memory for PDF output out of 10000 (max. 10000000)
 
