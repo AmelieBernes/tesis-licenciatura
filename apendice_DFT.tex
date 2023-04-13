@@ -1,41 +1,86 @@
 \section{La transformada discreta de Fourier y estudios espectrales de señales finitas}
 
-\TODO{aquí una introducción}
-\TODO{La teoría se basa en el libro de Algoritmos.}
+En esta sección vamos a introducir 
+una base ortonormal de $\IC^{n}$
+y otra para $\IR^{n}$ (que llamaremos
+``bases de Fourier complejas y reales''), que están
+definidas en términos de discretizaciones de
+sinusoides de frecuencias enteras, y que son herramientas
+clásicas para hacer lo que comúnmente se denomina
+un \textbf{análisis espectral} de señales finitas.
 
-La teoría de esta sección se apoya en la existencia de las raíces
-$n-$ésimas de la unidad (garantizada por el teorema fundamental
-del álgebra \ref{teo: fundamental del algebra}) 
-y propiedades de estas que hacen posible
-tener un método eficiente de calcular lo que después llamaremos
-la ``transformada discreta'' de un elemento de $\IC^{n}$.
+Puesto que la definición de estas herramientas requiere
+de algunas nociones del análisis complejo (en particular, de la
+definición de la exponencial compleja y de las raíces $n-$ésimas
+de la unidad), damos brevemente algunas definiciones y resultados
+necesarios para definir las bases de Fourier.
 
-\subsection{Raíces $n-$ésimas de la unidad y propiedades de estas}
 
-\TODO{Habla sobre la exponencial compleja; tal vez pon su definición,
-pero di que no entras en detalles (estos pueden consultarse, por ejemplo, en Marsden), sólo citamos unas propiedades de esta función de $\IC$ a $\IC$
-que necesitaremos}
+\subsection{La exponencial compleja y raíces $n-$ésimas de la unidad}
 
-\TODO{Tal vez puedes hablar de cómo esta forma involucra al ángulo y
-a la norma para representar a un punto, y por qué esto es útil
-para hablar de mulitplicación y conjugados! También tienes que definir
-la norma en $\IC^{n}$, esto no es trivial y de hecho me estaba dando
-problemas.}
+\TODO{Mucho antes tienes que definir el prodcuto punto en $\IC^{n}$, tal
+vez justo al inicio, cuando definas prod. punto.}
+
+
+La definición de la función exponencial compleja 
+tiene diversas motivaciones, puede consultar 
+\cite{marsden} para conocer algunas de ellas; nosotros sólo
+damos la definición de esta así como algunas propiedades
+de ella que se usarán en lo que sigue.
+
+\begin{defi}
+\label{def: exponencial compleja}
+Si $y \in \IR$, entonces por $exp(iy)$ denotamos al número
+complejo de módulo uno y argumento $y$, es decir,
+\begin{equation}
+\label{eq: exponencial 1}
+exp(iy) := cos(y) + i sen(y).
+\end{equation}
+Para todo número complejo $z = a+bi$, definimos 
+$exp(z)$ como sigue:
+\begin{equation}
+\label{eq: exponencial 2}
+exp(z) := e^{x}(cos(y) + i sen(y)).
+\end{equation}
+\end{defi}
+
+\begin{figure}[H]
+	\sidecaption{
+	Para construir gráficamente a las raíces $n-$ésimas de la
+	unidad, se debe dividir, a partir del punto $(0,1)$, a la
+	circunferencia unitaria en $n$ partes iguales. Según esta construcción
+	y la interpretación geométrica de la multiplicación compleja, es claro
+	que multiplicando a $z_{n,1}$ consigo misma se obtienen a
+	todas las demás raíces $n-$ésimas.
+	\label{fig: raices unidad}
+	}
+	\centering
+	\includegraphics[scale=0.53]{raices_unidad} 
+\end{figure}	
 
 \begin{prop}
 \label{prop: propiedades exp compleja}
-(\textbf{Propiedades de la exponencial compleja}) a
+(\textbf{Algunas propiedades de la exponencial compleja}) 
+Sean $z_{1}, z_{2} \in \IC$, $\omega \in \IZ$.
 	\begin{itemize}
-	\item $exp(z) = 1$ si y sólo si $z= 2K \pi i$ para algún $K \in \IZ$
-	\item Para todo $\omega \in \IZ$ y todo $z \in \IC$, $(exp(z))^{\omega} = 			exp(\omega z)$ \TODO{ve si $\omega$ puede de hecho ser cualquier complejo? 			tiene sentido esto?}
-	\item Para cualesquiera $z_{1}, z_{2} \in \IC$, 
-	$\frac{exp(z_{1})}{exp(z_{2})} = exp(z_{1} - z_{2})$.
-	\item Para todo entero $n$ y todo real $b$,
-	$(exp(bi))^{m} = exp (mb i)$
-	\item \TODO{pon lo de exponencial de la suma.}
+	\item $\frac{exp(z_{1})}{exp(z_{2})} = exp(z_{1} - z_{2})$
+	\item $exp(z_{1} + z_{2}) = exp(z_{1}) \cdot exp(z_{2})$
+	\item $(exp(z_{1}))^{\omega} = exp(\omega z)$
+	\item $exp(z) = 1$ si y sólo si $z= 2K \pi i$ para algún $K \in \IZ$ 
+	\item para todo $y \in \IR$, 
+	\begin{equation}
+	\label{eq: coseno exponenciales}
+	cos(y) = \frac{exp(iy)+exp(-iy)}{2}
+	\end{equation}
+	y
+	\begin{equation}
+	\label{eq: seno exponenciales}
+	sen(y) = \frac{exp(iy)-exp(-iy)}{2i}.
+	\end{equation}
 	\end{itemize}
 \end{prop}
 
+\TODO{Cambiaste el orden de los items. Checa cuando los citas más abajo.}
 
 \begin{defi}
 \label{defi: raices n esimas de la unidad}
@@ -98,23 +143,11 @@ son iguales.
 \QEDB
 \vspace{0.2cm}
 
-\begin{figure}[H]
-	\sidecaption{
-	Para construir gráficamente a las raíces $n-$ésimas de la
-	unidad, se debe dividir, a partir del punto $(0,1)$, a la
-	circunferencia unitaria en $n$ partes iguales. Según esta construcción
-	y la interpretación geométrica de la multiplicación compleja, es claro
-	que multiplicando a $z_{n,1}$ consigo misma se obtienen a
-	todas las demás raíces $n-$ésimas.
-	\label{fig: raices unidad}
-	}
-	\centering
-	\includegraphics[scale=0.53]{raices_unidad} 
-\end{figure}	
 
-\subsection{DFT}
+\subsection{La transformada discreta de Fourier}
 
-
+Ya tenemos todo lo necesario para definir a la base
+de Fourier compleja de la que hablamos al inicio.
 
 
 \begin{prop}
@@ -195,8 +228,11 @@ de $x$ y los elementos de \eqref{eq2: 8ab}.
 Al proceso de calcular los coeficientes de $x$
 respecto a $\cali{B}_{n}$
 se le conoce como el \textbf{cálculo de la 
-transformada discreta de Fourier de $x$}
+transformada discreta de Fourier de $x$}.
 \end{defi}
+
+\marginnote{Por sus siglas en inglés, a la transformada discreta
+de Fourier también se le denomina ``DFT''.}
 
 
 \begin{comment}
@@ -268,10 +304,17 @@ $n-$ésimas de la unidad.}
 
 
 \begin{nota}
-\textbf{(la transformada rápida de Fourier)}
 Según este último párrafo, calcular transformadas discretas
 de Fourier requiere de algoritmos eficientes para evaluar
-polinomios en raíces $n-$ésimas de la unidad.
+polinomios en raíces $n-$ésimas de la unidad. Usando propiedades
+de las raíces $n-$ésimas de la unidad (por ejemplo,
+véase el lema 30.5 de \cite{algorithms}) 
+es posible usar recursión para disminuir
+el tiempo de cómputo. Al algoritmo estándar usado para
+esto se le conoce como la \textbf{transformada rápida de 
+Fourier} (abreviado como ``FFT'' por sus siglas en inglés);
+puede consultar los detalles técnicos en el capítulo
+30 de \cite{algorithms}
 \end{nota}
 
 
@@ -441,7 +484,9 @@ respecto a frecuencias enteras acotadas por $M$ o por $M-1$
 (dependiendo de la paridad de $n$), y no respecto a frecuencias
 menores a $n$.
 
-\textbf{Ejemplo:} Consideremos a la señal 
+
+\begin{ejemplo}
+Consideremos a la señal 
 \begin{equation}
 \label{eq2: 10ab}
 x=(-0.5,-8,-5.3,15,-0.3,6,4) \in \IR^{7}.
@@ -530,3 +575,7 @@ al vector $x$ \eqref{eq2: 10ab}.
 	\centering
 	\includegraphics[scale=0.44]{ejFrecuencia_6} 
 \end{figure}	
+\final
+\end{ejemplo}
+
+\TODO{Deberías poner imágenes de espectros!}

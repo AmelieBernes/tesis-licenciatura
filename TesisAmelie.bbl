@@ -39,6 +39,18 @@
     \field{title}{Introductory real analysis}
   \endentry
 
+  \entry{algorithms}{book}{}
+    \list{publisher}{1}{%
+      {The MIT Press}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Alg}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Introduction to algorithms}
+    \field{year}{2009}
+  \endentry
+
   \entry{conway}{book}{}
     \name{author}{1}{}{%
       {{hash=CJB}{%
@@ -98,9 +110,85 @@
     \field{year}{2002}
   \endentry
 
-  \entry{Kreyszig}{book}{}
+  \entry{godement}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GR}{%
+         family={Godement},
+         familyi={G\bibinitperiod},
+         given={Roger},
+         giveni={R\bibinitperiod},
+      }}%
+    }
     \list{publisher}{1}{%
-      {John Wiley \& Sons}%
+      {Hermann éditeurs}%
+    }
+    \strng{namehash}{GR1}
+    \strng{fullhash}{GR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{God66}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{Cours d'algèbre}
+    \field{year}{1966}
+  \endentry
+
+  \entry{jacobson}{book}{}
+    \name{author}{1}{}{%
+      {{hash=JN}{%
+         family={Jacobson},
+         familyi={J\bibinitperiod},
+         given={Nathan},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {W H Freeman}%
+      {Company}%
+    }
+    \strng{namehash}{JN1}
+    \strng{fullhash}{JN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Jac85}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{edition}{2nd edition}
+    \field{title}{Basic Algebra I}
+    \field{year}{1985}
+  \endentry
+
+  \entry{marsden}{book}{}
+    \name{author}{1}{}{%
+      {{hash=JEMMJH}{%
+         family={Jerrold E.\bibnamedelima Marsden},
+         familyi={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+         given={Michael J.\bibnamedelima Hoffman},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {W H Freeman}%
+      {Company}%
+    }
+    \strng{namehash}{JEMMJH1}
+    \strng{fullhash}{JEMMJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{JEM99}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{edition}{3rd edition}
+    \field{title}{Basic complex analysis}
+    \field{year}{1999}
+  \endentry
+
+  \entry{Kreyszig}{book}{}
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons}%
     }
     \field{labeltitlesource}{title}
     \field{labelalpha}{Kre}
@@ -108,6 +196,30 @@
     \field{sortinithash}{K}
     \field{title}{Introductory functional analysis with applications}
     \field{year}{1991}
+  \endentry
+
+  \entry{kurosch}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KAG}{%
+         family={Kurosch},
+         familyi={K\bibinitperiod},
+         given={A.\bibnamedelima G.},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Editorial MIR}%
+    }
+    \strng{namehash}{KAG1}
+    \strng{fullhash}{KAG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Kur68}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{edition}{edition}
+    \field{title}{Curso de álgebra superior}
+    \field{year}{1968}
   \endentry
 
   \entry{Lang}{book}{}
@@ -197,6 +309,31 @@
     \field{journaltitle}{International Journal for Numerical Methods in
   Engineering}
     \field{year}{1974}
+  \endentry
+
+  \entry{rotman}{book}{}
+    \name{author}{1}{}{%
+      {{hash=RJJ}{%
+         family={Rotman},
+         familyi={R\bibinitperiod},
+         given={Joseph\bibnamedelima J.},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Mathematical Society}%
+    }
+    \strng{namehash}{RJJ1}
+    \strng{fullhash}{RJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Rot10}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{edition}{2nd edition}
+    \field{series}{Graduate Studies in Mathematics}
+    \field{title}{Advanced Modern Algebra}
+    \field{year}{2010}
   \endentry
 \enddatalist
 \endinput

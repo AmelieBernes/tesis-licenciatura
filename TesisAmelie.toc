@@ -6,13 +6,13 @@
 \contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{6}{section.Alph1.4}%
 \contentsline {section}{\numberline {A.5}Bases ortonormales de espacios de Hilbert}{9}{section.Alph1.5}%
 \contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{16}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}Ángulo entre elementos de un espacio con producto punto}{17}{section.Alph1.7}%
-\contentsline {section}{\numberline {A.8}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{18}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.7}Ángulo entre elementos de un espacio con producto punto}{18}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{19}{section.Alph1.8}%
 \contentsline {subsection}{\numberline {A.8.1}Caso particular en el que el subespacio en cuestión es un plano}{20}{subsection.Alph1.8.1}%
 \contentsline {section}{\numberline {A.9}Similitud coseno}{21}{section.Alph1.9}%
 \contentsline {section}{\numberline {A.10}Sumas ortogonales de espacios de Hilbert}{22}{section.Alph1.10}%
 \contentsline {section}{\numberline {A.11}La transformada discreta de Fourier y estudios espectrales de señales finitas}{29}{section.Alph1.11}%
-\contentsline {subsection}{\numberline {A.11.1}Raíces $n-$ésimas de la unidad y propiedades de estas}{29}{subsection.Alph1.11.1}%
-\contentsline {subsection}{\numberline {A.11.2}DFT}{30}{subsection.Alph1.11.2}%
-\contentsline {subsection}{\numberline {A.11.3}Versión real de la DFT}{33}{subsection.Alph1.11.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{37}{appendix.Alph2}%
+\contentsline {subsection}{\numberline {A.11.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{29}{subsection.Alph1.11.1}%
+\contentsline {subsection}{\numberline {A.11.2}La transformada discreta de Fourier}{31}{subsection.Alph1.11.2}%
+\contentsline {subsection}{\numberline {A.11.3}Versión real de la DFT}{34}{subsection.Alph1.11.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{38}{appendix.Alph2}%

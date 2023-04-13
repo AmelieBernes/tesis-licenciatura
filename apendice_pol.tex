@@ -2,55 +2,66 @@
 
 En general, si $R$ es un anillo, se define a partir de 
 él un nuevo anillo denominado en \textbf{anillo de polinomios
-con coeficientes en $R$} como sigue:
+con coeficientes en $R$}; a pesar de que la construcción
+algebraica de este anillo no se hace, por lo general, definiendo
+funciones de $R$ en $R$, ...
+\TODO{referencia libro de álgebra a construcción.}
 
-
-En el contexto del álgebra, la definición inicial se hace
-
-el objetivo de hacerlo de esta forma es, a partir de los
-elementos de $K$ construir elementos $f$ tales que
-(pues la idea es de tal forma que los coeficientes sean 
-casi todos cero (o sea, que el conjunto de coeficientes no cero 
-sea finito) y que estos determinen unívocamente al polinomio).
-(comentarios de Jacobson!) \TODO{aquí define
-evaluación de un polinomio en un elemento del anillo.}
 
 \begin{defi}
-Sean $K$ un anillo, $f(x)= \suma{k=0}{n}{a_{k}x^{k}} \in K[x]$
+\label{def: coef principal y grado de un polinomio}
+Sean $K$ un anillo, $f(t)= \suma{k=0}{n}{a_{k}t^{k}} \in K[t]$
 con $a_{n}$ un elemento no cero del anillo $K$.
 \begin{itemize}
 \item Al elemento $a_{n} \in K$ se le llama el \textbf{coeficiente
 principal} del polinomio $f$, y
-\item a $n \in \overline{\IN}$ se le llama el \textbf{grado de $f$}.
+\item a $n \in \overline{\IN}$ se le llama el \textbf{grado de $f$}
+y se le denota por $\partial(f)$.
 \end{itemize}
-Todo elemento $r \in K$ tal que $f(r)=0$ se llamará 
-una \textbf{raíz de $f$}. \TODO{Aquí di que, por lo general,
-se dice que el grado del polinomio cero no está definido o que es $- \infty$,
-pero que nosotros, al igual que muchos autores, vamos a convenir en
-pensar que el polinomio cero, al igual que todo polinomio
-constante, tiene grado cero. Esto lo hacemos simplemente para alsfj
-y da referencias al trabajo principal en el que esta convención sea útil.}
+A todo elemento $r \in K$ tal que $f(r)=0$ se le llamará 
+una \textbf{raíz de $f$}. 
 \end{defi}
 
-\TODO{Sólo usa campos ahora!}
 
-A partir de ahora, nos interesa sólo tratar con 
-campos $K$. De hecho, para este trabajo
-sólo usaremos $K$ igual a $\IR$.
+\begin{nota}
+En \ref{def: coef principal y grado de un polinomio} se definió
+el coeficiente principal y grado de todo polinomio no cero; 
+por lo general, los algebristas prefieren definir el grado del 
+polinomio cero como $-\infty$
+(c.f. \cite{jacobson}, p.128) 
+o dejarlo indefinido (c.f. \cite{rotman}, p.126).
+Nosotros preferimos definir el grado del polinomio cero como
+cero (que es el grado de todo polinomio constante). Esto lo hacemos
+simplemente para no tener que distinguir al polinomio
+cero como un caso especial, pues eso simplifica las formulaciones
+de los resultados que necesitamos.
+\end{nota}
 
-\TODO{Regla de suma de los grados de los factores ! La uso
-muchas veces.}
+
+\begin{prop}
+\label{prop: grado producto polin}
+(c.f. \cite{rotman}, p.127)
+Si $K$ es un dominio entero, entonces, para cualesquiera
+polinomios $f(t), g(t) \in K[t]$ no cero se tiene que
+el producto $f(t) \cdot g(t)$ de estos dos polinomios no
+es el polinomio cero y que
+\[
+\partial(f \cdot g) = \partial(f) \cdot \partial(g).
+\]
+\end{prop}
+
+A nosotros nos interesará tomar siempre al anillo
+de coeficientes $K$ como el campo $\IR$ o el campo $\IC$.
 
 Es una consecuencia inmediata del algoritmo de la división
-(c.f. Rotman p. 131) el que, si $K$ es un campo
+(c.f. \cite{rotman} p. 131) el que, si $K$ es un campo
 y $f(x) \in K[x]$ es un polinomio de grado $n>0$, 
 entonces $f$ tiene a lo más $n$ raíces (el argumento es
 relacionar raíces de un polinomio con divisores lineales
-de este, y argumentar que, puesto que cuando el anillo de
-coeficientes $K$ es un dominio entero, el grado de un 
-producto de polinomios es igual a la suma de los grados de los
-factores (c.f Rotman \TODO{ref}), si el grado de $f$
-es $n$ entonces este no se puede factorizar como el producto
+de este y argumentar que, por 
+\ref{prop: grado producto polin}, 
+si el grado de $f$
+es $n$ entonces $f$ no puede factorizarse como el producto
 de más de $n$ factores lineales, luego, no puede tener más de 
 $n$ raíces).
 
@@ -63,8 +74,9 @@ no tenga ninguna raíz.
 
 \begin{ejemplo}
 Considere al anillo $\IZ_{5}$ de enteros módulo $5$. Como
-$5$ es un número primo, $\IZ_{5}$ es un campo (c.f. \TODO{ref.}).
-Sea $f(x)=x^{2}-2 \in \IZ_{5}[x]$; evaluar a este polinomio
+$5$ es un número primo, $\IZ_{5}$ es un campo (c.f. proposición
+3.12 de \cite{rotman}).
+Sea $f(t)=t^{2}-2 \in \IZ_{5}[t]$; evaluar a este polinomio
 en cada uno de los cinco elementos de $\IZ_{5}$
 nunca da lugar al cero del campo, luego, $f$ es un polinomio
 de grado dos con coeficientes en $\IZ_{5}$ sin raíces.
@@ -73,22 +85,21 @@ de grado dos con coeficientes en $\IZ_{5}$ sin raíces.
 
 \begin{ejemplo}
 El ejemplo canónico de polinomio con coeficientes reales
-sin raíces (reales) es $p(x)=x^{2}+1$. No puede tener raíces por
+sin raíces (reales) es $p(t)=t^{2}+1 \in \IR[t]$. 
+No puede tener raíces por
 ser el cuadrado de todo número real no negativo. 
 \final 
 \end{ejemplo}
 
-%\marginpar{amelei}
+
 
 \begin{teo}
 \label{teo: fundamental del algebra}
-\textbf{(Teorema fundamental del álgebra)}:
-\TODO{Mejor usa a $t$ y no a $x$ como
-argumento del polinomio} Todo polinomio
-$f(x)$ de coeficientes complejos
+\textbf{(Teorema fundamental del álgebra, versión dada por \cite{kurosch}, p.143)}:
+Todo polinomio
+$f(t) \in \IC[t]$ de coeficientes complejos
 y grado al menos uno
 tiene al menos una raíz compleja.
-(\TODO{Kurosh, p. 143})
 \end{teo}
 
 Como se hace notar en la referencia, es difícil exagerar
@@ -96,11 +107,14 @@ la importancia que tiene este teorema no sólo en el álgebra,
 sino en la matemática en general; se resalta también el hecho
 de que, hasta el momento, todas las pruebas de este teorema
 hacen uso no sólo de la estructura algebráica del dominio entero
-$\IC[x]$, sino de propiedades topológicas de este (obtenidas
-al definir en él una norma) o de otra índole, agregando estructura
-extra a $\IC[x]$. Hay, sin embargo, construcciones puramente algebraicas
+$\IC[t]$, sino de propiedades topológicas de este (obtenidas
+al definir en él una norma, c.f.
+\TODO{referencia a mi texto}) o de otra índole, 
+agregando estructura
+extra a $\IC[t]$. Hay, sin embargo, construcciones puramente algebraicas
 del campo $\IC$ basadas en la idea de ``completar'' al campo
-de los números reales \TODO{cita a Godement.}
+de los números reales (c.f. \cite{godement}, 
+\textit{L'anneau $K[\sqrt{d}]$}, p.152).
 
 
 De un simple argumento inductivo, usando el teorema 
@@ -112,7 +126,7 @@ tenga tantas raíces como su grado.
 
 \begin{teo}
 \label{teo: alt del fundamental del algebra}
-Todo polinomio $f(x) \in \IC[x]$ 
+Todo polinomio $f(t) \in \IC[t]$ 
 de grado $n>0$
 tiene exactamente $n$ raíces complejas
 (contando multiplicidades).
@@ -123,7 +137,7 @@ Procedemos por inducción sobre $n$, el grado del polinomio.
 Sea $f$ un polinomio con coeficientes
 complejos y de grado $n=1$. Según el teorema 
 \ref{teo: fundamental del algebra}, $f$ tiene al menos
-una raíz $r_{1}$, luego,
+una raíz $r_{1} \in \IC$, luego,
 el polinomio lineal $x-r_{1}$
 divide a $f$. Ahora bien, si $f$ tuviese una segunda
 raíz $r_{2}$, el polinomio 
@@ -133,8 +147,10 @@ todos los divisores de un polinomio $f$ con coeficientes
 en un campo tengan grado menor o igual al de $f$. 
 Con esto comprobamos la validez del teorema para $n=1$.
 
-Supongamos ahora el teorema cierto para $n \geq 1$.
-Sea $f \in \IC[x]$ un polinomio de grado uno; según 
+Supongamos ahora el teorema cierto para 
+todo polinomio de grado
+$n \geq 1$.
+Sea $f \in \IC[t]$ un polinomio de grado $n+1$; según 
 \ref{teo: fundamental del algebra}, $f$ tiene al menos
 una raíz $r_{1}$, luego,
 \begin{equation}
@@ -142,23 +158,24 @@ una raíz $r_{1}$, luego,
 f(x)= (x-r_{1}) g(x), 
 \end{equation}
 con $g(x)$ algún polinomio de coeficientes complejos y grado
-$n$. Por hipótesis de inducción, $g$ tiene exactamente
+$n$ (c.f. proposición \ref{prop: grado producto polin}). 
+Por hipótesis de inducción, $g$ tiene exactamente
 $n$ raíces complejas (contando multiplicidades); puesto que,
 según la ecuación \eqref{eq0: 11Dic}, las raíces de $f$
 son $r_{1}$ y las raíces de $g$ (pues, en un campo, el producto
 de dos elementos del campo es cero sí y sólo si alguno de 
 estos es cero), concluimos, como queríamos, que, salvo
 multiplicidades, $f$ tiene $n+1$ raíces complejas.
-\null\nobreak\hfill\ensuremath{\square} %final dem
+\null\nobreak\hfill\ensuremath{\square} 
 \vspace{0.2cm}
 
 La siguiente consecuencia inmediata del teorema fundamental del
-álgebra es (como se puede apreciar en el mapa \TODO{referencia}),
+álgebra es 
 una de las piezas angulares del trabajo desarrollado en esta tesis.
 
 \begin{prop}
 \label{prop: cita TFA}
-Sea $f(x) \in \IR[x]$ un polinomio con coeficientes reales
+Sea $f(t) \in \IR[t]$ un polinomio con coeficientes reales
 de grado a lo más $n$. Si $f$ tiene más de $n$ raíces reales, entonces
 $f$ es el polinomio cero.
 \end{prop}
