@@ -1,5 +1,6 @@
 \section{Bases ortonormales de espacios de Hilbert}
 \label{Bases ortonormales de espacios de Hilbert}
+\TODO{ver si, junto con G-S, puedo subir esto.}
 
 En general, dado un $F-$espacio vectorial $V$,
 si uno acepta el axioma de elección, siempre cuenta con 
@@ -24,7 +25,9 @@ a $A$ de hecho coincide con $A$.
 El tener además en $V$ definido un producto punto
 dota de estructura extra al espacio, en particular, 
 como dijimos ya,
-nos provee de una noción de longitud (\TODO{ref}) y también 
+nos provee de una noción de longitud (
+c.f. proposición \ref{prop: La norma inducida por un producto punto}) 
+y también 
 de ortogonalidad (\TODO{ref}), luego, en este 
 contexto podemos también hablar de subconjuntos $B$
 ortonormales maximales. Puesto que la ortogonalidad implica
@@ -126,201 +129,410 @@ suele ser sinónimo de
 a un lector primerizo, y llevarlo a pensar en
 bases de Hamel). Puesto que
 nosotros no queremos dar lugar a confusiones de este estilo,
-nos abstenemos de usar el nombre ``base'', y en su lugar ocupamos
+nos abstenemos de usar el nombre ``base'' y en su lugar ocupamos
 los nombres introducidos en la definición \ref{defi: BON y base de Hamel}.
 
+\subsection{El concepto de redes como un generalización del de sucesión}
 
-\TODO{Espacio de Hilbert = espacio con producto punto completo, verdad?
-Cambia además H por V. Recuerda que debes introducir el concepto
-de ``nets'' de Munkres.}
+Para dar unas equivalecias útiles a la propiedad de
+ser base ortonormal de un espacio de Hilbert, requeriremos del
+del concepto de ``red'', usado en topología como una extensión
+de la noción de sucesión.
+
+\marginnote{Para más detalles sobre redes, consulte \cite{munkres}
+p.87}
+
+Puede recordar la definición de ``orden parcial'' en 
+\cite{munkres} p. 187; el único tipo de conjunto parcialmente
+ordenado (abreviado ``POSET'') que aquí nos interesa es 
+aquel ordenado por la relación "$\subseteq$" (o sea, por la contención).
+\begin{defi}
+\label{def: conjunto dirijido}
+Sea $(\cali{E}, \leq )$ un orden parcial. Si para cualesquiera
+$\alpha, \beta \in \cali{E}$ existe un $\gamma \in \cali{E}$ tal que
+$\alpha \leq \gamma$ y $\beta \leq \gamma$, diremos que 
+$(\cali{E}, \leq)$ es un \textbf{conjunto dirigido}. 
+\end{defi}
+
+\begin{marginfigure}
+\includegraphics[scale=0.7]{net} 
+		\caption{Para que un POSET $(\cali{E}, \leq)$ sea llamado ``conjunto
+		dirigido'' debe cumplirse que, dados dos elementos 
+		arbitrarios de $\cali{E}$ siempre sea posible encontrar un tercer
+		elemento ``arriba'' de ambos.}
+\end{marginfigure}
+
+
+\begin{defi}
+Si $(V, \tau)$ es un espacio topológico y $(\cali{E}, \leq)$ es un conjunto
+dirijido, entonces a toda función $f: \cali{E} \longrightarrow V$
+se le llamará una \textbf{red}.
+\end{defi}
+
+\begin{defi}
+\label{def: net que converge}
+Si $f: \cali{E} \longrightarrow V$ es una red, decimos que $f$ 
+\textbf{converge} a un elemento del espacio $v \in V$ si 
+para cualquier vecindad $U$ de $v$ (i.e. cualquier elemento
+de $\tau$ que contenga a $v$) existe un $\alpha \in \cali{E}$ tal que
+\[
+\forall \beta \in \cali{E}: \hspace{0.2cm} 
+\alpha \leq \beta \Rightarrow f(\beta) \in U.
+\]
+\end{defi}
+
+
+
+Sea $(V, \langle \cdot , \cdot\rangle)$ un espacio de Hilbert;
+dado un subconjunto $W = \{ v_{i} : \hspace{0.2cm} i \in I \}$
+de $V$, queremos ``sumar todos los elementos de 
+$W$''; puesto que trabajamos en un espacio vectorial,
+la acción de sumar una cantidad \textit{finita} de elementos
+de $V$ tiene sentido, pero como
+\textit{a priori} no se ha supuesto nada
+sobre la cardinalidad del conjunto de índices $I$, 
+en general no siempre tiene sentido intentar sumar los elementos de $W$;
+definimos rigurosamente esta acción a partir de una
+de una red que definimos como sigue; consideramos al conjunto
+
+
+\begin{comment}
+{
+\Huge{$\alpha$}
+
+\Huge{$\beta$}\\
+
+\Huge{$\gamma$}
+}
+\end{comment}
+
+\begin{equation}
+\label{eq0: 14ap}
+\cali{P} := \{ \alpha \subseteq I : \hspace{0.2cm} \alpha \hspace{0.1cm} \textit{es finito} \}.
+\end{equation}
+
+\noindent 
+Observe que $\cali{P}$ consta exactamente de los subconjuntos $\alpha$
+de $I$ para los que la expresión 
+\[
+\suma{i \in \cali{P}}{}{v_{i}}
+\]
+tiene sentido. Teniendo ya un espacio topológico $(V, \tau)$
+(con la topología $\tau$ definida como en
+\eqref{eq: top espacio con producto punto})
+y el conjuto dirigido $(\cali{P}, \subseteq)$,
+definimos la siguiente red;
+
+\begin{center}
+\label{eq: net a partir de un subconjunto de un espacio de Hilbert}
+$\aplica{f_{\cali{P}}}{\cali{P}}{V}{\alpha}{ \suma{i \in \alpha}{}{v_{i}.}}$
+\end{center}
+
+El que esta red converja (c.f. definición
+\ref{def: net que converge}) a un $v \in V$ significa que
+para todo $\epsilon >0$ exista $\alpha \subseteq I$
+finito tal que, si $\beta$ es otro subconjunto finito de $I$
+que contenga a $\alpha$, entonces
+\[
+\left| \suma{i \in \beta}{}{v_{i}} - v \right| < \epsilon;
+\]
+
+\noindent o sea, que $\suma{i \in \alpha}{}{v_{i}}$
+se encuentra a distancia $\epsilon$ de $v$ y que, no importa
+cuántos sumandos se agregen, la suma resultante sigue siendo 
+un vector que se encuentra a 
+distancia $\epsilon$ de $v$.
+
+\begin{notacion}
+Si la red $f_{\cali{P}}$ converge,
+denotaremos a su límite como
+$\suma{}{}{\{ v_{i}: \hspace{0.2cm} i \in I \}}$.
+\end{notacion}
+
+\begin{nota}
+Si el conjunto de índices $I$ es infinito numerable, ya 
+teníamos una forma natural de definir la suma 
+de los elementos de $W = \{ v_{i}: \hspace{0.2cm} i \in I \}$;
+haciendo $I = \IN$ (mejor dicho, identificando a $I$ con 
+$\IN$ via una biyección), podiamos preguntarnos por la existencia
+del límite de la sucesión de sumas parciales
+$\suma{i=1}{n}{v_{i}}$; \textbf{debe tener cuidado}, pues
+la convergencia de la \textbf{red} $f_{\cali{P}}$ definida como 
+$f_{\cali{P}}(\alpha) = \suma{i \in \alpha}{}{v_{i}}$ 
+(con $\alpha \subseteq \IN$ cualquier subconjunto finito de $\IN$)
+\textbf{no}
+equivale a la convergencia de la \textbf{sucesión}
+$\left( \suma{i=1}{n}{v_{i}} \right)_{n \in \IN}$
+(c.f. p. 16 de \cite{conway}). \\
+De existir, al límite de la red lo denotamos por
+$\suma{}{}{\{ v_{i} : \hspace{0.2cm} i \in \IN \}}$, mientras
+que al límite de la sucesión lo denotamos por
+$\suma{i=1}{\infty}{v_{i}}$.
+\end{nota} 
+
+
+\subsection{Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}
+
+
+Enunciamos y demostramos el teorema
+\ref{thm: Coway, 4.13}, en el que damos algunas equivalencias
+a ser base ortonormal.
+
+Para la demostración necesitamos antes del siguiente lema,
+cuya demostración puede consultarse en \cite{conway}, p. 16.
+
+\begin{lema}
+\label{lema: 4.12 conway}
+\textbf{(Lema 4.12 de \cite{conway})}
+Sean $(V, \langle \cdot , \cdot \rangle)$ un espacio
+de Hilbert, $\cali{E}= \{e_{i}: \hspace{0.2cm} i \in I \}$ 
+un subconjunto ortonormal de
+$V$. Si $x \in V$ es un elemento arbitrario del espacio,
+$W := \{ \langle x, e_{i} \rangle:\hspace{0.2cm} i \in I \}$
+y $\cali{P}:= \{ \alpha \subseteq I: \hspace{0.2cm} \alpha \text{ finito} \}$,
+entonces la red
+$f_{\cali{P}}: \cali{P} \longrightarrow V$ 
+definida como $f(\alpha) = \suma{i \in \alpha}{}{\langle x, e_{i} \rangle e_{i}}$
+converge a un elemento de $V$ que denotamos por 
+$\suma{}{}{ \{ \langle x, e \rangle e: \hspace{0.2cm} e \in \cali{E} \} }$.
+\end{lema}
+
+
+
 \begin{teo} \label{thm: Coway, 4.13}
 \textbf{(Teorema 4.13 de \cite{conway} )}
 Sea $\cali{E}$ un subconjunto ortonormal del espacio
-de hilbert $\cali{H}$.
+de Hilbert $(V, \langle \cdot , \cdot \rangle)$.
 Las siguiente proposiciones son equivalentes entre sí:
 \begin{itemize}
-\item[a)] $\cali{E}$ es una BON de $\cali{H}$.
-\item[b)] Si $h \in \cali{H}$ es ortogonal a todo elemento de 
-$\cali{E}$ entonces es cero.
-\item[c)] $\overline{span}(E)= \cali{H} $.
-\item[d)] Para todo $h \in \cali{H}$ se cumple que
+\item[a)] $\cali{E}$ es una BON de $V$ (en el sentido
+de la definición \ref{defi: BON y base de Hamel}).
+\item[b)] Si $x \in V$ es ortogonal a todo elemento de 
+$\cali{E}$ entonces $x=0$.
+\item[c)] $\overline{span}(\cali{E})= V$.
+\item[d)] Para todo $x \in V$ se cumple que
 \[
-h = \suma{}{}{\{ <h,e> e | e \in \cali{E} \}}
+x = \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}}
 \]
-\item[e)] Para cualesquiera $g, h \in \cali{H}$,
+\item[e)] Para cualesquiera $x, y \in V$,
 \[
-<g,h>= \suma{}{}{\{ <g,e> <e,h> | e \in \cali{E} \}}
+\langle x,y \rangle= \suma{}{}{\{ \langle x,e \rangle  \langle e,y \rangle | e \in \cali{E} \}}
 \]
 \item[f)](\textbf{Identidad de Parseval})
-Para todo $h \in \cali{H}$ se cumple que
+Para todo $x \in V$ se cumple que
 \[
-||h||^{2}= \suma{}{}{\{ <h,e>^{2} | e \in \cali{E} \}}.
+||x||^{2}= \suma{}{}{\{ \langle x,e \rangle ^{2} | e \in \cali{E} \}}.
 \]
 \end{itemize}
 \end{teo}
 
-\sidenote{
+\marginnote{
 El inciso $c)$ del teorema 
 \ref{thm: Coway, 4.13}
 corresponde a la definición
 de BON dada en \cite{kolmogorov}; así, una BON
 es también un subconjunto ortonormal tal que el menor
-subespacio cerrado de $\cali{H}$ que contiene a $E$ es 
-todo $\cali{H}$. Compare este inciso con el hecho de que
-$E$ es una base de Hamel de $V$ si y sólo si $E$ es
-linealmente independiente y $span(E) = V$.}
+subespacio cerrado de $V$ que contiene a $\cali{E}$ es 
+todo $V$. Compare este inciso con el hecho de que
+$\cali{E}$ es una base de Hamel de $V$ si y sólo si $E$ es
+linealmente independiente y $span(\cali{E}) = V$.}
 \noindent
 \textbf{Demostración.}
 \begin{itemize}
+
 \item[$a) \Rightarrow b)$] Suponer la existencia de un 
-$h$ no cero ortogonal a todo elemento de $\cali{E}$
+$x$ no cero ortogonal a todo elemento de $\cali{E}$
 nos permite considerar al subconjunto ortonormal
 \[
-\cali{E} \cup \{ \frac{h}{||h||} \}
+\cali{E} \cup \left\{ \frac{x}{||x||} \right\}
 \]
-de $\cali{H}$
+de $V$
 que contiene propiamente a $\cali{E}$,
-contradiciendo así la maximalidad de $\cali{E}$.
+contradiciendo así la maximalidad de $\cali{E}$
+respecto a la propiedad de ser ortonormal.
 
 \item[$b) \Rightarrow c)$] Sea el subespacio
-$W := \overline{span}(E)$ de $\cali{H}$. Por ser
-$W$ un subespacio cerrado de $\cali{H}$, podemos proyectar
-sobre él. Para mostrar que tenemos la igualdad entre
-estos dos espacios, tomemos un $h \in \cali{H}$ cualquiera.
+$W := \overline{span}(\cali{E})$ de $V$. Por ser
+$W$ un subespacio cerrado de $V$, podemos proyectar
+sobre él (c.f. teorema \ref{Teo:proyOrt}).
+Para mostrar que tenemos la igualdad entre
+$V$ y $W$, tomemos un $x \in V$ cualquiera.
 Según el teorema de la proyección ortogonal 
-\ref{Teo:proyOrt}, $(h-\Pi_{W}(h))$
+\ref{Teo:proyOrt}, $x-\Pi_{W}(x)$
 es ortogonal a todo elemento de $W$, 
-a todo elemento de $E$;
-por hipótesis, esto implica que $h-\Pi_{W}(h)$ sea el vector cero.
-Así,
+en particular, será ortogonal a todo elemento de
+$\cali{E}$ (pues $\cali{E} \subseteq W$);
+por hipótesis, esto implica que $x-\Pi_{W}(x)$ sea el vector cero;
+así,
 \[
-h = \Pi_{W}(h) \in W.
+x = \Pi_{W}(x) \in W.
 \]
 
-\item[$c) \Rightarrow b)$] Sea $h \in \cali{H}$
+\item[$c) \Rightarrow b)$] Sea $v \in V$
 ortogonal a todo elemento de $\cali{E}$; mostremos que
-$h$ es cero. Como $h \in \overline{span}(E)$ (hipótesis),
+$v$ es cero. Como $v \in V = \overline{span}(\cali{E})$,
 existe $(b_{n})_{n \in \IN}$ una sucesión de
-$span(E)$ tal que
-$\lim_{n \rightarrow \infty}b_{n}=h$.
-Usando el que para toda $n$ el producto punto $<b_{n}, h>$
+$span(\cali{E})$ tal que
+$\lim_{n \rightarrow \infty}b_{n}=v$ 
+(c.f. lema 21.2 de \cite{munkres}).
+Usando el que para toda $n$ el producto punto 
+$\langle b_{n}, h \rangle$
 sea cero y la continuidad
 establecida en la proposición \ref{prop: continuidad del producto punto},
 llegamos a que
 \[
-<h,h>= <h, \lim_{n \rightarrow \infty}b_{n}>= 
-\lim_{n \rightarrow \infty}b_{n}<h, b_{n}>= 
+\langle x,x \rangle= \langle x, \lim_{n \rightarrow \infty}b_{n} \rangle= 
+\lim_{n \rightarrow \infty} \langle x, b_{n} \rangle= 
 \lim_{n \rightarrow \infty} 0 = 0,
 \]
-de donde concluimos que $h=0$.
+de donde concluimos 
+(c.f. \eqref{eq: norma via producto punto} y 
+definición \ref{def: prod punto})
+que $x$ es cero.
+ 
 
-
-\item[$b) \Rightarrow d)$] Según el \TODO{Lema 4.12},
-la red $\suma{}{}{\{ <h,e>e | e \in \cali{E} \}}$
-en efecto converge a un vector; resta ver que tal 
-vector es $h$
+\item[$b) \Rightarrow d)$] Según el lema \ref{lema: 4.12 conway},
+la red $f_{\cali{E}}$ converge a un vector, que denotamos por 
+$\suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}}$;
+resta ver que tal 
+vector es $x$
 o, equivalentemente, que
-\begin{equation} \label{eq 0: 8Agosto}
-h- \suma{}{}{\{ <h,e>e | e \in \cali{E} \}}
-\end{equation}
+$
+\suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}} -x
+$
 es el vector cero; según nuestra hipótesis, podremos
 concluir esto si demostramos que para todo $e \in \cali{E}$
 ocurre
-\[
-<e, \suma{}{}{\{ <h,e>e | e \in \cali{E} -h \}} > =0.
-\]
-Haremos esto mostrando que la norma de 
-\eqref{eq 0: 8Agosto} es cero \\
-Sea $\epsilon >0$.
+
+\begin{equation}
+\label{eq2: 14ap}
+\langle \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}} -x, e \rangle
+= 0.
+\end{equation}
+
+Fijempos pues un $e \in \cali{E}$ y sea
+$\epsilon >0$.
 Por definición de convergencia de redes, sabemos que
 existe $F \subseteq \cali{E}$ finito con $e \in F$
 tal que
 \begin{equation} \label{eq 1: 8Agosto}
 |L_{F}| < \epsilon,
 \end{equation}
-donde $L_{F}:= \suma{f \in F}{}{<h,f>f} - 
-\suma{}{}{\{ <h,e>e| e \in \cali{E} \}}$. \\
+donde $L_{F}:= \suma{f \in F}{}{ \langle x,f \rangle f } - 
+\suma{}{}{\{ \langle x,e \rangle e| e \in \cali{E} \}} \in V$, o sea,
+
+\begin{equation}
+\label{eq1: 14ap}
+\suma{}{}{\{ \langle x,e \rangle e| e \in \cali{E} \}}
+= \suma{f \in F}{}{ \langle x,f \rangle f } - L_{F}
+\end{equation}
 
 Por la bilinealidad del producto punto y por
 ser $e$ ortogonal a todo elemento de $\cali{E}-\{ e \}$
 tenemos que
 \begin{equation} \label{eq 2: 8Agosto}
-<\suma{f \in F}{}{<h,f>f}, e> = \suma{f \in F}{}{<h,f><f,e>}
-= <h,e> <e,e>=<h,e>.
+\langle \suma{f \in F}{}{\langle x,f \rangle f}, e \rangle = \suma{f \in F}{}{
+\langle x,f \rangle \langle f,e \rangle}
+= \langle x,e \rangle \langle e,e \rangle =
+\langle x,e \rangle.
 \end{equation}
 
 Así,
 \begin{align*}
-0 \leq |<e, \suma{}{}{\{ <h,e>e | e \in \cali{E} \}} -h > | = &
-| <e, \suma{}{}{\{ <h,e>e | e \in \cali{E} \}} > - <e,h>| = \\
-=  | <e, \suma{}{}{\{ <h,e>e | e \in \cali{E} \}} - \suma{f \in F}{}{<h,f>f}
-+ & \suma{f \in F}{}{<h,f>f} > - <h,e> | \\
-= & | <e,  \suma{f \in F}{}{<h,f>f}> + <e, L_{F}> - <h,e>  | \\
-(\text{por \eqref{eq 2: 8Agosto} }) = & |<e, L_{F}>| \\
-(\text{Cauchy-Schwarz})&   \leq |e| |L_{F}| = |L_{F} | \\
-(\text{por \eqref{eq 1: 8Agosto}})& < \epsilon.  
+0 \leq & | \langle \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}} -x, e \rangle | \\
+= &
+| \langle \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}}, e \rangle - 
+\langle x, e \rangle| \\
+(\text{por } \eqref{eq1: 14ap}) = & 
+| \langle 
+\suma{f \in F}{}{ \langle x,f \rangle f  } - L_{F}, e
+\rangle - 
+\langle x, e \rangle | \\ 
+= & 
+| \langle 
+\suma{f \in F}{}{ \langle x,f \rangle f  }, e \rangle  
+- \langle L_{F}, e \rangle - \langle x, e \rangle | \\
+(\text{por \eqref{eq 2: 8Agosto} }) = & 
+|
+\langle x, e \rangle
+- \langle L_{F}, e \rangle - \langle x, e \rangle |  \\
+= & | \langle L_{F}, e \rangle | \\
+(\text{Cauchy-Schwarz}) \leq & ||L_{F}|| \cdot ||e|| = |L_{F} | \\
+(\text{por \eqref{eq 1: 8Agosto}}) \leq  &  \epsilon;
 \end{align*}
 
-
-Demostramos entonces que
+\noindent
+demostramos así que
 \[
-(\forall \epsilon > 0): \hspace{0.5cm} 
-0 \leq |<e, \suma{}{}{\{ <h,e>e | e \in \cali{E} \}} -h > |< \epsilon;
+\forall \epsilon > 0: \hspace{0.2cm} 
+0 \leq  | \langle \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}} -x, e \rangle | \leq  \epsilon;
 \]
-de esto conlcuimos que $|<e, \suma{}{}{\{ <h,e>e | e \in \cali{E} \}} -h > |$
-es cero.
+de esto concluimos que $ | \langle \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}} -x, e \rangle |$ es cero, de donde se deduce, como queríamos, \eqref{eq2: 14ap}.
+
 
 \item[$d) \Rightarrow e)$] Según nuestra hipótesis,
 \[
-h= \suma{}{}{\{ <h,e>e | e \in \cali{E} \} }, \hspace{0.5cm}
-g= \suma{}{}{\{ <g,e>e | e \in \cali{E} \} }.
+x= \suma{}{}{\{ \langle x,e \rangle e | e \in \cali{E} \}}, \hspace{0.5cm}
+y= \suma{}{}{\{ \langle y,e \rangle e | e \in \cali{E} \}}.
 \]
 
+\noindent
 Para $F \subseteq \cali{E}$ finito, sean
 \[
-H_{F}:= \suma{e \in F}{}{<h, e>e-h},
+X_{F}:= \suma{e \in F}{}{\langle x, e \rangle} e -x,
 \hspace{0.5cm}
-G_{F}:= \suma{e \in F}{}{<g, e>e-g}.
+Y_{F}:= \suma{e \in F}{}{\langle y, e \rangle} e -y.
 \]
 
 Por la ortonormalidad supuesta en el conjunto $\cali{E}$,
 \begin{equation}
 \label{eq 3: 8Agosto}
-<\suma{e \in F}{}{<h, e>e}, \suma{e \in F}{}{<g, e>e} >
-= \suma{e \in F}{}{<h,e><g,e>};
+\left\langle \suma{e \in F}{}{\langle x, e \rangle e}, 
+\suma{e \in F}{}{\langle y, e\rangle e} \right\rangle
+= \suma{e \in F}{}{
+\langle  x,e \rangle \langle y,e \rangle};
 \end{equation}
 así,
-\begin{align*}
-|\suma{e \in F}{}{<h,e><g,e>} - <h,g>| \underbrace{=}_{\text{por 
-\eqref{eq 3: 8Agosto}}} & |<\suma{e \in F}{}{<h, e>e}, \suma{e \in F}{}{<g, e>e} >
-- <h,g>| \\
-= & |<H_{F}+h, G_{F}+g > - <h,g>| \\
-= & |<H_{F}, G_{F}> -<H_{F}, g> + <h,G_{h}>| \\
-(\text{desigualdad triangular}) \leq & |<H_{F}, G_{F}> | + |<H_{F}, g>|
-+ |<h,G_{H}>| \\
-(\text{Cauchy-Schwarz}) \leq & ||H_{F}|| \cdot ||G_{F}|| +
-||H_{F}|| \cdot ||g|| + ||h|| \cdot ||G_{H}||;
-\end{align*}
-puesto que $||g||$ y $||h||$ son constantes
-y $||H_{F}||$ y $||G_{F}||$ pueden hacerse tan pequeñas como
-se quiera (escogiendo apropiadamente al conjunto finito $F$),
-concluimos que la red 
-$\suma{}{}{\ <h,e> <g,e> | e \in \cali{E}\}}$
-converge a $<h,g>$.
 
-\item[$e) \Rightarrow f)$] Para $h \in \cali{H}$,
+
+
+\begin{align*}
+|\suma{e \in F}{}{\langle x,e \rangle \langle y,e \rangle } - 
+\langle  x,y \rangle | & \underbrace{=}_{\text{por 
+\eqref{eq 3: 8Agosto}}} |\left\langle \suma{e \in F}{}{\langle x, e\rangle e}, \suma{e \in F}{}{\langle y, e\rangle e} \right\rangle
+- \langle x,y\rangle | \\
+= & |\langle X_{F}+x, Y_{F}+y \rangle  - \langle x,y\rangle | \\
+= & |\langle X_{F}, Y_{F}\rangle + \langle X_{F}, y\rangle  + 
+\langle x,Y_{h}\rangle | \\
+(\text{desigualdad triangular}) \leq & |\langle X_{F}, Y_{F}\rangle  | + 
+|\langle X_{F}, y \rangle |
++ |\langle x,Y_{H}\rangle | \\
+(\text{Cauchy-Schwarz}) \leq & ||X_{F}|| \cdot ||Y_{F}|| +
+||X_{F}|| \cdot ||y|| + ||x|| \cdot ||Y_{H}||;
+\end{align*}
+puesto que $||x||$ y $||y||$ son constantes
+y $||X_{F}||$ y $||Y_{F}||$ pueden hacerse tan pequeñas como
+se quiera (escogiendo apropiadamente al conjunto finito $F$),
+concluimos que
+$\suma{}{}{ \{ \langle x,e \rangle \langle y, e \rangle: \hspace{0.2cm} e \in \cali{E} \}}
+= \langle x, y \rangle$.
+
+\item[$e) \Rightarrow f)$] Para $x \in V$,
 \[
-||h||^{2}=<h,h> = \suma{}{}{\{ <h,e>^{2}| e \in \cali{E} \}}.
+||x||^{2}=\langle x,x \rangle = \suma{}{}{\{
+\langle x,e\rangle ^{2}| e \in \cali{E} \}}.
 \]
 
-\item[$e) \Rightarrow f)$]
+\item[$f) \Rightarrow a)$]
 Supongamos que $\cali{E}$ puede extenderse aún más
 para ser ortonormal, es decir, que existe 
-$e_{0} \in \cali{H}$ unitario tal que
-para todo $e \in \cali{E}$, $<e_{0}, e>=0$. 
+$e_{0} \in V$ unitario tal que
+para todo $e \in \cali{E}$ se tenga que 
+$\langle e_{0}, e \rangle=0$. 
 Llegamos entonces a la siguiente contradicción:
 \[
-1=||e_{0}||^{2}=\suma{}{}{\{ <e_{0}, e>^{2}| e \in \cali{E} \}}=
+1=||e_{0}||^{2}=\suma{}{}{\{ 
+\langle e_{0}, e \rangle^{2}| e \in \cali{E} \}}=
 \suma{}{}{\{ 0\}}=0.
 \]
 \QEDB
@@ -337,49 +549,49 @@ se tratará siempre con espacios de Hilbert finito dimensionales, luego, con
 bases ortonormales finitas, conviene
 reescribir algunos puntos del teorema 
 \ref{thm: Coway, 4.13} en este caso particular.
-Digamos que $dim(\cali{H})=n$; si 
+Digamos que $dim(V)=n$; si 
 $\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
-BON del espacio de Hilbert $\cali{H}$, entonces, para todo
-$h \in \cali{H}$, se tiene que 
+BON del espacio de Hilbert $V$, entonces, para todo
+$x \in V$, se tiene que 
 
 \begin{equation}
 \label{eq0: 11ap}
-h = \suma{k=0}{n-1}{\langle h , e_{k} \rangle^{2} e_{k}}
+x = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2} e_{k}}
 \end{equation}
 y además
 
 \begin{equation}
 \label{eq1: 11ap}
-|| h ||^{2} = \suma{k=0}{n-1}{\langle h , e_{k} \rangle^{2}};
+|| x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}};
 \hspace{0.4cm} \textit{(Identidad de Parseval)}
 \end{equation}
 
 
 \noindent
 así, si se usa a una BON $\cali{E}$ del espacio como sistema
-de representación (o sea, si se representa a todo $h$ del espacio 
+de representación (o sea, si se representa a todo $x$ del espacio 
 por medio de sus $n$ coeficientes respecto a $\cali{E}$), se tiene que
 \begin{itemize}
 	\item tales coeficientes son de hecho los productos punto entre
-	$h$ y los elementos de la base $\cali{E}$ (c.f. 
+	$x$ y los elementos de la base $\cali{E}$ (c.f. 
 	\eqref{eq0: 11ap}), y
 	\item se tiene una relación lineal muy sencilla entre el cuadrado
-	de la norma de $h$ y el cuadrado de los coeficientes de la representación
+	de la norma de $x$ y el cuadrado de los coeficientes de la representación
 	(c.f. \eqref{eq0: 11ap}).
 \end{itemize}
 
 Estos dos hechos permiten \textbf{usar la magnitud de un coeficiente en 
 \eqref{eq0: 11ap} para valorar la contribución del respectivo 
-elemento de la base $\cali{B}$ para sintetizar a $h$};
-en efecto, si, por ejemplo, el coeficiente $\langle h, e_{k_{1}} \rangle$
-es ``muy cercano a cero'', digamos $\langle h, e_{k_{1}} \rangle = \epsilon$,  
+elemento de la base $\cali{B}$ para sintetizar a $x$};
+en efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
+es ``muy cercano a cero'', digamos $\langle x, e_{k_{1}} \rangle = \epsilon$,  
 entonces el vector 
-$h_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
-\langle h , e_{k} \rangle^{2} e_{k}}$
-es, en la misma medida, cercano al vector inicial $h$, pues
+$x_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
+\langle x , e_{k} \rangle^{2} e_{k}}$
+es, en la misma medida, cercano al vector inicial $x$, pues
 \[
-|| h - h_{k_{1}} || = || \langle h , e_{k_{1}} \rangle^{2} e_{k_{1}} ||
-= \langle h , e_{k_{1}} \rangle^{2} = \epsilon.
+|| x - x_{k_{1}} || = || \langle x , e_{k_{1}} \rangle^{2} e_{k_{1}} ||
+= \langle x , e_{k_{1}} \rangle^{2} = \epsilon.
 \]
 \end{nota}
 
@@ -453,14 +665,14 @@ Para la tarea necesitamos el siguiente resultado.
 
 \begin{prop} \label{teo: Kol 6, p.149}
 (\cite{kolmogorov}, thm. 6 p. 149)
-Si $\{ v_{k} |k \in \IN \}$ es un sistema
-ortonormal de un espacio con producto
-punto $V$ y $v \in V$, entonces la expresión
+Si $\{ e_{k} |k \in \IN \}$ es un sistema
+ortonormal de un espacio de Hilbert $V$ 
+y $x \in V$, entonces la expresión
 \[
-|| v - \suma{k=1}{\infty}{a_{k}v_{k}}  ||
+|| x - \suma{k=1}{\infty}{a_{k}e_{k}}  ||
 \]
 alcanza su mínimo para la elección de coeficientes
-$a_{k}= <v , v_{k} > $.
+$a_{k}= <x , e_{k} > $.
 \end{prop}
 
 \noindent
@@ -474,29 +686,29 @@ se incluye el caso de una BON finita.
 Si $(a_{k})_{k \in \IN}$ es una sucesión de coeficientes,
 como es costumbre,
 en caso de existir el límite de sumas parciales
-$S_{n}:= \suma{k=1}{n}{a_{k}v_{k}}$, este es un vector que denotamos
-por $\suma{k=1}{\infty}{a_{k}v_{k}}$. Además,
+$S_{n}:= \suma{k=1}{n}{a_{k}e_{k}}$, este es un vector que denotamos
+por $\suma{k=1}{\infty}{a_{k}e_{k}}$. Además,
 por la continuidad de la norma,
 \[
-||v - \suma{k=1}{\infty}{a_{k}v_{k}} || = \limite{n \rightarrow \infty }{||v-S_{n}||}
+||x - \suma{k=1}{\infty}{a_{k}e_{k}} || = \limite{n \rightarrow \infty }{||x-S_{n}||}
 \]
 por lo que, si encontramos una elección de coeficientes $(a_{k})_{k \in \IN}$
 que haga que
 la sucesión $(S_{n})_{n \in \IN}$ converja y tal que las normas
-$||v-S_{n}||$ (o, equivalentemente, los números $||v-S_{n}||^{2}$)
+$||x-S_{n}||$ (o, equivalentemente, los números $||x-S_{n}||^{2}$)
 sean míminas, esa será la elección buscada. \\
 Observe que, para toda $n$,
 \begin{align*}
-||v-S_{n}||^{2} & = <v-S_{n} , v-S_{n} > \\
-\text{(bilinealidad)} & =  <v, v > - 2 < v , v_{n} > + <S_{n} , S_{n}  > \\
-\text{(ortonormalidad)} & =  ||v||^{2} - 2 < v ,\suma{k=1}{n}{a_{k}v_{k}} > + 
+||x-S_{n}||^{2} & = <x-S_{n} , x-S_{n} > \\
+\text{(bilinealidad)} & =  <x, x > - 2 < x, x_{n} > + <S_{n} , S_{n}  > \\
+\text{(ortonormalidad)} & =  ||x||^{2} - 2 < x ,\suma{k=1}{n}{a_{k}e_{k}} > + 
 \suma{k=1}{n}{a_{k}^{2}} \\
-= & ||v||^{2} - 2\suma{k=1}{n}{a_{k}c_{k}}  + 
+= & ||x||^{2} - 2\suma{k=1}{n}{a_{k}c_{k}}  + 
 \suma{k=1}{n}{a_{k}^{2}},
 \end{align*}
-donde $c_{k}:= < v , v_{k} >$. Así,
+donde $c_{k}:= < x , e_{k} >$. Así,
 \[
-||v-S_{n}||^{2} = ||v||^{2} - \suma{k=1}{n}{c_{k}^{2}}  + 
+||x-S_{n}||^{2} = ||x||^{2} - \suma{k=1}{n}{c_{k}^{2}}  + 
 \suma{k=1}{n}{(a_{k}-c_{k})^{2}};
 \]
 claro que la sucesión de coeficientes que minimiza
@@ -506,8 +718,8 @@ de sumas parciales converja, pues tenemos la siguiente acotación
 válida para toda $n$:
 
 \begin{equation} \label{ecuacion teor kolmogorov}
-\suma{k=1}{n}{c_{k}^{2}} \leq ||v||^{2}-||v-S_{n}||^{2} \leq 
-\underbrace{||v||^{2}}_{cte}.
+\suma{k=1}{n}{c_{k}^{2}} \leq ||x||^{2}-||x-S_{n}||^{2} \leq 
+\underbrace{||x||^{2}}_{cte}.
 \end{equation}
 
 \QEDB
@@ -517,14 +729,15 @@ válida para toda $n$:
 \begin{cor} \label{cor: proyeccion en terminos de una BON}
 \textbf{(Dando explícitamente a la proyección de un vector
 a un subespacio cerrado respecto a una BON de este último)}
-Con la notación de la proposición \ref{teo: Kol 6, p.149},
-para todo $v \in V$
+Con la notación 
+e hipótesis
+de la proposición \ref{teo: Kol 6, p.149},
+para todo $x \in V$
 tenemos que
 \[
-\Pi_{W}(v) = \suma{k=1}{\infty}{<v, v_{k}>v_{k}},
+\Pi_{W}(x) = \suma{k=1}{\infty}{<x, e_{k}>e_{k}},
 \]
-donde $W := \overline{\{v_{k}| k \in \IN \}}$. \TODO{de hecho,
-Conway demuestra esto en p. 15.}
+donde $W := \overline{\{e_{k}| k \in \IN \}}$. 
 \end{cor}
 
 \begin{cor}
@@ -543,14 +756,14 @@ es una BON de $W$, entonces, para todo $x \in V$,
 
 \begin{cor} \label{cor: representacion de un vector respecto a una BON}
 Si $V$ es un espacio con producto punto 
-y $B=(v_{k})_{k \in \Delta}$ es una BON de este
+y $B=(e_{k})_{k \in \Delta}$ es una BON de este
 a lo más numerable, entonces, para todo
-$v \in V$, $v = \suma{k \in \Delta}{}{<v, v_{k}>v_{k}}$
+$x \in V$, $x = \suma{k \in \Delta}{}{<x, e_{k}>e_{k}}$
 \end{cor}
 \noindent
 \textbf{Demostración.}
-La proyección de un $v \in V$ sobre $V$ es trivialmente $v$
-($v$ es el elemento de $V$ más cercano a sí mismo); según el corolario
+La proyección de un $x \in V$ sobre $V$ es trivialmente $x$
+($x$ es el elemento de $V$ más cercano a sí mismo); según el corolario
 \ref{cor: proyeccion en terminos de una BON}, esta
 proyección es la serie propuesta. \QEDB
 \vspace{0.2cm}
@@ -561,10 +774,10 @@ independientemente del orden que se elija, siempre se tratará con
 una BON del espacio. \\
 
 \begin{cor}(\textbf{Desigualdad de Bessel})
-Si $\{ v_{k} | k \in \IN \}$ es un sistema ortonormal en 
-el espacio con producto punto $V$, entonces, para todo $v\in V$,
+Si $\{ e_{k} | k \in \IN \}$ es un sistema ortonormal en 
+el espacio con producto punto $V$, entonces, para todo $x \in V$,
 \[
-\suma{k=1}{\infty}{<v , v_{k} >^{2}} \leq ||v||^{2}.
+\suma{k=1}{\infty}{<x , e_{k} >^{2}} \leq ||x||^{2}.
 \]
 \end{cor}
 \noindent

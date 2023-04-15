@@ -1,5 +1,29 @@
 \section{El teorema de la proyección ortogonal}
-\begin{teo} \label{Teo:proyOrt}
+
+En general, si $V$ es un espacio métrico y W es un subconjunto
+de este, puede definirse la distancia de un punto $x \in V$ a W como
+el ínfimo del conjunto de distancias entre $x$ y puntos de $W$:
+
+\[
+d(x,W)=inf\{||x-y||: y \in W \}.
+\]
+\noindent 
+Tal ínfimo existe por estar el conjunto descrito acotado inferiormente,
+por ejemplo, por el cero. El siguiente teorema nos dice que,
+en el contexto de espacios de Hilbert, si $W$ es un subespacio de $V$
+que además es cerrado \sidenote{Cuidado aquí: hay dos nociones distintas de 
+cerradura involucradas. Como el espacio métrico $V$ es un espacio vectorial
+normado, con ``subespacio'' nos referimos a un subespacio vectorial de $V$,
+no a un mero subconjunto de este; es decir, requerimos que $W$ sea cerrado bajo
+las operaciones de espacio vectorial. Se pide además que $W$ (pensado
+como subconjunto del espacio métrico $V$) 
+sea cerrado en el sentido topológico
+(c.f. \cite{munkres} p.93 ).}, 
+tal ínfimo se alcanza, es decir, existe un punto
+(además, único) $\hat{x}$ de $W$ que minimiza la distancia a $x$. \\
+
+\begin{teo} 
+\label{Teo:proyOrt}
 (\textbf{de la proyección ortogonal}
 ~\cite{Nimark}):
 Sean $V$ un espacio de Hilbert, $W$ un subespacio cerrado de $V$. 
@@ -12,35 +36,13 @@ tal que $x-\hat{x} \in W^{\perp} $.
 \end{teo}
 
 
-En general, si $V$ es un espacio métrico y W es un subconjunto
-de este, puede definirse la distancia de un punto $x \in V$ a W como
-el ínfimo del conjunto de distancias entre $x$ y puntos de $W$:
-
-\[
-d(x,W)=inf\{||x-y||: y \in W \}.
-\]
-\noindent 
-Tal ínfimo existe por estar el conjunto descrito acotado inferiormente,
-por ejemplo, por el cero. El teorema de la proyección 
-\ref{Teo:proyOrt} nos dice entonces que,
-en el contexto de espacios de Hilbert, si $W$ es un subespacio de $V$
-que además es cerrado \sidenote{Cuidado aquí: hay dos nociones distintas de 
-cerradura involucradas. Como el espacio métrico $V$ es un espacio vectorial
-normado, con ``subespacio'' nos referimos a un subespacio vectorial de $V$,
-no a un mero subconjunto de este; es decir, requerimos que $W$ sea cerrado bajo
-las operaciones de espacio vectorial. Se pide además que $W$ (pensado
-como subconjunto del espacio métrico $H$) sea cerrado, es decir, que contenga
-a todos sus puntos límite
-(c.f. definición \TODO{Munkres}).}, tal ínfimo se alcanza, es decir, existe un punto
-(además, único) $\hat{x}$ de $W$ que minimiza la distancia a $x$. \\
-
 En este trabajo, 
 el espacio con producto punto
 particular que nos concierne 
 es $\IR^{n}$ con el producto punto usual; por ser
 este un espacio finito-dimensional, 
 cualquier subespacio de este es cerrado
-(~\cite{Kreyszig}, Thm. 2.4-3),
+(c.f. teorema 2.4-3 de \cite{Kreyszig}),
 luego, el teorema de la proyección siempre aplica. \\
 
 En general, si $W$ es un subespacio cerrado de
@@ -69,55 +71,55 @@ Sean $V$ es un espacio de Hilbert, $W$ un subespacio cerrado de
 $V$ cuyo complemento ortogonal también es cerrado en $V$.
 Entonces,
 \begin{itemize}
-\item Para todo $v \in V$, $v= \Pi_{W}(v)+ \Pi_{W^{\perp}}(v)$.
+\item Para todo $x \in V$, $x= \Pi_{W}(x)+ \Pi_{W^{\perp}}(x)$.
 \item $\Pi_{W}: V \longrightarrow W$ es un operador autoadjunto.
 \end{itemize}
 \end{cor}
 \noindent
 \textbf{Demostración.}
-Sea $v \in V$ cualquiera; según el teorema
+Sea $x \in V$ cualquiera; según el teorema
 de la proyección
 \ref{Teo:proyOrt}, 
 \begin{equation}
 \label{eq3: 1En}
-v - \Pi_{W}(v) \in W^{\perp};
+x - \Pi_{W}(x) \in W^{\perp};
 \end{equation}
 además,
 \begin{equation}
 \label{eq4: 1En}
-v-(v-\Pi_{W}(v))= \Pi_{W}(v) \in W \subseteq (W^{\perp})^{\perp};
+x-(x-\Pi_{W}(x))= \Pi_{W}(x) \in W \subseteq (W^{\perp})^{\perp};
 \end{equation}
 puesto que, según el teorema de la proyección, 
-$\Pi_{W^{\perp}}(v)$ se caracteriza por ser el 
+$\Pi_{W^{\perp}}(x)$ se caracteriza por ser el 
 único elemento de $W^{\perp}$ tal que 
-$v-\Pi_{W^{\perp}}(v) \in (W^{\perp})^{\perp}$,
+$x-\Pi_{W^{\perp}}(x) \in (W^{\perp})^{\perp}$,
 concluimos por \eqref{eq3: 1En} y \eqref{eq4: 1En}
 la igualdad
 \[
-v-\Pi_{W}(v)= \Pi_{W^{\perp}}(v).
+x-\Pi_{W}(x)= \Pi_{W^{\perp}}(x).
 \]
 Esto demuestra el primer punto del corolario. Para demostrar
 el segundo, o sea, que para cualesquiera
-$u, v \in V$ se tiene que
+$x, y \in V$ se tiene que
 \[
-\langle u, \Pi_{W}(v) \rangle = 
-\langle \Pi_{W}(u), v \rangle,
+\langle x, \Pi_{W}(y) \rangle = 
+\langle \Pi_{W}(x), y \rangle,
 \]
 sólo observe que,
 usando el primer punto ya demostrado, tenemos que
 \begin{align*}
-\langle u, \Pi_{W}(v) \rangle = & 
-\langle \Pi_{W}(u) + \Pi_{W^{\perp}}(u), \Pi_{W}(v) \rangle  \\
-= & \langle \Pi_{W}(u), \Pi_{W}(v) \rangle  + 
-\langle \Pi_{W^{\perp}}(u), \Pi_{W}(v) \rangle  \\
-= & \langle \Pi_{W}(u), \Pi_{W}(v) \rangle  ,
+\langle x, \Pi_{W}(y) \rangle = & 
+\langle \Pi_{W}(x) + \Pi_{W^{\perp}}(x), \Pi_{W}(y) \rangle  \\
+= & \langle \Pi_{W}(x), \Pi_{W}(y) \rangle  + 
+\langle \Pi_{W^{\perp}}(x), \Pi_{W}(y) \rangle  \\
+= & \langle \Pi_{W}(x), \Pi_{W}(y) \rangle  ,
 \end{align*}
-donde la última igualdad se da porque $\Pi_{W}(v) \in W$ y 
-$\Pi_{W^{\perp}}(v) \in W^{\perp}$ (luego,
+donde la última igualdad se da porque $\Pi_{W}(y) \in W$ y 
+$\Pi_{W^{\perp}}(x) \in W^{\perp}$ (luego,
 son vectores mutuamente perpendiculares), y, análogamente,
 \[
-\langle \Pi_{W}(u), v \rangle  =  
-\langle \Pi_{W}(u), \Pi_{W}(v)\rangle .
+\langle \Pi_{W}(x), y \rangle  =  
+\langle \Pi_{W}(x), \Pi_{W}(y)\rangle .
 \]
 \QEDB
 \vspace{0.2cm}
@@ -141,7 +143,7 @@ luego, $a \in W^{\perp}$.
 
 
 \noindent Ya que estamos hablando de proyecciones ortogonales,
-usemos estas para ddemostrar
+usemos estas para demostrar
 una de las desigualdades
 más importantes con las que se cuenta en un espacio
 con producto punto.
@@ -152,8 +154,8 @@ Sea $V$ un $\IR-$espacio vectorial con producto punto
 $ \langle \cdot  , \cdot  \rangle$.
 \begin{equation}
 \label{eq0: 12Feb}
-\forall v , w \in V : \hspace{0.5cm}
-|\langle  v , w \rangle | \leq ||v|| \cdot ||w||,
+\forall x , y \in V : \hspace{0.5cm}
+|\langle  z , y \rangle | \leq ||x|| \cdot ||y||,
 \end{equation}
 siendo $|| \cdot ||$
 la norma inducida por el producto punto.
@@ -163,34 +165,35 @@ la norma inducida por el producto punto.
 (basada en la demostración
 ofrecida en ~\cite{Lang}, p. 292)
 \begin{itemize}
-\item Si alguno de los vectores $v$ o $w$ es cero,
+\item Si alguno de los vectores $x$ o $y$ es cero,
 la igualdad se da trivialmente (el vector cero tiene norma
 cero y es ortogonal a cualquier vector). 
 
-\item Si $v=a w$ para algun real $a$, también se 
+\item Si $x=a y$ para algun real $a$, también se 
 da la igualdad:
 \[
-|\langle  v , w \rangle | =
-|\langle  aw , w \rangle | = |a| \cdot  |\langle  w , w \rangle | =  
- |a| \cdot ||w||^{2}
-=||aw|| \cdot ||w|| = ||v|| \cdot ||w||.
+|\langle  x , y \rangle | =
+|\langle  ay , y \rangle | = |a| \cdot  |\langle  y , y \rangle | =  
+ |a| \cdot ||y||^{2}
+=||ay|| \cdot ||y|| = ||x|| \cdot ||y||.
 \]
 \item Supongamos por último que no ocurre ninguno
 de los casos de los puntos anteriores, o sea, que
-$v$ y $w$ son linealmente independientes. \\
-Si $c:=\frac{\langle v , w \rangle}{\langle w , w \rangle}$,
-según G-S (\ref{Teo:Gram-Schmidt}), 
-$v-cv$ y $cw$ son vectores ortogonales cuya suma es $v$;
+$x$ y $y$ son linealmente independientes. \\
+Si $c:=\frac{\langle x , y \rangle}{\langle y , y \rangle}$,
+según el teorema de Gram-Schmidt \ref{Teo:Gram-Schmidt}, 
+$x-cy$ y $cy$ son vectores ortogonales cuya suma es $x$;
 así, por el teorema de pitágoras,
 \begin{align*}
-||v||^{2} & = ||v-cw||^{2} + ||cw||^{2} \\
-& \geq ||cw||^{2}= |c|^{2} \cdot ||w||^{2} \\
-& = \frac{\langle v , w \rangle ^{2}}{||w||^{4}}||w||^{2}
-= \frac{\langle v , w \rangle ^{2}}{||w||^{2}},
+||x||^{2} & = ||x-cy||^{2} + ||cy||^{2} \\
+& \geq ||cy||^{2}= |c|^{2} \cdot ||y||^{2} \\
+& = \frac{\langle x , y \rangle ^{2}}{||y||^{4}}||y||^{2}
+= \frac{\langle x , y \rangle ^{2}}{||y||^{2}},
 \end{align*}
+\TODO{revisa eso, hay un pequeño error.}
 luego, 
 \[
-\langle  v , w \rangle ^{2}  \leq ||v||^{2} \cdot ||w||^{2}.
+\langle x, y \rangle ^{2}  \leq ||x||^{2} \cdot ||y||^{2}.
 \]
 Tomando raíces cuadradas en ambos lados de la
 desigualdad llegamos a la desigualdad deseada. \QEDB
@@ -199,7 +202,8 @@ desigualdad llegamos a la desigualdad deseada. \QEDB
 
 
 Esta desigualdad, que relaciona la norma de los
-vectores cuyo producto punto se calcula, permite
+vectores con el valor
+absoluto de su producto punto, permite
 establecer la continuidad del producto punto. \\
 
 
@@ -210,8 +214,8 @@ V \times V \longrightarrow \IR $ es continua.
 \noindent
 \textbf{Demostración.}
 Demostrar la continuidad de 
-$\langle  \cdot , \cdot \rangle$ significa entonces
-probar que
+$\langle  \cdot , \cdot \rangle$ significa 
+probar la veracidad de la implicación
 \[
 (x_{n}, y_{n}) \rightarrow (x,y) \hspace{0.5cm}
 \Rightarrow \hspace{0.5cm} \limite{n \rightarrow \infty}{

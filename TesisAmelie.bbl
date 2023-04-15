@@ -51,6 +51,18 @@
     \field{year}{2009}
   \endentry
 
+  \entry{carothers}{book}{}
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Car}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Real analysis}
+    \field{year}{2000}
+  \endentry
+
   \entry{conway}{book}{}
     \name{author}{1}{}{%
       {{hash=CJB}{%
@@ -223,13 +235,26 @@
   \endentry
 
   \entry{Lang}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LS}{%
+         family={Lang},
+         familyi={L\bibinitperiod},
+         given={Serge},
+         giveni={S\bibinitperiod},
+      }}%
+    }
     \list{publisher}{1}{%
       {Springer New York, NY}%
     }
+    \strng{namehash}{LS1}
+    \strng{fullhash}{LS1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Lan}
+    \field{labelalpha}{Lan97}
     \field{sortinit}{L}
     \field{sortinithash}{L}
+    \field{edition}{2nd edition}
+    \field{series}{Undergraduate Texts in Mathematics}
     \field{title}{Undergraduate Analysis}
     \field{year}{1997}
   \endentry
@@ -246,15 +271,51 @@
   vector space?}
   \endentry
 
-  \entry{mse2}{misc}{}
+  \entry{mse3}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Mse}
     \field{extraalpha}{2}
     \field{sortinit}{M}
     \field{sortinithash}{M}
+  \field{howpublished}{\url{https://math.stackexchange.com/questions/168275/proof-that-every-finite-dimensional-normed-vector-space-is-complete}}
+    \field{note}{Accessed: 2023-04-11}
+    \field{title}{Proof that every finite dimensional normed vector space is
+  complete}
+  \endentry
+
+  \entry{mse2}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mse}
+    \field{extraalpha}{3}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
   \field{howpublished}{\url{https://math.stackexchange.com/questions/1653691/why-isnt-every-hamel-basis-a-schauder-basis?}}
     \field{note}{Accessed: 2023-04-11}
     \field{title}{Why isn't every Hamel basis a Schauder basis?}
+  \endentry
+
+  \entry{munkres}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MJR}{%
+         family={Munkres},
+         familyi={M\bibinitperiod},
+         given={James\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson College Div}%
+    }
+    \strng{namehash}{MJR1}
+    \strng{fullhash}{MJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mun00}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{edition}{2dn edition}
+    \field{title}{Topology}
+    \field{year}{2000}
   \endentry
 
   \entry{Nimark}{unpublished}{}

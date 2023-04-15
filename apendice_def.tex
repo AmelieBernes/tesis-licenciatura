@@ -1,91 +1,170 @@
 \section{Definiciones básicas de espacios de Hilbert}
 
+Sea $F \in \{ \IR, \IC \}$.
+La definición central \TODO{aaa}
+de producto punto; el tener definida una tal función 
+en $V$ dota al espacio de nociones ;
+es posible ya no sólo sumar y escalar elementos de $V$, sino
+también hablar de \textbf{ángulos}
+(en particular, nos provee de una noción de 
+\textbf{ortogonalidad})
+y de \textbf{distancias}.
 
-\TODO{Yo creo que aquí debes de poner la def. de espacio
-vectorial con producto punto y de espacio de Hilbert. Checa
-la def. de Erwin y de Kolmogorov. Di además que
-consideras que el producto punto es positive definite.} \\
+\marginnote{Si $z = a + ib \in \IC$, al \textbf{conjugado
+complejo} de $z$, o sea, al complejo $a-ib$, se le denota
+como $\overline{z}$.}
 
-
-
-Hay que aclarar que $V$ tiene estructura
-de espacio métrico, siendo la métrica inducida por
-la norma $|| \cdot || $(que, a su vez, fue inducida
-por el producto punto $\langle  \cdot , \cdot$ )
-dada por la relación 
-
-\[
-d(v,w)= ||v-w||, \hspace{1cm} v, w \in V.
-\]
-Dotamos al producto cartesiano $V \times V $
-estructura de espacio métrico al \TODO{...} \\
-
-
-Una de las
-grandes ventajas de considerar
-bases ortogonales sobre bases cualesquiera para un espacio es que
-contamos con una fórmula sencilla
-para los coeficientes de la representación lineal de los
-elementos del subespacio que generan. Además, información
-sobre tales coeficientes \TODO{asdfljka}.
-En general. si $S$ es una base cualquiera para
-el espacio $V$, los coeficientes no dan información
-geométrica sobre el vector \TODO{aquí pon tu ejemplo
-con las potencias.} \\
- 
-\TODO{recuerda poner aqu'los ejemplos canónicos
-de espacio HIlbertiano que después cites...}
-
-\TODO{$F \in \{ \IR , \IC \}$}. 
- 
-\TODO{Di que, dada la def. de producto punto, es natural definir la otrogonalidad y la
-norma. Da la definición de base ortonormal (siendo la palabra 'base' usada
-en el sentido usual)} 
- 
- 
-\TODO{Por aquí da la nción de subespacio ortogonal, y explica
-cómo este suma directamente con el original para formar
-a todo el espacio ambiente.} 
- 
 \begin{defi}
-Si $S=\{ w_{1}, \ldots , w_{n} \}$ es una base
-ortogonal de $V$ y $v \in V$ cualquiera, a los
-números
-\[
-\frac{\langle v , w_{k} \rangle}{\langle  w_{k}, w_{k} \rangle},
-\hspace{1cm} 1 \leq k \leq n
-\]
-les llamaremos los \textbf{coeficientes de Fourier}
-de $v$ respecto a la BO S.
+\label{def: prod punto}
+Sea $V$ un $F-$espacio vectorial. A una función
+$\langle \cdot, \cdot \rangle : V \times V \longrightarrow F$
+tal que, para cualesquiera $x, y, z \in V$ 
+y $a, b \in F$
+se cumple que 
+
+	\begin{itemize}
+	\item $\langle a \cdot x + b \cdot y, z \rangle = 
+	a \langle x, z \rangle + b \langle y, z \rangle$
+	\item $\langle x, y \rangle = \overline{\langle y, x \rangle} $
+	\item $\langle x, x \rangle \geq 0 $
+	\item $\langle x, x \rangle = 0 $ si y sólo si $x=0$
+	\end{itemize}
+se le llamara un \textbf{producto punto} (o \textbf{producto interior})
+definido en $V$.
 \end{defi}
 
-Observe que si la BO de la definición anterior de hecho
-es una BON, entonces los coeficientes de Fourier de un 
-vector $v$ respecto a esta no son más que los productos
-puntos de $v$ con sus elementos.
+
+En la sección
+\ref{angulo entre elementos de un espacio con producto punto}
+mostramos cómo se puede definir la noción de ángulo cuando
+se cuenta con un producto punto definido en el espacio.
+
+
+Observe que, según el segundo punto de la definición 
+\ref{def: prod punto}, 
+para todo $x \in V$ se tiene que el conjugado complejo
+de $\langle x, x \rangle$ coincide con $\langle x, x \rangle$, luego
+\sidenote{Por eso tiene sentido 
+comparar a $\langle x, x \rangle $ con cero en el tercer punto
+de la definición (no se puede definir una relación de orden en
+$\IC$, c.f. \cite{marsden} p.6).},
+$\langle x, x \rangle \in \IR$; se usa este hecho 
+y el cuarto punto de la definición para definir, 
+a partir de un producto punto, una norma
+\sidenote{Puede consultar la definición de norma
+en \cite{carothers}, p.40} en el espacio, luego, 
+una noción de longitud (y, por lo tanto, de distancia también).
 
 \begin{prop}
-Los coeficientes de Fourier de un vector $v$
-respecto a una BO S son los coeficientes
-de la combinación lineal de elementos de $S$ igual a $v$.
-\end{prop}
+\label{prop: La norma inducida por un producto punto}
+\textbf{(La norma inducida por un producto interior)}
+Dado un espacio vectorial con
+producto punto $(V, \langle \cdot , \cdot \rangle )$, 
+la función $|| \cdot || : V \longrightarrow [0, \infty[$ definida como
+
+\begin{equation}
+\label{eq: norma via producto punto}
+\forall v \in V: \hspace{0.2cm} || v || = \sqrt{\langle v,v \rangle}
+\end{equation}
+
 \noindent
-\textbf{Demostración.}
-En efecto, si $v=\suma{i=1}{n}{c_{i}w_{i}}$,
-la bilinealidad del producto punto y la hipótesis 
-de ortogonalidad nos llevan a concluir que, 
-para todo $k$,
-\begin{align*}
-\langle  v , w_{k} \rangle &= \langle \suma{i=1}{n}{c_{i}w_{i}}  , w_{k} \rangle \\
-& = c_{1} \langle w_{1}  , w_{1} \rangle.
-\end{align*}
-\QEDB
-\vspace{0.2cm}
+satisface la definición de norma. A tal función se le llama
+la \textbf{norma inducida por el producto interior.}
+\end{prop}
+
+Provistos de una noción de norma, siempre se puede definir
+la \textbf{distancia} entre dos elementos del espacio
+$x, y \in V$ como 
+\begin{equation}
+\label{eq: distancia a partir de norma}
+d(x, y) := ||x-y||;
+\end{equation}
+
+\noindent
+dotamos así a $V$ de estructura de \textbf{espacio métrico}.
+\sidenote{Consulte la definición de espacio métrico en 
+\cite{carothers}, p.37.}
+
+Teniendo una estructura de espacio métrico en el espacio se tiene también 
+una de \textbf{topología} 
+definida de forma natural como sigue:
+
+\begin{equation}
+\label{eq: top espacio con producto punto}
+\tau = \{ B_{\epsilon}(x) : \hspace{0.2cm} x \in V, \epsilon >0 \},
+\end{equation}
+donde 
+
+\[
+B_{\epsilon}(x) = \{ y \in V : \hspace{0.2cm} d(x,y) < \epsilon \}.
+\]
+
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=0.8]{estructuras} 
+		\caption{El definir un producto punto en un espacio
+		vectorial permite considerar en este estructuras de espacio normado,
+		métrico y topológico. Se tienen pues definiciones
+		matemáticas de conceptos como ``ángulo'', ``longitud'',
+		``distancia'' y ``vecindad''.}
+ 	\end{measuredfigure}
+ \end{figure}
+
+
+En general, si $X$ es un conjunto no vacío y 
+$d: X \times X \longrightarrow [0, \infty[$ es una función de distancia
+definida en él, entonces toda \textbf{sucesión de Cauchy}
+$(x_{m})_{m \in \IN}$ del espacio (es decir, toda sucesión
+tal que, para todo $\epsilon >0$ sea siempre posible encontrar
+un natural $N$ tal que, para cualesquiera $m, n >N$ se cumpla que
+$|x_{m}-x_{n}| < \epsilon$) trivialmente converge a un punto
+de $X$; 
+si, recíprocamente, toda sucesión de Cauchy es convergente, 
+se dice que el espacio métrico $(X, d)$ es \textbf{completo.}
 
 
 
+\begin{defi}
+\label{def: espacio de Hilbert}
+Sea $(V, \langle \cdot , \cdot \rangle )$ un $F$-espacio
+vectorial con producto punto. Sea $|| \cdot ||$ la norma definida en
+\ref{prop: La norma inducida por un producto punto} y 
+$d$ la distancia definida a partir de esta como en 
+\eqref{eq: distancia a partir de norma}. Si el espacio
+métrico $(V, d)$ es completo, entonces decimos que 
+$(V, \langle \cdot , \cdot \rangle )$ es un \textbf{espacio de Hilbert.}
+\end{defi}
 
 
-\textbf{Dimensión finita: $\IR^{n}$}. \TODO{aquí
-la def del producto punto.}
+\begin{ejemplo}
+Sea $n \geq 1$.
 
+En el $\IR-$espacio vectorial $\IR^{n}$ se tiene definido un 
+producto punto canónico como sigue:
+
+\begin{equation}
+\label{eq: producto punto Rn}
+\forall x=(x_{m})_{0 \leq m \leq n-1}, 
+y=(y_{m})_{0 \leq m \leq n-1} \in \IR^{n}: \hspace{0.2cm}
+\langle x, y \rangle = \suma{m=0}{n-1}{x_{m} y_{m}}.
+\end{equation}
+
+\noindent
+En el $\IC-$espacio vectorial $\IC^{n}$ el producto canónico
+se define como sigue: 
+
+
+\begin{equation}
+\label{eq: producto punto Cn}
+\forall x=(x_{m})_{0 \leq m \leq n-1}, 
+y=(y_{m})_{0 \leq m \leq n-1} \in \IC^{n}: \hspace{0.2cm}
+\langle x, y \rangle = \suma{m=0}{n-1}{x_{m} \overline{y_{m}}}.
+\end{equation}
+
+Puesto que ambos espacios son finito dimensionales
+(de hecho, de dimensión $n$), según \cite{mse3}
+son espacios de Hilbert.
+\final
+\end{ejemplo}
