@@ -1,6 +1,5 @@
 \section{Bases ortonormales de espacios de Hilbert}
 \label{Bases ortonormales de espacios de Hilbert}
-\TODO{ver si, junto con G-S, puedo subir esto.}
 
 En general, dado un $F-$espacio vectorial $V$,
 si uno acepta el axioma de elección, siempre cuenta con 
@@ -24,11 +23,7 @@ a $A$ de hecho coincide con $A$.
 
 El tener además en $V$ definido un producto punto
 dota de estructura extra al espacio, en particular, 
-como dijimos ya,
-nos provee de una noción de longitud (
-c.f. proposición \ref{prop: La norma inducida por un producto punto}) 
-y también 
-de ortogonalidad (\TODO{ref}), luego, en este 
+en este 
 contexto podemos también hablar de subconjuntos $B$
 ortonormales maximales. Puesto que la ortogonalidad implica
 trivialmente la independencia lineal, es natural plantearse
@@ -112,6 +107,9 @@ A pesar de que
 	$x$ y combinaciones lineales de elementos de $\cali{B}$, sino aproximaciones
 	del primero a partir de los segundos (c.f. inciso d)
 	del teorema \ref{thm: Coway, 4.13}),
+	\sidenote{Es por estas razones que, en ocasiones, usaremos le nombre
+	de ``sistema de representación'' cuando hablemos de una base
+	(de Hamel u ortonormal).}
 \end{itemize}
 
 \noindent
@@ -137,15 +135,14 @@ los nombres introducidos en la definición \ref{defi: BON y base de Hamel}.
 Para dar unas equivalecias útiles a la propiedad de
 ser base ortonormal de un espacio de Hilbert, requeriremos del
 del concepto de ``red'', usado en topología como una extensión
-de la noción de sucesión.
-
-\marginnote{Para más detalles sobre redes, consulte \cite{munkres}
-p.87}
+de la noción de sucesión. Nosotros sólo damos algunas definiciones
+y las aplicamos a la situación que nos concierne, pero puede
+consultar más sobre redes en \cite{munkres} p.87.
 
 Puede recordar la definición de ``orden parcial'' en 
 \cite{munkres} p. 187; el único tipo de conjunto parcialmente
 ordenado (abreviado ``POSET'') que aquí nos interesa es 
-aquel ordenado por la relación "$\subseteq$" (o sea, por la contención).
+aquel ordenado por la relación ``$\subseteq$" (o sea, por la contención).
 \begin{defi}
 \label{def: conjunto dirijido}
 Sea $(\cali{E}, \leq )$ un orden parcial. Si para cualesquiera
@@ -215,7 +212,7 @@ de una red que definimos como sigue; consideramos al conjunto
 Observe que $\cali{P}$ consta exactamente de los subconjuntos $\alpha$
 de $I$ para los que la expresión 
 \[
-\suma{i \in \cali{P}}{}{v_{i}}
+\suma{i \in \alpha}{}{v_{i}}
 \]
 tiene sentido. Teniendo ya un espacio topológico $(V, \tau)$
 (con la topología $\tau$ definida como en
@@ -556,7 +553,7 @@ $x \in V$, se tiene que
 
 \begin{equation}
 \label{eq0: 11ap}
-x = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2} e_{k}}
+x = \suma{k=0}{n-1}{\langle x , e_{k} \rangle e_{k}}
 \end{equation}
 y además
 
@@ -587,11 +584,11 @@ en efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
 es ``muy cercano a cero'', digamos $\langle x, e_{k_{1}} \rangle = \epsilon$,  
 entonces el vector 
 $x_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
-\langle x , e_{k} \rangle^{2} e_{k}}$
+\langle x , e_{k} \rangle e_{k}}$
 es, en la misma medida, cercano al vector inicial $x$, pues
 \[
-|| x - x_{k_{1}} || = || \langle x , e_{k_{1}} \rangle^{2} e_{k_{1}} ||
-= \langle x , e_{k_{1}} \rangle^{2} = \epsilon.
+|| x - x_{k_{1}} || = || \langle x , e_{k_{1}} \rangle e_{k_{1}} ||
+= \langle x , e_{k_{1}} \rangle = \epsilon.
 \]
 \end{nota}
 
@@ -672,7 +669,7 @@ y $x \in V$, entonces la expresión
 || x - \suma{k=1}{\infty}{a_{k}e_{k}}  ||
 \]
 alcanza su mínimo para la elección de coeficientes
-$a_{k}= <x , e_{k} > $.
+$a_{k}= \langle x , e_{k} \rangle $.
 \end{prop}
 
 \noindent
@@ -696,17 +693,19 @@ por lo que, si encontramos una elección de coeficientes $(a_{k})_{k \in \IN}$
 que haga que
 la sucesión $(S_{n})_{n \in \IN}$ converja y tal que las normas
 $||x-S_{n}||$ (o, equivalentemente, los números $||x-S_{n}||^{2}$)
-sean míminas, esa será la elección buscada. \\
+sean mínimas, esa será la elección buscada. \\
 Observe que, para toda $n$,
 \begin{align*}
-||x-S_{n}||^{2} & = <x-S_{n} , x-S_{n} > \\
-\text{(bilinealidad)} & =  <x, x > - 2 < x, x_{n} > + <S_{n} , S_{n}  > \\
-\text{(ortonormalidad)} & =  ||x||^{2} - 2 < x ,\suma{k=1}{n}{a_{k}e_{k}} > + 
+||x-S_{n}||^{2} & = \langle x-S_{n} , x-S_{n} \rangle \\
+\text{(bilinealidad)} & = \langle x, x \rangle - 2 \langle x, x_{n} \rangle + 
+\langle S_{n} , S_{n} \rangle \\
+\text{(ortonormalidad)} & =  ||x||^{2} - 
+2 \langle x ,\suma{k=1}{n}{a_{k}e_{k}} \rangle + 
 \suma{k=1}{n}{a_{k}^{2}} \\
 = & ||x||^{2} - 2\suma{k=1}{n}{a_{k}c_{k}}  + 
 \suma{k=1}{n}{a_{k}^{2}},
 \end{align*}
-donde $c_{k}:= < x , e_{k} >$. Así,
+donde $c_{k}:= \langle x , e_{k} \rangle $. Así,
 \[
 ||x-S_{n}||^{2} = ||x||^{2} - \suma{k=1}{n}{c_{k}^{2}}  + 
 \suma{k=1}{n}{(a_{k}-c_{k})^{2}};
@@ -735,7 +734,7 @@ de la proposición \ref{teo: Kol 6, p.149},
 para todo $x \in V$
 tenemos que
 \[
-\Pi_{W}(x) = \suma{k=1}{\infty}{<x, e_{k}>e_{k}},
+\Pi_{W}(x) = \suma{k=1}{\infty}{ \langle x, e_{k} \rangle e_{k}},
 \]
 donde $W := \overline{\{e_{k}| k \in \IN \}}$. 
 \end{cor}
@@ -758,7 +757,7 @@ es una BON de $W$, entonces, para todo $x \in V$,
 Si $V$ es un espacio con producto punto 
 y $B=(e_{k})_{k \in \Delta}$ es una BON de este
 a lo más numerable, entonces, para todo
-$x \in V$, $x = \suma{k \in \Delta}{}{<x, e_{k}>e_{k}}$
+$x \in V$, $x = \suma{k \in \Delta}{}{\langle x, e_{k} \rangle e_{k}}$
 \end{cor}
 \noindent
 \textbf{Demostración.}
@@ -777,7 +776,7 @@ una BON del espacio. \\
 Si $\{ e_{k} | k \in \IN \}$ es un sistema ortonormal en 
 el espacio con producto punto $V$, entonces, para todo $x \in V$,
 \[
-\suma{k=1}{\infty}{<x , e_{k} >^{2}} \leq ||x||^{2}.
+\suma{k=1}{\infty}{\langle x , e_{k} \rangle^{2}} \leq ||x||^{2}.
 \]
 \end{cor}
 \noindent

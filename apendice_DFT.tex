@@ -5,9 +5,11 @@ una base ortonormal
 \marginnote{El producto punto que estamos
 considerando en el $\IC-$espacio
 vectorial $\IC^{n}$ es el que definimos
-en \eqref{eq: producto punto Cn}.}
+en \eqref{eq: producto punto Cn}, y el del
+$\IR-$espacio vectorial $\IR^{n}$ es el definido en 
+\eqref{eq: producto punto Rn}.}
 de $\IC^{n}$
-y otra para $\IR^{n}$ (que llamaremos
+y una de $\IR^{n}$ (que llamaremos
 ``bases de Fourier complejas y reales''), que están
 definidas en términos de discretizaciones de
 sinusoides de frecuencias enteras, y que son herramientas
@@ -25,9 +27,10 @@ necesarios para definir las bases de Fourier.
 
 
 La definición de la función exponencial compleja 
-tiene diversas motivaciones, puede consultar aglunas de estas en 
-\cite{marsden} nosotros sólo
-damos la definición de esta así como algunas propiedades
+tiene diversas motivaciones
+(puede consultar algunas de estas en 
+\cite{marsden}). Nosotros sólo
+damos la definición de esta, así como algunas propiedades
 de ella que se usarán en lo que sigue.
 
 \begin{defi}
@@ -45,20 +48,6 @@ $exp(z)$ como sigue:
 exp(z) := e^{x}(cos(y) + i sen(y)).
 \end{equation}
 \end{defi}
-
-\begin{figure}[H]
-	\sidecaption{
-	Para construir gráficamente a las raíces $n-$ésimas de la
-	unidad, se debe dividir, a partir del punto $(0,1)$, a la
-	circunferencia unitaria en $n$ partes iguales. Según esta construcción
-	y la interpretación geométrica de la multiplicación compleja, es claro
-	que multiplicando a $z_{n,1}$ consigo misma se obtienen a
-	todas las demás raíces $n-$ésimas.
-	\label{fig: raices unidad}
-	}
-	\centering
-	\includegraphics[scale=0.53]{raices_unidad} 
-\end{figure}	
 
 \begin{prop}
 \label{prop: propiedades exp compleja}
@@ -82,12 +71,11 @@ Sean $z_{1}, z_{2} \in \IC$, $\omega \in \IZ$.
 	\end{itemize}
 \end{prop}
 
-\TODO{Cambiaste el orden de los items. Checa cuando los citas más abajo.}
-
 \begin{defi}
 \label{defi: raices n esimas de la unidad}
-Sea $n \in \IN$. A las $n$ raíces del polinomio
-$p_{n}(t)= t^{n}-1$ se les denominará las \textbf{raíces $n-$ésimas de la unidad.}
+Sea $n \in \IN$. A las $n$ raíces complejas del polinomio
+$p_{n}(t)= t^{n}-1 \in \IC[t]$ 
+se les denominará las \textbf{raíces $n-$ésimas de la unidad.}
 \end{defi}
 
 
@@ -134,16 +122,30 @@ distintos entre sí, pues si $\omega_{1}$ y $\omega_{2}$ son enteros
 entre $0$ y $n-1$ tales que $z_{n, \omega_{1}} = z_{n, \omega_{2}}$,
 o sea, tales que 
 $exp \left( \frac{2 \pi i }{n} \omega_{1} \right) = 
-exp \left( \frac{2 \pi i }{n} \omega_{1} \right)$, entonces, según el tercer
+exp \left( \frac{2 \pi i }{n} \omega_{1} \right)$, entonces, según el primer
 punto de la proposición \ref{prop: propiedades exp compleja},
 $1 = exp \left( \frac{2 \pi i }{n} (\omega_{1}-\omega_{2}) \right)$, luego, 
-según el primer punto de esta misma proposición, $\frac{\omega_{1}-\omega_{2}}{n}$
+según el cuarto punto de esta misma proposición, $\frac{\omega_{1}-\omega_{2}}{n}$
 es entero, o sea, $n$ divide a $\omega_{1}-\omega_{2}$; por el rango de 
 $\omega_{1}$ y $\omega_{2}$, esto sólo ocurre si $\omega_{1}-\omega_{2}$ es
 cero, o sea, si $\omega_{1}$ y $\omega_{2}$
 son iguales.
 \QEDB
 \vspace{0.2cm}
+
+\begin{figure}[H]
+	\sidecaption{
+	Para construir gráficamente a las raíces $n-$ésimas de la
+	unidad, se debe dividir, a partir del punto $(0,1)$, a la
+	circunferencia unitaria en $n$ partes iguales. Según esta construcción
+	y la interpretación geométrica de la multiplicación compleja, es claro
+	que multiplicando a $z_{n,1}$ consigo mismo se obtienen a
+	todas las demás raíces $n-$ésimas.
+	\label{fig: raices unidad}
+	}
+	\centering
+	\includegraphics[scale=0.53]{raices_unidad} 
+\end{figure}	
 
 
 \subsection{La transformada discreta de Fourier}
@@ -158,14 +160,14 @@ Sea $n \in \IN$. El conjunto
 
 \begin{equation}
 \label{eq2: 8ab}
-\cali{B}_{n} : = \{
+\cali{B}_{n} : = \left\{
 e_{n,\omega} = \left(
 \frac{1}{\sqrt{n}} exp \left(
 2 \pi i \omega \frac{m}{n}
 \right)
 \right)_{0 \leq m \leq n-1}
 : \hspace{0.2cm} 0 \leq \omega \leq n-1
- \}
+ \right\}
 \end{equation}
 es una base ortonormal del $\IC-$espacio
 vectorial $\IC^{n}$.
@@ -223,8 +225,9 @@ dimensión $n$, concluimos lo deseado.
 Por ser \eqref{eq2: 8ab} una BON de $\IC^{n}$, siempre es
 posible expresar a un vector $x = (x_{m})_{0 \leq m \leq n-1} \in \IC^{n}$
 como combinación lineal de los elementos de \eqref{eq2: 8ab}
-y además los coeficientes están dados por los productos puntos
-de $x$ y los elementos de \eqref{eq2: 8ab}.
+y además los coeficientes están dados por los productos punto
+de $x$ y los elementos de \eqref{eq2: 8ab}
+(c.f. nota \ref{nota: sobre la identidad de parseval}).
 
 \begin{defi}
 Al proceso de calcular los coeficientes de $x$
@@ -301,7 +304,7 @@ a partir de $x$ como sigue:
 \noindent
 así, \textbf{calcular la transformada
 discreta de Fourier de $x$ es lo mismo que evaluar al polinomio 
-$A_{x}$ de grado $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
+$A_{x}$ de grado a lo más $n-1$ definido en \eqref{eq4: 8ab} en todas las raíces
 $n-$ésimas de la unidad.} 
 
 
@@ -316,7 +319,7 @@ el tiempo de cómputo. Al algoritmo estándar usado para
 esto se le conoce como la \textbf{transformada rápida de 
 Fourier} (abreviado como ``FFT'' por sus siglas en inglés);
 puede consultar los detalles técnicos en el capítulo
-30 de \cite{algorithms}
+30 de \cite{algorithms}.
 \end{nota}
 
 
@@ -365,6 +368,7 @@ la síntesis
 x = \suma{\omega=0}{n-1}{\langle x, e_{n,\omega} \rangle e_{n,\omega}}
 \]
 
+\noindent
 es una expresión de $x$ en términos de vectores de frecuencia
 $\omega$ y que los respectivos coeficientes 
 $\langle x, e_{n,\omega} \rangle$ indican qué tanto 
@@ -498,7 +502,7 @@ Según la construcción de $\cali{F}_{7}$ (c.f.
 proposición \ref{prop: base de fourier version real}),
 una expresión de $x$ respecto a $\cali{F}_{7}$ 
 es una síntesis de $x$ a partir de señales 
-de frecuencias $\omega = 0,1,2,3$. En la imágen de abajo
+de frecuencias $\omega = 0,1,2,3$. En la imagen de abajo
 se muestran los coeficientes de $x$ respecto a $\cali{F}_{7}$.
 
 \begin{figure}[H]
@@ -507,7 +511,8 @@ se muestran los coeficientes de $x$ respecto a $\cali{F}_{7}$.
 	coeficientes de $x$ respecto a la BON $\cali{F}_{7}$. Observe 
 	que, por definición, sólo un vector de $\cali{F}_{7}$ tiene frecuencia
 	cero (i.e. es constante), mientras que para las otras frecuencias
-	tenemos dos vectores de la misma frecuencia, uno construido a partir de un 			coseno y otro a partir de un seno.
+	tenemos dos vectores de la misma frecuencia, uno construido a partir de un 			
+	coseno y otro a partir de un seno.
 	\label{fig: ejFrecuencia 1}
 	}
 	\centering
@@ -579,5 +584,3 @@ al vector $x$ \eqref{eq2: 10ab}.
 \end{figure}	
 \final
 \end{ejemplo}
-
-\TODO{Deberías poner imágenes de espectros!}

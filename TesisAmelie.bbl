@@ -98,6 +98,32 @@
     \field{title}{Cosine similarity}
   \endentry
 
+  \entry{DSML}{book}{}
+    \name{author}{1}{}{%
+      {{hash=DPKTTRVZIB}{%
+         family={Dirk P.\bibnamedelima Kroese},
+         familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim
+  K\bibinitperiod},
+         suffix={Zdravko I.\bibnamedelima Botev},
+         suffixi={Z\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim
+  B\bibinitperiod},
+         given={Thomas Taimre Radislav\bibnamedelima Vaisman},
+         giveni={T\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim
+  R\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DPKZIBTTRV1}
+    \strng{fullhash}{DPKZIBTTRV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{DPK22}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{title}{Data science and machine learning: mathematical and
+  statistical methods}
+    \field{year}{2022}
+  \endentry
+
   \entry{friedberg}{book}{}
     \name{author}{1}{}{%
       {{hash=FSH}{%
@@ -395,6 +421,29 @@
     \field{series}{Graduate Studies in Mathematics}
     \field{title}{Advanced Modern Algebra}
     \field{year}{2010}
+  \endentry
+
+  \entry{spivak}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SM}{%
+         family={Spivak},
+         familyi={S\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Publish or Perish}%
+    }
+    \strng{namehash}{SM1}
+    \strng{fullhash}{SM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Spi08}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Calculus}
+    \field{year}{2008}
   \endentry
 \enddatalist
 \endinput

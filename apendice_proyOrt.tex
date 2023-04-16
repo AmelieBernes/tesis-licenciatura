@@ -5,7 +5,7 @@ de este, puede definirse la distancia de un punto $x \in V$ a W como
 el ínfimo del conjunto de distancias entre $x$ y puntos de $W$:
 
 \[
-d(x,W)=inf\{||x-y||: y \in W \}.
+d(x,W)=inf\{d(x,y): y \in W \}.
 \]
 \noindent 
 Tal ínfimo existe por estar el conjunto descrito acotado inferiormente,
@@ -39,7 +39,8 @@ tal que $x-\hat{x} \in W^{\perp} $.
 En este trabajo, 
 el espacio con producto punto
 particular que nos concierne 
-es $\IR^{n}$ con el producto punto usual; por ser
+es $\IR^{n}$ con el producto punto usual
+(definido como en \eqref{eq: producto punto Rn}); por ser
 este un espacio finito-dimensional, 
 cualquier subespacio de este es cerrado
 (c.f. teorema 2.4-3 de \cite{Kreyszig}),
@@ -142,20 +143,21 @@ luego, $a \in W^{\perp}$.
 \end{nota}
 
 
-\noindent Ya que estamos hablando de proyecciones ortogonales,
-usemos estas para demostrar
+\section{La desigualdad de Gram-Schmidt y la continuidad del producto punto}
+\noindent Demostremos 
 una de las desigualdades
 más importantes con las que se cuenta en un espacio
 con producto punto.
 
 \begin{teo}
 (\textbf{Desigualdad de Cauchy-Schwarz}) \label{Teo:CauchySchwarz}
-Sea $V$ un $\IR-$espacio vectorial con producto punto 
+Sea $F \in \{ \IR, \IC \}$.
+Sea $V$ un $F-$espacio vectorial con producto punto 
 $ \langle \cdot  , \cdot  \rangle$.
 \begin{equation}
 \label{eq0: 12Feb}
 \forall x , y \in V : \hspace{0.5cm}
-|\langle  z , y \rangle | \leq ||x|| \cdot ||y||,
+|\langle x , y \rangle | \leq ||x|| \cdot ||y||,
 \end{equation}
 siendo $|| \cdot ||$
 la norma inducida por el producto punto.
@@ -169,7 +171,7 @@ ofrecida en ~\cite{Lang}, p. 292)
 la igualdad se da trivialmente (el vector cero tiene norma
 cero y es ortogonal a cualquier vector). 
 
-\item Si $x=a y$ para algun real $a$, también se 
+\item Si $x=a y$ para algún $a \in F$ no cero, también se 
 da la igualdad:
 \[
 |\langle  x , y \rangle | =
@@ -181,16 +183,17 @@ da la igualdad:
 de los casos de los puntos anteriores, o sea, que
 $x$ y $y$ son linealmente independientes. \\
 Si $c:=\frac{\langle x , y \rangle}{\langle y , y \rangle}$,
-según el teorema de Gram-Schmidt \ref{Teo:Gram-Schmidt}, 
-$x-cy$ y $cy$ son vectores ortogonales cuya suma es $x$;
-así, por el teorema de pitágoras,
+de la linealidad en la primera entrada
+del producto punto se sigue fácilmente que
+$x - cy$ es ortogonal a $y$, por lo tanto, a $cy$,
+luego, 
+por el teorema de pitágoras,
 \begin{align*}
 ||x||^{2} & = ||x-cy||^{2} + ||cy||^{2} \\
 & \geq ||cy||^{2}= |c|^{2} \cdot ||y||^{2} \\
-& = \frac{\langle x , y \rangle ^{2}}{||y||^{4}}||y||^{2}
-= \frac{\langle x , y \rangle ^{2}}{||y||^{2}},
+& = \frac{\langle x , y \rangle ^{2}}{\langle y , y \rangle ^{2}} \cdot\langle y , y \rangle
+= \frac{\langle x , y \rangle ^{2}}{|| y ||^{2}},
 \end{align*}
-\TODO{revisa eso, hay un pequeño error.}
 luego, 
 \[
 \langle x, y \rangle ^{2}  \leq ||x||^{2} \cdot ||y||^{2}.

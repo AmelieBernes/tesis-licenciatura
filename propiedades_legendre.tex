@@ -10,7 +10,7 @@ a diferencia de una BON cualquiera de $\IR^{n}$, como detallaremos
 en la subsección 
 \ref{Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta},
 $\cali{L}^{n}$ satisface no sólo el primer punto
-de la lista de objetivos
+de la lista de deseos
 \ref{lista de objetivos}, sino también el segundo, el 
 correspondiente a la morfología.
 
@@ -20,9 +20,6 @@ estudiamos la estrecha relación que existe entre
 proyecciones a los espacios $W_{n,i}$ y a aproximaciones
 polinomiales de mínimos cuadrados.
 
-Terminamos con la subsección \ref{subsec: ejemplos},
-en la que se presentan algunos ejemplos en 
-dimensiones concretas.
 
 \subsection{Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}
 \label{Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}
@@ -39,12 +36,12 @@ no en términos de pertenencia a espacios de polinomios
 discretos,
 sino en términos de coeficientes.
 
-\sidenote{Los productos punto entre $x$
+\marginnote{Los productos punto entre $x$
 y los elementos de la base de Legendre discreta
 son, en efecto, los coeficientes de $x$
 respecto a $\cali{L}^{n}$ por ser
 esta última una BON de $\IR^{n}$.
-\TODO{referencia al apéndice.}}
+(c.f. nota \ref{nota: sobre la identidad de parseval})}
 
 
 \begin{obs} 
@@ -91,7 +88,7 @@ $\cali{L}^{n}$ podemos formalizar lo que
 entendemos por que una señal se asemeje a ser
 afín o cuadrática y, además, \textbf{cuantificar} esta semejanza;
 profundizaremos más adelante estas ideas
-en la subsección \ref{subsec: ejemplos},
+en el capítulo \ref{sec: ejemplos},
 pero esbozamos ahora a grandes rasgos la idea:
 dada una señal $x \in \IR^{n}$, es fácil expresar
 a $x$ como combinación lineal
@@ -106,8 +103,15 @@ la observación
 de \eqref{eq5: 1Dic} en referencia a la \textbf{forma
 de la gráfica de $x$}, pero, incluso aunque no se satisfagan
 estas condiciones,
-seguimos pudiendo \TODO{... Parseval. Tal vez esto
-debería ir en el apéndice.} 
+puesto que contamos con la identidad de Parseval, si
+algunos coeficientes $a_{k}$ son considerados pequeños, estos
+pueden eliminarse y obtener así una señal cercana (en distancia
+euclídea) a la original que tenga una forma determinada.
+Por ejemplo, si todos los coeficientes de una 
+$x \in \IR^{n}$ respecto a $\cali{L}^{n}$, a excepción de 
+$a_{0}$, $a_{1}$ y $a_{2}$, son pequeños, entonces, a pesar de que
+$x$ no pertenezca a $W_{n,2}$ (o sea, no sea cuadrática),
+será cercana a una cuadrática.
 
 
 \noindent A la luz del teorema de la proyección ortogonal, 
@@ -115,11 +119,11 @@ las proyecciones de $x$ sobre los espacios
 $W_{n,0}$, $W_{n,1}$
 y $W_{n,2}$ son los vectores
 de estos espacios más cercanos (en términos de la 
-distancia euclidea usual)
+distancia euclídea)
 a $x$; es natural entonces formular
 las siguientes definiciones.
 
-\sidenote{Puede recordar la definición
+\marginnote{Puede recordar la definición
 de proyección ortogonal, basada en la unicidad
 establecida en el 
 teorema de la proyección ortogonal \label{Teo:proyOrt},
@@ -226,15 +230,13 @@ sea mínima.
 	\label{fig: proyeccion vs minimos cuadrados 1}
 	}
 	\centering
-	\includegraphics[scale= 0.5]{2Dic_1} 
+	\includegraphics[scale= 0.55]{2Dic_1} 
 \end{figure}	
 
 
 \item Considerar al vector $x=(x_{j})_{j=0}^{n-1}$
 de $\IR^{n}$, proyectarlo al espacio $W_{n,1}$ 
-de polinomios discretos de dimensión $n$ y grado uno,
-\TODO{ver si siempre hablo de la dimensión
-de un polinomio discreto. Esto es importante.}
+de polinomios discretos de dimensión $n$ y grado uno
 y usar
 a la recta $l_{x}$ cuya discretización en 
 $\cali{P}_{n}$ sea esta proyección
@@ -263,7 +265,7 @@ como aproximación lineal del conjunto \eqref{eq: Halloween!}.
 	\label{fig: proyeccion vs minimos cuadrados 2}
 	}
 	\centering
-	\includegraphics[scale= 0.5]{2Dic_2 } 
+	\includegraphics[scale= 0.55]{2Dic_2} 
 \end{figure}	
 
 \end{enumerate}

@@ -1,18 +1,17 @@
 \section{Definiciones básicas de espacios de Hilbert}
 
 Sea $F \in \{ \IR, \IC \}$.
-La definición central \TODO{aaa}
-de producto punto; el tener definida una tal función 
-en $V$ dota al espacio de nociones ;
+Nosotros vamos a trabajar con $F-$espacios vectoriales
+$V$ en los que se haya definido un \textbf{producto punto;}
+si uno tiene definida una función
+de este tipo (que introducimos a continuación)
 es posible ya no sólo sumar y escalar elementos de $V$, sino
 también hablar de \textbf{ángulos}
-(en particular, nos provee de una noción de 
-\textbf{ortogonalidad})
-y de \textbf{distancias}.
+y \textbf{distancias} entre puntos del espacio.
 
 \marginnote{Si $z = a + ib \in \IC$, al \textbf{conjugado
 complejo} de $z$, o sea, al complejo $a-ib$, se le denota
-como $\overline{z}$.}
+por $\overline{z}$.}
 
 \begin{defi}
 \label{def: prod punto}
@@ -48,16 +47,20 @@ de $\langle x, x \rangle$ coincide con $\langle x, x \rangle$, luego
 comparar a $\langle x, x \rangle $ con cero en el tercer punto
 de la definición (no se puede definir una relación de orden en
 $\IC$, c.f. \cite{marsden} p.6).},
-$\langle x, x \rangle \in \IR$; se usa este hecho 
-y el cuarto punto de la definición para definir, 
-a partir de un producto punto, una norma
+$\langle x, x \rangle \in \IR$.
+
+A partir de las propiedades listadas en 
+\ref{def: prod punto}
+que debe cumplir un 
+producto punto se puede definir una norma
 \sidenote{Puede consultar la definición de norma
 en \cite{carothers}, p.40} en el espacio, luego, 
+se tiene disponible
 una noción de longitud (y, por lo tanto, de distancia también).
 
 \begin{prop}
 \label{prop: La norma inducida por un producto punto}
-\textbf{(La norma inducida por un producto interior)}
+\textbf{(La norma inducida por un producto punto)}
 Dado un espacio vectorial con
 producto punto $(V, \langle \cdot , \cdot \rangle )$, 
 la función $|| \cdot || : V \longrightarrow [0, \infty[$ definida como
@@ -69,7 +72,7 @@ la función $|| \cdot || : V \longrightarrow [0, \infty[$ definida como
 
 \noindent
 satisface la definición de norma. A tal función se le llama
-la \textbf{norma inducida por el producto interior.}
+la \textbf{norma inducida por el producto punto.}
 \end{prop}
 
 Provistos de una noción de norma, siempre se puede definir
@@ -85,18 +88,17 @@ dotamos así a $V$ de estructura de \textbf{espacio métrico}.
 \sidenote{Consulte la definición de espacio métrico en 
 \cite{carothers}, p.37.}
 
-Teniendo una estructura de espacio métrico en el espacio se tiene también 
-una de \textbf{topología} 
-definida de forma natural como sigue:
+Teniendo una estructura de espacio métrico en el espacio se 
+define naturalmente una \textbf{topología} en este como sigue:
 
 \begin{equation}
 \label{eq: top espacio con producto punto}
-\tau = \{ B_{\epsilon}(x) : \hspace{0.2cm} x \in V, \epsilon >0 \},
+\tau := \{ B_{\epsilon}(x) : \hspace{0.2cm} x \in V, \epsilon >0 \},
 \end{equation}
 donde 
 
 \[
-B_{\epsilon}(x) = \{ y \in V : \hspace{0.2cm} d(x,y) < \epsilon \}.
+B_{\epsilon}(x) := \{ y \in V : \hspace{0.2cm} d(x,y) < \epsilon \}.
 \]
 
 
@@ -129,8 +131,8 @@ se dice que el espacio métrico $(X, d)$ es \textbf{completo.}
 \begin{defi}
 \label{def: espacio de Hilbert}
 Sea $(V, \langle \cdot , \cdot \rangle )$ un $F$-espacio
-vectorial con producto punto. Sea $|| \cdot ||$ la norma definida en
-\ref{prop: La norma inducida por un producto punto} y 
+vectorial con producto punto. Sea $|| \cdot ||$ la norma definida como en 
+\eqref{eq: norma via producto punto} y 
 $d$ la distancia definida a partir de esta como en 
 \eqref{eq: distancia a partir de norma}. Si el espacio
 métrico $(V, d)$ es completo, entonces decimos que 

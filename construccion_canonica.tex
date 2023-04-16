@@ -63,7 +63,7 @@ como un \textbf{polinomio discreto
 de dimensión $n$ con dominio uniforme $\cali{P}$.} 
 \end{defi} 
 
-\sidenote{
+\marginnote{
 En lo que sigue, siempre que se hable de un polinomio
 discreto
 se supondrá que la malla $\cali{P}$
@@ -73,8 +73,9 @@ a partir de la que se obtuvo es uniforme.}
 Mostraremos en la subsección
 \ref{definicion del concepto de grado para seniales finitas}
 que, de hecho, \textbf{todo}
-$x \in \IR^{n}$ es un polinomio discreto,
-y daremos una definición del grado de este.
+$x \in \IR^{n}$ es un polinomio discreto
+de dimensión $n$,
+y propondremos una definición del grado de este.
 Ya podríamos dar algunos resultados en esta dirección,
 pero preferimos esperar hasta tener las herramientas
 para justificar detalles como la buena definición
@@ -100,9 +101,7 @@ $\cali{C}[t_{0}, t_{n-1}]$ a $\IR^{n}$.
 
 \begin{notacion} \label{notacion: Pn, fk, Wi, vk}
 Sea $n \in \IN$ y $k$ un entero no negativo.
-\footnote{Como se verá más adelante, 
-nos interesarán sólo los enteros $k$
-con $0 \leq k \leq n-1$.}.Denotaremos 
+Denotaremos 
 por $\IR_{k}[x]$ al subespacio de $\IR[x]$
 que consta de los polinomios de grado a lo más $k$.
 \noindent
@@ -210,8 +209,7 @@ $n$ cualquiera.
 \item es afín si y sólo si $x \in W_{n,1}$, y 
 
 \item es cuadrática si y sólo si $x \in W_{n,2}$
-y $x \not\in W_{n,1}$. \TODO{el último punto es claro? Tal vez lo sea
-si este corolario va después.}
+y $x \not\in W_{n,1}$.
 \end{itemize}
 \end{cor}
 \noindent
@@ -433,13 +431,6 @@ Sólo del notar que las dimensiones de
 $\IR^{n}$ y su subespacio $W_{n, n-1}$
 coinciden se deduce el cuarto punto.
 
-\TODO{Por aquí di que a $W_{n,0}$ le llamarás
-el espacio de $n-$dimensionales ctes etc... y en una
-sidenote que, a pesar de que en $W_{n,2}$ puede haber señales
-que no son cuadráticas (sino ctes y afines) usas ese nombre
-para dar a entener euq en $W_{n,2}$ hay, a lo más, de grado 2.
-Cuidado; aún no hablas del grado de una señal. Entonces, mejor
-pon esto justo después.}
 
 \begin{teo}
 \label{cor: propiedades importantes de espacios Wi}
@@ -546,7 +537,7 @@ de dimensión $n$, para ver que la función
 \ref{obs:linealidad de omega restringida a R[x]}, es lineal)
 es un isomorfismo, basta
 demostrar que es inyectiva 
-(c.f. teorema 2.5 \TODO{Friedberg}).
+(c.f. teorema 2.5 \cite{friedberg}).
 Esto último es una consecuencia directa del 
 teorema fundamental del álgebra,
 pues, 
@@ -698,6 +689,7 @@ el grado $i$ de un polinomio discreto es el índice
 del menor subespacio $W_{n,i}$ en el que está contenido.
 
 \begin{prop}
+\label{prop: grado de x}
 Sean $n \in \IN$ y $x \in \IR^{n}$ una señal de dimensión $n$.
 \begin{itemize}
 \item $x$ tiene grado cero si y sólo si $x \in W_{n,0}$.
@@ -766,6 +758,15 @@ $x$ tiene grado $i$.
 \QEDB
 \vspace{0.2cm}
 
+Terminamos con una definición, que queda justificada
+por lo establecido en la proposición \ref{prop: grado de x}
+
+\begin{defi}
+Sean $n \geq 2$, $0 \leq i \leq n-1$ entero. 
+Al subespacio $W_{n,i}$ definido en \eqref{espacios Wi}
+se le denominará el \textbf{espacio de señales $n-$dimensionales
+de grado $k$.}
+\end{defi}
 
 
 
@@ -779,7 +780,10 @@ cuarto punto del teorema
 \ref{cor: propiedades importantes de espacios Wi}). 
 Por la naturaleza del proceso, durante este se
 obtienen bases ortonormales para cada uno de los espacios 
-$W_{n,i}$. \TODO{detalla mejor esto.}
+$W_{n,i}$, pues los espacios $W_{n,i}$ están anidados y dos consecutivos
+de estos difieren por uno en dimensión; en este contexto, realizar
+el $k-$ésimo paso en el algoritmo de ortonormalización de Gram-Schmidt
+lleva a calcular una base ortonormal para el $k-$ésimo espacio $W_{n,i}$.
 
 %\begin{figure}[H]
 %   \centering
@@ -794,6 +798,9 @@ $W_{n,i}$. \TODO{detalla mejor esto.}
 %	normalizarlo.}
 %\end{figure}
 
+\marginnote{Abreviamos el 
+nombre ``polinomio discreto de Legendre''
+como ``PDL''.}
 
 \begin{defi} 
 \label{def: base de Legendre discreta}
@@ -850,20 +857,30 @@ por lo tanto, a todo elemento de este.
 
 
 
-\begin{center}
+\begin{figure}[H]
+	\sidecaption{
+	Dado el polinomio discreto de Legendre $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})$,
+	debe pensar a $n$ como la variable de \textbf{dimensión}, 
+	a $k \in \{0,\ldots,n-1 \}$ como la de 
+	\textbf{grado}, mientras que $m$ es el contador de \textbf{posición.}
+	\label{fig: pdl}
+	}
+	\centering
+	\includegraphics[scale= 0.6]{pdl} 
+\end{figure}	
+
+
+\begin{comment}
 {\Huge{
-$\cali{L}^{\textcolor{ameMorado}{n}, 
-\textcolor{ameDorado}{k}}=
+$\cali{L}^{\textcolor{ameCyanO}{n}, \textcolor{ameVerde}{k}} =
 \left(
-\cali{L}^{\textcolor{ameMorado}{n}, 
-\textcolor{ameDorado}{k}}_{\textcolor{ameRosa}{m}}
-\right)_{m=0}^{m=n-1} \in \IR^{n}
-$}}
-\end{center}
-\begin{itemize}
-\item \textcolor{ameMorado}{n} $\in \IN$: dimensión del espacio ambiente
-\item $0 \leq  \textcolor{ameDorado}{k} \leq n-1$ entero: parámetro de grado
-\item $0 \leq \textcolor{ameRosa}{m} \leq n-1$ entero: parámetro de posición
-\end{itemize}
-\TODO{Hacer eso una imagen. Tratamos de usar consitentemente la notación
-explicada en la figura a lo largo del texto.}
+\cali{L}^{\textcolor{ameCyanO}{n}, \textcolor{ameVerde}{k}}_{
+\textcolor{ameGris}{m}}
+\right)_{m=0}^{n-1} \in \IR^{n }
+$
+}}
+\end{comment}
+
+
+
+

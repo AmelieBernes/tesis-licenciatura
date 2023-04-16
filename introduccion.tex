@@ -25,9 +25,11 @@ como se verá más adelante, es más
 conveniente empezar desde el cero.
 Adoptamos pues esta convención.
 
-\sidenote{\TODO{Di por qué prefieres
-evitar el nombre ``'lineal'. Baja la nota a
-la altura de la def.}}
+\marginnote{Preferimos usar el nombre
+``afín'' en lugar de ``lineal'', pues en el contexto de funciones
+de $\IR$ a $\IR$ el primero hace referencia a funciones
+de la forma $f(t) = at+b$, mientras que el segundo es un caso
+específico de funciones de la forma $f(t)=at$.} 
 
 \begin{defi}
 \label{def: grafica senial}
@@ -71,7 +73,7 @@ $\IR^{n}$, tenemos la ventaja de contar con
 bases (subconjuntos de $\IR^{n}$ linealmente
 independientes y generadores de todo el espacio),
 que pensamos en este contexto como sistemas
-de representación: si 
+de representación; si 
 \begin{equation}
 \label{eq0: 13Feb}
 \cali{B}=\{v_{k}
@@ -116,7 +118,7 @@ de ecuaciones con una cantidad de parámetros que
 depende linealmente de $n$, sistemas que son computacionalmente
 difíciles de resolver si $n$ es ``grande''.
 
-\TODO{Poner algunos ejemplos}. Esto motiva la
+Esto motiva la
 creación de la siguiente lista de deseos.
 
 
@@ -157,7 +159,7 @@ de un vector respecto a la base,
 	$0 \leq k \leq n-1$.}
 sino poder calcular a estos
 de forma relativamente sencilla (a saber, vía productos punto,
-c.f. \TODO{referencia del apéndice} ); si
+c.f. nota \ref{nota: sobre la identidad de parseval}); si
 \eqref{eq1: 28Nov} es ortonormal, entonces
 
 \begin{equation}
@@ -169,7 +171,7 @@ a_{k}= \langle x , \cali{L}^{n,k} \rangle.
 \item
 \textbf{\textcolor{ameMorado}{(... dan información sobre el tamaño (norma) de $x$...)}}
 El tener disponible una igualdad de tipo Parseval
-(c.f. \TODO{referencia del apéndice}), igualdad que
+(c.f. nota \ref{nota: sobre la identidad de parseval}), igualdad que
 relaciona de manera sencilla (de hecho, lineal)
 el cuadrado de
 la magnitud de una señal $x \in \IR^{n}$ (magnitud dada
@@ -245,7 +247,7 @@ f_{k}(t)= t^{k}, \hspace{0.4cm}
 restringiendo su dominio al intervalo $[-1,1]$.
 Como las funciones
 resultantes ya son elementos del 
-espacio de Hilbert $L^{2}[-1,1]$ (c.f. \TODO{apéndice})
+espacio de Hilbert $L^{2}[-1,1]$
 y, como las funciones \eqref{eq0: 8En} son linealmente
 independientes en este espacio, ya tiene sentido realizar
 en el espacio $L^{2}[-1,1]$  un proceso de ortogonalización
@@ -319,7 +321,7 @@ inevitable realizar, en algún punto
 del argumento, un proceso discretización
 (por ejemplo, 
 via una discretización
-puntual, c.f definición \TODO{ref}), es decir,
+puntual, c.f definición \ref{def: operador de discretizacion puntual}), es decir,
 pasar del ``contexto continuo'' en el que se han
 definido los polinomios de Legendre a uno discreto.
 
@@ -360,8 +362,7 @@ como demostraremos a lo largo del capítulo,
 ambas alternativas
 de discretización, igual de naturales la una que la otra, nos
 conducen a la misma base ortonormal de $\IR^{n}$,
-que, como se ilustra en la subsección de ejemplos
-\ref{subsec: ejemplos}
+que, como se ilustra en el capítulo \ref{sec: ejemplos} 
 resulta ser un sistema de representación
 realmente útil para el estudio morfológico de señales finitas.
 

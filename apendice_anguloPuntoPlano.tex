@@ -2,6 +2,7 @@
 \label{angulo entre elementos de un espacio con producto punto}
 
 Es gracias a la desigualdad de Cauchy-Schwarz
+\eqref{Teo:CauchySchwarz}
 que es posible introducir una de las nociones
 más valiosas con las que se cuenta en un espacio
 vectorial con producto punto, a saber, la de \textbf{ángulo} entre dos
@@ -61,7 +62,7 @@ cómo definir el ángulo entre dos elementos de un espacio
 de Hilbert $V$.
 
 Si además $W$ es un subespacio cerrado de $V$
-(lo que, recuerde, siempre ocurre en caso de que
+(cosa que siempre ocurre en caso que
 $V$ sea finito dimensional, c.f. teorema 2.4-3 de \cite{Kreyszig}), entonces también
 es posible definir el ángulo entre un punto $x \in V$
 del espacio y $W$.
@@ -179,7 +180,7 @@ y afirmar que $\measuredangle(x, W) \in [0, \frac{\pi}{2}]$.
 Necesitaremos concetrarnos en el caso
 particular en el que el subespacio cerrado $W$ es 
 un plano,\sidenote{O sea, un subespacio
-de dimensión $2$.} por lo que elaboremos un poco más
+de dimensión $2$.} por lo que a continuación elaboramos un poco más
 la teoría de la sección 
 \ref{angulo entre elementos de un espacio con producto punto}
 para este caso particular.
@@ -251,7 +252,7 @@ simple aritmética) en la siguiente proposición.
 	\label{prop: formulas 20Marzo}
 	Sean $V$ un espacio de Hilbert, $x \in V$ unitario,
 	$u,v \in V$ linealmente independientes. Si $P$ es el plano
-	que generan, entonces,
+	que generan $u$ y $v$, entonces,
 
 		\begin{equation}
 		\label{eq3: 19Marzo}
@@ -279,7 +280,7 @@ Sean $W \subseteq V$ un subespacio cerrado de $V$ y
 $x$ un elemento cualquiera de $V$. Hay dos formas ``naturales''
 de intentar medir la cercanía de $x$ a $W$:
 \begin{itemize}
-\item[a)] \textbf{Usando la distancia euclidea
+\item[a)] \textbf{Usando la distancia euclídea
 de $x$ a $W$}, es decir, tomando la norma del vector
 $x - \Pi_{W}(x)$ como una medida
 de qué tanto pertenece $x$ a $W$.
@@ -304,17 +305,17 @@ $\Pi_{W}(x)$ a $W$, luego,
 \begin{figure}[H]
 	\sidecaption{
 	Esquema de dos formas en las que uno puede intentar medir
-	qué tan afín es una señal $x$.
+	la proximidad de un elemento $x \in V$ al subespacio cerrado $W$.
 	\label{fig: dos formas de medir distancia a plano}
 	}
 	\centering
-	\includegraphics[scale= 1]{ 18Sept_1} 
+	\includegraphics[scale=0.9]{18Sept_1} 
 \end{figure}	
 
 Este segundo
 enfoque es conocido como ``\textbf{cosine similarity}'' en
-inglés (c.f. \cite{cosineSim}). Una ventaja, que será clave
-para nosotros, del segundo método sobre el primero se
+inglés (c.f. \cite{cosineSim}). Una ventaja (que será decisiva
+para nosotros) del segundo método sobre el primero se
 expone en el siguiente resultado.
 
 
@@ -332,17 +333,18 @@ con $W$ coinciden.
 En efecto, 
 
 \[
-|| a \cdot x - \Pi_{W}(a \cdot x) || = |a| \cdot || x - \Pi_{W}(x) ||, 
+|| a \cdot x - \Pi_{W}(a \cdot x) || = |a| \cdot || x - \Pi_{W}(x) ||
+\neq || x - \Pi_{W}(x) ||, 
 \]
-y
+mientras que
 
 \begin{align*}
-\measuredangle (a \cdot x, W_{n,1}):=& \measuredangle(a \cdot x, \Pi_{W_{n,1}}(a \cdot x)) \\
-= & \frac{\langle a \cdot x , \Pi_{W_{n,1}}(a \cdot x) \rangle}{|| a \cdot x || \cdot 
-|| \Pi_{W_{n,1}}(a \cdot x)  ||} \\
-= & \frac{a^{2}  \langle   x , \Pi_{W_{n,1}}(x) \rangle}{a^{2} ||  x || \cdot 
-|| \Pi_{W_{n,1}}( x)  ||}  \\
-= & \measuredangle (x, W_{n,1}).
+\measuredangle (a \cdot x, W):=& \measuredangle(a \cdot x, \Pi_{W}(a \cdot x)) \\
+= & \frac{\langle a \cdot x , \Pi_{W}(a \cdot x) \rangle}{|| a \cdot x || \cdot 
+|| \Pi_{W}(a \cdot x)  ||} \\
+= & \frac{a^{2}  \langle   x , \Pi_{W}(x) \rangle}{a^{2} ||  x || \cdot 
+|| \Pi_{W}( x)  ||}  \\
+= & \measuredangle (x, W).
 \end{align*}
 
 

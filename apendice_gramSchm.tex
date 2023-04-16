@@ -36,7 +36,7 @@ Sean los vectores
 \noindent
 El subconjunto 
 $S':=\{ \xi_{k} : \hspace{0.2cm} 0 \leq k \leq n-1  \}$ de $V$
-es ortogonal y genera el 
+es ortogonal y genera 
 el mismo espacio que $S$.
 \end{teo}
 
@@ -95,7 +95,7 @@ Según el teorema de Gram-Schmidt (\ref{Teo:Gram-Schmidt}),
 W_{k-1}=span(\xi_{0}, \ldots , \xi_{k-1}).
 \end{equation}
 
-
+\noindent
 Si mostramos que
 \begin{itemize}
 	\item el vector $v_{k}-\xi_{k}$ es elemento
@@ -107,7 +107,8 @@ por la unicidad establecida en
 el teorema de la proyección ortogonal \ref{Teo:proyOrt}
 podremos concluir la igualdad deseada. \\
 Lo primero es claro, pues, según las fórmulas
-dadas en el teorema \ref{Teo:Gram-Schmidt},
+dadas en el teorema \ref{Teo:Gram-Schmidt}
+y la ecuación \eqref{eq10: 11ap},
 \[
 v_{k}-\xi_{k}= 
 \suma{j=0}{k-1}{
@@ -136,7 +137,7 @@ bases ortonormales.
 \end{cor}
 \noindent
 \textbf{Demostración.}
-Sólo observe que, si el espacio de Hilbert
+Sólo observe que, si el espacio de
 Hilbert $V$ es finito dimensional, uno puedo aplicar
 el proceso de ortonormalización de Gram-Schmidt para
 obtener, a partir de una base de Hamel de $V$,
@@ -147,11 +148,9 @@ una base ortonormal.
 Así, a pesar de que, como comentamos en 
 \ref{Bases ortonormales de espacios de Hilbert}, 
 en general uno no puede asegurar que un espacio de 
-Hilbert tenga bases ortonormales, en el caso finito dimensional
-siempre se tienen estos sistemas de representación;
-\TODO{deberías decir por qué te gusta llamar ``sistemas
-de representación'' a las bases} recuerde las ventajas
-de estos sobre simples bases de Hamel discutidas
+Hilbert tenga bases ortonormales, en el caso finito dimensional.
+Recuerde las ventajas
+de estos sobre las bases de Hamel discutidas
 en la nota \ref{nota: sobre la identidad de parseval}.
 
 

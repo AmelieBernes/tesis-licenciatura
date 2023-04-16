@@ -153,9 +153,9 @@ def graficas_senial_rectaMC(mediciones):
     #Calculamos su parte afin y graficamos, junto con la recta de minimos cuadrados.
     b=coef_RMC(dominio,mediciones)
     y=b[0]+b[1]*dominio
-    plt.plot(dominio, y, color=colores[7], linestyle='dotted', label='Recta de mínimos cuadrados')
-    print('Ordenada al origen: '+str(b[0]))
-    print('Pendiente: '+str(b[1]))
+    plt.plot(dominio, y, color='gray', linestyle='dotted', label='Recta de mínimos cuadrados')
+    #print('Ordenada al origen: '+str(b[0]))
+    #print('Pendiente: '+str(b[1]))
 
     plt.grid()
     plt.legend()
@@ -182,8 +182,8 @@ def graficas_senial_parteAfin(mediciones):
     proyW1=proyeccion(mediciones,1)
     print(proyW1)
     plt.scatter(dominio, proyW1, s=50, color=colores[2], label='Gráfica de $\Pi_{W_{1}}(x) \in \mathbb{R}^{n}$')
-    b=coef_RMC(dominio,mediciones)
-    y=b[0]+b[1]*dominio
+    plt.plot(dominio, proyW1, linestyle='dotted', color = colores[2])
+
     return plt.show()
 
 
@@ -216,4 +216,7 @@ def graficas_senial_parteCuadrV2(mediciones):
 
 if __name__ == '__main__':
     mediciones = [-0.5, 2.4, 1.6, 1.7, 2.3]
-    graficas_senial_parteCte_Afin_Cuadratica(mediciones)
+    #graficas_senial_parteCte_Afin_Cuadratica(mediciones)
+    mediciones = [5, 3.2, 4.6, 0, -0.3]
+    #graficas_senial_rectaMC(mediciones)
+    graficas_senial_parteAfin(mediciones)

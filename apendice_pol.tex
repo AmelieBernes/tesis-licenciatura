@@ -1,11 +1,16 @@
 \section{Polinomios y teorema fundamental del álgebra}
 
 En general, si $R$ es un anillo, se define a partir de 
-él un nuevo anillo denominado en \textbf{anillo de polinomios
-con coeficientes en $R$}; a pesar de que la construcción
-algebraica de este anillo no se hace, por lo general, definiendo
-funciones de $R$ en $R$, ...
-\TODO{referencia libro de álgebra a construcción.}
+él un nuevo anillo denominado el \textbf{anillo de polinomios
+con coeficientes en $R$}; 
+no vamos a ahondar en la construcción
+algebráica de este (basada en sucesiones en $R$ de soporte
+finito, c.f. \cite{jacobson} p.119), pero suponemos
+que el lector está ya familiarizado con el anillo
+$R[t]$, donde las operaciones de suma y multiplicación
+se definen de la manera usual, así como con la noción
+de evaluar un polinomio $f(t) \in R[t]$ en un elemento
+$r \in R$ del anillo.
 
 
 \begin{defi}
@@ -55,7 +60,7 @@ de coeficientes $K$ como el campo $\IR$ o el campo $\IC$.
 
 Es una consecuencia inmediata del algoritmo de la división
 (c.f. \cite{rotman} p. 131) el que, si $K$ es un campo
-y $f(x) \in K[x]$ es un polinomio de grado $n>0$, 
+y $f(t) \in K[t]$ es un polinomio de grado $n>0$, 
 entonces $f$ tiene a lo más $n$ raíces (el argumento es
 relacionar raíces de un polinomio con divisores lineales
 de este y argumentar que, por 
@@ -66,7 +71,7 @@ de más de $n$ factores lineales, luego, no puede tener más de
 $n$ raíces).
 
 Se tiene pues una cota superior para la cantidad
-de raíces de un polinomio basada en 
+de raíces de un polinomio no cero basada en 
 su grado, sin embargo, esta cota bien puede no
 alcanzarse. De hecho, como muestra el siguiente ejemplo,
 puede ser que un polinomio no constante con coeficientes en un campo
@@ -79,7 +84,8 @@ $5$ es un número primo, $\IZ_{5}$ es un campo (c.f. proposición
 Sea $f(t)=t^{2}-2 \in \IZ_{5}[t]$; evaluar a este polinomio
 en cada uno de los cinco elementos de $\IZ_{5}$
 nunca da lugar al cero del campo, luego, $f$ es un polinomio
-de grado dos con coeficientes en $\IZ_{5}$ sin raíces.
+de grado dos con coeficientes en $\IZ_{5}$ sin raíces
+(en $\IZ_{5}$).
 \final
 \end{ejemplo}
 
@@ -109,8 +115,8 @@ sino en la matemática en general; se resalta también el hecho
 de que, hasta el momento, todas las pruebas de este teorema
 hacen uso no sólo de la estructura algebráica del dominio entero
 $\IC[t]$, sino de propiedades
-de otra índole, por ejemplo
-topológicas, de
+de otra índole (por ejemplo
+topológicas) de
 $\IC$ visto como un $\IC-$espacio vectorial
 (obtenidas, por ejemplo, al definir en $\IC$ una norma, c.f.
 \eqref{eq: producto punto Cn}).
@@ -147,7 +153,8 @@ raíz $r_{2}$, el polinomio
 de grado dos $(x-r_{1})(x-r_{2})$
 dividiría a $f$, pero esto contradice el que 
 todos los divisores de un polinomio $f$ con coeficientes
-en un campo tengan grado menor o igual al de $f$. 
+en un campo tengan grado menor o igual al de $f$
+(c.f. proposición \ref{prop: grado producto polin}). 
 Con esto comprobamos la validez del teorema para $n=1$.
 
 Supongamos ahora el teorema cierto para 
@@ -179,14 +186,14 @@ una de las piezas angulares del trabajo desarrollado en esta tesis.
 \begin{prop}
 \label{prop: cita TFA}
 Sea $f(t) \in \IR[t]$ un polinomio con coeficientes reales
-de grado a lo más $n$. Si $f$ tiene más de $n$ raíces reales, entonces
+con $\partial(f) = n$. Si $f$ tiene más de $n$ raíces reales, entonces
 $f$ es el polinomio cero.
 \end{prop}
 \noindent
 \textbf{Demostración.}
 En efecto, si $f$ tuviese grado mayor a cero, entonces, 
 según el teorema \ref{teo: alt del fundamental del algebra},
-$f$ tendría exactamente $n$ raíces reales,
+$f$ tendría a lo más $n$ raíces reales,
 pero, por hipótesis, $f$ tiene más de $n$; así, $f$
 debe tener grado cero, o sea, debe  ser un polinomio constante.
 Puesto que el único polinomio constante con al menos una raíz
