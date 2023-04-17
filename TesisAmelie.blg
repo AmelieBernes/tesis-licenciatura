@@ -19,6 +19,11 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
+Repeated entry---line 193 of file Referencias.bib
+ : @misc{leg
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "wolfram"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
@@ -126,7 +131,7 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2815 of file biblatex.bst
 You've used 23 entries,
             6399 wiz_defined-function locations,
-            1312 strings with 11211 characters,
+            1313 strings with 11218 characters,
 and the built_in function-call counts, 112310 in all, are:
 = -- 8011
 > -- 1538
@@ -165,4 +170,4 @@ warning$ -- 0
 while$ -- 994
 width$ -- 0
 write$ -- 428
-(There were 51 error messages)
+(There were 52 error messages)
