@@ -12,39 +12,38 @@
 \contentsline {subsection}{\numberline {1.4.1}Generalización que involucra a la discretización $\Omega _{n}$}{22}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{29}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}Comentarios finales sobre la construcción}{34}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Revisión de literatura y artículos relacionados}{35}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{36}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{39}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{40}{subsection.1.7.2}%
-\contentsline {subsection}{\numberline {1.7.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{41}{subsection.1.7.3}%
-\contentsline {chapter}{\numberline {2}Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}{45}{chapter.2}%
-\contentsline {subsection}{\numberline {2.0.1}Ejemplo 1}{45}{subsection.2.0.1}%
-\contentsline {subsection}{\numberline {2.0.2}Ejemplo 2}{47}{subsection.2.0.2}%
-\contentsline {subsection}{\numberline {2.0.3}Ejemplo 3}{48}{subsection.2.0.3}%
-\contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{54}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{57}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{59}{subsection.3.0.2}%
-\contentsline {chapter}{\numberline {4}Implementación computacional de las bases discretas de Legendre}{60}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{61}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{66}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{68}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{73}{subsection.5.0.2}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{75}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{75}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{77}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{79}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{80}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}La desigualdad de Gram-Schmidt y la continuidad del producto punto}{82}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}Bases ortonormales de espacios de Hilbert}{83}{section.Alph1.6}%
-\contentsline {subsection}{\numberline {A.6.1}El concepto de redes como un generalización del de sucesión}{84}{subsection.Alph1.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}{86}{subsection.Alph1.6.2}%
-\contentsline {section}{\numberline {A.7}El teorema de Gram-Schmidt}{91}{section.Alph1.7}%
-\contentsline {section}{\numberline {A.8}Ángulo entre elementos de un espacio con producto punto}{93}{section.Alph1.8}%
-\contentsline {section}{\numberline {A.9}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{94}{section.Alph1.9}%
-\contentsline {subsection}{\numberline {A.9.1}Caso particular en el que el subespacio en cuestión es un plano}{96}{subsection.Alph1.9.1}%
-\contentsline {section}{\numberline {A.10}Similitud coseno}{97}{section.Alph1.10}%
-\contentsline {section}{\numberline {A.11}La transformada discreta de Fourier y estudios espectrales de señales finitas}{98}{section.Alph1.11}%
-\contentsline {subsection}{\numberline {A.11.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{98}{subsection.Alph1.11.1}%
-\contentsline {subsection}{\numberline {A.11.2}La transformada discreta de Fourier}{100}{subsection.Alph1.11.2}%
-\contentsline {subsection}{\numberline {A.11.3}Versión real de la DFT}{103}{subsection.Alph1.11.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{107}{appendix.Alph2}%
+\contentsline {section}{\numberline {1.6}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{35}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{37}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{38}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{39}{subsection.1.6.3}%
+\contentsline {chapter}{\numberline {2}Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}{43}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Ejemplo 1}{43}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Ejemplo 2}{45}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Ejemplo 3}{46}{subsection.2.0.3}%
+\contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{52}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{55}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{57}{subsection.3.0.2}%
+\contentsline {chapter}{\numberline {4}Implementación computacional de las bases discretas de Legendre}{58}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{59}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{64}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{66}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{71}{subsection.5.0.2}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{73}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{73}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{75}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{77}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{78}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Gram-Schmidt y la continuidad del producto punto}{80}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}Bases ortonormales de espacios de Hilbert}{81}{section.Alph1.6}%
+\contentsline {subsection}{\numberline {A.6.1}El concepto de redes como un generalización del de sucesión}{82}{subsection.Alph1.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}{84}{subsection.Alph1.6.2}%
+\contentsline {section}{\numberline {A.7}El teorema de Gram-Schmidt}{89}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Ángulo entre elementos de un espacio con producto punto}{91}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{92}{section.Alph1.9}%
+\contentsline {subsection}{\numberline {A.9.1}Caso particular en el que el subespacio en cuestión es un plano}{94}{subsection.Alph1.9.1}%
+\contentsline {section}{\numberline {A.10}Similitud coseno}{95}{section.Alph1.10}%
+\contentsline {section}{\numberline {A.11}La transformada discreta de Fourier y estudios espectrales de señales finitas}{96}{section.Alph1.11}%
+\contentsline {subsection}{\numberline {A.11.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{96}{subsection.Alph1.11.1}%
+\contentsline {subsection}{\numberline {A.11.2}La transformada discreta de Fourier}{98}{subsection.Alph1.11.2}%
+\contentsline {subsection}{\numberline {A.11.3}Versión real de la DFT}{101}{subsection.Alph1.11.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{105}{appendix.Alph2}%

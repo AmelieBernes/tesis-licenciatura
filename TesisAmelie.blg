@@ -124,45 +124,45 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2815 of file biblatex.bst
-You've used 22 entries,
+You've used 23 entries,
             6399 wiz_defined-function locations,
-            1309 strings with 11132 characters,
-and the built_in function-call counts, 110513 in all, are:
-= -- 7963
-> -- 1537
-< -- 880
-+ -- 1759
-- -- 432
-* -- 7694
-:= -- 9660
+            1312 strings with 11211 characters,
+and the built_in function-call counts, 112310 in all, are:
+= -- 8011
+> -- 1538
+< -- 901
++ -- 1760
+- -- 434
+* -- 7794
+:= -- 9707
 add.period$ -- 0
-call.type$ -- 22
-change.case$ -- 507
+call.type$ -- 23
+change.case$ -- 516
 chr.to.int$ -- 44
-cite$ -- 56
-duplicate$ -- 10369
-empty$ -- 11467
+cite$ -- 60
+duplicate$ -- 10617
+empty$ -- 11757
 format.name$ -- 747
-if$ -- 24231
+if$ -- 24654
 int.to.chr$ -- 0
-int.to.str$ -- 52
+int.to.str$ -- 53
 missing$ -- 0
-newline$ -- 440
+newline$ -- 450
 num.names$ -- 935
-pop$ -- 7133
+pop$ -- 7462
 preamble$ -- 1
-purify$ -- 517
+purify$ -- 523
 quote$ -- 0
-skip$ -- 3657
+skip$ -- 3725
 stack$ -- 0
-substring$ -- 14937
-swap$ -- 2708
-text.length$ -- 591
-text.prefix$ -- 31
+substring$ -- 14970
+swap$ -- 2794
+text.length$ -- 609
+text.prefix$ -- 32
 top$ -- 1
-type$ -- 736
+type$ -- 770
 warning$ -- 0
-while$ -- 987
+while$ -- 994
 width$ -- 0
-write$ -- 419
+write$ -- 428
 (There were 51 error messages)

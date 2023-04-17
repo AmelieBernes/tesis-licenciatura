@@ -1,36 +1,27 @@
 \subsection{Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\cali{L}^{n}$}
 
-Sea $n \in \IN$. Sea $0 \leq m \leq n-1$.
-\TODO{revisa que estén bien !!1}
+Sea $n \geq 2$.
+\begin{itemize}
+\item Para toda $0 \leq m \leq n-1$, 
+$\cali{L}^{n,0}_{m}=\frac{1}{\sqrt{n}}$.
+
+\item \textbf{Fórmula para los polinomios de legendre discretos
+de grado $k=1$}
 \[
-\cali{L}^{n,0}_{m}=\frac{1}{\sqrt{n}}.
+\cali{L}^{n,1}_{m}=\sqrt{\frac{3(n-1)}{n(n+1)}} \left( \frac{2}{n-1}m -1. \right),
 \]
-
-Si $n \geq 2$,
-\[
-\cali{L}^{n,1}_{m}=\sqrt{\frac{3(n-1)}{n(n+1)}} \left( \frac{2}{n-1}m -1. \right)
-\]
-
-Si $n \geq 3$,
-\[
-\cali{L}^{n,2}_{m}=\sqrt{\frac{5(n-1)(n-2)}{n(n+1)(n+2)}} \left(1- \frac{6}{n-1}m + \frac{6}{(n-1)(n-2)}m(m-1) \right).
-\]
-
-Si $n \geq 4$,
-\[
-\cali{L}^{n,3}_{m}=-\sqrt{\frac{7(n-1)(n-2)(n-3)}{(n+3)(n+2)(n+1)n}}
-\left( 1- \frac{12}{n-1}m + \frac{30}{(n-1)(n-2)}m(m-1)-
-\frac{20}{(n-1)(n-2)(n-3)}m(m-1)(m-2) \right).
-\]
-
-\vspace{2cm}
-
-Expresiones simplificadas (factorizadas) para $k=1,2$:
-
+o sea, 
 \[
 \cali{L}^{n,1}_{m}=\frac{2\sqrt{3}}{(n+1)n(n-1)} \left( m-\frac{n-1}{2} \right)
 \]
 
+
+\item \textbf{Fórmula para los polinomios de legendre discretos
+de grado $k=2$} si $n \geq 3$,
+\[
+\cali{L}^{n,2}_{m}=\sqrt{\frac{5(n-1)(n-2)}{n(n+1)(n+2)}} \left(1- \frac{6}{n-1}m + \frac{6}{(n-1)(n-2)}m(m-1) \right),
+\]
+o sea, 
 \[
 \cali{L}^{n,2}_{m}=\frac{6\sqrt{5}}{\sqrt{(n+2)(n+1)n(n-1)(n-2)}} \left(
 \left( m-\frac{n-1}{2} \right)^{2}+\frac{n-1}{4}(23n-47)
@@ -38,7 +29,25 @@ Expresiones simplificadas (factorizadas) para $k=1,2$:
 \]
 
 
-
+\item \textbf{Fórmula para los polinomios de legendre discretos
+de grado $k=3$} si $n \geq 4$,
+\[
+\cali{L}^{n,3}_{m}=-\sqrt{\frac{7(n-1)(n-2)(n-3)}{(n+3)(n+2)(n+1)n}}
+\left( 1- A_{n}m + B_{n}m(m-1)-
+C_{n}m(m-1)(m-2) \right),
+\]
+donde
+\[
+A_{n}:= \frac{12}{n-1},
+\]
+\[
+B_{n} := \frac{30}{(n-1)(n-2)}
+\]
+y
+\[
+C_{n} := \frac{20}{(n-1)(n-2)(n-3)}.
+\]
+\end{itemize}
 
 \subsection{Fórmulas explícitas de la base $\cali{L}^{n}$ para dimensiones $2 \leq n \leq 6$} \label{subsect:Formulas explicitas}
 \label{formulas explicitas para Ln con n de 2 hasta 6}
@@ -166,7 +175,7 @@ también las oscilaciones en la gráfica de este.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{bases/BLD_dimensión 2 (figura 0)}
+	\includegraphics[scale=0.4]{bases/BLD_dimensión 2 (figura 0)}
 \end{figure}
 
 \begin{figure}[H]
@@ -198,26 +207,4 @@ también las oscilaciones en la gráfica de este.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{bases/BLD_dimensión 6 (figura 1)}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{bases/BLD_dimensión 7 (figura 0)}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{bases/BLD_dimensión 7 (figura 1)}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{bases/BLD_dimensión 8 (figura 0)}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.4]{bases/BLD_dimensión 8 (figura 1)}
 \end{figure}

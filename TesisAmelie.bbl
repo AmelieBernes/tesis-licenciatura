@@ -285,6 +285,16 @@
     \field{year}{1997}
   \endentry
 
+  \entry{leg}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Leg}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+  \field{howpublished}{\url{https://en.wikipedia.org/wiki/Legendre_polynomials}}
+    \field{note}{Accessed: 2023-04-11}
+    \field{title}{Legendre polynomials}
+  \endentry
+
   \entry{mse1}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Mse}

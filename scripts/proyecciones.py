@@ -123,9 +123,9 @@ def graficas_senial_parteCte_Afin_Cuadratica(mediciones):
     
     #Calculamos su parte cuadratica y graficamos, junto con la parabola de minimos cuadrados.
     proyW2=proyeccion(mediciones,2)
-    plt.scatter(dominio, proyW2, s=50, color=colores[7], label='Parte cuadrática de x')
+    plt.scatter(dominio, proyW2, s=50, color=colores[0], label='Parte cuadrática de x')
     parab=parab3Puntos([proyW2[0], proyW2[1], proyW2[2]])
-    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[7], linestyle='dotted')
+    plt.plot(X, parab[0]*X**2 + parab[1]*X + parab[2], color=colores[0], linestyle='dotted')
 
     #Graficamos
     plt.grid()
@@ -216,7 +216,8 @@ def graficas_senial_parteCuadrV2(mediciones):
 
 if __name__ == '__main__':
     mediciones = [-0.5, 2.4, 1.6, 1.7, 2.3]
-    #graficas_senial_parteCte_Afin_Cuadratica(mediciones)
-    mediciones = [5, 3.2, 4.6, 0, -0.3]
+    graficas_senial_parteCte_Afin_Cuadratica(mediciones)
+    
+    #mediciones = [5, 3.2, 4.6, 0, -0.3]
     #graficas_senial_rectaMC(mediciones)
-    graficas_senial_parteAfin(mediciones)
+    #graficas_senial_parteAfin(mediciones)
