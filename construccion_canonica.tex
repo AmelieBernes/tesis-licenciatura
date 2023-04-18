@@ -1,4 +1,4 @@
-\section{Construcción canónica de la base de Legendre discreta}
+\chapter{Construcción canónica de las bases de Legendre discretas}
 
 Comenzamos planteando algunas definiciones.
 
@@ -56,11 +56,10 @@ es decir, con la función
 
 
 \begin{defi} \label{def: polinomio discreto}
-En el caso en el que $f$ sea elemento de $\IR[x]$, 
+En el caso en el que $f$ sea elemento de $\IR[t]$, 
 nos referiremos
 al vector $\Omega_{n,\cali{P}}(f) \in \IR^{n}$
-como un \textbf{polinomio discreto
-de dimensión $n$ con dominio uniforme $\cali{P}$.} 
+como un \textbf{polinomio discreto de dimensión $n$ con dominio uniforme $\cali{P}$.} 
 \end{defi} 
 
 \marginnote{
@@ -79,11 +78,12 @@ y propondremos una definición del grado de este.
 Ya podríamos dar algunos resultados en esta dirección,
 pero preferimos esperar hasta tener las herramientas
 para justificar detalles como la buena definición
-de nuestra propuesta de grado.
+de nuestra propuesta de grado (c.f. 
+\ref{definicion del concepto de grado para seniales finitas}).
 
 
 Por la forma en que se definen la suma y la multiplicación
-por escalares en los espacios vectoriales $\IR[x]$
+por escalares en los espacios vectoriales $\IR[t]$
 y $\IR^{n}$, la siguiente observación es clara.
 
 \begin{obs} \label{obs:linealidad de omega restringida a R[x]}
@@ -102,7 +102,7 @@ $\cali{C}[t_{0}, t_{n-1}]$ a $\IR^{n}$.
 \begin{notacion} \label{notacion: Pn, fk, Wi, vk}
 Sea $n \in \IN$ y $k$ un entero no negativo.
 Denotaremos 
-por $\IR_{k}[x]$ al subespacio de $\IR[x]$
+por $\IR_{t}[x]$ al subespacio de $\IR[t]$
 que consta de los polinomios de grado a lo más $k$.
 \noindent
 Escribiremos como $f_{k}$ 
@@ -770,7 +770,7 @@ de grado $k$.}
 
 
 
-\subsection{Construcción de la base de Legendre discreta via ortogonalización de bases de espacios de polinomios discretos}
+\subsection{Construcción de las BLD via ortogonalización de bases de espacios de polinomios discretos}
 
 \noindent Ahora, con el proceso de Gram-Schmidt \ref{Prop:Gram-Schmidt2}
 vamos a normalizar
@@ -866,7 +866,7 @@ por lo tanto, a todo elemento de este.
 	\label{fig: pdl}
 	}
 	\centering
-	\includegraphics[scale= 0.6]{pdl} 
+	\includegraphics[scale= 0.4]{pdl} 
 \end{figure}	
 
 
@@ -881,6 +881,93 @@ $
 }}
 \end{comment}
 
+\begin{ejemplo}
+A continuación, mostramos las gráficas de los
+elementos de las bases $\cali{L}^{2}$ y $\cali{L}^{3}$.
+Para dibujarlas usamos los valores
+calculados en la tabla
+\ref{formulas explicitas para Ln con n de 2 hasta 6}.
+
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de los elementos de $\cali{L}^{2}
+	\subseteq \IR^{2}$
+	\label{fig: graficas elementos L2}
+	}
+	\centering
+	\includegraphics[scale=0.5]{graficasLegendre2} 
+\end{figure}	
+
+
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de los elementos de $\cali{L}^{3} 
+	\subseteq \IR^{3}$
+	\label{fig: graficas elementos L2}
+	}
+	\centering
+	\includegraphics[scale=0.3]{graficasLegendre3} 
+\end{figure}	 
+
+
+
+
+En el caso $n=2$, el único subespacio de polinomios
+discretos no trivial es 
+\begin{align*}
+W_{2,0}= & span \left\{ 
+\left(\frac{1}{\sqrt2}, \frac{1}{\sqrt2} \right) \right\} \\
+= & \{ (x,x) \in \IR^{2}: \hspace{0.2cm} x \in \IR \},
+\end{align*}
+
+pues
+
+\begin{equation*}
+\label{eq1: 1Dic}
+W_{2,1}= \IR^{2}.
+\end{equation*}
+
+
+En el caso $n=3$, calculamos que
+\begin{align*}
+W_{3,0}= & span \left\{
+\left( \frac{1}{\sqrt3}, \frac{1}{\sqrt3},
+\frac{1}{\sqrt3} \right) \right\}  \\
+= & \{ (x,x,x) \in \IR^{3}: \hspace{0.2cm} x \in \IR \},
+\end{align*}
+
+\begin{align}
+\label{eq2: 1Dic}
+W_{3,1}= & span \left\{ \left( \frac{1}{\sqrt3}, \frac{1}{\sqrt3},
+\frac{1}{\sqrt3} \right) ,
+\left( -\frac{1}{\sqrt2}, 0,  \frac{1}{\sqrt2} \right) \right\}
+\nonumber \\
+= & \{ (x,y,2y-x) \in \IR^{3}: \hspace{0.2cm} x,y \in \IR \},
+\end{align}
+y
+\[
+W_{3,2}=\IR^{3}.
+\]
+
+\begin{figure}[H]
+	\sidecaption{
+	Gráficas de 
+	$W_{2,0} \subseteq \IR^{2}$
+	y de los subespacios
+	$W_{3,0}$ y $W_{3,1}$ de $\IR^{3}$ que
+	son, respectivamente, una recta y un plano;
+	observe que
+	$W_{3,0} \subseteq W_{3,1}$ y que tanto 
+	$W_{2,0}$ como $W_{3,1}$ dividen en dos regiones
+	ajenas a sus correspondientes espacios ambiente.
+	\label{fig: graficas espacios W para dimensiones 2 y 3}
+	}
+	\centering
+	\includegraphics[scale= 0.38]{legendre2y3} 
+\end{figure}	
+	 
+%final ejemplo 1--------------------------------------------
+\end{ejemplo}
 
 
 

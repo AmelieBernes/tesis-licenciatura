@@ -1,39 +1,38 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Definición y propiedades de los polinomios discretos de Legendre}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introducción: planteamiento y motivación}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Construcción canónica de la base de Legendre discreta}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Discretización puntual, polinomios discretos y espacios asociados}{9}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Una definición del concepto de grado para señales finitas}{14}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Construcción de la base de Legendre discreta via ortogonalización de bases de espacios de polinomios discretos}{17}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}Algunas propiedades de las bases de Legendre discretas}{18}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}{18}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{20}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{22}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Generalización que involucra a la discretización $\Omega _{n}$}{22}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{29}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}Comentarios finales sobre la construcción}{34}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Deducción de la expresión analítica de la base $\mathcal {L}^{n}$}{35}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{37}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{38}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{39}{subsection.1.6.3}%
-\contentsline {chapter}{\numberline {2}Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}{43}{chapter.2}%
-\contentsline {subsection}{\numberline {2.0.1}Ejemplo 1}{43}{subsection.2.0.1}%
-\contentsline {subsection}{\numberline {2.0.2}Ejemplo 2}{45}{subsection.2.0.2}%
-\contentsline {subsection}{\numberline {2.0.3}Ejemplo 3}{46}{subsection.2.0.3}%
-\contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{52}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{55}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{57}{subsection.3.0.2}%
-\contentsline {chapter}{\numberline {4}Implementación computacional de las bases discretas de Legendre}{58}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Pseudocódigo de un algoritmo que calcula bases de Legendre discretas}{59}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{64}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{66}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{71}{subsection.5.0.2}%
+\contentsline {chapter}{\numberline {1}Introducción: planteamiento y motivación}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Construcción canónica de las bases de Legendre discretas}{9}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Discretización puntual, polinomios discretos y espacios asociados}{9}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}Una definición del concepto de grado para señales finitas}{14}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Construcción de las BLD via ortogonalización de bases de espacios de polinomios discretos}{17}{subsection.2.0.3}%
+\contentsline {section}{\numberline {2.1}Algunas propiedades de las bases de Legendre discretas}{19}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}{19}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{22}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{24}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Generalización que involucra a la discretización $\Omega _{n}$}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones con sumas integrales}{31}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Fórmulas explícitas de la base $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6$}{36}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Comentarios finales sobre la construcción}{37}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{38}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}Estudio para dimensiones impares}{41}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Estudio para dimensiones pares}{43}{subsection.3.0.2}%
+\contentsline {chapter}{\numberline {4}Cálculo de los PDL}{44}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{47}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}Gráficas de los elementos de las bases $\mathcal {L}^{n}$ para dimensiones $2 \leq n \leq 6 $}{48}{subsection.4.0.2}%
+\contentsline {subsection}{\numberline {4.0.3}Implementación computacional de las bases discretas de Legendre}{51}{subsection.4.0.3}%
+\contentsline {subsubsection}{Análisis de la expresión de los PDL}{51}{subsubsection*.37}%
+\contentsline {subsubsection}{Pseudocódigos algoritmos usados para calcular las BDL}{52}{subsubsection*.38}%
+\contentsline {chapter}{\numberline {5}Estudio espectral de los polinomios discretos de Legendre}{57}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{59}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{64}{subsection.5.0.2}%
+\contentsline {chapter}{\numberline {6}Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}{66}{chapter.6}%
+\contentsline {subsection}{\numberline {6.0.1}Ejemplo 2}{66}{subsection.6.0.1}%
+\contentsline {subsection}{\numberline {6.0.2}Ejemplo 3}{68}{subsection.6.0.2}%
 \contentsline {chapter}{\numberline {A}Apéndice: teoría}{73}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{73}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{75}{section.Alph1.2}%
 \contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{77}{section.Alph1.3}%
 \contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{78}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}La desigualdad de Gram-Schmidt y la continuidad del producto punto}{80}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{80}{section.Alph1.5}%
 \contentsline {section}{\numberline {A.6}Bases ortonormales de espacios de Hilbert}{81}{section.Alph1.6}%
 \contentsline {subsection}{\numberline {A.6.1}El concepto de redes como un generalización del de sucesión}{82}{subsection.Alph1.6.1}%
 \contentsline {subsection}{\numberline {A.6.2}Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}{84}{subsection.Alph1.6.2}%

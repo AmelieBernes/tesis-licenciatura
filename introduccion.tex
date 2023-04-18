@@ -1,8 +1,5 @@
-\chapter{Definición y propiedades de los polinomios discretos de Legendre}
-\label{cap: def y propiedades de los pol discretos de Legendre}
-\label{cap: def de los pol de legendre discretos}
-
-\section{Introducción: planteamiento y motivación}
+\chapter{Introducción: planteamiento y motivación}
+\label{chapter: introduccion}
 Durante todo este trabajo trataremos con señales
 finitas
 (digamos, de
@@ -240,24 +237,59 @@ capturar,
 consideramos a las gráficas de las potencias básicas
 \begin{equation}
 \label{eq0: 8En}
-f_{k}(t)= t^{k}, \hspace{0.4cm}
+f_{i}(t)= t^{i}, \hspace{0.4cm}
 -1 \leq t \leq 1, \hspace{0.2cm}
  k \in \overline{\IN};
 \end{equation}
-restringiendo su dominio al intervalo $[-1,1]$.
-Como las funciones
-resultantes ya son elementos del 
-espacio de Hilbert $L^{2}[-1,1]$
-y, como las funciones \eqref{eq0: 8En} son linealmente
-independientes en este espacio, ya tiene sentido realizar
-en el espacio $L^{2}[-1,1]$  un proceso de ortogonalización
-(por ejemplo, usando el procedimiento de Gram-Schmidt 
-\ref{Teo:Gram-Schmidt}) para obtener bases ortonormales
-de los subespacios de $L^{2}[-1,1]$ que estas potencias
-básicas generan; obtenemos así una familia de polinomios 
+restringiendo su dominio al intervalo $[-1,1]$;
+estas funciones son 
+elementos del 
+espacio de Hilbert $L^{2}[-1,1]$. \sidenote{\TODO{cita
+una fuente confiable en la que se diga cómo se define en ese 
+espacio el producto punto.}}
+
+
+\begin{notacion}
+\label{notacion: 17ap}
+Sea $k \geq 0$ entero.
+Denotaremos por 
+\begin{itemize}
+	\item $\IR_{-1,1}[t]$ al subespacio de $L^{2}[-1,1]$ que consta de los
+	polinomios restringidos al intervalo $[-1,1]$,
+	
+	\item $\IR_{k,-1,1}[t]$ al subespacio de $\IR_{-1,1}[t]$
+	que consta de los polinomios restringidos a $[-1,1]$ y grado a lo
+	más $k$.
+\end{itemize}
+\end{notacion}
+
+
+Dos observaciones se siguen de inmediato:
+\begin{itemize}
+	\item si $k_{1} \leq k_{2}$ se tiene trivialmente la contención
+$\IR_{k_{1}, -1,1} \subseteq \IR_{k_{2}, -1,1}$, o sea, la familia
+$\{\IR_{k, -1,1}\}_{k \in \overline{\IN}}$ de subespacios
+de $L^{2}[-1,1]$ está anidada; además, 
+
+	\item la unión de la familia $\{\IR_{k, -1,1}\}_{k \in \overline{\IN}}$
+	es todo $\IR_{-1,1}[t]$.
+\end{itemize}
+
+
+Se comprueba trivialmente que, si los polinomios
+$f_{i}$ son como en \eqref{eq0: 8En}, entonces,
+para toda $k \geq 0$, $\{f_{i}(t): \hspace{0.2cm} 0 \leq i \leq k \}$
+es una base del espacio $\IR_{k,-1,1}[t]$, luego, con el 
+método de Gram-Schmidt
+(c.f. \ref{ap: gram schmidt}) esta puede ortonormalizarse para
+obtener una BON de $\IR_{k,-1,1}[t]$; haciendo esto
+para toda $k$, se obtiene una BON 
+para todo el espacio $\IR_{-1,1}[t]$. Esta consta de los polinomios
+
+
 \begin{equation}
 \label{eq1: 8En}
-P_{k}(t), \hspace{0.4cm}
+P_{k}(t)\in \{\IR_{k, -1,1}\}_{k \in \overline{\IN}}, \hspace{0.4cm}
 -1 \leq t \leq 1, \hspace{0.2cm}
  k \in \overline{\IN},
 \end{equation}
@@ -271,7 +303,7 @@ y por la condición de normalización
 \[
 \int_{-1}^{1}{P_{k}(t)^{2}} dt = 1.
 \]
-A los polinomios $P_{k}$ que resultan
+A los polinomios \eqref{eq1: 8En}
 se les conoce como \textbf{polinomios de Legendre}
 \sidenote{Muchas veces
 esta condición de normalización cambia; algunos 
@@ -281,7 +313,8 @@ prefieren tomar como condiciones de ortonormalización a
 \]
 Por eso las fórmulas que usualmente uno encuentra para
 los polinomios de Legendre (por ejemplo \cite{leg})
-son distintas a las presentadas aquí.} (c.f. \cite{friedberg} , p.346).
+son distintas a las presentadas aquí.} (c.f. \cite{friedberg} p.346
+y \cite{DSML} p.390).
 
 Se calcula fácilmente que los primeros cuatro 
 polinomios de Legendre son
@@ -302,16 +335,9 @@ y
 P_{3}(t) = \frac{5}{2} \sqrt{\frac{7}{2}}\left( t^{3}- \frac{3}{5}t\right).
 \]
 
-Puesto que el conjunto de los polinomios de Legendre
-definidos arriba es una base ortonormal del
-espacio $L^{2}([-1,1])$
-(c.f. \cite{DSML} p.390), una función definida
-en el intervalo $[-1,1]$ puede aproximarse
-``tanto como se quiera'' en base a combinaciones
-lineales de polinomios de Legendre.
-
-
-Si planeamos, de alguna forma, usar a estos polinomios
+En esta discusión tenemos ya involucrada una base ortogonal
+(\textbf{en} el espacio de funciones $L^{2}[-1,1]$);
+si planeamos, de alguna forma, usar a estos polinomios
 para el estudio morfológico de señales, por la naturaleza
 discreta de estos últimos objetos, será
 inevitable realizar, en algún punto 
@@ -320,7 +346,7 @@ del argumento, un proceso discretización
 via una discretización
 puntual, c.f definición \ref{def: operador de discretizacion puntual}), es decir,
 pasar del ``contexto continuo'' en el que se han
-definido los polinomios de Legendre a uno discreto.
+definido los polinomios de Legendre a uno discreto. \\
 
 Para partir de
 objetos en el espacio ambiente
@@ -329,19 +355,19 @@ también tiene sentido primero realizar
 un proceso de discretización (por ejemplo, 
 puntual) y luego realizar
 un proceso de ortogonalización. La figura
-\ref{fig: ortogonalizacion, discretizacion}
+de abajo
 ilustra, para el caso $n=4$, estos dos caminos.
 Como ahí se aprecia, estos dos caminos llevan 
 a resultados distintos. Sin embargo, puesto que lo
 que interesa es tener condiciones de ortogonalidad
 en el espacio $\IR^{n}$, es obvio que 
-el camino a seguir debe ser uno parecido al segundo.
+el camino a seguir debe ser uno parecido al segundo. \\
 
 
 Escogida pues la opción de primero 
 discretizar polinomios para posteriormente
 ortonormalizar, queda todavía abierta
-la decisión de qué método de discretización usar.
+la decisión de qué método de discretización usar. \\
 
 Elegimos empezar
 con discretizaciones puntuales de polinomios.
@@ -349,7 +375,7 @@ En base a estos objetos lograremos definir
 una base ortonormal de $\IR^{n}$ que cumple satisfactoriamente
 los requisitos explicados en la lista de deseos
 \ref{lista de objetivos}, y a la que llamaremos
-la \textbf{base de Legendre discreta de dimensión $n$}.
+la \textbf{base de Legendre discreta de dimensión $n$}. \\
 
 Un segundo punto de vista, basado
 en discretizaciones por promedios integrales,
