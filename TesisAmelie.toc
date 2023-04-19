@@ -17,32 +17,30 @@
 \contentsline {section}{\numberline {4.3}Implementación computacional de las bases discretas de Legendre}{49}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Análisis de la expresión de los PDL}{49}{subsection.4.3.1}%
 \contentsline {section}{\numberline {4.4}Pseudocódigos algoritmos usados para calcular las BDL}{50}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Análisis de señales finitas en base a coeficientes respecto a las BLD}{55}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Caracterización de la morfología en términos de coeficientes respecto a la base de Legendre discreta}{55}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{57}{subsection.5.0.2}%
-\contentsline {chapter}{\numberline {6}Estudio espectral de los PDL}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral para los PDL}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}La transformada discreta de Fourier}{62}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{62}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}La transformada discreta de Fourier}{64}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Versión real de la DFT}{67}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{70}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{75}{subsection.6.3.1}%
-\contentsline {chapter}{\numberline {7}Sobre cómo representaciones respecto a las bases discretas de Legendre dan información de morfología}{77}{chapter.7}%
-\contentsline {subsection}{\numberline {7.0.1}Ejemplo 2}{77}{subsection.7.0.1}%
-\contentsline {subsection}{\numberline {7.0.2}Ejemplo 3}{79}{subsection.7.0.2}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{84}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{84}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{86}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{88}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{89}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{91}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}Bases ortonormales de espacios de Hilbert}{92}{section.Alph1.6}%
-\contentsline {subsection}{\numberline {A.6.1}El concepto de redes como un generalización del de sucesión}{93}{subsection.Alph1.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}{95}{subsection.Alph1.6.2}%
-\contentsline {section}{\numberline {A.7}El teorema de Gram-Schmidt}{100}{section.Alph1.7}%
-\contentsline {section}{\numberline {A.8}Ángulo entre elementos de un espacio con producto punto}{102}{section.Alph1.8}%
-\contentsline {section}{\numberline {A.9}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{103}{section.Alph1.9}%
-\contentsline {subsection}{\numberline {A.9.1}Caso particular en el que el subespacio en cuestión es un plano}{105}{subsection.Alph1.9.1}%
-\contentsline {section}{\numberline {A.10}Similitud coseno}{106}{section.Alph1.10}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{108}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {5}Análisis de señales en base a coeficientes respecto a las BLDs}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Verificación del primer punto de la lista \ref {lista de objetivos}}{55}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Verificación del segundo punto de la lista \ref {lista de objetivos}}{58}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{63}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Estudio espectral de los PDL}{66}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral para los PDL}{66}{section.6.1}%
+\contentsline {section}{\numberline {6.2}La transformada discreta de Fourier}{68}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{68}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}La transformada discreta de Fourier}{70}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Versión real de la DFT}{73}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}{76}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}{81}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{83}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{83}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{85}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{87}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{88}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{90}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}Bases ortonormales de espacios de Hilbert}{91}{section.Alph1.6}%
+\contentsline {subsection}{\numberline {A.6.1}El concepto de redes como un generalización del de sucesión}{92}{subsection.Alph1.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Caracterización y propiedades de las bases ortonormales de un espacio de Hilbert}{94}{subsection.Alph1.6.2}%
+\contentsline {section}{\numberline {A.7}El teorema de Gram-Schmidt}{99}{section.Alph1.7}%
+\contentsline {section}{\numberline {A.8}Ángulo entre elementos de un espacio con producto punto}{101}{section.Alph1.8}%
+\contentsline {section}{\numberline {A.9}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{102}{section.Alph1.9}%
+\contentsline {subsection}{\numberline {A.9.1}Caso particular en el que el subespacio en cuestión es un plano}{104}{subsection.Alph1.9.1}%
+\contentsline {section}{\numberline {A.10}Similitud coseno}{105}{section.Alph1.10}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{107}{appendix.Alph2}%
