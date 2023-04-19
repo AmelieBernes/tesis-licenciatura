@@ -19,7 +19,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
-Repeated entry---line 193 of file Referencias.bib
+Repeated entry---line 205 of file Referencias.bib
  : @misc{leg
  :          ,
 I'm skipping whatever remains of this entry
@@ -129,45 +129,45 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2815 of file biblatex.bst
-You've used 23 entries,
+You've used 24 entries,
             6399 wiz_defined-function locations,
-            1313 strings with 11218 characters,
-and the built_in function-call counts, 112310 in all, are:
-= -- 8011
-> -- 1538
-< -- 901
-+ -- 1760
-- -- 434
-* -- 7794
-:= -- 9707
+            1319 strings with 11345 characters,
+and the built_in function-call counts, 120242 in all, are:
+= -- 8667
+> -- 1620
+< -- 929
++ -- 1856
+- -- 460
+* -- 8488
+:= -- 10504
 add.period$ -- 0
-call.type$ -- 23
-change.case$ -- 516
+call.type$ -- 24
+change.case$ -- 530
 chr.to.int$ -- 44
-cite$ -- 60
-duplicate$ -- 10617
-empty$ -- 11757
-format.name$ -- 747
-if$ -- 24654
+cite$ -- 62
+duplicate$ -- 11150
+empty$ -- 12589
+format.name$ -- 797
+if$ -- 26372
 int.to.chr$ -- 0
-int.to.str$ -- 53
+int.to.str$ -- 55
 missing$ -- 0
-newline$ -- 450
-num.names$ -- 935
-pop$ -- 7462
+newline$ -- 474
+num.names$ -- 980
+pop$ -- 7793
 preamble$ -- 1
-purify$ -- 523
+purify$ -- 539
 quote$ -- 0
-skip$ -- 3725
+skip$ -- 3892
 stack$ -- 0
-substring$ -- 14970
-swap$ -- 2794
-text.length$ -- 609
-text.prefix$ -- 32
+substring$ -- 16509
+swap$ -- 2930
+text.length$ -- 635
+text.prefix$ -- 33
 top$ -- 1
-type$ -- 770
+type$ -- 804
 warning$ -- 0
-while$ -- 994
+while$ -- 1053
 width$ -- 0
-write$ -- 428
+write$ -- 451
 (There were 52 error messages)

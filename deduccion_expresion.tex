@@ -1,15 +1,97 @@
 \chapter{Cálculo de los PDL}
 
-Fijada una dimensión $n$, planeamos usar 
-las fórmulas dadas 
-\sidenote{
-Para evitar discrepancias en la notación,
-en esta discusión hicimos
+\section{Revisión de literatura}
+Después de revisar la literatura, encontramos que
+otros autores ya han considerado polinomios discretos ortogonales
+antes, principalmente en áreas de ingeniería (por ejemplo, 
+véase \cite{papel}). La fuente más completa que encontramos 
+fue \cite{Neuman}, un estudio en el que se recopilan 
+varias fórmulas (sin demostración) concernientes a polinomios
+ortogonales discretos de variable discreta. \\
+
+En \cite{Neuman}, 
+fijado un $N \geq 2$,
+tratan con funciones $P : \{0, \ldots , N \} \rightarrow \IR$
+de variable discreta, y 
+se interesan en los $N+1$ ``polinomios de variable
+discreta $K$''
+
+\[
+P_{m}(K, N), \hspace{0.2cm} K=0, \ldots , N,
+\]
+donde $m \in \{0, \ldots, N \}$ es llamado el ``grado''
+del polinomio discreto, que quedan (afirman)
+unívocamente determinados por las condiciones
+de ortogonalidad
+\begin{equation}
+\suma{m=0}{n}{P_{k}(m,n) P_{l}(m,n)} =0
+\hspace{0.3cm} \text{si} \hspace{0.2cm} m \neq l \tag{DLOP-1[n]} \label{eq:dlop1}
+\end{equation}
+y por la normalización
+\begin{equation}
+\text{para toda} \hspace{0.3cm} 0 \leq k \leq n, \hspace{0.3cm} P_{k}(0, n)=1.   \tag{DLOP-2[n]} \label{eq:dlop2}
+\end{equation}
+
+Para empezar a compaginar la notación
+del artículo con la nuestra, 
+hagamos
 los cambios de variable $m=k$, $K=m$
 y $N=n-1$, siendo la variable de la izquierda la empleada
 originalmente en
-\cite{Neuman} y la de la derecha la que usamos nosotros.
-}
+\cite{Neuman} y la de la derecha la que usamos nosotros. \\
+
+Pensando en los 
+$n+1$ vectores de $\IR^{n+1}$ que resultan
+de evaluar estas funciones discretas en su rango,
+es decir, en los vectores
+\begin{equation}
+y_{k}:= (P_{k}(m, n))_{m=0}^{m=n}, \hspace{0.2cm}
+0 \leq k \leq m,
+\end{equation}
+las condiciones \eqref{eq:dlop1} y \eqref{eq:dlop2}
+se reinterpretan como
+\begin{equation}
+\{ y_{k}: \hspace{0.2cm} 0 \leq k \leq n\}
+\hspace{0.3cm} \text{es una
+base ortogonal de} \hspace{0.2cm} \IR^{n}
+\tag{DLOP'-1[n]} \label{eq:dlop'1}
+\end{equation}
+y 
+\begin{equation}
+\text{la primera
+entrada de todo} \hspace{0.2cm} y_{k} \hspace{0.2cm}
+\text{es uno.} 
+\tag{DLOP'-2[n]} \label{eq:dlop'2}
+\end{equation}
+
+
+Los autores de este estudio recopilan y derivan expresiones
+analíticas (que dependen de $n$ y $k$) para estas funciones
+discretas $P_{k}(\cdot ,n)$ y, del notar que los coeficientes
+numéricos de estos son, salvo por posibles cambios de signo,
+los de los polinomios de Legendre trasladados 
+(c.f. \cite{leg})
+se refieren a 
+estos como \textbf{polinomios ortogonales
+discretos de Legendre} (
+``discrete Legendre orthogonal
+polynomials'' en inglés), usando para designarlos la abreviatura
+``DLOP's''. \\
+
+Aparte de mencionar en la introducción que
+`` variantes de estos polinomios fueron consideradas por primera
+vez por Chebyshev en 1858 y más tarde por Gram en 1915 '', no se
+da un marco teórico como el desarrollado por nosotros, sólo 
+se dan expresiones analíticas de estos.
+Los trabajos originales de Chebyshev y Gram
+no están citados en las referencias del artículo, y 
+nosotros no fuimos capaces de 
+encontrarlos.
+
+
+\section{Expresión analítica de los PDL}
+Fijada una dimensión $n$, planeamos usar 
+las fórmulas dadas 
 en ~\cite{Neuman}
 para establecer expresiones analíticas
 de los vectores de nuestra base $\cali{L}^{n}$; queremos,
@@ -18,13 +100,10 @@ elementos de la base
 \begin{equation}
 \label{eq: base DLOP}
 \{
-y_{k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1}
+y_{n,k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1}
 : \hspace{0.2cm} 0 \leq k \leq n-1
 \}
 \end{equation}
-
-\TODO{Como una nota pon el criterio de normalización que
-usan en el survey.}
 
 \noindent
 obtener las de la base de Legendre discreta
@@ -32,9 +111,11 @@ obtener las de la base de Legendre discreta
 \label{eq: base Legendre}
 \cali{L}^{n}=
 \{
-\cali{L}^{n,k}: \hspace{0.2cm} 0 \leq k \leq n-1
+\cali{L}^{n,k}= (\cali{L}^{n,k}_{m})_{m=0}^{m=n-1}
+: \hspace{0.2cm} 0 \leq k \leq n-1
 \}.
 \end{equation}
+
 
 \begin{lema}
 \label{prop: legendre y DLOPS son paralelos}
@@ -44,7 +125,7 @@ las bases de $\IR^{n}$
 \begin{equation}
 \label{eq0: base DLOP}
 \{
-y_{k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1} \in \IR^{n}
+y_{n,k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1} \in \IR^{n}
 : \hspace{0.2cm} 0 \leq k \leq n-1
 \},
 \end{equation}
@@ -59,7 +140,7 @@ y la base de Legendre discreta de dimensión $n$
 \hspace{0.1cm} 0 \leq k \leq n-1\}.
 \end{equation}
 Para todo $0 \leq k \leq n-1$, los vectores 
-$y_{k}$ y $\cali{L}^{n,k}$ son paralelos.
+$y_{n,k}$ y $\cali{L}^{n,k}$ son paralelos.
 \end{lema}
 \noindent
 \textbf{Demostración.}
@@ -78,18 +159,18 @@ Procedemos por inducción sobre $k$.
 	\item (Paso inductivo) supongamos cierta la proposición para
 	todo entero entre 0 y $k-1$ (inclusivo).	\\
 	Según la fórmula (7) de
-	\cite{Neuman}, $y_{k}$ es
+	\cite{Neuman}, $y_{n,k}$ es
 	un polinomio discreto con dominio 
 	uniforme, donde la máxima potencia
 	del polinomio discretizado para obtenerse 
-	$y_{k}$ es $k$, luego,
+	$y_{n,k}$ es $k$, luego,
 	\[
-	y_{k} \in W_{n,k}.
+	y_{n,k} \in W_{n,k}.
 	\]	
-	Según la condición \eqref{eq:dlop'1}, $y_{k}$ es ortogonal a
+	Según la condición \eqref{eq:dlop'1}, $y_{n,k}$ es ortogonal a
 	los $k$ vectores
 	\[
-	y_{l}, \hspace{0.2cm} 0 \leq l \leq k-1;
+	y_{n,l}, \hspace{0.2cm} 0 \leq l \leq k-1;
 	\] 
 	como estos, según
 	nuestra hipótesis de inducción, son paralelos (respectivamente)
@@ -97,15 +178,15 @@ Procedemos por inducción sobre $k$.
 	\[
 	\cali{L}^{n, l}, \hspace{0.2cm} 0 \leq l \leq k-1,
 	\] 
-	tenemos que $y_{k}$ es ortogonal a todos estos vectores,
+	tenemos que $y_{n,k}$ es ortogonal a todos estos vectores,
 	vectores que conforman una base del espacio $W_{n,k-1}$
 	(c.f. corolario \ref{cor: BON de legendre para espacios Wk}); así,
 	\[
-	y_{k} \in W_{n,k} 
+	y_{n,k} \in W_{n,k} 
 	\ominus W_{n,k-1}=\text{span}(\cali{L}^{n,k});
 	\]
 	de esto se concluye, como queríamos, que los vectores 
-	$y_{k}$ y $\cali{L}^{n,k}$
+	$y_{n,k}$ y $\cali{L}^{n,k}$
 	son paralelos. \QEDB 
 \end{itemize}
 \vspace{0.2cm}
@@ -116,7 +197,7 @@ Procedemos por inducción sobre $k$.
 establecido en este último lema
 \ref{prop: legendre y DLOPS son paralelos}
 podemos establecer una igualdad 
-entre los vectores $y_{k}$ y los $\cali{L}^{n,k}$.
+entre los vectores $y_{n,k}$ y los $\cali{L}^{n,k}$.
 
 \begin{prop}
 \label{prop: igualdad entre los de legendre y los del survey}
@@ -125,8 +206,8 @@ Sean $n \in \IN$ y sean las bases
 \eqref{eq0: base de Legendre discreta} de $\IR^{n}$.
 Para toda $0 \leq k \leq n-1$, 
 \begin{equation}
-\label{eq9: 2Dic}
-\cali{L}^{n,k}= (-1)^{k} \cdot \frac{y_{k}}{||y_{k}||}.
+\label{eq9: 18ap}
+\cali{L}^{n,k}= (-1)^{k} \cdot \frac{y_{n,k}}{||y_{n,k}||}.
 \end{equation}
 \end{prop}
 \noindent
@@ -139,8 +220,8 @@ se deduce la existencia de un escalar $a_{k}$
 tal que 
 \begin{equation}
 \label{eq10: 2Dic}
-a_{k}\cali{L}^{n,k}= y_{k}, \hspace{0.5cm}
-\text{con} \hspace{0.2cm} a_{k} \in \{ \pm || y_{k} || \}.
+a_{k}\cali{L}^{n,k}= y_{n,k}, \hspace{0.5cm}
+\text{con} \hspace{0.2cm} a_{k} \in \{ \pm || y_{n,k} || \}.
 \end{equation}
 Determinemos el signo de $a_{k}$. \\
 
@@ -157,7 +238,7 @@ a_{k}= & a_{k} \cdot 1 =
 a_{k} 
 \cdot  \langle  \cali{L}^{n,k} , \cali{L}^{n,k} \rangle \\
 = & \langle a_{k} \cali{L}^{n,k} , \cali{L}^{n,k} \rangle \\
-= & \langle y_{k} , \cali{L}^{n,k} \rangle \\
+= & \langle y_{n,k} , \cali{L}^{n,k} \rangle \\
 = & \langle (P_{k}(m, n-1))_{m=0}^{n-1} 
 \hspace{0.1cm}, \hspace{0.1cm} \cali{L}^{n,k} \rangle \\
 = &
@@ -203,11 +284,11 @@ según \eqref{eq1: 9Nov},
 el signo de $a_{k}$ 
 es $(-1)^{k}$;
 puesto que $a_{k}$ sólo podía ser
-$||y_{k}||$ o $-||y_{k}||$ 
+$||y_{n,k}||$ o $-||y_{n,k}||$ 
 (c.f. \eqref{eq10: 2Dic})
 y por ser la norma
 de un vector es no negativa, concluimos que
-$a=(-1)^{k}||y_{k}||$; sustituyendo esto en
+$a=(-1)^{k}||y_{n,k}||$; sustituyendo esto en
 \eqref{eq10: 2Dic},
 concluimos lo deseado.
 \\
@@ -226,12 +307,12 @@ estamos en posición de hacer esto, pues
 en base a la relación de ortogonalidad 
 ~\cite{Neuman}, p. 746
 podemos calcular el cuadrado
-de la norma de cada vector $y_{k}$ (o sea,
+de la norma de cada vector $y_{n,k}$ (o sea,
 el valor absoluto de $a_{k}$)
 y  en base a 
 ~\cite{Neuman}[7]
 podemos
-obtener una expresión para $y_{k}$.
+obtener una expresión para $y_{n,k}$.
 
 Planteamos, por fin, una expresión para
 todo vector de la forma
@@ -279,10 +360,11 @@ derecha la adoptada por nosotros);
 m=k, \hspace{0.2cm} K=m,
 N=n-1, \hspace{0.2cm} l=m.
 \]
-Según la fórmula de ortogonalidad,
+Según la fórmula de ortogonalidad
+(p. 746 de \cite{Neuman}),
 \begin{equation}
 \label{eq12: 2Dic}
-||y||_{k}^{2}= \suma{m=0}{n-1}{P_{k}(m, n-1)^{2}}
+||y||_{n,k}^{2}= \suma{m=0}{n-1}{P_{k}(m, n-1)^{2}}
 = \frac{1}{2k+1} \cdot \frac{(n+k)^{(k+1)}}{(n-1)^{(k)}}.
 \end{equation}
 Además, 
@@ -296,7 +378,7 @@ y_{k}= (P_{k}(m, n-1))_{m=0}^{m=n-1}
 \end{equation}
 Sustituyendo \eqref{eq12: 2Dic}
 y \eqref{eq13: 2Dic} en la expresión
-\eqref{eq10: 2Dic} obtenida
+\eqref{eq9: 18ap} obtenida
 en la proposición
 \ref{prop: igualdad entre los de legendre y los del survey},
 concluimos que

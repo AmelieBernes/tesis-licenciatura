@@ -1,0 +1,74 @@
+\begin{abstract}
+
+\TODO{actualiza esto.}
+Motivados por la busqueda de un sistema
+de representación de $\IR^{n}$ adecuado para
+el estudio morfológico de señales finitas
+(c.f. lista de deseos \ref{lista de objetivos}), 
+para cada $n \in \IN$ mayor a uno definimos
+(c.f. capítulo \ref{cap: def y propiedades de los pol discretos de Legendre}) 
+$n$ vectores de $\IR^{n}$, que llamamos
+\textbf{polinomios discretos de Legendre} (aka PDL),
+cada uno asociado a un grado entero $k$ de $0$ a $n-1$,
+que juntos conforman una base ortonormal de $\IR^{n}$,
+la \textbf{base de Legendre discreta $n-$dimensional}, y que, 
+como mostramos (c.f. capítulo \ref{sec: ejemplos}), 
+cumple satisfactoriamente nuestros requisitos.\\
+
+Encontramos en la literatura que estos objetos ya se habían 
+definido antes
+(c.f. \cite{Neuman}), pero no encontramos una construcción
+rigurosa de estos como la dada por nosotros ni
+aplicaciones de los PDL para estudios de morfología. \\
+
+Hacemos también un estudio de simetrías de los PDL 
+(c.f. capítulo \ref{section: sobre simetrias en las entradas de los poliomios discretos de Legendre})
+que, junto con las fórmulas dadas en \cite{Neuman}, 
+será usado para definir algoritmos 
+(c.f. capítulo \ref{Implementación computacional de las bases discretas de Legendre en Python})
+para programar a los PDL de cualquier dimensión $n$.
+Las implementaciones en Python pueden encontrarse en el repositorio
+\TODO{ref.}\\
+
+Se realizó además un análisis espectral de los PDL
+(c.f. capítulo \ref{chap: estudio espectral})
+que nos llevó
+a plantear una interesante conjetura en la que establecemos
+una relación entre frecuencias y polinomios discretos de Legendre
+que depende sólo de los parámetros de dimensión $n$ y 
+frecuencia $k$ de este último.\\
+
+
+Para que los conceptos y herramientas que usamos a lo largo
+del desarrollo de este trabajo queden claras, incluimos al final
+un apéndice de teoría en el que
+plasmamos algunos resultados o definiciones que son estrictamente
+necesarios para el desarrollo de este trabajo de tesis.
+Preferimos no limitarnos a citar referencias que abordaran estos temas,
+pues definiciones presentes en unas son diferentes a las usadas por otras;
+además, para algunos resultados clásicos (como el teorema de Gram-Schmidt)
+necesitábamos dar formulaciones distintas a las canónicas pero útiles para
+nosotros.\\
+
+
+Mostrada con teoría y ejemplos  cómo las
+bases de Legendre discretas
+son un sistema de representación particularmente útil
+para hacer un estudio cuantitivo de morfología
+(y, potencialmente, un análisis espectral también)
+de señales finitas, esbozamos cómo esto da lugar a
+trabajos a futuro en esta línea.\\
+
+\mbox{}
+\vfill
+Este trabajo fue escrito en \LaTeX.
+El lenguaje de programación de nuestra elección
+para el desarrollo de la parte computacional 
+fue Python.
+La mayoría de las imágenes aquí presentadas fueron,
+a su vez, programadas en Python y, en algunas ocasiones,
+retocadas (o dibujadas completamente) en Krita. 
+El formato adoptado 
+se basa en el diseño de los libros de 
+Edward Tufte.
+\end{abstract}

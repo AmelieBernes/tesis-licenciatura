@@ -6,39 +6,10 @@ buscar simetrías en las entradas de los vectores que las
 componen, pues esto puede reducir significativamente
 el número de operaciones requeridas para el cálculo 
 de bases de este tipo.
-Ya los valores calculados
-en la subsección 
-\ref{formulas explicitas para Ln con n de 2 hasta 6}
-sugieren 
-la existencia de tales simetrías en las entradas 
-de los vectores de la forma $\cali{L}^{n,k} \in \IR^{n}$
-que, recordamos, se han definido en 
-\ref{def: base de Legendre discreta}.
-
- 
-Más abajo se muestran dos tablas con las bases de Legendre
-discreta de dimensiones entre dos y seis. 		
-Para las dimensiones $n$ marcadas
-puede apreciarse que, en el vector,
-$\cali{L}^{n,k} = \left( \cali{L}^{n,k}_{m} \right)_{m=0}^{n-1}$,
-las entradas a la derecha son iguales a las de la izquierda,
-con un cambio de signo que depende del
-grado $k$ del polinomio discreto de Legendre.
-\TODO{mejor quita la tabla de antes y usa la coloreada.}
-
-A pesar de que, a estas alturas, ya contamos
-con expresiones para los vectores $\cali{L}^{n,k}$
-\TODO{ya no; reordenaste la teoría.}
-(para cualesquiera entero $n \geq 2$ y $0 \leq k \leq n-1$,
-c.f. teorema \ref{teo: expresión analítica de BON de Legendre}),
-no será usando estas que podremos demostrar que, en efecto,
-se tienen las simetrías sugeridas en las tablas.
-Conviene
-usar una de las múltiples definiciones iniciales
-que dimos para la base $\cali{L}^{n}$, a saber, una
-que involucre discretizaciones puntuales de polinomios 
-que dé lugar a vectores $w_{k}$ que ya presenten 
-este tipo de simetrías.
+Podemos usar la construcción canónica (c.f. 
+definición \ref{def: base de Legendre discreta}) para calcular
+las bases de Legendre discretas hasta dimensión $6$; tabulamos
+los resultados a continuación.
 
 %Tabla coloreada para n=2,3,4
 \begin{center}
@@ -137,6 +108,25 @@ $\left(
 \right)$ 
 \end{tabular}
 \end{center}
+
+
+		
+Para las dimensiones $n$ marcadas
+puede apreciarse que, en el vector,
+$\cali{L}^{n,k} = \left( \cali{L}^{n,k}_{m} \right)_{m=0}^{n-1}$,
+las entradas a la derecha son iguales a las de la izquierda,
+con un cambio de signo que depende del
+grado $k$ del polinomio discreto de Legendre. \\
+
+Para demostrar que en efecto se tiene las simetrías
+sugeridas por las tablas anteriores
+para cualquier $n$,
+conviene
+usar una de las múltiples definiciones iniciales
+que dimos para la base $\cali{L}^{n}$, a saber, una
+que involucre discretizaciones puntuales de polinomios 
+que dé lugar a vectores $w_{k}$ que ya presenten 
+este tipo de simetrías.
 
 
 \begin{figure}[H]
@@ -300,7 +290,7 @@ El argumento para $n$ par es análogo.
 \QEDB
 \vspace{0.2cm}
 
-\subsection{Estudio para dimensiones impares}
+\section{Estudio para dimensiones impares}
 A lo largo de esta subsección vamos 
 estudiar las simetrías presentes en las entradas
 de los PDL $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$
@@ -518,7 +508,7 @@ cuando se supone $k$ impar.
 \QEDB
 \vspace{0.2cm}
 
-\subsection{Estudio para dimensiones pares}
+\section{Estudio para dimensiones pares}
 Una discusión análoga a la desarrollada en la subsección
 anterior se sigue para cuando la dimensión $n$ de espacio
 es par; la única diferencia es que los vectores discretos
@@ -567,10 +557,3 @@ se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{n-m-1}$ si $k$ es impar.
 		$N$ entradas).}
  	\end{measuredfigure}
  \end{figure}
-
-Gracias a lo demostrado en esta sección, sabemos que,
-fijada una dimensión $n$ y fijado un grado $0 \leq k \leq n-1$,
-el cálculo de las $n$ entradas del vector $\cali{L}^{n,k}$
-se reduce al cálculo de la mitad de estas, pues las otras pueden
-deducirse de las primeras con un cambio de signo que está completamente
-determinado por la paridad del grado $k$.

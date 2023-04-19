@@ -1,7 +1,8 @@
-\section{La transformada discreta de Fourier y estudios espectrales de señales finitas}
+\section{La transformada discreta de Fourier}
 
-En esta sección vamos a introducir 
-una base ortonormal 
+En esta sección vamos a dar la definición usual de 
+las bases de Fourier complejas y reales, que son
+bases ortonormales de $\IC^{n}$ y de $\IR^{n}$ 
 \marginnote{El producto punto que estamos
 considerando en el $\IC-$espacio
 vectorial $\IC^{n}$ es el que definimos
@@ -10,8 +11,8 @@ $\IR-$espacio vectorial $\IR^{n}$ es el definido en
 \eqref{eq: producto punto Rn}.}
 de $\IC^{n}$
 y una de $\IR^{n}$ (que llamaremos
-``bases de Fourier complejas y reales''), que están
-definidas en términos de discretizaciones de
+``bases de Fourier complejas y reales''),
+definidas ambas en términos de discretizaciones de
 sinusoides de frecuencias enteras, y que son herramientas
 clásicas para hacer lo que comúnmente se denomina
 un \textbf{análisis espectral} de señales finitas.
@@ -479,6 +480,8 @@ $\cali{F}_{n}$ de $\IR^{n}$ definida en \ref{prop: base de fourier version real}
 la \textbf{base de Fourier real de dimensión $n$}.
 \end{defi}
 
+\begin{nota}
+\label{nota: frecuencias en las bases de fourier}
 Observe que $\cali{F}_{n}$, a diferencia de $\cali{B}_{n} \subseteq \IC^{n}$, 
 considera frecuencias enteras no mayores a $M := \lceil \frac{n}{2} \rceil$
 (cuando $n$ es par) o a $M-1$ (cuando $n$ es impar), mientras que
@@ -489,7 +492,7 @@ y no en base a $\cali{B}_{n} \subseteq \IC^{n}$, sintetizaremos a $x$
 respecto a frecuencias enteras acotadas por $M$ o por $M-1$ 
 (dependiendo de la paridad de $n$), y no respecto a frecuencias
 menores a $n$.
-
+\end{nota}
 
 \begin{ejemplo}
 Consideremos a la señal 

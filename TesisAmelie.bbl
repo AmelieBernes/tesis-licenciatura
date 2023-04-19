@@ -223,6 +223,32 @@
     \field{year}{1999}
   \endentry
 
+  \entry{papel}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KKGAD}{%
+         family={Kristinn\bibnamedelima Kristinsson},
+         familyi={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+         given={Guy A.\bibnamedelima Dumont},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KKGAD1}
+    \strng{fullhash}{KKGAD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KK96}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{4}
+    \field{pages}{533\bibrangedash 548}
+    \field{title}{Cross-directional Control on Paper Machines using Gram
+  Polynomials}
+    \field{volume}{32}
+    \field{journaltitle}{Automatica}
+    \field{year}{1996}
+  \endentry
+
   \entry{Kreyszig}{book}{}
     \list{publisher}{2}{%
       {John Wiley}%

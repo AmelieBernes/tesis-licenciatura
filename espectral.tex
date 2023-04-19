@@ -1,6 +1,8 @@
-\chapter{Estudio espectral de los polinomios discretos de Legendre}
+\chapter{Estudio espectral de los PDL}
 \label{chap: estudio espectral}
 
+
+\section{Motivación para realizar un estudio espectral para los PDL}
 No es difícil convencerse de que las condiciones de ortogonalidad
 impuestas en la definición de la base de discreta de Legendre
 $\cali{L}^{n}$
@@ -112,19 +114,54 @@ de la derecha (que de hecho es $\cali{L}^{4,3}$) sí cumple el ser
 ortogonal a $\cali{L}^{4,1}$ pero, para lograr esto, sus
 entradas deben cambiar de signo tres veces.
 
-\TODO{Recuerda que también debes de decir que importa el orden
-creciente de los grados; si hubieses definido primero a l2, entonces no necesariamente tendrías tantas oscilaciones.}
+\input{apendice_DFT}
 
-\subsection{Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}
 
-Queremos ahora generalizar el estudio anterior y no restringirnos
-al estudio de frecuencias enteras, \TODO{Aquí dí por qué}
-sino el poder elegir una frecuencia $\omega \geq 0$ respecto
-a la cual comparar a la señal. A pesar
+\section{Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}
+
+Ya podemos usar la base de Fourier real $\cali{F}_{n}$
+definida en la proposición \ref{prop: base de fourier version real}
+para hacer un estudio espectral de los PDL. \TODO{Grafico
+algunos resultados en otro capítulo?} \\
+
+
+Puesto que, por la construcción de $\cali{F}_{n}$, 
+hacer un análisis espectral de una señal $x \in \IR^{n}$
+via su síntesis respecto a la BON $\cali{F}_{n}$ nos lleva
+a considerar sólo ciertas frecuencias enteras
+(c.f. nota \ref{nota: frecuencias en las bases de fourier}),
+queremos ahora generalizar el estudio anterior y no restringirnos
+al estudio de frecuencias enteras
+(después de todo, según la hipótesis planteada en \TODO{ref}, 
+creemos que la frecuencia que mejor aproxima al PDL
+$\cali{L}^{n,k}$ es $\frac{k}{2}$, y este último número no siempre
+es un entero), sino el 
+\begin{enumerate}
+	\item poder elegir una frecuencia $\omega \geq 0$ (con $n \nmid \omega$) respecto
+a la cual comparar a la señal y,
+	\item una vez fijada una frecuencia, buscar el desfase normalizado $\phi \in [0,1]$
+	que mejor ajuste la gráfica de $x$.
+\end{enumerate}
+
+\begin{figure}[H]
+	\sidecaption{
+	Aquí se grafica una misma señal $x \in \IR^{16}$ y se 
+	compara con dos funciones sinusoidales, una con 
+	desfase (normalizado) 0.8 y otra con 0.32. Observe que
+	la primera parece ajustar mucho mejor la gráfica de $x$.
+	\label{fig: ejemplo desfase}
+	}
+	\centering
+	\includegraphics[scale=0.45]{desfase_ejemplo} 
+\end{figure}	
+
+
+A pesar
 de que ya no contaremos con la seguridad de trabajar con bases
-ortonormales de $\IR^{n}$, queremos considerar espacios de frecuencias.
-
-Recuerde que antes, en la subsección \ref{subs: ejm 3},
+ortonormales de $\IR^{n}$, podemos hacer un análisis espectral ya no
+via descomposiciones respecto a una BON, sino usando \TODO{similitud coseno}
+respecto a espacios de frecuencias puras;
+recuerde que antes, en el ejemplo \ref{subs: ejm 3},
 usamos el coseno del ángulo que forma una señal $x \in \IR^{n}$
 con el plano $W_{n,1}$ para dar una medida de qué tan afín es $x$;
 queremos ahora hacer algo similar, y usar el coseno de $x$ con espacios
@@ -132,14 +169,15 @@ de frecuencias $\omega >0$ como
 una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
 
 
+
 Antes de empezar, 
 \sidenote{Para simplificar la notación, denotamos por $I_{n}$ al intervalo
-$\{ \frac{\mu }{n}  : 0 \leq \mu \leq n-1 \}$.}
+$\{ \frac{m}{n}  : 0 \leq m \leq n-1 \}$.}
 digamos qué es lo que 
 entendemos por ``señales de frecuencia pura''.
 \begin{defi}
-Sean $n \in \IN$,  $\omega>0$, $\phi \in [0,1]$.  A toda señal $n-$
-dimensional  
+Sean $n \in \IN$,  $\omega>0$, $\phi \in [0,1]$.  
+A toda señal $n-$dimensional  
 de la forma
 
 \begin{equation}
@@ -183,7 +221,7 @@ de la señal, y a $A$ la \textbf{amplitud}.
 \begin{defi}
 Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
 
-Si $n$ divide a w, definimos a los siguientes vectores de $\IR^{n}$
+Si $n$ divide a $\omega$, definimos a los siguientes vectores de $\IR^{n}$
 \begin{equation}
 \label{eq0: 27Marzo23}
 f_{n, \omega} = \left( 
@@ -202,14 +240,14 @@ En caso contrario, definimos a los vectores
 
 	\begin{equation}
 	\label{eq5: 19Marzo}
-	f_{n, \omega}= \left( \xi_{n, \omega} cos \left(2 \pi \omega \frac{\mu }{n} \right) \right)_{0 \leq \mu \leq N-1}
+	f_{n, \omega}= \left( \xi_{n, \omega} cos \left(2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1}
 	\in \IR^{n}
 	\end{equation}
 y 
 
 	\begin{equation}
 	\label{eq6: 19Marzo}
-	g_{n, \omega}= \left( \eta_{n, \omega} sen \left(2 \pi \omega \frac{\mu }{n}\right) \right)_{0 \leq \mu \leq N-1}
+	g_{n, \omega}= \left( \eta_{n, \omega} sen \left(2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1}
 	\in \IR^{n},
 	\end{equation}
 donde
@@ -275,12 +313,7 @@ b ( sen (2 \pi \omega t ))_{t \in I_{n}} :
 \end{align}
 
 \noindent
-es un plano \sidenote{O sea, un subespacio
-de dimensión 2.} de $\IR^{n}$.
-\TODO{Como te dijeron, tienes que hacer énfasis en que los ajustes
-que siguen son todos necesarios por no necesariamente ser
-f y g ortogonales.}
-
+es un plano (i.e. un subespacio de dimensión $2$).
 \begin{prop}
 \label{prop: Pw consta de las señales de frecuencia omega}
 Sean $n \in \IN$, $\omega>0$ un real positivo no múltiplo
@@ -390,9 +423,9 @@ cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}
 \end{figure}	
 
 Puesto que todas las señales de Legendre discretas
-$\mathcal{L}^{n,k}$ tienen norma uno,
+$\mathcal{L}^{n,k}$ tienen norma uno
 \sidenote{En lo que resta de este capítulo, $x$ siempre denotará
-a una señal unitaria.}
+a una señal unitaria.},
 tenemos la relación simplificada 
 
 \begin{equation}
@@ -405,7 +438,7 @@ cos \left( \measuredangle (x, W) \right) = || \Pi_{W}(x) ||
 reacciona una señal unitaria $x \in \IR^{n}$ a una frecuencia
 $\omega >0$ (con $n \nmid \omega$), la norma de la proyección
 de $x$ al espacio $P_{\omega} \subseteq \IR^{n}$ 
-de señales n-dimensionales de frecuencia $n$.}
+de señales n-dimensionales de frecuencia $\omega$.}
 
 Para usar los
 resultados expuestos en el apéndice
@@ -417,7 +450,7 @@ Hacemos esto a continuación.
 
 \begin{prop}
 \label{prop: producto punto entre f y g}
-Fijados $n \geq 2$ y $\omega \geq 0$, los vectores
+Fijados $n \geq 2$ y $\omega \geq 0$ con $n \nmid \omega$, los vectores
 $f_{n, \omega}$ y $g_{n, \omega}$, como se definieron
 en \eqref{eq5: 19Marzo}
 y \eqref{eq6: 19Marzo}, respectivamente, 
@@ -459,28 +492,25 @@ sen(z)= \frac{e^{iz}-e^{-iz}}{2i}
 \begin{equation}
 \label{eq12: 19Marzo}
 \forall a \in \IR-\{ 1 \}: \hspace{0.2cm}
-\suma{\mu=0}{n-1}{a^{r}}= \frac{1-a^{n}}{1-a}.
+\suma{m=0}{n-1}{a^{r}}= \frac{1-a^{n}}{1-a}.
 \end{equation}
 
 \noindent
-Tenemos que \TODO{tal vez deberías 
-cambiar $\mu$ por $m$. Además, para que las cuentas
-sean correctas, siempre debes pedir que $n$ no divida
-a la frecuencia $\omega$}
+Tenemos que
 
 \begin{align*}
 \langle f_{n,\omega} , g_{n, \omega} \rangle = &
-\xi_{n, \omega} \eta_{n, \omega} \langle 
-\left( cos (2 \pi \omega \frac{\mu }{n}) \right)_{0 \leq \mu \leq N-1} ,  
-\left( cos (2 \pi \omega \frac{\mu }{n}) \right)_{0 \leq \mu \leq N-1} \rangle \\
-= & \xi_{n, \omega} \eta_{n, \omega} \suma{\mu=0}{n-1}{
-cos (2 \pi \omega \frac{\mu }{n}) sen(2 \pi \omega \frac{\mu }{n})} \\
+\xi_{n, \omega} \eta_{n, \omega} \left\langle 
+\left( cos \left( 2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1} ,  
+\left( cos \left( 2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1} \right\rangle \\
+= & \xi_{n, \omega} \eta_{n, \omega} \suma{m=0}{n-1}{
+cos \left(2 \pi \omega \frac{m}{n}\right) sen\left( 2 \pi \omega \frac{m}{n}\right)} \\
 = & \frac{\xi_{n, \omega} \eta_{n, \omega}}{2}
-\suma{\mu=0}{n-1}{
-\left( sen(4 \pi \omega \frac{\mu}{n}) \right)} \\
-= & \frac{\xi_{n, \omega} \eta_{n, \omega}}{4i} \suma{\mu=0}{n-1}{
-\left( e^{4 \pi \omega i \mu/n} - 
-e^{-4 \pi \omega i \mu/n} \right) } \\
+\suma{m=0}{n-1}{
+\left( sen\left( 4 \pi \omega \frac{m}{n}\right) \right)} \\
+= & \frac{\xi_{n, \omega} \eta_{n, \omega}}{4i} \suma{m=0}{n-1}{
+\left( e^{4 \pi \omega i m/n} - 
+e^{-4 \pi \omega i m/n} \right) } \\
 = & \frac{\xi_{n, \omega} \eta_{n, \omega}}{4i} 
 \left(
 \frac{1-e^{4 \pi \omega i }}{1-e^{4 \pi \omega i /N}} - 
@@ -548,17 +578,12 @@ g_{n, \omega},
 \noindent
 y
 
-\TODO{Nota que como el ángulo siempre está entre cero y pi/2, el coseno
-está entre cero y uno, pero tal vez deberías de considerar un signo que diga
-de qué lado del plano se encuentra? No creo que pueda hacer esto, pues para
-una dimensión general el plano $P_{\omega}$ no es un hiperplano de $\IR^{n}$...}
-
 \begin{align*}
 cos (\measuredangle (x, P_{\omega})) = & || \Pi_{P_{\omega}}(x) ||  \\
 = & 
 \left(		  
 		  \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle^{2} \langle x, g_{n, \omega } \rangle^{2} \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
+	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle \langle f_{n, \omega }, g_{n, \omega } \rangle}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
 \right) ^{1/2}.
 \end{align*}
 
@@ -566,12 +591,15 @@ cos (\measuredangle (x, P_{\omega})) = & || \Pi_{P_{\omega}}(x) ||  \\
 \begin{defi}
 Sean $n \geq 2$ entero, $\omega >0$ con $n \nmid \omega$.
 Definimos a la función $\sigma_{n , \omega}: \mathcal{B}_{n}(1) \longrightarrow [0,1]$
+como sigue;
 \begin{equation}
 \label{eq: def sigmas}
 \sigma_{n, \omega}(x) : = 
 \left(	
 \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle^{2} \langle x, g_{n, \omega } \rangle^{2} \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
+	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle 
+	       \langle f_{n, \omega }, g_{n, \omega } \rangle}{1- \langle f_{n, \omega }, 
+	       g_{n, \omega } \rangle^{2}}	  
  \right) ^{1/2},
 \end{equation}
 
@@ -596,23 +624,10 @@ $P_{\omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
 
 
 \subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
-\TODO{$\omega$ no múltiplo escalar de $n$.}
 
 Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija
 con $n \nmid \omega$, 
 buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$.
-
-\begin{figure}[H]
-	\sidecaption{
-	Aquí se grafica una misma señal $x \in \IR^{16}$ y se 
-	compara con dos funciones sinusoidales, una con 
-	desfase (normalizado) 0.8 y otra con 0.32. Observe que
-	la primera parece ajustar mucho mejor la gráfica de $x$.
-	\label{fig: ejemplo desfase}
-	}
-	\centering
-	\includegraphics[scale=0.4]{desfase_ejemplo} 
-\end{figure}	
 
 
 Puesto que
