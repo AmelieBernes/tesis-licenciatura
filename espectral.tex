@@ -1,4 +1,4 @@
-\chapter{Estudio espectral de los PDL}
+\chapter{Estudio espectral}
 \label{chap: estudio espectral}
 
 
@@ -114,10 +114,31 @@ de la derecha (que de hecho es $\cali{L}^{4,3}$) sí cumple el ser
 ortogonal a $\cali{L}^{4,1}$ pero, para lograr esto, sus
 entradas deben cambiar de signo tres veces.
 
+
+Estando de acuerdo en que es pertinente realizar un análisis
+espectral de los PDL, después de dibujar las gráficas de algunos
+de estos para varias dimensiones $n$, proponemos una hipótesis
+que relaciona una presencia importante de cierta frecuencia
+de oscilación asociada a un PDL.
+
+\TODO{Poner imagen.}
+
+\begin{hip}
+\label{ref: hipotesis}
+Sean $n \geq 2$, $0 \leq k \leq n-1$ entero. 
+Sea $\cali{L}^{n,k}$ el PDL de dimensión $n$ y grado $k$.
+La frecuencia que mejor modela la oscilación de la gráfica
+de $\cali{L}^{n,k}$ es $\frac{k}{2}$ 
+\end{hip}
+
+Se ha formulado, de forma intencional, la hipótesis 
+\ref{ref: hipotesis} en términos vagos, que concretamos 
+con definiciones claras más adelante. 
+
 \input{apendice_DFT}
 
 
-\section{Estudio de presencia de frecuencias particulares via mediciones de distancia a espacios de frecuencia}
+\section{Estudio espectral de los PDL}
 
 Ya podemos usar la base de Fourier real $\cali{F}_{n}$
 definida en la proposición \ref{prop: base de fourier version real}
@@ -394,6 +415,12 @@ Según la proposición
 \ref{prop: Pw consta de las señales de frecuencia omega},
 $P_{\omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
 de dimensión $n$ y frecuencia (pura) $\omega$.
+
+\begin{defi}
+Si $n \geq 2$ y $\omega>0$ no es múltiplo entero de $n$, entonces
+al plano $P_{\omega}$ definido en \eqref{eq2: 20Marzo}
+le llamaremos el \textbf{espacio monofrecuencial} de frecuencia $\omega$.
+\end{defi}
 
 
 Es razonable pues

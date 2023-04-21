@@ -3,12 +3,11 @@
 En esta sección vamos a dar la definición usual de 
 las bases de Fourier complejas y reales, que son
 bases ortonormales de $\IC^{n}$ y de $\IR^{n}$ 
-\marginnote{El producto punto que estamos
-considerando en el $\IC-$espacio
-vectorial $\IC^{n}$ es el que definimos
-en \eqref{eq: producto punto Cn}, y el del
-$\IR-$espacio vectorial $\IR^{n}$ es el definido en 
-\eqref{eq: producto punto Rn}.}
+\marginnote{Incluimos este capítulo de teoría clásica
+por completitud de este trabajo, pues planeamos usar
+la transformada discreta de Fourier para hacer un análisis
+espectral inicial de los PDL. Puede consultar referencias con
+información detallada en \TODO{cita más referencias!}}
 de $\IC^{n}$
 y una de $\IR^{n}$ (que llamaremos
 ``bases de Fourier complejas y reales''),
@@ -16,6 +15,7 @@ definidas ambas en términos de discretizaciones de
 sinusoides de frecuencias enteras, y que son herramientas
 clásicas para hacer lo que comúnmente se denomina
 un \textbf{análisis espectral} de señales finitas.
+
 
 Puesto que la definición de estas herramientas requiere
 de algunas nociones del análisis complejo (en particular, de la
@@ -153,7 +153,12 @@ son iguales.
 
 Ya tenemos todo lo necesario para definir a la base
 de Fourier compleja de la que hablamos al inicio.
-
+\marginnote{El producto punto que estamos
+considerando en el $\IC-$espacio
+vectorial $\IC^{n}$ es el que definimos
+en \eqref{eq: producto punto Cn}, y el del
+$\IR-$espacio vectorial $\IR^{n}$ es el definido en 
+\eqref{eq: producto punto Rn}.}
 
 \begin{prop}
 \label{prop: construccion Bn}
@@ -238,7 +243,7 @@ transformada discreta de Fourier de $x$}.
 \end{defi}
 
 \marginnote{Por sus siglas en inglés, a la transformada discreta
-de Fourier también se le denomina ``DFT''.}
+de Fourier también se le denomina ``TDF''.}
 
 
 \begin{comment}
@@ -381,7 +386,7 @@ se le conoce como
 \textbf{realizar un análisis espectral.}
 
 
-\subsection{Versión real de la DFT}
+\subsection{Versión real de la TDF}
 
 En el caso en el que todas las entradas de un vector
 $x = (x_{m})_{0 \leq m \leq n-1}$ sean reales, se puede definir

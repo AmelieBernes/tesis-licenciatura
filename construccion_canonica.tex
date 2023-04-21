@@ -150,17 +150,23 @@ la denotaremos por $v_{k}$;
 \begin{equation}
 \label{vectores vk}
 v_{k}:= \Omega_{n, \cali{P}_{n}}(f_{k})
-=(f_{k}(j))_{j=0}^{n-1}=(j^{k})_{j=0}^{n-1},
-\end{equation}
-y al subespacio de $\IR^{n}$ generado por los
-primeros $i+1$ vectores $v_{k}$
-(con $0 \leq i \leq n-1$ entero)
-por por $W_{n,i}$;
-\begin{equation}
-\label{espacios Wi}
-W_{n,i} := span\{ v_{k} : 0 \leq k \leq i \} \subseteq \IR^{n}.
+=(f_{k}(j))_{j=0}^{n-1}=(j^{k})_{j=0}^{n-1}.
 \end{equation}
 \end{notacion}
+
+\begin{defi}
+\label{def: espacis Wni}
+Sean $n\geq 2$, $0 \leq i \leq n-1$ entero.
+Definimos al subespacio 
+$W_{n,i}$ de $\IR^{n}$ como sigue:
+\begin{equation}
+\label{espacios Wi}
+W_{n,i} := span\{ v_{k} : 0 \leq k \leq i \} \subseteq \IR^{n},
+\end{equation}
+
+\noindent
+donde los vectores $v_{k}$ son como en \ref{vectores vk}.
+\end{defi}
 
 
 En la ecuación \eqref{espacios Wi} con la que se
@@ -493,7 +499,7 @@ $v_{k}$ definido como en \eqref{vectores vk},
 es base de $W_{n,i}$.
 
 \item La familia $(W_{n,i})_{i=0}^{n-1}$ de subespacios
-	de $\IR^{n}$ está estríctamente anidada, es decir
+	de $\IR^{n}$ está estrictamente anidada, es decir
 	\begin{equation}
 	\label{espacios Wi estan anidados}
 	\forall \hspace{0.1cm}
@@ -946,7 +952,10 @@ en el segundo). \\
 
 Observe sin embargo que, en el caso discreto, además
 del parámetro de grado $k$ se tiene también un parámetro
-$n$ de dimensión.
+$n$ de dimensión. Otra diferencia es que, en el caso 
+continuo, se trataba con una familia anidada numerable, mientras
+que en el caso $n-$dimensional la familia anidada consta
+de $n$ miembros.
 \end{nota}
 
 

@@ -64,6 +64,97 @@ que la señal es \textbf{cuadrática}.
 	\includegraphics[scale=0.6]{ejemplo_intro} 
  \end{figure}
 
+\section{Bases ortonormales}
+----------------
+
+En general, dado un $F-$espacio vectorial $V$,
+si uno acepta el axioma de elección, siempre cuenta con 
+bases para este espacio,
+es decir, de subconjuntos de $V$ que son tanto linealmente
+independientes (término abreviado como ``l.i.'') como generadores
+de todo el espacio; la importancia de 
+estas es obvia pues, por definición, una base permite representar
+de forma única a un elemento $v \in V$ por medio
+de una colección de escalares. 
+
+
+Puede demostrarse
+que, dado $A \subseteq V$, el que $A$ sea base de $V$
+equivale a que $A$ sea un maximal linealmente
+independiente (c.f. sección 1.7 de \cite{friedberg}), es decir,
+que todo subconjunto  linealmente
+independiente de $V$ que contenga
+a $A$ de hecho coincide con $A$.
+
+
+El tener además en $V$ definido un producto punto
+dota de estructura extra al espacio, en particular, 
+en este 
+contexto podemos también hablar de subconjuntos $B$
+ortonormales maximales.
+
+\begin{nota}
+\label{nota: sobre la identidad de parseval}
+\textbf{(sobre la identidad de Parseval en el
+caso finito dimensional)}
+Puesto que, para el desarrollo teórico de este trabajo de tesis,
+se tratará siempre con espacios de Hilbert finito dimensionales, luego, con
+bases ortonormales finitas, conviene
+reescribir algunos puntos del teorema 
+\ref{thm: Coway, 4.13} en este caso particular.
+Digamos que $dim(V)=n$; si 
+$\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
+BON del espacio de Hilbert $V$, entonces, para todo
+$x \in V$, se tiene que 
+
+\begin{equation}
+\label{eq0: 11ap}
+x = \suma{k=0}{n-1}{\langle x , e_{k} \rangle e_{k}}
+\end{equation}
+y además
+
+\begin{equation}
+\label{eq1: 11ap}
+|| x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}};
+\hspace{0.4cm} \textit{(Identidad de Parseval)}
+\end{equation}
+
+
+\noindent
+así, si se usa a una BON $\cali{E}$ del espacio como sistema
+de representación (o sea, si se representa a todo $x$ del espacio 
+por medio de sus $n$ coeficientes respecto a $\cali{E}$), se tiene que
+\begin{itemize}
+	\item tales coeficientes son de hecho los productos punto entre
+	$x$ y los elementos de la base $\cali{E}$ (c.f. 
+	\eqref{eq0: 11ap}), y
+	\item se tiene una relación lineal muy sencilla entre el cuadrado
+	de la norma de $x$ y el cuadrado de los coeficientes de la representación
+	(c.f. \eqref{eq0: 11ap}).
+\end{itemize}
+
+Estos dos hechos permiten \textbf{usar la magnitud de un coeficiente en 
+\eqref{eq0: 11ap} para valorar la contribución del respectivo 
+elemento de la base $\cali{B}$ para sintetizar a $x$};
+en efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
+es ``muy cercano a cero'', digamos $\langle x, e_{k_{1}} \rangle = \epsilon$,  
+entonces el vector 
+$x_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
+\langle x , e_{k} \rangle e_{k}}$
+es, en la misma medida, cercano al vector inicial $x$, pues
+\[
+|| x - x_{k_{1}} || = || \langle x , e_{k_{1}} \rangle e_{k_{1}} ||
+= \langle x , e_{k_{1}} \rangle = \epsilon.
+\]
+\end{nota}
+
+Esta última nota da fuertes razones sobre la utilidad
+de las bases ortonormales como sistema de representación
+en espacios de Hilbert.
+
+
+--------------------
+\section{Lista de deseos}
 Puesto que el espacio subyacente de 
 la teoría es el $\IR-$espacio vectorial 
 $\IR^{n}$, tenemos la ventaja de contar con
@@ -255,9 +346,7 @@ de qué tanto tiende $x$ a alguna de estas formas.
 
 
 
-\begin{comment}
-Nuestro acercamiento es como sigue:
-\end{comment}
+\section{Polinomios de Legendre de variable continua}
 Puesto que son las
 formas básicas de recta y parábola las que nos interesa
 capturar,
