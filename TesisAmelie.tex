@@ -1,5 +1,5 @@
 %Documento maestro.
-\documentclass[a4paper,oneside,11pt]{extreport} %no funcionó tufle-book. Demasiada incompatibilidad con lo que tengo... mejor lo dejamos aspi. Original: extreport. También funciona 'article', pero no reconoce el environment de chapter.
+\documentclass[a4paper,oneside,11pt]{extreport} %no funcionó tufle-book. Demasiada incompatibilidad con lo que tengo... mejor lo dejamos así. Original: extreport. También funciona 'article', pero no reconoce el environment de chapter.
 \input{paquetes_tesis}
 \input{estilo}
 
@@ -20,14 +20,16 @@
 \tableofcontents
 \newpage 
 %-- Cuerpo
-
 \input{introduccion} %Capítulo 1
+
+\part{Definición y estudio de los polinomios discretos de Legendre}
 \input{construccion_canonica} %Capítulo 2
 \input{simetrias} %Capítulo 3
 \input{expresiones_legendre} %Capítulo 4
 \input{propiedades_Legendre} %Capítulo 5
 %Capítulo 6 era 'definiciones_altern', pero prefiero que sea una sección del cap. 2
 
+\part{Análisis espectral de los PDL}
 \input{espectral} %Capítulo 7 
 \input{Teoria} %Capítulo 8. %TODO reduce el número de apéndices
 \input{Notacion} 

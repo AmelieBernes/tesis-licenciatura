@@ -17,75 +17,28 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
-  \entry{kolmogorov}{book}{}
+  \entry{carothers}{book}{}
     \name{author}{1}{}{%
-      {{hash=AKSF}{%
-         family={A.N.\bibnamedelima Kolmogorov},
-         familyi={A\bibinitperiod\bibinitdelim K\bibinitperiod},
-         given={S.V.\bibnamedelima Fomin},
-         giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+      {{hash=CNL}{%
+         family={Carothers},
+         familyi={C\bibinitperiod},
+         given={N.\bibnamedelima L.},
+         giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {Dover Publications}%
-    }
-    \strng{namehash}{AKSF1}
-    \strng{fullhash}{AKSF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{AK}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{title}{Introductory real analysis}
-  \endentry
-
-  \entry{algorithms}{book}{}
-    \list{publisher}{1}{%
-      {The MIT Press}%
-    }
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Alg}
-    \field{sortinit}{A}
-    \field{sortinithash}{A}
-    \field{title}{Introduction to algorithms}
-    \field{year}{2009}
-  \endentry
-
-  \entry{carothers}{book}{}
     \list{publisher}{1}{%
       {Cambridge University Press}%
     }
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Car}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \field{title}{Real analysis}
-    \field{year}{2000}
-  \endentry
-
-  \entry{conway}{book}{}
-    \name{author}{1}{}{%
-      {{hash=CJB}{%
-         family={Conway},
-         familyi={C\bibinitperiod},
-         given={John\bibnamedelima B},
-         giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer}%
-    }
-    \strng{namehash}{CJB1}
-    \strng{fullhash}{CJB1}
+    \strng{namehash}{CNL1}
+    \strng{fullhash}{CNL1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Con90}
+    \field{labelalpha}{Car00}
     \field{sortinit}{C}
     \field{sortinithash}{C}
-    \field{edition}{2nd edition}
-    \field{series}{Graduate Texts in Mathematics}
-    \field{title}{A course in functional analysis}
-    \field{year}{1990}
+    \field{edition}{1st edition}
+    \field{title}{Real analysis}
+    \field{year}{2000}
   \endentry
 
   \entry{cosineSim}{misc}{}
@@ -250,12 +203,23 @@
   \endentry
 
   \entry{Kreyszig}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KE}{%
+         family={Kreyszig},
+         familyi={K\bibinitperiod},
+         given={Erwin},
+         giveni={E\bibinitperiod},
+      }}%
+    }
     \list{publisher}{2}{%
       {John Wiley}%
       {Sons}%
     }
+    \strng{namehash}{KE1}
+    \strng{fullhash}{KE1}
+    \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Kre}
+    \field{labelalpha}{Kre91}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{title}{Introductory functional analysis with applications}
@@ -321,39 +285,15 @@
     \field{title}{Legendre polynomials}
   \endentry
 
-  \entry{mse1}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Mse}
-    \field{extraalpha}{1}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-  \field{howpublished}{\url{https://math.stackexchange.com/questions/13641/an-orthonormal-set-cannot-be-a-basis-in-an-infinite-dimension-vector-space?}}
-    \field{note}{Accessed: 2023-04-11}
-    \field{title}{An orthonormal set cannot be a basis in an infinite dimension
-  vector space?}
-  \endentry
-
   \entry{mse3}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Mse}
-    \field{extraalpha}{2}
     \field{sortinit}{M}
     \field{sortinithash}{M}
   \field{howpublished}{\url{https://math.stackexchange.com/questions/168275/proof-that-every-finite-dimensional-normed-vector-space-is-complete}}
     \field{note}{Accessed: 2023-04-11}
     \field{title}{Proof that every finite dimensional normed vector space is
   complete}
-  \endentry
-
-  \entry{mse2}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Mse}
-    \field{extraalpha}{3}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-  \field{howpublished}{\url{https://math.stackexchange.com/questions/1653691/why-isnt-every-hamel-basis-a-schauder-basis?}}
-    \field{note}{Accessed: 2023-04-11}
-    \field{title}{Why isn't every Hamel basis a Schauder basis?}
   \endentry
 
   \entry{munkres}{book}{}
@@ -480,6 +420,35 @@
     \field{sortinithash}{S}
     \field{title}{Calculus}
     \field{year}{2008}
+  \endentry
+
+  \entry{algorithms}{book}{}
+    \name{author}{1}{}{%
+      {{hash=THCRLRCSCEL}{%
+         family={Thomas H.\bibnamedelima Cormen},
+         familyi={T\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+         suffix={Charles E.\bibnamedelima Leiserson},
+         suffixi={C\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  L\bibinitperiod},
+         given={Ronald L. Rivest Clifford\bibnamedelima Stein},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  R\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The MIT Press}%
+    }
+    \strng{namehash}{THCCELRLRCS1}
+    \strng{fullhash}{THCCELRLRCS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{THC09}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{edition}{Third edition}
+    \field{title}{Introduction to algorithms}
+    \field{year}{2009}
   \endentry
 \enddatalist
 \endinput

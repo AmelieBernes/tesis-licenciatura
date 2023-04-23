@@ -2,7 +2,7 @@
 \label{chap: estudio espectral}
 
 
-\section{Motivación para realizar un estudio espectral para los PDL}
+\section{Motivación para realizar un estudio espectral de los PDL}
 No es difícil convencerse de que las condiciones de ortogonalidad
 impuestas en la definición de la base de discreta de Legendre
 $\cali{L}^{n}$
@@ -112,7 +112,7 @@ a $\cali{L}^{4,1}$, pues las entradas de estos dos vectores de
 $\IR^{4}$ tienen el mismo signo. Sin embargo, la señal cúbica 
 de la derecha (que de hecho es $\cali{L}^{4,3}$) sí cumple el ser
 ortogonal a $\cali{L}^{4,1}$ pero, para lograr esto, sus
-entradas deben cambiar de signo tres veces.
+entradas deben cambiar de signo tres veces. \\
 
 
 Estando de acuerdo en que es pertinente realizar un análisis
@@ -121,7 +121,39 @@ de estos para varias dimensiones $n$, proponemos una hipótesis
 que relaciona una presencia importante de cierta frecuencia
 de oscilación asociada a un PDL.
 
-\TODO{Poner imagen.}
+
+\begin{figure}[H]
+	\sidecaption{
+	Aproximando las gráficas
+	de $\cali{L}^{60,0}$ y $\cali{L}^{60,1}$
+	con sinusoides. 
+	\label{fig: hip_0,1}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{hip_0,1} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Aproximando las gráficas
+	de $\cali{L}^{60,2}$ y $\cali{L}^{60,3}$
+	con sinusoides. 
+	\label{fig: hip_2,3}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{hip_2,3} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Aproximando las gráficas
+	de $\cali{L}^{60,4}$ y $\cali{L}^{60,5}$
+	con sinusoides. 
+	\label{fig: hip_4,5}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{hip_4,5} 
+\end{figure}	
 
 \begin{hip}
 \label{ref: hipotesis}
@@ -131,11 +163,14 @@ La frecuencia que mejor modela la oscilación de la gráfica
 de $\cali{L}^{n,k}$ es $\frac{k}{2}$ 
 \end{hip}
 
-Se ha formulado, de forma intencional, la hipótesis 
-\ref{ref: hipotesis} en términos vagos, que concretamos 
-con definiciones claras más adelante. 
+Se ha formulado de forma intencional la hipótesis 
+\ref{ref: hipotesis} en términos vagos, para tener libertad
+después de definir las herramientas con las que abordaremos el problema
+de dar forma concreta a la hipótesis y mejorarla o refutarla con simulaciones
+numéricas.
 
 \input{apendice_DFT}
+\input{coseno_a_plano}
 
 
 \section{Estudio espectral de los PDL}
@@ -148,26 +183,29 @@ algunos resultados en otro capítulo?} \\
 
 Puesto que, por la construcción de $\cali{F}_{n}$, 
 hacer un análisis espectral de una señal $x \in \IR^{n}$
-via su síntesis respecto a la BON $\cali{F}_{n}$ nos lleva
+via su análisis respecto a la BON $\cali{F}_{n}$ nos lleva
 a considerar sólo ciertas frecuencias enteras
 (c.f. nota \ref{nota: frecuencias en las bases de fourier}),
-queremos ahora generalizar el estudio anterior y no restringirnos
+queremos no sólo usar la TDF para realizar
+nuestro estudio espectral, pues
+no queremos restringirnos
 al estudio de frecuencias enteras
-(después de todo, según la hipótesis planteada en \TODO{ref}, 
+(después de todo, según la hipótesis planteada en 
+\ref{ref: hipotesis}, 
 creemos que la frecuencia que mejor aproxima al PDL
 $\cali{L}^{n,k}$ es $\frac{k}{2}$, y este último número no siempre
-es un entero), sino el 
+es un entero), sino que nos gustaría
 \begin{enumerate}
-	\item poder elegir una frecuencia $\omega \geq 0$ (con $n \nmid \omega$) respecto
+	\item poder elegir una frecuencia $\omega \geq 0$ respecto
 a la cual comparar a la señal y,
-	\item una vez fijada una frecuencia, buscar el desfase normalizado $\phi \in [0,1]$
+	\item una vez fijada una frecuencia, buscar el desfase $\phi \in [0,1]$
 	que mejor ajuste la gráfica de $x$.
 \end{enumerate}
 
 \begin{figure}[H]
 	\sidecaption{
 	Aquí se grafica una misma señal $x \in \IR^{16}$ y se 
-	compara con dos funciones sinusoidales, una con 
+	compara con dos sinusoides de frecuencia $3.6$, una con 
 	desfase (normalizado) 0.8 y otra con 0.32. Observe que
 	la primera parece ajustar mucho mejor la gráfica de $x$.
 	\label{fig: ejemplo desfase}
@@ -177,12 +215,23 @@ a la cual comparar a la señal y,
 \end{figure}	
 
 
-A pesar
-de que ya no contaremos con la seguridad de trabajar con bases
-ortonormales de $\IR^{n}$, podemos hacer un análisis espectral ya no
-via descomposiciones respecto a una BON, sino usando \TODO{similitud coseno}
-respecto a espacios de frecuencias puras;
-recuerde que antes, en el ejemplo \ref{subs: ejm 3},
+Vamos a seguir
+una linea de razonamiento totalmente análoga a la empleada 
+en el ejemplo \ref{subs: ejm 3}, pues aquí también abordamos el problema
+definiendo cúmulos
+\sidenote{Hablamos más precisamente
+de subespacios de $\IR^{n}$, pero 
+\TODO{notación de data science. Habla tamién de esto 
+en el ap. de cosine sim.}}
+de $\IR^{n}$ que consten de elementos que cumplan
+determinada propiedad (en el caso del ejemplo \ref{subs: ejm 3}, la propiedad
+era ser elemento de determinado espacio $W_{n,k}$ mientras que 
+en esta sección la propiedad de nuestro interés es ``ser la discretización
+de un sinusoide de frecuencia $\omega$'') y usando el coseno del ángulo que
+una señal $x$ forma con dichos cúmulos para dar una medida de qué tanto
+tiene $x$ la propiedad considerada.
+
+
 usamos el coseno del ángulo que forma una señal $x \in \IR^{n}$
 con el plano $W_{n,1}$ para dar una medida de qué tan afín es $x$;
 queremos ahora hacer algo similar, y usar el coseno de $x$ con espacios
@@ -191,13 +240,16 @@ una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
 
 
 
-Antes de empezar, 
-\sidenote{Para simplificar la notación, denotamos por $I_{n}$ al intervalo
-$\{ \frac{m}{n}  : 0 \leq m \leq n-1 \}$.}
-digamos qué es lo que 
-entendemos por ``señales de frecuencia pura''.
+\begin{notacion}
+Para simplificar la notación, denotamos por $I_{n}$ al intervalo
+$\{ \frac{m}{n}  : 0 \leq m \leq n-1 \}$.
+\end{notacion}
+
+Digamos qué es lo que 
+entendemos por ``señal de frecuencia pura $\omega$''.
+
 \begin{defi}
-Sean $n \in \IN$,  $\omega>0$, $\phi \in [0,1]$.  
+Sean $n \in \IN$,  $\omega>0$, $\phi \in [0,1[$.  
 A toda señal $n-$dimensional  
 de la forma
 
@@ -207,14 +259,6 @@ cos \left(  2 \pi \omega t + 2 \pi \phi
 \right)
 \right)_{t \in I_{n}}
 \end{equation}
-y
-
-\begin{equation}
-A \left(
-sin \left(  2 \pi \omega t + 2 \pi \phi
-\right)
-\right)_{t \in I_{n}},
-\end{equation}
 
 \noindent
 con $A \in \IR$, se le llamará
@@ -223,6 +267,35 @@ pura $\omega$}. En este contexto,
 a $\phi$ se le llama el \textbf{desfase normalizado}
 de la señal, y a $A$ la \textbf{amplitud}.
 \end{defi}
+
+\begin{nota}
+Observe que toda señal de la forma
+\begin{equation*}
+A \left(
+sin \left(  2 \pi \omega t + 2 \pi \phi
+\right)
+\right)_{t \in I_{n}},
+\end{equation*}
+con $A \in \IR$, también es una señal $n-$dimensional
+de frecuencia pura $\omega$, pues, como 
+\[
+sen(x) = - cos (x+ \pi/2) \hspace{0.2cm}
+\textit{para toda } x \in \IR,
+\]
+entonces
+\begin{equation*}
+A \left(
+sin \left(  2 \pi \omega t + 2 \pi \phi
+\right)
+\right)_{t \in I_{n}} =
+-A \left(
+cos \left(  2 \pi \omega t + 2 \pi \phi^{'}
+\right)
+\right)_{t \in I_{n}},
+\end{equation*}
+donde $\phi^{'}= (\phi + 1/4) \% 1 \in [0,1[$.
+\end{nota}
+
 
 \begin{figure}[H]
 	\sidecaption{
@@ -237,108 +310,87 @@ de la señal, y a $A$ la \textbf{amplitud}.
 	\includegraphics[scale= 0.55]{muestreo_coseno} 
 \end{figure}	
 
-
-
-\begin{defi}
-Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
-
-Si $n$ divide a $\omega$, definimos a los siguientes vectores de $\IR^{n}$
-\begin{equation}
-\label{eq0: 27Marzo23}
-f_{n, \omega} = \left( 
-\frac{1}{\sqrt{n}}, \ldots , \frac{1}{\sqrt{n}}
-\right) \in  \IR^{n}
-\end{equation}
-y
-\begin{equation}
-\label{eq1: 27Marzo23}
-g_{n, \omega} = \left( 
-0,  \ldots , 0
-\right) \in \IR^{n}.
-\end{equation}
-
-En caso contrario, definimos a los vectores
-
-	\begin{equation}
-	\label{eq5: 19Marzo}
-	f_{n, \omega}= \left( \xi_{n, \omega} cos \left(2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1}
-	\in \IR^{n}
-	\end{equation}
-y 
-
-	\begin{equation}
-	\label{eq6: 19Marzo}
-	g_{n, \omega}= \left( \eta_{n, \omega} sen \left(2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1}
-	\in \IR^{n},
-	\end{equation}
-donde
-
-\begin{equation}
-\label{eq7: 19Marzo}
-	\xi_{n, \omega}= 
-	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
-	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
-\end{equation}
-y
-
-	\begin{equation}
-	\label{eq8: 19Marzo}
-	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
-	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}
-	\end{equation}
-
-\noindent	
-les llamaremos los \textbf{vectores unitarios base de frecuencia $\omega$}.
-\end{defi}
-
-
-\begin{obs}
-\label{obs: f y g son l.i. y de norma uno}
-Sean $n \geq 2$ entero, $\omega >0$ con $n \nmid \omega$.
-Si $f_{n, \omega}$ y $g_{n, \omega}$ son como en 
-\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}, respectivamente,
-entonces estos son vectores unitarios y linealmente independientes entre sí.
-\end{obs}
+\begin{prop}
+\label{prop: para que frecuencias omega vector seno es cero}
+	Sean $n \geq 2$, $\omega \geq 0$.
+	\begin{itemize}
+		\item El vector 
+		\begin{equation}
+		\label{eq: coseno omega}
+		c_{n, \omega} = \left(cos(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
+		\end{equation}
+		no es cero, y 
+		\item el vector 
+		\begin{equation}
+		\label{eq: seno omega}
+		s_{n, \omega} = \left(sen(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
+		\end{equation}
+		es cero si y sólo si $\omega \in \frac{n}{2} \IZ$.
+	\end{itemize}
+\end{prop}
 \noindent
 \textbf{Demostración.}
+El primer punto es fácil de probar, pues la primera entrada del
+vector \eqref{eq: coseno omega} es 
+$cos(0)=1$.
 
-El que los
-vectores $f_{n, \omega}$ y $g_{n, \omega}$ sean 
-linealmente independientes
-se deduce del que la primera entrada de $f_{n, \omega}$ no sea cero
-mientras que la primera entrada de $g_{n, \omega}$ sea cero, pero no
-todas sus entradas sean cero. 
-
-Los números $\xi_{n, \omega}$ y $\eta_{n, \omega}$
-mostrados en \eqref{eq7: 19Marzo} y \eqref{eq8: 19Marzo}
-se definieron de tal forma que $f_{n, \omega}$ y $g_{n, \omega}$ tuviesen norma uno;
-la forma de obtener a estos escalares de normalización de forma explícita fue
-totalmente análoga a las operaciones que se realizan en la prueba de la proposición
-\ref{prop: producto punto entre f y g}, por lo que omitimos los detalles.
+Supogamos ahora que $\omega>0$ es tal que \eqref{eq: seno omega}
+es el vector cero, o sea, que
+para toda $0 \leq m \leq n-1$, se tiene que 
+$sen(2 \pi \omega m/n)=0$. En particular, ocurre
+$sen(2 \pi \omega /n)=0$; esto implica la igualdad 
+$2 \pi \omega /n = \pi K$ para algún entero $K$. Despejando
+a $\omega$ de la ecuación tenemos que 
+$\omega = \frac{n}{2}K \in \frac{n}{2} \IZ$. Recíprocamente,
+todo $\omega$ de la forma 
+$\frac{n}{2}K$, con $K \in \IZ$ hace que el vector 
+\eqref{eq: seno omega} sea cero, pues, para toda $0 \leq m \leq n-1$,
+$sen\left(2 \pi \frac{n}{2}K \frac{m}{n}\right)=
+sen((Km)\pi)=0$.
 \QEDB
 \vspace{0.2cm}
 
 
-Por ser $f_{n, \omega}$ y $g_{n, \omega}$ (cuando $n \nmid \omega$)
-linealmente independientes, el espacio $P_{\omega}$ que generan
+\begin{obs}
+\label{obs: f y g son l.i. y de norma uno}
+Sean $n \geq 2$ entero, $\omega \geq 0$ con $\omega \not\in \frac{n}{2} \IZ$.
+Los vectores \eqref{eq: coseno omega} y \eqref{eq: seno omega}
+de $\IR^{n}$ son linealmente independientes.
+\end{obs}
+\noindent
+\textbf{Demostración.}
+Sólo note que 
+la primera entrada de \eqref{eq: coseno omega} es $1$, mientras que  
+la primera entrada de $g_{n, \omega}$ sea cero, pero no
+todas sus entradas sean cero (c.f. proposición 
+\ref{prop: para que frecuencias omega vector seno es cero}). 
+\QEDB
+\vspace{0.2cm}
+
+
+Según la observación 
+\ref{obs: f y g son l.i. y de norma uno}, si $\omega \not\in \frac{n}{2} \IZ$,
+el espacio $P_{\omega}$ que generan los vectores 
+\eqref{eq: coseno omega} y \eqref{eq: seno omega}
 
 \begin{align}
 \label{eq2: 20Marzo}
-P_{\omega}:= & span(f_{n, \omega}, g_{n, \omega}) \notag  \\  
+P_{\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
-\hspace{0.2cm} a, b \in \IR \}. 
+\hspace{0.2cm} a, b \in \IR \},
+\hspace{0.1cm} \omega \not\in \frac{n}{2} \IZ
 \end{align}
 
 \noindent
-es un plano (i.e. un subespacio de dimensión $2$).
+es un plano (i.e. un subespacio de dimensión $2$) de $\IR^{n}$.
 \begin{prop}
 \label{prop: Pw consta de las señales de frecuencia omega}
-Sean $n \in \IN$, $\omega>0$ un real positivo no múltiplo
-de $n$. El espacio $P_{\omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
+Sean $n \in \IN$, $\omega \geq 0$ 
+con 
+$\omega \not\in \frac{n}{2} \IZ$.
+El espacio $P_{\omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
 de las señales $n$ dimensionales de frecuencia $\omega$.
 \end{prop}
 
@@ -349,19 +401,16 @@ Sea $\phi \in [0,1]$ un desfase cualquiera y $A \in \IR$
 una amplitud cualquiera; por la regla
 del coseno de la suma de dos ángulos, tenemos que
 \[
-A(cos (2 \pi \omega (t + \phi)))_{t \in I_{n}}
+A(cos (2 \pi \omega t + 2 \pi \phi))_{t \in I_{n}}
 = Aa  (cos(2 \pi \omega t))_{t \in I_{n}} +
 Ab  (sen(2 \pi \omega t))_{t \in I_{n}} \in P_{\omega} \in P_{\omega}
 \]
 donde
 \[
 a := cos (2 \pi \phi) \hspace{0.2cm} \text{y}
-\hspace{0.2cm} b := sin (2 \pi  \phi);
+\hspace{0.2cm} b := sin (2 \pi  \phi).
 \]
-como la función seno es una traslación de la función coseno,
-claro que de esto se sigue también que toda señal de la forma 
-$(sin (2 \pi \omega (t + \phi)))_{t \in I_{n}}$ es elemento de
-$P_{\omega}$.
+
 
 Recíprocamente, si $a, b \in \IR$ son escalares cualesquiera, 
 el elemento genérico
@@ -416,17 +465,37 @@ Según la proposición
 $P_{\omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
 de dimensión $n$ y frecuencia (pura) $\omega$.
 
+Si $\omega \in \frac{n}{2} \IZ$, entonces, según 
+la proposición 
+\ref{prop: para que frecuencias omega vector seno es cero}, el vector
+$s_{n, \omega}$ es el vector cero y $c_{n, \omega}$, luego, el espacio
+\begin{align}
+\label{eq0: 23Ap}
+P_{\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+= &
+\{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} : 
+\hspace{0.2cm} a \in \IR \},
+\hspace{0.1cm} \omega \in \frac{n}{2} \IZ
+\end{align}
+es una recta (i.e. un subespacio de dimensión $1$)
+de $\IR^{n}$.
+
 \begin{defi}
-Si $n \geq 2$ y $\omega>0$ no es múltiplo entero de $n$, entonces
-al plano $P_{\omega}$ definido en \eqref{eq2: 20Marzo}
-le llamaremos el \textbf{espacio monofrecuencial} de frecuencia $\omega$.
+Si $n \geq 2$ y $\omega>0$, entonces
+al subespacio $P_{\omega}$ 
+de $\IR^{n}$,
+definido en \eqref{eq2: 20Marzo} si 
+$\omega \not\in \frac{n}{2} \IZ$ y en 
+\eqref{eq0: 23Ap} en caso contrario,
+le llamaremos el \textbf{espacio monofrecuencial
+$n$ dimensional} de frecuencia $\omega$.
 \end{defi}
 
 
 Es razonable pues
 medir la cercanía de una señal $n-$dimensional $x \in \IR^{n}$
 a tener frecuencia $\omega$
-con el ángulo que $x$ forma con el plano $P_{\omega}$,
+con el ángulo que $x$ forma con el subespacio $P_{\omega}$,
 cuyo coseno, según la proposición
 \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}
 es
@@ -449,10 +518,7 @@ cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}
 	\includegraphics[scale= 1]{20Mar23_1} 
 \end{figure}	
 
-Puesto que todas las señales de Legendre discretas
-$\mathcal{L}^{n,k}$ tienen norma uno
-\sidenote{En lo que resta de este capítulo, $x$ siempre denotará
-a una señal unitaria.},
+Si $x$ es unitaria,
 tenemos la relación simplificada 
 
 \begin{equation}
@@ -461,11 +527,15 @@ cos \left( \measuredangle (x, W) \right) = || \Pi_{W}(x) ||
 \hspace{0.5cm} (x \hspace{0.1cm} \text{unitario).}
 \end{equation}
 
+
 \textbf{Usaremos pues, para dar una medida de qué tanto
-reacciona una señal unitaria $x \in \IR^{n}$ a una frecuencia
-$\omega >0$ (con $n \nmid \omega$), la norma de la proyección
-de $x$ al espacio $P_{\omega} \subseteq \IR^{n}$ 
-de señales n-dimensionales de frecuencia $\omega$.}
+reacciona una señal $x \in \IR^{n}$ a una frecuencia
+$\omega >0$
+el número 
+$\frac{||\Pi_{P_{\omega}}(x)||}{||x||} \in [0,1]$.} \\
+
+
+
 
 Para usar los
 resultados expuestos en el apéndice
@@ -776,3 +846,55 @@ dado por \eqref{ec: desfase explicito}.
 \end{teo}
 
 
+\begin{defi}
+Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
+
+Si $n$ divide a $\omega$, definimos a los siguientes vectores de $\IR^{n}$
+\begin{equation}
+\label{eq0: 27Marzo23}
+f_{n, \omega} = \left( 
+\frac{1}{\sqrt{n}}, \ldots , \frac{1}{\sqrt{n}}
+\right) \in  \IR^{n}
+\end{equation}
+y
+\begin{equation}
+\label{eq1: 27Marzo23}
+g_{n, \omega} = \left( 
+0,  \ldots , 0
+\right) \in \IR^{n}.
+\end{equation}
+
+En caso contrario, definimos a los vectores
+
+	\begin{equation}
+	\label{eq5: 19Marzo}
+	f_{n, \omega}= \left( \xi_{n, \omega} cos \left(2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1}
+	\in \IR^{n}
+	\end{equation}
+y 
+
+	\begin{equation}
+	\label{eq6: 19Marzo}
+	g_{n, \omega}= \left( \eta_{n, \omega} sen \left(2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1}
+	\in \IR^{n},
+	\end{equation}
+donde
+
+\begin{equation}
+\label{eq7: 19Marzo}
+	\xi_{n, \omega}= 
+	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
+\end{equation}
+y
+
+	\begin{equation}
+	\label{eq8: 19Marzo}
+	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}
+	\end{equation}
+
+\noindent	
+\end{defi}

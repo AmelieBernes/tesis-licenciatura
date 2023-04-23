@@ -6,9 +6,7 @@ finitas
 longitud $n$), y las pensaremos como elementos de $\IR^{n}$.
 En la práctica, por lo general
 una señal es un conjunto de mediciones tomadas
-a intervalos regulares de tiempo.
-Puesto que por el momento no vamos
-a considerar la localización temporal, dicha
+a intervalos regulares de tiempo; dicha
 información perfectamente puede expresarse como 
 una $n-$tupla. En lo que sigue, a menos que se diga
 lo contrario, usaremos indistíntamente los nombres
@@ -25,7 +23,7 @@ Adoptamos pues esta convención.
 \marginnote{Preferimos usar el nombre
 ``afín'' en lugar de ``lineal'', pues en el contexto de funciones
 de $\IR$ a $\IR$ el primero hace referencia a funciones
-de la forma $f(t) = at+b$, mientras que el segundo es un caso
+de la forma $f(t) = at+b$, mientras que el segundo se refiere al caso
 específico de funciones de la forma $f(t)=at$.} 
 
 \begin{defi}
@@ -65,46 +63,55 @@ que la señal es \textbf{cuadrática}.
  \end{figure}
 
 \section{Bases ortonormales}
-----------------
 
-En general, dado un $F-$espacio vectorial $V$,
-si uno acepta el axioma de elección, siempre cuenta con 
+
+En general, dado un $F-$espacio vectorial $V$ de dimensión finita,
+uno siempre cuenta con 
 bases para este espacio,
 es decir, de subconjuntos de $V$ que son tanto linealmente
 independientes (término abreviado como ``l.i.'') como generadores
 de todo el espacio; la importancia de 
 estas es obvia pues, por definición, una base permite representar
 de forma única a un elemento $v \in V$ por medio
-de una colección de escalares. 
+de una colección de escalares. Es por eso que, en ocasiones,
+usamos el nombre ``sistema de representación''
+para referirnos a
+\sidenote{El orden de los elementos en una base es importante;
+nosotros no 
+denotamos esto en la notación para bases, pero suponemos que el orden
+en el que se enlistan los elementos es el orden en el que deben usarse.}
+una base $\{ v_{k} : \hspace{0.2cm} 0 \leq k \leq n-1 \}$
+del espacio.
 
-
-Puede demostrarse
-que, dado $A \subseteq V$, el que $A$ sea base de $V$
-equivale a que $A$ sea un maximal linealmente
-independiente (c.f. sección 1.7 de \cite{friedberg}), es decir,
-que todo subconjunto  linealmente
-independiente de $V$ que contenga
-a $A$ de hecho coincide con $A$.
-
-
-El tener además en $V$ definido un producto punto
+El tener además en $V$ definido un \textbf{producto punto}
+(c.f. apéndice \ref{sec: def basicas Hilbert})
 dota de estructura extra al espacio, en particular, 
-en este 
-contexto podemos también hablar de subconjuntos $B$
-ortonormales maximales.
+en este contexto podemos también hablar del ángulo entre vectores
+del espacio (c.f.
+\ref{angulo entre elementos de un espacio con producto punto}) 
+y de la norma de estos
+(c.f \ref{prop: La norma inducida por un producto punto}).
+
+\begin{prop}
+(\textbf{la ortogonalidad implica independencia lineal})
+Si $V$ es un $F-$espacio vectorial finito dimensional y 
+$\{ v_{k} : 0\leq k \leq j \}$ es un subconjunto ortogonal de
+$V$, entonces $V$ es linealmente independiente.
+\end{prop}
+
+En particular, todo subconjunto ortogonal de cardinalidad
+$dim(V)$ es una base del espacio $V$; si además todos los elementos
+de $V$ tiene norma uno, decimos que tenemos una
+\textbf{base ortonormal} del espacio $V$. 
+\sidenote{Abreviamos ``base ortonormal'' como ``BON''.}
+
 
 \begin{nota}
 \label{nota: sobre la identidad de parseval}
-\textbf{(sobre la identidad de Parseval en el
-caso finito dimensional)}
-Puesto que, para el desarrollo teórico de este trabajo de tesis,
-se tratará siempre con espacios de Hilbert finito dimensionales, luego, con
-bases ortonormales finitas, conviene
-reescribir algunos puntos del teorema 
-\ref{thm: Coway, 4.13} en este caso particular.
+\textbf{(sobre la identidad de Parseval)}
 Digamos que $dim(V)=n$; si 
 $\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
-BON del espacio de Hilbert $V$, entonces, para todo
+BON del espacio de Hilbert $V$, es fácil comprobar que, para todo
 $x \in V$, se tiene que 
 
 \begin{equation}
@@ -115,8 +122,8 @@ y además
 
 \begin{equation}
 \label{eq1: 11ap}
-|| x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}};
-\hspace{0.4cm} \textit{(Identidad de Parseval)}
+|| x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}}
+\hspace{0.4cm} \textit{(Identidad de Parseval);}
 \end{equation}
 
 
@@ -150,13 +157,15 @@ es, en la misma medida, cercano al vector inicial $x$, pues
 
 Esta última nota da fuertes razones sobre la utilidad
 de las bases ortonormales como sistema de representación
-en espacios de Hilbert.
+en espacios de Hilbert cuando lo que se quiere es
+usar los coeficientes de un vector respecto a la base
+para obtener información geométrica del vector
+(concretamente, sobre la norma).
 
 
---------------------
 \section{Lista de deseos}
 Puesto que el espacio subyacente de 
-la teoría es el $\IR-$espacio vectorial 
+la teoría de este trabajo es el $\IR-$espacio vectorial 
 $\IR^{n}$, tenemos la ventaja de contar con
 bases (subconjuntos de $\IR^{n}$ linealmente
 independientes y generadores de todo el espacio),
@@ -170,7 +179,11 @@ de representación; si
 \subseteq \IR^{n}
 \end{equation}
 es base del espacio, entonces, dado $x \in \IR^{n}$, 
-\textbf{existe} \textbf{únicos} escalares
+\textbf{existen únicos}
+\sidenote{Así, elegida una base $\cali{B}$ de $\IR^{n}$, podemos elegir no 
+trabajar directamente con una señal $x \in \IR^{n}$, sino con sus $n$ coeficientes
+(que son números reales) respecto a $\cali{B}$.}
+escalares
 $a_{k} \in \IR$, con $0 \leq k \leq n-1$
 tales que
 
@@ -231,7 +244,8 @@ las siguientes condiciones:
 que
 sea ortonormal, para poder hacer uso de todas
 las bondades que conlleva 
-trabajar con tales bases, 
+trabajar con tales bases
+(c.f. nota \ref{nota: sobre la identidad de parseval}), 
 bondades entre las que se encuentran
 las que a continuación citamos.
 \begin{itemize}
@@ -258,8 +272,7 @@ a_{k}= \langle x , \cali{L}^{n,k} \rangle.
 \end{equation}
 \item
 \textbf{\textcolor{ameMorado}{(... dan información sobre el tamaño (norma) de $x$...)}}
-El tener disponible una igualdad de tipo Parseval
-(c.f. nota \ref{nota: sobre la identidad de parseval}), igualdad que
+El tener disponible una igualdad de tipo Parseval, igualdad que
 relaciona de manera sencilla (de hecho, lineal)
 el cuadrado de
 la magnitud de una señal $x \in \IR^{n}$ (magnitud dada
@@ -332,14 +345,14 @@ para representar unívocamente a cada objeto. En nuestro caso,
 trabajamos ya con $n-$tuplas de números reales,
 lo que en realidad equivale a representar elementos
 del espacio con la base canónica de $\IR^{n}$
-(c.f. \TODO{referencia  definición}), pero,
+(c.f. \cite{friedberg}, p.43), pero,
 como explicamos en la lista de deseos
 \ref{lista de objetivos},
 nosotros estamos buscando una base $\cali{L}^{n}$ 
 de $\IR^{n}$ tal que
 sea posible, a partir de representaciones
 de una señal $n-$dimensional $x$
-respecto a esta, sea posible dar
+respecto a esta, dar
 criterios para determinar si $x$ es afín, lineal o cuadrática.
 Como se menciona, también nos gustaría poder dar medidas
 de qué tanto tiende $x$ a alguna de estas formas.
@@ -360,9 +373,11 @@ f_{i}(t)= t^{i}, \hspace{0.4cm}
 restringiendo su dominio al intervalo $[-1,1]$;
 estas funciones son 
 elementos del 
-espacio de Hilbert $L^{2}[-1,1]$. \sidenote{\TODO{cita
-una fuente confiable en la que se diga cómo se define en ese 
-espacio el producto punto.}}
+espacio de Hilbert $L^{2}[-1,1]$. \sidenote{
+Puede consultar la definición del espacio de Hilbert
+$L^{2}[a,b]$, con $a<b$ cualesquiera números reales,
+en \cite{Kreyszig}, p. 132.
+}
 
 
 \begin{notacion}
@@ -501,7 +516,8 @@ como demostraremos a lo largo del capítulo,
 ambas alternativas
 de discretización, igual de naturales la una que la otra, nos
 conducen a la misma base ortonormal de $\IR^{n}$,
-que, como se ilustra en el capítulo \ref{sec: ejemplos} 
+que, como se ilustra en el capítulo 
+\ref{chap: Analisis de señales en base a coeficientes respecto a las BLDs},
 resulta ser un sistema de representación
 realmente útil para el estudio morfológico de señales finitas.
 
