@@ -81,7 +81,7 @@ concretas a continuación.
 	que generan $u$ y $v$, entonces,
 
 		\begin{equation}
-		\label{eq3: 19Marzo}
+		\label{eq0: 24ap}
 		\Pi_{P}(x)= \frac{\langle x, u \rangle -\langle u, v \rangle \langle x, v \rangle }{1-\langle u, v \rangle^{2}} u + \frac{\langle x, v \rangle -\langle u, v \rangle \langle x, u \rangle }{1-\langle u, v \rangle^{2}} v
 		\end{equation}
 	y 
@@ -136,17 +136,25 @@ llegamos a \eqref{eq4: 19Marzo}.
 \QEDB
 \vspace{0.2cm}
 
+Usando las expresiones
+\eqref{eq: coseno a subespacio}
+y \eqref{eq3: 19Marzo} es fácil establecer
+la siguiente proposición.
+
 \begin{prop}
 Sean $V$ un espacio de Hilbert, $x \in V$,
 	$u,v \in V$ linealmente independientes
 	y unitarios. Si $P$ es el plano
 	que generan $u$ y $v$, entonces,
 	
+	
 \begin{equation}
 \label{eq: coseno a plano}
 cos (\measuredangle (x, P)) = 
+\sqrt{
 \frac{\langle x, u \rangle^{2} +  \langle x, v \rangle^{2}	
 	       -2  \langle x, u \rangle \langle x, v \rangle \langle u, v \rangle	}{
-	       (1- \langle u, v 	\rangle^{2}) ||x||}.
+	       ||x||^{2} \cdot 
+	       (1- \langle u, v 	\rangle^{2})  }}.
 \end{equation}
 \end{prop}

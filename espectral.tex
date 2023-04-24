@@ -221,7 +221,7 @@ en el ejemplo \ref{subs: ejm 3}, pues aquí también abordamos el problema
 definiendo cúmulos
 \sidenote{Hablamos más precisamente
 de subespacios de $\IR^{n}$, pero 
-\TODO{notación de data science. Habla tamién de esto 
+\TODO{notación de DS. Habla tamién de esto 
 en el ap. de cosine sim.}}
 de $\IR^{n}$ que consten de elementos que cumplan
 determinada propiedad (en el caso del ejemplo \ref{subs: ejm 3}, la propiedad
@@ -370,12 +370,12 @@ todas sus entradas sean cero (c.f. proposición
 
 Según la observación 
 \ref{obs: f y g son l.i. y de norma uno}, si $\omega \not\in \frac{n}{2} \IZ$,
-el espacio $P_{\omega}$ que generan los vectores 
+el espacio $P_{n,\omega}$ que generan los vectores 
 \eqref{eq: coseno omega} y \eqref{eq: seno omega}
 
 \begin{align}
-\label{eq2: 20Marzo}
-P_{\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+\label{eq6: 23Ap}
+P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
@@ -390,7 +390,7 @@ es un plano (i.e. un subespacio de dimensión $2$) de $\IR^{n}$.
 Sean $n \in \IN$, $\omega \geq 0$ 
 con 
 $\omega \not\in \frac{n}{2} \IZ$.
-El espacio $P_{\omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
+El espacio $P_{n, \omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
 de las señales $n$ dimensionales de frecuencia $\omega$.
 \end{prop}
 
@@ -415,7 +415,7 @@ a := cos (2 \pi \phi) \hspace{0.2cm} \text{y}
 Recíprocamente, si $a, b \in \IR$ son escalares cualesquiera, 
 el elemento genérico
 $x=  a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
-b ( sen (2 \pi \omega t ))_{t \in I_{n}} $ de $P_{w}$ puede
+b ( sen (2 \pi \omega t ))_{t \in I_{n}} $ de $P_{n,w}$ puede
 expresarse como sigue:
 
 \begin{equation}
@@ -462,7 +462,7 @@ cos (2 \pi \omega t - 2 \pi \phi)
 \noindent 
 Según la proposición
 \ref{prop: Pw consta de las señales de frecuencia omega},
-$P_{\omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
+$P_{n, \omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
 de dimensión $n$ y frecuencia (pura) $\omega$.
 
 Si $\omega \in \frac{n}{2} \IZ$, entonces, según 
@@ -471,7 +471,7 @@ la proposición
 $s_{n, \omega}$ es el vector cero y $c_{n, \omega}$, luego, el espacio
 \begin{align}
 \label{eq0: 23Ap}
-P_{\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} : 
 \hspace{0.2cm} a \in \IR \},
@@ -482,7 +482,7 @@ de $\IR^{n}$.
 
 \begin{defi}
 Si $n \geq 2$ y $\omega>0$, entonces
-al subespacio $P_{\omega}$ 
+al subespacio $P_{n,\omega}$ 
 de $\IR^{n}$,
 definido en \eqref{eq2: 20Marzo} si 
 $\omega \not\in \frac{n}{2} \IZ$ y en 
@@ -495,7 +495,7 @@ $n$ dimensional} de frecuencia $\omega$.
 Es razonable pues
 medir la cercanía de una señal $n-$dimensional $x \in \IR^{n}$
 a tener frecuencia $\omega$
-con el ángulo que $x$ forma con el subespacio $P_{\omega}$,
+con el ángulo que $x$ forma con el subespacio $P_{n, \omega}$,
 cuyo coseno, según la proposición
 \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}
 es
@@ -532,27 +532,135 @@ cos \left( \measuredangle (x, W) \right) = || \Pi_{W}(x) ||
 reacciona una señal $x \in \IR^{n}$ a una frecuencia
 $\omega >0$
 el número 
-$\frac{||\Pi_{P_{\omega}}(x)||}{||x||} \in [0,1]$.} \\
+$\frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} \in [0,1]$.} \\
+
+\TODO{Deberías notar que sólo hay dos espacios P cuando nomega en n medios Z.}
+
+\begin{defi}
+\label{def: final de sigmas}
+Sean $n \geq 2$, $\omega \geq 0$. 
+Definimos la función $\sigma_{n}(\cdot, \omega)$ para todo 
+elemento de $\IR^{n} - \{ 0\}$
+como sigue;
+\begin{equation}
+\label{eq: def sigmas}
+	\forall x \in \IR^{n}-\{ 0\}: \hspace{0.2cm}
+	\sigma_{n}(x, \omega) = \frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} .
+\end{equation}
+\end{defi}
+
+Así, fijada una frecuencia $\omega$, 
+\begin{itemize}
+\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a cero, $\omega$ no
+es una frecuencia con la que es razonable aproximar a $x$ (pues $x$ será
+cercano a ser ortogonal a toda señal de dimensión $n$ y frecuencia 
+$\omega$),  mientras que
+
+\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a uno, también es muy cercano
+(hablando en términos de distancia euclídea) a su proyección al espacio
+$P_{n, \omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
+\end{itemize}
 
 
+Para poder usar las fórmulas
+derivadas en la sección 
+\ref{ap: Caso particular en el que el subespacio en cuestión es un plano},
+debemos de dar una base normalizada del espacio $P_{\omega}$.
+
+\begin{prop}
+\label{prop: aaa}
+Sean $n \in \IN$, $\omega>0$. Sean los vectores $c_{n, \omega}, 
+s_{n ,\omega} \in \IR^{n}$ como se definieron en 
+\eqref{eq: coseno omega} y \eqref{eq: seno omega}, 
+respectivamente.
+\begin{itemize}
+	\item Si $\omega \not\in \frac{n}{2} \IZ$, entonces 
+	$\{ f_{n, \omega}, g_{n, \omega} \}$, donde
+
+	\begin{equation}
+	\label{eq5: 19Marzo}
+	f_{n, \omega}=\xi_{n, \omega} c_{n, \omega}
+	\in \IR^{n}
+	\end{equation}
+y 
+
+	\begin{equation}
+	\label{eq6: 19Marzo}
+	g_{n, \omega}= \eta_{n, \omega} s_{n, \omega}
+	\in \IR^{n},
+	\end{equation}
+con 
+\begin{equation}
+\label{eq7: 19Marzo}
+	\xi_{n, \omega}= 
+	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left(\frac{n-1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
+\end{equation}
+y
+
+	\begin{equation}
+	\label{eq8: 19Marzo}
+	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left(\frac{n-1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}.
+	\end{equation}
+
+\noindent
+es una base normalizada del subespacio $P_{n, \omega} \leq \IR^{n}$
+definido en \eqref{eq6: 23Ap}, y,
+\item si $\omega \in \frac{n}{2} \IZ$, entonces 
+$\{ f_{n, \omega} \}$, con
+\begin{equation}
+\label{ec: 4: 23ap}
+	f_{n, \omega} := \frac{1}{\sqrt{n}}c_{n, \omega}
+\end{equation}
+es una base normalizada 
+del subespacio $P_{n, \omega} \leq \IR^{n}$
+definido en \eqref{eq0: 23Ap}.
+\end{itemize}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, por definición del espacio
+$P_{n, \omega}$, $\{ c_{n, \omega}, s_{n, \omega} \}$
+es una base de este cuando
+$\omega \not\in \frac{n}{2}\IZ$, y
+$\{ c_{n, \omega}\}$ es base si 
+$\omega \in \frac{n}{2}\IZ$,
+luego, en ambos casos el conjunto propuesto en efecto
+es una base de $P_{n, \omega}$.
+En el segundo caso, puesto que
+$f_{n, \omega}$ será un vector cuyas entradas serán $1$, o $-1$,
+\eqref{ec: 4: 23ap} en efecto es un vector unitario. 
+En el primer caso, se han calculado las constantes 
+$\xi_{n, \omega}$ y $\eta_{n, \omega}$
+dadas en 
+\eqref{eq7: 19Marzo} y \eqref{eq8: 19Marzo}
+para que $f_{n, \omega}$ y $g_{n, \omega}$
+tengan normal uno; puesto que los cálculos son muy
+similares a los realizados en la demostración de la proposición
+\ref{prop: producto punto entre f y g}, los omitimos.
+\QEDB
+\vspace{0.2cm}
 
 
-Para usar los
-resultados expuestos en el apéndice
-\ref{ap: Caso particular en el que el subespacio en cuestión es un plano}
-conviente establecer una fórmula para
+Conviene también establecer una fórmula para
 el producto punto entre 
-los vectores $f_{n, \omega}$ y $g_{n, \omega}$.
+los vectores $f_{n, \omega}$ y $g_{n, \omega}$
+definidos en la proposición \ref{prop: aaa}
+cuando $\omega \not\in \frac{n}{2} \IZ$.
 Hacemos esto a continuación.
 
 \begin{prop}
 \label{prop: producto punto entre f y g}
-Fijados $n \geq 2$ y $\omega \geq 0$ con $n \nmid \omega$, los vectores
-$f_{n, \omega}$ y $g_{n, \omega}$, como se definieron
-en \eqref{eq5: 19Marzo}
-y \eqref{eq6: 19Marzo}, respectivamente, 
-son unitarios y linealmente independientes.
-Además, 
+Fijados $n \geq 2$ y $\omega \geq 0$ con 
+$\omega \not\in \frac{n}{2}\IZ$, 
+el producto punto entre 
+los vectores
+$f_{n, \omega}$ y $g_{n, \omega}$, definidos 
+\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}
+respectivamente, es
 
 \begin{equation}
 \label{eq9: 19Marzo}
@@ -566,14 +674,12 @@ sen(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi
 \end{prop}
 \noindent
 \textbf{Demostración.}
-
-
 Aquí usaremos las siguientes tres igualdades:
 
 \begin{equation}
 \label{eq10: 19Marzo}
 \forall \alpha \in \IR: \hspace{0.2cm}
-sen(2 \alpha) = 2 sen(\alpha) cos(\alpha)
+sen(2 \alpha) = 2 sen(\alpha) cos(\alpha),
 \end{equation}
 
 
@@ -581,7 +687,7 @@ sen(2 \alpha) = 2 sen(\alpha) cos(\alpha)
 \begin{equation}
 \label{eq11: 19Marzo}
 \forall z\in \IR: \hspace{0.2cm}
-sen(z)= \frac{e^{iz}-e^{-iz}}{2i}
+sen(z)= \frac{e^{iz}-e^{-iz}}{2i},
 \end{equation}
 
 
@@ -646,18 +752,22 @@ e^{2 \pi \omega i \left( 1-1/n \right)} - e^{-2 \pi \omega i \left( 1-1/n \right
 \frac{sen(2 \pi \omega)}{sen(2 \pi \omega /n)}
 sen \left( 2 \pi \omega  \left( 1- \frac{1}{n} \right) \right). \\
 \end{align*}
-
-
 \QEDB
 \vspace{0.2cm}
 
 
-Podemos ya usar las fórmulas establecidas
-en la proposición \ref{prop: formulas 20Marzo}
-en nuestra situación particular para llegar a que
 
-\[
- \Pi_{P_{\omega}}(x) = 
+\begin{prop}
+Sean $n \geq 2$, $\omega \geq 0$. 
+Sea $\sigma_{n}(\cdot,\omega): \IR^{n} \longrightarrow [0,1]$
+la función definida en \ref{def: final de sigmas}.
+Para todo $x \in \IR^{n}-\{ 0 \}$
+se tiene que
+\begin{itemize}
+	\item Si $\omega \not\in \frac{n}{2} \IZ$, entonces
+	\begin{equation}
+	\label{eq: pi ommm 1}
+	 \Pi_{P_{\omega}}(x) = 
 \frac{
 \langle x, f_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle 
 \langle x, g_{n, \omega} \rangle
@@ -669,80 +779,75 @@ f_{n, \omega} +
 \langle x, f_{n, \omega} \rangle
 }
 {1-|\langle f_{n, \omega}, g_{n, \omega} \rangle |^{2}  }
-g_{n, \omega},
-\]
-
-\noindent
-y
-
-\begin{align*}
-cos (\measuredangle (x, P_{\omega})) = & || \Pi_{P_{\omega}}(x) ||  \\
-= & 
-\left(		  
+g_{n, \omega}
+	\end{equation}
+	y 
+	\begin{equation}
+	\sigma_{n}(x, \omega) =
+	\left(		  
 		  \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle \langle f_{n, \omega }, g_{n, \omega } \rangle}{1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2}}	  
-\right) ^{1/2}.
-\end{align*}
-
-
-\begin{defi}
-Sean $n \geq 2$ entero, $\omega >0$ con $n \nmid \omega$.
-Definimos a la función $\sigma_{n , \omega}: \mathcal{B}_{n}(1) \longrightarrow [0,1]$
-como sigue;
-\begin{equation}
-\label{eq: def sigmas}
-\sigma_{n, \omega}(x) : = 
-\left(	
-\frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle 
-	       \langle f_{n, \omega }, g_{n, \omega } \rangle}{1- \langle f_{n, \omega }, 
-	       g_{n, \omega } \rangle^{2}}	  
- \right) ^{1/2},
-\end{equation}
-
-\noindent
+	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle \langle f_{n, \omega }, g_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2},
+	\end{equation}
 donde $f_{n, \omega}$ y $g_{n, \omega}$ son como en 
-\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}.
-\end{defi}
+\eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}, y
 
-
-Según todo lo discutido hasta ahora, dado $x \in \IR^{n}$ unitario
-y fijada una frecuencia $\omega >0$ con $n \nmid \omega$,
-\begin{itemize}
-\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a cero, $\omega$ no
-es una frecuencia con la que es razonable aproximar a $x$ (pues $x$ será
-cercano a ser ortogonal a toda señal de dimensión $n$ y frecuencia 
-$\omega$),  mientras que
-
-\item si $\sigma_{n, \omega}(x)$ es ``cercano'' a uno, también es muy cercano
-(hablando en términos de distancia euclídea) a su proyección al espacio
-$P_{\omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
+\item si $\omega \in \frac{n}{2} \IZ$, entonces 
+\begin{equation}
+\label{eq: pi ommm 2}
+\Pi_{P_{n, \omega}}(x) = \langle x, f_{n, \omega} \rangle f_{n, \omega}
+\end{equation}
+y 
+\begin{equation}
+\label{eq: sfklmslsfl}
+\sigma_{n}(x, \omega) = \frac{|\langle x, f_{n, \omega} \rangle |}{||x||},
+\end{equation}
+donde $f_{n, \omega}$ es como en \eqref{ec: 4: 23ap}.
 \end{itemize}
+\end{prop}
 
 
-\subsection{Buscando el mejor desfase con cierta frecuencia que se ajuste una señal de dimensión $n$}
+\TODO{a diferencia de la dft, los casos extremos ya no son
+estar o no estar, sino ser perpendicular o ser paralelo.}
 
-Dada $x \in \IR^{n}$ unitaria y $\omega > 0$ una frecuencia fija
-con $n \nmid \omega$, 
-buscamos el desfase $\phi \in [0,1]$ que mejor se ajusta a $x$.
+\subsection{Desfase de la proyección de una señal a espacios monofrecuenciales}
+
+Dada $x \in \IR^{n}$ una señal no cero 
+y $\omega > 0$ una frecuencia fija,
+buscamos el desfase $\phi \in [0,1]$ que mejor se ajuste a $x$
+(c.f. figura \ref{fig: muestreo coseno}).
 
 
 Puesto que
-$\Pi_{P_{\omega}}(x)$ (donde $P_{\omega}$ es como se definió en 
-\eqref{eq2: 20Marzo}) es la señal de frecuencia $\omega$ que está a menor
-distancia euclidea de $x$, claro que el desfase $\phi$ buscado es de hecho
+$\Pi_{P_{n, \omega}}(x)$ (donde $P_{n, \omega}$ es como se definió en 
+\eqref{eq6: 23Ap} y \eqref{eq0: 23Ap}, dependiendo si 
+$\omega$ es o no elemento de $\frac{n}{2} \IZ$) 
+es la señal de frecuencia $\omega$ que está a menor
+distancia euclidea de $x$, proponemos usar como
+desfase $\phi$ como 
 el número entre cero y uno tal que 
 \[
-\Pi_{P_{\omega}}(x) = A (cos(2 \pi \omega t -  2 \pi \phi ))_{t \in I_{n}}
+\Pi_{P_{n, \omega}}(x) = A (cos(2 \pi \omega t -  2 \pi \phi ))_{t \in I_{n}}
 \]
-para alguna amplitud $A$.
+para alguna amplitud $A$. \\
 
+Fijada entonces una frecuencia $\omega$, nos interesa encontrar
+el desfase (normalizado) $\phi$ y la amplitud $A$ del sinusoide
+de frecuencia $\omega$ cuya discretización en $I_{n}$ es la proyección
+ortogonal $\Pi_{P_{n, \omega}}(x)$. \\
+
+
+Primero abordemos el caso en el que
+$\omega \not\in \frac{n}{2} \IZ$. 
 
 Como los vectores $f_{n, \omega}$ y $g_{n, \omega}$ 
-son linealmente independientes (c.f. observación
-\ref{obs: f y g son l.i. y de norma uno}),
-podemos usar la ecuación \eqref{eq2: 19Marzo}
+definidos en \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}
+son unitarios y linealmente independientes (c.f. proposición
+\ref{prop: aaa}),
+podemos usar la ecuación \eqref{eq0: 24ap}
 para escribir a la proyección de $x$ en $P_{\omega}$ como sigue
+
 
 \begin{equation}
 \label{eq3: 20Marzo}
@@ -771,12 +876,12 @@ d= \frac{
 Nos conviene más reescribir a \eqref{eq3: 20Marzo} como
 \begin{equation}
 \label{eq6: 20Marzo}
-\Pi_{P_{\omega}}(x)= 
+\Pi_{P_{n, \omega}}(x)= 
 \sqrt{c^{2}+d^{2}}
-\left(
+\left[
 C (cos (2 \pi \omega t))_{t \in I_{n}} +
 D (sen (2 \pi \omega t))_{t \in I_{n}} 
-\right),
+\right],
 \end{equation}
 
 \noindent 
@@ -787,9 +892,9 @@ donde
 C:= \frac{c}{\sqrt{c^{2}+d^{2}}} \hspace{0.2cm} \text{y}
 \hspace{0.2cm} D:= \frac{d}{\sqrt{c^{2}+d^{2}}},
 \end{equation}
-
+\noindent 
 pues, como $C^{2} + D^{2}=1$, existe un único
-$\phi \in [0,1]$ tal que
+$\phi \in [0,1[$ tal que
 \begin{equation}
 \label{eq7: 20Marzo}
 C= cos(2 \pi \phi), \hspace{0.2cm} 
@@ -801,14 +906,14 @@ Sustituyendo \eqref{eq7: 20Marzo} en \eqref{eq6: 20Marzo},
 llegamos a que
 
 \begin{align*}
-\Pi_{P_{\omega}}(x) = & 
-\sqrt{c^{2}+d^{2}} \left(
+\Pi_{P_{n, \omega}}(x) = & 
+\sqrt{c^{2}+d^{2}} \left[
 cos(2 \pi \phi) \cdot (cos (2 \pi \omega t))_{t \in I_{n}} +
 sin(2 \pi \phi) \cdot (sin (2 \pi \omega t))_{t \in I_{n}} 
-\right) \\
+\right] \\
 = & 
 \sqrt{c^{2}+d^{2}} 
-((cos(2 \pi \phi) \cdot cos (2 \pi \omega t) +
+(cos(2 \pi \phi) \cdot cos (2 \pi \omega t) +
 sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
 = & 
 \sqrt{c^{2}+d^{2}} 
@@ -816,9 +921,10 @@ sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
 \end{align*}
 
 \noindent
-Además, de \eqref{eq7: 20Marzo} y \eqref{eq7: 20Marzo} 
+Además, de \eqref{eq7: 20Marzo} y \eqref{eq3: 28Marz23}
 se deduce que
 \begin{equation}
+\label{eq: desfase phi 1}
 \phi =
 \begin{cases}
 \frac{tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c > 0,  \\
@@ -830,71 +936,68 @@ se deduce que
 
 Hemos probado el siguiente
 \begin{teo}
-Dados $n \geq 2$, $\omega > 0$ con $n \nmid \omega$ y $x \in \IR^{n}$
-unitario, 
+Sean $n \geq 2$ y $\omega > 0$ con $\omega \not\in \frac{n}{2}\IZ$.
+Si $P_{n, \omega}$ es el subespacio de $\IR^{n}$ definido como 
+en \eqref{eq6: 23Ap}, entonces, para todo 
+$x \in \IR^{n}$ no cero, se tiene que
 \begin{equation}
-\label{ec: desfase explicito}
-\Pi_{P_{\omega}} (x) = \sqrt{c^{2}+d^{2}} \cdot (
+\label{ec: desfase explicito 1}
+\Pi_{P_{n, \omega}} (x) = \sqrt{c^{2}+d^{2}} \cdot (
 cos (2 \pi \omega t - 2 \pi \phi)
 )_{t \in I_{n}} \in \IR^{n},
 \end{equation}
 
 \noindent
-donde $c$ y $d$ son como en \eqref{eq4: 20Marzo} y 
+donde 
+$c$ y $d$ son como en \eqref{eq4: 20Marzo} y 
 \eqref{eq5: 20Marzo}, respectivamente, y $\phi$ está 
-dado por \eqref{ec: desfase explicito}.
+dado por \eqref{eq: desfase phi 1}.
 \end{teo}
+Observe que tenemos una fórmula para obtener a
+la frecuencia y amplitud de $\Pi_{P_{n, \omega}}(x)$
+usando sólamente los datos
+\[
+\langle x, f_{n, \omega} \rangle, \hspace{0.2cm}
+\langle x, g_{n, \omega} \rangle \hspace{0.1cm} \text{y} \hspace{0.1cm}
+\langle f_{n, \omega}, g_{n, \omega} \rangle.
+\]
 
+El resultado análogo para cuando $\omega \in \frac{n}{2}\IZ$
+es más fácil de establecer, pues en este caso
+el espacio monofrecuencia $P_{n, \omega}$ es una recta.
 
-\begin{defi}
-Sean $n \geq 2$ es un entero y $\omega \geq 0$ un número no negativo.
-
-Si $n$ divide a $\omega$, definimos a los siguientes vectores de $\IR^{n}$
+\begin{teo}
+Sean $n \geq 2$ y $\omega > 0$ con $\omega \in \frac{n}{2}\IZ$.
+Si $P_{n, \omega}$ es el subespacio de $\IR^{n}$ definido como 
+en \eqref{eq0: 23Ap}, entonces, para todo 
+$x \in \IR^{n}$ no cero, se tiene que
 \begin{equation}
-\label{eq0: 27Marzo23}
-f_{n, \omega} = \left( 
-\frac{1}{\sqrt{n}}, \ldots , \frac{1}{\sqrt{n}}
-\right) \in  \IR^{n}
+\label{ec: desfase explicito 2}
+\Pi_{P_{n, \omega}} (x) = 
+\frac{1}{\sqrt{n}} \langle x, f_{n, \omega} \rangle
+\cdot (cos (2 \pi \omega t))_{t \in I_{n}} \in \IR^{n}.
 \end{equation}
-y
-\begin{equation}
-\label{eq1: 27Marzo23}
-g_{n, \omega} = \left( 
-0,  \ldots , 0
-\right) \in \IR^{n}.
-\end{equation}
+\end{teo}
+\noindent
+\textbf{Demostración.}
+En efecto, según \eqref{eq: pi ommm 2} y 
+\eqref{ec: 4: 23ap},
+se tiene que
+\begin{align*}
+\Pi_{P_{n, \omega}} (x) = & 
+\langle x, f_{n, \omega} \rangle f_{n, \omega} \\
+= & \langle x, f_{n, \omega} \rangle \frac{1}{\sqrt{n}} c_{n, \omega} \\
+= & \frac{1}{\sqrt{n}} \langle x, f_{n, \omega} \rangle
+\cdot (cos (2 \pi \omega t))_{t \in I_{n}} \in \IR^{n}.
+\end{align*}
 
-En caso contrario, definimos a los vectores
+\QEDB
+\vspace{0.2cm}
 
-	\begin{equation}
-	\label{eq5: 19Marzo}
-	f_{n, \omega}= \left( \xi_{n, \omega} cos \left(2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1}
-	\in \IR^{n}
-	\end{equation}
-y 
 
-	\begin{equation}
-	\label{eq6: 19Marzo}
-	g_{n, \omega}= \left( \eta_{n, \omega} sen \left(2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1}
-	\in \IR^{n},
-	\end{equation}
-donde
 
-\begin{equation}
-\label{eq7: 19Marzo}
-	\xi_{n, \omega}= 
-	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
-	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
-\end{equation}
-y
 
-	\begin{equation}
-	\label{eq8: 19Marzo}
-	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
-	cos(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}
-	\end{equation}
 
-\noindent	
-\end{defi}
+
+
+

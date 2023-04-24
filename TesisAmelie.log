@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  23 APR 2023 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  24 APR 2023 13:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1493,9 +1493,6 @@ LaTeX Warning: Label `fig: angulo x y proy' multiply defined.
 LaTeX Warning: Label `fig: angulo x y proy' multiply defined.
 
 
-LaTeX Warning: Label `eq3: 19Marzo' multiply defined.
-
-
 LaTeX Warning: Label `Teo:proyOrt' multiply defined.
 
 )
@@ -2840,12 +2837,12 @@ Package pdftex.def Info: ./imagenes/ejFrecuencia_6.png  used on input line 591.
 ) (./coseno_a_plano.tex [80 <./imagenes/ejFrecuencia_4.png> <./imagenes/ejFrecu
 encia_5.png> <./imagenes/ejFrecuencia_6.png>]
 [81]
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 
  []
 
 
-LaTeX Warning: Reference `eq4: 19Marzo' on page 82 undefined on input line 133.
+LaTeX Warning: Reference `eq4: 19Marzo' on page 82 undefined on input line 134.
 
 
 )
@@ -2858,7 +2855,7 @@ Package marginnote Info: Margin note 86.1 is on absolute page 87 on input line
 Package marginnote Info: right page because not two side mode on input line 213
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 213.
-<./imagenes/desfase_ejemplo.png, id=1569, 773.289pt x 377.2494pt>
+<./imagenes/desfase_ejemplo.png, id=1571, 773.289pt x 377.2494pt>
 File: ./imagenes/desfase_ejemplo.png Graphic file (type png)
 <use ./imagenes/desfase_ejemplo.png>
 Package pdftex.def Info: ./imagenes/desfase_ejemplo.png  used on input line 214
@@ -2870,49 +2867,63 @@ Package marginnote Info: Margin note 87.1 is on absolute page 88 on input line
 Package marginnote Info: right page because not two side mode on input line 309
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 309.
-<./imagenes/muestreo_coseno.png, id=1581, 630.10406pt x 313.9228pt>
+<./imagenes/muestreo_coseno.png, id=1584, 630.10406pt x 313.9228pt>
 File: ./imagenes/muestreo_coseno.png Graphic file (type png)
 <use ./imagenes/muestreo_coseno.png>
 Package pdftex.def Info: ./imagenes/muestreo_coseno.png  used on input line 310
 .
 (pdftex.def)             Requested size: 346.5583pt x 172.65807pt.
- [83 <./imagenes/desfase_ejemplo.png>] [84 <./imagenes/muestreo_coseno.png>]
+ [83 <./imagenes/desfase_ejemplo.png>]
+
+LaTeX Warning: Reference `eq2: 20Marzo' on page 84 undefined on input line 393.
+
+
+[84 <./imagenes/muestreo_coseno.png>]
+
+LaTeX Warning: Reference `eq2: 20Marzo' on page 85 undefined on input line 487.
+
+
 Package marginnote Info: Margin note 89.1 is on absolute page 90 on input line 
 517.
 Package marginnote Info: right page because not two side mode on input line 517
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 517.
-<./imagenes/20Mar23_1.png, id=1626, 319.1925pt x 153.4533pt>
+<./imagenes/20Mar23_1.png, id=1627, 319.1925pt x 153.4533pt>
 File: ./imagenes/20Mar23_1.png Graphic file (type png)
 <use ./imagenes/20Mar23_1.png>
 Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 518.
 (pdftex.def)             Requested size: 319.19171pt x 153.4529pt.
- [85]
+[85]
 Underfull \hbox (badness 10000) in paragraph at lines 535--536
 
  []
 
 
-Overfull \hbox (2.56145pt too wide) detected at line 648
+Underfull \vbox (badness 10000) detected at line 622
+ []
+
+[86 <./imagenes/20Mar23_1.png>] [87]
+Overfull \hbox (2.56145pt too wide) detected at line 754
 []
  []
 
-[86 <./imagenes/20Mar23_1.png>]
-Overfull \hbox (0.42325pt too wide) detected at line 673
-\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []\OML/cmm/m/it/10 
-f[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 g[];
+
+Overfull \hbox (42.02052pt too wide) detected at line 783
+[][][]\OT1/cmr/m/n/10 ^^E[](\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = []\OML/cmm/m/
+it/10 f[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 g[]
  []
 
-[87]
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 832--834
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 723.
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 723.
+Underfull \hbox (badness 10000) in paragraph at lines 835--839
 
-[88]) (./Teoria.tex [89]
+ []
+
+[89]) (./Teoria.tex [90]
 Ap\'{e}ndice A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--15
@@ -2923,15 +2934,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--15
 Underfull \vbox (badness 10000) detected at line 43
  []
 
-[90
+[91
 
-] [91]) (./apendice_def.tex
-Package marginnote Info: Margin note 96.1 is on absolute page 96 on input line 
+] [92]) (./apendice_def.tex
+Package marginnote Info: Margin note 97.1 is on absolute page 97 on input line 
 16.
 Package marginnote Info: right page because not two side mode on input line 16.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 16.
- [92]
+ [93]
 Underfull \hbox (badness 3826) in paragraph at lines 58--58
 []$[]$ \OT1/cmr/m/n/10 Pue-de con-sul-tar la
  []
@@ -2941,7 +2952,7 @@ Underfull \hbox (badness 3291) in paragraph at lines 90--90
 \OT1/cmr/m/n/10 de es-pa-cio m^^Setri-co en
  []
 
-<./imagenes/estructuras.png, id=1746, 455.7828pt x 120.6909pt>
+<./imagenes/estructuras.png, id=1775, 455.7828pt x 120.6909pt>
 File: ./imagenes/estructuras.png Graphic file (type png)
 <use ./imagenes/estructuras.png>
 Package pdftex.def Info: ./imagenes/estructuras.png  used on input line 109.
@@ -2951,7 +2962,7 @@ Overfull \hbox (4.62674pt too wide) in paragraph at lines 109--116
  [] 
  []
 
-[93 <./imagenes/estructuras.png>]) (./apendice_hiperpl.tex
+[94 <./imagenes/estructuras.png>]) (./apendice_hiperpl.tex
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []$[]$ \OT1/cmr/m/n/10 Por ``fun-cio-nal''
  []
@@ -2961,7 +2972,7 @@ Underfull \hbox (badness 1546) in paragraph at lines 34--34
 \OT1/cmr/m/n/10 for-ma-ci^^Son li-neal de un
  []
 
-[94]) (./apendice_proyOrt.tex
+[95]) (./apendice_proyOrt.tex
 Underfull \hbox (badness 1406) in paragraph at lines 21--21
 \OT1/cmr/m/n/10 es un es-pa-cio vec-to-rial
  []
@@ -2991,16 +3002,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--48
 
  []
 
-[95]
+[96]
 
-LaTeX Warning: Reference `teo: Kol 6, p.149' on page 96 undefined on input line
+LaTeX Warning: Reference `teo: Kol 6, p.149' on page 97 undefined on input line
  150.
 
 
 Underfull \vbox (badness 10000) detected at line 157
  []
 
-[96] [97]
+[97] [98]
 Underfull \hbox (badness 10000) in paragraph at lines 250--254
 
  []
@@ -3010,12 +3021,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--20
 
  []
 
-[98]
+[99]
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-<./imagenes/GS_fig.png, id=1827, 557.08125pt x 547.2947pt>
+<./imagenes/GS_fig.png, id=1857, 557.08125pt x 547.2947pt>
 File: ./imagenes/GS_fig.png Graphic file (type png)
 <use ./imagenes/GS_fig.png>
 Package pdftex.def Info: ./imagenes/GS_fig.png  used on input line 86.
@@ -3025,42 +3036,42 @@ Overfull \hbox (29.26997pt too wide) in paragraph at lines 86--88
 [][] 
  []
 
-[99]
+[100]
 
 LaTeX Warning: Reference `Bases ortonormales de espacios de Hilbert' on page 10
-0 undefined on input line 150.
+1 undefined on input line 150.
 
-) (./apendice_anguloPuntoPlano.tex [100 <./imagenes/GS_fig.png>]
-Package marginnote Info: Margin note 105.1 is on absolute page 105 on input lin
+) (./apendice_anguloPuntoPlano.tex [101 <./imagenes/GS_fig.png>]
+Package marginnote Info: Margin note 106.1 is on absolute page 106 on input lin
 e 42.
 Package marginnote Info: right page because not two side mode on input line 42.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 42.
-<./imagenes/coseno.png, id=1849, 622.57594pt x 331.99031pt>
+<./imagenes/coseno.png, id=1879, 622.57594pt x 331.99031pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 43.
 (pdftex.def)             Requested size: 311.2872pt x 165.99474pt.
 
-Underfull \vbox (badness 10000) detected at line 101
+Underfull \vbox (badness 10000) detected at line 105
  []
 
-[101 <./imagenes/coseno.png>] [102]
-Package marginnote Info: Margin note 107.1 is on absolute page 107 on input lin
-e 215.
-Package marginnote Info: right page because not two side mode on input line 215
+[102 <./imagenes/coseno.png>] [103]
+Package marginnote Info: Margin note 108.1 is on absolute page 108 on input lin
+e 219.
+Package marginnote Info: right page because not two side mode on input line 219
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 215.
-<./imagenes/18Sept_1.png, id=1875, 368.0952pt x 222.8325pt>
+Package marginnote Info: xpos seems to be 72.0pt on input line 219.
+<./imagenes/18Sept_1.png, id=1904, 368.0952pt x 222.8325pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
-Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 216.
+Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 220.
 (pdftex.def)             Requested size: 331.28261pt x 200.5474pt.
- [103 <./imagenes/18Sept_1.png>]))
-(./Notacion.tex [104]
+ [104 <./imagenes/18Sept_1.png>]))
+(./Notacion.tex [105]
 Ap\'{e}ndice B.
 
-LaTeX Warning: Citation 'wolfram' on page 105 undefined on input line 37.
+LaTeX Warning: Citation 'wolfram' on page 106 undefined on input line 37.
 
 
 Overfull \hbox (60.08105pt too wide) in paragraph at lines 10--38
@@ -3205,18 +3216,18 @@ Overfull \hbox (69.77863pt too wide) in paragraph at lines 49--59
 [][] 
  []
 
-[105
+[106
 
-] [106])
+] [107])
 Overfull \hbox (16.98747pt too wide) in paragraph at lines 38--38
 []\OT1/cmr/m/it/10 Cosine si-mi-la-rity\OT1/cmr/m/n/10 . []$\OT1/cmtt/m/n/10 ht
 tps : / / en . wikipedia . org / wiki / Cosine _ similarity$[]\OT1/cmr/m/n/10 .
 
  []
 
-[107
+[108
 
-] [108] (./TesisAmelie.aux
+] [109] (./TesisAmelie.aux
 LaTeX Info: Redefining \sptext on input line 27.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
@@ -3228,7 +3239,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
-(rerunfilecheck)             Checksum: FB73E5F19174B2A2BB80BE1B7B8944DB;14779.
+(rerunfilecheck)             Checksum: C12532512B341716DCB5EEFE9C6FB986;14664.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                TesisAmelie
@@ -3243,10 +3254,10 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 ### simple group (level 1) entered at line 788 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44269 strings out of 476025
- 875079 string characters out of 5796533
+ 44286 strings out of 476025
+ 875339 string characters out of 5796533
  1899388 words of memory out of 5000000
- 63221 multiletter control sequences out of 15000+600000
+ 63230 multiletter control sequences out of 15000+600000
  533376 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,17n,107p,1912b,2323s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3282,10 +3293,10 @@ nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (110 pages, 6729654 bytes).
+Output written on TesisAmelie.pdf (111 pages, 6734172 bytes).
 PDF statistics:
- 2195 PDF objects out of 2487 (max. 8388607)
- 1808 compressed objects within 19 object streams
- 633 named destinations out of 1000 (max. 500000)
+ 2225 PDF objects out of 2487 (max. 8388607)
+ 1837 compressed objects within 19 object streams
+ 641 named destinations out of 1000 (max. 500000)
  861 words of extra memory for PDF output out of 10000 (max. 10000000)
 
