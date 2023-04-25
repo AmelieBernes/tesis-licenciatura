@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  24 APR 2023 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  25 APR 2023 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1603,27 +1603,27 @@ Package hyperref Info: Link coloring OFF on input line 8.
 \openout7 = `TesisAmelie.out'.
 
  (./portada.tex
-<./imagenes/logo_buap.png, id=236, 427.8384pt x 427.8384pt>
+<./imagenes/logo_buap.png, id=240, 427.8384pt x 427.8384pt>
 File: ./imagenes/logo_buap.png Graphic file (type png)
 <use ./imagenes/logo_buap.png>
-Package pdftex.def Info: ./imagenes/logo_buap.png  used on input line 17.
+Package pdftex.def Info: ./imagenes/logo_buap.png  used on input line 18.
 (pdftex.def)             Requested size: 149.74567pt x 149.74567pt.
-<./imagenes/portada_tesis2.png, id=238, 105.7551pt x 467.8278pt>
+<./imagenes/portada_tesis2.png, id=242, 105.7551pt x 467.8278pt>
 File: ./imagenes/portada_tesis2.png Graphic file (type png)
 <use ./imagenes/portada_tesis2.png>
-Package pdftex.def Info: ./imagenes/portada_tesis2.png  used on input line 32.
+Package pdftex.def Info: ./imagenes/portada_tesis2.png  used on input line 34.
 (pdftex.def)             Requested size: 137.4816pt x 608.17607pt.
 
-Overfull \hbox (27.4816pt too wide) in paragraph at lines 32--33
+Overfull \hbox (27.4816pt too wide) in paragraph at lines 34--35
 [][] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1720,7 +1720,7 @@ Underfull \hbox (badness 2293) in paragraph at lines 62--62
 \OT1/cmr/m/n/8 pin-tan las gr^^Safi-cas de dos
  []
 
-<./imagenes/ejemplo_intro.png, id=344, 576.7146pt x 293.4162pt>
+<./imagenes/ejemplo_intro.png, id=349, 576.7146pt x 293.4162pt>
 File: ./imagenes/ejemplo_intro.png Graphic file (type png)
 <use ./imagenes/ejemplo_intro.png>
 Package pdftex.def Info: ./imagenes/ejemplo_intro.png  used on input line 62.
@@ -1775,7 +1775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 503--510
  []
 
 [10]
-<./imagenes/discr_ortog.png, id=435, 361.35pt x 481.8pt>
+<./imagenes/discr_ortog.png, id=440, 361.35pt x 481.8pt>
 File: ./imagenes/discr_ortog.png Graphic file (type png)
 <use ./imagenes/discr_ortog.png>
 Package pdftex.def Info: ./imagenes/discr_ortog.png  used on input line 530.
@@ -1789,7 +1789,7 @@ Overfull \hbox (113.08829pt too wide) in paragraph at lines 529--534
 
 ] (./construccion_canonica.tex
 Cap\'{\i }tulo 2.
-<./imagenes/1En_1.png, id=450, 142.6128pt x 177.7842pt>
+<./imagenes/1En_1.png, id=455, 142.6128pt x 177.7842pt>
 File: ./imagenes/1En_1.png Graphic file (type png)
 <use ./imagenes/1En_1.png>
 Package pdftex.def Info: ./imagenes/1En_1.png  used on input line 9.
@@ -1816,7 +1816,7 @@ Package marginnote Info: Margin note 20.1 is on absolute page 20 on input line
 Package marginnote Info: right page because not two side mode on input line 331
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 331.
-<./imagenes/mall.png, id=500, 609.77812pt x 333.49594pt>
+<./imagenes/mall.png, id=505, 609.77812pt x 333.49594pt>
 File: ./imagenes/mall.png Graphic file (type png)
 <use ./imagenes/mall.png>
 Package pdftex.def Info: ./imagenes/mall.png  used on input line 331.
@@ -1832,7 +1832,7 @@ Underfull \hbox (badness 1603) in paragraph at lines 434--434
  []
 
 [17]
-<./imagenes/nuevas_lupas.png, id=537, 346.4142pt x 171.7617pt>
+<./imagenes/nuevas_lupas.png, id=542, 346.4142pt x 171.7617pt>
 File: ./imagenes/nuevas_lupas.png Graphic file (type png)
 <use ./imagenes/nuevas_lupas.png>
 Package pdftex.def Info: ./imagenes/nuevas_lupas.png  used on input line 521.
@@ -1843,7 +1843,7 @@ Package marginnote Info: Margin note 24.1 is on absolute page 24 on input line
 Package marginnote Info: right page because not two side mode on input line 642
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 642.
-<./imagenes/25Nov_1.png, id=568, 688.0104pt x 346.1733pt>
+<./imagenes/25Nov_1.png, id=573, 688.0104pt x 346.1733pt>
 File: ./imagenes/25Nov_1.png Graphic file (type png)
 <use ./imagenes/25Nov_1.png>
 Package pdftex.def Info: ./imagenes/25Nov_1.png  used on input line 643.
@@ -1855,7 +1855,7 @@ Package marginnote Info: Margin note 27.1 is on absolute page 27 on input line
 Package marginnote Info: right page because not two side mode on input line 925
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 925.
-<./imagenes/pdl.png, id=614, 525.46312pt x 123.46124pt>
+<./imagenes/pdl.png, id=619, 525.46312pt x 123.46124pt>
 File: ./imagenes/pdl.png Graphic file (type png)
 <use ./imagenes/pdl.png>
 Package pdftex.def Info: ./imagenes/pdl.png  used on input line 926.
@@ -1874,7 +1874,7 @@ Package marginnote Info: Margin note 27.2 is on absolute page 27 on input line
 Package marginnote Info: right page because not two side mode on input line 986
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 986.
-<./imagenes/graficasLegendre2.png, id=617, 596.2275pt x 331.7193pt>
+<./imagenes/graficasLegendre2.png, id=622, 596.2275pt x 331.7193pt>
 File: ./imagenes/graficasLegendre2.png Graphic file (type png)
 <use ./imagenes/graficasLegendre2.png>
 Package pdftex.def Info: ./imagenes/graficasLegendre2.png  used on input line 9
@@ -1885,7 +1885,7 @@ Package marginnote Info: Margin note 27.3 is on absolute page 28 on input line
 Package marginnote Info: right page because not two side mode on input line 997
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 997.
-<./imagenes/graficasLegendre3.png, id=618, 1169.87062pt x 360.59718pt>
+<./imagenes/graficasLegendre3.png, id=623, 1169.87062pt x 360.59718pt>
 File: ./imagenes/graficasLegendre3.png Graphic file (type png)
 <use ./imagenes/graficasLegendre3.png>
 Package pdftex.def Info: ./imagenes/graficasLegendre3.png  used on input line 9
@@ -1917,7 +1917,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1054--1054
 \OT1/cmr/m/n/8 co-rres-pon-dien-tes es-pa-cios
  []
 
-<./imagenes/legendre2y3.png, id=630, 950.3505pt x 563.706pt>
+<./imagenes/legendre2y3.png, id=635, 950.3505pt x 563.706pt>
 File: ./imagenes/legendre2y3.png Graphic file (type png)
 <use ./imagenes/legendre2y3.png>
 Package pdftex.def Info: ./imagenes/legendre2y3.png  used on input line 1055.
@@ -1962,7 +1962,18 @@ Package marginnote Info: Margin note 29.1 is on absolute page 30 on input line
 Package marginnote Info: right page because not two side mode on input line 95.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 95.
-<./imagenes/EsquemaGral.png, id=651, 600.74437pt x 307.1475pt>
+
+Underfull \hbox (badness 2126) in paragraph at lines 95--95
+[] \OT1/cmr/m/n/8 y [], dis-cre-tiz^^Sando-las,
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 95--95
+\OT1/cmr/m/n/8 llas uni-for-mes $\OMS/cmsy/m/n/8 P[]$ \OT1/cmr/m/n/8 y $\OMS/cm
+sy/m/n/8 P \OT1/cmr/m/n/8 =
+ []
+
+<./imagenes/EsquemaGral.png, id=656, 600.74437pt x 307.1475pt>
 File: ./imagenes/EsquemaGral.png Graphic file (type png)
 <use ./imagenes/EsquemaGral.png>
 Package pdftex.def Info: ./imagenes/EsquemaGral.png  used on input line 96.
@@ -2021,7 +2032,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 702.
 
 [31]
-<./imagenes/1En_2.png, id=792, 138.2766pt x 160.9212pt>
+<./imagenes/1En_2.png, id=797, 138.2766pt x 160.9212pt>
 File: ./imagenes/1En_2.png Graphic file (type png)
 <use ./imagenes/1En_2.png>
 Package pdftex.def Info: ./imagenes/1En_2.png  used on input line 715.
@@ -2059,7 +2070,7 @@ Package marginnote Info: Margin note 39.1 is on absolute page 39 on input line
 Package marginnote Info: right page because not two side mode on input line 102
 7.
 Package marginnote Info: xpos seems to be 72.0pt on input line 1027.
-<./imagenes/5Dic_1.png, id=849, 609.02531pt x 645.16031pt>
+<./imagenes/5Dic_1.png, id=854, 609.02531pt x 645.16031pt>
 File: ./imagenes/5Dic_1.png Graphic file (type png)
 <use ./imagenes/5Dic_1.png>
 Package pdftex.def Info: ./imagenes/5Dic_1.png  used on input line 1028.
@@ -2079,7 +2090,7 @@ Underfull \hbox (badness 1320) in paragraph at lines 1055--1055
 \OT1/cmr/m/n/8 de-sa-rro-lla-da, fi-ja-da una di-
  []
 
-<./imagenes/5Dic_2.png, id=850, 595.47469pt x 636.87938pt>
+<./imagenes/5Dic_2.png, id=855, 595.47469pt x 636.87938pt>
 File: ./imagenes/5Dic_2.png Graphic file (type png)
 <use ./imagenes/5Dic_2.png>
 Package pdftex.def Info: ./imagenes/5Dic_2.png  used on input line 1056.
@@ -2101,7 +2112,7 @@ Package marginnote Info: Margin note 41.1 is on absolute page 42 on input line
 Package marginnote Info: right page because not two side mode on input line 141
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 141.
-<./imagenes/10Dic_1.png, id=866, 1195.46625pt x 663.98062pt>
+<./imagenes/10Dic_1.png, id=871, 1195.46625pt x 663.98062pt>
 File: ./imagenes/10Dic_1.png Graphic file (type png)
 <use ./imagenes/10Dic_1.png>
 Package pdftex.def Info: ./imagenes/10Dic_1.png  used on input line 142.
@@ -2109,7 +2120,7 @@ Package pdftex.def Info: ./imagenes/10Dic_1.png  used on input line 142.
 [37
 
 ]
-<./imagenes/n_parImpar.png, id=871, 154.4169pt x 106.2369pt>
+<./imagenes/n_parImpar.png, id=877, 154.4169pt x 106.2369pt>
 File: ./imagenes/n_parImpar.png Graphic file (type png)
 <use ./imagenes/n_parImpar.png>
 Package pdftex.def Info: ./imagenes/n_parImpar.png  used on input line 150.
@@ -2119,7 +2130,7 @@ Package marginnote Info: Margin note 42.1 is on absolute page 42 on input line
 Package marginnote Info: right page because not two side mode on input line 204
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 204.
-<./imagenes/sim_antisim.png, id=872, 542.9886pt x 186.4566pt>
+<./imagenes/sim_antisim.png, id=878, 542.9886pt x 186.4566pt>
 File: ./imagenes/sim_antisim.png Graphic file (type png)
 <use ./imagenes/sim_antisim.png>
 Package pdftex.def Info: ./imagenes/sim_antisim.png  used on input line 205.
@@ -2130,7 +2141,7 @@ Underfull \vbox (badness 10000) detected at line 326
  []
 
 [39]
-<./imagenes/simetria1.png, id=907, 361.35pt x 74.9199pt>
+<./imagenes/simetria1.png, id=912, 361.35pt x 74.9199pt>
 File: ./imagenes/simetria1.png Graphic file (type png)
 <use ./imagenes/simetria1.png>
 Package pdftex.def Info: ./imagenes/simetria1.png  used on input line 330.
@@ -2145,7 +2156,7 @@ Underfull \vbox (badness 10000) detected at line 547
  []
 
 [41]
-<./imagenes/simetria2.png, id=944, 347.8596pt x 61.1886pt>
+<./imagenes/simetria2.png, id=949, 347.8596pt x 61.1886pt>
 File: ./imagenes/simetria2.png Graphic file (type png)
 <use ./imagenes/simetria2.png>
 Package pdftex.def Info: ./imagenes/simetria2.png  used on input line 551.
@@ -2224,7 +2235,7 @@ Overfull \hbox (40.39531pt too wide) detected at line 38
 10 ;
  []
 
-<./imagenes/bases/BLD_dimensión 2 (figura 0).png, id=1026, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 2 (figura 0).png, id=1031, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 2 (figura 0).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 2 (figura 0).png>
@@ -2237,7 +2248,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 105--106
  []
 
 [47]
-<./imagenes/bases/BLD_dimensión 3 (figura 0).png, id=1033, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 3 (figura 0).png, id=1038, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 3 (figura 0).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 3 (figura 0).png>
@@ -2249,7 +2260,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 110--111
  [][] 
  []
 
-<./imagenes/bases/BLD_dimensión 4 (figura 0).png, id=1034, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 4 (figura 0).png, id=1039, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 4 (figura 0).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 4 (figura 0).png>
@@ -2263,7 +2274,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 115--116
 
 [48 <./imagenes/bases/BLD_dimensión 2 (figura 0).png> <./imagenes/bases/BLD_di
 mensión 3 (figura 0).png>]
-<./imagenes/bases/BLD_dimensión 5 (figura 0).png, id=1043, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 5 (figura 0).png, id=1048, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 5 (figura 0).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 5 (figura 0).png>
@@ -2275,7 +2286,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 120--121
  [][] 
  []
 
-<./imagenes/bases/BLD_dimensión 5 (figura 1).png, id=1044, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 5 (figura 1).png, id=1049, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 5 (figura 1).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 5 (figura 1).png>
@@ -2289,7 +2300,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 126--127
 
 [49 <./imagenes/bases/BLD_dimensión 4 (figura 0).png> <./imagenes/bases/BLD_di
 mensión 5 (figura 0).png>]
-<./imagenes/bases/BLD_dimensión 6 (figura 0).png, id=1053, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 6 (figura 0).png, id=1058, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 6 (figura 0).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 6 (figura 0).png>
@@ -2301,7 +2312,7 @@ Overfull \hbox (10.01584pt too wide) in paragraph at lines 131--132
  [][] 
  []
 
-<./imagenes/bases/BLD_dimensión 6 (figura 1).png, id=1054, 925.056pt x 635.976
+<./imagenes/bases/BLD_dimensión 6 (figura 1).png, id=1059, 925.056pt x 635.976
 pt>
 File: ./imagenes/bases/BLD_dimensión 6 (figura 1).png Graphic file (type png)
 <use ./imagenes/bases/BLD_dimensión 6 (figura 1).png>
@@ -2320,7 +2331,7 @@ Package marginnote Info: Margin note 55.1 is on absolute page 55 on input line
 Package marginnote Info: right page because not two side mode on input line 31.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 31.
-<./imagenes/7En_1.png, id=1065, 444.15938pt x 181.42781pt>
+<./imagenes/7En_1.png, id=1070, 444.15938pt x 181.42781pt>
 File: ./imagenes/7En_1.png Graphic file (type png)
 <use ./imagenes/7En_1.png>
 Package pdftex.def Info: ./imagenes/7En_1.png  used on input line 32.
@@ -2367,7 +2378,7 @@ Package marginnote Info: Margin note 62.1 is on absolute page 62 on input line
 Package marginnote Info: right page because not two side mode on input line 129
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 129.
-<./imagenes/graficaX_31Oct.png, id=1241, 403.9893pt x 298.4751pt>
+<./imagenes/graficaX_31Oct.png, id=1246, 403.9893pt x 298.4751pt>
 File: ./imagenes/graficaX_31Oct.png Graphic file (type png)
 <use ./imagenes/graficaX_31Oct.png>
 Package pdftex.def Info: ./imagenes/graficaX_31Oct.png  used on input line 130.
@@ -2395,7 +2406,7 @@ Underfull \hbox (badness 7540) in paragraph at lines 231--231
 ^^E[](\OML/cmm/m/it/8 x\OT1/cmr/m/n/8 )$ y
  []
 
-<./imagenes/parteAfinCuadr.png, id=1258, 578.8827pt x 353.4003pt>
+<./imagenes/parteAfinCuadr.png, id=1263, 578.8827pt x 353.4003pt>
 File: ./imagenes/parteAfinCuadr.png Graphic file (type png)
 <use ./imagenes/parteAfinCuadr.png>
 Package pdftex.def Info: ./imagenes/parteAfinCuadr.png  used on input line 232.
@@ -2413,7 +2424,7 @@ Package marginnote Info: Margin note 66.1 is on absolute page 66 on input line
 Package marginnote Info: right page because not two side mode on input line 420
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 420.
-<./imagenes/borrador.png, id=1290, 2007.5pt x 941.5175pt>
+<./imagenes/borrador.png, id=1294, 2007.5pt x 941.5175pt>
 File: ./imagenes/borrador.png Graphic file (type png)
 <use ./imagenes/borrador.png>
 Package pdftex.def Info: ./imagenes/borrador.png  used on input line 421.
@@ -2428,7 +2439,7 @@ Package marginnote Info: Margin note 66.2 is on absolute page 67 on input line
 Package marginnote Info: right page because not two side mode on input line 489
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 489.
-<./imagenes/2Dic_4.png, id=1296, 1105.731pt x 400.3758pt>
+<./imagenes/2Dic_4.png, id=1300, 1105.731pt x 400.3758pt>
 File: ./imagenes/2Dic_4.png Graphic file (type png)
 <use ./imagenes/2Dic_4.png>
 Package pdftex.def Info: ./imagenes/2Dic_4.png  used on input line 490.
@@ -2439,7 +2450,7 @@ Package marginnote Info: Margin note 67.1 is on absolute page 67 on input line
 Package marginnote Info: right page because not two side mode on input line 501
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 501.
-<./imagenes/2Dic_3.png, id=1306, 312.6882pt x 170.0754pt>
+<./imagenes/2Dic_3.png, id=1310, 312.6882pt x 170.0754pt>
 File: ./imagenes/2Dic_3.png Graphic file (type png)
 <use ./imagenes/2Dic_3.png>
 Package pdftex.def Info: ./imagenes/2Dic_3.png  used on input line 502.
@@ -2460,7 +2471,7 @@ Package marginnote Info: Margin note 67.2 is on absolute page 68 on input line
 Package marginnote Info: right page because not two side mode on input line 576
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 576.
-<./imagenes/6Dic_0.png, id=1312, 1134.639pt x 605.6226pt>
+<./imagenes/6Dic_0.png, id=1316, 1134.639pt x 605.6226pt>
 File: ./imagenes/6Dic_0.png Graphic file (type png)
 <use ./imagenes/6Dic_0.png>
 Package pdftex.def Info: ./imagenes/6Dic_0.png  used on input line 577.
@@ -2471,7 +2482,7 @@ Package marginnote Info: Margin note 68.1 is on absolute page 68 on input line
 Package marginnote Info: right page because not two side mode on input line 588
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 588.
-<./imagenes/6Dic_1.png, id=1327, 1123.0758pt x 624.4128pt>
+<./imagenes/6Dic_1.png, id=1331, 1123.0758pt x 624.4128pt>
 File: ./imagenes/6Dic_1.png Graphic file (type png)
 <use ./imagenes/6Dic_1.png>
 Package pdftex.def Info: ./imagenes/6Dic_1.png  used on input line 589.
@@ -2481,7 +2492,7 @@ Package marginnote Info: Margin note 68.2 is on absolute page 68 on input line
 Package marginnote Info: right page because not two side mode on input line 598
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 598.
-<./imagenes/6Dic_2.png, id=1328, 1149.093pt x 592.614pt>
+<./imagenes/6Dic_2.png, id=1332, 1149.093pt x 592.614pt>
 File: ./imagenes/6Dic_2.png Graphic file (type png)
 <use ./imagenes/6Dic_2.png>
 Package pdftex.def Info: ./imagenes/6Dic_2.png  used on input line 599.
@@ -2491,7 +2502,7 @@ Package marginnote Info: Margin note 68.3 is on absolute page 69 on input line
 Package marginnote Info: right page because not two side mode on input line 608
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 608.
-<./imagenes/6Dic_3.png, id=1329, 1121.6304pt x 599.841pt>
+<./imagenes/6Dic_3.png, id=1333, 1121.6304pt x 599.841pt>
 File: ./imagenes/6Dic_3.png Graphic file (type png)
 <use ./imagenes/6Dic_3.png>
 Package pdftex.def Info: ./imagenes/6Dic_3.png  used on input line 609.
@@ -2502,7 +2513,7 @@ Package marginnote Info: Margin note 69.1 is on absolute page 69 on input line
 Package marginnote Info: right page because not two side mode on input line 618
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 618.
-<./imagenes/6Dic_4.png, id=1340, 1134.639pt x 624.4128pt>
+<./imagenes/6Dic_4.png, id=1344, 1134.639pt x 624.4128pt>
 File: ./imagenes/6Dic_4.png Graphic file (type png)
 <use ./imagenes/6Dic_4.png>
 Package pdftex.def Info: ./imagenes/6Dic_4.png  used on input line 619.
@@ -2513,7 +2524,7 @@ Package marginnote Info: Margin note 70.1 is on absolute page 70 on input line
 Package marginnote Info: right page because not two side mode on input line 685
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 685.
-<./imagenes/2Dic_1.png, id=1352, 561.5379pt x 294.8616pt>
+<./imagenes/2Dic_1.png, id=1356, 561.5379pt x 294.8616pt>
 File: ./imagenes/2Dic_1.png Graphic file (type png)
 <use ./imagenes/2Dic_1.png>
 Package pdftex.def Info: ./imagenes/2Dic_1.png  used on input line 686.
@@ -2555,7 +2566,7 @@ Underfull \hbox (badness 1062) in paragraph at lines 720--720
 \OT1/cmr/m/n/8 la rec-ta cu-ya dis-cre-ti-za-ci^^Son
  []
 
-<./imagenes/2Dic_2.png, id=1357, 569.4876pt x 294.8616pt>
+<./imagenes/2Dic_2.png, id=1361, 569.4876pt x 294.8616pt>
 File: ./imagenes/2Dic_2.png Graphic file (type png)
 <use ./imagenes/2Dic_2.png>
 Package pdftex.def Info: ./imagenes/2Dic_2.png  used on input line 721.
@@ -2565,7 +2576,7 @@ Package pdftex.def Info: ./imagenes/2Dic_2.png  used on input line 721.
 ]
 (./espectral.tex
 Cap\'{\i }tulo 6.
-<./imagenes/oscil1.png, id=1388, 688.0104pt x 726.3135pt>
+<./imagenes/oscil1.png, id=1392, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil1.png Graphic file (type png)
 <use ./imagenes/oscil1.png>
 Package pdftex.def Info: ./imagenes/oscil1.png  used on input line 19.
@@ -2575,7 +2586,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 17--33
 []$[]$  $[]$ 
  []
 
-<./imagenes/oscil2.png, id=1389, 688.0104pt x 726.3135pt>
+<./imagenes/oscil2.png, id=1393, 688.0104pt x 726.3135pt>
 File: ./imagenes/oscil2.png Graphic file (type png)
 <use ./imagenes/oscil2.png>
 Package pdftex.def Info: ./imagenes/oscil2.png  used on input line 54.
@@ -2593,7 +2604,7 @@ Overfull \hbox (1.22112pt too wide) in paragraph at lines 35--57
 [69
 
  <./imagenes/oscil1.png>]
-<./imagenes/oscil3.png, id=1396, 688.0104pt x 346.1733pt>
+<./imagenes/oscil3.png, id=1400, 688.0104pt x 346.1733pt>
 File: ./imagenes/oscil3.png Graphic file (type png)
 <use ./imagenes/oscil3.png>
 Package pdftex.def Info: ./imagenes/oscil3.png  used on input line 77.
@@ -2603,7 +2614,7 @@ Overfull \hbox (52.80943pt too wide) in paragraph at lines 77--78
 [][] 
  []
 
-<./imagenes/oscil4.png, id=1400, 597.6729pt x 333.1647pt>
+<./imagenes/oscil4.png, id=1404, 597.6729pt x 333.1647pt>
 File: ./imagenes/oscil4.png Graphic file (type png)
 <use ./imagenes/oscil4.png>
 Package pdftex.def Info: ./imagenes/oscil4.png  used on input line 100.
@@ -2628,7 +2639,7 @@ Package marginnote Info: Margin note 75.1 is on absolute page 75 on input line
 Package marginnote Info: right page because not two side mode on input line 132
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 132.
-<./imagenes/hip_0,1.png, id=1410, 615.0177pt x 234.8775pt>
+<./imagenes/hip_0,1.png, id=1414, 615.0177pt x 234.8775pt>
 File: ./imagenes/hip_0,1.png Graphic file (type png)
 <use ./imagenes/hip_0,1.png>
 Package pdftex.def Info: ./imagenes/hip_0,1.png  used on input line 133.
@@ -2643,7 +2654,7 @@ Package marginnote Info: Margin note 75.2 is on absolute page 76 on input line
 Package marginnote Info: right page because not two side mode on input line 143
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 143.
-<./imagenes/hip_2,3.png, id=1411, 618.6312pt x 238.491pt>
+<./imagenes/hip_2,3.png, id=1415, 618.6312pt x 238.491pt>
 File: ./imagenes/hip_2,3.png Graphic file (type png)
 <use ./imagenes/hip_2,3.png>
 Package pdftex.def Info: ./imagenes/hip_2,3.png  used on input line 144.
@@ -2659,7 +2670,7 @@ Package marginnote Info: Margin note 76.1 is on absolute page 76 on input line
 Package marginnote Info: right page because not two side mode on input line 154
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 154.
-<./imagenes/hip_4,5.png, id=1421, 612.8496pt x 226.2051pt>
+<./imagenes/hip_4,5.png, id=1425, 612.8496pt x 226.2051pt>
 File: ./imagenes/hip_4,5.png Graphic file (type png)
 <use ./imagenes/hip_4,5.png>
 Package pdftex.def Info: ./imagenes/hip_4,5.png  used on input line 155.
@@ -2721,7 +2732,7 @@ Underfull \hbox (badness 5203) in paragraph at lines 147--147
 \OT1/cmr/m/n/8 a $\OML/cmm/m/it/8 z[]$ \OT1/cmr/m/n/8 con-si-go mis-mo se
  []
 
-<./imagenes/raices_unidad.png, id=1453, 626.5809pt x 326.6604pt>
+<./imagenes/raices_unidad.png, id=1457, 626.5809pt x 326.6604pt>
 File: ./imagenes/raices_unidad.png Graphic file (type png)
 <use ./imagenes/raices_unidad.png>
 Package pdftex.def Info: ./imagenes/raices_unidad.png  used on input line 148.
@@ -2737,7 +2748,7 @@ Package marginnote Info: Margin note 79.1 is on absolute page 79 on input line
 Package marginnote Info: right page because not two side mode on input line 247
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 247.
-<./imagenes/tiempo_freq.png, id=1471, 414.1071pt x 119.2455pt>
+<./imagenes/tiempo_freq.png, id=1474, 414.1071pt x 119.2455pt>
 File: ./imagenes/tiempo_freq.png Graphic file (type png)
 <use ./imagenes/tiempo_freq.png>
 Package pdftex.def Info: ./imagenes/tiempo_freq.png  used on input line 267.
@@ -2748,7 +2759,7 @@ Package marginnote Info: Margin note 80.1 is on absolute page 81 on input line
 Package marginnote Info: right page because not two side mode on input line 362
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 362.
-<./imagenes/construccion_Bn.png, id=1484, 782.925pt x 402.00188pt>
+<./imagenes/construccion_Bn.png, id=1488, 782.925pt x 402.00188pt>
 File: ./imagenes/construccion_Bn.png Graphic file (type png)
 <use ./imagenes/construccion_Bn.png>
 Package pdftex.def Info: ./imagenes/construccion_Bn.png  used on input line 363
@@ -2770,7 +2781,7 @@ Package marginnote Info: Margin note 82.1 is on absolute page 83 on input line
 Package marginnote Info: right page because not two side mode on input line 526
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 526.
-<./imagenes/ejFrecuencia_1.png, id=1507, 778.3479pt x 367.8543pt>
+<./imagenes/ejFrecuencia_1.png, id=1510, 778.3479pt x 367.8543pt>
 File: ./imagenes/ejFrecuencia_1.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_1.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_1.png  used on input line 527.
@@ -2782,7 +2793,7 @@ Package marginnote Info: Margin note 83.1 is on absolute page 83 on input line
 Package marginnote Info: right page because not two side mode on input line 547
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 547.
-<./imagenes/ejFrecuencia_2.png, id=1516, 755.9442pt x 353.4003pt>
+<./imagenes/ejFrecuencia_2.png, id=1519, 755.9442pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_2.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_2.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_2.png  used on input line 548.
@@ -2793,7 +2804,7 @@ Package marginnote Info: Margin note 83.2 is on absolute page 83 on input line
 Package marginnote Info: right page because not two side mode on input line 556
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 556.
-<./imagenes/ejFrecuencia_3.png, id=1517, 773.289pt x 353.4003pt>
+<./imagenes/ejFrecuencia_3.png, id=1520, 773.289pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_3.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_3.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_3.png  used on input line 557.
@@ -2804,7 +2815,7 @@ Package marginnote Info: Margin note 83.3 is on absolute page 84 on input line
 Package marginnote Info: right page because not two side mode on input line 565
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 565.
-<./imagenes/ejFrecuencia_4.png, id=1518, 763.8939pt x 353.4003pt>
+<./imagenes/ejFrecuencia_4.png, id=1521, 763.8939pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_4.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_4.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_4.png  used on input line 566.
@@ -2817,7 +2828,7 @@ Package marginnote Info: Margin note 84.1 is on absolute page 84 on input line
 Package marginnote Info: right page because not two side mode on input line 575
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 575.
-<./imagenes/ejFrecuencia_5.png, id=1529, 779.7933pt x 353.4003pt>
+<./imagenes/ejFrecuencia_5.png, id=1532, 779.7933pt x 353.4003pt>
 File: ./imagenes/ejFrecuencia_5.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_5.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_5.png  used on input line 576.
@@ -2828,7 +2839,7 @@ Package marginnote Info: Margin note 84.2 is on absolute page 84 on input line
 Package marginnote Info: right page because not two side mode on input line 590
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 590.
-<./imagenes/ejFrecuencia_6.png, id=1531, 791.3565pt x 354.123pt>
+<./imagenes/ejFrecuencia_6.png, id=1534, 791.3565pt x 354.123pt>
 File: ./imagenes/ejFrecuencia_6.png Graphic file (type png)
 <use ./imagenes/ejFrecuencia_6.png>
 Package pdftex.def Info: ./imagenes/ejFrecuencia_6.png  used on input line 591.
@@ -2855,7 +2866,7 @@ Package marginnote Info: Margin note 86.1 is on absolute page 87 on input line
 Package marginnote Info: right page because not two side mode on input line 213
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 213.
-<./imagenes/desfase_ejemplo.png, id=1571, 773.289pt x 377.2494pt>
+<./imagenes/desfase_ejemplo.png, id=1574, 773.289pt x 377.2494pt>
 File: ./imagenes/desfase_ejemplo.png Graphic file (type png)
 <use ./imagenes/desfase_ejemplo.png>
 Package pdftex.def Info: ./imagenes/desfase_ejemplo.png  used on input line 214
@@ -2867,7 +2878,7 @@ Package marginnote Info: Margin note 87.1 is on absolute page 88 on input line
 Package marginnote Info: right page because not two side mode on input line 309
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 309.
-<./imagenes/muestreo_coseno.png, id=1584, 630.10406pt x 313.9228pt>
+<./imagenes/muestreo_coseno.png, id=1586, 630.10406pt x 313.9228pt>
 File: ./imagenes/muestreo_coseno.png Graphic file (type png)
 <use ./imagenes/muestreo_coseno.png>
 Package pdftex.def Info: ./imagenes/muestreo_coseno.png  used on input line 310
@@ -2888,7 +2899,7 @@ Package marginnote Info: Margin note 89.1 is on absolute page 90 on input line
 Package marginnote Info: right page because not two side mode on input line 517
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 517.
-<./imagenes/20Mar23_1.png, id=1627, 319.1925pt x 153.4533pt>
+<./imagenes/20Mar23_1.png, id=1629, 319.1925pt x 153.4533pt>
 File: ./imagenes/20Mar23_1.png Graphic file (type png)
 <use ./imagenes/20Mar23_1.png>
 Package pdftex.def Info: ./imagenes/20Mar23_1.png  used on input line 518.
@@ -2923,7 +2934,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 835--839
 
  []
 
-[89]) (./Teoria.tex [90]
+[89] (./espectros.tex [90]
+Cap\'{\i }tulo 7.
+Package marginnote Info: Margin note 95.1 is on absolute page 96 on input line 
+9.
+Package marginnote Info: right page because not two side mode on input line 9.
+Package marginnote Info: xpos seems to be 72.0pt on input line 9.
+<./imagenes/ejemplo_analisisEspectrales.png, id=1729, 420.1296pt x 481.0773pt>
+File: ./imagenes/ejemplo_analisisEspectrales.png Graphic file (type png)
+<use ./imagenes/ejemplo_analisisEspectrales.png>
+Package pdftex.def Info: ./imagenes/ejemplo_analisisEspectrales.png  used on in
+put line 10.
+(pdftex.def)             Requested size: 420.12857pt x 481.07613pt.
+
+Overfull \hbox (60.12857pt too wide) in paragraph at lines 10--11
+ [][] 
+ []
+
+)) (./Teoria.tex [91
+
+]
+Overfull \vbox (45.17609pt too high) has occurred while \output is active []
+
+
+[92 <./imagenes/ejemplo_analisisEspectrales.png>]
 Ap\'{e}ndice A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--15
@@ -2934,15 +2968,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--15
 Underfull \vbox (badness 10000) detected at line 43
  []
 
-[91
+[93
 
-] [92]) (./apendice_def.tex
-Package marginnote Info: Margin note 97.1 is on absolute page 97 on input line 
+] [94]) (./apendice_def.tex
+Package marginnote Info: Margin note 99.1 is on absolute page 99 on input line 
 16.
 Package marginnote Info: right page because not two side mode on input line 16.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 16.
- [93]
+ [95]
 Underfull \hbox (badness 3826) in paragraph at lines 58--58
 []$[]$ \OT1/cmr/m/n/10 Pue-de con-sul-tar la
  []
@@ -2952,7 +2986,7 @@ Underfull \hbox (badness 3291) in paragraph at lines 90--90
 \OT1/cmr/m/n/10 de es-pa-cio m^^Setri-co en
  []
 
-<./imagenes/estructuras.png, id=1775, 455.7828pt x 120.6909pt>
+<./imagenes/estructuras.png, id=1789, 455.7828pt x 120.6909pt>
 File: ./imagenes/estructuras.png Graphic file (type png)
 <use ./imagenes/estructuras.png>
 Package pdftex.def Info: ./imagenes/estructuras.png  used on input line 109.
@@ -2962,7 +2996,7 @@ Overfull \hbox (4.62674pt too wide) in paragraph at lines 109--116
  [] 
  []
 
-[94 <./imagenes/estructuras.png>]) (./apendice_hiperpl.tex
+[96 <./imagenes/estructuras.png>]) (./apendice_hiperpl.tex
 Underfull \hbox (badness 10000) in paragraph at lines 34--34
 []$[]$ \OT1/cmr/m/n/10 Por ``fun-cio-nal''
  []
@@ -2972,7 +3006,7 @@ Underfull \hbox (badness 1546) in paragraph at lines 34--34
 \OT1/cmr/m/n/10 for-ma-ci^^Son li-neal de un
  []
 
-[95]) (./apendice_proyOrt.tex
+[97]) (./apendice_proyOrt.tex
 Underfull \hbox (badness 1406) in paragraph at lines 21--21
 \OT1/cmr/m/n/10 es un es-pa-cio vec-to-rial
  []
@@ -3002,16 +3036,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--48
 
  []
 
-[96]
+[98]
 
-LaTeX Warning: Reference `teo: Kol 6, p.149' on page 97 undefined on input line
+LaTeX Warning: Reference `teo: Kol 6, p.149' on page 99 undefined on input line
  150.
 
 
 Underfull \vbox (badness 10000) detected at line 157
  []
 
-[97] [98]
+[99] [100]
 Underfull \hbox (badness 10000) in paragraph at lines 250--254
 
  []
@@ -3021,12 +3055,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--20
 
  []
 
-[99]
+[101]
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-<./imagenes/GS_fig.png, id=1857, 557.08125pt x 547.2947pt>
+<./imagenes/GS_fig.png, id=1873, 557.08125pt x 547.2947pt>
 File: ./imagenes/GS_fig.png Graphic file (type png)
 <use ./imagenes/GS_fig.png>
 Package pdftex.def Info: ./imagenes/GS_fig.png  used on input line 86.
@@ -3036,18 +3070,18 @@ Overfull \hbox (29.26997pt too wide) in paragraph at lines 86--88
 [][] 
  []
 
-[100]
+[102]
 
 LaTeX Warning: Reference `Bases ortonormales de espacios de Hilbert' on page 10
-1 undefined on input line 150.
+3 undefined on input line 150.
 
-) (./apendice_anguloPuntoPlano.tex [101 <./imagenes/GS_fig.png>]
-Package marginnote Info: Margin note 106.1 is on absolute page 106 on input lin
+) (./apendice_anguloPuntoPlano.tex [103 <./imagenes/GS_fig.png>]
+Package marginnote Info: Margin note 108.1 is on absolute page 108 on input lin
 e 42.
 Package marginnote Info: right page because not two side mode on input line 42.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 42.
-<./imagenes/coseno.png, id=1879, 622.57594pt x 331.99031pt>
+<./imagenes/coseno.png, id=1894, 622.57594pt x 331.99031pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 43.
@@ -3056,22 +3090,22 @@ Package pdftex.def Info: ./imagenes/coseno.png  used on input line 43.
 Underfull \vbox (badness 10000) detected at line 105
  []
 
-[102 <./imagenes/coseno.png>] [103]
-Package marginnote Info: Margin note 108.1 is on absolute page 108 on input lin
+[104 <./imagenes/coseno.png>] [105]
+Package marginnote Info: Margin note 110.1 is on absolute page 110 on input lin
 e 219.
 Package marginnote Info: right page because not two side mode on input line 219
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 219.
-<./imagenes/18Sept_1.png, id=1904, 368.0952pt x 222.8325pt>
+<./imagenes/18Sept_1.png, id=1920, 368.0952pt x 222.8325pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
 Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 220.
 (pdftex.def)             Requested size: 331.28261pt x 200.5474pt.
- [104 <./imagenes/18Sept_1.png>]))
-(./Notacion.tex [105]
+ [106 <./imagenes/18Sept_1.png>]))
+(./Notacion.tex [107]
 Ap\'{e}ndice B.
 
-LaTeX Warning: Citation 'wolfram' on page 106 undefined on input line 37.
+LaTeX Warning: Citation 'wolfram' on page 108 undefined on input line 37.
 
 
 Overfull \hbox (60.08105pt too wide) in paragraph at lines 10--38
@@ -3216,18 +3250,18 @@ Overfull \hbox (69.77863pt too wide) in paragraph at lines 49--59
 [][] 
  []
 
-[106
+[108
 
-] [107])
+] [109])
 Overfull \hbox (16.98747pt too wide) in paragraph at lines 38--38
 []\OT1/cmr/m/it/10 Cosine si-mi-la-rity\OT1/cmr/m/n/10 . []$\OT1/cmtt/m/n/10 ht
 tps : / / en . wikipedia . org / wiki / Cosine _ similarity$[]\OT1/cmr/m/n/10 .
 
  []
 
-[108
+[110
 
-] [109] (./TesisAmelie.aux
+] [111] (./TesisAmelie.aux
 LaTeX Info: Redefining \sptext on input line 27.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
@@ -3239,7 +3273,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
-(rerunfilecheck)             Checksum: C12532512B341716DCB5EEFE9C6FB986;14664.
+(rerunfilecheck)             Checksum: 95C4099BBA673927D1E6E83FC8EC10CB;14939.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                TesisAmelie
@@ -3254,10 +3288,10 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 ### simple group (level 1) entered at line 788 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44286 strings out of 476025
- 875339 string characters out of 5796533
+ 44311 strings out of 476025
+ 876023 string characters out of 5796533
  1899388 words of memory out of 5000000
- 63230 multiletter control sequences out of 15000+600000
+ 63247 multiletter control sequences out of 15000+600000
  533376 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  106i,17n,107p,1912b,2323s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3293,10 +3327,10 @@ nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (111 pages, 6734172 bytes).
+Output written on TesisAmelie.pdf (113 pages, 7251011 bytes).
 PDF statistics:
- 2225 PDF objects out of 2487 (max. 8388607)
- 1837 compressed objects within 19 object streams
- 641 named destinations out of 1000 (max. 500000)
- 861 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2242 PDF objects out of 2487 (max. 8388607)
+ 1850 compressed objects within 19 object streams
+ 645 named destinations out of 1000 (max. 500000)
+ 874 words of extra memory for PDF output out of 10000 (max. 10000000)
 
