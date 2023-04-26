@@ -1,4 +1,5 @@
 \section{La transformada discreta de Fourier}
+\label{sec: TDF}
 
 En esta sección vamos a dar la definición usual de 
 las bases de Fourier complejas y reales, que son
@@ -500,6 +501,7 @@ menores a $n$.
 \end{nota}
 
 \begin{ejemplo}
+\label{ej: DFT1}
 Consideremos a la señal 
 \begin{equation}
 \label{eq2: 10ab}
@@ -530,10 +532,13 @@ se muestran los coeficientes de $x$ respecto a $\cali{F}_{7}$.
 Redondeando los coeficientes, 
 se tiene la siguiente descomposición de $x$;
 
-\[
+\begin{equation}
+\label{eq: analisis x TDF}
 x = 4.12 c_{0} - 8.76c_{1} -7.35s_{1}+
 4.77c_{2}-10s_{2}+0.14c_{3}+9.91s_{3}.
-\]
+\end{equation}
+
+\noindent
 A continuación mostramos las gráficas
 de los sinusoides que fueron discretizados
 para obtener los vectores de frecuencia
@@ -590,5 +595,135 @@ al vector $x$ \eqref{eq2: 10ab}.
 	\centering
 	\includegraphics[scale=0.44]{ejFrecuencia_6} 
 \end{figure}	
+\final
+\end{ejemplo}
+
+Para terminar, digamos en concreto qué se entiende
+por el espectro que resulta de usar la 
+versión real de la transformada
+discreta de fourier para analizar una señal finita.
+
+En la definición 
+$\cali{F}_{n}$ de la base dada en 
+\ref{prop: base de fourier version real}, observe que, 
+por cada frecuencia entera $\omega$ considerada,
+aparecen uno o dos sinusoides (discretizados) con tal frecuencia:
+
+
+\begin{table}[ht]
+\sidecaption{Dimensión $n = 2M-1$ impar}
+\centering
+  \begin{tabular}{ l | c | c | c | c }
+    \hline
+    Frecuencia & $0$ & $1$ & $\ldots$ & $M-1$  \\ \hline
+    Cant. sinusoides  & $1$ & $2$ & $\ldots$ & $2$ \\
+    \hline
+  \end{tabular}
+\label{Tab: frecuencias TDF n impar}
+\end{table}
+
+
+\begin{table}[ht]
+\sidecaption{Dimensión $n = 2M$ par}
+\centering
+  \begin{tabular}{ l | c | c | c | c | c}
+    \hline
+    Frecuencia & $0$ & $1$ & $\ldots$ & $M-1$ & $M$  \\ \hline
+    Cant. sinusoides  & $1$ & $2$ & $\ldots$ & $2$ & $1$ \\
+    \hline
+  \end{tabular}
+\label{Tab: frecuencias TDF n par}
+\end{table}
+
+\noindent
+Por ser $\cali{F}_{n}$ una BON de $\IR^{n}$, se vale la
+identidad de Parseval, luego, para toda
+señal $x \in \IR^{n}$,
+
+\begin{equation}
+\label{eq0: 25Ap}
+||x||^{2} = \langle x , c_{n,0} \rangle^{2}+
+\suma{\omega=0}{M-1}{(\langle x , c_{n,\omega} \rangle^{2} + 
+\langle x , s_{n,\omega} \rangle^{2})}
+\hspace{0.2cm} \textit{si n es impar} 
+\end{equation}
+y
+\begin{equation}
+\label{eq1: 25Ap}
+||x||^{2} = \langle x , c_{n,0} \rangle^{2}+
+\suma{\omega=0}{M-1}{(\langle x , c_{n,\omega} \rangle^{2} + 
+\langle x , s_{n,\omega} \rangle^{2})}
++ \langle x , c_{n,M} \rangle^{2}
+\hspace{0.2cm} \textit{si n es par};
+\end{equation}
+así, los coeficientes de la forma
+$\langle x , c_{n,\omega} \rangle^{2}$ y 
+$\langle x , s_{n,\omega} \rangle^{2}$
+dan información sobre el peso que la frecuencia
+$\omega$ tiene para sintetizar a la señal $x$.
+
+\marginnote{Según las ecuaciones \ref{eq0: 25Ap}
+y \ref{eq1: 25Ap}, los coeficientes $\tau_{n, \omega}(x)$
+permiten calibrar la presencia de la frecuencia $\omega$
+(en los rangos dados por las tablas 
+\ref{Tab: frecuencias TDF n impar} y
+\ref{Tab: frecuencias TDF n par})
+en una señal $x$.}
+
+\begin{defi}
+\label{def: taus}
+Sean $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $.
+Definimos
+	\[
+	\tau_{n,0}(x) := \langle x, c_{n,0} \rangle^{2},	
+	\]
+	y
+	\[
+	\forall 1 \leq \omega \leq M-1: \hspace{0.2cm} 
+	\tau_{n,\omega}(x) := \langle x, c_{n,\omega} \rangle^{2}+
+	\langle x, s_{n,\omega} \rangle^{2}.	
+	\]	
+	Si $n$ es par, se define además a
+	\[
+	\tau_{n,M}(x) := \langle x, c_{n,M} \rangle^{2}.
+	\]
+\end{defi}
+Observe que, para toda $\omega$, 
+$\tau_{n, \omega} \leq ||x||^{2}$.
+
+\begin{defi}
+Sean $n \geq 2$,  $x \in \IR^{n}$. Por el 
+\textbf{espectro obtenido a partir de la TDF} nos referiremos
+a la gráfica de las frecuencias dadas, dependiendo de la
+paridad de $n$, en las tablas 
+\ref{Tab: frecuencias TDF n impar} y
+\ref{Tab: frecuencias TDF n par}
+versus los coeficientes $\tau_{n, \omega}(x)$
+definidos en \ref{def: taus}
+\end{defi}
+
+\begin{ejemplo}
+A continuación se grafica el espectro
+(a la derecha) obtenido
+a partir de la TDF de la señal considerada en el 
+ejemplo \ref{ej: DFT1}.
+
+\begin{figure}[H]
+	\sidecaption{
+	Espectro de la señal $x$ dada en 
+	\eqref{eq2: 10ab}. 
+	\label{fig: dft_espectro_1}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{dft_espectro_1} 
+\end{figure}	
+
+Como se marca en el espectro con color morado, la frecuencia
+asociada al coeficiente $\tau$ más alto es $\omega =2$; a la
+izquierda, junto con la gráfica de la señal 
+$x$, se dibuja el sinusoide (en versión continua)
+de frecuencia $2$ que aparece en el análisis de
+$x$ respecto a $\cali{F}_{7}$ dado en 
+\eqref{eq: analisis x TDF}.
 \final
 \end{ejemplo}

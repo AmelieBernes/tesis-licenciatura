@@ -14,6 +14,7 @@ import random
 from random import uniform
 
 import base_legendreDiscreta as legendre
+import proyecciones as pr
 
 
 #Código para cambiar el tipo de fuente
@@ -284,8 +285,9 @@ def figura_ortogYoscil(k):
     Figuras para la discusión de relación entre ortogonalidad y oscilaciones.
     'k' puede valer 0,1,2 o 3; indica qué gráfica se quiere.
     """
-    colores=['hotpink', 'gray']
+    colores_ame=['hotpink', 'gray']
     X=np.arange(0,3, 0.05)
+    eje = [m for m in range(4)] 
 
     base_legendre = legendre.calculo_base(4) #Calculamos la base de Legendre discreta de dim. 4
     
@@ -378,6 +380,7 @@ def figura_ortogYoscil(k):
          #Cúbica Legendre
          axis[1].scatter(eje, base_legendre[3],color=colores_ame[0], s=100)
          axis[1].plot(X, 0.745*X**3-3.35*X**2+3.5*X-0.22, color=colores_ame[0], linestyle='dotted')
+         #TODO cómo había encontrado esos coeficientes???
      
      
          for i in range(2):
@@ -495,6 +498,65 @@ def figura_raicesUnidad(n1, n2):
     return plt.show()
 
 
+def PDL_coeficientes_versionContinua(n,k):
+    """
+    Dados n y k, se dan los coeficientes del polinomio
+    de variable continua cuya discretización en la malla uniforme
+    0,1,...,n-1 es $\mathcal{L}^{n,k}$.
+    """
+    abscisas = [m for m in range(n)]
+    A = np.empty((n,n), int)
+    for i in range(n):
+        entrada = abscisas[i]
+        A[i] = [entrada**j for j in range(n)]
+    vector_legendre = legendre.calculo_base(n)[k] 
+    return np.linalg.solve(A, vector_legendre)
+
+
+def PDL_grafica_versionContinua(n,k):
+    fig, axis = plt.subplots(1,1)
+    coeficientes =PDL_coeficientes_versionContinua(n,k) 
+    X = np.arange(0,n-1, 0.0001)
+    dominio = [m for m in range(n)]
+    vector_legendre = legendre.calculo_base(n)[k] 
+    axis.scatter(dominio, vector_legendre, color = 'hotpink')
+    
+    def PDL_continuo(t):
+        resultado = coeficientes[0]
+        for i in range(1,n):
+            resultado += coeficientes[i]*t**i
+        return resultado
+    
+    axis.plot(X, PDL_continuo(X), color = '#09DEB4')
+    formato_axis(axis)
+    
+    return plt.show()
+
+def PDL_grafica_versionContinua_axis(n,k, axis,dominio, Color):
+    coeficientes =PDL_coeficientes_versionContinua(n,k) 
+    X = np.arange(0,n-1, 0.0001)
+    vector_legendre = legendre.calculo_base(n)[k] 
+    axis.scatter(dominio, vector_legendre, color = 'hotpink')
+    
+    def PDL_continuo(t):
+        resultado = coeficientes[0]
+        for i in range(1,n):
+            resultado += coeficientes[i]*t**i
+        return resultado
+    
+    axis.plot(X, PDL_continuo(X), color = Color)
+
+def PDLvarios_grafica_versionContinua(n, lista_colores):
+    fig, axis = plt.subplots(1,1)
+    dominio = [m for m in range(n)]
+    for k in range(n):
+        PDL_grafica_versionContinua_axis(n,k, axis,dominio, lista_colores[k])
+    
+    formato_axis(axis)
+    return plt.show()
+
+
+
 if __name__=='__main__':
     #figura_discretizacionPuntual()
     #figura_cambioDeMalla()
@@ -504,4 +566,8 @@ if __name__=='__main__':
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
     #figura_cosenoMuestreo(5/2, 0.3,5)
-    figura_raicesUnidad(5, 8)
+    #figura_raicesUnidad(5, 8)
+    #PDL_grafica_versionContinua(8,5)  
+    lista_colores =['#3283fe', '#85660d', '#782ab6', '#1c8356', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
+    PDLvarios_grafica_versionContinua(7, lista_colores)
+
