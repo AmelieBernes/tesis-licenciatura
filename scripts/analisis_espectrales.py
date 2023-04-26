@@ -117,14 +117,13 @@ def coeficientes_tau(x):
     return taus
     
 
-def grafica_taus_axis(x, nombre, axis1, axis2):
+def grafica_taus_axis(x, n, nombre, axis1, axis2):
   """
   'x' es un array de dimensión mayor a dos. 
   Esta función dibuja la gráfica de 'x' (como se definió en ??), que es una cuyo dominio es el tiempo, junto
   con la gráfica de los coeficientes sigma de x.
 
   """
-  n=len(x)
   M = math.ceil(n/2)
 
   dominio_tiempo=[m/n for m in range(n)]
@@ -175,7 +174,6 @@ def vectores_frecuencia(n, w): #TODO quita a n del argumento.
   n es la dimensión, w la frecuencia 
   
   """
-  n = len(x)
   c_nw = np.array([math.cos(2*pi*w*m/n) for m in range(n) ])
 
   if w % (n/2) == 0: # caso 2
@@ -314,12 +312,11 @@ def grafica_sigma_amplDesfase_axis_caso2(x, w, axis):
   formato_axis(axis)
 
 
-def analisis_espectral_espaciosMonofrecuenciales(x, frecuencias, nombre, axis0, axis1):
+def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis0, axis1):
   """
   x es un array
   'frecuencias' es un vector de frecuencias.
   """
-  n=len(x)
   dominio_tiempo=[m/n for m in range(n)] 
 
   axis0.scatter(dominio_tiempo, x, color= colores[0], s=40, label = nombre)
@@ -363,11 +360,11 @@ def analisis_espectrales_mostrarGrafica(x, frecuencias, nombre):
   'frecuencias' (tipo array) es un array de frecuencias.
   'nombre' (tipo string) es el nombre de la señal.
   """
-  n = len(x) #TODO pasar como argumento a las otras funciones!
+  n = len(x) 
   fig, axis = plt.subplots(2,2)
-  grafica_taus_axis(x, nombre, axis[0,0], axis[0,1])
-  analisis_espectral_espaciosMonofrecuenciales(x, frecuencias, nombre, axis[1,0], axis[1,1])
-  fig.suptitle('Análisis espectrales de '+nombre+r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)))
+  grafica_taus_axis(x, n, nombre, axis[0,0], axis[0,1])
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis[1,0], axis[1,1])
+  fig.suptitle('Análisis espectrales de '+nombre+r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
   fig.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
   return plt.show()
 
@@ -383,17 +380,34 @@ def analisis_espectrales_guardarGrafica(x, frecuencias, nombre):
   fig.set_size_inches(11.25, 12.34) 
   #fig.tight_layout(pad=0.4)
   
-  grafica_taus_axis(x, nombre, axis[0,0], axis[0,1])
-  analisis_espectral_espaciosMonofrecuenciales(x, frecuencias, nombre, axis[1,0], axis[1,1])
+  grafica_taus_axis(x,n, nombre, axis[0,0], axis[0,1])
+  analisis_espectral_espaciosMonofrecuenciales(x,n, frecuencias, nombre, axis[1,0], axis[1,1])
   fig.suptitle('Análisis espectrales de '+nombre+r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
   plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/prueba.png")
   
   
-base_legendre = legendre.calculo_base(12)
-x= base_legendre[4]
-nombre = '$\mathcal{L}^{12,4}$'
-frecuencias = [a/100 for a in range(501)]
+# ------------------------------------- Análisis espectrales de los PDL ------------------------------------
+def analisis_espectrales_PDL_mostrarGrafica(n,k):
+  """
+  'x' (tipo array) tiene las mediciones.
+  'frecuencias' (tipo array) es un array de frecuencias.
+  'nombre' (tipo string) es el nombre de la señal.
+  """
+  x = legendre.calculo_base(n)[k]
+  frecuencias = [a/100 for a in range(int(n*100/2))]
+  nombre = r'$\mathcal{{L}}^{{{0}}}$'.format(str(n)+','+str(k)) 
+  fig, axis = plt.subplots(2,2)
+  grafica_taus_axis(x, n, nombre, axis[0,0], axis[0,1])
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis[1,0], axis[1,1])
+  fig.suptitle('Análisis espectrales de '+nombre+r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
+  fig.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
+  return plt.show()
 
 
-#analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
-analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
+if __name__=='__main__':
+  #base_legendre = legendre.calculo_base(12)
+  #x= base_legendre[4]
+  #nombre = '$\mathcal{L}^{12,4}$'
+  #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
+  #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
+  analisis_espectrales_PDL_mostrarGrafica(70,65) 
