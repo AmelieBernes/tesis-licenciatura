@@ -124,6 +124,16 @@
     \field{year}{1966}
   \endentry
 
+  \entry{interpolation}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Int}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+  \field{howpublished}{\url{https://www.unioviedo.es/compnum/labs/PYTHON/Interpolation.html}}
+    \field{note}{Accessed: 2023-04-25}
+    \field{title}{Polynomial interpolation}
+  \endentry
+
   \entry{jacobson}{book}{}
     \name{author}{1}{}{%
       {{hash=JN}{%

@@ -130,13 +130,42 @@ de la derecha (que de hecho es $\cali{L}^{4,3}$) sí cumple el ser
 ortogonal a $\cali{L}^{4,1}$ pero, para lograr esto, sus
 entradas deben cambiar de signo tres veces. \\
 
+
+Después de graficar los PDL de algunas dimensiones
+puede apreciarse que esta tendencia a aumentar el número
+de oscilaciones en las gráficas conforme en grado $k$
+aumenta parece presentarse en todas las dimensiones.
+Por ejemplo, abajo se muestran las gráficas de los 
+PDL de dimensión $7$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.55]{oscilaciones_dim7} 
+\end{figure}	
+
 \section{Hipótesis sobre las oscilaciones de los PDL}
 
-Estando de acuerdo en que es pertinente realizar un análisis
-espectral de los PDL, después de dibujar las gráficas de algunos
-de estos para varias dimensiones $n$, proponemos una hipótesis
-que relaciona una presencia importante de cierta frecuencia
-de oscilación asociada a un PDL.
+Con el objetivo de analizar la forma
+de oscilación de los PDL, nos proponemos
+hacer un análisis espectral. Antes
+de proceder sistemáticamente, hagamos un análisis empírico.
+\begin{figure}[H]
+	\sidecaption{
+	Con ``sinusoide'' nos referimos a una función 
+	continua cuya forma se ilustra en la figura. Este queda
+	completamente determinado al fijar una
+	\textbf{amplitud}, una \textbf{frecuencia} y un
+	\textbf{desfase}, que nosotros preferimos normalizar
+	para que sea un número entre $0$ y $1$.
+	\label{fig: sinusoide}
+	}
+	\centering
+	\includegraphics[scale = 0.8]{sinusoide} 
+\end{figure}	
+
+Pongamos una dimensión de $n = 60$; a continuación,
+graficamos los PDL de dimensión $60$ para los primeros grados,
+e intentamos aproximar tales gráficas con sinusoides continuos.
 
 
 \begin{figure}[H]
@@ -172,19 +201,45 @@ de oscilación asociada a un PDL.
 	\includegraphics[scale = 0.6]{hip_4,5} 
 \end{figure}	
 
+
+Después de dibujar gráficas parecidas para varias dimensiones, 
+establecemos la siguiente hipótesis de trabajo.
+
 \begin{hip}
 \label{ref: hipotesis}
 Sean $n \geq 2$, $0 \leq k \leq n-1$ entero. 
 Sea $\cali{L}^{n,k}$ el PDL de dimensión $n$ y grado $k$.
-La frecuencia que mejor modela la oscilación de la gráfica
-de $\cali{L}^{n,k}$ es $\frac{k}{2}$ 
+El espectro de $\cali{L}^{n,k}$ se concentra alrededor
+de la frecuencia $\omega = k/2$.
 \end{hip}
 
 Se ha formulado de forma intencional la hipótesis 
 \ref{ref: hipotesis} en términos vagos, para tener libertad
 después de definir las herramientas con las que abordaremos el problema
 de dar forma concreta a la hipótesis y mejorarla o refutarla con simulaciones
-numéricas.
+numéricas. \\ 
+
+Observe que, para analizar la presencia de oscilaciones
+en las gráficas de las señales, estamos hablando de un ``espectro''.
+se cuenta ya con una herramienta clásica para hacer esta clase de análisis,
+cuyo producto final es una gráfica (el espectro) en el que se refleja,
+de alguna forma, la importancia que cierta frecuencia tiene para
+modelar la gráfica analizada. Hablamos de la transformada 
+discreta de Fourier, cuyas bases teóricas comentamos en la sección
+\ref{sec: TDF},
+para usarla posteriormente para hacer un primer análisis espectral. Motivados
+por algunas limitaciones de esta herramienta que comentamos más adelante,
+nosotros proponemos una alternativa de metodología para realizar un análisis espectral 
+en la sección 
+\ref{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}.
+
+Algunos de los espectros así obtenidos se imprimen en
+el capítulo
+\ref{chap: resultados numericos analisis espectrales}.
+El código para calcular tales espectros para cualquier
+señal de $\IR^{n}$ se comparte en
+\TODO{referencia cuaderno jupyter.}
+
 
 \input{apendice_DFT}
 \input{coseno_a_plano}
@@ -195,9 +250,7 @@ numéricas.
 
 Ya podemos usar la base de Fourier real $\cali{F}_{n}$
 definida en la proposición \ref{prop: base de fourier version real}
-para hacer un estudio espectral de los PDL. \TODO{Grafico
-algunos resultados en otro capítulo?} \\
-
+para hacer un estudio espectral de los PDL. \\
 
 Puesto que, por la construcción de $\cali{F}_{n}$, 
 hacer un análisis espectral de una señal $x \in \IR^{n}$
@@ -311,7 +364,7 @@ cos \left(  2 \pi \omega t + 2 \pi \phi^{'}
 \right)
 \right)_{t \in I_{n}},
 \end{equation*}
-donde $\phi^{'}= (\phi + 1/4) \% 1 \in [0,1[$.
+donde $\phi^{'}= \phi + 1/4$.
 \end{nota}
 
 
@@ -552,7 +605,7 @@ $\omega >0$
 el número 
 $\frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} \in [0,1]$.} \\
 
-\TODO{Deberías notar que sólo hay dos espacios P cuando nomega en n medios Z.}
+\TODO{Deberías notar que sólo hay dos espacios P cuando omega en n medios Z.}
 
 \begin{defi}
 \label{def: final de sigmas}
@@ -563,7 +616,9 @@ como sigue;
 \begin{equation}
 \label{eq: def sigmas}
 	\forall x \in \IR^{n}-\{ 0\}: \hspace{0.2cm}
-	\sigma_{n}(x, \omega) = \frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} .
+	\sigma_{n}(x, \omega) =
+	cos \left( \measuredangle (x, W) \right) = 
+	\frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} .
 \end{equation}
 \end{defi}
 
@@ -583,7 +638,7 @@ $P_{n, \omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
 Para poder usar las fórmulas
 derivadas en la sección 
 \ref{ap: Caso particular en el que el subespacio en cuestión es un plano},
-debemos de dar una base normalizada del espacio $P_{\omega}$.
+debemos de dar una base normalizada del espacio $P_{n, \omega}$.
 
 \begin{prop}
 \label{prop: aaa}
@@ -825,10 +880,6 @@ donde $f_{n, \omega}$ es como en \eqref{ec: 4: 23ap}.
 \end{itemize}
 \end{prop}
 
-
-\TODO{a diferencia de la dft, los casos extremos ya no son
-estar o no estar, sino ser perpendicular o ser paralelo.}
-
 \subsection{Desfase de la proyección de una señal a espacios monofrecuenciales}
 
 Dada $x \in \IR^{n}$ una señal no cero 
@@ -1012,4 +1063,5 @@ se tiene que
 \QEDB
 \vspace{0.2cm}
 
+\TODO{Aquí define espectro!}
 \input{espectros}

@@ -498,26 +498,25 @@ def figura_raicesUnidad(n1, n2):
     return plt.show()
 
 
-def PDL_coeficientes_versionContinua(n,k):
+def coeficientes_interpolacion(vector_abscisas, vector_ordenadas, n):
     """
-    Dados n y k, se dan los coeficientes del polinomio
-    de variable continua cuya discretización en la malla uniforme
-    0,1,...,n-1 es $\mathcal{L}^{n,k}$.
+    TODO actualiza
+    dado un vector de ordenadas de dimensión n...
+    Se pide n como argumento para no calcularlo.
     """
-    abscisas = [m for m in range(n)]
     A = np.empty((n,n), int)
     for i in range(n):
-        entrada = abscisas[i]
+        entrada = vector_abscisas[i]
         A[i] = [entrada**j for j in range(n)]
-    vector_legendre = legendre.calculo_base(n)[k] 
-    return np.linalg.solve(A, vector_legendre)
+    return np.linalg.solve(A, vector_ordenadas)
 
 
 def PDL_grafica_versionContinua(n,k):
     fig, axis = plt.subplots(1,1)
-    coeficientes =PDL_coeficientes_versionContinua(n,k) 
-    X = np.arange(0,n-1, 0.0001)
     dominio = [m for m in range(n)]
+    vector_legendre = legendre.calculo_base(n)[k]
+    coeficientes =coeficientes_interpolacion(dominio, vector_legendre, n) 
+    X = np.arange(0,n-1, 0.0001)
     vector_legendre = legendre.calculo_base(n)[k] 
     axis.scatter(dominio, vector_legendre, color = 'hotpink')
     
@@ -532,11 +531,10 @@ def PDL_grafica_versionContinua(n,k):
     
     return plt.show()
 
-def PDL_grafica_versionContinua_axis(n,k, axis,dominio, Color):
-    coeficientes =PDL_coeficientes_versionContinua(n,k) 
+def PDL_grafica_versionContinua_axis(vector_legendre, n, k, dominio, axis, Color):
+    coeficientes =coeficientes_interpolacion(dominio, vector_legendre, n) 
     X = np.arange(0,n-1, 0.0001)
-    vector_legendre = legendre.calculo_base(n)[k] 
-    axis.scatter(dominio, vector_legendre, color = 'hotpink')
+    axis.scatter(dominio, vector_legendre, color = Color, label = str(k))
     
     def PDL_continuo(t):
         resultado = coeficientes[0]
@@ -544,15 +542,18 @@ def PDL_grafica_versionContinua_axis(n,k, axis,dominio, Color):
             resultado += coeficientes[i]*t**i
         return resultado
     
-    axis.plot(X, PDL_continuo(X), color = Color)
+    axis.plot(X, PDL_continuo(X), color = Color, linestyle = 'dotted')
 
-def PDLvarios_grafica_versionContinua(n, lista_colores):
+def PDLdim_n_graficas_continuas(n, lista_colores):
     fig, axis = plt.subplots(1,1)
     dominio = [m for m in range(n)]
+    base_legendre = legendre.calculo_base(n)
     for k in range(n):
-        PDL_grafica_versionContinua_axis(n,k, axis,dominio, lista_colores[k])
+        vector_legendre = base_legendre[k]
+        PDL_grafica_versionContinua_axis(vector_legendre,n,k, dominio, axis, lista_colores[k])
     
     formato_axis(axis)
+    plt.title('Gráficas de los polinomios de Legendre discretos de dimensión '+str(n))
     return plt.show()
 
 
@@ -568,6 +569,7 @@ if __name__=='__main__':
     #figura_cosenoMuestreo(5/2, 0.3,5)
     #figura_raicesUnidad(5, 8)
     #PDL_grafica_versionContinua(8,5)  
-    lista_colores =['#3283fe', '#85660d', '#782ab6', '#1c8356', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
-    PDLvarios_grafica_versionContinua(7, lista_colores)
+    lista_colores =['#fe00fa', '#feaf16', '#782ab6', '#1c8356','#3283fe', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
+    for n in range(2,9):
+        PDLdim_n_graficas_continuas(n, lista_colores)
 
