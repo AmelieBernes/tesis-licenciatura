@@ -14,6 +14,9 @@ def coef_RMC(x,y):
     la pendiente de la recta de mínimos cuadrados (en ese orden) del conjunto de puntos con abscisas 
     las entradas de 'x' y ordenadas las de 'y'. Obtuve las fórmulas de internet.
     """
+    x = np.array(x)
+    y = np.array(y)
+    
     dim=np.size(x)
     
     m_x=np.mean(x)

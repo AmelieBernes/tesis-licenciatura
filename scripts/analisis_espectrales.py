@@ -13,10 +13,22 @@ from tqdm import tqdm
 
 #módulos personales
 import base_legendreDiscreta as legendre
+import proyecciones as proy #aquí tengo una función para hacer regresiones lineales
 
 pi=math.pi
 mpl.rcParams.update(mpl.rcParamsDefault)
-colores=['#fe01b1', 'gray', '#8f99fb']
+colores=['#fe01b1', 'gray', '#8f99fb', '#2ee8bb', '#6241c7', '#61e160']
+
+"""
+El orden de los colores es:
+    0: color de la señal a analizar
+    1: color para los puntos del espectro que no son los de FM (frecuencia máxima)
+    2: Frecuencia máxima del estudio basado en espacios monofrecuenciales
+    3: Frecuencia máxima del estudio basado en la DFT
+    4: Recta de mínimos cuadrados del estudio global de las FM encontradas con espacios monofrecuenciales
+    5: Recta de mínimos cuadrados del estudio global de las FM encontradas con la DFT
+"""
+
 
 def formato_axis(axis):
   """
@@ -149,18 +161,18 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2):
 
   coef_cosenos, coef_senos = coeficientes_espectrales(x) # :( código con muchas partes repetidas !
   max_w = taus.index(max(taus)) #máxima frecuencia
-  axis2.scatter(max_w, max(taus), color = colores[2], s = 70, label = 'FM = '+str(max_w), marker = '*')
+  axis2.scatter(max_w, max(taus), color = colores[3], s = 70, label = 'FM = '+str(max_w), marker = '*')
 
   if n %2 ==0:
     if max_w == 0 or max_w == M:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[2], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w)))
+      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w)))
     else:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w]*np.sin(2*pi*max_w*X), color = colores[2], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w],2))))
+      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w]*np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w],2))))
   else:
     if max_w == 0:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[2], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w))) #redundante
+      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w))) #redundante
     else:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w]*np.sin(2*pi*max_w*X), color = colores[2], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w],2))))
+      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w]*np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w],2))))
 
   formato_axis(axis1)
   formato_axis(axis2)
@@ -474,11 +486,17 @@ def analisis_espectralPDL_global(n):
         tausMax.append(calculo_tauMax(vector_legendre))
    
     X = np.arange(0,n-1,0.05)
+
     axis[0].scatter(dominio_grados, sigmasMax, label = 'FM en base a espacios monofrecuenciales', color = colores[2], s = 150)
     axis[0].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
 
+    b, m = proy.coef_RMC(dominio_grados, sigmasMax)
+    axis[0].plot(X, b+X*m, color = colores[4], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m,2)), str(round(b,2))))
+
     axis[1].scatter(dominio_grados, tausMax, label = 'FM en base a la TDF', color = '#00fbb0', s = 150)
     axis[1].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
+    b, m = proy.coef_RMC(dominio_grados, tausMax)
+    axis[1].plot(X, b+X*m, color = colores[5], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m,2)), str(round(b,2))))
     
 
     plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales de los PDL de dimensión "+str(n))
@@ -492,9 +510,19 @@ if __name__=='__main__':
   #nombre = '$\mathcal{L}^{12,4}$'
   #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
-  #analisis_espectrales_PDL_mostrarGrafica(50,8) 
+  analisis_espectrales_PDL_mostrarGrafica(50,8) 
   #analisis_espectrales_PDL_guardarGrafica(18,15) 
   #x = [1,2]
   #frecuencias = [0.5, 1]
   #calculo_sigmaMax(x, frecuencias)
-  analisis_espectralPDL_global(30)
+  #analisis_espectralPDL_global(40) 
+
+#TODO para las gráficas de los coef m y b de la RMC,
+#guarda los FM que calcules en un diccionario. Así, aunque ejecutes en otra sesión el mismo código,
+#el valor ya calculado se recupera y no se calcula de nuevo!
+
+"""
+Notas: 
+    para n=100, analisis_espectralPDL_global(100) encontró coeficientes que eran tan pequeños
+    que se redondeaban a cero, por lo que se tenían errores del tipo 'división por cero'.
+"""
