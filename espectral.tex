@@ -992,16 +992,20 @@ sin(2 \pi \phi) \cdot sin (2 \pi \omega t) )_{t \in I_{n}} \\
 \noindent
 Además, de \eqref{eq7: 20Marzo} y \eqref{eq3: 28Marz23}
 se deduce que
+\begin{marginfigure}
+\includegraphics[scale= 0.8]{encontrado_desfase} 
+\end{marginfigure}
 \begin{equation}
 \label{eq: desfase phi 1}
 \phi =
 \begin{cases}
 \frac{tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c > 0,  \\
-\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d, c < 0,  \\
-\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d>0,  c < 0,  \\
+\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d, c < 0
+\text{ o } d<0, c>0, \\
 \frac{tan^{-1}(d/c) + 2\pi }{2 \pi} \hspace{0.2cm}  \text{si }  d>0,  c < 0. 
 \end{cases}
 \end{equation}
+
 
 Hemos probado el siguiente
 \begin{teo}
@@ -1063,5 +1067,6 @@ se tiene que
 \QEDB
 \vspace{0.2cm}
 
-\TODO{Aquí define espectro!}
+\TODO{Aquí define espectro! Di por qué vas a tomar frecuencias hasta
+n medios.}
 \input{espectros}

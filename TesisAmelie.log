@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  26 APR 2023 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  27 APR 2023 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3005,14 +3005,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 904--908
 
  []
 
-[87] [88] (./espectros.tex [89]
+[87]
+<./imagenes/encontrado_desfase.png, id=1756, 150.3216pt x 134.1813pt>
+File: ./imagenes/encontrado_desfase.png Graphic file (type png)
+<use ./imagenes/encontrado_desfase.png>
+Package pdftex.def Info: ./imagenes/encontrado_desfase.png  used on input line 
+996.
+(pdftex.def)             Requested size: 120.25742pt x 107.34518pt.
+
+Overfull \hbox (10.25742pt too wide) in paragraph at lines 996--997
+[][] 
+ []
+
+[88 <./imagenes/encontrado_desfase.png>] (./espectros.tex [89]
 Cap\'{\i }tulo 7.
 Package marginnote Info: Margin note 98.1 is on absolute page 99 on input line 
 46.
 Package marginnote Info: right page because not two side mode on input line 46.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 46.
-<./imagenes/ejemplo_analisisEspectrales.png, id=1785, 420.1296pt x 481.0773pt>
+<./imagenes/ejemplo_analisisEspectrales.png, id=1788, 420.1296pt x 481.0773pt>
 File: ./imagenes/ejemplo_analisisEspectrales.png Graphic file (type png)
 <use ./imagenes/ejemplo_analisisEspectrales.png>
 Package pdftex.def Info: ./imagenes/ejemplo_analisisEspectrales.png  used on in
@@ -3054,7 +3066,7 @@ Underfull \hbox (badness 3291) in paragraph at lines 90--90
 \OT1/cmr/m/n/10 de es-pa-cio m^^Setri-co en
  []
 
-<./imagenes/estructuras.png, id=1845, 455.7828pt x 120.6909pt>
+<./imagenes/estructuras.png, id=1848, 455.7828pt x 120.6909pt>
 File: ./imagenes/estructuras.png Graphic file (type png)
 <use ./imagenes/estructuras.png>
 Package pdftex.def Info: ./imagenes/estructuras.png  used on input line 109.
@@ -3128,7 +3140,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-<./imagenes/GS_fig.png, id=1927, 557.08125pt x 547.2947pt>
+<./imagenes/GS_fig.png, id=1930, 557.08125pt x 547.2947pt>
 File: ./imagenes/GS_fig.png Graphic file (type png)
 <use ./imagenes/GS_fig.png>
 Package pdftex.def Info: ./imagenes/GS_fig.png  used on input line 86.
@@ -3149,7 +3161,7 @@ e 42.
 Package marginnote Info: right page because not two side mode on input line 42.
 
 Package marginnote Info: xpos seems to be 72.0pt on input line 42.
-<./imagenes/coseno.png, id=1949, 622.57594pt x 331.99031pt>
+<./imagenes/coseno.png, id=1952, 622.57594pt x 331.99031pt>
 File: ./imagenes/coseno.png Graphic file (type png)
 <use ./imagenes/coseno.png>
 Package pdftex.def Info: ./imagenes/coseno.png  used on input line 43.
@@ -3164,7 +3176,7 @@ e 219.
 Package marginnote Info: right page because not two side mode on input line 219
 .
 Package marginnote Info: xpos seems to be 72.0pt on input line 219.
-<./imagenes/18Sept_1.png, id=1975, 368.0952pt x 222.8325pt>
+<./imagenes/18Sept_1.png, id=1978, 368.0952pt x 222.8325pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
 Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 220.
@@ -3288,117 +3300,4 @@ Overfull \hbox (17.05904pt too wide) in paragraph at lines 10--38
  []
 
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 10--38
-\OMS/cmsy/m/n/10 ^^T$ [] 
- []
-
-
-Overfull \hbox (13.88889pt too wide) in paragraph at lines 10--38
-\OMS/cmsy/m/n/10 d^^Ae$ [] 
- []
-
-
-Overfull \hbox (9.44444pt too wide) in paragraph at lines 10--38
-\U/msa/m/n/10 ]$ [] 
- []
-
-
-Overfull \hbox (33.09145pt too wide) in paragraph at lines 10--38
-\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]$ []
- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--38
-
- []
-
-
-Overfull \hbox (69.77863pt too wide) in paragraph at lines 49--59
-[][] 
- []
-
-[107
-
-] [108])
-Overfull \hbox (16.98747pt too wide) in paragraph at lines 42--42
-[]\OT1/cmr/m/it/10 Cosine si-mi-la-rity\OT1/cmr/m/n/10 . []$\OT1/cmtt/m/n/10 ht
-tps : / / en . wikipedia . org / wiki / Cosine _ similarity$[]\OT1/cmr/m/n/10 .
-
- []
-
-[109
-
-] [110] (./TesisAmelie.aux
-LaTeX Info: Redefining \sptext on input line 27.
-LaTeX Info: Redefining \. on input line 27.
-LaTeX Info: Redefining \% on input line 27.
-)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `TesisAmelie.out' has not changed.
-(rerunfilecheck)             Checksum: 087F7986ECD65A87FA957A5BA2ADC010;15536.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                TesisAmelie
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
-\openout1 = `TesisAmelie.run.xml'.
-
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 788 ({)
-### bottom level 
-Here is how much of TeX's memory you used:
- 44519 strings out of 476025
- 877968 string characters out of 5796533
- 1899388 words of memory out of 5000000
- 63437 multiletter control sequences out of 15000+600000
- 533376 words of font info for 106 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 106i,17n,107p,1912b,2322s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
-, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbxsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (116 pages, 7805739 bytes).
-PDF statistics:
- 2302 PDF objects out of 2487 (max. 8388607)
- 1900 compressed objects within 19 object streams
- 659 named destinations out of 1000 (max. 500000)
- 897 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Overfull \hbox (10.00002pt too wide) in p

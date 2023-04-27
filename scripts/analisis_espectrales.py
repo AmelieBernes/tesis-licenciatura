@@ -230,7 +230,7 @@ def amplDesfase_caso1(x,w):
   tan = math.atan(d/c)
   if c>0 and d>0:
     phi = tan/(2*pi)
-  elif (c<0 and d>0) or (c<0 and d>0):
+  elif (c<0 and d>0) or (c<0 and d<0): #tenía mal el último caso; esto era el error que buscabas:)
     phi = (tan + pi)/(2*pi)
   else:
     phi = (tan + 2*pi)/(2*pi)
@@ -310,6 +310,11 @@ def grafica_sigma_amplDesfase_axis_caso2(x, w, axis):
   X=np.arange(0, 1, 0.0001)
   axis.plot(X, coseno_amplDes(X), color=colores[2])
   formato_axis(axis)
+
+
+
+
+
 
 
 def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis0, axis1):
@@ -403,6 +408,83 @@ def analisis_espectrales_PDL_mostrarGrafica(n,k):
   fig.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
   return plt.show()
 
+def analisis_espectrales_PDL_guardarGrafica(n,k):
+    
+  """
+  'x' (tipo array) tiene las mediciones.
+  'frecuencias' (tipo array) es un array de frecuencias.
+  'nombre' (tipo string) es el nombre de la señal.
+  """
+  #TODO poner a la ruta como argumento.
+  x = legendre.calculo_base(n)[k]
+  frecuencias = [a/100 for a in range(int(n*100/2))]
+  nombre = r'$\mathcal{{L}}^{{{0}}}$'.format(str(n)+','+str(k)) 
+  fig, axis = plt.subplots(2,2)
+  fig.set_size_inches(11.25, 12.34) 
+
+  grafica_taus_axis(x, n, nombre, axis[0,0], axis[0,1])
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis[1,0], axis[1,1])
+  fig.suptitle('Análisis espectrales de '+nombre+r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
+  #fig.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
+  plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/"+str(n)+'_'+str(k))
+
+
+
+#---------------------------- Análisis espectral global ------------------------------------
+
+
+def calculo_sigmaMax(x, n, frecuencias):
+    """
+    'x' es un array que representa las mediciones de la señal,
+    'frecuencias' es un array con frecuencias respecto a la cuales comparar a 'x'.
+    Esta función calcula todas las sigmas de 'x' respecto a las frecuencias contenidas en 'frecuencias'
+    y regresa la sigma máxima (la que se resalta cuando se grafica el espectro.)
+    """
+    sigmas = []
+    for w in frecuencias: 
+      if w % (n/2) == 0 :
+        sigma = sigma_caso2(x, w)
+        sigmas.append(sigma)
+      else:
+        sigma = sigma_caso1(x, w)
+        sigmas.append(sigma)
+    
+    sigma_max = max(sigmas) #buscamos la sigma mayor
+    frec_max = frecuencias[sigmas.index(sigma_max)] #y la frecuencia asociada a esta.
+    #regresamos tal frecuencia
+    return frec_max
+
+
+def calculo_tauMax(x):
+    taus = coeficientes_tau(x)
+    tau_max = max(taus)
+    frec_max = taus.index(tau_max)
+    return frec_max
+
+def analisis_espectralPDL_global(n):
+    fig, axis = plt.subplots(2,1)
+    base_legendre = legendre.calculo_base(n)
+    dominio_grados = [k for k in range(n)]
+    frecuencias = [a/100 for a in range(int(n*100/2))]
+
+    sigmasMax, tausMax = [], []
+    for k in range(n): #iteramos en los grados de los PDL de dimensión n
+        vector_legendre = base_legendre[k]
+        sigmasMax.append(calculo_sigmaMax(vector_legendre, n, frecuencias))
+        tausMax.append(calculo_tauMax(vector_legendre))
+   
+    X = np.arange(0,n-1,0.05)
+    axis[0].scatter(dominio_grados, sigmasMax, label = 'FM en base a espacios monofrecuenciales', color = colores[2], s = 150)
+    axis[0].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
+
+    axis[1].scatter(dominio_grados, tausMax, label = 'FM en base a la TDF', color = '#00fbb0', s = 150)
+    axis[1].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
+    
+
+    plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales de los PDL de dimensión "+str(n))
+    formato_axis(axis[0])
+    formato_axis(axis[1])
+    return plt.show()
 
 if __name__=='__main__':
   #base_legendre = legendre.calculo_base(12)
@@ -410,4 +492,9 @@ if __name__=='__main__':
   #nombre = '$\mathcal{L}^{12,4}$'
   #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
-  analisis_espectrales_PDL_mostrarGrafica(70,65) 
+  #analisis_espectrales_PDL_mostrarGrafica(50,8) 
+  #analisis_espectrales_PDL_guardarGrafica(18,15) 
+  #x = [1,2]
+  #frecuencias = [0.5, 1]
+  #calculo_sigmaMax(x, frecuencias)
+  analisis_espectralPDL_global(30)
