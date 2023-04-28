@@ -17,7 +17,7 @@ import proyecciones as proy #aquí tengo una función para hacer regresiones lin
 
 pi=math.pi
 mpl.rcParams.update(mpl.rcParamsDefault)
-colores=['#fe01b1', 'gray', '#8f99fb', '#2ee8bb', '#6241c7', '#61e160']
+colores=['#fe01b1', 'gray', '#8f99fb', '#feb308', '#6241c7', '#ff964f']
 
 """
 El orden de los colores es:
@@ -161,7 +161,7 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2):
 
   coef_cosenos, coef_senos = coeficientes_espectrales(x) # :( código con muchas partes repetidas !
   max_w = taus.index(max(taus)) #máxima frecuencia
-  axis2.scatter(max_w, max(taus), color = colores[3], s = 70, label = 'FM = '+str(max_w), marker = '*')
+  axis2.scatter(max_w, max(taus), color = colores[3], s = 70, label = 'FM0 = '+str(max_w), marker = '*')
 
   if n %2 ==0:
     if max_w == 0 or max_w == M:
@@ -353,7 +353,7 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   axis1.scatter(frecuencias, sigmas, color=colores[1], s=10, marker = '*')
   sigma_max = max(sigmas)
   frec_max = frecuencias[sigmas.index(sigma_max)]
-  axis1.scatter(frec_max, sigma_max, color = colores[2], label = 'FM = {0}'.format(str(frec_max)), marker = '*')
+  axis1.scatter(frec_max, sigma_max, color = colores[2], label = 'FM1 = {0}'.format(str(frec_max)), marker = '*')
 
   if frec_max % (n/2) == 0:
     grafica_sigma_amplDesfase_axis_caso2(x, frec_max, axis0)
@@ -473,35 +473,57 @@ def calculo_tauMax(x):
     frec_max = taus.index(tau_max)
     return frec_max
 
+
+
+
 def analisis_espectralPDL_global(n):
     fig, axis = plt.subplots(2,1)
     base_legendre = legendre.calculo_base(n)
     dominio_grados = [k for k in range(n)]
     frecuencias = [a/100 for a in range(int(n*100/2))]
 
-    sigmasMax, tausMax = [], []
+    sigmasMax_n, tausMax_n = [], [] #TODO también quiero guardar estos datos.
     for k in range(n): #iteramos en los grados de los PDL de dimensión n
         vector_legendre = base_legendre[k]
-        sigmasMax.append(calculo_sigmaMax(vector_legendre, n, frecuencias))
-        tausMax.append(calculo_tauMax(vector_legendre))
+        sigmasMax_n.append(calculo_sigmaMax(vector_legendre, n, frecuencias))
+        tausMax_n.append(calculo_tauMax(vector_legendre))
    
     X = np.arange(0,n-1,0.05)
 
-    axis[0].scatter(dominio_grados, sigmasMax, label = 'FM en base a espacios monofrecuenciales', color = colores[2], s = 150)
-    axis[0].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
-
-    b, m = proy.coef_RMC(dominio_grados, sigmasMax)
-    axis[0].plot(X, b+X*m, color = colores[4], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m,2)), str(round(b,2))))
-
-    axis[1].scatter(dominio_grados, tausMax, label = 'FM en base a la TDF', color = '#00fbb0', s = 150)
+    axis[1].scatter(dominio_grados, sigmasMax_n, marker = 'v', label = 'FM1 en base a espacios monofrecuenciales', color = colores[2], s = 150)
     axis[1].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
-    b, m = proy.coef_RMC(dominio_grados, tausMax)
-    axis[1].plot(X, b+X*m, color = colores[5], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m,2)), str(round(b,2))))
+
+    b1, m1 = proy.coef_RMC(dominio_grados, sigmasMax_n)
+    axis[1].plot(X, b1+X*m1, color = colores[4], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m1,2)), str(round(b1,2))))
+
+    axis[0].scatter(dominio_grados, tausMax_n, label = 'FM0 en base a la TDF', marker = '^', color = colores[5] , s = 150)
+    axis[0].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
+    b0, m0 = proy.coef_RMC(dominio_grados, tausMax_n)
+    axis[0].plot(X, b0+X*m0, color = colores[5], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m0,2)), str(round(b0,2))))
     
 
     plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales de los PDL de dimensión "+str(n))
     formato_axis(axis[0])
     formato_axis(axis[1])
+
+    #Vamos a guardar los valores en el diccionario definido en el script 'diccionario_RMC.py'
+    file = open('lista_FM_RMC.txt', 'r')
+    lines = file.readlines() #this is to get a list containing each line in the opened file!
+    lines[n] = str(n) + ',' + str(m0) + ',' + str(b0) + ',' + str(m1) + ',' + str(b1) +'\n' 
+
+    file = open('lista_FM_RMC.txt', 'w')
+    file.writelines(lines)
+    file.close()
+
+
+    file = open('lista_FM.txt', 'r')
+    lines = file.readlines()
+    lines[n] = str(n) + ',' + str(sigmasMax_n) + ',' + str(tausMax_n) + '\n'
+    
+    file = open('lista_FM.txt', 'w')
+    file.writelines(lines)
+    file.close()
+
     return plt.show()
 
 if __name__=='__main__':
@@ -510,19 +532,18 @@ if __name__=='__main__':
   #nombre = '$\mathcal{L}^{12,4}$'
   #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
-  analisis_espectrales_PDL_mostrarGrafica(50,8) 
+  #analisis_espectrales_PDL_mostrarGrafica(50,8) 
   #analisis_espectrales_PDL_guardarGrafica(18,15) 
   #x = [1,2]
   #frecuencias = [0.5, 1]
   #calculo_sigmaMax(x, frecuencias)
-  #analisis_espectralPDL_global(40) 
-
-#TODO para las gráficas de los coef m y b de la RMC,
-#guarda los FM que calcules en un diccionario. Así, aunque ejecutes en otra sesión el mismo código,
-#el valor ya calculado se recupera y no se calcula de nuevo!
+  analisis_espectralPDL_global(12) 
 
 """
 Notas: 
     para n=100, analisis_espectralPDL_global(100) encontró coeficientes que eran tan pequeños
     que se redondeaban a cero, por lo que se tenían errores del tipo 'división por cero'.
+
+TODO 
+    Hacer una función que recupere las FM de todos los grados k y comparar.
 """
