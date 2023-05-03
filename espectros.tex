@@ -2,120 +2,359 @@
 \label{chap: resultados numericos analisis espectrales}
 
 Después de todo lo expuesto en las secciones anteriores, tenemos
-ya dos alternativas para graficar el espectro
-de una señal $x \in \IR^{n}$.
+ya dos alternativas para realizar un análisis
+espectral de una señal $x \in \IR^{n} - \{ 0 \}$.
 
 \begin{itemize}
-	\item Usando la transformada discreta de Fourier
+	\item \textbf{(Espectro cero: basado en la TDF)} 
+	Usando la transformada discreta de Fourier
 	(c.f. sección \ref{sec: TDF}), el espectro de
 	una señal $x$ es la gráfica de las frecuencias
-	enteras dadas (dependiendo de la 
+	enteras $\omega$ dadas (dependiendo de la 
 	paridad de $n$) por las
 	tablas 6.1 y 6.2
 	versus los coeficientes
-	$\tau_{n}(x)$ definidos en
+	$\tau_{n, \omega}(x)$ definidos en
 	\ref{def: taus}.
-	\TODO{Puesto que hacer un análisis con la
-	DFT significa expresar a $x$ como una suma
-	ponderada de muestreos de senos y cosenos
-	de algunas frecuenicas enteras,...}
 	
-	\item Si, para hacer un análisis espectral, se usan
+	Puesto que el realizar un análisis de 
+	$x$ via la TDF significa encontrar una
+	expresión de $x$ como una suma
+	ponderada de muestreos de senos y cosenos
+	de frecuencias enteras las de las tablas 6.1 o 6.2,
+	se tiene que  
+	\begin{itemize}
+		\item Para toda frecuencia $\omega$ considerada
+		por la TDF,
+		\[
+		0 \leq \tau_{n, \omega}(x) \leq || x ||^{2}
+		\]
+		y, que
+		\item entre más se acerque
+		$\tau_{n, \omega}(x)$
+		a $|| x ||^{2}$, mayor es la
+		importancia de la frecuencia $\omega$ para
+		sintetizar s $x$; recíprocamente, si 
+		$\tau_{n, \omega}(x)$ es cercano a cero, entonces
+		la frecuencia $\omega$ no es muy relevante para 
+		reconstruir a la señal $x$.
+	\end{itemize}
+	\begin{defi}
+	\label{def: FM0}
+	Denotaremos
+	por $FM0(x)$ a la frecuencia $\omega$
+	tal que, para cualquier otra $\omega'$ en el rango
+	de frecuencias consideradas por la TDF, se tenga que
+	\[
+	\tau_{n, \omega'}(x) \leq \tau_{n, \omega}(x).
+	\]
+	\end{defi}
+	
+	\item \textbf{(Espectro uno: basado en espacios monofrecuenciales)} 
+	Si para hacer un análisis espectral se usan
 	las ideas propuestas en 
 	la sección
-	\ref{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}, entonces, dado un rango de frecuencias 
+	\ref{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}, 
+	o sea, si se usan cosenos de ángulos a
+	espacios monofrecuenciales $P_{n, \omega}$
+	(c.f. \ref{eq: espacio Pnw}),	
+	entonces, fijado un rango de frecuencias 
 	$\omega$,
 	el espectro de $x$ es la gráfica de 
 	las frecuencias $\omega$ versus	
 	los coeficientes
-	$\sigma_{n}(x, \omega)$.
-	
-
-\TODO{a diferencia de la dft, los casos extremos ya no son
-estar o no estar, sino ser perpendicular o ser paralelo a su
-representante del espacio monofrecuencial.}
+	$\sigma_{n}(x, \omega)$ definidos en 
+	\eqref{prp: ammm}.\\
+	\begin{itemize}
+		\item Para cualquier frecuencia $\omega \geq 0$, se tiene que
+		\[
+		0 \leq \sigma_{n}(x, \omega) \leq 1;
+		\]
+		\item 
+	el que
+	$\sigma_{n}(x, \omega)$ sea cercano a $1$ significa que un
+	muestreo uniforme de un sinusoide de frecuencia $\omega$
+	modela bien el comportamiento de $x$ (c.f. 
+	nota \ref{nota: significado de los sigma en AE}).
+	\end{itemize}
+	\begin{defi}
+	\label{def: FM1}
+	Denotaremos
+	por $FM1(x)$ a la frecuencia $\omega$ del rango considerado
+	tal que, para cualquier otra $\omega'$ del rango, se tenga que
+	\[
+	\sigma_{n, \omega'}(x) \leq \sigma_{n, \omega}(x).
+	\]
+	\end{defi}
 \end{itemize}
 
-Espectro cero: el de TDF
-Espectro uno: el de espacios monofrecuenciales
+Según esta lista comparativa, en el segundo análisis espectral 
+los casos extremos no pueden interpretarse directamente (como ocurren en el primer
+análisis espectral) como una presencia o ausencia de 
+la frecuencia $\omega$ para sintetizar a $x$, pues, a diferencia de lo
+que ocurre en la TDF, herramienta basada en una BON
+de $\IR^{n}$, con la metodología basada en medición de ángulos
+a espacios monofrecuenciales no se está proponiendo ningún proceso
+análisis/síntesis de señales. En su lugar, los casos extremos significan paralelismo
+o perpendicular a la señal de frecuencia $\omega$ más cercana a $x$. \\
 
-\begin{figure}[H]
-	\sidecaption{
-	Ejemplo de los espectros resultantes
-	de los dos métodos de análisis.
-	\label{fig: espectro 1 }
-	}
-	\centering
-	\includegraphics[scale = 1]{ejemplo_analisisEspectrales} 
-\end{figure}	
 
-\section{Lista de preguntas a responder usando los resultados numéricos}
+Programando la funciones necesarias para realizar análisis espectrales
+usando estas dos metodologías, podremos comprobar o refutar y mejorar
+la hipótesis hecha en 
+\ref{ref: hipotesis}. 
+Escribimos en la siguiente sección unas preguntas guía
+que nos gustaría responder numéricamente, después de 
+realizar análisis espectrales de los PDL
+$\cali{L}^{n,k}$ de dimensión $2 \leq 2 \leq 69$. \\
 
-\begin{notacion}
-Dados los espectros cero y uno de $\cali{L}^{n,k}$, si
-$FM_{i}$ 
-(para $i=0,1$)
-es la frecuencia $\omega$ en la que el espectro 
-$i$ alcanza su punto máximo.
-\TODO{cambia esto en los cpódgios}
-\end{notacion}
+No realizamos el análisis espectral para dimensiones
+mayores a $69$ pues, para dimensiones más grandes, los números
+involucrados en los cálculos son tan pequeños
+en magnitud que son redondeados a cero
+\sidenote{Puede consultar \cite{DSmath} para ver los detalles de cómo los
+datos de tipo \texttt{float} son manipulados por la computadora
+y los problemas de aproximación y redondeo que están implícitos en
+este tipo de operaciones.}
 
+
+\section{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}
 
 Enlistamos las preguntas que nos interesa considerar
-(formuladas de manera general, pero que comprobaremos o refutaremos
-numéricamente para dimensiones hasta $n=70$, pues para dimensiones
-más grandes los errores computacionales son demasiado grandes
-como para obtener conclusiones fiables, \TODO{revisa lo que tiene que
-decir al respecto el libro de data science!}).
-
-Vamos a responder estas preguntas con gráficas!
+relacionadas a las naturaleza oscilatoria
+de los PDL $\cali{L}^{n,k}$
+para dimensiones hasta $n=69$. 
 
 La primera pregunta es una reformulación de la 
-hipótesis \ref{ref: hipotesis}. Hacemos dos preguntas
-más para afinar.
+hipótesis \ref{ref: hipotesis} en términos de los 
+valores $FM0(x)$ y $FM1(x)$ definidos en 
+\ref{def: FM0} y \ref{def: FM1}.
 
-\begin{itemize}
-\item \textbf{Pregunta 1}: 
-Para cualesquiera $n \geq 2$ y $0 \leq k \leq n-1$,
-¿ocurre que las frecuencias máximas
-$FM_{0}$ y $FM_{1}$ son cercanas a $\frac{k}{2}$?
+\begin{pregunta}
+\label{pregunta 1}
+Sean $2 \leq n \leq 69$ y $0 \leq k \leq n-1$.
+Sea $\cali{L}^{n,k}$ el PDL de dimensión $n$ y grado $k$.
+¿las frecuencias máximas
+$FM0(\cali{L}^{n,k})$ y 
+$FM1(\cali{L}^{n,k})$ son cercanas a $\frac{k}{2}$?
+\end{pregunta}
+
+A continuación mostramos un dibujo para
+ilustrar cómo podrían verse los
+espectros del PDL
+$\cali{L}^{7,5} \in \IR^{7}$
+en caso de que la respuesta a la pregunta
+\ref{pregunta 1} sea afirmativa.
+Se escogió dibujar posibles espectros
+de $\cali{L}^{7,5}$; observe que, en el segundo espectro,
+fue posible usar varios valores de $\omega$ para analizar
+a $\cali{L}^{7,5}$, y que podría ser que la frecuencia máxima
+sea un número decimal, mientras que para el primer espectro
+(el basado en la TDF) sólo pueden usarse algunas frecuencias
+enteras, por lo que no esperamos que el valor máximo
+se de en $\frac{5}{2}$, pues este ni siquiera es un entero.
+Esperamos, sin embargo, que el máximo se de en las frecuencias
+enteras cercanas al valor $\frac{5}{2}$.
 
 \begin{figure}[H]
 	\sidecaption{
-	\TODO{Voy a responder esta con algunas imágenes de espectros como esta.}
+	A la izquierda un dibujo (no basado en datos reales) de 
+	un posible espectro para $\cali{L}^{n,k}$ basado en la 
+	DFT, y a la derecha uno basado en cosenos a espacios 
+	monofrecuenciales. Observe que en el segundo espectro se pueden
+	considerar muchas más frecuencias que en el primero.
 	\label{fig: ejemplo_pregunta1}
 	}
 	\centering
-	\includegraphics[scale = 0.5]{./estudios_espectrales/ejemplo_pregunta1} 
+	\includegraphics[scale = 0.9]{./estudios_espectrales/ejemplo_pregunta1} 
 \end{figure}	
 
-\item \textbf{Pregunta 2}: ¿En efecto dependen $FM_{0}$ y $FM_{1}$ sólo
-de $k$ y no de $n$?
+\begin{pregunta}
+\label{preg 2}
+¿Las frecuencias 
+$FM0(\cali{L}^{n,k})$ y $FM1(\cali{L}^{n,k})$
+dependen, como implica la pregunta 1, sólo del parámetro
+de grado $k$ y no del de dimensión $n$?
+Es decir, si $k$, $n_{1}$ y $n_{2}$
+son tales que $k \leq n_{1}-1$ y
+$k \leq n_{2}-1$, ¿ocurre que 
+$FM0(\cali{L}^{n_{1},k})$ = $FM0(\cali{L}^{n_{2},k})$
+y 
+$FM1(\cali{L}^{n_{1},k})$ = $FM1(\cali{L}^{n_{2},k})$?
+\end{pregunta}
+
+Para tratar de responder a la pregunta \ref{preg 2},
+fijado un grado $k$,
+podría ser útil graficar los puntos de la forma
+\[
+(n, FM0(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69,
+\] y 
+\[
+(n, FM1(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69.
+\]
+Gráficas de este estilo podrían usarse para comprobar
+la respuesta a la pregunta \ref{pregunta 1} 
+graficando también la recta horizontal $y = \frac{k}{2}$
+y viendo si los puntos graficados se encuentran cerca
+de esta recta o no.
 
 \begin{figure}[H]
 	\sidecaption{
-	\TODO{Voy a responder esta con algunas imágenes de espectros como esta.}
+	 De ser la respuesta
+	a la pregunta \ref{preg 2} afirmativa, deberíamos
+	de terminar con gráficas de puntos alineados horizontalmente, como
+	en este dibujo. Sería bueno que los puntos $FM0$ y $FM1$ estuviesen
+	a alturas parecidas, pues eso significaría que los dos análisis espectrales
+	dan resultados parecidos.
 	\label{fig: ejemplo_pregunta2}
 	}
 	\centering
-	\includegraphics[scale = 1]{./estudios_espectrales/ejemplo_pregunta2} 
+	\includegraphics[scale = 1.4]{./estudios_espectrales/ejemplo_pregunta2} 
 \end{figure}	
 
-\item \textbf{Pregunta 3}: ¿Los parámetros $(m,b)$ de pendiente y ordenada al 
-origen de las rectas de mínimos cuadrados (RMC) de las gráficas 
-de FM para un $n$ fijo son parecidos? ¿En dónde se concentran?
-\TODO{reformula mejor. Esta pregunta es para mejor la estimación dada
-en la hipótesis!}
+\begin{pregunta}
+\label{preg 3}
+Fijada una dimensión $2 \leq n \leq 69$,
+considere las gráficas de los
+puntos 
+\begin{equation}
+\label{eq5: May1}
+(k, FM0(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1
+\end{equation}
+y
+\begin{equation}
+\label{eq6: May1}
+(k, FM1(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1,
+\end{equation}
+
+\noindent
+o sea, las gráficas de las frecuencias máximas encontradas
+en los dos análisis espectrales para cada
+PDL de dimensión $n$.
+Sean $m_{n,0}$ y $b_{n,0}$ la pendiente y la ordenada
+al origen de la recta de mínimos cuadrados calculada a 
+partir del conjunto de puntos 
+\eqref{eq5: May1}, y
+$m_{n,1}$ y $b_{n,1}$ los correspondientes parámetros
+para el conjunto de puntos 
+\eqref{eq6: May1}.
+
+Considere las nubes de puntos 
+\[
+(b_{n,0}, m_{n,0}), \hspace{0.2cm} 2 \leq n \leq 69
+\]
+y 
+\[
+(b_{n,1}, m_{n,1}), \hspace{0.2cm} 2 \leq n \leq 69.
+\]
+¿Alrededor de qué punto parecen concentrarse estas nubes?
+\end{pregunta}
+
+Investigar la respuesta (numéricamente)
+de esta última pregunta nos ayudará a afinar 
+la estimación de frecuencias establecida
+en la pregunta \ref{pregunta 1}. 
+
 \begin{figure}[H]
 	\sidecaption{
-	\TODO{Voy a responder esta con algunas imágenes de espectros como esta.}
-	\label{fig: ejemplo_pregunta3}
+	Se muestran las gráficas 
+	de las colecciones de puntos
+	\eqref{eq5: May1} y \eqref{eq6: May1}
+	para $n=7$	
+	descritas en la pregunta
+	\ref{preg 3}.
+	\label{fig: ejemplo_pregunta3_0}
 	}
 	\centering
-	\includegraphics[scale = 1]{./estudios_espectrales/ejemplo_pregunta3} 
+	\includegraphics[scale = 1.1]{./estudios_espectrales/ejemplo_pregunta3_0} 
 \end{figure}	
-\end{itemize}
 
-Note que las preguntas 2 y 3 son más bien globales
-(y las respondo numéricamente con los datos calculados en 
-la función \texttt{analisis$\_$espectralPDL$\_$global}).
+\begin{figure}[H]
+	\sidecaption{
+	Si la estimación dada en la pregunta \ref{pregunta 1} es
+	buena, las nubes de puntos descritas en la 
+	pregunta \ref{preg 3} deberían estar centradas
+	en el punto $(0, 0.5)$.
+	\label{fig: ejemplo_pregunta3_1}
+	}
+	\centering
+	\includegraphics[scale = 1.5]{./estudios_espectrales/ejemplo_pregunta3} 
+\end{figure}	
+
+
+Vamos a responder a estas preguntas con gráficas parecidas
+a las dibujadas en las figuras
+\ref{fig: ejemplo_pregunta1},
+\ref{fig: ejemplo_pregunta2},
+\ref{fig: ejemplo_pregunta3_0} y
+\ref{fig: ejemplo_pregunta3_1}.
+
+Vamos a responder a la pregunta \ref{pregunta 1} graficando
+algunos espectros y comprobando si las
+frecuencias $FM0(\cali{L}^{n,k})$ y 
+$FM1(\cali{L}^{n,k})$ son, en efecto, cercanas a $\frac{k}{2}$.
+
+Para calcular los datos necesarios para responder
+las preguntas \ref{preg 2} y \ref{preg 3},
+usando la función \texttt{analisis$\_$espectralPDL$\_$global(n)}, 
+para toda dimensión
+$2 \leq n \leq 69$ calculamos
+\begin{itemize}
+	\item los coeficientes $FM1(\cali{L}^{n,k})$ para toda
+	$0 \leq k \leq n-1$, y guardamos esta información en el
+	array \texttt{sigmasMax$\_$n},
+	\item los coeficientes $FM0(\cali{L}^{n,k})$ para toda
+	$0 \leq k \leq n-1$, y guardamos esta información en el
+	array \texttt{tausMax$\_$n},
+	\item y los números $b_{n,0}$, $m_{n,0}$,
+	$b_{n,1}$ y $m_{n,1}$ como se definieron en la pregunta
+	\ref{preg 3}.
+\end{itemize}
+Toda esta información se calculó una sola vez y se almacenó
+en un diccionario, cuyas llaves son las dimensiones
+$n$, y cuyo valor asociado a la llave $n$ es la $6-$tupla
+\[
+(sigmasMax\_n, tausMax\_n, b_{n,0}, m_{n,0}, b_{n,1}, m_{n,1}).
+\]
+
+\begin{figure}[H]
+	\sidecaption{
+	En la figura de la izquierda se grafican los
+	puntos $(b_{0,n}, m_{0, n})$, siendo la primera entrada
+	la ordenada al origen de la recta de mínimos cuadrados
+	de \TODO{ref} y la segunda entrada la pendiente de esta.
+	\label{fig: pendiente_oOrigen}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
+\end{figure}	
+
+Los códigos, escritos en Python, pueden encontrase en 
+\TODO{referencia al repositorio.} Usamos el 
+módulo \texttt{pickle} para guardar los datos como secuencias
+de bytes. El archivo binario en el que se almacenaron los
+datos calculados con la función 
+\texttt{analisis$\_$espectralPDL$\_$global(n)}
+es \TODO{ref}.
+
+\section{Gráficas para la pregunta \ref{pregunta 1}}
+
+\section{Gráficas para la pregunta \ref{preg 2}}
+
+\section{Gráficas para la pregunta \ref{preg 3}}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: tablas_1,2}
+	}
+	\centering
+	\includegraphics[scale = 1.1]{./estudios_espectrales/tablas_1,2} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: tablas_1,2}
+	}
+	\centering
+	\includegraphics[scale = 1.1]{./estudios_espectrales/tablas_3,4} 
+\end{figure}	

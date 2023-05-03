@@ -1,0 +1,34 @@
+.tabla-amelie{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabla-amelie thead tr {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tabla-amelie td {
+    padding: 12px 15px;
+}
+
+.tabla-amelie th {
+    text-align: center;
+}
+
+.tabla-amelie tbody tr {
+    border-bottom: 1px solid #000000;
+}
+
+.tabla-amelie tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabla-amelie tbody tr:last-of-type {
+    border-bottom: 2px solid #ff00ff;
+}

@@ -242,7 +242,6 @@ señal de $\IR^{n}$ se comparte en
 
 
 \input{apendice_DFT}
-\input{coseno_a_plano}
 
 
 \section{Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}
@@ -372,10 +371,12 @@ donde $\phi^{'}= \phi + 1/4$.
 	\sidecaption{
 	Se grafica a la función 
 	$f(t) = cos(2 \pi \cdot \frac{5}{2} t + 2 \pi \cdot 0.3)$;
-	muestreando este sinusoide de forma uniforme en el 
-	intervalo [0,1] obtenemos una señal de frecuencia pura
-	$\omega = \frac{5}{2}$. En la figura, $n=5$.
-	\label{fig: muestreo coseno}
+	muestreando este sinusoide de forma uniforme con $n$
+	puntos en el 
+	intervalo [0,1] obtenemos una señal $n-$dimensional
+	de frecuencia pura
+	$\omega = \frac{5}{2}$. En la figura, $n=20$.
+	\label{fig: desfasee ejemplo grafico}
 	}
 	\centering
 	\includegraphics[scale= 0.55]{muestreo_coseno} 
@@ -421,49 +422,27 @@ sen((Km)\pi)=0$.
 \QEDB
 \vspace{0.2cm}
 
+Nos interesará considerar al subespacio
+de $\IR^{n}$ generado por las señales
+de frecuencia $\omega$ $c_{n, \omega}$
+y $s_{n, \omega}$, o sea, a 
 
-\begin{obs}
-\label{obs: f y g son l.i. y de norma uno}
-Sean $n \geq 2$ entero, $\omega \geq 0$ con $\omega \not\in \frac{n}{2} \IZ$.
-Los vectores \eqref{eq: coseno omega} y \eqref{eq: seno omega}
-de $\IR^{n}$ son linealmente independientes.
-\end{obs}
-\noindent
-\textbf{Demostración.}
-Sólo note que 
-la primera entrada de \eqref{eq: coseno omega} es $1$, mientras que  
-la primera entrada de $g_{n, \omega}$ sea cero, pero no
-todas sus entradas sean cero (c.f. proposición 
-\ref{prop: para que frecuencias omega vector seno es cero}). 
-\QEDB
-\vspace{0.2cm}
+\begin{equation}
+\label{eq: espacio Pnw}
+P_{n, \omega} := span(c_{n, \omega}, s_{n, \omega}).
+\end{equation} 
+caracterizamos a los elementos de 
+espacios de la forma
+$P_{n, \omega}$ a continuación.
 
-
-Según la observación 
-\ref{obs: f y g son l.i. y de norma uno}, si $\omega \not\in \frac{n}{2} \IZ$,
-el espacio $P_{n,\omega}$ que generan los vectores 
-\eqref{eq: coseno omega} y \eqref{eq: seno omega}
-
-\begin{align}
-\label{eq6: 23Ap}
-P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
-= &
-\{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
-b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
-\hspace{0.2cm} a, b \in \IR \},
-\hspace{0.1cm} \omega \not\in \frac{n}{2} \IZ
-\end{align}
-
-\noindent
-es un plano (i.e. un subespacio de dimensión $2$) de $\IR^{n}$.
-\begin{prop}
+\begin{teo}
 \label{prop: Pw consta de las señales de frecuencia omega}
 Sean $n \in \IN$, $\omega \geq 0$ 
 con 
 $\omega \not\in \frac{n}{2} \IZ$.
-El espacio $P_{n, \omega}$ definido en \eqref{eq2: 20Marzo} consta exactamente
+El espacio $P_{n, \omega}$ definido en \eqref{eq: espacio Pnw} consta exactamente
 de las señales $n$ dimensionales de frecuencia $\omega$.
-\end{prop}
+\end{teo}
 
 \noindent
 \textbf{Demostración.}
@@ -529,28 +508,6 @@ cos (2 \pi \omega t - 2 \pi \phi)
 \QEDB
 \vspace{0.2cm}
 
-
-\noindent 
-Según la proposición
-\ref{prop: Pw consta de las señales de frecuencia omega},
-$P_{n, \omega} \subseteq \IR^{n}$ es el plano que consiste de las señales
-de dimensión $n$ y frecuencia (pura) $\omega$.
-
-Si $\omega \in \frac{n}{2} \IZ$, entonces, según 
-la proposición 
-\ref{prop: para que frecuencias omega vector seno es cero}, el vector
-$s_{n, \omega}$ es el vector cero y $c_{n, \omega}$, luego, el espacio
-\begin{align}
-\label{eq0: 23Ap}
-P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
-= &
-\{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} : 
-\hspace{0.2cm} a \in \IR \},
-\hspace{0.1cm} \omega \in \frac{n}{2} \IZ
-\end{align}
-es una recta (i.e. un subespacio de dimensión $1$)
-de $\IR^{n}$.
-
 \begin{defi}
 Si $n \geq 2$ y $\omega>0$, entonces
 al subespacio $P_{n,\omega}$ 
@@ -562,8 +519,98 @@ le llamaremos el \textbf{espacio monofrecuencial
 $n$ dimensional} de frecuencia $\omega$.
 \end{defi}
 
+\begin{obs}
+\label{obs aa: f y g son l.i. y de norma uno}
+Sean $n \geq 2$ entero, $\omega \geq 0$ con $\omega \not\in \frac{n}{2} \IZ$.
+Los vectores \eqref{eq: coseno omega} y \eqref{eq: seno omega}
+de $\IR^{n}$ son linealmente independientes.
+\end{obs}
+\noindent
+\textbf{Demostración.}
+Sólo note que 
+la primera entrada de \eqref{eq: coseno omega} es $1$, mientras que  
+la primera entrada de $g_{n, \omega}$ sea cero, pero no
+todas sus entradas sean cero (c.f. proposición 
+\ref{prop: para que frecuencias omega vector seno es cero}). 
+\QEDB
+\vspace{0.2cm}
 
-Es razonable pues
+
+Según la observación 
+\ref{obs aa: f y g son l.i. y de norma uno}, si $\omega \not\in \frac{n}{2} \IZ$,
+el espacio $P_{n,\omega}$ que generan los vectores 
+\eqref{eq: coseno omega} y \eqref{eq: seno omega}
+
+\begin{align}
+\label{eq6: 23Ap}
+P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+= &
+\{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
+b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
+\hspace{0.2cm} a, b \in \IR \},
+\hspace{0.1cm} \omega \not\in \frac{n}{2} \IZ
+\end{align}
+
+\noindent
+es un plano (i.e. un subespacio de dimensión $2$) de $\IR^{n}$
+que además, según el teorema 
+\ref{prop: Pw consta de las señales de frecuencia omega},
+consta exactamente de las señales
+de dimensión $n$ y frecuencia (pura) $\omega$. \\
+
+Si $\omega \in \frac{n}{2} \IZ$, entonces, según 
+la proposición 
+\ref{prop: para que frecuencias omega vector seno es cero}, el vector
+$s_{n, \omega}$ es el vector cero y $c_{n, \omega}$ no, luego, el espacio
+\begin{align}
+\label{eq0: 23Ap}
+P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+= &
+\{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} : 
+\hspace{0.2cm} a \in \IR \},
+\hspace{0.1cm} \omega \in \frac{n}{2} \IZ
+\end{align}
+es una recta (i.e. un subespacio de dimensión $1$)
+de $\IR^{n}$.
+
+\begin{nota}
+Sean $n \geq 2$, $\omega \in \frac{n}{2} \IZ$ 
+una frecuencia
+mayor o igual a cero; digamos que 
+$\omega = \frac{n}{2}K$. Entonces, 
+según la proposición 
+\ref{prop: para que frecuencias omega vector seno es cero},
+$s_{n, \omega} =0$ y
+\[
+c_{n, \omega} = \left(cos\left( 2 \pi \frac{n}{2}K \frac{m}{n}\right)
+\right)_{m=0}^{n-1}
+= (cos(mK \pi))_{m = 0}^{n-1} = ((-1)^{mK})_{m=0}^{n-1},
+\]
+luego, 
+fijada una dimensión $n$, sólo hay dos espacios
+$P_{n, \omega}$ cuando 
+$\omega \in \frac{n}{2} \IZ$,
+a saber,
+\[
+\{ (a)_{m=0}^{n-1} : \hspace{0.2cm} a \in \IR \} \subseteq \IR^{n}
+\]
+y
+\[
+\{ ((-1)^{m}a)_{m=0}^{n-1} : \hspace{0.2cm} a \in \IR \} \subseteq \IR^{n}.
+\]
+
+\end{nota}
+
+\input{coseno_a_plano}
+
+\section{Estudio espectral basado en ángulos a espacios monofrecuenciales}
+
+Definidos los espacios monofrecuenciales
+$P_{n, \omega} \subseteq \IR^{n}$ 
+(c.f. \eqref{eq: espacio Pnw})
+y caracterizados sus elementos como las señales
+$n-$dimensionales de frecuencia pura $\omega$,
+parece razonable
 medir la cercanía de una señal $n-$dimensional $x \in \IR^{n}$
 a tener frecuencia $\omega$
 con el ángulo que $x$ forma con el subespacio $P_{n, \omega}$,
@@ -603,9 +650,7 @@ cos \left( \measuredangle (x, W) \right) = || \Pi_{W}(x) ||
 reacciona una señal $x \in \IR^{n}$ a una frecuencia
 $\omega >0$
 el número 
-$\frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} \in [0,1]$.} \\
-
-\TODO{Deberías notar que sólo hay dos espacios P cuando omega en n medios Z.}
+\[\frac{||\Pi_{P_{n, \omega}}(x)||}{||x||} \in [0,1].\]} \\
 
 \begin{defi}
 \label{def: final de sigmas}
@@ -622,7 +667,9 @@ como sigue;
 \end{equation}
 \end{defi}
 
-Así, fijada una frecuencia $\omega$, 
+\begin{nota}
+\label{nota: significado de los sigma en AE}
+Fijada una frecuencia $\omega$, 
 \begin{itemize}
 \item si $\sigma_{n, \omega}(x)$ es ``cercano'' a cero, $\omega$ no
 es una frecuencia con la que es razonable aproximar a $x$ (pues $x$ será
@@ -633,12 +680,14 @@ $\omega$),  mientras que
 (hablando en términos de distancia euclídea) a su proyección al espacio
 $P_{n, \omega}$, luego $x$ es muy parecido a tener frecuencia $\omega$.
 \end{itemize}
+\end{nota}
+
 
 
 Para poder usar las fórmulas
-derivadas en la sección 
+derivadas en la subsección 
 \ref{ap: Caso particular en el que el subespacio en cuestión es un plano},
-debemos de dar una base normalizada del espacio $P_{n, \omega}$.
+debemos de dar una BON del espacio $P_{n, \omega}$.
 
 \begin{prop}
 \label{prop: aaa}
@@ -831,6 +880,7 @@ sen \left( 2 \pi \omega  \left( 1- \frac{1}{n} \right) \right). \\
 
 
 \begin{prop}
+\label{prp: ammm}
 Sean $n \geq 2$, $\omega \geq 0$. 
 Sea $\sigma_{n}(\cdot,\omega): \IR^{n} \longrightarrow [0,1]$
 la función definida en \ref{def: final de sigmas}.
@@ -856,6 +906,7 @@ g_{n, \omega}
 	\end{equation}
 	y 
 	\begin{equation}
+	\label{eq: coef sigma caso 1}
 	\sigma_{n}(x, \omega) =
 	\left(		  
 		  \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
@@ -880,32 +931,108 @@ donde $f_{n, \omega}$ es como en \eqref{ec: 4: 23ap}.
 \end{itemize}
 \end{prop}
 
-\subsection{Desfase de la proyección de una señal a espacios monofrecuenciales}
 
-Dada $x \in \IR^{n}$ una señal no cero 
-y $\omega > 0$ una frecuencia fija,
-buscamos el desfase $\phi \in [0,1]$ que mejor se ajuste a $x$
-(c.f. figura \ref{fig: muestreo coseno}).
 
+Ya tenemos todo lo necesario para dar una definición alternativa 
+del espectro de una señal 
+(c.f. definición
+\ref{def: espectro DFT} para ver la definición de espectro
+basada en la TDF).
+
+\begin{defi}
+\label{def: espectro monofrecuenciales}
+Sean $n \geq 2$, $x \in \IR^{n}$. Por un
+\textbf{espectro obtenido a partir de mediciones a espacios
+monofrecuenciales} nos referiremos a una gráfica de frecuencias
+$\omega >0$ versus los coeficientes $\sigma_{n}(x, \omega)$
+definidos (dependiendo de si $\omega$ sea o no elemento de
+$\frac{n}{2} \IZ$) en \eqref{eq: coef sigma caso 1}
+y \eqref{eq: sfklmslsfl}.
+\end{defi}
+
+Observe que, a diferencia de la definición 
+\ref{def: espectro DFT}, en la definición 
+\ref{def: espectro monofrecuenciales} no se habla de un único
+espectro, pues en la metodología planteada en esta sección
+puede usarse cualquier frecuencia $\omega >0$ para analizar a una
+señal $x$, mientras que el espectro de la definición 
+\ref{def: espectro DFT} se limita a usar las frecuencias de las
+tablas 6.1 y 6.2.
+
+\begin{comment}
+\begin{nota}
+Observe lo siguiente; fijadas una dimensión $n$
+y una señal $x \in \IR^{n}$, si 
+$\omega \in [0, \frac{n}{2}]$, entonces
+\begin{equation}
+\label{eq0: 1May}
+\sigma_{n}(x, \omega) = \sigma_{n}(x, \omega + n/2).
+\end{equation}
+
+\noindent
+En efecto, para toda $0 \leq m \leq n-1$,
+por la regla del coseno de la suma de dos ángulos,
+\[
+cos\left(2 \pi \left( \omega + \frac{n}{2} \right) \frac{m}{n} \right)
+= (-1)^{m} cos \left( 2 \pi \omega \frac{m}{n} \right)
+\] 
+y, similarmente, 
+\[
+sen \left(2 \pi \left( \omega + \frac{n}{2} \right) \frac{m}{n} \right)
+= (-1)^{m} sen \left( 2 \pi \omega \frac{m}{n} \right),
+\] 
+luego, se tienen las igualdades \[
+c_{n, \omega} =  2_{n, \omega + n/2}
+\]
+y \[
+s_{n, \omega} = s_{n, \omega + n/2},
+\] 
+por lo tanto, 
+\begin{align*}
+P_{\omega + \frac{n}{1}} := & span(c_{n, \omega}, s_{n, \omega}) \\
+= &  span(c_{n, \omega}, s_{n, \omega})
+\end{align*}
+\TODO{general al mismo P omega, por eso los sigmas son iguales.}
+\end{nota}
+\end{comment}
+
+\section{Desfase de la proyección de una señal a espacios monofrecuenciales}
+
+
+Fijada una dimensión $n$ y 
+una frecuencia $\omega \geq 0$,
+dado cualquier 
+$x \in \IR^{n}-\{ 0 \}$
+ya tenemos una fórmula para calcular la
+proyección $\Pi_{P_{n, \omega}}(x)$ 
+(c.f. proposición \ref{prp: ammm}).
+Sin embargo, 
+como
+$\Pi_{P_{n, \omega}}(x) \in P_{n, \omega}$, 
+según el teorema 
+\ref{prop: Pw consta de las señales de frecuencia omega}, 
+es posible expresar a la señal $\Pi_{P_{n, \omega}}(x)$
+como el resultado de muestrear uniformemente con $n$ mediciones
+a un sinusoide de frecuencia pura $\omega$. Lo que queremos hacer
+en esta sección es dar explícitamente a los dos elementos que
+faltan para determinar univocamente este sinusoide continuo,
+a saber, el parámetro de amplitud $A \in \IR$ y el 
+desfase normalizado $\phi \in [0,1[$. Buscamos entonces $A$
+y $\phi$ tales que
+\[
+\Pi_{P_{n, \omega}}(x) = A (cos(2 \pi \omega t -  2 \pi \phi ))_{t \in I_{n}}.
+\]
+ 
+\marginnote{Buscamos pues la amplitud y el desfase de la señal
+de frecuencia $\omega$ más cercana a $x$.}
 
 Puesto que
 $\Pi_{P_{n, \omega}}(x)$ (donde $P_{n, \omega}$ es como se definió en 
-\eqref{eq6: 23Ap} y \eqref{eq0: 23Ap}, dependiendo si 
-$\omega$ es o no elemento de $\frac{n}{2} \IZ$) 
+\eqref{eq: espacio Pnw}) 
 es la señal de frecuencia $\omega$ que está a menor
-distancia euclidea de $x$, proponemos usar como
-desfase $\phi$ como 
-el número entre cero y uno tal que 
-\[
-\Pi_{P_{n, \omega}}(x) = A (cos(2 \pi \omega t -  2 \pi \phi ))_{t \in I_{n}}
-\]
-para alguna amplitud $A$. \\
-
-Fijada entonces una frecuencia $\omega$, nos interesa encontrar
-el desfase (normalizado) $\phi$ y la amplitud $A$ del sinusoide
-de frecuencia $\omega$ cuya discretización en $I_{n}$ es la proyección
-ortogonal $\Pi_{P_{n, \omega}}(x)$. \\
-
+distancia euclidea de $x$, podremos interpretar este
+desfase $\phi$ como el desfase que mejor se ajusta a $x$
+(c.f. figura \ref{fig: desfasee ejemplo grafico}). \\
 
 Primero abordemos el caso en el que
 $\omega \not\in \frac{n}{2} \IZ$. 
@@ -1023,11 +1150,11 @@ cos (2 \pi \omega t - 2 \pi \phi)
 \noindent
 donde 
 $c$ y $d$ son como en \eqref{eq4: 20Marzo} y 
-\eqref{eq5: 20Marzo}, respectivamente, y $\phi$ está 
+\eqref{eq5: 20Marzo}, resp., y $\phi$ está 
 dado por \eqref{eq: desfase phi 1}.
 \end{teo}
 Observe que tenemos una fórmula para obtener a
-la frecuencia y amplitud de $\Pi_{P_{n, \omega}}(x)$
+la frecuencia y la amplitud de $\Pi_{P_{n, \omega}}(x)$
 usando sólamente los datos
 \[
 \langle x, f_{n, \omega} \rangle, \hspace{0.2cm}
@@ -1067,6 +1194,5 @@ se tiene que
 \QEDB
 \vspace{0.2cm}
 
-\TODO{Aquí define espectro! Di por qué vas a tomar frecuencias hasta
-n medios.}
+
 \input{espectros}

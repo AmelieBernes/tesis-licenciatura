@@ -41,6 +41,31 @@
     \field{year}{2000}
   \endentry
 
+  \entry{DSmath}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CN}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={Nathan},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {Chapman}%
+      {Hall, CRC Press}%
+    }
+    \strng{namehash}{CN1}
+    \strng{fullhash}{CN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Car20}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{1st Edition}
+    \field{title}{Data Science for Mathematicians}
+    \field{year}{2020}
+  \endentry
+
   \entry{cosineSim}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Cos}

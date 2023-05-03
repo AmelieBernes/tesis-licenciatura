@@ -566,10 +566,12 @@ if __name__=='__main__':
     #figura_demSimetrias()
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
-    #figura_cosenoMuestreo(5/2, 0.3,5)
+    #figura_cosenoMuestreo(5/2, 0.3,20)
+    figura_cosenoMuestreo(12, 0, 18)
+    figura_cosenoMuestreo(12, 0, 24)
     #figura_raicesUnidad(5, 8)
     #PDL_grafica_versionContinua(8,5)  
     lista_colores =['#fe00fa', '#feaf16', '#782ab6', '#1c8356','#3283fe', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
-    for n in range(2,9):
-        PDLdim_n_graficas_continuas(n, lista_colores)
+    #for n in range(2,9):
+    #    PDLdim_n_graficas_continuas(n, lista_colores)
 
