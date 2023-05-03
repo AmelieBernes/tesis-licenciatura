@@ -735,16 +735,16 @@ if __name__=='__main__':
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
 
   #-------------Gráficas para la pregunta 1
-  analisis_espectrales_PDL_mostrarGrafica(69,5) 
+  #analisis_espectrales_PDL_mostrarGrafica(69,5) 
   #analisis_espectrales_PDL_guardarGrafica(18,15) 
 
 
   #-------------Gráficas para la pregunta 2
-  #grafica_analisisGlobal_k_fijo(3) 
+  grafica_analisisGlobal_k_fijo(7) 
   #grafica_3d_n_k_FM(10)
 
   #-------------Gráficas para la pregunta 3
-  #graficar_analisis_espectralPDL_global(7, False) 
+  #graficar_analisis_espectralPDL_global(2, False) 
   #grafica_nube_b0m0_b1m1()
 
   #--------------- scripts que ejecuto una sola vez
