@@ -136,23 +136,23 @@ def coeficientes_tau(x):
   M = math.ceil(n/2)
 
   coef_cosenos, coef_senos = coeficientes_espectrales(x)
-  taus = [coef_cosenos[0]**2] #inicializamos la lista de sigmas con la primera entrada
+  taus = [coef_cosenos[0]] #inicializamos la lista de sigmas con la primera entrada
   coef_cosenos.pop(0) #quitamos el coseno que ya agregamos a la lista de taus.
   
   if n%2==1:
     cuadrados_cosenos = np.square(coef_cosenos)
     cuadrados_senos = np.square(coef_senos)
     for i in range(M-1):
-      taus.append(cuadrados_cosenos[i]+cuadrados_senos[i])
+      taus.append(math.sqrt(cuadrados_cosenos[i]+cuadrados_senos[i]))
     return taus
   
   else:
-    sigma_final = coef_cosenos[M-1]**2 #guardamos el último sigma
+    sigma_final = coef_cosenos[M-1] #guardamos el último sigma
     coef_cosenos.pop(M-1) #lo quitamos de la lista
     cuadrados_cosenos = np.square(coef_cosenos)
     cuadrados_senos = np.square(coef_senos)
     for i in range(M-1):
-      taus.append(cuadrados_cosenos[i]+cuadrados_senos[i])
+      taus.append(math.sqrt(cuadrados_cosenos[i]+cuadrados_senos[i]))
     taus.append(sigma_final)
     return taus
     
@@ -450,9 +450,16 @@ def analisis_espectrales_PDL_mostrarGrafica(n, k, label_derecha = True):
   frecuencias = [a/100 for a in range(int(n*100/2))]
   nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n)+','+str(k)) 
 
-  fig, axis = plt.subplots(2,2)
-  grafica_taus_axis(x, n, nombre, axis[0,0], axis[0,1], label_derecha)
-  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis[1,0], axis[1,1], label_derecha)
+  fig = plt.figure()
+  gs = fig.add_gridspec(2,2)
+  ax0 = fig.add_subplot(gs[0, :1])
+  ax1 = fig.add_subplot(gs[0, 1:])
+  ax2 = fig.add_subplot(gs[1, :2])
+  
+  ax2.axvline(x = k/2, color = 'red')
+
+  grafica_taus_axis(x, n, nombre, ax0, ax2, label_derecha)
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2, label_derecha)
 
   fig.suptitle('Análisis espectrales de ' + "${0}$".format(nombre) + r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
   fig.tight_layout(pad=0.2, w_pad=0.2, h_pad=0.5)
@@ -731,7 +738,7 @@ if __name__=='__main__':
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
 
   #-------------Gráficas para la pregunta 1
-  #analisis_espectrales_PDL_mostrarGrafica(69,5) 
+  analisis_espectrales_PDL_mostrarGrafica(18, 15) 
   #analisis_espectrales_PDL_guardarGrafica(18,15) 
 
 
@@ -741,7 +748,7 @@ if __name__=='__main__':
 
   #-------------Gráficas para la pregunta 3
   #graficar_analisis_espectralPDL_global(2, False) 
-  grafica_nube_b0m0_b1m1()
+  #grafica_nube_b0m0_b1m1()
 
 
   # --------------------- 3 de mayo
