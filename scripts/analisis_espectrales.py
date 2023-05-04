@@ -1,4 +1,3 @@
-#TODO optimizar!
 #script para realizar los dos análisis espectrales finales.
 
 #librerías de python
@@ -13,11 +12,6 @@ from tqdm import tqdm
 
 import pickle   #for python data persistency
 import pandas as pd
-
-#import jinja2
-#import pdfkit #para convertir el html a pdf
-#import re
-
 
 #módulos personales
 import base_legendreDiscreta as legendre
@@ -724,6 +718,8 @@ def tabla_informacion():
     f.write(data_AE_html)
     f.close()
 
+
+
 """
 Notas: 
     para n=100, analisis_espectralPDL_global(100) encontró coeficientes que eran tan pequeños
@@ -740,12 +736,16 @@ if __name__=='__main__':
 
 
   #-------------Gráficas para la pregunta 2
-  grafica_analisisGlobal_k_fijo(7) 
+  #grafica_analisisGlobal_k_fijo(7) 
   #grafica_3d_n_k_FM(10)
 
   #-------------Gráficas para la pregunta 3
   #graficar_analisis_espectralPDL_global(2, False) 
-  #grafica_nube_b0m0_b1m1()
+  grafica_nube_b0m0_b1m1()
+
+
+  # --------------------- 3 de mayo
+  #ver_graficaPDL_continuo(18,6)
 
   #--------------- scripts que ejecuto una sola vez
   #tabla_informacion() #Sólo debía ejecutar una vez esta función para obtener el código html de la tabla.

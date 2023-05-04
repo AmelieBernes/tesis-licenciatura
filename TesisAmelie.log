@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  3 MAY 2023 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  3 MAY 2023 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2274,76 +2274,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--113
 
 [43]
 Package marginnote Info: Margin note 52.1 is on absolute page 52 on input line 
-127.
-Package marginnote Info: right page because not two side mode on input line 127
+130.
+Package marginnote Info: right page because not two side mode on input line 130
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 127.
+Package marginnote Info: xpos seems to be 72.0pt on input line 130.
 <./imagenes/PDL_dim2.png, id=1073, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim2.png Graphic file (type png)
 <use ./imagenes/PDL_dim2.png>
-Package pdftex.def Info: ./imagenes/PDL_dim2.png  used on input line 128.
+Package pdftex.def Info: ./imagenes/PDL_dim2.png  used on input line 131.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
 Package marginnote Info: Margin note 52.2 is on absolute page 52 on input line 
-136.
-Package marginnote Info: right page because not two side mode on input line 136
+139.
+Package marginnote Info: right page because not two side mode on input line 139
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 136.
+Package marginnote Info: xpos seems to be 72.0pt on input line 139.
 <./imagenes/PDL_dim3.png, id=1074, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim3.png Graphic file (type png)
 <use ./imagenes/PDL_dim3.png>
-Package pdftex.def Info: ./imagenes/PDL_dim3.png  used on input line 137.
+Package pdftex.def Info: ./imagenes/PDL_dim3.png  used on input line 140.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
 Package marginnote Info: Margin note 52.3 is on absolute page 53 on input line 
-145.
-Package marginnote Info: right page because not two side mode on input line 145
+148.
+Package marginnote Info: right page because not two side mode on input line 148
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 145.
+Package marginnote Info: xpos seems to be 72.0pt on input line 148.
 <./imagenes/PDL_dim4.png, id=1075, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim4.png Graphic file (type png)
 <use ./imagenes/PDL_dim4.png>
-Package pdftex.def Info: ./imagenes/PDL_dim4.png  used on input line 146.
+Package pdftex.def Info: ./imagenes/PDL_dim4.png  used on input line 149.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
  [44 <./imagenes/PDL_dim2.png> <./imagenes/PDL_dim3.png>]
 Package marginnote Info: Margin note 53.1 is on absolute page 53 on input line 
-154.
-Package marginnote Info: right page because not two side mode on input line 154
+157.
+Package marginnote Info: right page because not two side mode on input line 157
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 154.
+Package marginnote Info: xpos seems to be 72.0pt on input line 157.
 <./imagenes/PDL_dim5.png, id=1086, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim5.png Graphic file (type png)
 <use ./imagenes/PDL_dim5.png>
-Package pdftex.def Info: ./imagenes/PDL_dim5.png  used on input line 155.
+Package pdftex.def Info: ./imagenes/PDL_dim5.png  used on input line 158.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
 Package marginnote Info: Margin note 53.2 is on absolute page 54 on input line 
-163.
-Package marginnote Info: right page because not two side mode on input line 163
+166.
+Package marginnote Info: right page because not two side mode on input line 166
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 163.
+Package marginnote Info: xpos seems to be 72.0pt on input line 166.
 <./imagenes/PDL_dim6.png, id=1087, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim6.png Graphic file (type png)
 <use ./imagenes/PDL_dim6.png>
-Package pdftex.def Info: ./imagenes/PDL_dim6.png  used on input line 164.
+Package pdftex.def Info: ./imagenes/PDL_dim6.png  used on input line 167.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
  [45 <./imagenes/PDL_dim4.png> <./imagenes/PDL_dim5.png>]
 Package marginnote Info: Margin note 54.1 is on absolute page 54 on input line 
-172.
-Package marginnote Info: right page because not two side mode on input line 172
+175.
+Package marginnote Info: right page because not two side mode on input line 175
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 172.
+Package marginnote Info: xpos seems to be 72.0pt on input line 175.
 <./imagenes/PDL_dim7.png, id=1096, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim7.png Graphic file (type png)
 <use ./imagenes/PDL_dim7.png>
-Package pdftex.def Info: ./imagenes/PDL_dim7.png  used on input line 173.
+Package pdftex.def Info: ./imagenes/PDL_dim7.png  used on input line 176.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
 Package marginnote Info: Margin note 54.2 is on absolute page 55 on input line 
-181.
-Package marginnote Info: right page because not two side mode on input line 181
+184.
+Package marginnote Info: right page because not two side mode on input line 184
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 181.
+Package marginnote Info: xpos seems to be 72.0pt on input line 184.
 <./imagenes/PDL_dim8.png, id=1097, 688.0104pt x 726.3135pt>
 File: ./imagenes/PDL_dim8.png Graphic file (type png)
 <use ./imagenes/PDL_dim8.png>
-Package pdftex.def Info: ./imagenes/PDL_dim8.png  used on input line 182.
+Package pdftex.def Info: ./imagenes/PDL_dim8.png  used on input line 185.
 (pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
 ) (./codigo.tex [46 <./imagenes/PDL_dim6.png> <./imagenes/PDL_dim7.png>]
 Package marginnote Info: Margin note 55.1 is on absolute page 55 on input line 
@@ -3536,7 +3536,7 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 Here is how much of TeX's memory you used:
  44680 strings out of 476025
  883323 string characters out of 5796533
- 1900388 words of memory out of 5000000
+ 1899388 words of memory out of 5000000
  63557 multiletter control sequences out of 15000+600000
  533712 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3573,7 +3573,7 @@ nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (122 pages, 8983078 bytes).
+Output written on TesisAmelie.pdf (122 pages, 8983123 bytes).
 PDF statistics:
  2442 PDF objects out of 2487 (max. 8388607)
  2012 compressed objects within 21 object streams
