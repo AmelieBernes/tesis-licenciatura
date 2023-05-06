@@ -400,18 +400,40 @@ de sinusoides de frecuencias enteras.
 \begin{prop}
 \label{prop: base de fourier version real}
 Sean $n \in \IN$ mayor a uno, $M = \lceil \frac{n}{2} \rceil$.
-Para cualquier $\omega >0$, sean los vectores 
+Definimos a los vectores de $\IR^{n}$
+
+\[
+c_{n, 0}= \left( \sqrt{\frac{1}{n}} cos
+	\left(2 \pi \cdot 0 \frac{m}{n}
+	\right) \right)_{m=0}^{n-1} = 
+	\left( \frac{1}{\sqrt{n}}, \cdots, \frac{1}{\sqrt{n}} \right),
+\]
 
 	\begin{equation}
 	\label{eq0: 10ab}
 	c_{n, \omega} := \left( \sqrt{\frac{2}{n}} cos
 	\left(2 \pi \omega \frac{m}{n}
-	\right) \right)_{0 \leq m \leq n-1}
-	\hspace{0.2cm} \textit{y} \hspace{0.2cm} 
+	\right) \right)_{m=0}^{n-1},
+	\hspace{0.2cm} 1 \leq \omega \leq M-1
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq0: 4May}
 	s_{n, \omega} := \left( \sqrt{\frac{2}{n}} sin
 	\left(2 \pi \omega \frac{m}{n}
-	\right) \right)_{0 \leq m \leq n-1}.
+	\right) \right)_{m=0}^{n-1},
+	\hspace{0.2cm} 1 \leq \omega \leq M-1
 	\end{equation}
+	
+y, en el caso en que n sea par, definimos también
+al vector
+
+	\[
+c_{n, M}= \left( \sqrt{\frac{1}{n}} cos
+	\left(2 \pi \cdot M \frac{m}{n}
+	\right) \right)_{0 \leq m \leq n-1} = 
+	\left( \frac{(-1)^{m}}{\sqrt{n}} \right)_{m=0}^{n-1}.
+\]
 
 El subconjunto $\cali{F}_{n}$ de $\IR^{n}$ definido como
 
@@ -436,7 +458,7 @@ son iguales a $M$. Si suponemos a $\omega_{1}$ y $\omega_{2}$ distintos,
 entonces
 
 \begin{align*}
-\langle c_{, \omega_{1}} , c_{n, \omega_{2}} \rangle = &
+\langle c_{n, \omega_{1}} , c_{n, \omega_{2}} \rangle = &
 \frac{1}{n} \suma{m=0}{n-1}{cos \left(2 \pi \omega_{1} \frac{m}{n} \right) \cdot 
 cos \left(2 \pi \omega_{2} \frac{m}{n} \right)} \\
 = &\frac{1}{2n} \left(
@@ -636,8 +658,52 @@ aparecen uno o dos sinusoides (discretizados) con tal frecuencia:
 \label{Tab: frecuencias TDF n par}
 \end{table}
 
+\begin{defi}
+\label{def. Dom tdf}
+Sea $n \geq 2$. Llamaremos $Dom_{TDF, n}$ al conjunto de frecuencias
+consideradas en la transformada discreta de Fourier para
+las señales de dimensión $n$, o sea, al siguiente subconjunto de $\IR$;
+
+\[
+Dom_{TDF, n} = \{ 0 , 1, \cdots, M-1 \}
+\hspace{0.2cm} \text{si } n = 2M-1
+\hspace{0.2cm}
+\text{es impar, }
+\]
+y
+\[
+Dom_{TDF, n} = \{ 0 , 1, \cdots, M \}
+\hspace{0.2cm} \text{si } n = 2M-1
+\hspace{0.2cm}
+\text{es par.}
+\]
+\end{defi}
+
+
 \noindent
-Por ser $\cali{F}_{n}$ una BON de $\IR^{n}$, se vale la
+Por ser $\cali{F}_{n}$ una BON de $\IR^{n}$, 
+si $M = \lceil \frac{n}{2} \rceil$,
+\marginnote{Recuerde que al proceso de calcular los coeficientes
+de una señal respecto a una base se le conoce como 
+\textbf{análisis}, mientras que el de recuperar a la señal 
+via una combinación lineal con esos coeficientes 
+se la llama \textbf{síntesis}.}
+\[
+x = \langle x , c_{n, 0} \rangle c_{n, 0}  \suma{\omega = 1}{M-1}{(
+\langle x , c_{n, \omega} \rangle c_{n, \omega} + 
+\langle x , s_{n, \omega} \rangle s_{n, \omega} )}
+\hspace{0.2cm} \text{si n es impar}
+\]
+y
+\[
+x = \langle x , c_{n, 0} \rangle c_{n, 0} + \suma{\omega = 1}{M-1}{(
+\langle x , c_{n, \omega} \rangle  c_{n, \omega} + \langle x , s_{n, \omega} \rangle
+s_{n, \omega} )}
++ \langle x , c_{n, M} \rangle c_{n, M} 
+\hspace{0.2cm} \text{si n es par.}
+\]
+
+Se vale además la
 identidad de Parseval, luego, para toda
 señal $x \in \IR^{n}$,
 
@@ -663,8 +729,8 @@ $\langle x , s_{n,\omega} \rangle^{2}$
 dan información sobre el peso que la frecuencia
 $\omega$ tiene para sintetizar a la señal $x$.
 
-\marginnote{Según las ecuaciones \ref{eq0: 25Ap}
-y \ref{eq1: 25Ap}, los coeficientes $\tau_{n, \omega}(x)$
+\marginnote{Según las ecuaciones \eqref{eq0: 25Ap}
+y \eqref{eq1: 25Ap}, los coeficientes $\tau_{n, \omega}(x)$
 permiten calibrar la presencia de la frecuencia $\omega$
 (en los rangos dados por las tablas 6.1 y 6.2)
 en una señal $x$.}
@@ -674,31 +740,50 @@ en una señal $x$.}
 Sean $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $.
 Definimos
 	\[
-	\tau_{n,0}(x) := \langle x, c_{n,0} \rangle^{2},	
+	\tau_{n,0}(x) := \frac{|\langle x, c_{n,0} \rangle|}{|| x ||} ,	
 	\]
 	y
 	\[
-	\forall 1 \leq \omega \leq M-1: \hspace{0.2cm} 
-	\tau_{n,\omega}(x) := \langle x, c_{n,\omega} \rangle^{2}+
-	\langle x, s_{n,\omega} \rangle^{2}.	
+	\forall 
+	\hspace{0.1cm}	
+	1 \leq \omega \leq M-1: \hspace{0.2cm} 
+	\tau_{n,\omega}(x) := 
+	\frac{\sqrt{
+	\langle x, c_{n,\omega} \rangle^{2}+
+	\langle x, s_{n,\omega} \rangle^{2}}}{||x||}.	
 	\]	
-	Si $n$ es par, se define además a
+		Si $n$ es par, se define además a
 	\[
-	\tau_{n,M}(x) := \langle x, c_{n,M} \rangle^{2}.
+	\tau_{n,M}(x) := 
+	\frac{ |\langle x, c_{n,M} \rangle^{2}| }{ ||x|| }.
 	\]
 \end{defi}
-Observe que, para toda $\omega$, 
-$\tau_{n, \omega}(s) \leq ||x||^{2}$.
+De las ecuaciones 
+\eqref{eq0: 25Ap} y 
+\eqref{eq1: 25Ap} se deduce
+fácilmente que, para toda $\omega$, 
+$0 \leq \tau_{n, \omega}(x) \leq 1$. Puede pensar
+a tales coeficientes $\tau_{n, \omega}(x)$ como la
+contribución (normalizada por la norma de $x$)
+de la frecuencia $\omega$ para sintetizar a $x$.
+
 
 \begin{defi}
 \label{def: espectro DFT}
 Sean $n \geq 2$,  $x \in \IR^{n}$. Por el 
-\textbf{espectro obtenido a partir de la TDF} nos referiremos
-a la gráfica de las frecuencias dadas, dependiendo de la
-paridad de $n$, en las tablas 
-6.1 y 6.2
-versus los coeficientes $\tau_{n, \omega}(x)$
-definidos en \ref{def: taus}
+\textbf{espectro de $x$ 
+obtenido a partir de la TDF} nos referiremos
+a la 
+función 
+$\mathrm{T}_{x} : DOM_{TDF, n} \longrightarrow [0, ||x||^{2}] \subseteq \IR$
+definida como
+\[
+\mathrm{T}_{x} (\omega) = \tau_{n, \omega}(x)
+\hspace{0.2cm} \text{ para toda }
+\hspace{0.2cm} \omega \in DOM_{TDF, n},
+\]
+donde los coeficientes $\tau_{n, \omega}(x)$
+son como se definieron en \ref{def: taus}
 \end{defi}
 
 \begin{ejemplo}

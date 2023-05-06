@@ -302,13 +302,7 @@ una señal $x$ forma con dichos cúmulos para dar una medida de qué tanto
 tiene $x$ la propiedad considerada.
 
 
-usamos el coseno del ángulo que forma una señal $x \in \IR^{n}$
-con el plano $W_{n,1}$ para dar una medida de qué tan afín es $x$;
-queremos ahora hacer algo similar, y usar el coseno de $x$ con espacios
-de frecuencias $\omega >0$ como
-una medida de qué tanto reacciona $x$ a la frecuencia $\omega$.
-
-
+\subsection{Espacios monofrecuenciales}
 
 \begin{notacion}
 Para simplificar la notación, denotamos por $I_{n}$ al intervalo
@@ -337,6 +331,12 @@ pura $\omega$}. En este contexto,
 a $\phi$ se le llama el \textbf{desfase normalizado}
 de la señal, y a $A$ la \textbf{amplitud}.
 \end{defi}
+
+Note que los vectores
+$c_{n, \omega}$ y $s_{n, \omega}$
+definidos en la proposición
+\ref{prop: base de fourier version real} son
+señales $n-$dimensionales de frecuencia pura $\omega$.
 
 \begin{nota}
 Observe que toda señal de la forma
@@ -389,13 +389,13 @@ donde $\phi^{'}= \phi + 1/4$.
 		\item El vector 
 		\begin{equation}
 		\label{eq: coseno omega}
-		c_{n, \omega} = \left(cos(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
+		\tilde{c}_{n, \omega} = \left(cos(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
 		\end{equation}
 		no es cero, y 
 		\item el vector 
 		\begin{equation}
 		\label{eq: seno omega}
-		s_{n, \omega} = \left(sen(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
+		\tilde{s}_{n, \omega} = \left(sen(2 \pi \omega m/n) \right)_{m=0}^{n-1} \in \IR^{n}
 		\end{equation}
 		es cero si y sólo si $\omega \in \frac{n}{2} \IZ$.
 	\end{itemize}
@@ -424,12 +424,12 @@ sen((Km)\pi)=0$.
 
 Nos interesará considerar al subespacio
 de $\IR^{n}$ generado por las señales
-de frecuencia $\omega$ $c_{n, \omega}$
-y $s_{n, \omega}$, o sea, a 
+de frecuencia $\omega$ $\tilde{c}_{n, \omega}$
+y $\tilde{s}_{n, \omega}$, o sea, a 
 
 \begin{equation}
 \label{eq: espacio Pnw}
-P_{n, \omega} := span(c_{n, \omega}, s_{n, \omega}).
+P_{n, \omega} := span(\tilde{c}_{n, \omega}, \tilde{s}_{n, \omega}).
 \end{equation} 
 caracterizamos a los elementos de 
 espacios de la forma
@@ -453,7 +453,7 @@ del coseno de la suma de dos ángulos, tenemos que
 \[
 A(cos (2 \pi \omega t + 2 \pi \phi))_{t \in I_{n}}
 = Aa  (cos(2 \pi \omega t))_{t \in I_{n}} +
-Ab  (sen(2 \pi \omega t))_{t \in I_{n}} \in P_{\omega} \in P_{\omega}
+Ab  (sen(2 \pi \omega t))_{t \in I_{n}} \in P_{\omega} 
 \]
 donde
 \[
@@ -511,10 +511,8 @@ cos (2 \pi \omega t - 2 \pi \phi)
 \begin{defi}
 Si $n \geq 2$ y $\omega>0$, entonces
 al subespacio $P_{n,\omega}$ 
-de $\IR^{n}$,
-definido en \eqref{eq2: 20Marzo} si 
-$\omega \not\in \frac{n}{2} \IZ$ y en 
-\eqref{eq0: 23Ap} en caso contrario,
+de $\IR^{n}$
+definido en \eqref{eq: espacio Pnw} 
 le llamaremos el \textbf{espacio monofrecuencial
 $n$ dimensional} de frecuencia $\omega$.
 \end{defi}
@@ -529,8 +527,8 @@ de $\IR^{n}$ son linealmente independientes.
 \textbf{Demostración.}
 Sólo note que 
 la primera entrada de \eqref{eq: coseno omega} es $1$, mientras que  
-la primera entrada de $g_{n, \omega}$ sea cero, pero no
-todas sus entradas sean cero (c.f. proposición 
+la primera entrada de $\tilde{s}_{n, \omega}$ es cero pero no
+todas sus entradas lo son (c.f. proposición 
 \ref{prop: para que frecuencias omega vector seno es cero}). 
 \QEDB
 \vspace{0.2cm}
@@ -543,7 +541,8 @@ el espacio $P_{n,\omega}$ que generan los vectores
 
 \begin{align}
 \label{eq6: 23Ap}
-P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
+P_{n,\omega}:= & span( \tilde{c}_{n, \omega}, 
+\tilde{s}_{n, \omega}) \notag  \\  
 = &
 \{ a \left( cos \left(2 \pi \omega t \right) \right)_{t \in I_{n}} +
 b ( sen (2 \pi \omega t ))_{t \in I_{n}} : 
@@ -561,7 +560,8 @@ de dimensión $n$ y frecuencia (pura) $\omega$. \\
 Si $\omega \in \frac{n}{2} \IZ$, entonces, según 
 la proposición 
 \ref{prop: para que frecuencias omega vector seno es cero}, el vector
-$s_{n, \omega}$ es el vector cero y $c_{n, \omega}$ no, luego, el espacio
+$\tilde{s}_{n, \omega}$ es el vector cero y 
+$\tilde{c}_{n, \omega}$ no, luego, el espacio
 \begin{align}
 \label{eq0: 23Ap}
 P_{n,\omega}:= & span(c_{n, \omega}, s_{n, \omega}) \notag  \\  
@@ -582,7 +582,7 @@ según la proposición
 \ref{prop: para que frecuencias omega vector seno es cero},
 $s_{n, \omega} =0$ y
 \[
-c_{n, \omega} = \left(cos\left( 2 \pi \frac{n}{2}K \frac{m}{n}\right)
+\tilde{c}_{n, \omega} = \left(cos\left( 2 \pi \frac{n}{2}K \frac{m}{n}\right)
 \right)_{m=0}^{n-1}
 = (cos(mK \pi))_{m = 0}^{n-1} = ((-1)^{mK})_{m=0}^{n-1},
 \]
@@ -603,7 +603,7 @@ y
 
 \input{coseno_a_plano}
 
-\section{Estudio espectral basado en ángulos a espacios monofrecuenciales}
+\subsection{Estudio espectral basado en ángulos a espacios monofrecuenciales}
 
 Definidos los espacios monofrecuenciales
 $P_{n, \omega} \subseteq \IR^{n}$ 
@@ -619,7 +619,8 @@ cuyo coseno, según la proposición
 es
 \begin{equation}
 \label{eq0: 20Mar}
-cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}
+cos \left( \measuredangle (x, P_{n, \omega}) \right) = 
+\frac{|| \Pi_{P_{n, \omega}}(x) ||}{||x||}
 \in [0,1].
 \end{equation}
 
@@ -691,24 +692,26 @@ debemos de dar una BON del espacio $P_{n, \omega}$.
 
 \begin{prop}
 \label{prop: aaa}
-Sean $n \in \IN$, $\omega>0$. Sean los vectores $c_{n, \omega}, 
-s_{n ,\omega} \in \IR^{n}$ como se definieron en 
+Sean $n \in \IN$, $\omega>0$. Sean los vectores 
+$\tilde{c}_{n, \omega}, 
+\tilde{s}_{n ,\omega} \in \IR^{n}$ 
+como se definieron en 
 \eqref{eq: coseno omega} y \eqref{eq: seno omega}, 
 respectivamente.
 \begin{itemize}
 	\item Si $\omega \not\in \frac{n}{2} \IZ$, entonces 
-	$\{ f_{n, \omega}, g_{n, \omega} \}$, donde
+	$\{ c_{n, \omega}, s_{n, \omega} \}$, donde
 
 	\begin{equation}
 	\label{eq5: 19Marzo}
-	f_{n, \omega}=\xi_{n, \omega} c_{n, \omega}
+	c_{n, \omega}=\xi_{n, \omega} \tilde{c}_{n, \omega}
 	\in \IR^{n}
 	\end{equation}
 y 
 
 	\begin{equation}
 	\label{eq6: 19Marzo}
-	g_{n, \omega}= \eta_{n, \omega} s_{n, \omega}
+	s_{n, \omega}= \eta_{n, \omega} \tilde{s}_{n, \omega}
 	\in \IR^{n},
 	\end{equation}
 con 
@@ -725,17 +728,17 @@ y
 	\label{eq8: 19Marzo}
 	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
 	cos(2 \pi \omega \left(\frac{n-1}{n} \right))}{sen \left(2 \pi 
-	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}.
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}
 	\end{equation}
 
 \noindent
 es una base normalizada del subespacio $P_{n, \omega} \leq \IR^{n}$
 definido en \eqref{eq6: 23Ap}, y,
 \item si $\omega \in \frac{n}{2} \IZ$, entonces 
-$\{ f_{n, \omega} \}$, con
+$\{ c_{n, \omega} \}$, con
 \begin{equation}
 \label{ec: 4: 23ap}
-	f_{n, \omega} := \frac{1}{\sqrt{n}}c_{n, \omega}
+	c_{n, \omega} := \frac{1}{\sqrt{n}} \tilde{c}_{n, \omega}
 \end{equation}
 es una base normalizada 
 del subespacio $P_{n, \omega} \leq \IR^{n}$
@@ -745,21 +748,22 @@ definido en \eqref{eq0: 23Ap}.
 \noindent
 \textbf{Demostración.}
 En efecto, por definición del espacio
-$P_{n, \omega}$, $\{ c_{n, \omega}, s_{n, \omega} \}$
+$P_{n, \omega}$, $\{ \tilde{c}_{n, \omega}, 
+\tilde{s}_{n, \omega} \}$
 es una base de este cuando
 $\omega \not\in \frac{n}{2}\IZ$, y
-$\{ c_{n, \omega}\}$ es base si 
+$\{ \tilde{c}_{n, \omega}\}$ es base si 
 $\omega \in \frac{n}{2}\IZ$,
 luego, en ambos casos el conjunto propuesto en efecto
 es una base de $P_{n, \omega}$.
 En el segundo caso, puesto que
-$f_{n, \omega}$ será un vector cuyas entradas serán $1$, o $-1$,
-\eqref{ec: 4: 23ap} en efecto es un vector unitario. 
+$c_{n, \omega}$ será un vector cuyas entradas serán $1$, o $-1$,
+en efecto es un vector unitario. 
 En el primer caso, se han calculado las constantes 
 $\xi_{n, \omega}$ y $\eta_{n, \omega}$
 dadas en 
 \eqref{eq7: 19Marzo} y \eqref{eq8: 19Marzo}
-para que $f_{n, \omega}$ y $g_{n, \omega}$
+para que $c_{n, \omega}$ y $s_{n, \omega}$
 tengan normal uno; puesto que los cálculos son muy
 similares a los realizados en la demostración de la proposición
 \ref{prop: producto punto entre f y g}, los omitimos.
@@ -767,9 +771,24 @@ similares a los realizados en la demostración de la proposición
 \vspace{0.2cm}
 
 
+\begin{nota}
+\label{nota: notacion cnw, snw}
+Observe que las notaciones 
+``$c_{n, \omega}$'' y ``$s_{n, \omega}$'' ya las
+habíamos empleado antes en la proposición 
+\ref{prop: base de fourier version real} cuando se definía
+la base ortonormal en función de la cual se calcula la TDF; no hay problema
+en usar esta notación aquí también, pues para los valores 
+$\omega \in Dom_{TDF, n}$, los vectores
+$c_{n, \omega}$ y $s_{n, \omega}$ definidos en 
+la proposición \ref{prop: base de fourier version real}
+coinciden con los que acabamos de defininir en la proposición 
+\ref{prop: aaa}.
+\end{nota}
+
 Conviene también establecer una fórmula para
 el producto punto entre 
-los vectores $f_{n, \omega}$ y $g_{n, \omega}$
+los vectores $c_{n, \omega}$ y $s_{n, \omega}$
 definidos en la proposición \ref{prop: aaa}
 cuando $\omega \not\in \frac{n}{2} \IZ$.
 Hacemos esto a continuación.
@@ -780,13 +799,13 @@ Fijados $n \geq 2$ y $\omega \geq 0$ con
 $\omega \not\in \frac{n}{2}\IZ$, 
 el producto punto entre 
 los vectores
-$f_{n, \omega}$ y $g_{n, \omega}$, definidos 
+$c_{n, \omega}$ y $s_{n, \omega}$, definidos 
 \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}
 respectivamente, es
 
 \begin{equation}
 \label{eq9: 19Marzo}
-\langle f_{n, \omega} , g_{n, \omega} \rangle =
+\langle c_{n, \omega} , s_{n, \omega} \rangle =
 \frac{\xi_{n, w} \eta_{n, \omega}}{2} \cdot 
 \frac{sen(2 \pi \omega)
 sen(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
@@ -824,10 +843,10 @@ sen(z)= \frac{e^{iz}-e^{-iz}}{2i},
 Tenemos que
 
 \begin{align*}
-\langle f_{n,\omega} , g_{n, \omega} \rangle = &
+\langle c_{n,\omega} , s_{n, \omega} \rangle = &
 \xi_{n, \omega} \eta_{n, \omega} \left\langle 
 \left( cos \left( 2 \pi \omega \frac{m }{n} \right) \right)_{0 \leq m \leq N-1} ,  
-\left( cos \left( 2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1} \right\rangle \\
+\left( sen \left( 2 \pi \omega \frac{m }{n}\right) \right)_{0 \leq m \leq N-1} \right\rangle \\
 = & \xi_{n, \omega} \eta_{n, \omega} \suma{m=0}{n-1}{
 cos \left(2 \pi \omega \frac{m}{n}\right) sen\left( 2 \pi \omega \frac{m}{n}\right)} \\
 = & \frac{\xi_{n, \omega} \eta_{n, \omega}}{2}
@@ -890,44 +909,44 @@ se tiene que
 	\item Si $\omega \not\in \frac{n}{2} \IZ$, entonces
 	\begin{equation}
 	\label{eq: pi ommm 1}
-	 \Pi_{P_{\omega}}(x) = 
+	 \Pi_{P_{n, \omega}}(x) = 
 \frac{
-\langle x, f_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle 
-\langle x, g_{n, \omega} \rangle
+\langle x, c_{n, \omega} \rangle - \langle c_{n, \omega}, s_{n, \omega} \rangle 
+\langle x, s_{n, \omega} \rangle
 }
-{1-|\langle f_{n, \omega}, g_{n, \omega} \rangle |^{2}  }
-f_{n, \omega} +
+{1-|\langle c_{n, \omega}, s_{n, \omega} \rangle |^{2}  }
+c_{n, \omega} +
 \frac{
-\langle x, g_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle 
-\langle x, f_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle - \langle c_{n, \omega}, s_{n, \omega} \rangle 
+\langle x, c_{n, \omega} \rangle
 }
-{1-|\langle f_{n, \omega}, g_{n, \omega} \rangle |^{2}  }
-g_{n, \omega}
+{1-|\langle c_{n, \omega}, s_{n, \omega} \rangle |^{2}  }
+s_{n, \omega}
 	\end{equation}
 	y 
 	\begin{equation}
 	\label{eq: coef sigma caso 1}
 	\sigma_{n}(x, \omega) =
 	\left(		  
-		  \frac{\langle x, f_{n, \omega } \rangle^{2} +  \langle x, g_{n, \omega } \rangle^{2}	
-	       -2  \langle x, f_{n, \omega } \rangle \langle x, g_{n, \omega } \rangle \langle f_{n, \omega }, g_{n, \omega } \rangle}{ || x ||^{2} \cdot
-	       (1- \langle f_{n, \omega }, g_{n, \omega } \rangle^{2})}	  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
 \right) ^{1/2},
 	\end{equation}
-donde $f_{n, \omega}$ y $g_{n, \omega}$ son como en 
+donde $c_{n, \omega}$ y $s_{n, \omega}$ son como en 
 \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}, y
 
 \item si $\omega \in \frac{n}{2} \IZ$, entonces 
 \begin{equation}
 \label{eq: pi ommm 2}
-\Pi_{P_{n, \omega}}(x) = \langle x, f_{n, \omega} \rangle f_{n, \omega}
+\Pi_{P_{n, \omega}}(x) = \langle x, c_{n, \omega} \rangle c_{n, \omega}
 \end{equation}
 y 
 \begin{equation}
 \label{eq: sfklmslsfl}
-\sigma_{n}(x, \omega) = \frac{|\langle x, f_{n, \omega} \rangle |}{||x||},
+\sigma_{n}(x, \omega) = \frac{|\langle x, c_{n, \omega} \rangle |}{||x||},
 \end{equation}
-donde $f_{n, \omega}$ es como en \eqref{ec: 4: 23ap}.
+donde $c_{n, \omega}$ es como en \eqref{ec: 4: 23ap}.
 \end{itemize}
 \end{prop}
 
@@ -941,13 +960,26 @@ basada en la TDF).
 
 \begin{defi}
 \label{def: espectro monofrecuenciales}
-Sean $n \geq 2$, $x \in \IR^{n}$. Por un
-\textbf{espectro obtenido a partir de mediciones a espacios
-monofrecuenciales} nos referiremos a una gráfica de frecuencias
-$\omega >0$ versus los coeficientes $\sigma_{n}(x, \omega)$
-definidos (dependiendo de si $\omega$ sea o no elemento de
-$\frac{n}{2} \IZ$) en \eqref{eq: coef sigma caso 1}
-y \eqref{eq: sfklmslsfl}.
+Sean $n \geq 2$, $x \in \IR^{n}$. 
+Sea $Dom_{\omega} \subseteq \IR^{+}_{0}$
+un conjunto de frecuencias no negativas. \\
+
+Si $x \neq 0$, definimos a su \textbf{espectro respecto
+a $Dom_{\omega}$} como la función 
+$\Sigma_{x}: DOM_{\omega} \longrightarrow [0,1]$
+dada por
+\[
+Sigma(x) = \sigma_{n, \omega} (x) \hspace{0.2cm}
+\text{ para toda }
+\hspace{0.2cm} \omega \in DOM_{\omega},
+\]
+donde los coeficientes
+$\sigma_{n}(x, \omega)$ son como se definieron en 
+la proposición \ref{prp: ammm}. \\
+
+Si $x = 0$, definimos su espectro como la 
+función $\Sigma_{x}: DOM_{\omega} \longrightarrow [0,1]$
+constante cero.
 \end{defi}
 
 Observe que, a diferencia de la definición 
@@ -996,7 +1028,7 @@ P_{\omega + \frac{n}{1}} := & span(c_{n, \omega}, s_{n, \omega}) \\
 \end{nota}
 \end{comment}
 
-\section{Desfase de la proyección de una señal a espacios monofrecuenciales}
+\subsection{Desfase de la proyección de una señal a espacios monofrecuenciales}
 
 
 Fijada una dimensión $n$ y 
@@ -1037,7 +1069,7 @@ desfase $\phi$ como el desfase que mejor se ajusta a $x$
 Primero abordemos el caso en el que
 $\omega \not\in \frac{n}{2} \IZ$. 
 
-Como los vectores $f_{n, \omega}$ y $g_{n, \omega}$ 
+Como los vectores $c_{n, \omega}$ y $s_{n, \omega}$ 
 definidos en \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}
 son unitarios y linealmente independientes (c.f. proposición
 \ref{prop: aaa}),
@@ -1055,17 +1087,17 @@ donde
 \begin{equation}
 \label{eq4: 20Marzo}
 c= \frac{
-\langle x, f_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle
-\langle x, g_{n, \omega} \rangle
-}{1-\langle f_{n, \omega}, g_{n, \omega} \rangle^{2}} \xi_{n, \omega}
+\langle x, c_{n, \omega} \rangle - \langle c_{n, \omega}, s_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle
+}{1-\langle c_{n, \omega}, s_{n, \omega} \rangle^{2}} \xi_{n, \omega}
 \end{equation}
 y
 \begin{equation}
 \label{eq5: 20Marzo}
 d= \frac{
-\langle x, g_{n, \omega} \rangle - \langle f_{n, \omega}, g_{n, \omega} \rangle
-\langle x, f_{n, \omega} \rangle
-}{1-\langle f_{n, \omega}, g_{n, \omega} \rangle^{2}} \eta_{n, \omega}.
+\langle x, s_{n, \omega} \rangle - \langle c_{n, \omega}, s_{n, \omega} \rangle
+\langle x, c_{n, \omega} \rangle
+}{1-\langle c_{n, \omega}, s_{n, \omega} \rangle^{2}} \eta_{n, \omega}.
 \end{equation}
 
 \noindent 
@@ -1136,6 +1168,7 @@ se deduce que
 
 Hemos probado el siguiente
 \begin{teo}
+\label{teo: amelie1}
 Sean $n \geq 2$ y $\omega > 0$ con $\omega \not\in \frac{n}{2}\IZ$.
 Si $P_{n, \omega}$ es el subespacio de $\IR^{n}$ definido como 
 en \eqref{eq6: 23Ap}, entonces, para todo 
@@ -1157,9 +1190,9 @@ Observe que tenemos una fórmula para obtener a
 la frecuencia y la amplitud de $\Pi_{P_{n, \omega}}(x)$
 usando sólamente los datos
 \[
-\langle x, f_{n, \omega} \rangle, \hspace{0.2cm}
-\langle x, g_{n, \omega} \rangle \hspace{0.1cm} \text{y} \hspace{0.1cm}
-\langle f_{n, \omega}, g_{n, \omega} \rangle.
+\langle x, c_{n, \omega} \rangle, \hspace{0.2cm}
+\langle x, s_{n, \omega} \rangle \hspace{0.1cm} \text{y} \hspace{0.1cm}
+\langle c_{n, \omega}, s_{n, \omega} \rangle.
 \]
 
 El resultado análogo para cuando $\omega \in \frac{n}{2}\IZ$
@@ -1167,6 +1200,7 @@ es más fácil de establecer, pues en este caso
 el espacio monofrecuencia $P_{n, \omega}$ es una recta.
 
 \begin{teo}
+\label{teo: amelie2}
 Sean $n \geq 2$ y $\omega > 0$ con $\omega \in \frac{n}{2}\IZ$.
 Si $P_{n, \omega}$ es el subespacio de $\IR^{n}$ definido como 
 en \eqref{eq0: 23Ap}, entonces, para todo 
@@ -1174,7 +1208,7 @@ $x \in \IR^{n}$ no cero, se tiene que
 \begin{equation}
 \label{ec: desfase explicito 2}
 \Pi_{P_{n, \omega}} (x) = 
-\frac{1}{\sqrt{n}} \langle x, f_{n, \omega} \rangle
+\frac{1}{\sqrt{n}} \langle x, c_{n, \omega} \rangle
 \cdot (cos (2 \pi \omega t))_{t \in I_{n}} \in \IR^{n}.
 \end{equation}
 \end{teo}
@@ -1185,14 +1219,14 @@ En efecto, según \eqref{eq: pi ommm 2} y
 se tiene que
 \begin{align*}
 \Pi_{P_{n, \omega}} (x) = & 
-\langle x, f_{n, \omega} \rangle f_{n, \omega} \\
-= & \langle x, f_{n, \omega} \rangle \frac{1}{\sqrt{n}} c_{n, \omega} \\
-= & \frac{1}{\sqrt{n}} \langle x, f_{n, \omega} \rangle
+\langle x, c_{n, \omega} \rangle c_{n, \omega} \\
+= & \langle x, c_{n, \omega} \rangle \frac{1}{\sqrt{n}} \tilde{c}_{n, \omega} \\
+= & \frac{1}{\sqrt{n}} \langle x, c_{n, \omega} \rangle
 \cdot (cos (2 \pi \omega t))_{t \in I_{n}} \in \IR^{n}.
 \end{align*}
 
 \QEDB
 \vspace{0.2cm}
 
-
+\input{relacion_espectros}
 \input{espectros}

@@ -1,103 +1,7 @@
 \chapter{Análisis espectrales: resultados numéricos}
 \label{chap: resultados numericos analisis espectrales}
 
-Después de todo lo expuesto en las secciones anteriores, tenemos
-ya dos alternativas para realizar un análisis
-espectral de una señal $x \in \IR^{n} - \{ 0 \}$.
-
-\begin{itemize}
-	\item \textbf{(Espectro cero: basado en la TDF)} 
-	Usando la transformada discreta de Fourier
-	(c.f. sección \ref{sec: TDF}), el espectro de
-	una señal $x$ es la gráfica de las frecuencias
-	enteras $\omega$ dadas (dependiendo de la 
-	paridad de $n$) por las
-	tablas 6.1 y 6.2
-	versus los coeficientes
-	$\tau_{n, \omega}(x)$ definidos en
-	\ref{def: taus}.
-	
-	Puesto que el realizar un análisis de 
-	$x$ via la TDF significa encontrar una
-	expresión de $x$ como una suma
-	ponderada de muestreos de senos y cosenos
-	de frecuencias enteras las de las tablas 6.1 o 6.2,
-	se tiene que  
-	\begin{itemize}
-		\item Para toda frecuencia $\omega$ considerada
-		por la TDF,
-		\[
-		0 \leq \tau_{n, \omega}(x) \leq || x ||^{2}
-		\]
-		y, que
-		\item entre más se acerque
-		$\tau_{n, \omega}(x)$
-		a $|| x ||^{2}$, mayor es la
-		importancia de la frecuencia $\omega$ para
-		sintetizar s $x$; recíprocamente, si 
-		$\tau_{n, \omega}(x)$ es cercano a cero, entonces
-		la frecuencia $\omega$ no es muy relevante para 
-		reconstruir a la señal $x$.
-	\end{itemize}
-	\begin{defi}
-	\label{def: FM0}
-	Denotaremos
-	por $FM0(x)$ a la frecuencia $\omega$
-	tal que, para cualquier otra $\omega'$ en el rango
-	de frecuencias consideradas por la TDF, se tenga que
-	\[
-	\tau_{n, \omega'}(x) \leq \tau_{n, \omega}(x).
-	\]
-	\end{defi}
-	
-	\item \textbf{(Espectro uno: basado en espacios monofrecuenciales)} 
-	Si para hacer un análisis espectral se usan
-	las ideas propuestas en 
-	la sección
-	\ref{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}, 
-	o sea, si se usan cosenos de ángulos a
-	espacios monofrecuenciales $P_{n, \omega}$
-	(c.f. \ref{eq: espacio Pnw}),	
-	entonces, fijado un rango de frecuencias 
-	$\omega$,
-	el espectro de $x$ es la gráfica de 
-	las frecuencias $\omega$ versus	
-	los coeficientes
-	$\sigma_{n}(x, \omega)$ definidos en 
-	\eqref{prp: ammm}.\\
-	\begin{itemize}
-		\item Para cualquier frecuencia $\omega \geq 0$, se tiene que
-		\[
-		0 \leq \sigma_{n}(x, \omega) \leq 1;
-		\]
-		\item 
-	el que
-	$\sigma_{n}(x, \omega)$ sea cercano a $1$ significa que un
-	muestreo uniforme de un sinusoide de frecuencia $\omega$
-	modela bien el comportamiento de $x$ (c.f. 
-	nota \ref{nota: significado de los sigma en AE}).
-	\end{itemize}
-	\begin{defi}
-	\label{def: FM1}
-	Denotaremos
-	por $FM1(x)$ a la frecuencia $\omega$ del rango considerado
-	tal que, para cualquier otra $\omega'$ del rango, se tenga que
-	\[
-	\sigma_{n, \omega'}(x) \leq \sigma_{n, \omega}(x).
-	\]
-	\end{defi}
-\end{itemize}
-
-Según esta lista comparativa, en el segundo análisis espectral 
-los casos extremos no pueden interpretarse directamente (como ocurren en el primer
-análisis espectral) como una presencia o ausencia de 
-la frecuencia $\omega$ para sintetizar a $x$, pues, a diferencia de lo
-que ocurre en la TDF, herramienta basada en una BON
-de $\IR^{n}$, con la metodología basada en medición de ángulos
-a espacios monofrecuenciales no se está proponiendo ningún proceso
-análisis/síntesis de señales. En su lugar, los casos extremos significan paralelismo
-o perpendicular a la señal de frecuencia $\omega$ más cercana a $x$. \\
-
+\TODO{Agrega intro.}
 
 Programando la funciones necesarias para realizar análisis espectrales
 usando estas dos metodologías, podremos comprobar o refutar y mejorar
@@ -117,6 +21,8 @@ datos de tipo \texttt{float} son manipulados por la computadora
 y los problemas de aproximación y redondeo que están implícitos en
 este tipo de operaciones.}
 
+\TODO{Dí que se ve que un espectro está contenido en el otro y 
+cita la proposición \ref{prop: coinciden espectr}.}
 
 \section{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}
 
@@ -338,6 +244,7 @@ datos calculados con la función
 es \TODO{ref}.
 
 \section{Gráficas para la pregunta \ref{pregunta 1}}
+
 
 \section{Gráficas para la pregunta \ref{preg 2}}
 
