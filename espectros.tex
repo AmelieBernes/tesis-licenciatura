@@ -1,13 +1,23 @@
 \chapter{Análisis espectrales: resultados numéricos}
 \label{chap: resultados numericos analisis espectrales}
 
-\TODO{Agrega intro.}
-
-Programando la funciones necesarias para realizar análisis espectrales
-usando estas dos metodologías, podremos comprobar o refutar y mejorar
+Establecida ya la teoría necesaria
+para definir todos los elementos de los espectros
+basados en la TDF y en espacios monofrecuenciales 
+de una señal finita $x \in \IR^{n}$,
+programando la funciones necesarias para realizar análisis espectrales
+de los polinomios discretos de Legendre
+usando estas dos metodologías; podremos así
+comprobar o refutar y mejorar
 la hipótesis hecha en 
 \ref{ref: hipotesis}. 
-Escribimos en la siguiente sección unas preguntas guía
+
+Puede encontrar el código, implementado en Python,
+en \TODO{cita al repositorio.} \\
+
+Antes de mostrar las gráficas de los espectros
+de algunos PDL, 
+redactamos en la siguiente sección unas preguntas guía
 que nos gustaría responder numéricamente, después de 
 realizar análisis espectrales de los PDL
 $\cali{L}^{n,k}$ de dimensión $2 \leq 2 \leq 69$. \\
@@ -20,9 +30,6 @@ en magnitud que son redondeados a cero
 datos de tipo \texttt{float} son manipulados por la computadora
 y los problemas de aproximación y redondeo que están implícitos en
 este tipo de operaciones.}
-
-\TODO{Dí que se ve que un espectro está contenido en el otro y 
-cita la proposición \ref{prop: coinciden espectr}.}
 
 \section{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}
 
@@ -41,8 +48,8 @@ valores $FM0(x)$ y $FM1(x)$ definidos en
 Sean $2 \leq n \leq 69$ y $0 \leq k \leq n-1$.
 Sea $\cali{L}^{n,k}$ el PDL de dimensión $n$ y grado $k$.
 ¿las frecuencias máximas
-$FM0(\cali{L}^{n,k})$ y 
-$FM1(\cali{L}^{n,k})$ son cercanas a $\frac{k}{2}$?
+$FP0(\cali{L}^{n,k})$ y 
+$FP1(\cali{L}^{n,k})$ son cercanas a $\frac{k}{2}$?
 \end{pregunta}
 
 A continuación mostramos un dibujo para
@@ -51,14 +58,14 @@ espectros del PDL
 $\cali{L}^{7,5} \in \IR^{7}$
 en caso de que la respuesta a la pregunta
 \ref{pregunta 1} sea afirmativa.
-Se escogió dibujar posibles espectros
-de $\cali{L}^{7,5}$; observe que, en el segundo espectro,
+Observe que, en el segundo espectro,
 fue posible usar varios valores de $\omega$ para analizar
 a $\cali{L}^{7,5}$, y que podría ser que la frecuencia máxima
 sea un número decimal, mientras que para el primer espectro
 (el basado en la TDF) sólo pueden usarse algunas frecuencias
-enteras, por lo que no esperamos que el valor máximo
-se de en $\frac{5}{2}$, pues este ni siquiera es un entero.
+enteras, por lo que no esperamos que 
+$FP0(x)$
+sea $\frac{5}{2}$, pues este ni siquiera es un entero.
 Esperamos, sin embargo, que el máximo se de en las frecuencias
 enteras cercanas al valor $\frac{5}{2}$.
 
@@ -78,38 +85,39 @@ enteras cercanas al valor $\frac{5}{2}$.
 \begin{pregunta}
 \label{preg 2}
 ¿Las frecuencias 
-$FM0(\cali{L}^{n,k})$ y $FM1(\cali{L}^{n,k})$
+$FP0(\cali{L}^{n,k})$ y $FP1(\cali{L}^{n,k})$
 dependen, como implica la pregunta 1, sólo del parámetro
 de grado $k$ y no del de dimensión $n$?
 Es decir, si $k$, $n_{1}$ y $n_{2}$
 son tales que $k \leq n_{1}-1$ y
 $k \leq n_{2}-1$, ¿ocurre que 
-$FM0(\cali{L}^{n_{1},k})$ = $FM0(\cali{L}^{n_{2},k})$
+$FP0(\cali{L}^{n_{1},k})$ = $FP0(\cali{L}^{n_{2},k})$
 y 
-$FM1(\cali{L}^{n_{1},k})$ = $FM1(\cali{L}^{n_{2},k})$?
+$FP1(\cali{L}^{n_{1},k})$ = $FP1(\cali{L}^{n_{2},k})$?
 \end{pregunta}
 
 Para tratar de responder a la pregunta \ref{preg 2},
 fijado un grado $k$,
 podría ser útil graficar los puntos de la forma
 \[
-(n, FM0(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69,
+(n, FP0(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69,
 \] y 
 \[
-(n, FM1(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69.
+(n, FP1(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69.
 \]
 Gráficas de este estilo podrían usarse para comprobar
 la respuesta a la pregunta \ref{pregunta 1} 
 graficando también la recta horizontal $y = \frac{k}{2}$
 y viendo si los puntos graficados se encuentran cerca
-de esta recta o no.
+de esta recta o no. 
+\TODO{Checa los colores!}
 
 \begin{figure}[H]
 	\sidecaption{
 	 De ser la respuesta
 	a la pregunta \ref{preg 2} afirmativa, deberíamos
 	de terminar con gráficas de puntos alineados horizontalmente, como
-	en este dibujo. Sería bueno que los puntos $FM0$ y $FM1$ estuviesen
+	en este dibujo. Sería bueno que los puntos $FP0$ y $FP1$ estuviesen
 	a alturas parecidas, pues eso significaría que los dos análisis espectrales
 	dan resultados parecidos.
 	\label{fig: ejemplo_pregunta2}
@@ -125,12 +133,12 @@ considere las gráficas de los
 puntos 
 \begin{equation}
 \label{eq5: May1}
-(k, FM0(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1
+(k, FP0(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1
 \end{equation}
 y
 \begin{equation}
 \label{eq6: May1}
-(k, FM1(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1,
+(k, FP1(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1,
 \end{equation}
 
 \noindent
@@ -206,10 +214,10 @@ usando la función \texttt{analisis$\_$espectralPDL$\_$global(n)},
 para toda dimensión
 $2 \leq n \leq 69$ calculamos
 \begin{itemize}
-	\item los coeficientes $FM1(\cali{L}^{n,k})$ para toda
+	\item los coeficientes $FP1(\cali{L}^{n,k})$ para toda
 	$0 \leq k \leq n-1$, y guardamos esta información en el
 	array \texttt{sigmasMax$\_$n},
-	\item los coeficientes $FM0(\cali{L}^{n,k})$ para toda
+	\item los coeficientes $FP0(\cali{L}^{n,k})$ para toda
 	$0 \leq k \leq n-1$, y guardamos esta información en el
 	array \texttt{tausMax$\_$n},
 	\item y los números $b_{n,0}$, $m_{n,0}$,
@@ -234,6 +242,8 @@ $n$, y cuyo valor asociado a la llave $n$ es la $6-$tupla
 	\centering
 	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	
+\TODO{Como cambié la definición de las taus, tengo que hacer una nueva base 
+de datos!!!}
 
 Los códigos, escritos en Python, pueden encontrase en 
 \TODO{referencia al repositorio.} Usamos el 
