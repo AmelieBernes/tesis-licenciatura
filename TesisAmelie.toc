@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {4.4}Pseudocódigos algoritmos usados para calcular las BDL}{48}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Análisis de señales en base a coeficientes respecto a las BLDs}{53}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Expresiones de señales finitas respecto a BLDs}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Caracterización de morfologíaa en base a coeficientes respecto a las BLDs}{56}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Caracterización de morfología en base a coeficientes respecto a las BLDs}{56}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{61}{section.5.3}%
 \contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{64}{part.2}%
 \contentsline {chapter}{\numberline {6}Estudio espectral}{65}{chapter.6}%
@@ -33,14 +33,14 @@
 \contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{70}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{71}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{74}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{80}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{81}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{81}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{84}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{86}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Desfase de la proyección de una señal a espacios monofrecuenciales}{90}{subsection.6.4.4}%
-\contentsline {section}{\numberline {6.5}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{91}{section.6.5}%
-\contentsline {chapter}{\numberline {7}Análisis espectrales: resultados numéricos}{96}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{96}{section.7.1}%
+\contentsline {section}{\numberline {6.5}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{92}{section.6.5}%
+\contentsline {chapter}{\numberline {7}Análisis espectrales: resultados numéricos}{97}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{97}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Gráficas para la pregunta \ref {pregunta 1}}{100}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Gráficas para la pregunta \ref {preg 2}}{100}{section.7.3}%
 \contentsline {section}{\numberline {7.4}Gráficas para la pregunta \ref {preg 3}}{100}{section.7.4}%

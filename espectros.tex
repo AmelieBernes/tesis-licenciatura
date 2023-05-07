@@ -110,7 +110,6 @@ la respuesta a la pregunta \ref{pregunta 1}
 graficando también la recta horizontal $y = \frac{k}{2}$
 y viendo si los puntos graficados se encuentran cerca
 de esta recta o no. 
-\TODO{Checa los colores!}
 
 \begin{figure}[H]
 	\sidecaption{
@@ -128,6 +127,7 @@ de esta recta o no.
 
 \begin{pregunta}
 \label{preg 3}
+\TODO{recuerda que debes motivar mejor.}
 Fijada una dimensión $2 \leq n \leq 69$,
 considere las gráficas de los
 puntos 
@@ -196,21 +196,23 @@ en la pregunta \ref{pregunta 1}.
 \end{figure}	
 
 
-Vamos a responder a estas preguntas con gráficas parecidas
+Vamos a responder a estas tres preguntas con gráficas parecidas
 a las dibujadas en las figuras
 \ref{fig: ejemplo_pregunta1},
 \ref{fig: ejemplo_pregunta2},
 \ref{fig: ejemplo_pregunta3_0} y
-\ref{fig: ejemplo_pregunta3_1}.
+\ref{fig: ejemplo_pregunta3_1}. \\
 
-Vamos a responder a la pregunta \ref{pregunta 1} graficando
-algunos espectros y comprobando si las
-frecuencias $FM0(\cali{L}^{n,k})$ y 
-$FM1(\cali{L}^{n,k})$ son, en efecto, cercanas a $\frac{k}{2}$.
 
+Intentaremos responder a la pregunta \ref{pregunta 1}
+con gráficas análogas
+a las expuestas en el ejemplo
+\ref{ej: espectros comparacion},
+esta vez para analizar algunos PDL. 
 Para calcular los datos necesarios para responder
 las preguntas \ref{preg 2} y \ref{preg 3},
-usando la función \texttt{analisis$\_$espectralPDL$\_$global(n)}, 
+usando la función \texttt{analisis$\_$espectralPDL$\_$global(n)}
+(\TODO{referencia al código del repositorio}), 
 para toda dimensión
 $2 \leq n \leq 69$ calculamos
 \begin{itemize}
@@ -231,6 +233,25 @@ $n$, y cuyo valor asociado a la llave $n$ es la $6-$tupla
 (sigmasMax\_n, tausMax\_n, b_{n,0}, m_{n,0}, b_{n,1}, m_{n,1}).
 \]
 
+Usamos el 
+módulo \texttt{pickle} para guardar los datos como secuencias
+de bytes. El archivo binario en el que se almacenaron los
+datos calculados con la función 
+\texttt{analisis$\_$espectralPDL$\_$global(n)}
+es \texttt{data$\_$AE.txt}.
+
+\section{Gráficas para la pregunta \ref{pregunta 1}}
+
+Intentemos responder a la pregunta \ref{pregunta 1} graficando
+algunos espectros y comprobando si las
+frecuencias $FP0(\cali{L}^{n,k})$ y 
+$FP1(\cali{L}^{n,k})$ son, en efecto, cercanas a $\frac{k}{2}$.
+
+
+\section{Gráficas para la pregunta \ref{preg 2}}
+
+\section{Gráficas para la pregunta \ref{preg 3}}
+
 \begin{figure}[H]
 	\sidecaption{
 	En la figura de la izquierda se grafican los
@@ -242,23 +263,6 @@ $n$, y cuyo valor asociado a la llave $n$ es la $6-$tupla
 	\centering
 	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	
-\TODO{Como cambié la definición de las taus, tengo que hacer una nueva base 
-de datos!!!}
-
-Los códigos, escritos en Python, pueden encontrase en 
-\TODO{referencia al repositorio.} Usamos el 
-módulo \texttt{pickle} para guardar los datos como secuencias
-de bytes. El archivo binario en el que se almacenaron los
-datos calculados con la función 
-\texttt{analisis$\_$espectralPDL$\_$global(n)}
-es \TODO{ref}.
-
-\section{Gráficas para la pregunta \ref{pregunta 1}}
-
-
-\section{Gráficas para la pregunta \ref{preg 2}}
-
-\section{Gráficas para la pregunta \ref{preg 3}}
 
 \begin{figure}[H]
 	\sidecaption{

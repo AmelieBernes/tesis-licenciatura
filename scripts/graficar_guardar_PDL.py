@@ -1,3 +1,13 @@
+#-------------------------------------------
+#-- Descripción ----------------------------
+#Script para graficar los polinomios discretos de Legendre
+#junto con sus versiones continuas, es decir, los polinomios
+#que discretizados en la malla Pn dan lugar al correspondiente PDL.
+#-------------------------------------------
+#-------------------------------------------
+
+
+
 import numpy as np
 from numpy.linalg import norm
 import matplotlib as mpl
@@ -144,7 +154,7 @@ if __name__=='__main__':
     #ver_graficaPDL_continuo(7, 6)
     ruta_amelie = '/home/ame/GitHub/tesis-licenciatura/imagenes/PDL/'
    
-    ver_graficaPDL_continuo(25, 23)
+    ver_graficaPDL_continuo(84, 47) #TODO sospechoso, tal vez aquí sí hay errores numéricos...
 
     #for n in range(2,21):
     #    for k in range(n):

@@ -33,7 +33,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 		\item Para toda frecuencia $\omega$ considerada
 		por la TDF,
 		\[
-		0 \leq \tau_{n, \omega}(x) \leq || x ||^{2}
+		0 \leq \tau_{n, \omega}(x) \leq 1
 		\]
 		y que
 		\item entre más se acerque
@@ -176,14 +176,15 @@ ventaja de este primer espectro es que para calcularlo es posible usar
 un rango cualquiera de frecuencias no negativas, mientras que el segundo, 
 a pesar de que da no sólo un proceso de análisis de una señal 
 de $x$ a partir de sinusoides, sino también uno de síntesis
-(c.f. \TODO{ref}), se limita a considerar las frecuencias enteras
-de $Dom_{TDF, n}$.
+(c.f. nota \ref{nota: ya?}), se limita a considerar las frecuencias 
+en $Dom_{TDF, n}$.
 
 \begin{ejemplo}
-
+\label{ej: espectros comparacion}
+\TODO{Cámbialo:)}
 Considere a una señal $x \in \IR^{16}$ que sea el resultado
 de muestrear uniformemente al sinusoide
-$f(t) = -1.5 cos (2 \pi \cdot 6.4 t + 2 \pi \cdot 0.2)$
+$f(t) = -1.5 cos (2 \pi \cdot 3.4 t + 2 \pi \cdot 0.2)$
 con ruido aleatorio (con distribución, pongamos, uniforme en $[0,0.5]$).
 
 A continuación, mostramos las gráficas
@@ -231,7 +232,13 @@ Mostramos ahora la gráfica de $x$ junto con
 \begin{itemize}
 	\item la parte de la síntesis de $x$ respecto a la $TDF$
 	que corresponde a la frecuencia principal
-	$FP0(x)$, 
+	$FP0(x)$, \TODO{Cambia este tipo de imágenes, pues las
+	estabas graficando mal! Además, en realidad
+	lo que ocurre es que tanto la de Fourier como la de espacios
+	monofrecuenciales debería aproximar bien a la gráfica, pues ambas
+	son las más cercanas de oscilacion omega !!! 
+	El desfase parece ser siempre cero, checa las fórmulas del
+	desfase; recuerda que, en este caso, las cw y sw son ortogonales!!}
 	\begin{figure}[H]
 			\sidecaption{
 			\label{fig: comparacion 2}
@@ -242,7 +249,7 @@ Mostramos ahora la gráfica de $x$ junto con
 	
 	y
 	\item la señal $\Pi_{P_{16, 3.42}}(x)$, o sea, la señal de
-	dimensión $16$ y frecuencia $FP0(x)$ más cercana a $x$, junto con
+	dimensión $16$ y frecuencia $FP1(x)$ más cercana a $x$, junto con
 	el sinusoide continuo del que fue muestreado.
 	\begin{figure}[H]
 			\sidecaption{
@@ -263,7 +270,7 @@ Note que el sinusoide naranja en
 parece ajustarse mucho mejor a la gráfica de $x$
 que el sinusoide morado en la figura 
 \ref{fig: comparacion 2};
-est era de esperarse, pues
+esto era de esperarse, pues
 el sinuside morado no es más que un sumando 
 de la síntesis de $x$ para expresar a la
 señal $x$ como una suma ponderada de sinusoides

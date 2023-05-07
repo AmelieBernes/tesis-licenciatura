@@ -680,16 +680,14 @@ Dom_{TDF, n} = \{ 0 , 1, \cdots, M \}
 \end{defi}
 
 
-\noindent
-Por ser $\cali{F}_{n}$ una BON de $\IR^{n}$, 
+\begin{nota}
+\label{nota: ya?}
+Por ser 
+la base de Fourier real
+$\cali{F}_{n}$ una BON de $\IR^{n}$, 
 si $M = \lceil \frac{n}{2} \rceil$,
-\marginnote{Recuerde que al proceso de calcular los coeficientes
-de una señal respecto a una base se le conoce como 
-\textbf{análisis}, mientras que el de recuperar a la señal 
-via una combinación lineal con esos coeficientes 
-se la llama \textbf{síntesis}.}
 \[
-x = \langle x , c_{n, 0} \rangle c_{n, 0}  \suma{\omega = 1}{M-1}{(
+x = \langle x , c_{n, 0} \rangle c_{n, 0} + \suma{\omega = 1}{M-1}{(
 \langle x , c_{n, \omega} \rangle c_{n, \omega} + 
 \langle x , s_{n, \omega} \rangle s_{n, \omega} )}
 \hspace{0.2cm} \text{si n es impar}
@@ -700,8 +698,22 @@ x = \langle x , c_{n, 0} \rangle c_{n, 0} + \suma{\omega = 1}{M-1}{(
 \langle x , c_{n, \omega} \rangle  c_{n, \omega} + \langle x , s_{n, \omega} \rangle
 s_{n, \omega} )}
 + \langle x , c_{n, M} \rangle c_{n, M} 
-\hspace{0.2cm} \text{si n es par.}
+\hspace{0.2cm} \text{si n es par;}
 \]
+así, usando la transformada discreta de Fourier
+que, en este contexto, pensamos como calcular
+los coeficientes de $x$ respecto a $\cali{F}_{n}$, tenemos tanto
+un proceso de análisis de $x$ (que pensamos como
+el cálculo de tales coeficientes)
+respecto a sinusoides discretizados
+de frecuencias $\omega \in Dom_{TDF, n}$
+como uno de síntesis, que interpretamos como
+el recuperar a la señal original $x$ usando
+sus coeficientes respecto a $\cali{F}_{n}$.
+\end{nota}
+
+\TODO{Tal vez deberías poner en la intro una imagen
+con análisis y síntesis como pasar a ambos lados de la igualdad:) }
 
 Se vale además la
 identidad de Parseval, luego, para toda
@@ -755,7 +767,7 @@ Definimos
 		Si $n$ es par, se define además a
 	\[
 	\tau_{n,M}(x) := 
-	\frac{ |\langle x, c_{n,M} \rangle^{2}| }{ ||x|| }.
+	\frac{ |\langle x, c_{n,M} \rangle| }{ ||x|| }.
 	\]
 \end{defi}
 De las ecuaciones 
