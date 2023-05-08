@@ -816,7 +816,7 @@ if __name__=='__main__':
   #sinusoide_espectros(n, w, A, phi, nombre, ruido = False)
   
   n, w, A, phi, nombre = 36, 3.4, -1.5, 0.2, 'x' #este ejemplo está bien!
-  #sinusoide_espectros(n, w, A, phi, nombre, ruido = True)
+  sinusoide_espectros(n, w, A, phi, nombre, ruido = True)
 
   n, w, A, phi, nombre = 32, 3, math.sqrt(2/32), 0, 'x' #este ejemplo está bien!
   
@@ -825,6 +825,7 @@ if __name__=='__main__':
   #print(abs(np.dot(x, vect_cos))/np.linalg.norm(x))
   #sinusoide_espectros(n, w, A, phi, nombre, ruido = False)
 
+  #TODO recuerda que también querías muestrear al sinusoide morado!
 
   #analisis_espectrales_guardarGrafica(x, frecuencias, nombre)
 
@@ -832,7 +833,7 @@ if __name__=='__main__':
   #analisis_espectrales_PDL_mostrarGrafica(7, 0) 
   #analisis_espectrales_PDL_mostrarGrafica(16, 12) 
   #analisis_espectrales_PDL_mostrarGrafica(84, 12)
-  analisis_espectrales_PDL_mostrarGrafica(84, 38)
+  #analisis_espectrales_PDL_mostrarGrafica(84, 38)
   #analisis_espectrales_PDL_mostrarGrafica(85, 19) #Muy buen ejemplo, ambos sinusoides se ajustan con desfase.
   #analisis_espectrales_PDL_mostrarGrafica(32,5) 
   #analisis_espectrales_PDL_mostrarGrafica(33,5) 

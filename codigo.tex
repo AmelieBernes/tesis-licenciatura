@@ -282,7 +282,7 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \ENSURE El número \eqref{eq0: 1Abril}
-\STATE $B1, B2, B3, B4 \leftarrow []$
+\STATE $B1, B2, B3, B4 \leftarrow [\hspace{0.2cm}]$
 \FOR {$t=m-j+1$ a $t=m$} 
 \STATE $APPEND(B1, t)$
 \ENDFOR
@@ -315,8 +315,8 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 
 \STATE $limite \leftarrow minimo(m,k)$
 \STATE $factor \leftarrow \frac{m!}{(n-1)!}$
-\STATE $sumandos\_pares \leftarrow []$
-\STATE $sumandos\_impares \leftarrow []$
+\STATE $sumandos\_pares \leftarrow [ \hspace{0.2cm} ]$
+\STATE $sumandos\_impares \leftarrow [ \hspace{0.2cm}]$
 \FOR {$j=0$ a $j=limite$ y $j$ par} 
 \STATE $APPEND$($sumandos\_pares$, $sumandoV1(n,k,m,j)$)
 \ENDFOR
@@ -337,8 +337,8 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \ENSURE La suma \eqref{eq1: 1Abril}
 
 \STATE $limite \leftarrow minimo(m,k)$
-\STATE $sumandos\_pares \leftarrow []$
-\STATE $sumandos\_impares \leftarrow []$
+\STATE $sumandos\_pares \leftarrow [ \hspace{0.2cm} ]$
+\STATE $sumandos\_impares \leftarrow [\hspace{0.2cm} ]$
 \FOR {$j=0$ a $j=limite$ y $j$ par} 
 \STATE $APPEND$($sumandos\_pares$, $sumandoV2(n,k,m,j)$)
 \ENDFOR
@@ -355,7 +355,7 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 %-----------------------------------------------------------------
 
 \begin{algorithm}
-\caption{baseLegendre$\_$dimImpar}\label{alg: legendre impar}
+\caption{base$\_$legendre$\_$dimImpar}\label{alg: legendre impar}
 \begin{algorithmic}[1] 
 \REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 1 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
 \ref{alg: sumatoriaV1} y \ref{alg: sumatoriaV2}.
@@ -396,7 +396,7 @@ grado $k$ y dimensión $n$.
 
 
 \begin{algorithm}
-\caption{baseLegendre$\_$dimPar}\label{alg: legendre par}
+\caption{base$\_$legendre$\_$dimPar}\label{alg: legendre par}
 \begin{algorithmic} [1]
 \REQUIRE $n$, variable de tipo int, $n \geq 2, \hspace{0.1cm} n \equiv 0 \hspace{0.1cm} (mod \hspace{0.1cm} 2)$, 'sumatoria' es una de las dos funciones definidas en los algoritmos
 \ref{alg: sumatoriaV1} y \ref{alg: sumatoriaV2}.

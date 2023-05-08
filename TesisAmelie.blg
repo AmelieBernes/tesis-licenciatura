@@ -19,7 +19,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
-Repeated entry---line 210 of file Referencias.bib
+Repeated entry---line 244 of file Referencias.bib
  : @misc{leg
  :          ,
 I'm skipping whatever remains of this entry
@@ -231,45 +231,45 @@ Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. 
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2815 of file biblatex.bst
-You've used 22 entries,
+You've used 27 entries,
             6399 wiz_defined-function locations,
-            1319 strings with 11168 characters,
-and the built_in function-call counts, 128359 in all, are:
-= -- 9750
-> -- 1775
-< -- 893
-+ -- 2073
-- -- 505
-* -- 9370
-:= -- 11911
+            1343 strings with 11732 characters,
+and the built_in function-call counts, 159389 in all, are:
+= -- 12069
+> -- 2323
+< -- 1156
++ -- 2726
+- -- 657
+* -- 11410
+:= -- 14757
 add.period$ -- 0
-call.type$ -- 22
-change.case$ -- 512
+call.type$ -- 27
+change.case$ -- 676
 chr.to.int$ -- 44
-cite$ -- 50
-duplicate$ -- 11270
-empty$ -- 12998
-format.name$ -- 899
-if$ -- 27964
+cite$ -- 60
+duplicate$ -- 14443
+empty$ -- 15895
+format.name$ -- 1178
+if$ -- 34684
 int.to.chr$ -- 0
-int.to.str$ -- 52
+int.to.str$ -- 66
 missing$ -- 0
-newline$ -- 476
-num.names$ -- 1063
-pop$ -- 7171
+newline$ -- 598
+num.names$ -- 1400
+pop$ -- 8894
 preamble$ -- 1
-purify$ -- 537
+purify$ -- 714
 quote$ -- 0
-skip$ -- 3931
+skip$ -- 5072
 stack$ -- 0
-substring$ -- 19284
-swap$ -- 2819
-text.length$ -- 611
-text.prefix$ -- 33
+substring$ -- 23212
+swap$ -- 3560
+text.length$ -- 765
+text.prefix$ -- 42
 top$ -- 1
-type$ -- 736
+type$ -- 906
 warning$ -- 0
-while$ -- 1153
+while$ -- 1481
 width$ -- 0
-write$ -- 455
+write$ -- 572
 (There were 103 error messages)

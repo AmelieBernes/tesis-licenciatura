@@ -16,24 +16,26 @@
 \contentsline {section}{\numberline {3.2}Estudio para dimensiones pares}{37}{section.3.2}%
 \contentsline {chapter}{\numberline {4}Cálculo de los PDL}{39}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Revisión de literatura}{39}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Expresión analítica de los PDL}{40}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.1.1}Uso de polinomios discretos en problemas de ajuste de datos}{39}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Polinomios discretos de Legendre en la literatura}{41}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Expresión analítica de los PDL}{42}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{45}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}Implementación computacional de las bases discretas de Legendre}{47}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Análisis de la expresión de los PDL}{47}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Pseudocódigos algoritmos usados para calcular las BDL}{48}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Análisis de señales en base a coeficientes respecto a las BLDs}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Expresiones de señales finitas respecto a BLDs}{53}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Caracterización de morfología en base a coeficientes respecto a las BLDs}{56}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{61}{section.5.3}%
-\contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{64}{part.2}%
-\contentsline {chapter}{\numberline {6}Estudio espectral}{65}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{65}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{68}{section.6.2}%
-\contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{69}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{70}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{71}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{74}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{81}{section.6.4}%
+\contentsline {subsection}{\numberline {4.3.1}Análisis de la expresión de los PDL}{48}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Pseudocódigos algoritmos usados para calcular las BDL}{49}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Análisis de señales en base a coeficientes respecto a las BLDs}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Expresiones de señales finitas respecto a BLDs}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Caracterización de morfología en base a coeficientes respecto a las BLDs}{57}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{62}{section.5.3}%
+\contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{65}{part.2}%
+\contentsline {chapter}{\numberline {6}Estudio espectral}{66}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{66}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{69}{section.6.2}%
+\contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{70}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{71}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{72}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{75}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{80}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{81}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{84}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{86}{subsection.6.4.3}%

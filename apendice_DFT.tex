@@ -7,8 +7,8 @@ bases ortonormales de $\IC^{n}$ y de $\IR^{n}$
 \marginnote{Incluimos este capítulo de teoría clásica
 por completitud de este trabajo
 y para fijar la notación. 
-Puede consultar referencias con
-información más detallada en \TODO{cita más referencias!}}
+\cite{fourier1} y \cite{fourier2}
+son referencias con mucha más información.}
 de $\IC^{n}$
 y una de $\IR^{n}$ (que llamaremos
 ``bases de Fourier complejas y reales''),
@@ -361,7 +361,7 @@ $s_{\omega}(t) := \frac{1}{\sqrt{n}}  sin (2 \pi \omega t)$.
 	\label{fig: construccion Bn}
 	}
 	\centering
-	\includegraphics[scale=0.44]{construccion_Bn} 
+	\includegraphics[scale=0.29]{construccion_Bn} 
 \end{figure}	
 
 Según esto, el vector $e_{n,\omega}$ se construye a partir
@@ -686,20 +686,23 @@ Por ser
 la base de Fourier real
 $\cali{F}_{n}$ una BON de $\IR^{n}$, 
 si $M = \lceil \frac{n}{2} \rceil$,
-\[
+\begin{equation}
+\label{ec: sintesis 0}
 x = \langle x , c_{n, 0} \rangle c_{n, 0} + \suma{\omega = 1}{M-1}{(
 \langle x , c_{n, \omega} \rangle c_{n, \omega} + 
 \langle x , s_{n, \omega} \rangle s_{n, \omega} )}
 \hspace{0.2cm} \text{si n es impar}
-\]
-y
-\[
+\end{equation}
+
+\begin{equation}
+\label{ec: sintesis 1}
 x = \langle x , c_{n, 0} \rangle c_{n, 0} + \suma{\omega = 1}{M-1}{(
 \langle x , c_{n, \omega} \rangle  c_{n, \omega} + \langle x , s_{n, \omega} \rangle
 s_{n, \omega} )}
 + \langle x , c_{n, M} \rangle c_{n, M} 
 \hspace{0.2cm} \text{si n es par;}
-\]
+\end{equation}
+
 así, usando la transformada discreta de Fourier
 que, en este contexto, pensamos como calcular
 los coeficientes de $x$ respecto a $\cali{F}_{n}$, tenemos tanto
@@ -711,9 +714,6 @@ como uno de síntesis, que interpretamos como
 el recuperar a la señal original $x$ usando
 sus coeficientes respecto a $\cali{F}_{n}$.
 \end{nota}
-
-\TODO{Tal vez deberías poner en la intro una imagen
-con análisis y síntesis como pasar a ambos lados de la igualdad:) }
 
 Se vale además la
 identidad de Parseval, luego, para toda
@@ -752,21 +752,21 @@ en una señal $x$.}
 Sean $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $.
 Definimos
 	\[
-	\tau_{n,0}(x) := \frac{|\langle x, c_{n,0} \rangle|}{|| x ||} ,	
+	\tau_{n}(x, 0) := \frac{|\langle x, c_{n,0} \rangle|}{|| x ||} ,	
 	\]
 	y
 	\[
 	\forall 
 	\hspace{0.1cm}	
 	1 \leq \omega \leq M-1: \hspace{0.2cm} 
-	\tau_{n,\omega}(x) := 
+	\tau_{n}(x, \omega) := 
 	\frac{\sqrt{
 	\langle x, c_{n,\omega} \rangle^{2}+
 	\langle x, s_{n,\omega} \rangle^{2}}}{||x||}.	
 	\]	
 		Si $n$ es par, se define además a
 	\[
-	\tau_{n,M}(x) := 
+	\tau_{n}(x, M) := 
 	\frac{ |\langle x, c_{n,M} \rangle| }{ ||x|| }.
 	\]
 \end{defi}
@@ -774,8 +774,8 @@ De las ecuaciones
 \eqref{eq0: 25Ap} y 
 \eqref{eq1: 25Ap} se deduce
 fácilmente que, para toda $\omega$, 
-$0 \leq \tau_{n, \omega}(x) \leq 1$. Puede pensar
-a tales coeficientes $\tau_{n, \omega}(x)$ como la
+$0 \leq \tau_{n}(x, \omega) \leq 1$. Puede pensar
+a tales coeficientes $\tau_{n}(x, \omega)$ como la
 contribución (normalizada por la norma de $x$)
 de la frecuencia $\omega$ para sintetizar a $x$.
 
@@ -787,14 +787,14 @@ Sean $n \geq 2$,  $x \in \IR^{n}$. Por el
 obtenido a partir de la TDF} nos referiremos
 a la 
 función 
-$\mathrm{T}_{x} : DOM_{TDF, n} \longrightarrow [0, ||x||^{2}] \subseteq \IR$
+$\mathrm{T}_{x} : Dom_{TDF, n} \longrightarrow [0, ||x||^{2}] \subseteq \IR$
 definida como
 \[
-\mathrm{T}_{x} (\omega) = \tau_{n, \omega}(x)
+\mathrm{T}_{x} (\omega) = \tau_{n}(x, \omega)
 \hspace{0.2cm} \text{ para toda }
-\hspace{0.2cm} \omega \in DOM_{TDF, n},
+\hspace{0.2cm} \omega \in Dom_{TDF, n},
 \]
-donde los coeficientes $\tau_{n, \omega}(x)$
+donde los coeficientes $\tau_{n}(x, \omega)$
 son como se definieron en \ref{def: taus}
 \end{defi}
 

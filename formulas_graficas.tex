@@ -110,77 +110,59 @@ para cada PDL $\cali{L}^{n,k}$
 existe un único polinomio de variable
 continua cuya discretización puntual en la
 malla $\cali{P}_{n}$ es $\cali{L}^{n,k}$. \\
+Para encontrar a 
+tales polinomios 
+de variable continua, bien se pueden usar
+fórmulas de interpolación (c.f. 
+\cite{interpolation}), aunque en realidad
+a estas alturas ya tenemos una fórmula explícita 
+para tal polinomio; revise la ecuación
+\eqref{eq0: 6En}, en la que se da una fórmula
+para la entrada $m-$ésima del
+PDL $\cali{L}^{n,k}$. Observe que la 
+variable $m$ aparece sólo en la suma, 
+y que su potencia máxima es
+$k$. Además, el coeficiente que acompaña
+a esta potecia máxima no es cero (pues la raíz
+cuadrada involucrada en la
+expresión \eqref{eq0: 6En} nunca es cero,
+y el coeficiente de la suma que multiplica
+a la potencia $k-$ésima de $m$ es
+$(-1)^{k} \frac{(2k)!}{(k!)^{2}} \neq 0$). 
+Así, usando la expresión 
+\eqref{eq0: 6En} con $m$ no una variable discreta,
+sino continua, se obtiene un polinomio
+de grado $k$ que, según el teorema 
+\ref{teo: expresión analítica de BON de Legendre}, evaluado
+en los elementos de la malla uniforme $\cali{P}_{n}$
+da lugar a las entradas de $\cali{L}^{n,k}$. \\
 
-
-\TODO{cambia la info de esta nota.}
-
-
-En las figuras de abajo, para encontrar a 
-tales polinomios y dibujarlos junto con las
-gráficas de los PDL, 
-usamos fórmulas de interpolación (c.f. 
-\cite{interpolation}).
+El código usado  para graficar estos polinomios
+(y que fue usado para graficar las figuras de abajo)
+se encuentra en \TODO{referencia al repositorio.}
 \end{nota} 
  
 \begin{figure}[H]
  	\sidecaption{
- 	PDL de dimensión $2$.
+ 	PDL de dimensiones $2$ y $3$.
  	\label{fig: PDL_dim2}
  	}
  	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim2} 
+ 	\includegraphics[scale = 0.9]{PDL_2_3} 
  \end{figure}	 
-
-\begin{figure}[H]
- 	\sidecaption{
- 	PDL de dimensión $3$.
- 	\label{fig: PDL_dim3}
- 	}
- 	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim3} 
- \end{figure}
- 
  \begin{figure}[H]
  	\sidecaption{
- 	PDL de dimensión $4$.
- 	\label{fig: PDL_dim4}
+ 	PDL de dimensiones $4$ y $5$.
+ 	\label{fig: PDL_dim2}
  	}
  	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim4} 
- \end{figure}
- 
-  \begin{figure}[H]
+ 	\includegraphics[scale = 0.9]{PDL_4_5} 
+ \end{figure}	
+ \begin{figure}[H]
  	\sidecaption{
- 	PDL de dimensión $5$.
- 	\label{fig: PDL_dim5}
+ 	PDL de dimensiones $6$ y $7$.
+ 	\label{fig: PDL_dim2}
  	}
  	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim5} 
- \end{figure}
- 
-   \begin{figure}[H]
- 	\sidecaption{
- 	PDL de dimensión $6$.
- 	\label{fig: PDL_dim6}
- 	}
- 	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim6} 
- \end{figure}
- 
-   \begin{figure}[H]
- 	\sidecaption{
- 	PDL de dimensión $7$.
- 	\label{fig: PDL_dim7}
- 	}
- 	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim7} 
- \end{figure}
- 
-   \begin{figure}[H]
- 	\sidecaption{
- 	PDL de dimensión $8$.
- 	\label{fig: PDL_dim8}
- 	}
- 	\centering
- 	\includegraphics[scale =0.3 ]{PDL_dim8} 
- \end{figure}
+ 	\includegraphics[scale = 0.9]{PDL_6_7} 
+ \end{figure}	

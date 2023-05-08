@@ -20,7 +20,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	paridad de $n$) por las
 	tablas 6.1 y 6.2
 	versus los coeficientes
-	$\tau_{n, \omega}(x)$ definidos en
+	$\tau_{n}(x, \omega)$ definidos en
 	\ref{def: taus}.
 	
 	Puesto que el realizar un análisis de 
@@ -33,7 +33,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 		\item Para toda frecuencia $\omega$ considerada
 		por la TDF,
 		\[
-		0 \leq \tau_{n, \omega}(x) \leq 1
+		0 \leq \tau_{n}(x, \omega) \leq 1
 		\]
 		y que
 		\item entre más se acerque
@@ -41,7 +41,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 		a $|| x ||^{2}$, mayor es la
 		importancia de la frecuencia $\omega$ para
 		sintetizar s $x$; recíprocamente, si 
-		$\tau_{n, \omega}(x)$ es cercano a cero, entonces
+		$\tau_{n}(x, \omega)$ es cercano a cero, entonces
 		la frecuencia $\omega$ no es muy relevante para 
 		reconstruir a la señal $x$.
 	\end{itemize}
@@ -54,9 +54,9 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	tal que, para cualquier otra $\omega' \in Dom_{TDF, n}$ 
 	se tenga que 
 	\[
-	\tau_{n, \omega'}(x) = \Tau_{x}(\omega^{'}) \leq
+	\tau_{n}(x, \omega') = \Tau_{x}(\omega^{'}) \leq
 	\Tau_{x}(\omega) =  
-	 \tau_{n, \omega}(x).
+	 \tau_{n}(x, \omega).
 	\]
 	\end{defi}
 	Observe que tal frecuencia principal existe por ser 
@@ -179,9 +179,46 @@ de $x$ a partir de sinusoides, sino también uno de síntesis
 (c.f. nota \ref{nota: ya?}), se limita a considerar las frecuencias 
 en $Dom_{TDF, n}$.
 
+
+\begin{nota}
+Sea $x \in \IR^{n}$; sea 
+\eqref{ec: sintesis 0} o 
+\eqref{ec: sintesis 1}
+(dependiendo de la paridad de $n$)
+la síntesis de $x$ respecto a la base de Fourier
+real $\cali{F}_{n}$. 
+Separar los sumandos que corresponden a una
+cierta frecuencia $\omega \in Dom_{TDF, n}$ y recordando
+que, como se notó más arriba, los correspondientes vectores
+de frecuencia (que son ya sea uno o dos, dependiendo del valor
+de $\omega$) conforman una BON para el correspondiente
+espacio monofrecuencial 
+$P_{n, \omega}$; así, tenemos que la parte de la 
+síntesis de $x$ que corresponde a 
+cierta frecuencia $\omega$ es igual a
+$\Pi_{P_{n, \omega}}(x)$. \\
+
+Aplicando esto al ejemplo \ref{ej: DFT1},
+si $x$ es la señal definida en 
+\ref{eq2: 10ab}, se tiene que
+\[
+\Pi_{7, 0} = 4.12 c_{0}, 
+\]
+\[
+\Pi_{7, 1} = -8.76 c_{1} - 7.35 s_{1}, 
+\]
+\[
+\Pi_{7, 2} = 4.77 c_{2} - 10 s_{2}, 
+\]
+\[
+\Pi_{7, 3} = 0.14 c_{3} + 9.91 s_{3}.
+\]
+\end{nota}
+
+
+
 \begin{ejemplo}
 \label{ej: espectros comparacion}
-\TODO{Cámbialo:)}
 Considere a una señal $x \in \IR^{16}$ que sea el resultado
 de muestrear uniformemente al sinusoide
 $f(t) = -1.5 cos (2 \pi \cdot 3.4 t + 2 \pi \cdot 0.2)$
@@ -196,7 +233,7 @@ de los espectros de $x$.
 	\sidecaption{ De ahora en adelante, siempre que
 	grafiquemos espectros,usaremos los colores y notaciones
 	de esta figura. \label{fig: ejemplo_comparacion}}
-    \includegraphics[scale = 1.3]{./estudios_espectrales/ejemplo_comparacion_1}
+    \includegraphics[scale = 1.2]{./estudios_espectrales/ejemplo_comparacion_1}
 \end{figure}
 
 
@@ -209,19 +246,16 @@ es posible considerar cualesquiera frecuencias $\omega \geq 0$; como puede obser
 en la gráfica, 
 \[
 FP0 (x) = 3 \hspace{0.2cm} \textit{y} \hspace{0.2cm}
-FP1 (x) = 3.38;
+FP1 (x) = 3.39;
 \]
 esta segunda frecuencia es mucho más cercana al valor
 real de la frecuencia $\omega =3.4$ del sinusoide del que
 fue obtenida la señal $x$; como agregamos ruido en las mediciones, no se
-obtuvo exactamente $FP1(x) = 3.4$, aunque si no
-hubiésemos agregado ruido en el muestreo, sí hubiésemos obtenido
-que la frecuencia principal-$1$ es $3.4$ (siempre y cuando
-$3.4 \in Dom_{\omega}$). \\
+obtuvo exactamente $FP1(x) = 3.4$.
 
 A pesar de que el espectro-$0$, el obtenido a partir de la
 transformada discreta de Fourier, no dio una mala estimación (del rango
-de frecuencias $Dom_{TDF,n}$ considerado por esta herramienta
+de frecuencias $Dom_{TDF,n}$ considerado por esta herramienta,
 $\omega =3$ es el valor más cercano al valor real $\omega = 3.4$), vemos en este
 ejemplo que usando el espectro-$1$ de una señal con una malla de
 frecuencias $Dom_{\omega} \supseteq Dom_{TDF,n}$
@@ -232,29 +266,30 @@ Mostramos ahora la gráfica de $x$ junto con
 \begin{itemize}
 	\item la parte de la síntesis de $x$ respecto a la $TDF$
 	que corresponde a la frecuencia principal
-	$FP0(x)$, \TODO{Cambia este tipo de imágenes, pues las
-	estabas graficando mal! Además, en realidad
-	lo que ocurre es que tanto la de Fourier como la de espacios
-	monofrecuenciales debería aproximar bien a la gráfica, pues ambas
-	son las más cercanas de oscilacion omega !!! 
-	El desfase parece ser siempre cero, checa las fórmulas del
-	desfase; recuerda que, en este caso, las cw y sw son ortogonales!!}
+	$FP0(x)$ (c.f.
+	nota \ref{nota: ya?}), que de hecho es
+	$\Pi_{P_{36,3}}(x)$
 	\begin{figure}[H]
 			\sidecaption{
-			\label{fig: comparacion 2}
+			Puesto que $\{ c_{36, 3}, s_{36, \omega} \}$
+			es una BON de $P_{36, 3}$, claro que la señal 
+			que resulta de discretizar el sinusoide morado en la malla
+			$I_{36}$ es, de hecho, la proyección de $x$ 
+			al espacio monofrecuencial $P_{36, 3}$.
+ 			\label{fig: comparacion 2}
 			}
 			\centering
 			\includegraphics[scale = 0.5]{./estudios_espectrales/ejemplo_comparacion_2} 
 		\end{figure}		
 	
 	y
-	\item la señal $\Pi_{P_{16, 3.42}}(x)$, o sea, la señal de
-	dimensión $16$ y frecuencia $FP1(x)$ más cercana a $x$, junto con
+	\item la señal $\Pi_{P_{16, 3.39}}(x)$, o sea, la señal de
+	dimensión $16$ y frecuencia $FP1(x)=3.39$ más cercana a $x$, junto con
 	el sinusoide continuo del que fue muestreado.
 	\begin{figure}[H]
 			\sidecaption{
 			Para obtener la versión continua del sinusoide 
-			discreto $\Pi_{P_{16, 3.42}}(x)$ (i.e. la gráfica naranja),
+			discreto $\Pi_{P_{16, 3.39}}(x)$ (i.e. la gráfica naranja),
 			usamos las fórmulas establecidas en los teoremas
 			\ref{teo: amelie1} y \ref{teo: amelie2}.
 			\label{fig: comparacion 3}
@@ -265,22 +300,12 @@ Mostramos ahora la gráfica de $x$ junto con
 \end{itemize}
 
 
-Note que el sinusoide naranja en 
+Los sinusoides de las figuras \ref{fig: comparacion 2} y
 \ref{fig: comparacion 3}
-parece ajustarse mucho mejor a la gráfica de $x$
-que el sinusoide morado en la figura 
-\ref{fig: comparacion 2};
-esto era de esperarse, pues
-el sinuside morado no es más que un sumando 
-de la síntesis de $x$ para expresar a la
-señal $x$ como una suma ponderada de sinusoides
-(c.f.\TODO{nota}), por lo que faltaría considerar
-a los demás sinusoides para obtener una gráfica que, de hecho, ajuste
-perfectamente los puntos de la gráfica de $x$
-(c.f. ejemplo \ref{ej: DFT1}), mientras que el sinusoide
-naranja no sólo tiene frecuencia igual a 
-$FM1(x)$, sino que es el representante de esta 
-frecuencia que minimiza su distancia euclidea a $x$.
+son las señales de frecuencia pura
+$3$ y $3.39$, respectivamente, cuya distancia euclidea
+a la señal original $x$ es mínima. Observe que la segunda
+señal parece ajustarse un poco mejor a la gráfica de $x$.
 
 \final
 \end{ejemplo}

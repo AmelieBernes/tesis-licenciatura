@@ -5,7 +5,7 @@
 \section{Motivación para realizar un estudio espectral de los PDL}
 No es difícil convencerse de que las condiciones de ortogonalidad
 impuestas en la definición de la base discreta de Legendre
-\marginnote{En esta motivación informal, por oscilación
+\marginnote{En esta motivación informal, por ``oscilación''
 de una señal $x = (x_{m})_{m=0}^{n-1}$
 entendemos
 tres cambios consecutivos de signo en sus entradas.}
@@ -131,10 +131,11 @@ ortogonal a $\cali{L}^{4,1}$ pero, para lograr esto, sus
 entradas deben cambiar de signo tres veces. \\
 
 
-Después de graficar los PDL de algunas dimensiones
+Después de graficar los PDL de otras dimensiones
 puede apreciarse que esta tendencia a aumentar el número
-de oscilaciones en las gráficas conforme en grado $k$
-aumenta parece presentarse en todas las dimensiones.
+de oscilaciones en las gráficas conforme el grado $k$
+tiende a $n-1$ (su cota superior)
+parece presentarse en todas las dimensiones.
 Por ejemplo, abajo se muestran las gráficas de los 
 PDL de dimensión $7$.
 
@@ -222,8 +223,10 @@ numéricas. \\
 Observe que, para analizar la presencia de oscilaciones
 en las gráficas de las señales, estamos hablando de un ``espectro''.
 se cuenta ya con una herramienta clásica para hacer esta clase de análisis,
-cuyo producto final es una gráfica (el espectro) en el que se refleja,
-de alguna forma, la importancia que cierta frecuencia tiene para
+cuyo producto final es 
+una función que
+da información sobre
+la importancia que cierta frecuencia tiene para
 modelar la gráfica analizada. Hablamos de la transformada 
 discreta de Fourier, cuyas bases teóricas comentamos en la sección
 \ref{sec: TDF},
@@ -288,11 +291,7 @@ a la cual comparar a la señal y,
 Vamos a seguir
 una linea de razonamiento totalmente análoga a la empleada 
 en el ejemplo \ref{subs: ejm 3}, pues aquí también abordamos el problema
-definiendo cúmulos
-\sidenote{Hablamos más precisamente
-de subespacios de $\IR^{n}$, pero 
-\TODO{notación de DS. Habla tamién de esto 
-en el ap. de cosine sim.}}
+definiendo subconjuntos (de hecho, subespacios)
 de $\IR^{n}$ que consten de elementos que cumplan
 determinada propiedad (en el caso del ejemplo \ref{subs: ejm 3}, la propiedad
 era ser elemento de determinado espacio $W_{n,k}$ mientras que 

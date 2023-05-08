@@ -3,13 +3,188 @@
 \section{Revisión de literatura}
 Después de revisar la literatura, encontramos que
 otros autores ya han considerado polinomios discretos ortogonales
-antes, principalmente en áreas de ingeniería (por ejemplo, 
-véase \cite{papel}
-\TODO{recuerda que debes de poner más referencias !!}
-). La fuente más completa que encontramos 
+antes, principalmente en áreas de ingeniería.
+Los libros y artículos más relevantes
+que encontramos son
+\cite{Neuman}, \cite{papel}, \cite{george},
+\cite{himmelblau}, 
+y \cite{rabin}. 
+
+
+\subsection{Uso de polinomios discretos en problemas de ajuste de datos}
+Toda la literatura citada al inicio introduce
+la noción de ``polinomios discretos ortogonales''
+con una misma motivación; facilitar la resolución
+de problemas de ajuste de datos basados en mínimos cuadrados.
+
+Vamos a esbozar las ideas explicadas en
+\cite{george} en esta dirección. Usamos
+para esto la notación empleada
+en el artículo. \\
+
+El problema central que se desea resolver es
+el siguiente:
+fijada una familia de polinomios
+$\{ p_{i}(x) \}_{i= 0}^{k}$ tales que
+\begin{equation}
+\label{ec: george 14}
+\partial (p_{i}) = i \hspace{0.2cm}
+\textit{para toda } \hspace{0.1cm} 0 \leq i \leq k
+\end{equation}
+y
+dados $m$ puntos de observaciones
+\[
+(x_{1}, f_{1}), \ldots , (x_{m}, f_{m}),
+\]
+con los $x_{i}$ distintos entre sí y 
+\begin{equation}
+\label{eq0: 7May}
+k+1 < m, 
+\end{equation}
+se desea encontrar
+\sidenote{Como se explica en el artículo \cite{george},
+se pide la condición \eqref{ec: george 14}
+para que cualquier polinomio de grado a lo más $k$
+pueda
+representarse como combinación lineal de los polinomios $p_{i}$.}
+constantes $s_{i}^{(k)}$,
+con $0 \leq i \leq k$, tales que 
+el polinomio definido como
+\[
+y_{k}(x) = s_{0}^{(k)} p_{0}(x) + \ldots +  
+s_{k}^{(k)} p_{k}(x) 
+\]
+sea tal que 
+la función de $k+1$ variables
+
+\begin{align}
+\label{ec: george 16}
+\Phi(s_{0}^{(k)}, \cdots, s_{k}^{(k)})
+:= & \suma{\mu = 1}{m}{(f_{\mu} - \suma{h=0}{k}{
+s_{h}^{(k)} p_{h}(x_{\mu})})^{2}} \nonumber \\
+= &  \suma{\mu = 1}{m}{(f_{\mu} -  y_{k}(x_{\mu}) )^{2}}
+\end{align}
+alcance su mínimo para esta elección de constantes
+$s_{i}^{(k)}$.
+
+\begin{figure}[H]
+	\sidecaption{
+	El problema consiste entonces en buscar 
+	a un polinomio $y_{k}(x)$ de grado a lo más $k$
+	o, equivalentemente, determinar a las constantes
+	$s_{0}^{(k)}$, de tal forma que la suma de los cuadrados
+	de las diferencias entre 1. las mediciones reales
+	$f_{\mu}$ y 2. los valores $y_{k}(x_{\mu})$ dados por el 
+	modelo polinomial sea mínima.
+	\label{fig: fitting_problem}
+	}
+	\centering
+	\includegraphics[scale = 1.4]{fitting_problem} 
+\end{figure}	
+
+
+Adoptando las abreviaciones
+\begin{equation}
+\label{eq: george 17}
+w_{i j} = \suma{\mu=1}{m}{p_{i}(x_{\mu}) p_{j} (x_{\mu})}
+\end{equation}
+y
+\begin{equation*}
+w_{i} = \suma{\mu = 1}{m}{f_{\mu}p_{i}(x_{\mu})},
+\end{equation*}
+como se discute en \cite{george}, del usar que
+el mínimo o máximo de una función de varias variables
+$\Phi = \Phi(s_{0}^{(k)}, \cdots, s_{k}^{(k)})$
+de clase $\cali{C}^{\infty}$
+(como lo es $y_{k}$, por ser combinación lineal de polinomios)
+sea tal que las derivadas parciales de la función
+evaluadas en ese punto sean cero, se deduce el siguiente
+sistema de ecuaciones:\sidenote{ En \cite{george} a tal sistema
+se le denomina el ``sistema de ecuaciones normales del problema de 
+ajuste de mínimos cuadrados''.}
+\begin{align*}
+\begin{cases}
+w_{00}s_{0}^{(k)} + \ldots + w_{0k}s_{k}^{(k)} & = w_{0}, \\
+\ldots & \ldots \\
+w_{k0}s_{0}^{(k)} + \ldots + w_{kk}s_{k}^{(k)} & = w_{k}.
+\end{cases}
+\end{align*}
+
+\noindent
+En \cite{george} se nota que ``este sistema de ecuaciones
+es muy general, ya que, para resolverlo, sólo se ha fijado la 
+restricción de grados
+\eqref{ec: george 14} en los polinomios $p_{i}$; para poder
+resolver con relativa facilidad el sistema
+de ecuaciones para valores altos de $k$, es suficiente
+que los elementos $w_{i,j}$ con $i \neq j$
+(i.e. los coeficientes no pertenecientes a la 
+diagonal) sean, en comparación a los coeficientes diagonales
+$w_{ii}$, pequeños. En la práctica, esto suele conseguirse 
+seleccionando polinomios $p_{i}(x)$ que sean ortogonales
+respecto a una distribución''.
+Enseguida se nota que, pidiendo no sólo 
+la restricción de grados \eqref{ec: george 14}, sino también
+el que
+\begin{equation}
+\label{ec: george 19}
+\forall i \neq j: \hspace{0.2cm}
+w_{ij} = \suma{\mu=1}{m}{p_{i}(x_{\mu}) p_{j} (x_{\mu})} = 0,
+\end{equation}
+hecho que es descrito como el 
+\textbf{``pedir que los polinomios $p_{i}(x)$
+sean mutuamente ortogonales sobre el conjunto de puntos
+$x_{1}, \cdots, x_{m}$''}, permite reescribir el sistema de ecuaciones 
+normales como 
+\begin{align*}
+\begin{cases}
+w_{00}s_{0}^{(k)} \ldots & = w_{0}, \\
+\ldots & \ldots \\
+ \ldots  w_{kk}s_{k}^{(k)} & = w_{k},
+\end{cases}
+\end{align*}
+luego, resolverlo se reduce a calcular $k$ divisiones. 
+
+\begin{nota}
+Lo único que debe comprobarse para asegurarse de que 
+este último sencillo sistema tiene solución
+es que ninguno de los coeficientes $w_{ii}$ es cero;
+usando la expresión \eqref{eq: george 17}, vemos 
+que 
+$w_{ii}$ es cero si y sólo si 
+para toda $1 \leq \mu \leq m $ ocurre que
+$p_{i}(x_{\mu})$. Como, según la condición 
+\eqref{ec: george 14}, el grado de
+$p_{i}$ es $i \leq k < m$
+(c.f. \eqref{eq0: 7May}), 
+es consecuencia del teorema fundamental del
+álgebra 
+(c.f. proposición \ref{prop: cita TFA})
+el que no pueda ocurrir que todo 
+$x_{\mu}$ sea raíz de $p$, luego, aseguramos
+que para toda $i$ se tiene que $w_{ii} \neq 0$.
+\end{nota}
+
+La situación aquí descrita ilustra perfectamente 
+por qué en la práctica es tan útil considerar
+colecciones de polinomios que cumplan una condición de 
+ortogonalidad (como la propuesta en \eqref{ec: george 19})
+sobre un conjunto discreto.
+Las otras referencias citadas al inicio del capítulo
+tiene información sobre la implementación y fórmulas
+concretas de tales familias de polinomios. Nosotros nos
+concentramos a estudiar en particular
+la referencia \cite{Neuman}, pues en 
+este estudio se recopilan fórmulas que nosotros usaremos
+para derivar expresiones para los
+polinomios discretos de Legendre que hemos definido en el capítulo 
+\ref{cap 2}.
+
+\subsection{Polinomios discretos de Legendre en la literatura}
+La fuente más completa que encontramos 
 fue \cite{Neuman}, un estudio en el que se recopilan 
 varias fórmulas (sin demostración) concernientes a polinomios
-ortogonales discretos de variable discreta. \\
+ortogonales de variable discreta. \\
 
 En \cite{Neuman}, 
 fijado un $N \geq 2$,
@@ -81,14 +256,19 @@ polynomials'' en inglés), usando para designarlos la abreviatura
 ``DLOP's''. \\
 
 Aparte de mencionar en la introducción que
-`` variantes de estos polinomios fueron consideradas por primera
-vez por Chebyshev en 1858 y más tarde por Gram en 1915 '', no se
+``variantes de estos polinomios fueron consideradas por primera
+vez por Chebyshev en 1858 y más tarde por Gram en 1915'', no se
 da un marco teórico como el desarrollado por nosotros, sólo 
 se dan expresiones analíticas de estos.
 Los trabajos originales de Chebyshev y Gram
 no están citados en las referencias del artículo, y 
 nosotros no fuimos capaces de 
-encontrarlos.
+encontrarlos. Nos limitamos pues a usar las 
+fórmulas ofrecidas en \cite{Neuman} para, a continuación,
+derivar fórmulas para los polinomios discretos
+de Legendre $\cali{L}^{n,k}$
+como los hemos definido en el capítulo 
+\ref{cap 2}.
 
 
 \section{Expresión analítica de los PDL}
@@ -330,7 +510,7 @@ el \textbf{fading factorial} $K^{(m)}$ como sigue:
 K^{(m)}= K \cdot (K-1) \cdot \cdots \cdot (K-(m-1)),
 \]
 \TODO{En realidad, la fórmula del survey está
-mal para cualdo $m=0$.}
+mal para cuando $m=0$.}
 es decir,\begin{align*}
 K^{(m)}= \begin{cases}
 \frac{K!}{(K-m)!} & \hspace{0.2cm} \text{si } K \geq m, \\

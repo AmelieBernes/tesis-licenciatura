@@ -102,6 +102,32 @@
     \field{year}{2022}
   \endentry
 
+  \entry{george}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FGE}{%
+         family={Forsythe},
+         familyi={F\bibinitperiod},
+         given={George\bibnamedelima E.},
+         giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FGE1}
+    \strng{fullhash}{FGE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Forne}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{2}
+    \field{pages}{74\bibrangedash 88}
+    \field{title}{Generation and use of orthogonal polynomials for data-fitting
+  with a digital computer}
+    \field{volume}{5}
+    \field{journaltitle}{Journal of the Society for Industrial and Applied
+  Mathematics}
+    \field{year}{June 1957}
+  \endentry
+
   \entry{friedberg}{book}{}
     \name{author}{1}{}{%
       {{hash=FSH}{%
@@ -147,6 +173,30 @@
     \field{sortinithash}{G}
     \field{title}{Cours d'algèbre}
     \field{year}{1966}
+  \endentry
+
+  \entry{himmelblau}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HDM}{%
+         family={Himmelblau},
+         familyi={H\bibinitperiod},
+         given={David\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {John Wiley}%
+      {Sons}%
+    }
+    \strng{namehash}{HDM1}
+    \strng{fullhash}{HDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Him70}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Process Analysis by Statistical Methods}
+    \field{year}{1970}
   \endentry
 
   \entry{interpolation}{misc}{}
@@ -434,6 +484,35 @@
     \field{year}{2010}
   \endentry
 
+  \entry{rabin}{book}{}
+    \name{author}{2}{}{%
+      {{hash=RA}{%
+         family={Ralston},
+         familyi={R\bibinitperiod},
+         given={A.},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=RP}{%
+         family={Rabinowtiz},
+         familyi={R\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {McGraw-Hill New York}%
+    }
+    \strng{namehash}{RARP1}
+    \strng{fullhash}{RARP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{RR78}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{A First Course in Numerical Analysis}
+    \field{year}{1978}
+  \endentry
+
   \entry{spivak}{book}{}
     \name{author}{1}{}{%
       {{hash=SM}{%
@@ -455,6 +534,52 @@
     \field{sortinithash}{S}
     \field{title}{Calculus}
     \field{year}{2008}
+  \endentry
+
+  \entry{fourier1}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SEM}{%
+         family={Stein},
+         familyi={S\bibinitperiod},
+         given={Elias\bibnamedelima M.},
+         giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Princeton Lectures in Analysis}%
+    }
+    \strng{namehash}{SEM1}
+    \strng{fullhash}{SEM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Ste}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Fourier Analysis: An Introduction}
+  \endentry
+
+  \entry{fourier2}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SD}{%
+         family={Sundararajan},
+         familyi={S\bibinitperiod},
+         given={D.},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {World Scientific Publishing Company}%
+    }
+    \strng{namehash}{SD1}
+    \strng{fullhash}{SD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Sun01}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{The Discrete Fourier Transform: Theory, Algorithms and
+  Applications}
+    \field{year}{2001}
   \endentry
 
   \entry{algorithms}{book}{}
