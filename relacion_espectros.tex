@@ -115,8 +115,6 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	\end{defi}
 \end{itemize}
 
-
-
 Recuerde la definición de los coeficientes
 $\sigma_{n}(x, \omega)$;
 \[
@@ -181,19 +179,20 @@ en $Dom_{TDF, n}$.
 
 
 \begin{nota}
+\label{nota: proyeciones monof TDF}
 Sea $x \in \IR^{n}$; sea 
 \eqref{ec: sintesis 0} o 
 \eqref{ec: sintesis 1}
 (dependiendo de la paridad de $n$)
 la síntesis de $x$ respecto a la base de Fourier
-real $\cali{F}_{n}$. 
-Separar los sumandos que corresponden a una
-cierta frecuencia $\omega \in Dom_{TDF, n}$ y recordando
+real $\cali{F}_{n}$. De esta suma, podemos
+separar los sumandos que corresponden a una
+cierta frecuencia $\omega \in Dom_{TDF, n}$; recordando
 que, como se notó más arriba, los correspondientes vectores
-de frecuencia (que son ya sea uno o dos, dependiendo del valor
+de frecuencia $\omega$ (que son ya sea uno o dos, dependiendo del valor
 de $\omega$) conforman una BON para el correspondiente
 espacio monofrecuencial 
-$P_{n, \omega}$; así, tenemos que la parte de la 
+$P_{n, \omega}$, tenemos que la parte de la 
 síntesis de $x$ que corresponde a 
 cierta frecuencia $\omega$ es igual a
 $\Pi_{P_{n, \omega}}(x)$. \\
@@ -267,7 +266,8 @@ Mostramos ahora la gráfica de $x$ junto con
 	\item la parte de la síntesis de $x$ respecto a la $TDF$
 	que corresponde a la frecuencia principal
 	$FP0(x)$ (c.f.
-	nota \ref{nota: ya?}), que de hecho es
+	nota \ref{nota: ya?}), que de hecho,
+	según la nota \ref{nota: proyeciones monof TDF}, es
 	$\Pi_{P_{36,3}}(x)$
 	\begin{figure}[H]
 			\sidecaption{
@@ -305,7 +305,43 @@ Los sinusoides de las figuras \ref{fig: comparacion 2} y
 son las señales de frecuencia pura
 $3$ y $3.39$, respectivamente, cuya distancia euclidea
 a la señal original $x$ es mínima. Observe que la segunda
-señal parece ajustarse un poco mejor a la gráfica de $x$.
+señal, aquella cuya frecuencia
+fue determinada
+a partir del estudio espectral basado en espacios
+monofrecuenciales,
+parece ajustarse un poco mejor a la gráfica de $x$. \\
+
+Para terminar este ejemplo, mostremos gráficas análogas
+para una señal que resulte de tomar $36$
+muestras uniformes del sinusoide de frecuencia entera
+$f(t) = -1.5cos(2 \pi \cdot 5 t + 2\pi \cdot 0.2)$.
+	\begin{figure}[H]
+			\sidecaption{
+			Como era de esperarse, la frecuencia principal de ambos
+			espectros es $5$
+			(y el valor de los 
+			espectros en tal frecuencia
+			es igual a $1$, la cota
+			superior). Además, 
+			las gráficas de frecuencia $5$ que resultan
+			ajustan a la perfección a la señal original $x$.
+			\label{fig: comparacion 4}
+			}
+			\centering
+			\includegraphics[scale = 0.5]{./estudios_espectrales/ejemplo_comparacion_4} 
+		\end{figure}	
 
 \final
 \end{ejemplo}
+
+\begin{nota}
+Según lo discutido en esta sección, fijados $n \geq 2$
+y $x \in \IR^{n}$, \textbf{entre más cercano a $1$ sea 
+el coeficiente $\tau_{n}(x, \omega)$ o 
+$\sigma_{n}(x, \omega)$, mejor es usar un sinusoide
+de frecuencia $\omega$ para ajustar la gráfica de $x$}.
+Esto porque, recuerde, entre más cercano a uno sea uno de
+esos coeficientes, más cercana estará la señal $x$ a tener
+la propiedad de ser una discretización de un sinusoide
+de la respectiva frecuencia.
+\end{nota}

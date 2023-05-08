@@ -195,11 +195,11 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
   """
   M = math.ceil(n/2)
 
-  dominio_tiempo=[m/n for m in range(n)]
+  dominio=[m/n for m in range(n)]
   taus = coeficientes_tau(x)
   cant_freq=len(taus)
 
-  axis1.scatter(dominio_tiempo, x, color= colores[0], s=50, label= "${0}$".format(nombre), zorder = 3)
+  axis1.scatter(dominio, x, color= colores[0], s=50, label= "${0}$".format(nombre), zorder = 3)
   axis1.set_title('Gráfica de '+ "${0}$".format(nombre))
 
   for i in range(cant_freq):
@@ -220,18 +220,23 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
   if n %2 == 0: 
     if max_w == 0 or max_w == M:
       coef_cos = coef_cosenos[max_w] * math.sqrt(1/n)
-      axis1.plot(X, coef_coseno * np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w)))
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t) for t in dominio], zorder=2, color = colores[3], s= 80)
+      axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w)))
     else:
       coef_cos = coef_cosenos[max_w] * math.sqrt(2/n)
       coef_sen = coef_senos[max_w-1] * math.sqrt(2/n)
+      muestreo = [coef_cos * np.cos(2*pi*max_w*t)+coef_sen* np.sin(2*pi*max_w*t) for t in dominio]
+      axis1.scatter(dominio, muestreo, zorder = 2, color = colores[3], s=80) 
       axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X)  + coef_sen * np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w), str(round(coef_sen,2))))
   else: #o sea, si n%2 == 1
     if max_w == 0:
       coef_cos = coef_cosenos[max_w] * math.sqrt(1/n)
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t) for t in dominio], zorder = 2, color = colores[3], s=80)
       axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w))) #redundante
     else: 
       coef_cos = coef_cosenos[max_w] * math.sqrt(2/n)
       coef_sen = coef_senos[max_w-1] * math.sqrt(2/n)
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t)+coef_sen* np.sin(2*pi*max_w*t) for t in dominio], zorder=2, color = colores[3], s=80)
       axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X) + coef_sen * np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w), str(round(coef_sen,2))))
   
   if legend_derecha == True:
@@ -329,7 +334,7 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis, label_derecha = True):
   dominio=[k/n for k in range(n)]
   proyeccion_Pnw = [coseno_amplDes(m/n) for m in range(n)]
 
-  axis.scatter(dominio, x, color=colores[0], s=80)
+  #axis.scatter(dominio, x, color=colores[0], s=80)
   axis.scatter(dominio, proyeccion_Pnw, color=colores[2], s=80, label = r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n),str(w)))
   
   X=np.arange(0, 1, 0.0001)
@@ -384,7 +389,7 @@ def grafica_sigma_amplDesfase_axis_caso2(x, w, axis, label_derecha = True):
   dominio=[k/n for k in range(n)]
   proyeccion_Pnw = [coseno_amplDes(m/n) for m in range(n)]
 
-  axis.scatter(dominio, x, color=colores[0], s=80)
+  #axis.scatter(dominio, x, color=colores[0], s=80)
   axis.scatter(dominio, proyeccion_Pnw, color=colores[2], s=80, label=r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n),str(w)))
   
   X=np.arange(0, 1, 0.0001)
@@ -403,7 +408,7 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   """
   dominio_tiempo=[m/n for m in range(n)] 
 
-  axis0.scatter(dominio_tiempo, x, color= colores[0], s=40, label = "${0}$".format(nombre), zorder = 3)
+  axis0.scatter(dominio_tiempo, x, color= colores[0], s= 50, label = "${0}$".format(nombre), zorder = 3)
   axis0.set_title('Gráfica de '+ "${0}$".format(nombre))
 
   sigmas = []
@@ -413,6 +418,7 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
       sigmas.append(sigma)
     else:
       sigma = sigma_caso1(x, w)
+      print(sigma)
       sigmas.append(sigma)
 
   
@@ -431,7 +437,7 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
 
   axis0.set_xlabel('Tiempo')
   axis0.set_ylabel('Coeficiente respecto a la base canónica')
-  axis1.set_xlabel('Frecuencias')
+  axis1.set_xlabel('Frecuencias ' + r'$\omega$')
   axis1.set_ylabel(r'$\sigma_{{{0}}}($'.format(str(n))+"${0}$".format(nombre)+ r'$, \omega)$' + r', $\tau_{{{0}}}($'.format(str(n))+"${0}$".format(nombre)+ r'$, \omega)$') 
 
   if legenda_derecha == True:
@@ -586,12 +592,12 @@ def graficar_analisis_espectralPDL_global(n, label_derecha = True):
     b0, m0 = datos_espectrales_dim_n[2], datos_espectrales_dim_n[3]
     b1, m1 = datos_espectrales_dim_n[4], datos_espectrales_dim_n[5]
 
-    axis[1].scatter(dominio_grados, sigmasMax_n, marker = 'D', label = '$FP_{1}$', color = colores[2], s = 150)
-    axis[1].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
-    axis[1].plot(X, b1+X*m1, color = colores[4], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m1,2)), str(round(b1,2))))
-    axis[0].scatter(dominio_grados, tausMax_n, label = '$FP_{0}$', marker = 'D', color = colores[3] , s = 150)
-    axis[0].plot(X, X/2, label = r'$f(k)=\frac{k}{2}$', color = 'gray', linestyle = 'dotted')
-    axis[0].plot(X, b0+X*m0, color = colores[3], label = r'RMC: $l(t) = {{{0}}}x + {{{1}}}$'.format(str(round(m0,2)), str(round(b0,2))))
+    axis[1].scatter(dominio_grados, sigmasMax_n, marker = 'D', label = '$FP1$', color = colores[2], s = 150)
+    axis[1].plot(X, X/2, label = r'$f(t)=\frac{t}{2}$', color = 'gray', linestyle = 'dotted')
+    axis[1].plot(X, b1+X*m1, color = colores[4], label = r'RMC: $l(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m1,2)), str(round(b1,2))))
+    axis[0].scatter(dominio_grados, tausMax_n, label = '$FP0$', marker = 'D', color = colores[3] , s = 150)
+    axis[0].plot(X, X/2, label = r'$f(t)=\frac{t}{2}$', color = 'gray', linestyle = 'dotted')
+    axis[0].plot(X, b0+X*m0, color = colores[3], label = r'RMC: $l(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m0,2)), str(round(b0,2))))
     plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales \n de los PDL de dimensión "+str(n), fontsize = 14)
 
     if label_derecha == True:
@@ -675,6 +681,8 @@ def grafica_3d_n_k_FP(N):
 
 
 def grafica_analisisGlobal_k_fijo(k, label_derecha = True):
+    #TODO reescribir. Mejor guarda los valores en arrays para que puedas buscar máximos y mínimos y agustar
+    #la longitud del y-eje.
     """
     k: int, con 0 \leq k \leq 68. 
     """
@@ -688,16 +696,17 @@ def grafica_analisisGlobal_k_fijo(k, label_derecha = True):
         sigmaMax_n_k = sigmasMax_n[k]
         tauMax_n_k = tausMax_n[k]
         if graph_label == True:
-            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^', label = '$FP_{0}$')
-            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v', label = '$FP_{1}$')
+            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^', label = r'$(n,FP0 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)))
+            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v', label = r'$(n,FP1 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)))
         else: 
             plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^')
             plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v')
-
+    
+    #axis.set_ylim(k/2 - 1.5, k/2 + 1.5) #TODO no puedes recortar así. No todos se comportan bien.
     if k == 0 or k == 1:
         axis.axhline(y = k/2, color = 'red', label = r'$y = \frac{{ {{{0}}}  }}{{2}}$'.format(str(k)))
-        graficando_puntos(2, True)
-        for n in range(3, 70):
+        graficando_puntos(3, True)
+        for n in range(4, 70):
             graficando_puntos(n, False)
     else:
         for n in range(k+1, 69):
@@ -710,7 +719,7 @@ def grafica_analisisGlobal_k_fijo(k, label_derecha = True):
     else:
         formato_axis_izquierda(axis)
 
-    plt.suptitle('Gráficas de $FP0_{n, k}$ y $FP1_{n, k}$ para los \n PDL de grado k = '+str(k))
+    plt.suptitle('Gráficas de las frecuencias principales FP para los \n PDL de grado k = '+str(k))
     axis.set_xlim(k+0.5, 69.5)
     axis.set_xlabel('Dimensión $n$')
     axis.set_ylabel('FP del polinomio discreto de Legendre '+ r'$\mathcal{{L}}^{{n, {{{0}}} }} \in \mathbb{{R}}^{{n}}$'.format(str(k)))
@@ -816,7 +825,11 @@ if __name__=='__main__':
   #sinusoide_espectros(n, w, A, phi, nombre, ruido = False)
   
   n, w, A, phi, nombre = 36, 3.4, -1.5, 0.2, 'x' #este ejemplo está bien!
-  sinusoide_espectros(n, w, A, phi, nombre, ruido = True)
+  #sinusoide_espectros(n, w, A, phi, nombre, ruido = True)
+
+  n, w, A, phi, nombre = 36, 5, -1.5, 0.2, 'x' #este ejemplo está bien!
+  #sinusoide_espectros(n, w, A, phi, nombre, ruido = False)
+
 
   n, w, A, phi, nombre = 32, 3, math.sqrt(2/32), 0, 'x' #este ejemplo está bien!
   
@@ -832,7 +845,19 @@ if __name__=='__main__':
   #-------------Gráficas para la pregunta 1
   #analisis_espectrales_PDL_mostrarGrafica(7, 0) 
   #analisis_espectrales_PDL_mostrarGrafica(16, 12) 
+  #for k in range(7):
+  #  analisis_espectrales_PDL_mostrarGrafica(7,k) 
+
+
+  #TODO quitamos a n=2 del análisis? De todas formas, no era una dimensión muy interesante.
+  #analisis_espectrales_PDL_mostrarGrafica(2,0)
+  #analisis_espectrales_PDL_mostrarGrafica(4,0)
+  #analisis_espectrales_PDL_mostrarGrafica(3,1)
+  analisis_espectrales_PDL_mostrarGrafica(8,1)
+  analisis_espectrales_PDL_mostrarGrafica(34,1)
+
   #analisis_espectrales_PDL_mostrarGrafica(84, 12)
+  #analisis_espectrales_PDL_mostrarGrafica(84, 1)
   #analisis_espectrales_PDL_mostrarGrafica(84, 38)
   #analisis_espectrales_PDL_mostrarGrafica(85, 19) #Muy buen ejemplo, ambos sinusoides se ajustan con desfase.
   #analisis_espectrales_PDL_mostrarGrafica(32,5) 
@@ -841,18 +866,23 @@ if __name__=='__main__':
 
 
   #-------------Gráficas para la pregunta 2
+  #grafica_analisisGlobal_k_fijo(0) 
+  #grafica_analisisGlobal_k_fijo(1) 
+
   #grafica_analisisGlobal_k_fijo(7) 
+  #grafica_analisisGlobal_k_fijo(20) 
   #grafica_3d_n_k_FP(10)
 
   #-------------Gráficas para la pregunta 3
+  #graficar_analisis_espectralPDL_global(58, False) 
   #graficar_analisis_espectralPDL_global(7, False) 
   #grafica_nube_b0m0_b1m1()
 
 
-  # --------------------- 3 de mayo
-  #ver_graficaPDL_continuo(18,6)
+  # ----------------------------------------------------------
+  #                scripts que ejecuto una sola vez
+  # ----------------------------------------------------------
 
-  #--------------- scripts que ejecuto una sola vez
   #tabla_informacion() #Sólo debía ejecutar una vez esta función para obtener el código html de la tabla.
   #Como era código plano, yo escribí un .css sencillo y le agregué algunos elementos más al archivo
   #.html.

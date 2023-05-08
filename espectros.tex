@@ -125,26 +125,42 @@ de esta recta o no.
 	\includegraphics[scale = 1.4]{./estudios_espectrales/ejemplo_pregunta2} 
 \end{figure}	
 
-\begin{pregunta}
-\label{preg 3}
-\TODO{recuerda que debes motivar mejor.}
-Fijada una dimensión $2 \leq n \leq 69$,
-considere las gráficas de los
-puntos 
+
+Para intentar refinar la aproximación hecha
+en la hipótesis 
+\ref{ref: hipotesis}, 
+planteemos una tercera y última pregunta. 
+Según esta hipótesis,
+esperamos que tanto $FP0(\cali{L}^{n,k})$
+como $FP1(\cali{L}^{n,k})$ sean cercanos a 
+$\frac{k}{2}$; de ocurrir esto, tendríamos que los puntos de
+las colecciones 
 \begin{equation}
 \label{eq5: May1}
 (k, FP0(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1
 \end{equation}
-y
+y 
 \begin{equation}
 \label{eq6: May1}
 (k, FP1(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1,
 \end{equation}
+que se obtiene después de hacer análisis espectrales
+a todos los PDL de dimensión $n$,
+se ajustan a la recta $f(t) = \frac{t}{2}$. 
+Una forma de comprobar o refutar esto es calcular las
+rectas de mínimos cuadrados de estas dos colecciones
+de puntos, y ver si las pendientes de estas son cercanas
+a $1/2$ y las ordenadas al origen a $0$.
+Planteamos esto en la siguiente
 
-\noindent
-o sea, las gráficas de las frecuencias máximas encontradas
-en los dos análisis espectrales para cada
-PDL de dimensión $n$.
+
+\begin{pregunta}
+\label{preg 3}
+Fijada una dimensión $2 \leq n \leq 69$,
+considere las gráficas de los
+puntos \eqref{eq5: May1}
+y \eqref{eq6: May1}.
+
 Sean $m_{n,0}$ y $b_{n,0}$ la pendiente y la ordenada
 al origen de la recta de mínimos cuadrados calculada a 
 partir del conjunto de puntos 
@@ -163,11 +179,6 @@ y
 \]
 ¿Alrededor de qué punto parecen concentrarse estas nubes?
 \end{pregunta}
-
-Investigar la respuesta (numéricamente)
-de esta última pregunta nos ayudará a afinar 
-la estimación de frecuencias establecida
-en la pregunta \ref{pregunta 1}. 
 
 \begin{figure}[H]
 	\sidecaption{
@@ -208,7 +219,9 @@ Intentaremos responder a la pregunta \ref{pregunta 1}
 con gráficas análogas
 a las expuestas en el ejemplo
 \ref{ej: espectros comparacion},
-esta vez para analizar algunos PDL. 
+esta vez para analizar algunos PDL; la función con la que
+hacemos esto es
+\texttt{analisis$\_$espectrales$\_$PDL$\_$mostrarGrafica}. 
 Para calcular los datos necesarios para responder
 las preguntas \ref{preg 2} y \ref{preg 3},
 usando la función \texttt{analisis$\_$espectralPDL$\_$global(n)}
@@ -238,44 +251,117 @@ módulo \texttt{pickle} para guardar los datos como secuencias
 de bytes. El archivo binario en el que se almacenaron los
 datos calculados con la función 
 \texttt{analisis$\_$espectralPDL$\_$global(n)}
-es \texttt{data$\_$AE.txt}.
+es \texttt{data$\_$AE.txt}. \\
 
-\section{Gráficas para la pregunta \ref{pregunta 1}}
+La función con la que obtenemos gráficas análogas 
+a la de la figura 
+\ref{fig: ejemplo_pregunta2} es
+\texttt{grafica$\_$analisisGlobal$\_$k$\_$fijo}
+y, para obtener gráficas análogas a la de la figura
+\ref{fig: ejemplo_pregunta3_0},
+usamos \texttt{graficar$\_$analisis$\_$espectralPDL$\_$global}.
+\TODO{Dí que mallas de omegas usaste para el espectro 1!}
 
-Intentemos responder a la pregunta \ref{pregunta 1} graficando
-algunos espectros y comprobando si las
-frecuencias $FP0(\cali{L}^{n,k})$ y 
-$FP1(\cali{L}^{n,k})$ son, en efecto, cercanas a $\frac{k}{2}$.
+\section{Gráficas y conclusiones}
 
-
-\section{Gráficas para la pregunta \ref{preg 2}}
-
-\section{Gráficas para la pregunta \ref{preg 3}}
+Veamos qué pasa con $n=7$.
 
 \begin{figure}[H]
 	\sidecaption{
-	En la figura de la izquierda se grafican los
-	puntos $(b_{0,n}, m_{0, n})$, siendo la primera entrada
-	la ordenada al origen de la recta de mínimos cuadrados
-	de \TODO{ref} y la segunda entrada la pendiente de esta.
-	\label{fig: pendiente_oOrigen}
+	\label{fig: 7_0,1}
 	}
 	\centering
-	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
+	\includegraphics[angle = 90, scale = 0.85]{./estudios_espectrales/7_0,1} 
 \end{figure}	
 
 \begin{figure}[H]
-	\sidecaption{
-	\label{fig: tablas_1,2}
-	}
 	\centering
-	\includegraphics[scale = 1.1]{./estudios_espectrales/tablas_1,2} 
+	\includegraphics[angle = 90, scale = 0.85]{./estudios_espectrales/7_2,3} 
 \end{figure}	
 
 \begin{figure}[H]
+	\centering
+	\includegraphics[angle = 90, scale = 0.85]{./estudios_espectrales/7_4,5} 
+\end{figure}	
+
+
+\begin{figure}[H]
 	\sidecaption{
-	\label{fig: tablas_1,2}
+	Observe que $FP0(\cali{L}^{7,0}) = 0 = FP1(\cali{L}^{7,0})$
+	pero $FP0(\cali{L}^{7,1}) = 1 $ mientras que 
+	$FP1(\cali{L}^{7,1})$, aunque no es cero, es un decimal muy cercano
+	a cero; observe en la figura \ref{fig: 7_0,1}, donde se dibujan
+	los espectros de los dos primeros PDL de dimensión $7$ que, en efecto,
+	usando un sinusoide de frecuencia 
+	$0.01$ (la dada por el espectro
+	basado en espacios monofrecuenciales), 
+	logramos ajustar casi a la perfección la gráfica de $\cali{L}^{7,1}$
+	(que, según el teorema \ref{cor: BON de legendre para espacios Wk}, yace
+	en una recta, por lo que no puede ser ajustada a la perfección por un
+	sinusoide),
+	mientras que usando un sinusoide de frecuencia $1$ (la dada por el 
+	espectro basado en la TDF), no se logran ajustar tan bien los datos.
+	\label{fig: 7}
 	}
 	\centering
-	\includegraphics[scale = 1.1]{./estudios_espectrales/tablas_3,4} 
+	\includegraphics[scale = 0.5]{./estudios_espectrales/7} 
+\end{figure}	
+
+Como notamos en la descripción de la figura
+\ref{fig: 7}, parece que usando el estudio espectral basado en 
+espacios monofrecuenciales obtenemos una aproximación de la gráfica
+de $\cali{L}^{n,1}$, con $n=7$, en base a un sinusoide de frecuencia muy baja;
+grafiquemos 
+\TODO{aaa} para ver si esta es una particularidad de la dimensión
+$n=7$ o si también ocurre para otros valores de $n$.
+
+\begin{figure}[H]
+	\sidecaption{
+	Comprobamos numéricamente que los resultados del espectro-1
+	sugieren usar frecuencias muy bajas para modelar los 
+	PDL de grado $1$; la única excepción se da para $n=3$. Graficamos
+	a continuación los espectros de $\cali{L}^{3,1}$ para ver qué
+	está sucediendo.
+	\label{fig: k_1}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_1} 
+\end{figure}	
+
+
+\begin{figure}[H]
+	\sidecaption{
+	Como se muestra en los espectros, el coeficiente
+	$\sigma_{3}(\mathcal{L}^{3,1}, \omega)$ es, para casi toda
+	$\omega$ considerada, muy cercana a uno, por lo que cualquiera
+	de estas frecuencias sería adecuada para aproximar con un sinusoide la 
+	gráfica de $\mathcal{L}^{3,1}$. Por la forma en que programamos
+	el proceso, se usa la última frecuencia más alta, que resultó ser
+	$1.48$. Como puede comprobar en las gráficas de abajo, se puede
+	aproximar bien la gráfica de $\mathcal{L}^{3,1}$ tanto
+	con frecuencia $\omega = 1$ como con frecuencia
+	$\omega = 1.48$.
+	\label{fig: 3_1}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/3_1} 
+\end{figure}	
+
+Comprobemos, graficando los espectros 
+de algunos PDL de grado $1$ y dimensión mayor a $3$, 
+que frecuencias muy cercanas a $0$ son buenas para modelar
+la gráfica de $\cali{L}^{n,1}$, hecho que es 
+sugerido por la figura \ref{fig: k_1}.
+
+\begin{figure}[H]
+	\sidecaption{
+	Note que en este espectro no ocurre lo que se tenía
+	en el del PDL $\cali{L}^{3,1}$ (c.f. figura 
+	\ref{fig: 3_1}); en este caso, el espectro-$1$ muestra
+	claramente que $\omega =0.1$, la frecuencia en $Dom_{\omega, n}$
+	más cercana a $0$ que \textbf{no} es cero, es la mejor.
+	\label{fig: 8_1}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/8_1} 
 \end{figure}	
