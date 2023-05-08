@@ -99,12 +99,15 @@ $FP1(\cali{L}^{n_{1},k})$ = $FP1(\cali{L}^{n_{2},k})$?
 Para tratar de responder a la pregunta \ref{preg 2},
 fijado un grado $k$,
 podría ser útil graficar los puntos de la forma
-\[
+\begin{equation}
+\label{eq0: 8may}
 (n, FP0(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69,
-\] y 
-\[
+\end{equation}
+y 
+\begin{equation}
+\label{eq1: 8may}
 (n, FP1(\cali{L}^{n,k})), \hspace{0.2cm} k < n \leq 69.
-\]
+\end{equation}
 Gráficas de este estilo podrían usarse para comprobar
 la respuesta a la pregunta \ref{pregunta 1} 
 graficando también la recta horizontal $y = \frac{k}{2}$
@@ -260,7 +263,11 @@ a la de la figura
 y, para obtener gráficas análogas a la de la figura
 \ref{fig: ejemplo_pregunta3_0},
 usamos \texttt{graficar$\_$analisis$\_$espectralPDL$\_$global}.
-\TODO{Dí que mallas de omegas usaste para el espectro 1!}
+
+Para cada análisis espectral,
+vamos a tomar al conjunto de 
+frecuencias $Dom_{\omega}$
+como se sugiere en la nota \ref{nota: sobre el rango de frecuencias}.
 
 \section{Gráficas y conclusiones}
 
@@ -308,11 +315,14 @@ Veamos qué pasa con $n=7$.
 \end{figure}	
 
 Como notamos en la descripción de la figura
-\ref{fig: 7}, parece que usando el estudio espectral basado en 
+\ref{fig: 7}, parece ser que usando el estudio espectral basado en 
 espacios monofrecuenciales obtenemos una aproximación de la gráfica
 de $\cali{L}^{n,1}$, con $n=7$, en base a un sinusoide de frecuencia muy baja;
 grafiquemos 
-\TODO{aaa} para ver si esta es una particularidad de la dimensión
+los puntos de la forma
+\eqref{eq0: 8may} y \eqref{eq1: 8may} para 
+$k=1$
+para ver si esta es una particularidad de la dimensión
 $n=7$ o si también ocurre para otros valores de $n$.
 
 \begin{figure}[H]
@@ -359,9 +369,93 @@ sugerido por la figura \ref{fig: k_1}.
 	en el del PDL $\cali{L}^{3,1}$ (c.f. figura 
 	\ref{fig: 3_1}); en este caso, el espectro-$1$ muestra
 	claramente que $\omega =0.1$, la frecuencia en $Dom_{\omega, n}$
-	más cercana a $0$ que \textbf{no} es cero, es la mejor.
+	más cercana a $0$ que \textbf{no} es cero, es la mejor
+	(c.f. nota 
+	\ref{nota: la mejor frecuencia}).
 	\label{fig: 8_1}
 	}
 	\centering
 	\includegraphics[scale = 0.45]{./estudios_espectrales/8_1} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/34_1} 
+\end{figure}	
+
+Graficando algunos PDL de dimensión
+39, apreciamos que conforme $k$ aumenta, es menos
+sencillo aproximar la gráfica del respectivo PDL
+con un sinusoide.
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/39_5} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/39_8} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.45]{./estudios_espectrales/39_15} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./estudios_espectrales/39_38} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./estudios_espectrales/k_12} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./estudios_espectrales/k_44} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./estudios_espectrales/k_59} 
+\end{figure}	
+
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: 30}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{./estudios_espectrales/39} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: 65}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{./estudios_espectrales/52} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Concluimos con la gráfica de las nubes de puntos
+	de las que se habló en la figura 
+	\ref{fig: ejemplo_pregunta3_1}.
+	\label{fig: pendiente_oOrigen}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	

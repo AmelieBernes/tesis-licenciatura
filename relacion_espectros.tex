@@ -335,6 +335,7 @@ $f(t) = -1.5cos(2 \pi \cdot 5 t + 2\pi \cdot 0.2)$.
 \end{ejemplo}
 
 \begin{nota}
+\label{nota: la mejor frecuencia}
 Según lo discutido en esta sección, fijados $n \geq 2$
 y $x \in \IR^{n}$, \textbf{entre más cercano a $1$ sea 
 el coeficiente $\tau_{n}(x, \omega)$ o 
@@ -344,4 +345,66 @@ Esto porque, recuerde, entre más cercano a uno sea uno de
 esos coeficientes, más cercana estará la señal $x$ a tener
 la propiedad de ser una discretización de un sinusoide
 de la respectiva frecuencia.
+\end{nota}
+
+
+
+Recuerde que, para hacer un análisis espectral basado
+en espacios monofrecuenciales, se requiere dar de antemano
+un rango $Dom_{\omega}$ de frecuencias no negativas a considerar. \\
+
+Para saber qué cota superior para las frecuencias sería bueno considerar,
+vea el siguiente ejemplo;
+Sea la señal $x =  (-0.8, -2.5,-9.23, -0.7, -9.36, -29, -9) \in \IR^{7}.$
+
+\begin{figure}[H]
+	\sidecaption{
+	Fijando la cota superior de $Dom_{\omega}$
+	como $n/2 =7/2$ y tomando $100$ puntos por unidad,
+	obtenemos los siguientes espectros. Observe que el $\omega$
+	cuyo coeficiente $\sigma_{7}(x, \omega)$ es más cercano a 
+	$1$ es $0.24$, cercano a cero. Como se aprecia en las gráficas
+	de abajo, un sinusoide de tal frecuencia parece aproximar bien
+	la gráfica de $x$.
+	\label{fig: ejemplo rango 1}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/ejemplo_rangoFrec_1} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Pongamos ahora como cota superior de 
+	$Dom_{\omega}$
+	a $n = 7$, y tomemos de nuevo $100$ puntos por unidad,
+	\label{fig: ejemplo rango 1}. Observe que la $\omega$
+	cuyo coeficiente $\sigma_{7}(x, \omega)$ es más cercano a 
+	$1$ es, en este espectro, $6.76$. Note que, a pesar de que
+	$\sigma_{7}(x, 0.24) < \sigma_{7}(x, 6.76)$, el sinusoide de frecuencia 
+	$6.76$ que se grafica en naranja en la gráfica de abajo tiene muchas 
+	oscilaciones que no parecen modelar bien la forma de la gráfica 
+	de $x$. 
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/ejemplo_rangoFrec_2} 
+\end{figure}	
+
+Como se aprecia en los espectros anteriores, el considerar
+frecuencias demasiado altas nos puede llevar a realizar sobreajustes.
+Esta discusión justifica la decisión adoptada en la siguiente
+
+
+\begin{nota}
+\label{nota: sobre el rango de frecuencias}
+Si $x \in \IR^{n}$, vamos a tomar como cota superior de
+el conjunto de frecuencias en base al cual se realice un análisis
+espectral de tipo 1 (i.e. basado en espacios monofrecuenciales)
+a $\frac{n}{2}$. \\
+
+Para tener un dominio denso de frecuencias, en lo que sigue 
+vamos a pedir que por cada unidad se tomen 100 frecuencias intermedias;
+es decir, si $x \in \IR^{n}$, vamos a fijar
+\[
+Dom_{\omega} = \left\{ \frac{a}{100} \hspace{0.2cm} : 0 \leq a \leq \frac{n}{2} \right\}.
+\]
 \end{nota}

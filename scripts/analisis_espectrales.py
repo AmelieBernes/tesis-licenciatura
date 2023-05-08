@@ -853,8 +853,12 @@ if __name__=='__main__':
   #analisis_espectrales_PDL_mostrarGrafica(2,0)
   #analisis_espectrales_PDL_mostrarGrafica(4,0)
   #analisis_espectrales_PDL_mostrarGrafica(3,1)
-  analisis_espectrales_PDL_mostrarGrafica(8,1)
-  analisis_espectrales_PDL_mostrarGrafica(34,1)
+  #analisis_espectrales_PDL_mostrarGrafica(8,1)
+  #analisis_espectrales_PDL_mostrarGrafica(34,1)
+  #analisis_espectrales_PDL_mostrarGrafica(39, 15)
+  #analisis_espectrales_PDL_mostrarGrafica(39, 8)
+  #analisis_espectrales_PDL_mostrarGrafica(39, 5)
+  analisis_espectrales_PDL_mostrarGrafica(39, 38)
 
   #analisis_espectrales_PDL_mostrarGrafica(84, 12)
   #analisis_espectrales_PDL_mostrarGrafica(84, 1)
@@ -871,9 +875,12 @@ if __name__=='__main__':
 
   #grafica_analisisGlobal_k_fijo(7) 
   #grafica_analisisGlobal_k_fijo(20) 
+  grafica_analisisGlobal_k_fijo(44) 
   #grafica_3d_n_k_FP(10)
 
   #-------------Gráficas para la pregunta 3
+  #graficar_analisis_espectralPDL_global(30, False) 
+  #graficar_analisis_espectralPDL_global(65, False) 
   #graficar_analisis_espectralPDL_global(58, False) 
   #graficar_analisis_espectralPDL_global(7, False) 
   #grafica_nube_b0m0_b1m1()
@@ -891,4 +898,14 @@ if __name__=='__main__':
   #Ya ejecuté este loop y guardé los datos en data_AE.txt. No lo ejecutes más!
   #for n in range(2, 70):
   #    analisis_espectralPDL_global(n)
+
+  #------- figuras para ejemplificar el rango de frecuencias usado.
+  x = [-0.8, -2.5, -9.23, -0.7, -9.36, -29, -9]
+  frecuencias = [a/100 for a in range(int(700/2))]
+  nombre = 'x'
+
+  #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
+
+  frecuencias = [a/100 for a in range(int(1400/2))]
+  #analisis_espectrales_mostrarGrafica(x, frecuencias, nombre)
     

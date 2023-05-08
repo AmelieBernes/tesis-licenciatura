@@ -41,7 +41,6 @@ def formato_axis_izquierda(axis):
 
 #  ---------------------------------------- TDF ----------------------------------------
 
-#Funciones coseno y coseno a partir de las que se construye todo lo que sigue.
 def c_w(n,t, w):
   return math.sqrt(1/n)*np.cos(2*pi*w*t)
 
@@ -70,10 +69,7 @@ def calculo_base(n):
   if n%2==1: #si N es impar, ya terminamos
     return base_F #Debemos multiplicar por \sqrt{2} para obtener elementos de Rn de norma uno
   else: #en caso contrario, falta agregar un vector con una frecuencia más alta
-    f_w=[]
-    for i in range(M):
-      f_w.append(1/math.sqrt(n))
-      f_w.append(-1/math.sqrt(n))
+    f_w = [ c_w(n, t, M) for t in dominio ]
     base_F.append(f_w) #Nota que aquí no multiplicamos por \sqrt{2}
     return base_F
     
@@ -106,8 +102,7 @@ def coeficientes_tau(x):
   """
   n = len(x)
   M = math.ceil(n/2)
-  coef_cosenos, coef_senos = coeficientes_espectrales(x)
-
+  coef_cosenos, coef_senos = coeficientes_espectrales(x) 
   norma = np.linalg.norm(x)
   if norma == 0:
       return None
@@ -130,6 +125,7 @@ def coeficientes_tau(x):
       for i in range(M-1):
         taus.append(math.sqrt(cuadrados_cosenos[i]+cuadrados_senos[i]))
       taus.append(sigma_final)
+      
       return taus
 
   else:  
@@ -141,6 +137,7 @@ def coeficientes_tau(x):
       cuadrados_senos = np.square(coef_senos)
       for i in range(M-1):
         taus.append(math.sqrt(cuadrados_cosenos[i]+cuadrados_senos[i])/norma)
+
       return taus
     
     else:
@@ -165,11 +162,11 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
   """
   M = math.ceil(n/2)
 
-  dominio_tiempo=[m/n for m in range(n)]
+  dominio=[m/n for m in range(n)]
   taus = coeficientes_tau(x)
   cant_freq=len(taus)
 
-  axis1.scatter(dominio_tiempo, x, color= colores[0], s=50, label= "${0}$".format(nombre), zorder = 3)
+  axis1.scatter(dominio, x, color= colores[0], s=50, label= "${0}$".format(nombre), zorder = 3)
   axis1.set_title('Gráfica de '+ "${0}$".format(nombre))
 
   for i in range(cant_freq):
@@ -183,21 +180,31 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
 
   X=np.arange(0, 1, 0.0001)
 
-  coef_cosenos, coef_senos = coeficientes_espectrales(x) # :( código con muchas partes repetidas !
+  coef_cosenos, coef_senos = coeficientes_espectrales(x) #TODO :( código con muchas partes repetidas !
   max_w = taus.index(max(taus)) #máxima frecuencia
-  #axis2.scatter(max_w, max(taus), color = colores[3], s = 70, label = '$FP0({0})$'.format(nombre) + '='+str(max_w), marker = '^', zorder = 3)
   axis2.scatter(max_w, max(taus), color = colores[3], s = 70, label = '( ' + str(max_w) + ', ' + str(round(max(taus), 4))  + ' )', marker = '^', zorder = 3)
 
   if n %2 == 0: 
     if max_w == 0 or max_w == M:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w)))
+      coef_cos = coef_cosenos[max_w] * math.sqrt(1/n)
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t) for t in dominio], zorder=2, color = colores[3], s= 80)
+      axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w)))
     else:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w-1]*np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w-1],2))))
+      coef_cos = coef_cosenos[max_w] * math.sqrt(2/n)
+      coef_sen = coef_senos[max_w-1] * math.sqrt(2/n)
+      muestreo = [coef_cos * np.cos(2*pi*max_w*t)+coef_sen* np.sin(2*pi*max_w*t) for t in dominio]
+      axis1.scatter(dominio, muestreo, zorder = 2, color = colores[3], s=80) 
+      axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X)  + coef_sen * np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w), str(round(coef_sen,2))))
   else: #o sea, si n%2 == 1
     if max_w == 0:
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w))) #redundante
-    else: #TODO  ya funciona, pero revisa que lo demás esté bien, porque estaba cometiendo un error!!
-      axis1.plot(X, coef_cosenos[max_w]*np.cos(2*pi*max_w*X) + coef_senos[max_w-1]*np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cosenos[max_w],2)), str(max_w), str(round(coef_senos[max_w-1],2))))
+      coef_cos = coef_cosenos[max_w] * math.sqrt(1/n)
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t) for t in dominio], zorder = 2, color = colores[3], s=80)
+      axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w))) #redundante
+    else: 
+      coef_cos = coef_cosenos[max_w] * math.sqrt(2/n)
+      coef_sen = coef_senos[max_w-1] * math.sqrt(2/n)
+      axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t)+coef_sen* np.sin(2*pi*max_w*t) for t in dominio], zorder=2, color = colores[3], s=80)
+      axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X) + coef_sen * np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w), str(round(coef_sen,2))))
   
   if legend_derecha == True:
     formato_axis_derecha(axis1)
