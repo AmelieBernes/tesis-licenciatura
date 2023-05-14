@@ -501,226 +501,260 @@
 \newmarginnote{note.80.2}{{80}{11512504sp}}
 \newlabel{prop: construccion Bn}{{6.3.5}{72}{La transformada discreta de Fourier}{teo.6.3.5}{}}
 \newlabel{eq2: 8ab}{{6.6}{72}{La transformada discreta de Fourier}{equation.6.3.6}{}}
+\newlabel{eq: TDF}{{6.7}{73}{La transformada discreta de Fourier}{equation.6.3.7}{}}
 \newmarginnote{note.81.1}{{81}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Usualmente uno representa a una señal discreta $x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio de la representación es el tiempo. Pero también se puede representar unívocamente a $x$ con sus coeficientes respecto a la base de frecuencias $\mathcal  {B}_{n}$; en este caso, puesto que cada coeficiente da el peso que tiene la respectiva frecuencia para construir la señal original $x$, decimos que el dominio de la representación es el de frecuencia.\relax }}{73}{figure.caption.59}\protected@file@percent }
 \citation{algorithms}
 \abx@aux@cite{0}{algorithms}
 \abx@aux@segm{0}{0}{algorithms}
 \citation{algorithms}
 \abx@aux@cite{0}{algorithms}
 \abx@aux@segm{0}{0}{algorithms}
-\newlabel{eq4: 8ab}{{6.7}{74}{La transformada discreta de Fourier}{equation.6.3.7}{}}
-\newmarginnote{note.82.1}{{82}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces  Por ejemplo, si $n=5$, para construir al vector $e_{3}$ de la base $\mathcal  {B}_{n}$ se muestrean uniformemente cosenos y senos de frecuencia $3$ como se muestra en la figura; los puntos rojos representan las partes reales de las entradas y los azules las imaginarias.  }}{74}{figure.caption.60}\protected@file@percent }
-\newlabel{fig: construccion Bn}{{6.8}{74}{\@sidenotes@sidecaption@tof }{figure.caption.60}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{75}{subsection.6.3.3}\protected@file@percent }
-\newlabel{prop: base de fourier version real}{{6.3.8}{75}{Versión real de la TDF}{teo.6.3.8}{}}
-\newlabel{eq0: 10ab}{{6.8}{75}{Versión real de la TDF}{equation.6.3.8}{}}
-\newlabel{eq0: 4May}{{6.9}{75}{Versión real de la TDF}{equation.6.3.9}{}}
-\newlabel{nota: frecuencias en las bases de fourier}{{6.3.10}{76}{Versión real de la TDF}{teo.6.3.10}{}}
-\newlabel{ej: DFT1}{{5}{76}{}{ejemplo.5}{}}
-\newlabel{eq2: 10ab}{{6.10}{76}{}{equation.6.3.10}{}}
-\newmarginnote{note.84.1}{{85}{4718592sp}}
+\citation{TDFwiki}
+\abx@aux@cite{0}{TDFwiki}
+\abx@aux@segm{0}{0}{TDFwiki}
+\citation{FFTscipy}
+\abx@aux@cite{0}{FFTscipy}
+\abx@aux@segm{0}{0}{FFTscipy}
+\newlabel{eq4: 8ab}{{6.8}{74}{La transformada discreta de Fourier}{equation.6.3.8}{}}
+\newlabel{eq: TDFI}{{6.9}{74}{La transformada discreta de Fourier}{equation.6.3.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Usualmente uno representa a una señal discreta $x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio de la representación es el tiempo. Pero también se puede representar unívocamente a $x$ con sus coeficientes respecto a la base de frecuencias $\mathcal  {B}_{n}$; en este caso, puesto que cada coeficiente da el peso que tiene la respectiva frecuencia para construir la señal original $x$, decimos que el dominio de la representación es el de frecuencia. Las fórmulas para pasar de una representación a otra son \eqref  {eq: TDF} y \eqref  {eq: TDFI}.\relax }}{75}{figure.caption.59}\protected@file@percent }
+\newmarginnote{note.83.1}{{83}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces  Por ejemplo, si $n=5$, para construir al vector $e_{3}$ de la base $\mathcal  {B}_{n}$ se muestrean uniformemente cosenos y senos de frecuencia $3$ como se muestra en la figura; los puntos rojos representan las partes reales de las entradas y los azules las imaginarias.  }}{75}{figure.caption.60}\protected@file@percent }
+\newlabel{fig: construccion Bn}{{6.8}{75}{\@sidenotes@sidecaption@tof }{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{76}{subsection.6.3.3}\protected@file@percent }
+\newlabel{prop: base de fourier version real}{{6.3.9}{76}{Versión real de la TDF}{teo.6.3.9}{}}
+\newlabel{eq0: 10ab}{{6.10}{76}{Versión real de la TDF}{equation.6.3.10}{}}
+\newlabel{eq0: 4May}{{6.11}{76}{Versión real de la TDF}{equation.6.3.11}{}}
+\newlabel{nota: frecuencias en las bases de fourier}{{6.3.11}{77}{Versión real de la TDF}{teo.6.3.11}{}}
+\newlabel{ej: DFT1}{{5}{77}{}{ejemplo.5}{}}
+\newlabel{eq2: 10ab}{{6.12}{77}{}{equation.6.3.12}{}}
+\newmarginnote{note.85.1}{{85}{4718592sp}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces  Se muestran la gráfica de $x$ junto con la gráfica de los coeficientes de $x$ respecto a la BON $\mathcal  {F}_{7}$. Observe que, por definición, sólo un vector de $\mathcal  {F}_{7}$ tiene frecuencia cero (i.e. es constante), mientras que para las otras frecuencias tenemos dos vectores de la misma frecuencia, uno construido a partir de un coseno y otro a partir de un seno.  }}{77}{figure.caption.61}\protected@file@percent }
 \newlabel{fig: ejFrecuencia 1}{{6.9}{77}{\@sidenotes@sidecaption@tof }{figure.caption.61}{}}
-\newlabel{eq: analisis x TDF}{{6.11}{77}{}{equation.6.3.11}{}}
-\newmarginnote{note.85.1}{{85}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces  Aporte de frecuencia $0$.  }}{77}{figure.caption.62}\protected@file@percent }
-\newlabel{fig: ejFrecuencia 2}{{6.10}{77}{\@sidenotes@sidecaption@tof }{figure.caption.62}{}}
-\newmarginnote{note.85.2}{{85}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces  Aporte de frecuencia $1$.  }}{77}{figure.caption.63}\protected@file@percent }
-\newlabel{fig: ejFrecuencia 3}{{6.11}{77}{\@sidenotes@sidecaption@tof }{figure.caption.63}{}}
-\newmarginnote{note.85.3}{{86}{4718592sp}}
+\newlabel{eq: analisis x TDF}{{6.13}{78}{}{equation.6.3.13}{}}
+\newmarginnote{note.86.1}{{86}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces  Aporte de frecuencia $0$.  }}{78}{figure.caption.62}\protected@file@percent }
+\newlabel{fig: ejFrecuencia 2}{{6.10}{78}{\@sidenotes@sidecaption@tof }{figure.caption.62}{}}
+\newmarginnote{note.86.2}{{86}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces  Aporte de frecuencia $1$.  }}{78}{figure.caption.63}\protected@file@percent }
+\newlabel{fig: ejFrecuencia 3}{{6.11}{78}{\@sidenotes@sidecaption@tof }{figure.caption.63}{}}
+\newmarginnote{note.86.3}{{86}{4718592sp}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces  Aporte de frecuencia $2$.  }}{78}{figure.caption.64}\protected@file@percent }
 \newlabel{fig: ejFrecuencia 4}{{6.12}{78}{\@sidenotes@sidecaption@tof }{figure.caption.64}{}}
-\newmarginnote{note.86.1}{{86}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces  Aporte de frecuencia $3$.  }}{78}{figure.caption.65}\protected@file@percent }
-\newlabel{fig: ejFrecuencia 5}{{6.13}{78}{\@sidenotes@sidecaption@tof }{figure.caption.65}{}}
-\newmarginnote{note.86.2}{{86}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces  En morado se muestra la gráfica de la función suma de las gráficas derechas en las figuras anteriores.  }}{78}{figure.caption.66}\protected@file@percent }
-\newlabel{fig: ejFrecuencia 6}{{6.14}{78}{\@sidenotes@sidecaption@tof }{figure.caption.66}{}}
-\newmarginnote{note.86.3}{{87}{4718592sp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Dimensión $n = 2M-1$ impar}}{79}{table.caption.67}\protected@file@percent }
-\newlabel{Tab: frecuencias TDF n impar}{{\caption@xref {Tab: frecuencias TDF n impar}{ on input line 644}}{79}{Versión real de la TDF}{table.caption.67}{}}
 \newmarginnote{note.86.4}{{87}{4718592sp}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Dimensión $n = 2M$ par}}{79}{table.caption.68}\protected@file@percent }
-\newlabel{Tab: frecuencias TDF n par}{{\caption@xref {Tab: frecuencias TDF n par}{ on input line 658}}{79}{Versión real de la TDF}{table.caption.68}{}}
-\newlabel{def. Dom tdf}{{6.3.11}{79}{Versión real de la TDF}{teo.6.3.11}{}}
-\newlabel{nota: ya?}{{6.3.12}{79}{Versión real de la TDF}{teo.6.3.12}{}}
-\newlabel{ec: sintesis 0}{{6.12}{79}{Versión real de la TDF}{equation.6.3.12}{}}
-\newlabel{ec: sintesis 1}{{6.13}{79}{Versión real de la TDF}{equation.6.3.13}{}}
-\newlabel{eq0: 25Ap}{{6.14}{79}{Versión real de la TDF}{equation.6.3.14}{}}
-\newlabel{eq1: 25Ap}{{6.15}{79}{Versión real de la TDF}{equation.6.3.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces  Aporte de frecuencia $3$.  }}{79}{figure.caption.65}\protected@file@percent }
+\newlabel{fig: ejFrecuencia 5}{{6.13}{79}{\@sidenotes@sidecaption@tof }{figure.caption.65}{}}
 \newmarginnote{note.87.1}{{87}{4718592sp}}
-\newlabel{def: taus}{{6.3.13}{79}{Versión real de la TDF}{teo.6.3.13}{}}
-\newlabel{def: espectro DFT}{{6.3.14}{80}{Versión real de la TDF}{teo.6.3.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces  En morado se muestra la gráfica de la función suma de las gráficas derechas en las figuras anteriores.  }}{79}{figure.caption.66}\protected@file@percent }
+\newlabel{fig: ejFrecuencia 6}{{6.14}{79}{\@sidenotes@sidecaption@tof }{figure.caption.66}{}}
+\newmarginnote{note.87.2}{{87}{4718592sp}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Dimensión $n = 2M-1$ impar}}{79}{table.caption.67}\protected@file@percent }
+\newlabel{Tab: frecuencias TDF n impar}{{\caption@xref {Tab: frecuencias TDF n impar}{ on input line 699}}{79}{Versión real de la TDF}{table.caption.67}{}}
+\newmarginnote{note.87.3}{{87}{4718592sp}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Dimensión $n = 2M$ par}}{79}{table.caption.68}\protected@file@percent }
+\newlabel{Tab: frecuencias TDF n par}{{\caption@xref {Tab: frecuencias TDF n par}{ on input line 713}}{79}{Versión real de la TDF}{table.caption.68}{}}
+\newlabel{def. Dom tdf}{{6.3.12}{80}{Versión real de la TDF}{teo.6.3.12}{}}
+\newlabel{nota: ya?}{{6.3.13}{80}{Versión real de la TDF}{teo.6.3.13}{}}
+\newlabel{ec: sintesis 0}{{6.14}{80}{Versión real de la TDF}{equation.6.3.14}{}}
+\newlabel{ec: sintesis 1}{{6.15}{80}{Versión real de la TDF}{equation.6.3.15}{}}
+\newlabel{eq0: 25Ap}{{6.16}{80}{Versión real de la TDF}{equation.6.3.16}{}}
+\newlabel{eq1: 25Ap}{{6.17}{80}{Versión real de la TDF}{equation.6.3.17}{}}
 \newmarginnote{note.88.1}{{88}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces  Espectro de la señal $x$ dada en \eqref  {eq2: 10ab}.  }}{80}{figure.caption.69}\protected@file@percent }
-\newlabel{fig: dft_espectro_1}{{6.15}{80}{\@sidenotes@sidecaption@tof }{figure.caption.69}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{80}{section.6.4}\protected@file@percent }
-\newlabel{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}{{6.4}{80}{Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{section.6.4}{}}
+\newlabel{def: taus}{{6.3.14}{80}{Versión real de la TDF}{teo.6.3.14}{}}
+\newlabel{def: espectro DFT}{{6.3.15}{81}{Versión real de la TDF}{teo.6.3.15}{}}
 \newmarginnote{note.89.1}{{89}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces  Aquí se grafica una misma señal $x \in \mathbb  {R}^{16}$ y se compara con dos sinusoides de frecuencia $3.6$, una con desfase (normalizado) 0.8 y otra con 0.32. Observe que la primera parece ajustar mucho mejor la gráfica de $x$.  }}{81}{figure.caption.70}\protected@file@percent }
-\newlabel{fig: ejemplo desfase}{{6.16}{81}{\@sidenotes@sidecaption@tof }{figure.caption.70}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{81}{subsection.6.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces  Espectro de la señal $x$ dada en \eqref  {eq2: 10ab}.  }}{81}{figure.caption.69}\protected@file@percent }
+\newlabel{fig: dft_espectro_1}{{6.15}{81}{\@sidenotes@sidecaption@tof }{figure.caption.69}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{81}{section.6.4}\protected@file@percent }
+\newlabel{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}{{6.4}{81}{Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{section.6.4}{}}
 \newmarginnote{note.90.1}{{90}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces  Se grafica a la función $f(t) = cos(2 \pi \cdot \frac  {5}{2} t + 2 \pi \cdot 0.3)$; muestreando este sinusoide de forma uniforme con $n$ puntos en el intervalo [0,1] obtenemos una señal $n-$dimensional de frecuencia pura $\omega = \frac  {5}{2}$. En la figura, $n=20$.  }}{82}{figure.caption.71}\protected@file@percent }
-\newlabel{fig: desfasee ejemplo grafico}{{6.17}{82}{\@sidenotes@sidecaption@tof }{figure.caption.71}{}}
-\newlabel{prop: para que frecuencias omega vector seno es cero}{{6.4.4}{82}{Espacios monofrecuenciales}{teo.6.4.4}{}}
-\newlabel{eq: coseno omega}{{6.17}{82}{Espacios monofrecuenciales}{equation.6.4.17}{}}
-\newlabel{eq: seno omega}{{6.18}{82}{Espacios monofrecuenciales}{equation.6.4.18}{}}
-\newlabel{eq: espacio Pnw}{{6.19}{83}{Espacios monofrecuenciales}{equation.6.4.19}{}}
-\newlabel{prop: Pw consta de las señales de frecuencia omega}{{6.4.5}{83}{Espacios monofrecuenciales}{teo.6.4.5}{}}
-\newlabel{eq1: 28Mar23}{{6.20}{83}{Espacios monofrecuenciales}{equation.6.4.20}{}}
-\newlabel{eq0: 28Mar23}{{6.21}{83}{Espacios monofrecuenciales}{equation.6.4.21}{}}
-\newlabel{obs aa: f y g son l.i. y de norma uno}{{6.4.7}{83}{Espacios monofrecuenciales}{teo.6.4.7}{}}
-\newlabel{eq6: 23Ap}{{6.22}{84}{Espacios monofrecuenciales}{equation.6.4.22}{}}
-\newlabel{eq0: 23Ap}{{6.23}{84}{Espacios monofrecuenciales}{equation.6.4.23}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{84}{subsection.6.4.2}\protected@file@percent }
-\newlabel{ap: Caso particular en el que el subespacio en cuestión es un plano}{{6.4.2}{84}{Fórmulas para el coseno del ángulo de un punto a un plano}{subsection.6.4.2}{}}
-\newlabel{eq0: 19Marzo}{{6.24}{84}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.24}{}}
-\newlabel{eq2: 19Marzo}{{6.25}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.25}{}}
-\newlabel{eq1: 19Marzo}{{6.26}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.26}{}}
-\newlabel{prop: formulas 20Marzo}{{6.4.10}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{teo.6.4.10}{}}
-\newlabel{eq0: 24ap}{{6.27}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.27}{}}
-\newlabel{eq3: 19Marzo}{{6.28}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.28}{}}
-\newlabel{eq3: 23ap}{{6.29}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.29}{}}
-\newlabel{eq: coseno a plano}{{6.30}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.30}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{86}{subsection.6.4.3}\protected@file@percent }
-\newlabel{eq0: 20Mar}{{6.31}{86}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.31}{}}
-\newmarginnote{note.94.1}{{94}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces  Según la relación \eqref  {eq0: 20Mar}, si $\frac  {||\Pi _{P_{\omega }}(x)||}{||x||}$ es cercano a uno (resp. a cero), entonces $x$ es muy parecido a una señal de frecuencia $\omega $ (resp. se aleja de ser una señal de frecuencia $\omega $).  }}{86}{figure.caption.72}\protected@file@percent }
-\newlabel{fig: 20Mar23_1}{{6.18}{86}{\@sidenotes@sidecaption@tof }{figure.caption.72}{}}
-\newlabel{eq1: 20Mar}{{6.32}{86}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces  Aquí se grafica una misma señal $x \in \mathbb  {R}^{16}$ y se compara con dos sinusoides de frecuencia $3.6$, una con desfase (normalizado) 0.8 y otra con 0.32. Observe que la primera parece ajustar mucho mejor la gráfica de $x$.  }}{82}{figure.caption.70}\protected@file@percent }
+\newlabel{fig: ejemplo desfase}{{6.16}{82}{\@sidenotes@sidecaption@tof }{figure.caption.70}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{82}{subsection.6.4.1}\protected@file@percent }
+\newmarginnote{note.91.1}{{91}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces  Se grafica a la función $f(t) = cos(2 \pi \cdot \frac  {5}{2} t + 2 \pi \cdot 0.3)$; muestreando este sinusoide de forma uniforme con $n$ puntos en el intervalo [0,1] obtenemos una señal $n-$dimensional de frecuencia pura $\omega = \frac  {5}{2}$. En la figura, $n=20$.  }}{83}{figure.caption.71}\protected@file@percent }
+\newlabel{fig: desfasee ejemplo grafico}{{6.17}{83}{\@sidenotes@sidecaption@tof }{figure.caption.71}{}}
+\newlabel{prop: para que frecuencias omega vector seno es cero}{{6.4.4}{83}{Espacios monofrecuenciales}{teo.6.4.4}{}}
+\newlabel{eq: coseno omega}{{6.19}{83}{Espacios monofrecuenciales}{equation.6.4.19}{}}
+\newlabel{eq: seno omega}{{6.20}{83}{Espacios monofrecuenciales}{equation.6.4.20}{}}
+\newlabel{eq: espacio Pnw}{{6.21}{83}{Espacios monofrecuenciales}{equation.6.4.21}{}}
+\newlabel{prop: Pw consta de las señales de frecuencia omega}{{6.4.5}{84}{Espacios monofrecuenciales}{teo.6.4.5}{}}
+\newlabel{eq1: 28Mar23}{{6.22}{84}{Espacios monofrecuenciales}{equation.6.4.22}{}}
+\newlabel{eq0: 28Mar23}{{6.23}{84}{Espacios monofrecuenciales}{equation.6.4.23}{}}
+\newlabel{obs aa: f y g son l.i. y de norma uno}{{6.4.7}{84}{Espacios monofrecuenciales}{teo.6.4.7}{}}
+\newlabel{eq6: 23Ap}{{6.24}{85}{Espacios monofrecuenciales}{equation.6.4.24}{}}
+\newlabel{eq0: 23Ap}{{6.25}{85}{Espacios monofrecuenciales}{equation.6.4.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{85}{subsection.6.4.2}\protected@file@percent }
+\newlabel{ap: Caso particular en el que el subespacio en cuestión es un plano}{{6.4.2}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{subsection.6.4.2}{}}
+\newlabel{eq0: 19Marzo}{{6.26}{85}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.26}{}}
+\newlabel{eq2: 19Marzo}{{6.27}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.27}{}}
+\newlabel{eq1: 19Marzo}{{6.28}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.28}{}}
+\newlabel{prop: formulas 20Marzo}{{6.4.10}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{teo.6.4.10}{}}
+\newlabel{eq0: 24ap}{{6.29}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.29}{}}
+\newlabel{eq3: 19Marzo}{{6.30}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.30}{}}
+\newlabel{eq3: 23ap}{{6.31}{86}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.31}{}}
+\newlabel{eq: coseno a plano}{{6.32}{87}{Fórmulas para el coseno del ángulo de un punto a un plano}{equation.6.4.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{87}{subsection.6.4.3}\protected@file@percent }
+\newlabel{eq0: 20Mar}{{6.33}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.33}{}}
+\newmarginnote{note.95.1}{{95}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces  Según la relación \eqref  {eq0: 20Mar}, si $\frac  {||\Pi _{P_{\omega }}(x)||}{||x||}$ es cercano a uno (resp. a cero), entonces $x$ es muy parecido a una señal de frecuencia $\omega $ (resp. se aleja de ser una señal de frecuencia $\omega $).  }}{87}{figure.caption.72}\protected@file@percent }
+\newlabel{fig: 20Mar23_1}{{6.18}{87}{\@sidenotes@sidecaption@tof }{figure.caption.72}{}}
+\newlabel{eq1: 20Mar}{{6.34}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.34}{}}
 \newlabel{def: final de sigmas}{{6.4.12}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.12}{}}
-\newlabel{eq: def sigmas}{{6.33}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.33}{}}
-\newlabel{nota: significado de los sigma en AE}{{6.4.13}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.13}{}}
-\newlabel{prop: aaa}{{6.4.14}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.14}{}}
-\newlabel{eq5: 19Marzo}{{6.34}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.34}{}}
-\newlabel{eq6: 19Marzo}{{6.35}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.35}{}}
-\newlabel{eq7: 19Marzo}{{6.36}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.36}{}}
-\newlabel{eq8: 19Marzo}{{6.37}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.37}{}}
-\newlabel{ec: 4: 23ap}{{6.38}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.38}{}}
-\newlabel{nota: notacion cnw, snw}{{6.4.15}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.15}{}}
-\newlabel{prop: producto punto entre f y g}{{6.4.16}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.16}{}}
-\newlabel{eq9: 19Marzo}{{6.39}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.39}{}}
-\newlabel{eq10: 19Marzo}{{6.40}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.40}{}}
-\newlabel{eq11: 19Marzo}{{6.41}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.41}{}}
-\newlabel{eq12: 19Marzo}{{6.42}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.42}{}}
-\newlabel{prp: ammm}{{6.4.17}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.17}{}}
-\newlabel{eq: pi ommm 1}{{6.43}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.43}{}}
-\newlabel{eq: coef sigma caso 1}{{6.44}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.44}{}}
-\newlabel{eq: pi ommm 2}{{6.45}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.45}{}}
-\newlabel{eq: sfklmslsfl}{{6.46}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.46}{}}
-\newlabel{def: espectro monofrecuenciales}{{6.4.18}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}Desfase de la proyección de una señal a espacios monofrecuenciales}{90}{subsection.6.4.4}\protected@file@percent }
-\newmarginnote{note.98.1}{{98}{4718592sp}}
-\newlabel{eq3: 20Marzo}{{6.47}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.47}{}}
-\newlabel{eq4: 20Marzo}{{6.48}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.48}{}}
-\newlabel{eq5: 20Marzo}{{6.49}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.49}{}}
-\newlabel{eq6: 20Marzo}{{6.50}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.50}{}}
-\newlabel{eq3: 28Marz23}{{6.51}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.51}{}}
-\newlabel{eq7: 20Marzo}{{6.52}{90}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.52}{}}
-\newlabel{eq: desfase phi 1}{{6.53}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.53}{}}
-\newlabel{teo: amelie1}{{6.4.19}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{teo.6.4.19}{}}
-\newlabel{ec: desfase explicito 1}{{6.54}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.54}{}}
-\newlabel{teo: amelie2}{{6.4.20}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{teo.6.4.20}{}}
-\newlabel{ec: desfase explicito 2}{{6.55}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.55}{}}
+\newlabel{eq: def sigmas}{{6.35}{87}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.35}{}}
+\newlabel{nota: significado de los sigma en AE}{{6.4.13}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.13}{}}
+\newlabel{prop: aaa}{{6.4.14}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.14}{}}
+\newlabel{eq5: 19Marzo}{{6.36}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.36}{}}
+\newlabel{eq6: 19Marzo}{{6.37}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.37}{}}
+\newlabel{eq7: 19Marzo}{{6.38}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.38}{}}
+\newlabel{eq8: 19Marzo}{{6.39}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.39}{}}
+\newlabel{ec: 4: 23ap}{{6.40}{88}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.40}{}}
+\newlabel{nota: notacion cnw, snw}{{6.4.15}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.15}{}}
+\newlabel{prop: producto punto entre f y g}{{6.4.16}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.16}{}}
+\newlabel{eq9: 19Marzo}{{6.41}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.41}{}}
+\newlabel{eq10: 19Marzo}{{6.42}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.42}{}}
+\newlabel{eq11: 19Marzo}{{6.43}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.43}{}}
+\newlabel{eq12: 19Marzo}{{6.44}{89}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.44}{}}
+\newlabel{prp: ammm}{{6.4.17}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.17}{}}
+\newlabel{eq: pi ommm 1}{{6.45}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.45}{}}
+\newlabel{eq: coef sigma caso 1}{{6.46}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.46}{}}
+\newlabel{eq: pi ommm 2}{{6.47}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.47}{}}
+\newlabel{eq: sfklmslsfl}{{6.48}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{equation.6.4.48}{}}
+\newlabel{def: espectro monofrecuenciales}{{6.4.18}{90}{Estudio espectral basado en ángulos a espacios monofrecuenciales}{teo.6.4.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}Desfase de la proyección de una señal a espacios monofrecuenciales}{91}{subsection.6.4.4}\protected@file@percent }
+\newmarginnote{note.99.1}{{99}{4718592sp}}
+\newlabel{eq3: 20Marzo}{{6.49}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.49}{}}
+\newlabel{eq4: 20Marzo}{{6.50}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.50}{}}
+\newlabel{eq5: 20Marzo}{{6.51}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.51}{}}
+\newlabel{eq6: 20Marzo}{{6.52}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.52}{}}
+\newlabel{eq3: 28Marz23}{{6.53}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.53}{}}
+\newlabel{eq7: 20Marzo}{{6.54}{91}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.54}{}}
+\newlabel{eq: desfase phi 1}{{6.55}{92}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.55}{}}
+\newlabel{teo: amelie1}{{6.4.19}{92}{Desfase de la proyección de una señal a espacios monofrecuenciales}{teo.6.4.19}{}}
+\newlabel{ec: desfase explicito 1}{{6.56}{92}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.56}{}}
+\newlabel{teo: amelie2}{{6.4.20}{92}{Desfase de la proyección de una señal a espacios monofrecuenciales}{teo.6.4.20}{}}
+\newlabel{ec: desfase explicito 2}{{6.57}{92}{Desfase de la proyección de una señal a espacios monofrecuenciales}{equation.6.4.57}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.5}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{92}{section.6.5}\protected@file@percent }
-\newlabel{def: FM0}{{6.5.1}{92}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.1}{}}
-\newlabel{def: FM1}{{6.5.2}{93}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.2}{}}
-\newlabel{eq4: 4May}{{6.56}{93}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{equation.6.5.56}{}}
-\newlabel{prop: coinciden espectr}{{6.5.3}{93}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.3}{}}
+\newlabel{def: FM0}{{6.5.1}{93}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.1}{}}
+\newlabel{def: FM1}{{6.5.2}{94}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.2}{}}
+\newlabel{eq4: 4May}{{6.58}{94}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{equation.6.5.58}{}}
+\newlabel{prop: coinciden espectr}{{6.5.3}{94}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.3}{}}
 \newlabel{nota: proyeciones monof TDF}{{6.5.4}{94}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.4}{}}
-\newlabel{ej: espectros comparacion}{{7}{94}{}{ejemplo.7}{}}
-\newmarginnote{note.102.1}{{102}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces  De ahora en adelante, siempre que grafiquemos espectros,usaremos los colores y notaciones de esta figura. }}{94}{figure.caption.74}\protected@file@percent }
-\newlabel{fig: ejemplo_comparacion}{{6.19}{94}{\@sidenotes@sidecaption@tof }{figure.caption.74}{}}
+\newlabel{ej: espectros comparacion}{{7}{95}{}{ejemplo.7}{}}
 \newmarginnote{note.103.1}{{103}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces  Puesto que $\{ c_{36, 3}, s_{36, \omega } \}$ es una BON de $P_{36, 3}$, claro que la señal que resulta de discretizar el sinusoide morado en la malla $I_{36}$ es, de hecho, la proyección de $x$ al espacio monofrecuencial $P_{36, 3}$.  }}{95}{figure.caption.75}\protected@file@percent }
-\newlabel{fig: comparacion 2}{{6.20}{95}{\@sidenotes@sidecaption@tof }{figure.caption.75}{}}
-\newmarginnote{note.103.2}{{103}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces  Para obtener la versión continua del sinusoide discreto $\Pi _{P_{16, 3.39}}(x)$ (i.e. la gráfica naranja), usamos las fórmulas establecidas en los teoremas \ref {teo: amelie1} y \ref {teo: amelie2}.  }}{95}{figure.caption.76}\protected@file@percent }
-\newlabel{fig: comparacion 3}{{6.21}{95}{\@sidenotes@sidecaption@tof }{figure.caption.76}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces  De ahora en adelante, siempre que grafiquemos espectros,usaremos los colores y notaciones de esta figura. }}{95}{figure.caption.74}\protected@file@percent }
+\newlabel{fig: ejemplo_comparacion}{{6.19}{95}{\@sidenotes@sidecaption@tof }{figure.caption.74}{}}
+\newmarginnote{note.103.2}{{104}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces  Puesto que $\{ c_{36, 3}, s_{36, \omega } \}$ es una BON de $P_{36, 3}$, claro que la señal que resulta de discretizar el sinusoide morado en la malla $I_{36}$ es, de hecho, la proyección de $x$ al espacio monofrecuencial $P_{36, 3}$.  }}{96}{figure.caption.75}\protected@file@percent }
+\newlabel{fig: comparacion 2}{{6.20}{96}{\@sidenotes@sidecaption@tof }{figure.caption.75}{}}
 \newmarginnote{note.104.1}{{104}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces  Como era de esperarse, la frecuencia principal de ambos espectros es $5$ (y el valor de los espectros en tal frecuencia es igual a $1$, la cota superior). Además, las gráficas de frecuencia $5$ que resultan ajustan a la perfección a la señal original $x$.  }}{96}{figure.caption.77}\protected@file@percent }
-\newlabel{fig: comparacion 4}{{6.22}{96}{\@sidenotes@sidecaption@tof }{figure.caption.77}{}}
-\newlabel{nota: la mejor frecuencia}{{6.5.5}{96}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces  Para obtener la versión continua del sinusoide discreto $\Pi _{P_{36, 3.42}}(x)$ (i.e. la gráfica naranja), usamos las fórmulas establecidas en los teoremas \ref {teo: amelie1} y \ref {teo: amelie2}.  }}{96}{figure.caption.76}\protected@file@percent }
+\newlabel{fig: comparacion 3}{{6.21}{96}{\@sidenotes@sidecaption@tof }{figure.caption.76}{}}
+\newmarginnote{note.104.2}{{105}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces  Mostramos ahora los espectros de la señal $x$ que se obtiene tomando $36$ muestras uniformemente espaciadas del mismo sinusoide $f(t)$ de antes, esta vez sin agregar ruido aleatorio a las mediciones. Observe que el espectro-1 detectó a la frecuencia $\omega = 3.4$ como la mejor, y que el sinusoide naranja ajusta perfectamente la gráfica de $x$. Como la frecuencia real no es entera, usando la frecuencia principal dada por la TDF sigue sin dar resultados perfectos, aunque no malos.  }}{97}{figure.caption.77}\protected@file@percent }
+\newlabel{fig: sinusoide sin ruido}{{6.22}{97}{\@sidenotes@sidecaption@tof }{figure.caption.77}{}}
 \newmarginnote{note.105.1}{{105}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces  Fijando la cota superior de $Dom_{\omega }$ como $n/2 =7/2$ y tomando $100$ puntos por unidad, obtenemos los siguientes espectros. Observe que el $\omega $ cuyo coeficiente $\sigma _{7}(x, \omega )$ es más cercano a $1$ es $0.24$, cercano a cero. Como se aprecia en las gráficas de abajo, un sinusoide de tal frecuencia parece aproximar bien la gráfica de $x$.  }}{97}{figure.caption.78}\protected@file@percent }
-\newlabel{fig: ejemplo rango 1}{{6.23}{97}{\@sidenotes@sidecaption@tof }{figure.caption.78}{}}
-\newmarginnote{note.105.2}{{106}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces  Pongamos ahora como cota superior de $Dom_{\omega }$ a $n = 7$, y tomemos de nuevo $100$ puntos por unidad, . Observe que la $\omega $ cuyo coeficiente $\sigma _{7}(x, \omega )$ es más cercano a $1$ es, en este espectro, $6.76$. Note que, a pesar de que $\sigma _{7}(x, 0.24) < \sigma _{7}(x, 6.76)$, el sinusoide de frecuencia $6.76$ que se grafica en naranja en la gráfica de abajo tiene muchas oscilaciones que no parecen modelar bien la forma de la gráfica de $x$. }}{98}{figure.caption.79}\protected@file@percent }
-\newlabel{fig: ejemplo rango 1}{{6.24}{98}{\@sidenotes@sidecaption@tof }{figure.caption.79}{}}
-\newlabel{nota: sobre el rango de frecuencias}{{6.5.6}{98}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces  Si cambiamos la frecuencia dle sinusoide $f$ de este ejemplo a $\omega = 5$, como era de esperarse, la frecuencia principal de ambos espectros es $5$ (y el valor de los espectros en tal frecuencia es igual a $1$, la cota superior). Además, las gráficas de frecuencia $5$ que resultan ajustan a la perfección a la señal original $x$.  }}{97}{figure.caption.78}\protected@file@percent }
+\newlabel{fig: comparacion 4}{{6.23}{97}{\@sidenotes@sidecaption@tof }{figure.caption.78}{}}
+\newlabel{nota: la mejor frecuencia}{{6.5.5}{98}{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{teo.6.5.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Simetría, periodicidad y continuidad del espectro}{98}{subsection.6.5.1}\protected@file@percent }
+\newlabel{prop: periodicidad espectro}{{6.5.6}{98}{Simetría, periodicidad y continuidad del espectro}{teo.6.5.6}{}}
+\newmarginnote{note.106.1}{{106}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces  Según la periodicidad establecida en la proposición \ref {prop: periodicidad espectro}, basta calcular los coeficientes espectrales $\sigma _{n}(x, \omega )$ para frecuencias $0 \leq \omega \leq n$.  }}{98}{figure.caption.79}\protected@file@percent }
+\newlabel{fig: periodicidad espectro}{{6.24}{98}{\@sidenotes@sidecaption@tof }{figure.caption.79}{}}
+\newmarginnote{note.107.1}{{107}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.25}{\ignorespaces  Podemos así afinar la afirmación hecha en la figura \ref {fig: periodicidad espectro} y concluir que basta calcular los coeficientes $\sigma _{n}(x, \omega )$ para $0 \leq \omega \leq \frac  {n}{2}$, pues los demás pueden deducirse a partir de reflexiones y traslaciones.  }}{99}{figure.caption.80}\protected@file@percent }
+\newlabel{fig: simetria espectro}{{6.25}{99}{\@sidenotes@sidecaption@tof }{figure.caption.80}{}}
 \citation{DSmath}
 \abx@aux@cite{0}{DSmath}
 \abx@aux@segm{0}{0}{DSmath}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Análisis espectrales: resultados numéricos}{99}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Análisis espectrales: resultados numéricos}{100}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap: resultados numericos analisis espectrales}{{7}{99}{Análisis espectrales: resultados numéricos}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{99}{section.7.1}\protected@file@percent }
-\newlabel{pregunta 1}{{1}{99}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.1}{}}
-\newmarginnote{note.107.1}{{108}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces  A la izquierda un dibujo (no basado en datos reales) de un posible espectro para $\mathcal  {L}^{n,k}$ basado en la DFT, y a la derecha uno basado en cosenos a espacios monofrecuenciales. Observe que en el segundo espectro se pueden considerar muchas más frecuencias que en el primero.  }}{100}{figure.caption.80}\protected@file@percent }
-\newlabel{fig: ejemplo_pregunta1}{{7.1}{100}{\@sidenotes@sidecaption@tof }{figure.caption.80}{}}
-\newlabel{preg 2}{{2}{100}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.2}{}}
-\newlabel{eq0: 8may}{{7.1}{100}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.1}{}}
-\newlabel{eq1: 8may}{{7.2}{100}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.2}{}}
-\newmarginnote{note.108.1}{{108}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces  De ser la respuesta a la pregunta \ref {preg 2} afirmativa, deberíamos de terminar con gráficas de puntos alineados horizontalmente, como en este dibujo. Sería bueno que los puntos $FP0$ y $FP1$ estuviesen a alturas parecidas, pues eso significaría que los dos análisis espectrales dan resultados parecidos.  }}{100}{figure.caption.81}\protected@file@percent }
-\newlabel{fig: ejemplo_pregunta2}{{7.2}{100}{\@sidenotes@sidecaption@tof }{figure.caption.81}{}}
-\newlabel{eq5: May1}{{7.3}{100}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.3}{}}
-\newlabel{eq6: May1}{{7.4}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.4}{}}
-\newlabel{preg 3}{{3}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.3}{}}
+\newlabel{chap: resultados numericos analisis espectrales}{{7}{100}{Análisis espectrales: resultados numéricos}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{100}{section.7.1}\protected@file@percent }
+\newlabel{pregunta 1}{{1}{100}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.1}{}}
+\newmarginnote{note.108.1}{{109}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces  A la izquierda un dibujo (no basado en datos reales) de un posible espectro para $\mathcal  {L}^{n,k}$ basado en la DFT, y a la derecha uno basado en cosenos a espacios monofrecuenciales. Observe que en el segundo espectro se pueden considerar muchas más frecuencias que en el primero.  }}{101}{figure.caption.81}\protected@file@percent }
+\newlabel{fig: ejemplo_pregunta1}{{7.1}{101}{\@sidenotes@sidecaption@tof }{figure.caption.81}{}}
+\newlabel{preg 2}{{2}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.2}{}}
+\newlabel{eq0: 8may}{{7.1}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.1}{}}
+\newlabel{eq1: 8may}{{7.2}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.2}{}}
 \newmarginnote{note.109.1}{{109}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces  Se muestran las gráficas de las colecciones de puntos \eqref  {eq5: May1} y \eqref  {eq6: May1} para $n=7$ descritas en la pregunta \ref {preg 3}.  }}{101}{figure.caption.82}\protected@file@percent }
-\newlabel{fig: ejemplo_pregunta3_0}{{7.3}{101}{\@sidenotes@sidecaption@tof }{figure.caption.82}{}}
-\newmarginnote{note.109.2}{{109}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces  Si la estimación dada en la pregunta \ref {pregunta 1} es buena, las nubes de puntos descritas en la pregunta \ref {preg 3} deberían estar centradas en el punto $(0, 0.5)$.  }}{101}{figure.caption.83}\protected@file@percent }
-\newlabel{fig: ejemplo_pregunta3_1}{{7.4}{101}{\@sidenotes@sidecaption@tof }{figure.caption.83}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Gráficas y conclusiones}{102}{section.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces  De ser la respuesta a la pregunta \ref {preg 2} afirmativa, deberíamos de terminar con gráficas de puntos alineados horizontalmente, como en este dibujo. Sería bueno que los puntos $FP0$ y $FP1$ estuviesen a alturas parecidas, pues eso significaría que los dos análisis espectrales dan resultados parecidos.  }}{101}{figure.caption.82}\protected@file@percent }
+\newlabel{fig: ejemplo_pregunta2}{{7.2}{101}{\@sidenotes@sidecaption@tof }{figure.caption.82}{}}
+\newlabel{eq5: May1}{{7.3}{101}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.3}{}}
+\newlabel{eq6: May1}{{7.4}{102}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{equation.7.1.4}{}}
+\newlabel{preg 3}{{3}{102}{Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{pregunta.3}{}}
 \newmarginnote{note.110.1}{{110}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces   }}{102}{figure.caption.84}\protected@file@percent }
-\newlabel{fig: 7_0,1}{{7.5}{102}{\@sidenotes@sidecaption@tof }{figure.caption.84}{}}
-\newmarginnote{note.111.1}{{112}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces  Observe que $FP0(\mathcal  {L}^{7,0}) = 0 = FP1(\mathcal  {L}^{7,0})$ pero $FP0(\mathcal  {L}^{7,1}) = 1 $ mientras que $FP1(\mathcal  {L}^{7,1})$, aunque no es cero, es un decimal muy cercano a cero; observe en la figura \ref {fig: 7_0,1}, donde se dibujan los espectros de los dos primeros PDL de dimensión $7$ que, en efecto, usando un sinusoide de frecuencia $0.01$ (la dada por el espectro basado en espacios monofrecuenciales), logramos ajustar casi a la perfección la gráfica de $\mathcal  {L}^{7,1}$ (que, según el teorema \ref {cor: BON de legendre para espacios Wk}, yace en una recta, por lo que no puede ser ajustada a la perfección por un sinusoide), mientras que usando un sinusoide de frecuencia $1$ (la dada por el espectro basado en la TDF), no se logran ajustar tan bien los datos.  }}{104}{figure.caption.87}\protected@file@percent }
-\newlabel{fig: 7}{{7.6}{104}{\@sidenotes@sidecaption@tof }{figure.caption.87}{}}
-\newmarginnote{note.112.1}{{112}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces  Comprobamos numéricamente que los resultados del espectro-1 sugieren usar frecuencias muy bajas para modelar los PDL de grado $1$; la única excepción se da para $n=3$. Graficamos a continuación los espectros de $\mathcal  {L}^{3,1}$ para ver qué está sucediendo.  }}{104}{figure.caption.88}\protected@file@percent }
-\newlabel{fig: k_1}{{7.7}{104}{\@sidenotes@sidecaption@tof }{figure.caption.88}{}}
-\newmarginnote{note.112.2}{{113}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces  Como se muestra en los espectros, el coeficiente $\sigma _{3}(\mathcal  {L}^{3,1}, \omega )$ es, para casi toda $\omega $ considerada, muy cercana a uno, por lo que cualquiera de estas frecuencias sería adecuada para aproximar con un sinusoide la gráfica de $\mathcal  {L}^{3,1}$. Por la forma en que programamos el proceso, se usa la última frecuencia más alta, que resultó ser $1.48$. Como puede comprobar en las gráficas de abajo, se puede aproximar bien la gráfica de $\mathcal  {L}^{3,1}$ tanto con frecuencia $\omega = 1$ como con frecuencia $\omega = 1.48$.  }}{105}{figure.caption.89}\protected@file@percent }
-\newlabel{fig: 3_1}{{7.8}{105}{\@sidenotes@sidecaption@tof }{figure.caption.89}{}}
-\newmarginnote{note.113.1}{{114}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces  Note que en este espectro no ocurre lo que se tenía en el del PDL $\mathcal  {L}^{3,1}$ (c.f. figura \ref {fig: 3_1}); en este caso, el espectro-$1$ muestra claramente que $\omega =0.1$, la frecuencia en $Dom_{\omega , n}$ más cercana a $0$ que \textbf  {no} es cero, es la mejor (c.f. nota \ref {nota: la mejor frecuencia}).  }}{106}{figure.caption.90}\protected@file@percent }
-\newlabel{fig: 8_1}{{7.9}{106}{\@sidenotes@sidecaption@tof }{figure.caption.90}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces  Se muestran las gráficas de las colecciones de puntos \eqref  {eq5: May1} y \eqref  {eq6: May1} para $n=7$ descritas en la pregunta \ref {preg 3}.  }}{102}{figure.caption.83}\protected@file@percent }
+\newlabel{fig: ejemplo_pregunta3_0}{{7.3}{102}{\@sidenotes@sidecaption@tof }{figure.caption.83}{}}
+\newmarginnote{note.110.2}{{110}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces  Si la estimación dada en la pregunta \ref {pregunta 1} es buena, las nubes de puntos descritas en la pregunta \ref {preg 3} deberían estar centradas en el punto $(0, 0.5)$.  }}{102}{figure.caption.84}\protected@file@percent }
+\newlabel{fig: ejemplo_pregunta3_1}{{7.4}{102}{\@sidenotes@sidecaption@tof }{figure.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{103}{section.7.2}\protected@file@percent }
+\newmarginnote{note.111.1}{{111}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces   }}{103}{figure.caption.85}\protected@file@percent }
+\newlabel{fig: 7_0,1}{{7.5}{103}{\@sidenotes@sidecaption@tof }{figure.caption.85}{}}
+\newmarginnote{note.112.1}{{113}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces  Observe que $FP0(\mathcal  {L}^{7,0}) = 0 = FP1(\mathcal  {L}^{7,0})$ pero $FP0(\mathcal  {L}^{7,1}) = 1 $ mientras que $FP1(\mathcal  {L}^{7,1})$, aunque no es cero, es un decimal muy cercano a cero; observe en la figura \ref {fig: 7_0,1}, donde se dibujan los espectros de los dos primeros PDL de dimensión $7$ que, en efecto, usando un sinusoide de frecuencia $0.01$ (la dada por el espectro basado en espacios monofrecuenciales), logramos ajustar casi a la perfección la gráfica de $\mathcal  {L}^{7,1}$ (que, según el teorema \ref {cor: BON de legendre para espacios Wk}, yace en una recta, por lo que no puede ser ajustada a la perfección por un sinusoide), mientras que usando un sinusoide de frecuencia $1$ (la dada por el espectro basado en la TDF), no se logran ajustar tan bien los datos.  }}{105}{figure.caption.88}\protected@file@percent }
+\newlabel{fig: 7}{{7.6}{105}{\@sidenotes@sidecaption@tof }{figure.caption.88}{}}
+\newmarginnote{note.113.1}{{113}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.7}{\ignorespaces  Comprobamos numéricamente que los resultados del espectro-1 sugieren usar frecuencias muy bajas para modelar los PDL de grado $1$; la única excepción se da para $n=3$. Graficamos a continuación los espectros de $\mathcal  {L}^{3,1}$ para ver qué está sucediendo.  }}{105}{figure.caption.89}\protected@file@percent }
+\newlabel{fig: k_1}{{7.7}{105}{\@sidenotes@sidecaption@tof }{figure.caption.89}{}}
+\newmarginnote{note.113.2}{{114}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.8}{\ignorespaces  Como se muestra en los espectros, el coeficiente $\sigma _{3}(\mathcal  {L}^{3,1}, \omega )$ es, para casi toda $\omega $ considerada, muy cercana a uno, por lo que cualquiera de estas frecuencias sería adecuada para aproximar con un sinusoide la gráfica de $\mathcal  {L}^{3,1}$. Por la forma en que programamos el proceso, se usa la última frecuencia más alta, que resultó ser $1.48$. Como puede comprobar en las gráficas de abajo, se puede aproximar bien la gráfica de $\mathcal  {L}^{3,1}$ tanto con frecuencia $\omega = 1$ como con frecuencia $\omega = 1.48$.  }}{106}{figure.caption.90}\protected@file@percent }
+\newlabel{fig: 3_1}{{7.8}{106}{\@sidenotes@sidecaption@tof }{figure.caption.90}{}}
 \newmarginnote{note.114.1}{{115}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.10}{\ignorespaces  }}{107}{figure.caption.91}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.9}{\ignorespaces  Note que en este espectro no ocurre lo que se tenía en el del PDL $\mathcal  {L}^{3,1}$ (c.f. figura \ref {fig: 3_1}); en este caso, el espectro-$1$ muestra claramente que $\omega =0.1$, la frecuencia en $Dom_{\omega , n}$ más cercana a $0$ que \textbf  {no} es cero, es la mejor (c.f. nota \ref {nota: la mejor frecuencia}).  }}{107}{figure.caption.91}\protected@file@percent }
+\newlabel{fig: 8_1}{{7.9}{107}{\@sidenotes@sidecaption@tof }{figure.caption.91}{}}
 \newmarginnote{note.115.1}{{116}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.11}{\ignorespaces  }}{108}{figure.caption.92}\protected@file@percent }
-\newmarginnote{note.115.2}{{117}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.12}{\ignorespaces  }}{109}{figure.caption.93}\protected@file@percent }
-\newmarginnote{note.116.1}{{118}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.13}{\ignorespaces  }}{110}{figure.caption.94}\protected@file@percent }
-\newmarginnote{note.117.1}{{118}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.14}{\ignorespaces  }}{110}{figure.caption.95}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.10}{\ignorespaces  }}{108}{figure.caption.92}\protected@file@percent }
+\newmarginnote{note.116.1}{{117}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.11}{\ignorespaces  }}{109}{figure.caption.93}\protected@file@percent }
+\newmarginnote{note.116.2}{{118}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.12}{\ignorespaces  }}{110}{figure.caption.94}\protected@file@percent }
+\newmarginnote{note.117.1}{{119}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.13}{\ignorespaces  }}{111}{figure.caption.95}\protected@file@percent }
 \newmarginnote{note.118.1}{{119}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.15}{\ignorespaces  }}{111}{figure.caption.96}\protected@file@percent }
-\newmarginnote{note.118.2}{{119}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.16}{\ignorespaces  }}{111}{figure.caption.97}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.14}{\ignorespaces  }}{111}{figure.caption.96}\protected@file@percent }
 \newmarginnote{note.119.1}{{120}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.17}{\ignorespaces  }}{112}{figure.caption.98}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7.15}{\ignorespaces  }}{112}{figure.caption.97}\protected@file@percent }
+\newmarginnote{note.119.2}{{120}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.16}{\ignorespaces  }}{112}{figure.caption.98}\protected@file@percent }
 \newmarginnote{note.120.1}{{121}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.18}{\ignorespaces   }}{113}{figure.caption.99}\protected@file@percent }
-\newlabel{fig: 30}{{7.18}{113}{\@sidenotes@sidecaption@tof }{figure.caption.99}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.17}{\ignorespaces  }}{113}{figure.caption.99}\protected@file@percent }
 \newmarginnote{note.121.1}{{122}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.19}{\ignorespaces   }}{114}{figure.caption.100}\protected@file@percent }
-\newlabel{fig: 65}{{7.19}{114}{\@sidenotes@sidecaption@tof }{figure.caption.100}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.18}{\ignorespaces   }}{114}{figure.caption.100}\protected@file@percent }
+\newlabel{fig: 30}{{7.18}{114}{\@sidenotes@sidecaption@tof }{figure.caption.100}{}}
 \newmarginnote{note.122.1}{{123}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.20}{\ignorespaces  Concluimos con la gráfica de las nubes de puntos de las que se habló en la figura \ref {fig: ejemplo_pregunta3_1}.  }}{115}{figure.caption.101}\protected@file@percent }
-\newlabel{fig: pendiente_oOrigen}{{7.20}{115}{\@sidenotes@sidecaption@tof }{figure.caption.101}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.19}{\ignorespaces   }}{115}{figure.caption.101}\protected@file@percent }
+\newlabel{fig: 65}{{7.19}{115}{\@sidenotes@sidecaption@tof }{figure.caption.101}{}}
+\newmarginnote{note.123.1}{{124}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.20}{\ignorespaces  Concluimos con la gráfica de las nubes de puntos de las que se habló en la figura \ref {fig: ejemplo_pregunta3_1}.  }}{116}{figure.caption.102}\protected@file@percent }
+\newlabel{fig: pendiente_oOrigen}{{7.20}{116}{\@sidenotes@sidecaption@tof }{figure.caption.102}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Sobre la frecuencia real de los PDL (cambia título)}{116}{subsection.7.2.1}\protected@file@percent }
+\newlabel{def: tiempo y frec de muestreo}{{7.2.1}{116}{Sobre la frecuencia real de los PDL (cambia título)}{teo.7.2.1}{}}
+\newlabel{eq: relacion L, T Fs}{{7.5}{116}{Sobre la frecuencia real de los PDL (cambia título)}{equation.7.2.5}{}}
+\newmarginnote{note.124.1}{{124}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.21}{\ignorespaces  \textcolor {purple}{Adoptamos la convención de empezar a medir un bloque de $F_{s}$ mediciones desde que inicia la unidad de tiempo (que, en el caso de la figura, se ha fijado como segundos).}  }}{116}{figure.caption.103}\protected@file@percent }
+\newlabel{fig: Fs 1}{{7.21}{116}{\@sidenotes@sidecaption@tof }{figure.caption.103}{}}
+\newmarginnote{note.124.2}{{125}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.22}{\ignorespaces  Para la imagen, hemos fijado $F_{s}= 10$ y $L = 40$.  }}{117}{figure.caption.104}\protected@file@percent }
+\newlabel{fig: frecuencia 1}{{7.22}{117}{\@sidenotes@sidecaption@tof }{figure.caption.104}{}}
+\newmarginnote{note.125.1}{{125}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.23}{\ignorespaces  Para la imagen, hemos fijado $n= 6$; se calculó que la mejor frecuencia para ajustar los primeros $6$ puntos que componen la señal original $x$ es $w = 2$.  }}{117}{figure.caption.105}\protected@file@percent }
+\newlabel{fig: frecuencia 2}{{7.23}{117}{\@sidenotes@sidecaption@tof }{figure.caption.105}{}}
+\newmarginnote{note.125.2}{{125}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.24}{\ignorespaces  Usando los datos de la figura \ref {fig: frecuencia 2}, podriamos intentar en un principio usar a un sinusoide de frecuencia $2$ para intentar modelar a la señal, pero un sinusoide de tal frecuencia, como es el caso de esta figura, puede que ni siquiera sea adecuado para modelar el pedazo $x_{|n}$ original a partir del cual se obtuvo la frecuencia $\omega $.  }}{117}{figure.caption.106}\protected@file@percent }
+\newlabel{fig: frecuencia 2}{{7.24}{117}{\@sidenotes@sidecaption@tof }{figure.caption.106}{}}
+\newlabel{eq: rel frecuencia real y ficticia}{{7.6}{117}{Sobre la frecuencia real de los PDL (cambia título)}{equation.7.2.6}{}}
+\newmarginnote{note.125.3}{{125}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.25}{\ignorespaces  Es con una simple regla de tres que se deduce la relación \eqref  {eq: rel frecuencia real y ficticia}.  }}{117}{figure.caption.107}\protected@file@percent }
+\newlabel{fig: frecuencia real}{{7.25}{117}{\@sidenotes@sidecaption@tof }{figure.caption.107}{}}
+\newmarginnote{note.125.4}{{126}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.26}{\ignorespaces  Según los datos de las figuras \ref {fig: frecuencia 1} y \ref {fig: frecuencia 2}, con un sinusoide de frecuencia $\tilde  {\omega } = 10/3$ se aproximan bien a los seis puntos en base a los cuales se encontró a la primera frecuencia $\omega $.  }}{118}{figure.caption.108}\protected@file@percent }
+\newlabel{fig: frecuencia 4}{{7.26}{118}{\@sidenotes@sidecaption@tof }{figure.caption.108}{}}
 \citation{jacobson}
 \abx@aux@cite{0}{jacobson}
 \abx@aux@segm{0}{0}{jacobson}
@@ -730,11 +764,11 @@
 \citation{rotman}
 \abx@aux@cite{0}{rotman}
 \abx@aux@segm{0}{0}{rotman}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Apéndice: teoría}{116}{appendix.Alph1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Apéndice: teoría}{119}{appendix.Alph1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{116}{section.Alph1.1}\protected@file@percent }
-\newlabel{def: coef principal y grado de un polinomio}{{A.1.1}{116}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{119}{section.Alph1.1}\protected@file@percent }
+\newlabel{def: coef principal y grado de un polinomio}{{A.1.1}{119}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.1}{}}
 \citation{rotman}
 \abx@aux@cite{0}{rotman}
 \abx@aux@segm{0}{0}{rotman}
@@ -750,15 +784,15 @@
 \citation{godement}
 \abx@aux@cite{0}{godement}
 \abx@aux@segm{0}{0}{godement}
-\newlabel{prop: grado producto polin}{{A.1.3}{117}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.3}{}}
-\newlabel{teo: fundamental del algebra}{{A.1.4}{117}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.4}{}}
-\newlabel{teo: alt del fundamental del algebra}{{A.1.5}{118}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.5}{}}
-\newlabel{eq0: 11Dic}{{A.1}{118}{Polinomios y teorema fundamental del álgebra}{equation.Alph1.1.1}{}}
-\newlabel{prop: cita TFA}{{A.1.6}{118}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{118}{section.Alph1.2}\protected@file@percent }
-\newlabel{sec: def basicas Hilbert}{{A.2}{118}{Definiciones básicas de espacios de Hilbert}{section.Alph1.2}{}}
-\newmarginnote{note.126.1}{{126}{4718592sp}}
-\newlabel{def: prod punto}{{A.2.1}{118}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.1}{}}
+\newlabel{prop: grado producto polin}{{A.1.3}{120}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.3}{}}
+\newlabel{teo: fundamental del algebra}{{A.1.4}{120}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.4}{}}
+\newlabel{teo: alt del fundamental del algebra}{{A.1.5}{121}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.5}{}}
+\newlabel{eq0: 11Dic}{{A.1}{121}{Polinomios y teorema fundamental del álgebra}{equation.Alph1.1.1}{}}
+\newlabel{prop: cita TFA}{{A.1.6}{121}{Polinomios y teorema fundamental del álgebra}{teo.Alph1.1.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{121}{section.Alph1.2}\protected@file@percent }
+\newlabel{sec: def basicas Hilbert}{{A.2}{121}{Definiciones básicas de espacios de Hilbert}{section.Alph1.2}{}}
+\newmarginnote{note.129.1}{{129}{4718592sp}}
+\newlabel{def: prod punto}{{A.2.1}{121}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.1}{}}
 \citation{marsden}
 \abx@aux@cite{0}{marsden}
 \abx@aux@segm{0}{0}{marsden}
@@ -768,11 +802,11 @@
 \citation{carothers}
 \abx@aux@cite{0}{carothers}
 \abx@aux@segm{0}{0}{carothers}
-\newlabel{prop: La norma inducida por un producto punto}{{A.2.2}{119}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.2}{}}
-\newlabel{eq: norma via producto punto}{{A.2}{119}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.2}{}}
-\newlabel{eq: distancia a partir de norma}{{A.3}{119}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.3}{}}
-\newlabel{eq: top espacio con producto punto}{{A.4}{119}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces El definir un producto punto en un espacio vectorial permite considerar en este estructuras de espacio normado, métrico y topológico. Se tienen pues definiciones matemáticas de conceptos como ``ángulo'', ``longitud'', ``distancia'' y ``vecindad''.\relax }}{119}{figure.caption.103}\protected@file@percent }
+\newlabel{prop: La norma inducida por un producto punto}{{A.2.2}{122}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.2}{}}
+\newlabel{eq: norma via producto punto}{{A.2}{122}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.2}{}}
+\newlabel{eq: distancia a partir de norma}{{A.3}{122}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.3}{}}
+\newlabel{eq: top espacio con producto punto}{{A.4}{122}{Definiciones básicas de espacios de Hilbert}{equation.Alph1.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces El definir un producto punto en un espacio vectorial permite considerar en este estructuras de espacio normado, métrico y topológico. Se tienen pues definiciones matemáticas de conceptos como ``ángulo'', ``longitud'', ``distancia'' y ``vecindad''.\relax }}{122}{figure.caption.110}\protected@file@percent }
 \citation{mse3}
 \abx@aux@cite{0}{mse3}
 \abx@aux@segm{0}{0}{mse3}
@@ -782,11 +816,11 @@
 \citation{Kreyszig}
 \abx@aux@cite{0}{Kreyszig}
 \abx@aux@segm{0}{0}{Kreyszig}
-\newlabel{def: espacio de Hilbert}{{A.2.3}{120}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.3}{}}
-\newlabel{eq: producto punto Rn}{{A.5}{120}{}{equation.Alph1.2.5}{}}
-\newlabel{eq: producto punto Cn}{{A.6}{120}{}{equation.Alph1.2.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{120}{section.Alph1.3}\protected@file@percent }
-\newlabel{section: hiperplanos}{{A.3}{120}{Hiperplanos de espacios con producto punto de dimensión finita}{section.Alph1.3}{}}
+\newlabel{def: espacio de Hilbert}{{A.2.3}{123}{Definiciones básicas de espacios de Hilbert}{teo.Alph1.2.3}{}}
+\newlabel{eq: producto punto Rn}{{A.5}{123}{}{equation.Alph1.2.5}{}}
+\newlabel{eq: producto punto Cn}{{A.6}{123}{}{equation.Alph1.2.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{123}{section.Alph1.3}\protected@file@percent }
+\newlabel{section: hiperplanos}{{A.3}{123}{Hiperplanos de espacios con producto punto de dimensión finita}{section.Alph1.3}{}}
 \citation{munkres}
 \abx@aux@cite{0}{munkres}
 \abx@aux@segm{0}{0}{munkres}
@@ -796,71 +830,72 @@
 \citation{Kreyszig}
 \abx@aux@cite{0}{Kreyszig}
 \abx@aux@segm{0}{0}{Kreyszig}
-\newlabel{eq1: 29Nov}{{A.7}{121}{Hiperplanos de espacios con producto punto de dimensión finita}{equation.Alph1.3.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{121}{section.Alph1.4}\protected@file@percent }
-\newlabel{Teo:proyOrt}{{A.4.1}{121}{El teorema de la proyección ortogonal}{teo.Alph1.4.1}{}}
-\newlabel{eq3: 1Dic}{{A.8}{121}{El teorema de la proyección ortogonal}{equation.Alph1.4.8}{}}
-\newlabel{cor: x como suma de proyecciones}{{A.4.2}{122}{El teorema de la proyección ortogonal}{teo.Alph1.4.2}{}}
-\newlabel{eq3: 1En}{{A.9}{122}{El teorema de la proyección ortogonal}{equation.Alph1.4.9}{}}
-\newlabel{eq4: 1En}{{A.10}{122}{El teorema de la proyección ortogonal}{equation.Alph1.4.10}{}}
-\newlabel{cor: proyeccion en terminos de una BON}{{A.4.4}{122}{El teorema de la proyección ortogonal}{teo.Alph1.4.4}{}}
+\newlabel{eq1: 29Nov}{{A.7}{124}{Hiperplanos de espacios con producto punto de dimensión finita}{equation.Alph1.3.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{124}{section.Alph1.4}\protected@file@percent }
+\newlabel{Teo:proyOrt}{{A.4.1}{124}{El teorema de la proyección ortogonal}{teo.Alph1.4.1}{}}
+\newlabel{eq3: 1Dic}{{A.8}{124}{El teorema de la proyección ortogonal}{equation.Alph1.4.8}{}}
+\newlabel{cor: x como suma de proyecciones}{{A.4.2}{125}{El teorema de la proyección ortogonal}{teo.Alph1.4.2}{}}
+\newlabel{eq3: 1En}{{A.9}{125}{El teorema de la proyección ortogonal}{equation.Alph1.4.9}{}}
+\newlabel{eq4: 1En}{{A.10}{125}{El teorema de la proyección ortogonal}{equation.Alph1.4.10}{}}
+\newlabel{cor: proyeccion en terminos de una BON}{{A.4.4}{125}{El teorema de la proyección ortogonal}{teo.Alph1.4.4}{}}
 \citation{Lang}
 \abx@aux@cite{0}{Lang}
 \abx@aux@segm{0}{0}{Lang}
-\newlabel{cor: proyeccion en terminos de BON}{{A.4.5}{123}{El teorema de la proyección ortogonal}{teo.Alph1.4.5}{}}
-\newlabel{cor: representacion de un vector respecto a una BON}{{A.4.6}{123}{El teorema de la proyección ortogonal}{teo.Alph1.4.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{123}{section.Alph1.5}\protected@file@percent }
-\newlabel{Teo:CauchySchwarz}{{A.5.1}{123}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{teo.Alph1.5.1}{}}
-\newlabel{eq0: 12Feb}{{A.11}{123}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{equation.Alph1.5.11}{}}
-\newlabel{prop: continuidad del producto punto}{{A.5.2}{124}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{teo.Alph1.5.2}{}}
+\newlabel{cor: proyeccion en terminos de BON}{{A.4.5}{126}{El teorema de la proyección ortogonal}{teo.Alph1.4.5}{}}
+\newlabel{cor: representacion de un vector respecto a una BON}{{A.4.6}{126}{El teorema de la proyección ortogonal}{teo.Alph1.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{126}{section.Alph1.5}\protected@file@percent }
+\newlabel{Teo:CauchySchwarz}{{A.5.1}{126}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{teo.Alph1.5.1}{}}
+\newlabel{eq0: 12Feb}{{A.11}{126}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{equation.Alph1.5.11}{}}
+\newlabel{prop: continuidad del producto punto}{{A.5.2}{127}{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{teo.Alph1.5.2}{}}
 \citation{friedberg}
 \abx@aux@cite{0}{friedberg}
 \abx@aux@segm{0}{0}{friedberg}
-\@writefile{toc}{\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{125}{section.Alph1.6}\protected@file@percent }
-\newlabel{ap: gram schmidt}{{A.6}{125}{El teorema de Gram-Schmidt}{section.Alph1.6}{}}
-\newlabel{Teo:Gram-Schmidt}{{A.6.1}{125}{El teorema de Gram-Schmidt}{teo.Alph1.6.1}{}}
-\newlabel{Prop:Gram-Schmidt2}{{A.6.2}{125}{El teorema de Gram-Schmidt}{teo.Alph1.6.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Ilustrando el proceso de Gram-Schmidt formulado en términos de proyecciones.\relax }}{126}{figure.caption.104}\protected@file@percent }
-\newlabel{eq10: 11ap}{{A.12}{126}{El teorema de Gram-Schmidt}{equation.Alph1.6.12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{126}{section.Alph1.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{126}{subsection.Alph1.7.1}\protected@file@percent }
-\newlabel{angulo entre elementos de un espacio con producto punto}{{A.7.1}{126}{Ángulo entre elementos de un espacio con producto punto}{subsection.Alph1.7.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{128}{section.Alph1.6}\protected@file@percent }
+\newlabel{ap: gram schmidt}{{A.6}{128}{El teorema de Gram-Schmidt}{section.Alph1.6}{}}
+\newlabel{Teo:Gram-Schmidt}{{A.6.1}{128}{El teorema de Gram-Schmidt}{teo.Alph1.6.1}{}}
+\newlabel{Prop:Gram-Schmidt2}{{A.6.2}{128}{El teorema de Gram-Schmidt}{teo.Alph1.6.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces Ilustrando el proceso de Gram-Schmidt formulado en términos de proyecciones.\relax }}{129}{figure.caption.111}\protected@file@percent }
+\newlabel{eq10: 11ap}{{A.12}{129}{El teorema de Gram-Schmidt}{equation.Alph1.6.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{129}{section.Alph1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{129}{subsection.Alph1.7.1}\protected@file@percent }
+\newlabel{angulo entre elementos de un espacio con producto punto}{{A.7.1}{129}{Ángulo entre elementos de un espacio con producto punto}{subsection.Alph1.7.1}{}}
 \citation{Kreyszig}
 \abx@aux@cite{0}{Kreyszig}
 \abx@aux@segm{0}{0}{Kreyszig}
-\newmarginnote{note.135.1}{{135}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces  Si $\theta $ es el ángulo entre $v$ y $w$, los casos extremos en los que $\theta \in \{ 0, \pi \}$ son aquellos en los que $v$ y $w$ son múltiplos escalares uno del otro, mientras que, si $cos(\theta )=0$, o sea, si $\theta = \frac  {\pi }{2}$, entonces $v$ y $w$ son perpendiculares.  }}{127}{figure.caption.105}\protected@file@percent }
-\newlabel{fig:coseno}{{A.3}{127}{\@sidenotes@sidecaption@tof }{figure.caption.105}{}}
-\newlabel{obs: angulo se preserva por mult. esc.}{{A.7.1}{127}{Ángulo entre elementos de un espacio con producto punto}{teo.Alph1.7.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{127}{subsection.Alph1.7.2}\protected@file@percent }
-\newlabel{sec: def del angulo entre un punto y un subespacio cerrado}{{A.7.2}{127}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{subsection.Alph1.7.2}{}}
-\newlabel{def: angulo punto subespacio}{{A.7.2}{127}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{teo.Alph1.7.2}{}}
-\newlabel{prop: algunos hechos sobre el angulo entre un vector y un subespacio}{{A.7.3}{127}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{teo.Alph1.7.3}{}}
-\newlabel{eq: coseno a subespacio}{{A.13}{128}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{equation.Alph1.7.13}{}}
-\newlabel{eq1: 9Feb}{{A.14}{128}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{equation.Alph1.7.14}{}}
+\newmarginnote{note.138.1}{{138}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces  Si $\theta $ es el ángulo entre $v$ y $w$, los casos extremos en los que $\theta \in \{ 0, \pi \}$ son aquellos en los que $v$ y $w$ son múltiplos escalares uno del otro, mientras que, si $cos(\theta )=0$, o sea, si $\theta = \frac  {\pi }{2}$, entonces $v$ y $w$ son perpendiculares.  }}{130}{figure.caption.112}\protected@file@percent }
+\newlabel{fig:coseno}{{A.3}{130}{\@sidenotes@sidecaption@tof }{figure.caption.112}{}}
+\newlabel{obs: angulo se preserva por mult. esc.}{{A.7.1}{130}{Ángulo entre elementos de un espacio con producto punto}{teo.Alph1.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{130}{subsection.Alph1.7.2}\protected@file@percent }
+\newlabel{sec: def del angulo entre un punto y un subespacio cerrado}{{A.7.2}{130}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{subsection.Alph1.7.2}{}}
+\newlabel{def: angulo punto subespacio}{{A.7.2}{130}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{teo.Alph1.7.2}{}}
+\newlabel{prop: algunos hechos sobre el angulo entre un vector y un subespacio}{{A.7.3}{130}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{teo.Alph1.7.3}{}}
+\newlabel{eq: coseno a subespacio}{{A.13}{131}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{equation.Alph1.7.13}{}}
+\newlabel{eq1: 9Feb}{{A.14}{131}{Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{equation.Alph1.7.14}{}}
 \citation{cosineSim}
 \abx@aux@cite{0}{cosineSim}
 \abx@aux@segm{0}{0}{cosineSim}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{129}{subsection.Alph1.7.3}\protected@file@percent }
-\newlabel{cosine similarity}{{A.7.3}{129}{Similitud coseno}{subsection.Alph1.7.3}{}}
-\newmarginnote{note.137.1}{{137}{4718592sp}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces  Esquema de dos formas en las que uno puede intentar medir la proximidad de un elemento $x \in V$ al subespacio cerrado $W$.  }}{129}{figure.caption.106}\protected@file@percent }
-\newlabel{fig: dos formas de medir distancia a plano}{{A.4}{129}{\@sidenotes@sidecaption@tof }{figure.caption.106}{}}
-\newlabel{prop: angulo se conserva bajo mult. esc.}{{A.7.5}{129}{Similitud coseno}{teo.Alph1.7.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{132}{subsection.Alph1.7.3}\protected@file@percent }
+\newlabel{cosine similarity}{{A.7.3}{132}{Similitud coseno}{subsection.Alph1.7.3}{}}
+\newmarginnote{note.140.1}{{140}{4718592sp}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces  Esquema de dos formas en las que uno puede intentar medir la proximidad de un elemento $x \in V$ al subespacio cerrado $W$.  }}{132}{figure.caption.113}\protected@file@percent }
+\newlabel{fig: dos formas de medir distancia a plano}{{A.4}{132}{\@sidenotes@sidecaption@tof }{figure.caption.113}{}}
+\newlabel{prop: angulo se conserva bajo mult. esc.}{{A.7.5}{132}{Similitud coseno}{teo.Alph1.7.5}{}}
 \citation{wolfram}
 \abx@aux@cite{0}{wolfram}
 \abx@aux@segm{0}{0}{wolfram}
 \citation{Neuman}
 \abx@aux@cite{0}{Neuman}
 \abx@aux@segm{0}{0}{Neuman}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{131}{appendix.Alph2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{134}{appendix.Alph2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\abx@aux@read@bbl@mdfivesum{68C67397E15C55661FA9E5DA1AF64CF8}
+\abx@aux@read@bbl@mdfivesum{8CF32E46923E093F1AE0C5AAC6358C6E}
 \abx@aux@defaultrefcontext{0}{carothers}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{DSmath}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{cosineSim}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{DSML}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{FFTscipy}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{george}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{friedberg}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{godement}{anyt/global//global/global}
@@ -882,11 +917,13 @@
 \abx@aux@defaultrefcontext{0}{spivak}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{fourier1}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{fourier2}{anyt/global//global/global}
+\abx@aux@defaultrefcontext{0}{TDFwiki}{anyt/global//global/global}
 \abx@aux@defaultrefcontext{0}{algorithms}{anyt/global//global/global}
 \abx@aux@defaultlabelprefix{0}{carothers}{}
 \abx@aux@defaultlabelprefix{0}{DSmath}{}
 \abx@aux@defaultlabelprefix{0}{cosineSim}{}
 \abx@aux@defaultlabelprefix{0}{DSML}{}
+\abx@aux@defaultlabelprefix{0}{FFTscipy}{}
 \abx@aux@defaultlabelprefix{0}{george}{}
 \abx@aux@defaultlabelprefix{0}{friedberg}{}
 \abx@aux@defaultlabelprefix{0}{godement}{}
@@ -908,5 +945,6 @@
 \abx@aux@defaultlabelprefix{0}{spivak}{}
 \abx@aux@defaultlabelprefix{0}{fourier1}{}
 \abx@aux@defaultlabelprefix{0}{fourier2}{}
+\abx@aux@defaultlabelprefix{0}{TDFwiki}{}
 \abx@aux@defaultlabelprefix{0}{algorithms}{}
-\gdef \@abspage@last{140}
+\gdef \@abspage@last{143}

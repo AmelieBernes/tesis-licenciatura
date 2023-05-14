@@ -102,6 +102,16 @@
     \field{year}{2022}
   \endentry
 
+  \entry{FFTscipy}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Fft}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+  \field{howpublished}{\url{https://numpy.org/doc/stable/reference/routines.fft.html}}
+    \field{note}{Accessed: 2023-05-09}
+    \field{title}{Discrete Fourier Transform, SciPy module}
+  \endentry
+
   \entry{george}{article}{}
     \name{author}{1}{}{%
       {{hash=FGE}{%
@@ -580,6 +590,16 @@
     \field{title}{The Discrete Fourier Transform: Theory, Algorithms and
   Applications}
     \field{year}{2001}
+  \endentry
+
+  \entry{TDFwiki}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tdf}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+  \field{howpublished}{\url{https://en.wikipedia.org/wiki/Discrete_Fourier_transform}}
+    \field{note}{Accessed: 2023-05-09}
+    \field{title}{Discrete Fourier Transform}
   \endentry
 
   \entry{algorithms}{book}{}

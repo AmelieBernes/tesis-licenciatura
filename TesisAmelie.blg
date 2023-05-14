@@ -19,7 +19,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
-Repeated entry---line 244 of file Referencias.bib
+Repeated entry---line 257 of file Referencias.bib
  : @misc{leg
  :          ,
 I'm skipping whatever remains of this entry
@@ -231,45 +231,45 @@ Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. 
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2815 of file biblatex.bst
-You've used 27 entries,
+You've used 29 entries,
             6399 wiz_defined-function locations,
-            1343 strings with 11732 characters,
-and the built_in function-call counts, 159389 in all, are:
-= -- 12069
-> -- 2323
-< -- 1156
-+ -- 2726
-- -- 657
-* -- 11410
-:= -- 14757
+            1352 strings with 11972 characters,
+and the built_in function-call counts, 162983 in all, are:
+= -- 12165
+> -- 2325
+< -- 1198
++ -- 2728
+- -- 661
+* -- 11610
+:= -- 14851
 add.period$ -- 0
-call.type$ -- 27
-change.case$ -- 676
+call.type$ -- 29
+change.case$ -- 694
 chr.to.int$ -- 44
-cite$ -- 60
-duplicate$ -- 14443
-empty$ -- 15895
+cite$ -- 68
+duplicate$ -- 14939
+empty$ -- 16475
 format.name$ -- 1178
-if$ -- 34684
+if$ -- 35530
 int.to.chr$ -- 0
-int.to.str$ -- 66
+int.to.str$ -- 68
 missing$ -- 0
-newline$ -- 598
+newline$ -- 618
 num.names$ -- 1400
-pop$ -- 8894
+pop$ -- 9552
 preamble$ -- 1
-purify$ -- 714
+purify$ -- 726
 quote$ -- 0
-skip$ -- 5072
+skip$ -- 5208
 stack$ -- 0
-substring$ -- 23212
-swap$ -- 3560
-text.length$ -- 765
-text.prefix$ -- 42
+substring$ -- 23278
+swap$ -- 3732
+text.length$ -- 801
+text.prefix$ -- 44
 top$ -- 1
-type$ -- 906
+type$ -- 974
 warning$ -- 0
-while$ -- 1481
+while$ -- 1495
 width$ -- 0
-write$ -- 572
+write$ -- 590
 (There were 103 error messages)

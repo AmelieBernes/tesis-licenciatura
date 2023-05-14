@@ -237,10 +237,32 @@ de $x$ y los elementos de \eqref{eq2: 8ab}
 (c.f. nota \ref{nota: sobre la identidad de parseval}).
 
 \begin{defi}
-Al proceso de calcular los coeficientes de $x$
-respecto a $\cali{B}_{n}$
-se le conoce como el \textbf{cálculo de la 
-transformada discreta de Fourier de $x$}.
+Sean $n \in \IN$, $x = (x_{m})_{m=0}^{n-1} \in \IC^{n}$
+una señal compleja de longitud $n$.
+Sea $\cali{B}_{n}$ la base de $\IC^{n}$ definida en 
+la proposición \ref{prop: construccion Bn}. \\
+
+A la función $f_{x}: \{ 0, 1, \ldots, n-1 \} 
+\rightarrow \IC^{n}$ que a cada
+frecuencia $\omega \in \{ 0, 1, \ldots, n-1 \} $
+le asocia el coeficiente de $x$ respecto 
+al elemento $e_{n, \omega}$ de la base
+$\cali{B}_{n}$, o sea, la función definida como
+\begin{equation}
+\label{eq: TDF}
+f_{x}(\omega) = X_{\omega} := 
+\frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
+2 \pi i \omega \frac{m}{n}
+\right)}
+\end{equation}
+le llamaremos la 
+\textbf{transformada discreta de Fourier de $x$}.
+Muchas veces identificamos a tal transformada
+con el vector
+$X := (X_{\omega})_{\omega = 0}^{n-1}$, que 
+no es más que la representación 
+de $x = (x_{m})_{m=0}^{n-1}$ respecto a la 
+base de frecuencias $\cali{B}_{n}$.
 \end{defi}
 
 \marginnote{Por sus siglas en inglés, a la transformada discreta
@@ -261,30 +283,12 @@ de Fourier también se le denomina ``TDF''.}
 
 \end{comment}
 
-
-\begin{figure}[H]
-\centering\captionsetup{format = hang}
-	\begin{measuredfigure}
-		\includegraphics[scale=0.8]{tiempo_freq.png} 
-		\caption{Usualmente uno representa a una señal discreta
-		$x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio
-		de la representación es el tiempo. Pero
-		también se puede representar unívocamente a $x$ con sus
-		coeficientes respecto a la base de frecuencias 
-		$\cali{B}_{n}$; en este caso, puesto que cada coeficiente da
-		el peso que tiene la respectiva frecuencia para construir la 
-		señal original $x$, decimos que el dominio de la representación
-		es el de frecuencia.}
- 	\end{measuredfigure}
- \end{figure}
-
-
 Calcular entonces la transformada discreta de Fourier
 de $x$ consiste en calcular a los productos
 punto $\langle x, e_{n,\omega} \rangle $, que son
 
 \begin{align*}
-\langle x, e_{n,\omega} \rangle = & 
+X_{\omega} := \langle x, e_{n,\omega} \rangle = & 
 \frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m} exp \left(
 2 \pi i \omega \frac{m}{n}
 \right)} \\
@@ -328,6 +332,57 @@ Fourier} (abreviado como ``FFT'' por sus siglas en inglés);
 puede consultar los detalles técnicos en el capítulo
 30 de \cite{algorithms}.
 \end{nota}
+
+\begin{nota}
+Se calcula fácilmente una fórmula para la 
+inversa de la transformada discreta de Fourier 
+$f_{x}$ de una señal $x$; si
+se conoce la TDF $X = (X_{\omega})_{\omega=0}^{n-1}$
+de una señal $x \in \IC^{n}$, pueden recuperarse sus coeficientes
+respecto a la base canónica de $\IC^{n}$ (i.e. su representación
+respecto al tiempo)
+como sigue:
+\begin{equation}
+\label{eq: TDFI}
+\forall \hspace{0.1cm} 0 \leq m \leq n-1:
+\hspace{0.2cm}
+x_{m} = \frac{1}{\sqrt{n}} 
+\suma{k=0}{n-1}{
+X_{k} exp \left( 
+-2 \pi i k \frac{m}{n}
+\right).
+}
+\end{equation}
+
+En ocasiones, por transformada discreta de Fourier y su 
+inversa se toman las opuestas a las que hemos definido aquí
+(i.e. se pide el signo negativo en la exponencial 
+para la TDF y se toma el signo positivo para la inversa); además,
+se toman distintos factores de normalización
+(por ejemplo, $1$ para la TDF y $\frac{1}{n}$ para la
+inversa), c.f. \cite{TDFwiki}. Puede ver que fórmulas
+para la TDF y su inversa son implementadas en el 
+módulo \texttt{scipy.fft} de Python con las modificaciones descritas
+antes (puede consultar la documentación de esta librería en
+\cite{FFTscipy}).
+\end{nota}
+
+\begin{figure}[H]
+\centering\captionsetup{format = hang}
+	\begin{measuredfigure}
+		\includegraphics[scale=1.35]{tiempo_freq.png} 
+		\caption{Usualmente uno representa a una señal discreta
+		$x$ de dimensión $n$ con $n$ mediciones complejas; en este caso, el dominio
+		de la representación es el tiempo. Pero
+		también se puede representar unívocamente a $x$ con sus
+		coeficientes respecto a la base de frecuencias 
+		$\cali{B}_{n}$; en este caso, puesto que cada coeficiente da
+		el peso que tiene la respectiva frecuencia para construir la 
+		señal original $x$, decimos que el dominio de la representación
+		es el de frecuencia. Las fórmulas para pasar de una
+		representación a otra son \eqref{eq: TDF} y \eqref{eq: TDFI}.}
+ 	\end{measuredfigure}
+\end{figure}
 
 
 Al usar a $\cali{B}_{n}$ como sistema de representación en

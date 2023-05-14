@@ -97,3 +97,27 @@ def dibuja_plano(axis,a,b,Color='mediumpurple',n=3):
     axis.plot_wireframe(xx,yy,coord_z, color='white', alpha=0.4)
 
 
+#TODO nuevo:
+def dibujar_plano_por_tres_puntos(p0, p1, p2, axis, titulo, Color):
+    """
+    p0, p1 y p2 son los puntos por los que pasa el plano.
+    axis es el axis de una figura en el que vamos a dibujar tal plano.
+    'titulo' es el string del título.
+    'Color' es una string con el color del plano.
+    """
+    u, v = [], [] #puntos del plano
+    for i in range(3):
+        u.append(p1[i]-p0[i]) 
+        v.append(p2[i]-p0[i]) 
+    n = np.cross(u, v) # un vector normal al plano.
+    
+    #TODO incluir luego el caso n[2]==0.
+    coef_x = -n[0]/n[2]
+    coef_y = -n[1]/n[2]
+    coef_cte = p0[2] + p0[0]*n[0]/n[2] + p0[1]*n[1]/n[2]
+    
+    xx, yy = np.meshgrid(range(-10, 10), range(-10, 10))
+    zz = coef_x*xx - coef_y *yy + coef_cte
+    axis.plot_surface(xx, yy, zz, color = Color, alpha = 0.5)
+    axis.set_title(titulo)
+

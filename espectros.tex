@@ -269,7 +269,7 @@ vamos a tomar al conjunto de
 frecuencias $Dom_{\omega}$
 como se sugiere en la nota \ref{nota: sobre el rango de frecuencias}.
 
-\section{Gráficas y conclusiones}
+\section{Gráficas y comentarios}
 
 Veamos qué pasa con $n=7$.
 
@@ -459,3 +459,155 @@ con un sinusoide.
 	\centering
 	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	
+
+\subsection{Sobre la frecuencia real de los PDL (cambia título)}
+
+Para hacer nuestros análisis espectrales, hemos
+usado la dimensión $n$ del PDL $\cali{L}^{n, k} \in \IR^{n}$
+en cuestión
+para buscar, en base a máximos globales
+del espectro 
+$\Sigma_{x}: [0, \frac{n}{2}] \longrightarrow [0,1]$, la
+mejor frecuencia $\omega$ para aproximar la gráfica
+de $\cali{L}^{n,k}$ en base a un sinusoide discreto
+de dimensión $n$. \\
+
+
+Note que en esa discusión nunca hablamos de 
+parámetros importantes para, de forma canónica, hacer
+un análisis espectral, como lo son la
+duración en tiempo de la señal o la frecuencia
+de muestreo.
+
+\begin{defi}
+\label{def: tiempo y frec de muestreo}
+La cantidad de muestras tomadas (de forma uniforme)
+de una señal por unidad de tiempo 
+será denotada por $F_{s}$ y llamada \textbf{frecuencia
+de muestreo} del análisis. A la cantidad de unidades de
+tiempo que dura la medición se le denotará por $T$. \\
+
+A la cantidad total de muestras tomadas se le denotará
+por $L$.
+\end{defi}
+
+De las definiciones se sigue de inmediato que
+\begin{equation}
+\label{eq: relacion L, T Fs}
+L = T F_{s}.
+\end{equation}
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{Adoptamos la convención de empezar a medir 
+	un bloque de $F_{s}$ mediciones desde que inicia la
+	unidad de tiempo (que, en el caso de la figura, se ha
+	fijado como segundos).}
+	\label{fig: Fs 1}
+	}
+	\centering
+	\includegraphics[scale = 1]{Fs_1} 
+\end{figure}	
+
+Nosotros, por el momento, sólo nos
+hemos enfocado en buscar
+una frecuencia $\omega \in [0, \frac{n}{2}]$ que de lugar
+a un sinusoide que aproxime bien la gráfica
+de $\cali{L}^{n,k}$;
+observe que, al hacer esto, hemos supuesto de forma
+implícita que estamos estudiando una señal
+de duración una unidad de tiempo
+($T = 1$) de longitud $n$
+(o sea, $L = F_{s} = n$). \\
+Supongamos ahora que
+tenemos una señal $x$ que consta de $L$ mediciones, siendo
+$F_{s}$ la frecuencia de muestreo.
+\begin{figure}[H]
+	\sidecaption{
+	Para la imagen, hemos fijado $F_{s}= 10$
+	y $L = 40$.
+	\label{fig: frecuencia 1}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{frecuencia_1} 
+\end{figure}	
+
+Sea ahora $2 \leq n \leq L$ y
+supogamos que
+se hizo el análisis
+espectral 
+de una sección $x_{|n}$ de tal señal
+que conste de $n$ puntos
+(usando el espectro
+$\Sigma_{x}: [0, \frac{n}{2}]
+\longrightarrow [0,1]$).
+Digamos que, como conclusión de ese análisis, se
+obtuvo que un sinusoide de frecuencia $\omega \in [0, \frac{n}{2}]$
+ajusta bien \textit{esa sección particular 
+$x_{|n}$
+de la señal $x$}.
+\begin{figure}[H]
+	\sidecaption{
+	Para la imagen, hemos fijado $n= 6$;
+	se calculó que la mejor frecuencia para ajustar 
+	los primeros $6$ puntos que componen la señal
+	original $x$ es $w = 2$.
+	\label{fig: frecuencia 2}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{frecuencia_2} 
+\end{figure}	
+
+Observe que, en general, si se quisiera usar
+directamente una frecuencia de $w$ para ajustar
+a la señal $x$, la aproximación lograda en los
+$n$ puntos escogidos previamente puede no ser válida.
+\begin{figure}[H]
+	\sidecaption{
+	Usando los datos de la figura \ref{fig: frecuencia 2}, podriamos
+	intentar en un principio usar a un sinusoide de frecuencia $2$
+	para intentar modelar a la señal, pero un sinusoide de tal frecuencia,
+	como es el caso de esta figura, puede que ni siquiera sea adecuado
+	para modelar el pedazo $x_{|n}$ original a partir del cual se obtuvo
+	la frecuencia $\omega$.
+	\label{fig: frecuencia 2}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{frecuencia_3} 
+\end{figure}
+Esto se debe a que	
+tal frecuencia $\omega$ es buena para aproximar
+a dichos $n$ puntos cuando se ha tomado como
+unidad de tiempo a $n$, pero, 
+por la forma en que fue muestreada la señal original $x$,
+son $F_{s}$ (y no necesariamente $n$) la cantidad de puntos
+que conforman una unidad. Así, puesto que con $\omega$
+ciclos de un sinusoide se aproximaron $n$ puntos, 
+la frecuencia que debe escogerse para aproximar a todos los $L$
+puntos es
+\begin{equation}
+\label{eq: rel frecuencia real y ficticia}
+\tilde{w} := \frac{F_{s}}{n} \omega.
+\end{equation}
+
+\begin{figure}[H]
+	\sidecaption{
+	Es con una simple regla de tres que se deduce
+	la relación \eqref{eq: rel frecuencia real y ficticia}.
+	\label{fig: frecuencia real}
+	}
+	\centering
+	\includegraphics[scale = 1.4]{frecuencia_real} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	Según los datos de las figuras
+	\ref{fig: frecuencia 1}
+	y \ref{fig: frecuencia 2}, con un sinusoide de frecuencia
+	$\tilde{\omega} = 10/3$ se aproximan bien a los seis
+	puntos en base a los cuales se encontró a la primera
+	frecuencia $\omega$.
+	\label{fig: frecuencia 4}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{frecuencia_4} 
+\end{figure}

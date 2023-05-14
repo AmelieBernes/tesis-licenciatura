@@ -39,6 +39,30 @@ def dibujar_W30_de_R3(axis, n, Color=colores[5]):
     axis.plot(X,X,X, color=Color, label= '$W_{3,0}=\{ (u, u, u) \in \mathbb{R}^{3} : u \in \mathbb{R} \}$')
 
 
+#TODO nuevo:
+def dibujar_plano_por_tres_puntos(p0, p1, p2, axis, titulo, Color):
+    """
+    p0, p1 y p2 son los puntos por los que pasa el plano.
+    axis es el axis de una figura en el que vamos a dibujar tal plano.
+    'titulo' es el string del título.
+    'Color' es una string con el color del plano.
+    """
+    u, v = [], [] #puntos del plano
+    for i in range(3):
+        u.append(p1[i]-p0[i]) 
+        v.append(p2[i]-p0[i]) 
+    n = np.cross(u, v) # un vector normal al plano.
+    
+    #TODO incluir luego el caso n[2]==0.
+    coef_x = -n[0]/n[2]
+    coef_y = -n[1]/n[2]
+    coef_cte = p0[2] + p0[0]*n[0]/n[2] + p0[1]*n[1]/n[2]
+    
+    xx, yy = np.meshgrid(range(-10, 10), range(-10, 10))
+    zz = coef_x*xx - coef_y *yy + coef_cte
+    axis.plot_surface(xx, yy, zz, color = Color, alpha = 0.5)
+    axis.set_title(titulo)
+
 
 def dibujar_espaciosLegendre_R2_R3(m, n):
     fig = plt.figure()
@@ -185,17 +209,26 @@ def grafica_vector_3D_y_2D(parte_afin, alpha, signo):
 
 
 if __name__=='__main__':
-    legendre_3=legendre.calculo_base(3)
-    legendre_3=[np.asarray(vector) for vector in legendre_3] #convertimos a numpy para poder hacer operaciones como suma o multiplicación por escalar
-    
-    parte_afin= math.sqrt(3)*legendre_3[0] +math.sqrt(2)*legendre_3[1] #es [0,1,2]  
-    print(parte_afin)
-    print(parte_afin[0])
-    alphas=[pi/3, pi/4, 0, pi/3, 6*pi/17]
-    signos=[1,1,0,-1,-1] #lista de signos (para determinar la región.)
-    
-    for i in range(5):
-        grafica_vector_3D_y_2D(parte_afin, alphas[i], signos[i])
+    p0 = [0,0,0]
+    p1= [0, 1,2]
+    p2= [-7,5,3]
+    fig = plt.figure()
+    axis = fig.add_subplot(1,1,1, projection='3d')
+    titulo = 'probando'
+    dibujar_plano_por_tres_puntos(p0, p1, p2, axis, titulo)
+    plt.show()
+
+    #legendre_3=legendre.calculo_base(3)
+    #legendre_3=[np.asarray(vector) for vector in legendre_3] #convertimos a numpy para poder hacer operaciones como suma o multiplicación por escalar
+    #
+    #parte_afin= math.sqrt(3)*legendre_3[0] +math.sqrt(2)*legendre_3[1] #es [0,1,2]  
+    #print(parte_afin)
+    #print(parte_afin[0])
+    #alphas=[pi/3, pi/4, 0, pi/3, 6*pi/17]
+    #signos=[1,1,0,-1,-1] #lista de signos (para determinar la región.)
+    #
+    #for i in range(5):
+    #s    grafica_vector_3D_y_2D(parte_afin, alphas[i], signos[i])
 
 
     #tres_regiones()
