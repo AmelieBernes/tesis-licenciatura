@@ -41,25 +41,26 @@ El orden de los colores es:
     8: Color para lineas de referencia
 """
 
-
-def formato_axis_derecha(axis):
+#Este formato de axis lo uso para los espectros
+def formato_axis(axis):
   """
   Agregando los elementos que me gustan a un axis
   """
   axis.axhline(y=0, color='gray', zorder = 0)
   axis.axvline(x=0, color='gray', zorder = 0)
   axis.grid(True)
-  axis.legend()
+  axis.legend(loc = 'best')
   #axis.legend(loc = 'lower right')
 
-def formato_axis_izquierda(axis):
+#Este formato de axis lo uso para las gráficas de los sinusoides
+def formato_axis_leyenda_exterior(axis):
   """
   Agregando los elementos que me gustan a un axis
   """
   axis.axhline(y=0, color='gray', zorder = 0)
   axis.axvline(x=0, color='gray', zorder = 0)
   axis.grid(True)
-  axis.legend(loc = 'best', bbox_to_anchor = (1, 1.35))
+  axis.legend(loc = 'best', bbox_to_anchor = (0.7, 1.35))
   #axis.legend(loc = 'upper left', frameon = False)
   
 #def formato_axis_legendaAfuera_2col(axis):
@@ -78,7 +79,15 @@ def formato_axis_izquierda(axis):
 #  axis.legend(bbox_to_anchor = (1.1, 1.05), loc = 'center left')
 
 
-#  ---------------------------------------- TDF ----------------------------------------
+"""
+#  ---------------------------------------- -- ----------------------------------------
+
+				CÁLCULOS PARA REALIZAR EL PRIMER
+			      ANÁLISIS ESPETRAL (BASADO EN LA TDF)
+
+#  ---------------------------------------- -- ----------------------------------------
+"""
+
 
 #Funciones coseno y coseno a partir de las que se construye todo lo que sigue.
 def c_w(n,t, w):
@@ -191,7 +200,7 @@ def coeficientes_tau(x):
       return taus
 
 
-def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
+def grafica_taus_axis(x, n, nombre, axis1, axis2):
   """
   'x' es un array de dimensión mayor a dos. 
   Esta función dibuja la gráfica de 'x' con dominio el tiempo, junto
@@ -248,12 +257,10 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, legend_derecha = True):
       axis1.scatter(dominio, [coef_cos * np.cos(2*pi*max_w*t)+coef_sen* np.sin(2*pi*max_w*t) for t in dominio], zorder=2, color = colores[3], s=80)
       axis1.plot(X, coef_cos * np.cos(2*pi*max_w*X) + coef_sen * np.sin(2*pi*max_w*X), color = colores[3], label = r'${{{0}}} \cdot cos(2 \pi \cdot {{{1}}} t) + {{{2}}} \cdot sen(2 \pi \cdot {{{1}}} t) $'.format(str(round(coef_cos,2)), str(max_w), str(round(coef_sen,2))))
   
-  if legend_derecha == True:
-    formato_axis_derecha(axis1)
-    formato_axis_derecha(axis2)
-  else:
-    formato_axis_izquierda(axis1)
-    formato_axis_izquierda(axis2)
+
+  formato_axis_leyenda_exterior(axis1)
+  formato_axis(axis2)
+
 
 
 
@@ -327,7 +334,7 @@ def amplDesfase_caso1(x,w):
     phi = (tan + 2*pi)/(2*pi)
   return A, phi
 
-def grafica_sigma_amplDesfase_axis_caso1(x, w, axis, label_derecha = True):
+def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   """
   Se dibujan la gráfica de x junto con la de su proyección al espacio de frecuencias P_{w}.
 
@@ -348,10 +355,8 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis, label_derecha = True):
   
   X=np.arange(0, 1, 0.0001)
   axis.plot(X, coseno_amplDes(X), color=colores[2])
-  if label_derecha == True:
-    formato_axis_derecha(axis)
-  else:
-    formato_axis_izquierda(axis)
+
+  formato_axis_leyenda_exterior(axis)
 
 #Funciones para el caso 2
 
@@ -382,7 +387,7 @@ def amplDesfase_caso2(x,w):
   A = q/math.sqrt(n)
   return A, 0
 
-def grafica_sigma_amplDesfase_axis_caso2(x, w, axis, label_derecha = True):
+def grafica_sigma_amplDesfase_axis_caso2(x, w, axis):
   """
   Se dibujan la gráfica de x junto con la de su proyección al espacio de frecuencias P_{w}.
 
@@ -403,10 +408,8 @@ def grafica_sigma_amplDesfase_axis_caso2(x, w, axis, label_derecha = True):
   
   X=np.arange(0, 1, 0.0001)
   axis.plot(X, coseno_amplDes(X), color=colores[2])
-  if label_derecha == True:
-    formato_axis_derecha(axis)
-  else:
-    formato_axis_izquierda(axis)
+
+  formato_axis_leyenda_exterior(axis)
 
 
 def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis0, axis1, legenda_derecha = True):
@@ -451,12 +454,10 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   axis1.set_xlabel('Frecuencias ' + r'$\omega$')
   axis1.set_ylabel(r'$\sigma_{{{0}}}($'.format(str(n))+"${0}$".format(nombre)+ r'$, \omega)$' + r', $\tau_{{{0}}}($'.format(str(n))+"${0}$".format(nombre)+ r'$, \omega)$') 
 
-  if legenda_derecha == True:
-    formato_axis_derecha(axis0)
-    formato_axis_derecha(axis1)
-  else:
-    formato_axis_izquierda(axis0)
-    formato_axis_izquierda(axis1)
+
+  formato_axis_leyenda_exterior(axis0)
+  formato_axis(axis1)
+
 
  
 # ---------------------- Análisis espectrales para cualquier señal finita  -----------------------------------
@@ -494,7 +495,8 @@ def analisis_espectrales_guardarGrafica(x, frecuencias, nombre):
   """
   n = len(x) #TODO pasar como argumento a las otras funciones! 
   fig, axis = plt.subplots(2,2)
-  fig.set_size_inches(11.25, 12.34) 
+  #fig.set_size_inches(11.25, 12.34) #esta está muy bien!
+  fig.set_size_inches(14, 15.36)
   #fig.tight_layout(pad=0.4)
   
   analisis_espectral_espaciosMonofrecuenciales(x,n, frecuencias, nombre, axis[1,0], axis[1,1])
@@ -504,7 +506,7 @@ def analisis_espectrales_guardarGrafica(x, frecuencias, nombre):
   
   
 # ------------------------------------- Análisis espectrales de los PDL ------------------------------------
-def analisis_espectrales_PDL_mostrarGrafica(n, k, label_derecha = True):
+def analisis_espectrales_PDL_mostrarGrafica(n, k):
   """
   'x' (tipo array) tiene las mediciones.
   'frecuencias' (tipo array) es un array de frecuencias.
@@ -528,15 +530,16 @@ def analisis_espectrales_PDL_mostrarGrafica(n, k, label_derecha = True):
   ax2.axvline(x = k/2, color = colores[8], linewidth = 2, label = "x = " + str(k/2))
   ax2.axhline(y = 1, color = colores[8], linewidth = 2, linestyle = 'dotted')
 
-  grafica_taus_axis(x, n, nombre, ax0, ax2, label_derecha)
-  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2, label_derecha)
+  grafica_taus_axis(x, n, nombre, ax0, ax2)
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2)
 
   fig.suptitle('Análisis espectrales de ' + "${0}$".format(nombre) + r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
-  fig.tight_layout(pad=0.2, w_pad=0.2, h_pad=0.5)
+  #fig.tight_layout(pad=0.2, w_pad=0.2, h_pad=0.5)
+  fig.tight_layout()
   #fig.tight_layout(top=0.914, bottom=0.058, left=0.041, right=0.992, hspace=0.202, wspace=0.09)
   return plt.show()
 
-def analisis_espectrales_PDL_guardarGrafica(n,k, label_derecha = True):
+def analisis_espectrales_PDL_guardarGrafica(n,k):
   """
   'x' (tipo array) tiene las mediciones.
   'frecuencias' (tipo array) es un array de frecuencias.
@@ -557,8 +560,8 @@ def analisis_espectrales_PDL_guardarGrafica(n,k, label_derecha = True):
   ax2.axvline(x = k/2, color = colores[8], linewidth = 2, label = "x = " + str(k/2))
   ax2.axhline(y = 1, color = colores[8], linewidth = 2, linestyle = 'dotted')
 
-  grafica_taus_axis(x, n, nombre, ax0, ax2, label_derecha)
-  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2, label_derecha)
+  grafica_taus_axis(x, n, nombre, ax0, ax2)
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2)
 
   fig.suptitle('Análisis espectrales de ' + "${0}$".format(nombre) + r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
   #fig.tight_layout(pad=0.2, w_pad=0.2, h_pad=0.5)
@@ -601,7 +604,7 @@ def calculo_tauMax(x):
     frec_max = taus.index(tau_max)
     return frec_max
 
-def graficar_analisis_espectralPDL_global(n, label_derecha = True):
+def graficar_analisis_espectralPDL_global(n):
     fig, axis = plt.subplots(2,1)
     dominio_grados = [k for k in range(n)]
     X = np.arange(0,n,0.05)
@@ -623,12 +626,9 @@ def graficar_analisis_espectralPDL_global(n, label_derecha = True):
     axis[0].plot(X, b0+X*m0, color = colores[8], label = r'RMC: $l(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m0,2)), str(round(b0,2))))
     plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales \n de los PDL de dimensión "+str(n), fontsize = 14)
 
-    if label_derecha == True:
-        formato_axis_derecha(axis[0])
-        formato_axis_derecha(axis[1])
-    else:
-        formato_axis_izquierda(axis[0])
-        formato_axis_izquierda(axis[1])
+    formato_axis(axis[0])
+    formato_axis(axis[1])
+
 
     axis[0].set_xlabel('Grado $0 \leq k \leq {0}$'.format(str(n-1)))
     axis[1].set_xlabel('Grado $0 \leq k \leq {0}$'.format(str(n-1)))
@@ -703,7 +703,7 @@ def grafica_3d_n_k_FP(N):
 
 
 
-def grafica_analisisGlobal_k_fijo(k, label_derecha = True):
+def grafica_analisisGlobal_k_fijo(k):
     #TODO reescribir. Mejor guarda los valores en arrays para que puedas buscar máximos y mínimos y agustar
     #la longitud del y-eje.
     """
@@ -737,10 +737,9 @@ def grafica_analisisGlobal_k_fijo(k, label_derecha = True):
         graficando_puntos(69, True)
         axis.axhline(y = k/2, color = colores[8], label = r'$y = \frac{{ {{{0}}}  }}{{2}}$'.format(str(k)))
 
-    if label_derecha == True:
-        formato_axis_derecha(axis)
-    else:
-        formato_axis_izquierda(axis)
+
+    formato_axis(axis)
+
 
     plt.suptitle('Gráficas de las frecuencias principales FP para los \n PDL de grado k = '+str(k))
     axis.set_xlim(k+0.5, 69.5)
@@ -788,7 +787,7 @@ def grafica_nube_b0m0_b1m1():
     for i in range(2):
         axis[i].set_xlim(-1.5, 0.5)
         axis[i].set_ylim(0.3, 0.65)
-        formato_axis_derecha(axis[i])
+        formato_axis(axis[i])
 
     plt.show()
 
@@ -886,7 +885,8 @@ if __name__=='__main__':
   #analisis_espectrales_PDL_mostrarGrafica(3,2)
   #analisis_espectrales_PDL_mostrarGrafica(3,1)
   #analisis_espectrales_PDL_mostrarGrafica(8,1)
-  #analisis_espectrales_PDL_mostrarGrafica(34,1)
+  analisis_espectrales_PDL_mostrarGrafica(39,15)
+  analisis_espectrales_PDL_guardarGrafica(34,20)
   #analisis_espectrales_PDL_mostrarGrafica(39, 15)
   #analisis_espectrales_PDL_mostrarGrafica(39, 8)
   #analisis_espectrales_PDL_mostrarGrafica(39, 5)
@@ -953,7 +953,7 @@ if __name__=='__main__':
   #analisis_espectrales_mostrarGrafica(x, frecuencias, 'x')
 
   #analisis_espectrales_PDL_guardarGrafica(12,11)
-  analisis_espectrales_PDL_guardarGrafica(12,10, False)
+  #analisis_espectrales_PDL_guardarGrafica(12,10, False)
   
 
  
