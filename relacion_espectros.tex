@@ -1,3 +1,155 @@
+\section{Simetría, periodicidad y continuidad del espectro $\Sigma_{x}$}
+
+Fijada una dimensión $n \geq 2$,
+si $x \in \IR^{n}$ es cualquier señal y 
+$\Sigma_{x}$
+es su espectro como se definió en
+\ref{def: espectro monofrecuenciales},
+en esta sección vamos a demostrar 
+algunos resultados sobre la periodicidad 
+de esta función y su simetría 
+respecto a puntos de la forma
+$\frac{n}{2} \IZ$.
+Esto será de utilidad pues nos permitirá
+acotar considerablemente el dominio de frecuencias
+de $\Sigma_{x}$.
+
+
+
+\begin{prop}
+\label{prop: periodicidad espectro}
+\textbf{(Periodicidad del espectro)}
+Sean $x \in \IR^{n}$, $0 \leq \omega \leq \frac{n}{2}$.
+Para toda $K \in \IZ$,
+\[
+\sigma_{n}(x, \omega) = \sigma_{n}(x, \omega + Kn).
+\]
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Sólo observe que 
+\begin{align*}
+\tilde{c}_{n, \omega + Kn} = & \left( cos \left( 2 \pi
+\left( \omega + Kn \right) \frac{m}{n} \right) \right)_{m=0}^{n-1} \\
+= & \left( cos \left( 
+2 \pi \omega \frac{m}{n} + 2 \pi K m
+\right) \right)_{m=0}^{n-1} \\
+= & \left( cos \left( 
+2 \pi \omega \frac{m}{n}
+\right) \right)_{m=0}^{n-1} = \tilde{c}_{n, \omega}
+\end{align*}
+y, similarmente, que 
+\[
+\tilde{s}_{n, \omega + Kn} = \tilde{s}_{n, \omega},
+\]
+luego, por definición de los espacios monofrecuenciales
+(c.f. ecuación \ref{eq: espacio Pnw}),
+\begin{align*}
+P_{n, \omega + Kn} =
+& span(\tilde{c}_{n, \omega + Kn}, \tilde{s}_{n, \omega + Kn}) \\
+= & span(\tilde{c}_{n, \omega }, \tilde{s}_{n, \omega }) = P_{n, \omega};
+\end{align*}
+de esto se concluye, usando la definición
+\ref{def: final de sigmas},
+que 
+\[
+\sigma_{n}(x, \omega) = 
+cos (\measuredangle(x, P_{n, \omega}))
+= cos (\measuredangle(x, P_{n, \omega + Kn})) = 
+\sigma_{n}(x, \omega + Kn).
+\]
+\QEDB
+\vspace{0.2cm}
+
+\begin{figure}[H]
+	\sidecaption{
+	Según la periodicidad establecida en la proposición 
+	\ref{prop: periodicidad espectro}, basta calcular los
+	coeficientes espectrales
+	$\sigma_{n}(x, \omega)$ para frecuencias
+	$0 \leq \omega \leq n$.
+	\label{fig: periodicidad espectro}
+	}
+	\centering
+	\includegraphics[scale = 0.9]{periodicidad_espectro} 
+\end{figure}	
+
+
+\begin{prop}
+\textbf{(Simetría del espectro)}
+Sean
+$n \geq 2$,
+$x \in \IR^{n}$. Para toda $0 \leq1 \omega \leq \frac{n}{2}$,
+\[
+\sigma_{n}(x, \omega) = 
+\sigma_{n}(x, n-\omega ). 
+\]
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, 
+\begin{align*}
+\tilde{c}_{n, \omega + n} = & \left( cos \left( 2 \pi
+\left( n- \omega \right) \frac{m}{n} \right) \right)_{m=0}^{n-1} \\
+= & \left( cos \left( 
+2 \pi n \frac{m}{n} - 2 \pi \omega
+\frac{m}{n}
+\right) \right)_{m=0}^{n-1} \\
+= & \left( cos \left( 
+2 \pi m - 2 \pi \omega \frac{m}{n} 
+\right) \right)_{m=0}^{n-1} \\
+= & \left( cos \left( 2 \pi \omega \frac{m}{n} \right) \right)_{m=0}^{n-1}
+= \tilde{c}_{n, \omega}
+\end{align*}
+y, similarmente,
+\[
+\tilde{s}_{n, \omega + Kn} = -\tilde{s}_{n, \omega};
+\]
+de esto, como en la demostración de la proposición
+\ref{prop: periodicidad espectro}, se concluye la igualdad
+entre los espacios $P_{n, \omega}$ y $P_{n, n-\omega}$, y de esto
+la igualdad deseada.
+\QEDB
+\vspace{0.2cm}
+
+\begin{figure}[H]
+	\sidecaption{
+	Podemos así afinar la afirmación hecha en la figura 
+	\ref{fig: periodicidad espectro} y concluir que basta
+	calcular los coeficientes
+	$\sigma_{n}(x, \omega)$ para $0 \leq \omega \leq \frac{n}{2}$,
+	pues los demás pueden deducirse a partir de reflexiones y traslaciones.
+	\label{fig: simetria espectro}
+	}
+	\centering
+	\includegraphics[scale = 1.4]{simetria_espectro} 
+\end{figure}	
+
+Según estas propiedades de periodicidad y simetría,
+podemos redefinir el espectro de una señal $x$
+como sigue:
+\begin{defi}
+\label{def: espectro monofrecuenciales}
+Sean $n \geq 2$, $x \in \IR^{n}$.\\
+
+Si $x \neq 0$, definimos a su \textbf{espectro basado en 
+espacios monofrecuenciales} como la función 
+$\Sigma_{x}: [0, \frac{n}{2}] \longrightarrow [0,1]$
+dada por
+\[
+\Sigma(x) = \sigma_{n, \omega} (x) \hspace{0.2cm}
+\text{ para toda }
+\hspace{0.2cm} \omega \in Dom_{\omega},
+\]
+donde los coeficientes
+$\sigma_{n}(x, \omega)$ son como se definieron en 
+la proposición \ref{prp: ammm}. \\
+
+Si $x = 0$, definimos su espectro como la 
+función
+constante cero.
+\end{defi}
+
 \section{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}
 
 Después de todo lo expuesto en las secciones anteriores, tenemos
@@ -363,126 +515,4 @@ la propiedad de ser una discretización de un sinusoide
 de la respectiva frecuencia.
 \end{nota}
 
-\subsection{Simetría, periodicidad y continuidad del espectro}
 
-Para terminar este capítulo, 
-fijada una dimensión $n \geq 2$,
-vamos a establecer algunos
-resultados sobre la periodicidad del espectro
-de cualquier señal $x$, la simetría de la gráfica
-del espectro respecto a cualquier punto de la forma
-$\frac{n}{2} \IZ$ y terminamos con algunos comentarios
-sobre la continuidad de este.
-
-\begin{prop}
-\label{prop: periodicidad espectro}
-\textbf{(Periodicidad del espectro)}
-Sean $x \in \IR^{n}$, $0 \leq \omega \leq \frac{n}{2}$.
-Para toda $K \in \IZ$,
-\[
-\sigma_{n}(x, \omega) = \sigma_{n}(x, \omega + Kn).
-\]
-\end{prop}
-\noindent
-\textbf{Demostración.}
-Sólo observe que 
-\begin{align*}
-\tilde{c}_{n, \omega + Kn} = & \left( cos \left( 2 \pi
-\left( \omega + Kn \right) \frac{m}{n} \right) \right)_{m=0}^{n-1} \\
-= & \left( cos \left( 
-2 \pi \omega \frac{m}{n} + 2 \pi K m
-\right) \right)_{m=0}^{n-1} \\
-= & \left( cos \left( 
-2 \pi \omega \frac{m}{n}
-\right) \right)_{m=0}^{n-1} = \tilde{c}_{n, \omega}
-\end{align*}
-y, similarmente, que 
-\[
-\tilde{s}_{n, \omega + Kn} = \tilde{s}_{n, \omega},
-\]
-luego, por definición de los espacios monofrecuenciales
-(c.f. ecuación \ref{eq: espacio Pnw}),
-\begin{align*}
-P_{n, \omega + Kn} =
-& span(\tilde{c}_{n, \omega + Kn}, \tilde{s}_{n, \omega + Kn}) \\
-= & span(\tilde{c}_{n, \omega }, \tilde{s}_{n, \omega }) = P_{n, \omega};
-\end{align*}
-de esto se concluye, usando la definición
-\ref{def: final de sigmas},
-que 
-\[
-\sigma_{n}(x, \omega) = 
-cos (\measuredangle(x, P_{n, \omega}))
-= cos (\measuredangle(x, P_{n, \omega + Kn})) = 
-\sigma_{n}(x, \omega + Kn).
-\]
-\QEDB
-\vspace{0.2cm}
-
-\begin{figure}[H]
-	\sidecaption{
-	Según la periodicidad establecida en la proposición 
-	\ref{prop: periodicidad espectro}, basta calcular los
-	coeficientes espectrales
-	$\sigma_{n}(x, \omega)$ para frecuencias
-	$0 \leq \omega \leq n$.
-	\label{fig: periodicidad espectro}
-	}
-	\centering
-	\includegraphics[scale = 0.9]{periodicidad_espectro} 
-\end{figure}	
-
-
-\begin{prop}
-\textbf{(Simetría del espectro)}
-Sean
-$n \geq 2$,
-$x \in \IR^{n}$. Para toda $0 \leq1 \omega \leq \frac{n}{2}$,
-\[
-\sigma_{n}(x, \omega) = 
-\sigma_{n}(x, n-\omega ). 
-\]
-\end{prop}
-\noindent
-\textbf{Demostración.}
-En efecto, 
-\begin{align*}
-\tilde{c}_{n, \omega + n} = & \left( cos \left( 2 \pi
-\left( n- \omega \right) \frac{m}{n} \right) \right)_{m=0}^{n-1} \\
-= & \left( cos \left( 
-2 \pi n \frac{m}{n} - 2 \pi \omega
-\frac{m}{n}
-\right) \right)_{m=0}^{n-1} \\
-= & \left( cos \left( 
-2 \pi m - 2 \pi \omega \frac{m}{n} 
-\right) \right)_{m=0}^{n-1} \\
-= & \left( cos \left( 2 \pi \omega \frac{m}{n} \right) \right)_{m=0}^{n-1}
-= \tilde{c}_{n, \omega}
-\end{align*}
-y, similarmente,
-\[
-\tilde{s}_{n, \omega + Kn} = -\tilde{s}_{n, \omega};
-\]
-de esto, como en la demostración de la proposición
-\ref{prop: periodicidad espectro}, se concluye la igualdad
-entre los espacios $P_{n, \omega}$ y $P_{n, n-\omega}$, y de esto
-la igualdad deseada.
-\QEDB
-\vspace{0.2cm}
-
-\begin{figure}[H]
-	\sidecaption{
-	Podemos así afinar la afirmación hecha en la figura 
-	\ref{fig: periodicidad espectro} y concluir que basta
-	calcular los coeficientes
-	$\sigma_{n}(x, \omega)$ para $0 \leq \omega \leq \frac{n}{2}$,
-	pues los demás pueden deducirse a partir de reflexiones y traslaciones.
-	\label{fig: simetria espectro}
-	}
-	\centering
-	\includegraphics[scale = 1.4]{simetria_espectro} 
-\end{figure}	
-
-
-\TODO{Algunos comentarios sobre la continuidad y discontinuidad 
-de salto del espectro en los puntos $\frac{n}{2}\IZ$.}

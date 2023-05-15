@@ -959,17 +959,15 @@ del espectro de una señal
 basada en la TDF).
 
 \begin{defi}
-\label{def: espectro monofrecuenciales}
+\label{def: espectro monofrecuenciales inicial}
 Sean $n \geq 2$, $x \in \IR^{n}$. 
-Sea $Dom_{\omega} \subseteq \IR^{+}_{0}$
-un conjunto de frecuencias no negativas. \\
 
-Si $x \neq 0$, definimos a su \textbf{espectro respecto
-a $Dom_{\omega}$} como la función 
-$\Sigma_{x}: Dom_{\omega} \longrightarrow [0,1]$
+Si $x \neq 0$, definimos a su \textbf{espectro basado
+en espacios monofrecuenciales} como la función 
+$\Sigma_{x}: \IR^{+}_{0} \longrightarrow [0,1]$
 dada por
 \[
-Sigma(x) = \sigma_{n, \omega} (x) \hspace{0.2cm}
+\Sigma(x) = \sigma_{n, \omega} (x) \hspace{0.2cm}
 \text{ para toda }
 \hspace{0.2cm} \omega \in Dom_{\omega},
 \]
@@ -978,18 +976,10 @@ $\sigma_{n}(x, \omega)$ son como se definieron en
 la proposición \ref{prp: ammm}. \\
 
 Si $x = 0$, definimos su espectro como la 
-función $\Sigma_{x}: Dom_{\omega} \longrightarrow [0,1]$
+función
 constante cero.
 \end{defi}
 
-Observe que, a diferencia de la definición 
-\ref{def: espectro DFT}, en la definición 
-\ref{def: espectro monofrecuenciales} no se habla de un único
-espectro, pues en la metodología planteada en esta sección
-puede usarse cualquier frecuencia $\omega >0$ para analizar a una
-señal $x$, mientras que el espectro de la definición 
-\ref{def: espectro DFT} se limita a usar las frecuencias de las
-tablas 6.1 y 6.2.
 
 \begin{comment}
 \begin{nota}
