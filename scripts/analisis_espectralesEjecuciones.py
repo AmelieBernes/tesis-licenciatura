@@ -125,8 +125,19 @@ ae.grafica_analisisEspectrales_PDL(7, 4, graficar = True)
 #ae.grafica_analisisGlobal_k_fijo(44, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
- 
- 
+for k in range(2,40):
+    ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
+
+"""
+#No ejecutar más:
+
+for n in range(2, 40):
+    for k in range(n):
+        ae.grafica_analisisEspectrales_PDL(n, k, graficar = False) 
+
+for n in range(2,40):
+    ae.grafica_analisisGlobal_n_fijo(n, graficar = False)
+"""
  
  
  

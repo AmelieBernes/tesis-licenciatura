@@ -33,11 +33,13 @@ import funciones_figuras3d
 
 pi=math.pi
 mpl.rcParams.update(mpl.rcParamsDefault)
+
+ruta_carpeta = '/home/ame/GitHub/tesis-licenciatura/imagenes/graficas_analisisEspectrales/'
+
 #colores=['#fe01b1', 'gray', '#00F7CE', '#5f34e7', '#feb308', '#8f99fb', 'gray', '#8e82fe', '#CE00D8']
 #colores=['#fe01b1', 'gray', '#0ae408', '#5f34e7', '#feb308', '#8f99fb', 'gray', '#8e82fe','#CE00D8' ]
 
 colores=['#fe01b1', '#3b2747', '#feb308', '#6832e3', '#feb308', '#8f99fb', 'gray', '#8e82fe', '#fd183d']
-
 
 """
 El orden de los colores es:
@@ -530,7 +532,7 @@ def grafica_analisisEspectrales(x, nombre, graficar = True):
   #TODO poner a la ruta en la que se guardará la imagen como argumento de la función.
     fig.set_size_inches(11.25, 12.34) 
     fig.tight_layout()
-    plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/"+str(n)+'_'+nombre)
+    plt.savefig(ruta_carpeta + str(n) + '_' + nombre)
   
 def grafica_analisisEspectrales_PDL(n,k, graficar = True):
   """
@@ -572,7 +574,7 @@ def grafica_analisisEspectrales_PDL(n,k, graficar = True):
     fig.set_size_inches(11.25, 12.34) 
     fig.tight_layout() #NOTA esto tiene que ir sólo una vez y justo antes de guardar la figura
                        #para no deformar nada!
-    plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/"+str(n)+'_'+str(k))
+    plt.savefig(ruta_carpeta + str(n) + '_' + str(k))
 
 
 
@@ -733,7 +735,7 @@ def grafica_analisisGlobal_k_fijo(k, graficar = True):
     else:
         fig.set_size_inches(11.25, 12.34) 
         plt.tight_layout()
-        return plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/"+'k_'+str(k))
+        return plt.savefig(ruta_carpeta + 'k_' + str(k))
 
 
 def grafica_3d_n_k_FP(N):
@@ -815,7 +817,7 @@ def grafica_analisisGlobal_n_fijo(n, graficar = True):
     else:
         fig.set_size_inches(11.25, 12.34) 
         plt.tight_layout()
-        return plt.savefig("/home/ame/GitHub/tesis-licenciatura/imagenes/estudios_espectrales/"+'n_'+str(n))
+        return plt.savefig(ruta_carpeta + 'n_' + str(n))
     
 
 def grafica_nube_b0m0_b1m1():
