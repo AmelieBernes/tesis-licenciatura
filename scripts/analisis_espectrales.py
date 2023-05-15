@@ -36,7 +36,7 @@ mpl.rcParams.update(mpl.rcParamsDefault)
 #colores=['#fe01b1', 'gray', '#00F7CE', '#5f34e7', '#feb308', '#8f99fb', 'gray', '#8e82fe', '#CE00D8']
 #colores=['#fe01b1', 'gray', '#0ae408', '#5f34e7', '#feb308', '#8f99fb', 'gray', '#8e82fe','#CE00D8' ]
 
-colores=['#fe01b1', '#3b2747', '#ffa345', '#5f34e7', '#feb308', '#8f99fb', 'gray', '#8e82fe', '#fd183d']
+colores=['#fe01b1', '#3b2747', '#feb308', '#6832e3', '#feb308', '#8f99fb', 'gray', '#8e82fe', '#fd183d']
 
 
 """
