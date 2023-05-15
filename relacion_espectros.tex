@@ -178,24 +178,24 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	Puesto que el realizar un análisis de 
 	$x$ via la TDF significa encontrar una
 	expresión de $x$ como una suma
-	ponderada de muestreos de senos y cosenos
-	de frecuencias enteras las de las tablas 6.1 o 6.2,
+	ponderada de muestreos de senos y cosenos,
+	de frecuencias enteras las indicadas en las tablas 6.1 o 6.2,
 	se tiene que  
 	\begin{itemize}
 		\item Para toda frecuencia $\omega$ considerada
 		por la TDF,
 		\[
-		0 \leq \tau_{n}(x, \omega) \leq 1
+		0 \leq \tau_{n}(x, \omega) \leq 1,
 		\]
 		y que
 		\item entre más se acerque
 		$\tau_{n, \omega}(x)$
-		a $|| x ||^{2}$, mayor es la
+		a $1$, mayor es la
 		importancia de la frecuencia $\omega$ para
 		sintetizar s $x$; recíprocamente, si 
-		$\tau_{n}(x, \omega)$ es cercano a cero, entonces
+		$\tau_{n}(x, \omega)$ es cercana a cero, entonces
 		la frecuencia $\omega$ no es muy relevante para 
-		reconstruir a la señal $x$.
+		sintetizar a la señal $x$.
 	\end{itemize}
 	\begin{defi}
 	\label{def: FM0}
@@ -216,27 +216,22 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	estamos asegurando que sea única. 
 	
 	\item \textbf{(Espectro-1: basado en espacios monofrecuenciales)} 
-	Si para hacer un análisis espectral se usan
+	Usando
 	las ideas propuestas en 
 	la sección
 	\ref{sec: metodologia para realizar un analisis espectral que considere frecuencias arbitrarias}, 
-	o sea, si se usan cosenos de ángulos a
+	es decir, si se usan cosenos de ángulos a
 	espacios monofrecuenciales $P_{n, \omega}$
-	(c.f. \ref{eq: espacio Pnw}),	
-	entonces, fijado un rango
-	$Dom_{\omega} \subseteq \IR^{+}_{0}$	
-	\TODO{Mejor pon aquí como dominio a los no negativos y
-	después de las notas de periodicidad y simetría, acótalo.}
-	de frecuencias $\omega$,
-	el espectro de $x$ es 
-	la función 
+	(c.f. \ref{eq: espacio Pnw}), el espectro
+	de una señal $x$ se definió en
+	\ref{def: espectro monofrecuenciales inicial}
+	como la función 
 	\[
-	\Sigma_{x} : Dom_{\omega} \longrightarrow [0,1]
+	\Sigma_{x} : [0, \frac{n}{2}] \longrightarrow [0,1].
 	\]
-	definida en \eqref{def: espectro monofrecuenciales}. \\
 	
 	La gráfica de este espectro es la de 
-	las frecuencias $\omega \in Dom_{\omega}$ versus	
+	las frecuencias $\omega \in [0, \frac{n}{2}]$ versus	
 	los coeficientes
 	$\sigma_{n}(x, \omega)$ definidos en 
 	\ref{prp: ammm}. Observe que
