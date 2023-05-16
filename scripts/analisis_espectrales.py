@@ -691,8 +691,6 @@ def grafica_analisisGlobal_k_fijo(k, graficar = True):
     Se regresa la gráfica de los puntos de la forma $(n, FP0(\mathcal{L}^{n,k}))$
     y $(n, FP1(\mathcal{L}^{n,k}))$, con $k < n \leq 69$. 
     """
-    #TODO reescribir. Mejor guarda los valores en arrays para que puedas buscar máximos y mínimos y agustar
-    #la longitud del y-eje.
     fig, axis = plt.subplots(1,1)
     with open('data_AE.txt', 'rb') as f:
         data_AE = pickle.load(f)
@@ -709,7 +707,6 @@ def grafica_analisisGlobal_k_fijo(k, graficar = True):
             plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^')
             plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v')
     
-    #axis.set_ylim(k/2 - 1.5, k/2 + 1.5) #TODO no puedes recortar así. No todos se comportan bien.
     if k == 0 or k == 1:
         axis.axhline(y = k/2, color = colores[8], label = r'$y = \frac{{ {{{0}}}  }}{{2}}$'.format(str(k)))
         graficando_puntos(3, True)
@@ -720,10 +717,9 @@ def grafica_analisisGlobal_k_fijo(k, graficar = True):
             graficando_puntos(n, False)
         graficando_puntos(69, True)
         axis.axhline(y = k/2, color = colores[8], label = r'$y = \frac{{ {{{0}}}  }}{{2}}$'.format(str(k)))
-
-
-    formato_axis(axis)
-
+    
+    axis.legend()
+    axis.grid()
 
     plt.suptitle('Gráficas de las frecuencias principales FP para los \n PDL de grado k = '+str(k))
     axis.set_xlim(k+0.5, 69.5)

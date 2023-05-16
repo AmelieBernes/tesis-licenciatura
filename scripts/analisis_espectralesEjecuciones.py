@@ -128,8 +128,10 @@ n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 #ae.grafica_analisisGlobal_k_fijo(44, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
-ae.grafica_pendientes_oOrigen_RMC()
+#ae.grafica_pendientes_oOrigen_RMC()
 
+for k in range(2,70):
+    ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
 """
 #No ejecutar más:
 
@@ -140,8 +142,6 @@ for n in range(2, 40):
 for n in range(2,70):
     ae.grafica_analisisGlobal_n_fijo(n, graficar = False)
 
-for k in range(2,40):
-    ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
 """
  
  

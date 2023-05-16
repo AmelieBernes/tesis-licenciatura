@@ -3,14 +3,15 @@
 Durante todo este trabajo trataremos con señales
 finitas
 (digamos, de
-longitud $n$), y las pensaremos como elementos de $\IR^{n}$.
+longitud $n$, con $n$
+un entero positivo), y las pensaremos como elementos de $\IR^{n}$.
 En la práctica, por lo general
 una señal es un conjunto de mediciones tomadas
 a intervalos regulares de tiempo; dicha
 información perfectamente puede expresarse como 
 una $n-$tupla. En lo que sigue, a menos que se diga
-lo contrario, usaremos indistíntamente los nombres
-``vector'' y ``señal'.'
+lo contrario, usaremos indistintamente los nombres
+``vector'' y ``señal'.
 
 Es costumbre empezar
 a enumerar las entradas de un vector
@@ -39,11 +40,11 @@ G_{x} :=
 Si $G_{x}$ está contenida en la gráfica de una recta, diremos que la
 señal es \textbf{afín}
 (en el caso particular en el que
-la ecuación de la recta en cuestión sea de la forma $y= h$
-(con $h$ una constante),
+la ecuación de la recta en cuestión sea de la forma $y= h$,
+con $h$ una constante,
 diremos que la señal es
 \textbf{constante}). Si  $G_{x}$ está contenida en 
-una parábola, o sea, en una
+una parábola de eje vertical, o sea, en una
 gráfica de ecuación cartesiana
 $y=ax^{2}+ bx +c$, donde $a \neq 0$, diremos 
 que la señal es \textbf{cuadrática}.
@@ -93,7 +94,7 @@ y de la norma de estos
 (c.f \ref{prop: La norma inducida por un producto punto}).
 
 \begin{prop}
-(\textbf{la ortogonalidad implica independencia lineal})
+(\textbf{La ortogonalidad implica independencia lineal})
 Si $V$ es un $F-$espacio vectorial finito dimensional y 
 $\{ v_{k} : 0\leq k \leq j \}$ es un subconjunto ortogonal de
 $V$, entonces $V$ es linealmente independiente.
@@ -108,7 +109,7 @@ de $V$ tiene norma uno, decimos que tenemos una
 
 \begin{nota}
 \label{nota: sobre la identidad de parseval}
-\textbf{(sobre la identidad de Parseval)}
+\textbf{(Sobre la identidad de Parseval)}
 Digamos que $dim(V)=n$; si 
 $\cali{E} := \{e_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$ es una
 BON del espacio de Hilbert $V$, es fácil comprobar que, para todo
@@ -123,12 +124,12 @@ y además
 \begin{equation}
 \label{eq1: 11ap}
 || x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}}
-\hspace{0.4cm} \textit{(Identidad de Parseval);}
+\hspace{0.4cm} \textit{(Identidad de Parseval).}
 \end{equation}
 
 
 \noindent
-así, si se usa a una BON $\cali{E}$ del espacio como sistema
+Así, si se usa a una BON $\cali{E}$ del espacio como sistema
 de representación (o sea, si se representa a todo $x$ del espacio 
 por medio de sus $n$ coeficientes respecto a $\cali{E}$), se tiene que
 \begin{itemize}
@@ -144,14 +145,15 @@ Estos dos hechos permiten \textbf{usar la magnitud de un coeficiente en
 \eqref{eq0: 11ap} para valorar la contribución del respectivo 
 elemento de la base $\cali{B}$ para sintetizar a $x$};
 en efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
-es ``muy cercano a cero'', digamos $\langle x, e_{k_{1}} \rangle = \epsilon$,  
+es ``muy cercano a cero'', digamos 
+$|\langle x, e_{k_{1}} \rangle| = \epsilon$,  
 entonces el vector 
 $x_{k_{1}}:= \suma{\substack{ {k=0}, \\  {k \neq k_{1}} }}{n-1}{
 \langle x , e_{k} \rangle e_{k}}$
 es, en la misma medida, cercano al vector inicial $x$, pues
 \[
 || x - x_{k_{1}} || = || \langle x , e_{k_{1}} \rangle e_{k_{1}} ||
-= \langle x , e_{k_{1}} \rangle = \epsilon.
+= |\langle x , e_{k_{1}} \rangle| = \epsilon.
 \]
 
 
@@ -166,7 +168,8 @@ de recuperar a la señal via la identidad
 
 Esta última nota da fuertes razones sobre la utilidad
 de las bases ortonormales como sistema de representación
-en espacios de Hilbert cuando lo que se quiere es
+en espacios de Hilbert 
+de dimensión finita cuando lo que se quiere es
 usar los coeficientes de un vector respecto a la base
 para obtener información geométrica del vector
 (concretamente, sobre la norma).
@@ -377,7 +380,7 @@ consideramos a las gráficas de las potencias básicas
 \label{eq0: 8En}
 f_{i}(t)= t^{i}, \hspace{0.4cm}
 -1 \leq t \leq 1, \hspace{0.2cm}
- k \in \overline{\IN};
+i \in \overline{\IN};
 \end{equation}
 restringiendo su dominio al intervalo $[-1,1]$;
 estas funciones son 
@@ -476,12 +479,12 @@ P_{3}(t) = \frac{5}{2} \sqrt{\frac{7}{2}}\left( t^{3}- \frac{3}{5}t\right).
 \]
 
 En esta discusión tenemos ya involucrada una base ortogonal
-(\textbf{en} el espacio de funciones $L^{2}[-1,1]$);
+(en el espacio de funciones $L^{2}[-1,1]$);
 si planeamos, de alguna forma, usar a estos polinomios
 para el estudio morfológico de señales, por la naturaleza
 discreta de estos últimos objetos, será
 inevitable realizar, en algún punto 
-del argumento, un proceso discretización
+del argumento, un proceso de discretización
 (por ejemplo, 
 via una discretización
 puntual, c.f definición \ref{def: operador de discretizacion puntual}), es decir,
@@ -521,7 +524,7 @@ Un segundo punto de vista, basado
 en discretizaciones por promedios integrales,
 se presentará después en
 \ref{Construcción de Ln en base a discretizaciones con sumas integrales}; 
-como demostraremos a lo largo del capítulo, 
+como demostraremos a lo largo del capítulo \ref{cap 2}, 
 ambas alternativas
 de discretización, igual de naturales la una que la otra, nos
 conducen a la misma base ortonormal de $\IR^{n}$,
@@ -538,6 +541,6 @@ realmente útil para el estudio morfológico de señales finitas.
 		\label{fig: ortogonalizacion, discretizacion}
 		\includegraphics[scale=1.3]{discr_ortog} 
 		\caption{Como se aprecia, las operaciones de
-		ortogonalización y discretización no son conmutativas.}
+		ortogonalización y discretización no conmutan.}
  	\end{measuredfigure}
  \end{figure}
