@@ -105,28 +105,25 @@ def sinusoide_espectros(n, w, A, phi, nombre, ruido = True):
 
 
 def f(t):
-      return 3* np.sin(2*np.pi*t) + np.sin(2*np.pi*4*t) + 0.5* np.sin(2*np.pi*7*t)
+      return 3* np.sin(2*np.pi*t) + np.sin(2*np.pi*4*t) + 0.5* np.cos(2*np.pi*7*t)
 
 Fs = 25
 ts = 1/Fs
 t = np.arange(0,1,ts)
-
 x = f(t) #muestreando y guardando los resultados, dando lugar a la señal 'x'.
 frecuencias = [a/100 for a in range(int(25*100/2) + 1)]
-#ae.grafica_analisisEspectrales(x, 'x')
+ae.grafica_analisisEspectrales(x, 'x')
 
 
 n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
-ae.grafica_analisisEspectrales_PDL(7, 4, graficar = True) 
+#ae.grafica_analisisEspectrales_PDL(7, 4, graficar = True) 
 #ae.grafica_analisisGlobal_n_fijo(39, graficar = True) 
 #ae.grafica_3d_n_k_FP(20) 
 #ae.grafica_analisisGlobal_k_fijo(44, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
-for k in range(2,40):
-    ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
 
 """
 #No ejecutar más:
@@ -137,6 +134,9 @@ for n in range(2, 40):
 
 for n in range(2,40):
     ae.grafica_analisisGlobal_n_fijo(n, graficar = False)
+
+for k in range(2,40):
+    ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
 """
  
  

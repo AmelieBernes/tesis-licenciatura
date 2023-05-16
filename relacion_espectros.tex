@@ -134,12 +134,12 @@ Sean $n \geq 2$, $x \in \IR^{n}$.\\
 
 Si $x \neq 0$, definimos a su \textbf{espectro basado en 
 espacios monofrecuenciales} como la función 
-$\Sigma_{x}: [0, \frac{n}{2}] \longrightarrow [0,1]$
+$\Sigma_{x}: \left[ 0, \frac{n}{2}\right] \longrightarrow [0,1]$
 dada por
 \[
-\Sigma(x) = \sigma_{n, \omega} (x) \hspace{0.2cm}
+\Sigma_{x}(\omega) = \sigma_{n, \omega} (x) \hspace{0.2cm}
 \text{ para toda }
-\hspace{0.2cm} \omega \in Dom_{\omega},
+\hspace{0.2cm} \omega \in \left[ 0, \frac{n}{2}\right],
 \]
 donde los coeficientes
 $\sigma_{n}(x, \omega)$ son como se definieron en 
@@ -149,6 +149,32 @@ Si $x = 0$, definimos su espectro como la
 función
 constante cero.
 \end{defi}
+
+
+\begin{nota}
+\label{nota: muestreo dom frecuencia}
+De forma teórica no hay ningún problema en 
+definir el dominio de espectros
+como los descritos en la definición 
+\ref{def: espectro monofrecuenciales} 
+como el intervalo $\left[ 0, \frac{n}{2}\right]$, pero, para
+poder calcular en realidad 
+espectros de una señal, se debe de usar
+un conjunto discreto de puntos.
+Para los espectros que calcularemos de ahora en 
+adelante, adoptamos la convención de 
+usar usar como dominio 
+del espectro
+$\Sigma_{x}$ de una señal $x \in \IR^{n}$
+al conjunto
+\[
+\left\{ \frac{a}{100} : \hspace{0.2cm}
+0 \leq a \leq \frac{100n}{2} \right\},
+\]
+es decir, se toman $100$ muestras por
+cada unidad del intervalo 
+$\left[ 0, \frac{n}{2}\right]$
+\end{nota}
 
 \section{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}
 
@@ -227,7 +253,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	\ref{def: espectro monofrecuenciales inicial}
 	como la función 
 	\[
-	\Sigma_{x} : [0, \frac{n}{2}] \longrightarrow [0,1].
+	\Sigma_{x} : \left[0, \frac{n}{2} \right] \longrightarrow [0,1].
 	\]
 	
 	La gráfica de este espectro es la de 
@@ -254,8 +280,7 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	\label{def: FM1}
 	Llamaremos \textbf{frecuencia principal-$1$}
 	(y denotaremos
-	por $FM1(x)$) a la frecuencia $\omega \in Dom_{\omega}$ 
-	del rango considerado para calcular el espectro $1$
+	por $FP1(x)$) a una frecuencia $\omega \in [0, \frac{n}{2}]$ 
 	tal que, para cualquier otra $\omega'$ del rango, se tenga que
 	\[
 	\sigma_{n, \omega'}(x) = \Sigma_{x}(\omega') 
@@ -264,13 +289,51 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	\end{defi}
 \end{itemize}
 
-Recuerde la definición de los coeficientes
-$\sigma_{n}(x, \omega)$;
+\begin{nota}
+Note que la existencia de frecuencias principales para
+ambos espectros (como se definieron en
+\ref{def: FM0} y \ref{def: FM1})
+están aseguradas por estár estas definidas
+en términos de máximos de
+conjuntos finitos de números, pero no estamos asegurando
+que tales frecuencias sean únicas.
+Si hay dos o más frecuencias $\omega'$ que satisfagan
+la definición de frecuencia principal-1, tomamos
+como valor de $FP0(x)$ a la menor de tales $\omega'$.
+Hacemos lo mismo para determinar el valor de 
+$FP1(x)$.
+\end{nota}
+
+
+
+Demostremos ahora que, de hecho, el espectro-0
+de hecho es la restricción del espectro-1
+al conjunto de frecuencias 
+$Dom_{TDF, n}$ considerado por la transformada discreta
+de Fourier.
+\begin{prop}
+\label{prop: coinciden espectr}
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $Dom_{TDF, n}$ el dominio del espectro-0 de $x$
+como se definió en \ref{def. Dom tdf}. Se tiene que
+\begin{equation}
+\label{eq4: 4May}
+\forall \omega \in Dom_{TDF, n}:
+\hspace{0.2cm} \tau_{n}(x, \omega) = \sigma_{n}(x, \omega).
+\end{equation}
+\end{prop}
+
+\noindent
+\textbf{Demostración.}
+Recuerde que los coeficientes
+$\sigma_{n}(x, \omega)$
+se definieron como
 \[
-\sigma_{n}(x, \omega) = \frac{|| \Pi_{P_{n, \omega}}(x) ||}{|| x ||};
+\sigma_{n}(x, \omega) = \frac{|| \Pi_{P_{n, \omega}}(x) ||}{|| x ||}.
 \]
-teniendo una base ortonormal del espacio 
-$P_{n, \omega}$ puede calcularse la proyección involucrada en la fórmula.
+Teniendo una base ortonormal del espacio 
+$P_{n, \omega}$ puede calcularse la proyección involucrada en la fórmula
+para $\sigma_{n}(x, \omega)$.
 Recuerde que, por definición del espacio $P_{n, \omega}$,
 \begin{itemize}
 	\item los vectores $c_{n, \omega}$ y $s_{n, \omega}$ conforman
@@ -281,9 +344,9 @@ Recuerde que, por definición del espacio $P_{n, \omega}$,
 	de $P_{n, \omega}$ cuando $\omega = 0$ y,
 	en el caso en el que $n$ es par, también para cuando $\omega = M$
 	(pues sólo para estos valores de omega se tiene 
-	que $\omega \in \frac{n}{2} \IZ$);
+	que $\omega \in \frac{n}{2} \IZ$).
 \end{itemize}
-además, según la proposición
+Además, según la proposición
 \ref{prop: base de fourier version real},
 para todas estas $\omega$,
 los vectores de la lista anterior son ortogonales entre
@@ -295,29 +358,16 @@ de $x$ con los elementos de estas BONs (c.f.
 nota \ref{nota: sobre la identidad de parseval});
 comparando este cálculo con la definición 
 \ref{def: taus}
-de los coeficientes $\tau_{n}(x, \omega)$, concluimos que
-\begin{equation}
-\label{eq4: 4May}
-\forall \omega \in Dom_{TDF, n}: \hspace{0.2cm}
-\tau_{n}(x, \omega) = \sigma_{n}(x, \omega).
-\end{equation}
-Tenemos así la siguiente
+de los coeficientes $\tau_{n}(x, \omega)$,
+concluimos que en efecto se
+tiene la iguadad \eqref{eq4: 4May}.
 
-\begin{prop}
-\label{prop: coinciden espectr}
-Sean $n \geq 2$, $x \in \IR^{n}$.
-Sean $Dom_{TDF, n}$ el dominio del espectro-0 de $x$
-como se definió en \ref{def. Dom tdf} y sea $Dom_{\omega} \subseteq \IR^{+}_{0}$
-un conjunto de frecuencias no negativas respecto al cual se calcula
-el espectro-1 de $x$.
-\[
-\forall \omega \in Dom_{TDF, n} \cap Dom_{\omega}:
-\hspace{0.2cm} \tau_{n}(x, \omega) = \sigma_{n}(x, \omega).
-\]
-\end{prop}
+\QEDB
+\vspace{0.2cm}
 
 Así, \textbf{el espectro basado en espacios monofrecuenciales
-es una extensión de la definición del espectro de Fourier}.
+es una extensión de la definición del espectro 
+basado en la transformada discreta de Fourier}.
 Como ya recordamos al inicio, la
 ventaja de este primer espectro es que para calcularlo es posible usar
 un rango cualquiera de frecuencias no negativas, mientras que el segundo, 
@@ -326,6 +376,22 @@ de $x$ a partir de sinusoides, sino también uno de síntesis
 (c.f. nota \ref{nota: ya?}), se limita a considerar las frecuencias 
 en $Dom_{TDF, n}$.
 
+
+\begin{nota}
+\label{nota: la mejor frecuencia}
+Fijados $n \geq 2$
+y $x \in \IR^{n}$, \textbf{entre más cercano a $1$ sea 
+el coeficiente 
+$\sigma_{n}(x, \omega)$, mejor es usar un sinusoide
+de frecuencia $\omega$ para ajustar la gráfica de $x$}.
+Esto porque, recuerde, entre más cercano a uno sea uno de
+esos coeficientes, más cercana estará la señal $x$ 
+al espacio monofrecuencial $P_{n, \omega}$, luego, más
+cercana está $x$
+a tener
+la propiedad de ser una discretización de un sinusoide
+de la respectiva frecuencia $\omega$.
+\end{nota}
 
 \begin{nota}
 \label{nota: proyeciones monof TDF}
@@ -337,7 +403,10 @@ la síntesis de $x$ respecto a la base de Fourier
 real $\cali{F}_{n}$. De esta suma, podemos
 separar los sumandos que corresponden a una
 cierta frecuencia $\omega \in Dom_{TDF, n}$; recordando
-que, como se notó más arriba, los correspondientes vectores
+que, como se notó
+en la demostración de la proposición
+\ref{prop: coinciden espectr}, 
+los correspondientes vectores
 de frecuencia $\omega$ (que son ya sea uno o dos, dependiendo del valor
 de $\omega$) conforman una BON para el correspondiente
 espacio monofrecuencial 
@@ -350,16 +419,16 @@ Aplicando esto al ejemplo \ref{ej: DFT1},
 si $x$ es la señal definida en 
 \ref{eq2: 10ab}, se tiene que
 \[
-\Pi_{7, 0} = 4.12 c_{0}, 
+\Pi_{7, 0} = 4.12 c_{7,0}, 
 \]
 \[
-\Pi_{7, 1} = -8.76 c_{1} - 7.35 s_{1}, 
+\Pi_{7, 1} = -8.76 c_{7,1} - 7.35 s_{7,1}, 
 \]
 \[
-\Pi_{7, 2} = 4.77 c_{2} - 10 s_{2}, 
+\Pi_{7, 2} = 4.77 c_{7,2} - 10 s_{7,2}, 
 \]
 \[
-\Pi_{7, 3} = 0.14 c_{3} + 9.91 s_{3}.
+\Pi_{7, 3} = 0.14 c_{7,3} + 9.91 s_{7,z3}.
 \]
 \end{nota}
 
@@ -367,14 +436,25 @@ si $x$ es la señal definida en
 
 \begin{ejemplo}
 \label{ej: espectros comparacion}
+
+Sea $f_{\omega}$
+el sinusoide definido como
+\begin{equation}
+\label{eq: sinusoide eje}
+f_{\omega}(t) := -1.5 cos (2 \pi \cdot \omega t + 2 \pi \cdot 0.2).
+\end{equation}
 Considere a una señal $x \in \IR^{16}$ que sea el resultado
 de muestrear uniformemente al sinusoide
-$f(t) = -1.5 cos (2 \pi \cdot 3.4 t + 2 \pi \cdot 0.2)$
-con ruido aleatorio (con distribución, pongamos, uniforme en $[-0.5, 0.5]$).
+$f_{3.4}$
+con ruido aleatorio 
+(con distribución, pongamos, uniforme en $[-0.5, 0.5]$).
 
 A continuación, mostramos las gráficas
-de los espectros de $x$.
-9
+de los espectros de $x$. Para
+calcular el espectro $\Sigma_{x}$,
+usamos el dominio
+establecido en la nota 
+\ref{nota: muestreo dom frecuencia}.
 
 \begin{figure}[H]
 \centering
@@ -397,8 +477,9 @@ FP0 (x) = 3 \hspace{0.2cm} \textit{y} \hspace{0.2cm}
 FP1 (x) = 3.42;
 \]
 esta segunda frecuencia es mucho más cercana a
-la frecuencia real $\omega =3.4$ del sinusoide del que
-fue obtenida la señal $x$; como agregamos ruido en las mediciones, no 
+la frecuencia $\omega =3.4$ del sinusoide del que
+fue obtenida la señal $x$; como agregamos ruido
+aleatorio en las mediciones, no 
 es de extrañarse que no se haya
 obtenido exactamente $FP1(x) = 3.4$.
 
@@ -406,9 +487,7 @@ A pesar de que el espectro-$0$, el obtenido a partir de la
 transformada discreta de Fourier, no dio una mala estimación (del rango
 de frecuencias $Dom_{TDF,n}$ considerado por esta herramienta,
 $\omega =3$ es el valor más cercano al valor real $\omega = 3.4$), vemos en este
-ejemplo que usando el espectro-$1$ de una señal con una malla de
-frecuencias $Dom_{\omega} \supseteq Dom_{TDF,n}$
-suficientemente densa, es posible obtener mejores
+ejemplo que usando el espectro-$1$ es posible obtener mejores
 estimaciones de frecuencias que modelen a la señal original. \\
 
 Mostramos ahora la gráfica de $x$ junto con
@@ -433,8 +512,8 @@ Mostramos ahora la gráfica de $x$ junto con
 		\end{figure}		
 	
 	y
-	\item la señal $\Pi_{P_{16, 3.39}}(x)$, o sea, la señal de
-	dimensión $16$ y frecuencia $FP1(x)=3.39$ más cercana a $x$, junto con
+	\item la señal $\Pi_{P_{16, 3.42}}(x)$, o sea, la señal de
+	dimensión $16$ y frecuencia $FP1(x)=3.42$ más cercana a $x$, junto con
 	el sinusoide continuo del que fue muestreado.
 	\begin{figure}[H]
 			\sidecaption{
@@ -465,10 +544,11 @@ parece ajustarse un poco mejor a la gráfica de $x$. \\
 			\sidecaption{
 			Mostramos ahora los espectros de la señal $x$ que se obtiene
 			tomando $36$ muestras uniformemente espaciadas del mismo sinusoide
-			$f(t)$ de antes, esta vez sin agregar ruido aleatorio a las mediciones.
+			$f_{3.4}(t)$, 	
+			esta vez sin agregar ruido aleatorio a las mediciones.
 			Observe que el espectro-1 detectó a la frecuencia $\omega = 3.4$
 			como la mejor, y que el sinusoide naranja ajusta perfectamente la gráfica
-			de $x$. Como la frecuencia real no es entera, usando la frecuencia principal
+			de $x$. Como la frecuencia real no es entera, usar la frecuencia principal
 			dada por la TDF sigue sin dar resultados perfectos, aunque no malos.
 			\label{fig: sinusoide sin ruido}
 			}
@@ -476,10 +556,13 @@ parece ajustarse un poco mejor a la gráfica de $x$. \\
 			\includegraphics[scale = 0.4]{./estudios_espectrales/sinusoide_sin_ruido} 
 		\end{figure}		
 
+
+
 	\begin{figure}[H]
 			\sidecaption{
-			Si cambiamos la frecuencia dle sinusoide $f$ de este ejemplo
-			a $\omega = 5$, como 
+			Si ahora muestreamos sin ruido
+			del sinusoide $f_{5}$,
+			como 
 			era de esperarse, la frecuencia principal de ambos
 			espectros es $5$
 			(y el valor de los 
@@ -494,20 +577,28 @@ parece ajustarse un poco mejor a la gráfica de $x$. \\
 			\includegraphics[scale = 0.4]{./estudios_espectrales/ejemplo_comparacion_4} 
 		\end{figure}	
 
+
+Para terminar este ejemplo, tomemos una suma de sinusoides
+de varias frecuencias, digamos, de frecuencias
+$1$, $4$ y $7$; sea
+\[
+g(t) = 3 sen(2 \pi t) + sen(2 \pi \cdot 4t) + 0.5 cos(2 \pi \cdot 7t).
+\]
+Sea $x$ la señal que resulta de muestrar, sin ruido, este sinusoide
+$g$, siendo $25$ el tamaño de la muestra.
+\begin{figure}[H]
+	\sidecaption{
+	En la imagen se muestran los espectros de tal $x$. Observe que los
+	espectros parecen concentrarse alrededor de las 
+	frecuencias $1$, $4$ y $7$.
+	\label{fig: sin varias frec}
+	}
+	\centering
+	\includegraphics[scale = 0.4]{./estudios_espectrales/sinusoide_varias_frecuencias} 
+\end{figure}	
+
 \final
 \end{ejemplo}
 
-\begin{nota}
-\label{nota: la mejor frecuencia}
-Según lo discutido en esta sección, fijados $n \geq 2$
-y $x \in \IR^{n}$, \textbf{entre más cercano a $1$ sea 
-el coeficiente $\tau_{n}(x, \omega)$ o 
-$\sigma_{n}(x, \omega)$, mejor es usar un sinusoide
-de frecuencia $\omega$ para ajustar la gráfica de $x$}.
-Esto porque, recuerde, entre más cercano a uno sea uno de
-esos coeficientes, más cercana estará la señal $x$ a tener
-la propiedad de ser una discretización de un sinusoide
-de la respectiva frecuencia.
-\end{nota}
 
 
