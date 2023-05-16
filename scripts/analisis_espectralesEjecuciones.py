@@ -24,6 +24,9 @@ Script en el que ejecutamos las siguientes funciones definidas en el módulo
 	6.- grafica_nube_b0m0_b1m1(), para visualizar las gráficas de nube de los coeficientes
 	    $(b_0n, m_0n)$ y $(b_1n, m_1n)$
 				
+
+    7.- grafica_pendientes_oOrigen_RMC(), para graficar los puntos
+        (n, m0_n), (n, m1_n), (n, b0_n), (n, b1_n), con 3 \leq n \leq 69.
 #  ---------------------------------------- -- ----------------------------------------
 """
 
@@ -112,11 +115,12 @@ ts = 1/Fs
 t = np.arange(0,1,ts)
 x = f(t) #muestreando y guardando los resultados, dando lugar a la señal 'x'.
 frecuencias = [a/100 for a in range(int(25*100/2) + 1)]
-ae.grafica_analisisEspectrales(x, 'x')
+#ae.grafica_analisisEspectrales(x, 'x')
 
 
 n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
-x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
+#x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
+
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 #ae.grafica_analisisEspectrales_PDL(7, 4, graficar = True) 
 #ae.grafica_analisisGlobal_n_fijo(39, graficar = True) 
@@ -124,6 +128,7 @@ x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
 #ae.grafica_analisisGlobal_k_fijo(44, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
+ae.grafica_pendientes_oOrigen_RMC()
 
 """
 #No ejecutar más:
@@ -132,7 +137,7 @@ for n in range(2, 40):
     for k in range(n):
         ae.grafica_analisisEspectrales_PDL(n, k, graficar = False) 
 
-for n in range(2,40):
+for n in range(2,70):
     ae.grafica_analisisGlobal_n_fijo(n, graficar = False)
 
 for k in range(2,40):

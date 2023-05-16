@@ -795,12 +795,12 @@ def grafica_analisisGlobal_n_fijo(n, graficar = True):
     etiqueta_1 = '$(k, $' + r'$FP1( \mathcal{{L}}^{{ {0}, k  }} )$'.format(str(n)) + ')'
     axis[1].scatter(dominio_grados, sigmasMax_n, marker = 'D', label = etiqueta_1, color = colores[2], s = 150)
     axis[1].plot(X, X/2, label = r'$f(t)=\frac{t}{2}$', color = 'gray', linestyle = 'dotted')
-    axis[1].plot(X, b1_n+X*m1_n, color = colores[8], label = r'RMC: $l(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m1_n,2)), str(round(b1_n,2))))
+    axis[1].plot(X, b1_n+X*m1_n, color = colores[8], label = r'RMC: $l_{{ {2}, 1}}(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m1_n,2)), str(round(b1_n,2)), str(n)))
     
     etiqueta_0 = '$(k, $' + r'$FP0( \mathcal{{L}}^{{ {0}, k  }} )$'.format(str(n)) + ')'
     axis[0].scatter(dominio_grados, tausMax_n, label = etiqueta_0, marker = 'D', color = colores[3] , s = 150)
     axis[0].plot(X, X/2, label = r'$f(t)=\frac{t}{2}$', color = 'gray', linestyle = 'dotted')
-    axis[0].plot(X, b0_n+X*m0_n, color = colores[8], label = r'RMC: $l(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m0_n,2)), str(round(b0_n,2))))
+    axis[0].plot(X, b0_n+X*m0_n, color = colores[8], label = r'RMC: $l_{{{2}, 0 }}(t) = {{{0}}}t + {{{1}}}$'.format(str(round(m0_n,2)), str(round(b0_n,2)), str(n)))
     plt.suptitle("Frecuencias máximas encontradas en los análisis espectrales \n de los PDL de dimensión "+str(n), fontsize = 14)
 
     formato_axis(axis[0])
@@ -864,6 +864,46 @@ def grafica_nube_b0m0_b1m1():
         formato_axis(axis[i])
 
     plt.show()
+
+def grafica_pendientes_oOrigen_RMC():
+    """
+    Función que grafica los puntos de la forma
+    (n, m0_n) y (n, m1_n) para n entre 2 y 69.
+    """
+    fig, axis = plt.subplots(2,1)
+    with open('data_AE.txt', 'rb') as f:
+        data_AE = pickle.load(f)
+
+    data_AE_dim_n = data_AE[3] #extraemos la información de dimensión 3
+    b0_n, m0_n = data_AE_dim_n[2], data_AE_dim_n[3]
+    b1_n, m1_n = data_AE_dim_n[4], data_AE_dim_n[5]
+    axis[0].scatter(3, m0_n, color = colores[3], label = r'$(n, m_{n,0})$')
+    axis[0].scatter(3, m1_n, color = colores[2], label = r'$(n, m_{n,2})$')
+    axis[1].scatter(3, b0_n, color = colores[3], label = r'$(n, b_{n,0})$')
+    axis[1].scatter(3, b1_n, color = colores[2], label = r'$(n, b_{n,1})$')
+
+    for n in range(4, 70):
+        data_AE_dim_n = data_AE[n] #extraemos la información de dimensión n
+        b0_n, m0_n = data_AE_dim_n[2], data_AE_dim_n[3]
+        b1_n, m1_n = data_AE_dim_n[4], data_AE_dim_n[5]
+        axis[0].scatter(n, m0_n, color = colores[3])
+        axis[0].scatter(n, m1_n, color = colores[2])
+        axis[1].scatter(n, b0_n, color = colores[3])
+        axis[1].scatter(n, b1_n, color = colores[2])
+
+    axis[0].axhline(y = 0.5, color = 'red')
+    axis[1].axhline(y = 0, color = 'red')
+
+    axis[0].grid()
+    axis[1].grid()
+
+    axis[0].legend(loc = 'best')
+    axis[1].legend(loc = 'best')
+
+    axis[0].set_title('Pendientes de las RMC \n $l_{n,0}$ y $l_{n,1}$ para $3 \leq n \leq 69$')
+    axis[1].set_title('Ordenadas al origen de las RMC \n $l_{n,0}$ y $l_{n,1}$ para $3 \leq n \leq 69$')
+    
+    return plt.show()
 
 
 

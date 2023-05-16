@@ -287,7 +287,18 @@ las preguntas
 \ref{pregunta 1}, \ref{preg 2} y \ref{preg 3}
 planteadas antes. \\
 
+En todos los espectros que graficamos,
+se resaltaron la recta horizontal
+$y = 1$, para recordar que esa es la cota
+superior de los coeficientes espectrales que
+se grafican, 
+y también la recta vertical $x = 0.5$. Según nuestra
+hipótesis \ref{ref: hipotesis}, las frecuencias
+principales debería estar cerca de esta recta vertical. \\
+
 Veamos qué pasa con $n=7$.
+Grafiquemos primero los espectros
+de los PDL de dimensión $7$.
 
 \begin{figure}[H]
 	\sidecaption{
@@ -357,8 +368,8 @@ y $(k, FP0(\cali{L}^{7,k}))$.
 	Observe que $FP0(\cali{L}^{7,0}) = 0 = FP1(\cali{L}^{7,0})$
 	pero $FP0(\cali{L}^{7,1}) = 1 $ mientras que 
 	$FP1(\cali{L}^{7,1})$, aunque no es cero, es un decimal muy cercano
-	a cero; observe en la figura \ref{fig: 7_0,1}, donde se dibujan
-	los espectros de los dos primeros PDL de dimensión $7$ que, en efecto,
+	a cero; observe en la figura \ref{fig: 7_1}, donde se dibuja
+	el espectro de $\cali{L}^{7,1}$ que, en efecto,
 	usando un sinusoide de frecuencia 
 	$0.01$ (la dada por el espectro
 	basado en espacios monofrecuenciales), 
@@ -371,7 +382,7 @@ y $(k, FP0(\cali{L}^{7,k}))$.
 	\label{fig: 7}
 	}
 	\centering
-	\includegraphics[scale = 0.5]{./estudios_espectrales/7} 
+	\includegraphics[scale = 0.33]{./estudios_espectrales/7} 
 \end{figure}	
 
 Como notamos en la descripción de la figura
@@ -428,9 +439,10 @@ sugerido por la figura \ref{fig: k_1}.
 	Note que en este espectro no ocurre lo que se tenía
 	en el del PDL $\cali{L}^{3,1}$ (c.f. figura 
 	\ref{fig: 3_1}); en este caso, el espectro-$1$ muestra
-	claramente que $\omega =0.1$, la frecuencia en $Dom_{\omega, n}$
+	claramente que $\omega =0.1$, la frecuencia considerada
+	en el análisis
 	más cercana a $0$ que \textbf{no} es cero, es la mejor
-	(c.f. nota 
+	(en el sentido explicado en la nota 
 	\ref{nota: la mejor frecuencia}).
 	\label{fig: 8_1}
 	}
@@ -445,10 +457,39 @@ sugerido por la figura \ref{fig: k_1}.
 	\includegraphics[scale = 0.45]{./estudios_espectrales/34_1} 
 \end{figure}	
 
+Puede comprobar, mirando los espectros
+de los PDL $\cali{L}^{n,1}$ de grado $1$,
+que siempre se tiene que $ \omega = 0.01$ es la frecuencia
+que maximiza el coeficiente espectral
+$\sigma_{n}(\cali{L}^{n,k}, \omega)$.
+Esto se explica observando que
+lo que estamos haciendo con este análisis espectral
+es aproximar las gráficas de señales con sinusoides, que son
+funciones diferenciables en todo punto
+(hecho que puede
+puede interpretarse
+como que los ``alrededores
+cercanos'' de cualquier
+punto de la gráfica de un sinusoide son 
+parecidos a una recta), luego, tiene sentido que  
+el análisis espectral de mayor peso a las 
+frecuencias cercanas a cero
+para modelar la gráfica de $\cali{L}^{n,k}$
+que, según el teorema 
+\ref{cor: BON de legendre para espacios Wk}, está contenida
+en una recta. Observe que 
+$\sigma_{n}(\cali{L}^{n,k}, 0)$ es cero, pues
+$P_{n, 0}$ está generado por
+$c_{n,0}$, que es el vector constante uno, y que 
+es ortogonal a $\cali{L}^{n,k}$. Así, los espectros
+de los PDL de grado $1$ tienen una discontinuidad de salto
+por la derecha del cero. \\
+
+
 Graficando algunos PDL de dimensión
 39, apreciamos que conforme $k$ aumenta, es menos
 sencillo aproximar la gráfica del respectivo PDL
-con un sinusoide.
+con un solo sinusoide.
 \begin{figure}[H]
 	\sidecaption{
 	}
@@ -471,13 +512,112 @@ con un sinusoide.
 	\sidecaption{
 	}
 	\centering
-	\includegraphics[scale = 0.3]{./estudios_espectrales/39_38} 
+	\includegraphics[scale = 0.25]{./estudios_espectrales/39_38} 
 \end{figure}	
+
+Sin embargo, puede observar en los espectros guardados en 
+\TODO{referencia a carpeta} que, para las dimensiones consideradas,
+se consigue aproximar muy bien la gráfica del PDL
+$\cali{L}^{n,k}$ cuando $k$ es cercano a cero, y además 
+que los espectros parecen tener un solo máximo global
+(i.e. una sola frecuencia principal 
+$\omega \in \left[0, \frac{n}{2} \right]$)-
+
+Graficando algunos conjuntos de puntos
+de la forma
+$(k, FP0(\cali{L}^{n,k}))$ y 
+$(k, FP1(\cali{L}^{n,k}))$ para ciertas
+dimensiones $n$, veamos si, como 
+afirmamos en la hipótesis 
+\ref{ref: hipotesis}, la frecuencia principal
+resultante de tales análisis es cercana
+a $\frac{k}{2}$.
+
+\begin{figure}[H]
+	\sidecaption{
+	Estudio de frecuencias principales
+	para dimensión $n = 9$.
+	Las ecuaciones de las rectas de mínimos
+	cuadrados para los dos análisis son
+	$l_{9, 0}(t) = 0.45t + 0.09$ y 
+	$l_{9, 1}(t) = 0.5t -0.18$.
+	\label{fig: n 9}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/n_9} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Estudio de frecuencias principales
+	para dimensión $n = 20$.
+	Las ecuaciones de las rectas de mínimos
+	cuadrados para los dos análisis son
+	$l_{20, 0}(t) = 0.44t -0.04$ y 
+	$l_{20, 1}(t) = 0.46t -0.25$.
+	\label{fig: n 20}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/n_20} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	Estudio de frecuencias principales
+	para dimensión $n = 25$.
+	Las ecuaciones de las rectas de mínimos
+	cuadrados para los dos análisis son
+	$l_{25, 0}(t) = 0.45t - 0.26$ y 
+	$l_{9, 1}(t) = 0.46t -0.35$.
+	\label{fig: n 25}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/n_25} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	Estudio de frecuencias principales
+	para dimensión $n = 60$.
+	Las ecuaciones de las rectas de mínimos
+	cuadrados para los dos análisis son
+	$l_{60, 0}(t) = 0.43t - 0.98$ y 
+	$l_{60, 1}(t) = 0.43t - 1$.
+	\label{fig: n 60}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/n_60} 
+\end{figure}
+
+Parece ser que, conforme $n$ aumenta, la 
+pendiente que mejor parece modelar las
+frecuencias principales no es
+$0.5$ (como afirmamos en nuestra hipótesis), 
+sino $0.4$. Ya desde el visualizar algunos espectros
+de los PDL se percibía que las frecuencias principales
+parecían siempre ubicarse a la izquierda de $0.5$.
+
+Grafiquemos los puntos de la forma
+$(n, m_{n,0})$, $(n, m_{n,1})$ y 
+$(n, b_{n,0})$, $(n, b_{n,1})$ 
+para ver si las pendientes de las RMC parecen, como
+sugieren las observaciones anteriores, tender a $0.4$,
+y qué tendencia parecen seguir las ordenadas al origen.
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: coef RMC}
+	}
+	\centering
+	\includegraphics[angle = 90, scale = 0.4]{./estudios_espectrales/graf_coef_RMC} 
+\end{figure}	
+
+
 \begin{figure}[H]
 	\sidecaption{
 	}
 	\centering
-	\includegraphics[scale = 0.3]{./estudios_espectrales/k_12} 
+	\includegraphics[scale = 0.4]{./estudios_espectrales/k_12} 
 \end{figure}	
 \begin{figure}[H]
 	\sidecaption{
