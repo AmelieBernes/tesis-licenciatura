@@ -37,6 +37,8 @@ Enlistamos las preguntas que nos interesa considerar
 relacionadas a las naturaleza oscilatoria
 de los PDL $\cali{L}^{n,k}$
 para dimensiones hasta $n=69$. 
+\TODO{¿Todas nos ayudan a ver qué pasa
+con la respuesta de la hipótesis?}
 
 La primera pregunta es una reformulación de la 
 hipótesis \ref{ref: hipotesis} en términos de los 
@@ -401,7 +403,9 @@ $n=7$ o si también ocurre para otros valores de $n$.
 	Comprobamos numéricamente que los resultados del espectro-1
 	sugieren usar frecuencias muy bajas para modelar los 
 	PDL de grado $1$; la única excepción se da para $n=3$. Graficamos
-	a continuación los espectros de $\cali{L}^{3,1}$ para ver qué
+	a continuación, en la figura 
+	\ref{fig: 3_1},
+	los espectros de $\cali{L}^{3,1}$ para ver qué
 	está sucediendo.
 	\label{fig: k_1}
 	}
@@ -521,7 +525,7 @@ se consigue aproximar muy bien la gráfica del PDL
 $\cali{L}^{n,k}$ cuando $k$ es cercano a cero, y además 
 que los espectros parecen tener un solo máximo global
 (i.e. una sola frecuencia principal 
-$\omega \in \left[0, \frac{n}{2} \right]$)-
+$\omega \in \left[0, \frac{n}{2} \right]$).
 
 Graficando algunos conjuntos de puntos
 de la forma
@@ -593,7 +597,8 @@ Parece ser que, conforme $n$ aumenta, la
 pendiente que mejor parece modelar las
 frecuencias principales no es
 $0.5$ (como afirmamos en nuestra hipótesis), 
-sino $0.4$. Ya desde el visualizar algunos espectros
+sino algo menor, cercana a $0.4$. 
+Ya desde el visualizar algunos espectros
 de los PDL se percibía que las frecuencias principales
 parecían siempre ubicarse a la izquierda de $0.5$.
 
@@ -605,7 +610,22 @@ sugieren las observaciones anteriores, tender a $0.4$,
 y qué tendencia parecen seguir las ordenadas al origen.
 \begin{figure}[H]
 	\sidecaption{
-	\TODO{a}
+	En esta gráfica comprobamos que las pendientes
+	de las rectas de mínimos cuadrados parecen ser más
+	bajas que $0.5$ conforme $n$ crece. Para los valores
+	de $n$ considerado en estos análisis espectrales,
+	vemos que una cota
+	inferior para estas pendientes
+	es $0.425$. Observe que las ordenadas al origen
+	también descienden; si nuestra hipótesis
+	\ref{ref: hipotesis} hubiese sido cierta, tales
+	ordenadas al origen debería permanecer cerca del cero.
+	Con color morado se han graficado los datos
+	correspondientes a los análisis realizados
+	con la TDF, y se uso un naranja para los de
+	los análisis basados en espacios
+	monofrecuenciales. Observe que, por lo general, 
+	los resultados dados por ambos análisis son parecidos.
 	\label{fig: coef RMC}
 	}
 	\centering
@@ -616,14 +636,63 @@ y qué tendencia parecen seguir las ordenadas al origen.
 	\sidecaption{
 	Aquí la gráfica de las nubes de puntos
 	de las que se habló en la figura 
-	\ref{fig: ejemplo_pregunta3_1}.
+	\ref{fig: ejemplo_pregunta3_1}. Observe que no 
+	se acumulan cerca del punto $(0, 0.5)$, como 
+	sería de esperar si la respuesta a la pregunta
+	\ref{pregunta 1} fuese afirmativa.
 	\label{fig: pendiente_oOrigen}
 	}
 	\centering
 	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	
 
+Observe que estamos
+usando los parámetros de las rectas
+de mínimos cuadrados para
+\TODO{aaa}, pero para terminar veamos si al menos
+ocurre que la frecuencia principal de
+un PDL depende sólo de su parámetro de 
+grado $k$, o si también el parámetro
+de dimensión $n$ influye. 
+Hagamos esto 
+fijando un $k \geq 2$ y 
+graficando las familias de puntos de la forma
+\eqref{eq0: 8may}
+y \eqref{eq1: 8may}. Si sólo el parámetro $k$ 
+influye en la frecuencia principal, tendríamos graficas
+de puntos que siguen una trayectoria horizontal.
 
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 3}
+	}
+	\centering
+	\includegraphics[scale = 0.4]{./graficas_analisisEspectrales/k_3} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 20}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_20} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 40}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_40} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 47}
+	}
+	\centering
+	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_47} 
+\end{figure}
 
 \subsection{Sobre la frecuencia real de los PDL (cambia título)}
 

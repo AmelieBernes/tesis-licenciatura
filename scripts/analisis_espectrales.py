@@ -701,11 +701,11 @@ def grafica_analisisGlobal_k_fijo(k, graficar = True):
         sigmaMax_n_k = sigmasMax_n[k]
         tauMax_n_k = tausMax_n[k]
         if graph_label == True:
-            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^', label = r'$(n,FP0 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)))
-            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v', label = r'$(n,FP1 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)))
+            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^', label = r'$(n,FP0 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)), s = 100)
+            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v', label = r'$(n,FP1 (\mathcal{{L}}^{{n, {{{0}}} }}) )$'.format(str(k)), s = 100)
         else: 
-            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^')
-            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v')
+            plt.scatter(n, tauMax_n_k, color = colores[3], marker = '^', s = 100)
+            plt.scatter(n, sigmaMax_n_k, color = colores[2], marker = 'v', s = 100)
     
     if k == 0 or k == 1:
         axis.axhline(y = k/2, color = colores[8], label = r'$y = \frac{{ {{{0}}}  }}{{2}}$'.format(str(k)))
