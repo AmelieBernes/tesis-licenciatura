@@ -122,10 +122,14 @@ n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 #x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
 
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
-#ae.grafica_analisisEspectrales_PDL(7, 4, graficar = True) 
+
+
+ae.grafica_analisisEspectrales_PDL(24, 12, graficar = True) 
+
 #ae.grafica_analisisGlobal_n_fijo(39, graficar = True) 
 #ae.grafica_3d_n_k_FP(20) 
-#ae.grafica_analisisGlobal_k_fijo(44, graficar = True) 
+#ae.grafica_analisisGlobal_k_fijo(55, graficar = True) 
+#ae.grafica_analisisGlobal_k_fijo(10, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
 #ae.grafica_pendientes_oOrigen_RMC()

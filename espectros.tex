@@ -661,13 +661,41 @@ graficando las familias de puntos de la forma
 y \eqref{eq1: 8may}. Si sólo el parámetro $k$ 
 influye en la frecuencia principal, tendríamos graficas
 de puntos que siguen una trayectoria horizontal.
+Se ha marcado en rojo la recta
+$y = \frac{k}{2}$, a la que, según nuestra hipótesis
+\ref{ref: hipotesis}, deberían estár cercanos los
+puntos de las gráficas. 
 
 \begin{figure}[H]
 	\sidecaption{
 	\label{fig: k 3}
 	}
 	\centering
-	\includegraphics[scale = 0.4]{./graficas_analisisEspectrales/k_3} 
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_3} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 8}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_8} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 10}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_10} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 16}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_16} 
 \end{figure}
 
 \begin{figure}[H]
@@ -675,7 +703,7 @@ de puntos que siguen una trayectoria horizontal.
 	\label{fig: k 20}
 	}
 	\centering
-	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_20} 
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_20} 
 \end{figure}
 
 \begin{figure}[H]
@@ -683,7 +711,7 @@ de puntos que siguen una trayectoria horizontal.
 	\label{fig: k 40}
 	}
 	\centering
-	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_40} 
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_40} 
 \end{figure}
 
 \begin{figure}[H]
@@ -691,8 +719,119 @@ de puntos que siguen una trayectoria horizontal.
 	\label{fig: k 47}
 	}
 	\centering
-	\includegraphics[scale = 0.3]{./graficas_analisisEspectrales/k_47} 
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_47} 
 \end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: k 55}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{./estudios_espectrales/k_55} 
+\end{figure}
+
+Observe que, para valores de $k$ ``grandes'', parece ser que 
+la frecuencia principal del PDL $\cali{L}^{n,k}$
+es dependiente no sólo de $k$, sino que la dimensión $n$
+también influye, y que, conforme $n$ aumenta, las
+frecuencias principales disminuyen.
+Lo que es constante en todas las gráficas es que 
+las FP1 están siempre por debajo de
+$\frac{k}{2}$.
+Note además que, para valores pequeños de $k$, la diferencia
+entre los valores reales de las frecuencias principales
+y la estimación de $k/2$ no parece rebasar más que algunas
+unidades, pero, conforme $k$ es mayor, la diferencia
+es considerable (por ejemplo, en la figura \ref{fig: k 55}
+puede apreciarse que algunas frecuencias principales están
+a más de 5 unidades de distancia del valor estimado $55/2$
+para la frecuencia principal). 
+
+\begin{figure}[H]
+	\sidecaption{
+	Según la figura \eqref{fig: k 47}, la frecuencia principal
+	del PDL $\cali{L}^{48, 47}$, cuyo espectro se muestra en la figura, es
+	muy cercano al valor predicho $k = 44/7$. Observe que el sinusoide
+	que resulta del análisis (marcado en naranja) parece aproximar
+	decentemente al PDL en los extremos, pero no es capaz de 
+	de modelar las oscilaciones centrales. El que no sea posible
+	modelar a toda la gráfica con un sólo sinusoide se refleja
+	en el hecho de que $\sigma_{n}(\cali{L}^{48,47}, FP1(\cali{L}^{48,47}))$
+	(que, según la definición de frecuencia principal, es el valor
+	máximo del espectro de la señal $\cali{L}^{48,47}$) es $0.77$, cuando
+	el caso óptimo es que este coeficiente espectral sea
+	cercano a $1$.
+	\label{fig: 48 47}
+	}
+	\centering
+	\includegraphics[angle = 90, scale = 0.4]{48_47} 
+\end{figure}
+\begin{figure}[H]
+	\sidecaption{ Aquí, como en la figura \ref{fig: 48 47},
+	se analiza el espectro de un PDL de grado $47$, pero la dimensión
+	del de esta imagen es mayor (a saber, $60$) a la del PDL
+	de la figura \ref{fig: 48 47}. Observe que la  
+	aproximación es aún peor que la dada en \ref{fig: 48 47}, y que
+	el coeficiente espectral asociado a la frecuencia principal
+	es aún menos cercano a $1$.
+	\label{fig: 60 47}
+	}
+	\centering
+	\includegraphics[angle = 90, scale = 0.4]{60_47} 
+\end{figure}
+
+
+Para comprobar o refutar el hecho de que, conforme $n$ 
+es grande y $k$ tiende a $n-1$ (su cota superior),
+los PDL de dimensión $n$ y grado $k$ no están bien
+modelados con un solo sinusoide (o sea, que no parezca que les
+es característica una frecuecia en particular), 
+fijado un grado $k$
+será de utilidad
+graficar los puntos de la forma
+\[
+\tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))
+\]
+y
+\[
+(n, \sigma_{n}(\cali{L}^{n,k}, FP1(\cali{L}^{n,k})));
+\]
+
+
+Observe cómo los coeficientes espectrales 
+$\sigma_{n}(\cali{L}^{n,k}, FP1(\cali{L}^{n,k})))$ son 
+siempre más cercanos a $1$
+que los 
+$\tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))$ 
+
+\subsection{Lista de conclusiones}
+Resumimos todo lo discutido antes.
+Respondemos las preguntas.
+\begin{itemize}
+\item Si $n$ y $k$ son ambos grandes, \TODO{AAA}
+no parece ser factible aproximar la gráfica
+del PDL $\cali{L}^{n,k}$ sólo con un sinusoide. Los valores
+de los coeficientes espectrales $\sigma_{n}(\cali{L}^{n,k}, \omega)$
+parecen estár todos muy alejados de $1$.
+\item Incluso para valores grandes de $n$, los primeros
+PDL de dimensión $n$ parecen tener una clara frecuencia.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Sobre la frecuencia real de los PDL (cambia título)}
 

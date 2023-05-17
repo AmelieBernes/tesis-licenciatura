@@ -106,18 +106,11 @@ def formato_axis_leyenda_exterior(axis):
 #En realidad, estos son casos particulares de (???), pero las programamos para evitar
 #realizar cálculos que sabemos son iguales a cero.
 
-"""
-def c_w(n,t, w): #TODO quiero quitarla.
-  return math.sqrt(1/n)*np.cos(2*pi*w*t)
-
-def s_w(n,t, w): #TODO quiero quitarla.
-  return math.sqrt(1/n)*np.sin(2*pi*w*t)
-"""
-
 def calculo_baseFourier(n): 
   """
   función que calcula la BON de Fourier (versión real) de dimensión n.
   """
+  #TODO cambiar notacion de f_w a c_nw y de g_w a s_nw.
   dominio=[k/n for k in range(n)]
   M=math.ceil(n/2) #TODO poner como argumento.
   
@@ -456,6 +449,8 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   axis0.set_title('Gráfica de '+ "${0}$".format(nombre))
 
   sigmas = []
+  #TODO recuerda que debes de quitar este if-else. Es innecesario, pues ya sabes que sólo
+  #los casos extremos cumplen la condición.
   for w in frecuencias: 
     if w % (n/2) == 0 :
       sigma = sigma_caso2(x, w)
@@ -592,6 +587,7 @@ def calculo_sigmaMax(x, n, frecuencias):
     'frecuencias' es un array con frecuencias respecto a la cuales comparar a 'x'.
     Esta función calcula todas las sigmas de 'x' respecto a las frecuencias contenidas en 'frecuencias'
     y regresa la sigma máxima (la que se resalta cuando se grafica el espectro.)
+    #TODO en realidad, la descripción es incorrecta.
     """
     sigmas = []
     for w in frecuencias: 
@@ -674,6 +670,58 @@ def tabla_informacion():
     f.close()
 
 
+#TODO creo que antes usas el nombre 'sigmaMax' de forma incorrecta. Sería mucho mejor usar 'frecMax0'
+def guardando_sigmasYtaus_eval_en_frecPrin(n):
+    #sí funcionó!
+    """
+    'n' es un entero mayor o igual a dos, y es la dimensión de los PDL para los que se
+    calcula, para toda 0 \leq k \leq n-1
+    	1.- la frecuencia principal 1 'w1' del PDL de dim. n y grado k junto con sigma evaluada en tal f.p.
+    	2.- la frecuencia principal 0 'w0' del PDL de dim. n y grado k  junto con tau evaluada en tal f.p.
+    
+    Tales coeficientes se almacenan en el diccionario guardado en 'data_AE_FP.txt'
+        * llave: (n,k)
+        *valor: (w1, sigma_{n}(L^{n,k}, w1)),  (w0, sigma_{n}(L^{n,k}, w0))
+    """
+    base_legendre = legendre.calculo_base(n)
+    frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
+    dominio = [m/n for m in range(n)]
+
+    with open('data_AE_FP.txt', 'rb') as f:
+        diccionario = pickle.load(f)
+
+    sigmasMax_n, tausMax_n = [], [] 
+    for k in range(n): #iteramos en los grados de los PDL de dimensión n
+        vector_legendre = base_legendre[k]
+        frecMax1_n_k = calculo_sigmaMax(vector_legendre, n, frecuencias)
+        if frecMax1_n_k == 0 or frecMax1_n_k == n/2:
+            sigmaMax_n_k = sigma_caso2(vector_legendre, frecMax1_n_k)
+        else:
+            sigmaMax_n_k = sigma_caso1(vector_legendre, frecMax1_n_k)
+
+        frecMax0_n_k = calculo_tauMax(vector_legendre)
+        norma = np.linalg.norm(vector_legendre)
+        if n%2 ==1:
+            if frecMax0_n_k == 0:
+                c_n0=[math.sqrt(1/n)*np.cos(0*t) for t in dominio]
+                tauMax_n_k = abs(np.dot(c_n0,0))/norma
+            else:
+                c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                tauMax_n_k = math.sqrt(np.dot(c_n, vector_legendre)**2 + np.dot(s_n, vector_legendre)**2 )/norma
+        else:
+            if frecMax0_n_k == 0 or frecMax0_n_k == math.ceil(n/2) :
+                c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                tauMax_n_k = abs(np.dot(c_n,0))/norma
+            else:
+                c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                tauMax_n_k = math.sqrt(np.dot(c_n, vector_legendre)**2 + np.dot(s_n, vector_legendre)**2 )/norma
+        
+        diccionario[(n, k)] = (frecMax1_n_k, sigmaMax_n_k), (frecMax0_n_k, tauMax_n_k)
+
+    with open('data_AE_FP.txt', 'wb') as f:
+        pickle.dump(diccionario, f)
 """
 #  ---------------------------------------- -- ----------------------------------------
 
@@ -902,12 +950,43 @@ def grafica_pendientes_oOrigen_RMC():
     return plt.show()
 
 
+def grafica_coefEspectrales_de_frecPrincipales(k):
+    """
+    k es un entero entre 2 y 68 (inclusivo)
+    Se grafican los puntos de la forma (n, tau_{n}(FP0(L^{n,k}))) y 
+    (n, sigma_{n}(FP1(L^{n,k})))
+    """
+    fig, axis = plt.subplots(1)
+    with open('data_AE_FP.txt', 'rb') as f:
+        data_AE = pickle.load(f)
+
+    for n in range(k+1, 69):
+        sigmaMax_n_k = data_AE[(n,k)][0][1]
+        tauMax_n_k = data_AE[(n,k)][1][1]
+        axis.scatter(n, sigmaMax_n_k, color = colores[2])
+        axis.scatter(n, tauMax_n_k, color = colores[3])
+
+    sigmaMax_n_k = data_AE[(69,k)][0][1]
+    tauMax_n_k = data_AE[(69,k)][1][1]
+    axis.scatter(n, sigmaMax_n_k, color = colores[2], label = r'$(n, \sigma_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP1(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)))
+    axis.scatter(n, tauMax_n_k, color = colores[3], label = r'$(n, \tau_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP0(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)))
+
+    axis.axhline(y = 1, color = 'red')
+    plt.grid()
+    plt.legend()
+    plt.suptitle('Valores de los coeficientes espectrales evaluados en las \n frecuencias principales de los PDL de grado '+str(k))
+    return plt.show()
+
 
 if __name__=='__main__':
+ 
+  grafica_coefEspectrales_de_frecPrincipales(40)
 
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')
   print(' "analisis_espectralesEjecuciones.py" ')
+
+  """
   # ---------------------------------------------------------------------------------
   #                scripts que ejecuté para guardar la información en los .txt
   # ---------------------------------------------------------------------------------
@@ -917,10 +996,11 @@ if __name__=='__main__':
   #.html.
 
   #------------- Guardando datos con pickle
+  #TODO ya arruiné este .txt. Ejecuta entonces este código de nuevo!!
   #Ya ejecuté este loop y guardé los datos en data_AE.txt. No lo ejecutes más!
   #for n in range(2, 70):
   #    analisis_espectralPDL_global(n)
-    
   
-
- 
+  for n in range(2, 70):
+    guardando_sigmasYtaus_eval_en_frecPrin(n)
+  """
