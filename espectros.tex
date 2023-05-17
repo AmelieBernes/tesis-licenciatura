@@ -37,11 +37,13 @@ Enlistamos las preguntas que nos interesa considerar
 relacionadas a las naturaleza oscilatoria
 de los PDL $\cali{L}^{n,k}$
 para dimensiones hasta $n=69$. 
-\TODO{¿Todas nos ayudan a ver qué pasa
-con la respuesta de la hipótesis?}
-
-La primera pregunta es una reformulación de la 
-hipótesis \ref{ref: hipotesis} en términos de los 
+Todas ellas se formulan con la intención de 
+verificar o refutar y refinar la 
+hipótesis \ref{ref: hipotesis} 
+hecha al inicio del capítulo. La primera
+de estas preguntas es una reformulación
+de dicha hipótesis
+en términos de los 
 valores $FM0(x)$ y $FM1(x)$ definidos en 
 \ref{def: FM0} y \ref{def: FM1}.
 
@@ -278,7 +280,7 @@ para los PDL de dimensión hasta $40$, así
 como gráficas análogas a las de las figuras
 \ref{fig: ejemplo_pregunta2}
 y 
-\ref{fig: ejemplo_pregunta3}
+\ref{fig: ejemplo_pregunta3_0}
 se han guardado en \TODO{cita la carpeta del
 repositorio
 con las imágenes.}
@@ -646,10 +648,12 @@ y qué tendencia parecen seguir las ordenadas al origen.
 	\includegraphics[scale = 0.6]{./estudios_espectrales/pendiente_oOrigen} 
 \end{figure}	
 
-Observe que estamos
-usando los parámetros de las rectas
+
+Usados ya los parámetros de las rectas
 de mínimos cuadrados para
-\TODO{aaa}, pero para terminar veamos si al menos
+intentar ver si los PDL
+de grado $k$ presentan una respuesta
+mayor a la frecuencia $k/2$, veamos si al menos
 ocurre que la frecuencia principal de
 un PDL depende sólo de su parámetro de 
 grado $k$, o si también el parámetro
@@ -789,26 +793,119 @@ es característica una frecuecia en particular),
 fijado un grado $k$
 será de utilidad
 graficar los puntos de la forma
-\[
-\tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))
-\]
+\begin{equation}
+\label{ea0: 17may}
+(n, \tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))
+\end{equation}
 y
-\[
+\begin{equation}
+\label{ea1: 17may}
 (n, \sigma_{n}(\cali{L}^{n,k}, FP1(\cali{L}^{n,k})));
-\]
+\end{equation}
+si ocurriése que los PDL por lo general reaccionan
+principalmente a una frecuencia, se debería tener 
+(según la nota 
+\ref{nota: la mejor frecuencia}) que
+las ordenadas de los puntos
+\ref{ea0: 17may} y \ref{ea1: 17may}
+son cercanas a $1$.
 
 
-Observe cómo los coeficientes espectrales 
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 2}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_2} 
+\end{figure}	
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 8}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_8} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 20}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_20} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 30}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_30} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 40}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_40} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 50}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_50} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 60}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_60} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\TODO{a}
+	\label{fig: FP k 66}
+	}
+	\centering
+	\includegraphics[scale = 0.6]{FP_k_66} 
+\end{figure}	
+
+
+Comprobamos que los valores de los
+coeficientes espectrales de un PDL
+evaluados en la frecuencia principal de este 
+se alejan de $1$ (el caso ideal)
+conforme $n$ aumenta y $k$ no tiene valores bajos. \\
+
+Por otro lado, 
+observe cómo los coeficientes espectrales 
 $\sigma_{n}(\cali{L}^{n,k}, FP1(\cali{L}^{n,k})))$ son 
 siempre más cercanos a $1$
 que los 
-$\tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))$ 
+$\tau_{n}(\cali{L}^{n,k}, FP0(\cali{L}^{n,k})))$, 
+comprobando con esto que con el estudio
+espectral basado en espacios monofrecuenciales
+es posible encontrar una frecuencia que ajuste mejor la
+gráfica del PDL que la frecuencia resultante
+al hacer un análisis con la TDF.
 
 \subsection{Lista de conclusiones}
-Resumimos todo lo discutido antes.
-Respondemos las preguntas.
+\TODO{en construcción. Es sólo un resumen puntual
+de lo anterior.}
 \begin{itemize}
-\item Si $n$ y $k$ son ambos grandes, \TODO{AAA}
+\item Si $n$ y $k$ son ambos grandes, 
 no parece ser factible aproximar la gráfica
 del PDL $\cali{L}^{n,k}$ sólo con un sinusoide. Los valores
 de los coeficientes espectrales $\sigma_{n}(\cali{L}^{n,k}, \omega)$

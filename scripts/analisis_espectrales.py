@@ -962,14 +962,14 @@ def grafica_coefEspectrales_de_frecPrincipales(k):
 
     for n in range(k+1, 69):
         sigmaMax_n_k = data_AE[(n,k)][0][1]
-        tauMax_n_k = data_AE[(n,k)][1][1]
-        axis.scatter(n, sigmaMax_n_k, color = colores[2])
-        axis.scatter(n, tauMax_n_k, color = colores[3])
+        tauMax_n_k = data_AE[(n,k)][1][1] #TODO no funciona k impar??
+        axis.scatter(n, sigmaMax_n_k, color = colores[2], marker = 's')
+        axis.scatter(n, tauMax_n_k, color = colores[3], marker = 's')
 
     sigmaMax_n_k = data_AE[(69,k)][0][1]
     tauMax_n_k = data_AE[(69,k)][1][1]
-    axis.scatter(n, sigmaMax_n_k, color = colores[2], label = r'$(n, \sigma_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP1(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)))
-    axis.scatter(n, tauMax_n_k, color = colores[3], label = r'$(n, \tau_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP0(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)))
+    axis.scatter(n, sigmaMax_n_k, marker = 's', color = colores[2], label = r'$(n, \sigma_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP1(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)))
+    axis.scatter(n, tauMax_n_k, color = colores[3], label = r'$(n, \tau_{{n}}(\mathcal{{L}}^{{ n, {0}  }}, FP0(\mathcal{{L}}^{{ n, {0}  }})))$'.format(str(k)), marker = 's')
 
     axis.axhline(y = 1, color = 'red')
     plt.grid()
@@ -980,7 +980,6 @@ def grafica_coefEspectrales_de_frecPrincipales(k):
 
 if __name__=='__main__':
  
-  grafica_coefEspectrales_de_frecPrincipales(40)
 
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')

@@ -27,6 +27,10 @@ Script en el que ejecutamos las siguientes funciones definidas en el módulo
 
     7.- grafica_pendientes_oOrigen_RMC(), para graficar los puntos
         (n, m0_n), (n, m1_n), (n, b0_n), (n, b1_n), con 3 \leq n \leq 69.
+  
+    8.- grafica_coefEspectrales_de_frecPrincipales(k), para graficar los puntos
+        de la forma (n, tau_{n}(FP0(L^{n,k}))) y (n, sigma_{n}(FP1(L^{n,k}))) para toda
+        k+1 \leq n \leq 69
 #  ---------------------------------------- -- ----------------------------------------
 """
 
@@ -124,16 +128,17 @@ n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
 
-ae.grafica_analisisEspectrales_PDL(24, 12, graficar = True) 
-
-#ae.grafica_analisisGlobal_n_fijo(39, graficar = True) 
-#ae.grafica_3d_n_k_FP(20) 
 #ae.grafica_analisisGlobal_k_fijo(55, graficar = True) 
 #ae.grafica_analisisGlobal_k_fijo(10, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
 #ae.grafica_pendientes_oOrigen_RMC()
 
+ae.grafica_coefEspectrales_de_frecPrincipales(30)
+ae.grafica_coefEspectrales_de_frecPrincipales(40)
+ae.grafica_coefEspectrales_de_frecPrincipales(50)
+ae.grafica_coefEspectrales_de_frecPrincipales(60)
+ae.grafica_coefEspectrales_de_frecPrincipales(66)
 """
 #No ejecutar más:
 
