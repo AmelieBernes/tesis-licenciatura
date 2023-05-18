@@ -19,8 +19,13 @@ de $\Sigma_{x}$.
 \begin{prop}
 \label{prop: periodicidad espectro}
 \textbf{(Periodicidad del espectro)}
-Sean $x \in \IR^{n}$, $0 \leq \omega \leq \frac{n}{2}$.
-Para toda $K \in \IZ$,
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $\Sigma_{x}$ el espectro de $x$ como se definió en 
+\eqref{def: espectro monofrecuenciales inicial}.
+El espectro $\Sigma_{x}$ es $n-$periódico, es decir, 
+para cualquier frecuencia
+$0 \leq \omega \leq n$
+y toda $K \in \IZ$, se tiene que 
 \[
 \sigma_{n}(x, \omega) = \sigma_{n}(x, \omega + Kn).
 \]
@@ -124,42 +129,20 @@ la igualdad deseada.
 	\centering
 	\includegraphics[scale = 1.4]{simetria_espectro} 
 \end{figure}	
-
-Según estas propiedades de periodicidad y simetría,
-podemos redefinir el espectro de una señal $x$
-como sigue:
-\begin{defi}
-\label{def: espectro monofrecuenciales}
-Sean $n \geq 2$, $x \in \IR^{n}$.\\
-
-Si $x \neq 0$, definimos a su \textbf{espectro basado en 
-espacios monofrecuenciales} como la función 
-$\Sigma_{x}: \left[ 0, \frac{n}{2}\right] \longrightarrow [0,1]$
-dada por
-\[
-\Sigma_{x}(\omega) = \sigma_{n, \omega} (x) \hspace{0.2cm}
-\text{ para toda }
-\hspace{0.2cm} \omega \in \left[ 0, \frac{n}{2}\right],
-\]
-donde los coeficientes
-$\sigma_{n}(x, \omega)$ son como se definieron en 
-la proposición \ref{prp: ammm}. \\
-
-Si $x = 0$, definimos su espectro como la 
-función
-constante cero.
-\end{defi}
-
+ 
 
 \begin{nota}
 \label{nota: muestreo dom frecuencia}
-De forma teórica no hay ningún problema en 
-definir el dominio de espectros
-como los descritos en la definición 
-\ref{def: espectro monofrecuenciales} 
-como el intervalo $\left[ 0, \frac{n}{2}\right]$, pero, para
-poder calcular en realidad 
-espectros de una señal, se debe de usar
+Según estas propiedades de periodicidad y simetría,
+podemos limitarnos a evaluar el espectro
+$\Sigma_{x}$ de una señal sólo en frecuencias
+contenidas en el intervalo $[0, n/2]$, pues los valores
+del espectro para otros valores pueden deducirse por periodicidad
+y simetría. \\
+
+Ahora bien, para poder escribir programas
+para calcular un tal espectro $\Sigma_{x}$
+se debe de usar
 un conjunto discreto de puntos.
 Para los espectros que calcularemos de ahora en 
 adelante, adoptamos la convención de 
@@ -167,6 +150,7 @@ usar usar como dominio
 del espectro
 $\Sigma_{x}$ de una señal $x \in \IR^{n}$
 al conjunto
+\TODO{revisa!}
 \[
 \left\{ \frac{a}{100} : \hspace{0.2cm}
 0 \leq a \leq \frac{100n}{2} \right\},
@@ -374,7 +358,18 @@ un rango cualquiera de frecuencias no negativas, mientras que el segundo,
 a pesar de que da no sólo un proceso de análisis de una señal 
 de $x$ a partir de sinusoides, sino también uno de síntesis
 (c.f. nota \ref{nota: ya?}), se limita a considerar las frecuencias 
-en $Dom_{TDF, n}$.
+en $Dom_{TDF, n}$. \\
+
+Recuerde que en la nota 
+\ref{nota: muestreo dom frecuencia} explicamos que 
+basta evaluar a $\Sigma_{x}$ en el intervalo $[0, n/2]$, 
+pues a partir de estos valores puede deducirse el valor
+del espectro en cualquier otra frecuencia positiva; observe que,
+para toda $n$, el conjunto de frecuencias enteras 
+consideradas por la TDF, $Dom_{TDF, n}$, está
+contenido en $[0, n/2]$, luego, basta calcular 
+a $\Sigma_{x}$ en $[0, n/2]$
+para tener ambos análisis espectrales.
 
 
 \begin{nota}
@@ -600,5 +595,5 @@ $g$, siendo $25$ el tamaño de la muestra.
 \final
 \end{ejemplo}
 
-
+\input{frec_muestreo}
 

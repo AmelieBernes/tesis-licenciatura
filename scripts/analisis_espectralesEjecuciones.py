@@ -134,11 +134,8 @@ n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 
 #ae.grafica_pendientes_oOrigen_RMC()
 
-ae.grafica_coefEspectrales_de_frecPrincipales(30)
-ae.grafica_coefEspectrales_de_frecPrincipales(40)
-ae.grafica_coefEspectrales_de_frecPrincipales(50)
-ae.grafica_coefEspectrales_de_frecPrincipales(60)
-ae.grafica_coefEspectrales_de_frecPrincipales(66)
+for k in range(10, 70):
+    ae.grafica_coefEspectrales_de_frecPrincipales(k, False)
 """
 #No ejecutar más:
 

@@ -703,8 +703,8 @@ def guardando_sigmasYtaus_eval_en_frecPrin(n):
         norma = np.linalg.norm(vector_legendre)
         if n%2 ==1:
             if frecMax0_n_k == 0:
-                c_n0=[math.sqrt(1/n)*np.cos(0*t) for t in dominio]
-                tauMax_n_k = abs(np.dot(c_n0,0))/norma
+                c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
+                tauMax_n_k = abs(np.dot(c_n,vector_legendre))/norma
             else:
                 c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
                 s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
@@ -712,7 +712,7 @@ def guardando_sigmasYtaus_eval_en_frecPrin(n):
         else:
             if frecMax0_n_k == 0 or frecMax0_n_k == math.ceil(n/2) :
                 c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                tauMax_n_k = abs(np.dot(c_n,0))/norma
+                tauMax_n_k = abs(np.dot(c_n, vector_legendre))/norma
             else:
                 c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
                 s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
@@ -950,12 +950,13 @@ def grafica_pendientes_oOrigen_RMC():
     return plt.show()
 
 
-def grafica_coefEspectrales_de_frecPrincipales(k):
+def grafica_coefEspectrales_de_frecPrincipales(k, graficar = True):
     """
     k es un entero entre 2 y 68 (inclusivo)
     Se grafican los puntos de la forma (n, tau_{n}(FP0(L^{n,k}))) y 
     (n, sigma_{n}(FP1(L^{n,k})))
     """
+    ruta_carpeta = '/home/ame/GitHub/tesis-licenciatura/imagenes/graficas_analisisEspectrales/'
     fig, axis = plt.subplots(1)
     with open('data_AE_FP.txt', 'rb') as f:
         data_AE = pickle.load(f)
@@ -975,12 +976,17 @@ def grafica_coefEspectrales_de_frecPrincipales(k):
     plt.grid()
     plt.legend()
     plt.suptitle('Valores de los coeficientes espectrales evaluados en las \n frecuencias principales de los PDL de grado '+str(k))
-    return plt.show()
+    if graficar == True:
+      fig.tight_layout()
+      return plt.show()
+    else:
+      #fig.set_size_inches(11.25, 12.34) 
+      fig.tight_layout()
+      plt.savefig(ruta_carpeta + 'coef_espectralesFP_'+ str(k) )
 
 
-if __name__=='__main__':
  
-
+if __name__ == '__main__':
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')
   print(' "analisis_espectralesEjecuciones.py" ')
