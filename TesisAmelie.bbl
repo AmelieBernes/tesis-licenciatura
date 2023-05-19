@@ -209,6 +209,16 @@
     \field{year}{1970}
   \endentry
 
+  \entry{hopital}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Hop}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+  \field{howpublished}{\url{https://en.wikipedia.org/wiki/L\%27H\%C3\%B4pital\%27s_rule}}
+    \field{note}{Accessed: 2023-05-18}
+    \field{title}{L'Hopital's rule}
+  \endentry
+
   \entry{interpolation}{misc}{}
     \field{labeltitlesource}{title}
     \field{labelalpha}{Int}

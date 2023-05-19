@@ -115,10 +115,10 @@ Para las dimensiones $n$ marcadas
 puede apreciarse que, en el vector,
 $\cali{L}^{n,k} = \left( \cali{L}^{n,k}_{m} \right)_{m=0}^{n-1}$,
 las entradas a la derecha son iguales a las de la izquierda,
-con un cambio de signo que depende del
+con un cambio de signo que depende de la paridad del
 grado $k$ del polinomio discreto de Legendre. \\
 
-Para demostrar que en efecto se tiene las simetrías
+Para demostrar que en efecto se tienen las simetrías
 sugeridas por las tablas anteriores
 para cualquier $n$,
 conviene
@@ -279,7 +279,7 @@ El argumento para $n$ par es análogo.
 \section{Estudio para dimensiones impares}
 A lo largo de esta subsección vamos 
 estudiar las simetrías presentes en las entradas
-de los PDL $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$
+de los PDL $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$,
 cuando la dimensión $n$ es impar;
 $n \in \IN$ impar; digamos que
 
@@ -295,7 +295,7 @@ en los polinomios discretos de Legendre de dimensión impar)}.
 Sea $n \in \IN$ como en \eqref{eq1: 19En}.
 Sea $0 \leq k \leq n-1$ y
 considere al vector $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})_{m=0}^{n-1}$
-como se ha definido en \eqref{def: base de Legendre discreta}. 
+como se ha definido en \ref{def: base de Legendre discreta}. 
 Se tiene que 
 \begin{itemize}
 \item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
@@ -315,7 +315,7 @@ $\cali{L}^{n, k}_{M-1}=0$ si $k$ es impar.
 	\begin{measuredfigure}
 		\includegraphics[scale=1]{simetria1} 
 		\caption{	
-		Fijadas una dimensión impar $n=2N+1$ 
+		Fijadas una dimensión impar $n=2M-1$ 
 		y un grado $0 \leq k \leq n-1$,
 		el teorema \ref{prop: simetrias en dimensiones impares}
 		da una relación simple entre las parejas 
@@ -395,7 +395,7 @@ en particular, los vectores $\cali{L}^{n,k}$ y
 $\overline{\eta}_{k}$ son múltiplos escalares uno del otro.
 
 Afirmamos que ocurre que
-$\overline{\eta}_{k} \in S_{+}$ (resp. que
+$\overline{\eta}_{k} \in S_{n,+}$ (resp. que
 $\overline{\eta}_{k} \in S_{n,-}$) si $k$ es par
 (resp. impar); por ser $S_{n,+}$
 y $S_{n,-}$ cerrados bajo multiplicación
@@ -419,7 +419,7 @@ Considere ahora a $k=1$, el menor grado impar. Según
 \label{eq5: 19En}
 \overline{\eta}_{1}= w_{1}
 - \frac{\langle w_{1}, \overline{\eta}_{0} \rangle}
-{\langle \overline{\eta}_{0}, \overline{\eta}_{0} \rangle}\overline{\eta}_{0};
+{\langle \overline{\eta}_{0}, \overline{\eta}_{0} \rangle}\overline{\eta}_{0}.
 \end{equation}
 De la observación 
 \ref{obs: pertenencia} y el lema
@@ -437,7 +437,7 @@ Digamos pues que
 \overline{\eta}_{1} = 
 (a_{0}, \ldots , a_{M-2}, a_{M-1}, -a_{M-2}, \ldots , -a_{0} );
 \]
-para completar la base de inducción debemos de mostrar
+para completar la base de inducción debemos demostrar
 que $a_{M-1}$, la entrada central de $\overline{\eta}_{1}$,
 es cero. Según \eqref{eq3: 19En} y
 la definición del polinomio discreto $w_{0}$, 
@@ -455,7 +455,7 @@ son ortogonales entre sí, llegamos, como queríamos, a que
 
 
 
-\item (Paso inductivo) sea $0 \leq k \leq n-1$ par, y
+\item (Paso inductivo) Sea $0 \leq k \leq n-1$ par, y
 supongamos la afirmación cierta para todo polinomio de Legendre
 discreto de dimensión $n$ y grado menor a $k$;
 mostremos que $\overline{\eta}_{k}$ es elemento de $S_{n,+}$.
@@ -496,7 +496,7 @@ cuando se supone $k$ impar.
 
 \section{Estudio para dimensiones pares}
 Una discusión análoga a la desarrollada en la subsección
-anterior se sigue para cuando la dimensión $n$ de espacio
+anterior se sigue para cuando la dimensión $n$ del espacio
 es par; la única diferencia es que los vectores discretos
 de Legendre de una tal dimensión no tienen entrada central,
 pero los argumentos de simetría y antisimetría se siguen
@@ -515,7 +515,7 @@ en los polinomios discretos de Legendre de dimensión par)}.
 Sea $n \in \IN$ par, digamos,
 $n=2M$, con $M \geq 1$. Sea $0 \leq k \leq n-1$ y
 considere al vector $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})_{m=0}^{n-1}$
-como se ha definido en \eqref{def: base de Legendre discreta}.
+como se ha definido en \ref{def: base de Legendre discreta}.
 Se tiene que 
 \begin{itemize}
 \item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
@@ -538,8 +538,8 @@ se tiene que $\cali{L}^{n,k}_{m} = -\cali{L}^{n,k}_{n-m-1}$ si $k$ es impar.
 		\caption{Fijadas una dimensión par $n=2M$ 
 		y un grado $0 \leq k \leq n-1$ ,
 		en esta proposición se da una relación simple entre las parejas 
-		de entradas de $\cali{L}^{n,m}$ con índices $m$ y $2N-m-1$ 
-		(donde los índices $0 \leq m \leq N-1$ son los de las primeras
-		$N$ entradas).}
+		de entradas de $\cali{L}^{n,k}$ con índices $m$ y $n-m-1$ 
+		(donde los índices $0 \leq m \leq M-1$ son los de las primeras
+		$M$ entradas).}
  	\end{measuredfigure}
  \end{figure}

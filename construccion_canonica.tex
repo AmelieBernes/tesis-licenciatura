@@ -104,7 +104,7 @@ del Teorema fundamental del álgebra, se usará en repetidas ocasiones.
 \label{prop: consecuencia del TFA}
 Sean $n \geq 2$ y 
 $\cali{P}=\{ t_{j}:=t_{0}+hj : \hspace{0.1cm} 0 \leq j \leq n-1 \}$ 
-es una malla uniforme de $n$ puntos.
+una malla uniforme de $n$ puntos.
 Si $f(t) \in \IR[t]$ es un polinomio de grado menor a $n$ y
 $\Omega_{n, \cali{P}}(f)$ es el vector cero de $\IR^{n}$, entonces
 $f$ es el polinomio cero.
@@ -125,9 +125,9 @@ $f$ es el polinomio cero.
 
 
 \begin{notacion} \label{notacion: Pn, fk, Wi, vk}
-Sea $n \in \IN$ y $k$ un entero no negativo.
+Sean $n \in \IN$ y $k$ un entero no negativo.
 Denotaremos 
-por $\IR_{t}[x]$ al subespacio de $\IR[t]$
+por $\IR_{k}[t]$ al subespacio de $\IR[t]$
 que consta de los polinomios de grado a lo más $k$.
 \noindent
 Escribiremos como $f_{k}$ 
@@ -156,7 +156,8 @@ v_{k}:= \Omega_{n, \cali{P}_{n}}(f_{k})
 
 \begin{defi}
 \label{def: espacis Wni}
-Sean $n\geq 2$, $0 \leq i \leq n-1$ entero.
+Sean $n\geq 2$ y
+$0 \leq i \leq n-1$ enteros.
 Definimos al subespacio 
 $W_{n,i}$ de $\IR^{n}$ como sigue:
 \begin{equation}
@@ -185,7 +186,7 @@ se verá por qué este es un buen nombre.
 Sea $n \in \IN$. Si $i \in \overline{\IN}$, entonces
 los $i+1$ polinomios
 $f_{k}$ con $0 \leq k \leq i$ entero
-constituyen una base para el espacio $\IR_{i}[x]$.
+constituyen una base para el espacio $\IR_{i}[t]$.
 \end{obs}
 
 
@@ -217,17 +218,22 @@ x=  \suma{k=0}{i}{a_{k}v_{k}}
 \suma{k=0}{i}{a_{k}f_{k}} \right)
 =  \Omega_{n, \cali{P}_{n}} (g),
 \end{align*}
-con $g := \suma{k=0}{i}{a_{k}f_{k}} \in \IR_{i}[x]$
+con $g := \suma{k=0}{i}{a_{k}f_{k}} \in \IR_{i}[t]$
 (c.f. observación 
 \ref{obs:independencia lineal polinomios}).
 \null\nobreak\hfill\ensuremath{\square} %final dem
 
 
+De las definiciones de señales constantes, afines
+y cuadráticas (c.f. \ref{def: grafica senial})
+y la proposición 
+\ref{obs: s en Wi sii es la discretizacion en malla Pn de un pol de grado a lo más i}
+se sigue de inmediato el siguiente resultado.
 \begin{cor} \label{cor: condiciones necesarias y suficientes para que x sea afín en términos de pertenencia a espacios Wi}
 Sean $n \in \IN$ y $x \in \IR^{n}$ una señal de dimensión
 $n$ cualquiera.
 \begin{itemize}
-\item La señal $x$ es constate si y sólo si $x \in W_{n,0}$,
+\item La señal $x$ es constante si y sólo si $x \in W_{n,0}$,
 
 \item es afín si y sólo si $x \in W_{n,1}$, y 
 
@@ -276,7 +282,7 @@ tales que
 $f= \suma{k=0}{i}{c_{k}f_{k}}$.
 Sean los intervalos
 \[
-I_{n}=[0,n-1], \hspace{0.2cm} I=[x_{0}, x_{n-1}].
+I_{n}=[0,n-1], \hspace{0.2cm} I=[t_{0}, t_{n-1}].
 \]
 Sea $\phi:I_{n} \longrightarrow I$ la función cuya gráfica
 es el segmento de recta con puntos extremos 
@@ -295,9 +301,9 @@ son mallas uniformes,
 \[
 \forall \hspace{0.2cm} 0 \leq j \leq n-1: \hspace{0.2cm} \phi(j)=t_{j}.
 \] 
-(para convencerse de que esto ocurre
-basta aplicar un argumento de semejanza de triángulos).
-\noindent Así, la $(j+1)$-ésima entrada del
+
+\noindent 
+Así, la $(j+1)$-ésima entrada del
 vector $\Omega_{n, \cali{P}}(f)=(f(t_{j}))_{j=0}^{n-1}$ es
 \[
 f(t_{j})= f (\phi (j))=
@@ -308,7 +314,7 @@ f(hj+t_{0})=
 Reconocemos al lado derecho de la igualdad como un polinomio
 de grado a lo más $i$, a saber,
 \[
-h(x):= \suma{k=0}{i}{c_{k}(hx+t_{0})^{k}}
+h(t):= \suma{k=0}{i}{c_{k}(ht+t_{0})^{k}},
 \]
 evaluado en el $(j+1)$-ésimo elemento 
 de la malla uniforme $\cali{P}_{n}$
@@ -316,6 +322,8 @@ de la malla uniforme $\cali{P}_{n}$
 \ref{obs: s en Wi sii es la discretizacion en malla Pn de un pol de grado a lo más i}
 de esto podemos concluir la pertenencia de 
 $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
+\QEDB
+\vspace{0.2cm}
 
 \begin{figure}[H]
 	\sidecaption{
@@ -330,12 +338,11 @@ $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
     \textbf{función de cambio de malla}.}
     \includegraphics[scale=0.6]{mall} 
  \end{figure}
-\QEDB
-\vspace{0.2cm}
-
+ 
+ 
 \begin{cor}
 \label{cor: 18ap}
-Sean $n\geq 2$, $0 \leq i \leq n-1$ entero. 
+Sean $n\geq 2$, $0 \leq i \leq n-1$ enteros. 
 Sea
 \begin{equation*}
 \label{def de espacios Wk}
@@ -352,8 +359,8 @@ $x = \Omega_{n, \cali{P}}(f)$.
 
 
 \begin{prop} \label{Teorema1}
-\textbf{(caracterización de las bases
-de los espacios $W_{n,i}$)} sea $n \in \IN$.
+\textbf{(Caracterización de las bases
+de los espacios $W_{n,i}$)} Sea $n \in \IN$.
 Si $0 \leq i \leq n-1$ es un entero y
 \[
 \{ p_{k}=p_{k}(t): \hspace{0.2cm} 0 \leq k \leq i \}
@@ -378,7 +385,10 @@ conforman una base del espacio $W_{n,i}$.
 Recíprocamente, si $\cali{B}_{i} := \{ w_{k} \}_{k=0}^{i}$
 es una base de $W_{n,i}$, entonces 
 \begin{itemize}
-	\item[a)] todo $w_{k}$ es un polinomio discreto $p_{k}$ de dimensión $n$, y
+	\item[a)] todo $w_{k}$ es un polinomio discreto $p_{k}$ de dimensión $n$, 
+	es decir, existe un polinomio $p_{k}$ de grado $k$ tal que 
+	$w_{k} = \Omega_{n, \cali{P}}(p_{k})$,	
+	y
 	\item[b)] para cada $0 \leq k^{'} \leq i$, uno y sólo uno de los polinomios
 	$p_{k}$ tiene grado $k'$.
 \end{itemize}
@@ -403,7 +413,7 @@ para los que se tenga la siguiente igualdad en $\IR^{n}$:
 \noindent 
 Según la linealidad establecida en la observación
 \ref{obs:linealidad de omega restringida a R[x]}
-y la definición \ref{eq1: 30Oct} de los vectores $w_{k}$,
+y la definición \eqref{eq1: 30Oct} de los vectores $w_{k}$,
 si $p=p(t)$ es el polinomio
 definido como
 \begin{equation}
@@ -419,9 +429,11 @@ la ecuación \eqref{eq1: 3Agosto} puede reescribirse como
 \noindent
 por la proposición \ref{prop: consecuencia del TFA}
 podemos inferir de esto que $p$ es el polinomio cero,  
+o sea, que
+$\suma{k=0}{i}{b_{k}p_{k}}$ es el polinomio cero,
 y de esto, por la
 independencia lineal de los polinomios $p_{i}$
-en el espacio $\IR[x]$ (que se tiene por las condiciones
+en el espacio $\IR[t]$ (que se tiene por las condiciones
 impuestas por hipótesis en los grados de estos), la
 igualdad a cero de los escalares $b_{k}$. 
 
@@ -436,32 +448,34 @@ de $n$ puntos
 y $p_{k}$ con $0 \leq k \leq i-1$ polinomios de grado
 a lo más $i$ tales que 
 $\Omega_{n, \cali{P}}(p_{k})=w_{k}$.
-Supongamos que existe $0 \leq k^{'} \leq i$
+Supongamos que existe $0 \leq k' \leq i$
 tal que ninguno de los polinomios $p_{k}$
-tiene grado $k^{'}$.
+tiene grado $k'$.
 
-Sea $g_{k'}$ un polinomio cualquiera de grado $k^{'}$.
+Sea $g_{k'}$ un polinomio cualquiera de grado $k'$.
 Según el corolario \ref{cor: 18ap}, 
-$z_{k^{'}}:= \Omega_{n, \cali{P}}(g_{k^{'}})$ es elemento
+$z_{k'}:= \Omega_{n, \cali{P}}(g_{k^{'}})$ es elemento
 de $W_{n,i}$; como $\cali{B}_{i} := \{ w_{k} \}_{k=0}^{i}$
 es base de este espacio, existen escalares
 $a_{k}$ (no todos cero, pues
-$z_{k^{'}} \neq 0$) tales que 
+$z_{k'} \neq 0$) tales que 
 \[
-z_{k^{'}} = \suma{k=0}{i}{a_{k} w_{k}};
+z_{k'} = \suma{k=0}{i}{a_{k} w_{k}};
 \]
 evaluando el operador $\Omega_{n, \cali{P}}$ en ambos
 lados de la igualdad y usando su linealidad
 (c.f. observación \ref{obs:linealidad de omega restringida a R[x]}), 
 obtenemos que 
 \[
-\Omega_{n, \cali{P}}(g_{k^{'}} - \suma{k=0}{i}{a_{k}p_{k}}) = 0;
+\Omega_{n, \cali{P}}
+\left( g_{k'} - \suma{k=0}{i}{a_{k}p_{k}}
+\right) = 0;
 \]
 según la proposición
 \ref{prop: consecuencia del TFA}, de esto se deduce que 
-$g_{k^{'}}$, un polinomio de grado $k^{'}$, es 
-igual a $\suma{k=0}{i}{a_{k}w_{k}}$, donde ninguno de los 
-polinomios $p_{k}$ tiene grado $k^{'}$.
+$g_{k'}$, un polinomio de grado $k'$, es 
+igual a $\suma{k=0}{i}{a_{k}p_{k}}$, donde ninguno de los 
+polinomios $p_{k}$ tiene grado $k'$.
 Esto contradice la independencia lineal 
 establecida en la observación 
 \ref{obs:independencia lineal polinomios}.
@@ -503,7 +517,7 @@ es base de $W_{n,i}$.
 	\begin{equation}
 	\label{espacios Wi estan anidados}
 	\forall \hspace{0.1cm}
-	0 \leq i \leq n-2: \hspace{0.2cm}
+	i = 0, \ldots , n-2: \hspace{0.2cm}
 	W_{n,i} \subsetneq W_{n,i+1}.
 	\end{equation}
 
@@ -538,8 +552,8 @@ de grado a lo más $i$.
 	de algún espacio $W_{n,i}$ (hecho
 	que, en vistas de que la familia $(W_{n,i})_{i=0}^{n-1}$
 	``cubre de manera ascendente a todo el espacio $\IR^{n}$''
-	(c.f. puntos dos y cuatro del teorema 
-	\ref{cor: propiedades importantes de espacios Wi}), seguro 
+	- c.f. puntos dos y cuatro del teorema 
+	\ref{cor: propiedades importantes de espacios Wi}- seguro 
 	ocurrirá), nos permite hacer inferencias sobre la forma 
 	de la gráfica de $x$.}
  	\end{measuredfigure}
@@ -567,15 +581,16 @@ directa y sencilla de este hecho.
 
 \begin{prop}
 \label{prop: el operador de discretizacion puntual es un isomorfismo (...)}
-Sean $n \in \IN$, $\cali{P}$ una malla uniforme de $n$
+Sean $n \in \IN$ y $\cali{P}$ 
+una malla uniforme de $n$
 puntos. 
 La restricción del operador $\Omega_{n, \cali{P}}$
-al espacio $\IR_{n-1}[x]$ de polinomios de grado a lo más
+al espacio $\IR_{n-1}[t]$ de polinomios de grado a lo más
 $n-1$, es decir, la función 
 \begin{equation}
 \label{eq0: 28Nov}
 \Omega_{n, \cali{P}}:
-\IR_{n-1}[x] \longrightarrow \IR^{n}
+\IR_{n-1}[t] \longrightarrow \IR^{n}
 \end{equation}
 es un isomorfismo de $\IR-$espacios vectoriales.
 En particular, para todo vector $x \in \IR^{n}$
@@ -584,9 +599,10 @@ tal que $x = \Omega_{n, \cali{P}}(f)$.
 \end{prop}
 \noindent
 \textbf{Demostración.}
-Puesto que tanto $\IR_{n-1}[x]$
+Puesto que tanto $\IR_{n-1}[t]$
 como $\IR^{n}$ son $\IR$-espacios vectoriales
 de dimensión $n$, para ver que la función 
+definida en
 \eqref{eq0: 28Nov} (que, según la observación 
 \ref{obs:linealidad de omega restringida a R[x]}, es lineal)
 es un isomorfismo, basta
@@ -595,16 +611,15 @@ demostrar que es inyectiva
 Esto último es una consecuencia directa del 
 teorema fundamental del álgebra,
 pues, 
-$f \in \IR_{n-1}(x)$
+$f \in \IR_{n-1}[t]$
 es elemento del kernel
-de \eqref{eq0: 28Nov} si y sólo si 
+de $\Omega_{n, \cali{P}}$ si y sólo si 
 $\Omega_{n, \cali{P}}(f)=0$, o, equivalentemente,
 si y sólo si 
 cada uno de los $n$ puntos que componen la
-malla $\cali{P}$ es una raíz de $f$. Puesto que
-$f$ es un polinomio de grado a lo más $n-1$
-(y, por lo tanto, de no ser el polinomio cero tiene
-a lo más $n-1$ raíces reales),
+malla $\cali{P}$ es una raíz de $f$;
+según la proposición
+\ref{prop: consecuencia del TFA},
 esto último ocurre si y sólo si $f$ es el polinomio cero.
 Con esto comprobamos que el kernel de la aplicación
 \label{eq1: 25Nov} es trivial, luego, la inyectividad
@@ -618,7 +633,7 @@ parece sugerir
 una forma en la que podríamos 
 definir el grado de 
 un vector $x \in \IR^{n}$ (``dado $x \in \IR^{n}$, definimos
-el grado de este como el grado del único polinomio $f \in \IR_{n-1}[x]$
+el grado de este como el grado del único polinomio $f \in \IR_{n-1}[t]$
 tal que $\Omega_{n, \cali{P}}(f)=x$''); no hay
 que apresurarse, pues en la formulación de
 la proposición
@@ -646,9 +661,9 @@ en el siguiente resultado.
 
 \begin{prop}
 \label{prop: igualdad de grado (menor a n) si dos polinomios al discretizarse dan x}
-Sean $n \in \IN$, $x \in \IR^{n}$.
+Sean $n \in \IN$ y $x \in \IR^{n}$.
 Si $\cali{P}, \tilde{\cali{P}}$ son mallas uniformes
-de $n$ puntos y $\tilde{f}, f \in \IR_{n-1}[x]$
+de $n$ puntos y $\tilde{f}, f \in \IR_{n-1}[t]$
 son tales que
 \begin{equation}
 \label{eq2: 25Nov}
@@ -664,29 +679,29 @@ Digamos que
 \cali{P}=\{t_{j}:=t_{0}+hj: \hspace{0.2cm} 0 \leq j \leq n-1 \},
 \hspace{0.2cm}
 \cali{\tilde{P}}=\{
-\tilde{t_{j}}:=\tilde{t_{0}}+ \tilde{h}j: \hspace{0.2cm} 0 \leq j \leq n-1 \}.
+\tilde{t}_{j}:=\tilde{t}_{0}+ \tilde{h}j: \hspace{0.2cm} 0 \leq j \leq n-1 \}.
 \]
 Sea 
 \[
 \phi(t)= \frac{h}{\tilde{h}}t+ \left( t_{0}-  \frac{h}{\tilde{h}}
-\tilde{t_{0}}  \right)
+\tilde{t}_{0}  \right)
 \]
 la función de cambio de malla
 (de $\tilde{\cali{P}}$ a $\cali{P}$); esta función es 
 tal que
 \[
-\forall \hspace{0.1cm} 0 \leq j \leq n-1, 
-\hspace{0.5cm} \phi(\tilde{t_{j}})= 
+\forall \hspace{0.1cm} j = 0, \ldots, n-1, 
+\hspace{0.5cm} \phi(\tilde{t}_{j})= 
 t_{j};
 \]
 podemos reescribir entonces la hipótesis \eqref{eq2: 25Nov}
 como 
 \begin{align*}
-(\tilde{f}(\tilde{t_{0}}), \ldots , \tilde{f}(\tilde{t_{n-1}}))
+(\tilde{f}(\tilde{t}_{0}), \ldots , \tilde{f}(\tilde{t}_{n-1}))
 = & x \\
 =& (f(t_{0}), \ldots , f(t_{n-1})) \\
-=& ((f \circ \phi) (\tilde{t_{0}}), \ldots , 
-(f \circ \phi) (\tilde{t_{n-1}})),
+=& ((f \circ \phi) (\tilde{t}_{0}), \ldots , 
+(f \circ \phi) (\tilde{t}_{n-1})),
 \end{align*}
 o sea, como $\Omega_{n, \tilde{\cali{P}}}(\tilde{f})=
 \Omega_{n, \tilde{\cali{P}}}(f \circ \phi)$; por linealidad
@@ -694,14 +709,15 @@ del operador $\Omega_{n, \tilde{\cali{P}}}$
 (c.f. observación 
 \ref{obs:linealidad de omega restringida a R[x]})
 tenemos entonces que
-$\Omega_{n, \tilde{\cali{P}}}(\tilde{f}-f \circ \phi)=0$,
-o sea, que 
+$\Omega_{n, \tilde{\cali{P}}}(\tilde{f}-f \circ \phi)=0$.
+Como 
 $\tilde{f}-f \circ \phi$ es un polinomio de
-grado menor a $n$ con al menos $n$ raíces 
-(a saber, los $n$ elementos de $\tilde{\cali{P}}$), luego, 
-según la proposición \ref{prop: cita TFA},
+grado menor a $n$, de esta
+última igualdad podemos concluir, 
+según la proposición
+\ref{prop: consecuencia del TFA}, que
 $\tilde{f}-f \circ \phi$
-es el polinomio cero, por lo tanto, 
+es el polinomio cero, por lo tanto
 \begin{equation*}
 \label{eq3: 25Nov}
 \tilde{f}=f \circ \phi.
@@ -720,10 +736,16 @@ son polinomios del mismo grado), concluimos que
 Con todo esto demostrado, podemos definir
 el grado de una señal finita como sigue.
 
+
+\marginnote{Nótese que el $f$ de la definición
+\ref{def: del grado de una senial finita}
+, según la proposición
+\ref{prop: el operador de discretizacion puntual es un isomorfismo (...)},
+siempre existe.}
 \begin{defi}
 \label{def: del grado de una senial finita}
-Sean $n \in \IN$, $x \in \IR^{n}$.
-Si $f \in \IR_{n-1}[x]$
+Sean $n \in \IN$ y $x \in \IR^{n}$.
+Si $f \in \IR_{n-1}[t]$
 es un polinomio de grado menor a $n$
 y $\cali{P}$ es una malla uniforme
 de $n$ puntos tales que
@@ -778,7 +800,7 @@ Según la proposición
 esto implica la pertenencia de $x$ a $W_{n,i}$.
 Además, $x$ no puede ser elemento de $W_{n,i-1}$,
 pues esto,
-según el tercer punto del corolario
+según el tercer punto del teorema
 \ref{cor: propiedades importantes de espacios Wi},
 implicaría la existencia de una
 malla uniforme $\tilde{\cali{P}}$ de $n$
@@ -795,37 +817,38 @@ y \eqref{eq6: 25Nov} no pueden ser ambas verdaderas.
 \item[$\Leftarrow$)] Sea
 $1 \leq i \leq n-1$ tal que $x \in W_{n,i}$
 pero $x \not\in W_{n,i-1}$.
-Según el corolario
+Según el teorema
 \ref{cor: propiedades importantes de espacios Wi}, existen
 $\cali{P}$ malla uniforme de $n$ puntos y
 $f$ polinomio de grado a lo más $i$ tales que
 $x= \Omega_{n, \cali{P}}(f)$; según este mismo
-corolario, el que el grado de $f$ fuese menor a $i$
+teorema, el que el grado de $f$ fuese menor a $i$
 implicaría que $x$ también fuese elemento
 del espacio $W_{n,i-1}$. Como esto no ocurre, concluimos
 que $x= \Omega_{n, \cali{P}}(f)$
 con $\partial(f)=i$, luego, según la definición
 \ref{def: del grado de una senial finita}, 
-$x$ tiene grado $i$.
+$x$ tiene grado $i$. \QEDB
 \end{itemize}
-\QEDB
 \vspace{0.2cm}
 
 Terminamos con una definición, que queda justificada
-por lo establecido en la proposición \ref{prop: grado de x}
+por lo establecido en la proposición \ref{prop: grado de x}.
 
 \begin{defi}
-Sean $n \geq 2$, $0 \leq i \leq n-1$ entero. 
+Sean $n \geq 2$, $0 \leq i \leq n-1$ enteros. 
 Al subespacio $W_{n,i}$ definido en \eqref{espacios Wi}
 se le denominará el \textbf{espacio de señales $n-$dimensionales
-de grado $k$.}
+de grado $i$.}
 \end{defi}
 
 
 
 \section{Construcción canónica de las bases de Legendre discretas}
 
-\noindent Ahora, con el proceso de Gram-Schmidt \ref{Prop:Gram-Schmidt2}
+\noindent Ahora, con el 
+algoritmo de Gram-Schmidt (descrito
+en la proposición \ref{Prop:Gram-Schmidt2})
 vamos a normalizar
 a la base $\{v_{k}: \hspace{0.1cm} 0 \leq k \leq n-1 \}$ de
 $W_{n,n-1}$, o sea, de $\IR^{n}$ (c.f. 
@@ -875,8 +898,8 @@ $n$ y grado $k$}.
 
 \begin{nota}
 A partir de ahora, abreviaremos el nombre
-polinomio discreto de Legendre''
-como ``PDL' y ``base de Legendre discreta'' como ``BLD''
+``polinomio discreto de Legendre''
+como ``PDL'' y ``base de Legendre discreta'' como ``BLD''.
 \end{nota}
 
 \begin{cor} \label{cor: BON de legendre para espacios Wk}
@@ -904,10 +927,12 @@ de grado menor a $k$.
 En efecto, según la definición
 \ref{def: base de Legendre discreta}, 
 $\cali{L}^{n,k}$ es ortogonal a todos los vectores
-$\cali{L}^{n, l}$ con $0 \leq l \leq k$,
+$\cali{L}^{n, l}$ con $0 \leq l \leq k-1$,
 luego, según el corolario
 \ref{cor: BON de legendre para espacios Wk},
-ortogonal a toda una base del espacio $W_{n,k}$,
+es
+ortogonal a todos los elementos
+de una base del espacio $W_{n,l}$,
 por lo tanto, a todo elemento de este.
 \QEDB
 \vspace{0.2cm}
@@ -933,7 +958,7 @@ con la esbozada en el capítulo
 \ref{chapter: introduccion} sobre la construcción 
 usual de los polinomios
 de Legendre (de variable continua);
-en ambos caso partimos de familias anidadas de espacios 
+en ambos casos partimos de familias anidadas de espacios 
 de polinomios
 (discretos o continuos, dependiendo del caso);
 	\[
@@ -973,14 +998,11 @@ $
 \begin{ejemplo}
 A continuación, mostramos las gráficas de los
 elementos de las bases $\cali{L}^{2}$ y $\cali{L}^{3}$.
-Para dibujarlas usamos los valores
-calculados en la tabla
-\ref{formulas explicitas para Ln con n de 2 hasta 6}.
 
 \begin{figure}[H]
 	\sidecaption{
 	Gráficas de los elementos de $\cali{L}^{2}
-	\subseteq \IR^{2}$
+	\subseteq \IR^{2}$.
 	\label{fig: graficas elementos L2}
 	}
 	\centering
@@ -991,7 +1013,7 @@ calculados en la tabla
 \begin{figure}[H]
 	\sidecaption{
 	Gráficas de los elementos de $\cali{L}^{3} 
-	\subseteq \IR^{3}$
+	\subseteq \IR^{3}$.
 	\label{fig: graficas elementos L2}
 	}
 	\centering

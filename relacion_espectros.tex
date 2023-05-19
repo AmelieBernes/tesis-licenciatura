@@ -1,5 +1,5 @@
 \section{Simetría, periodicidad y continuidad del espectro $\Sigma_{x}$}
-
+\label{sec: simetria, periodicidad, continuidad}
 Fijada una dimensión $n \geq 2$,
 si $x \in \IR^{n}$ es cualquier señal y 
 $\Sigma_{x}$
@@ -151,14 +151,81 @@ del espectro
 $\Sigma_{x}$ de una señal $x \in \IR^{n}$
 al conjunto
 \TODO{revisa!}
-\[
+\begin{equation}
+\label{eq: malla frecuencias}
 \left\{ \frac{a}{100} : \hspace{0.2cm}
 0 \leq a \leq \frac{100n}{2} \right\},
-\]
+\end{equation}
+
 es decir, se toman $100$ muestras por
 cada unidad del intervalo 
 $\left[ 0, \frac{n}{2}\right]$
 \end{nota}
+
+
+Para terminar, hagamos algunos comentarios
+sobre la continuidad del espectro $\Sigma_{x}$
+de una señal $x \in \IR^{n}$. \\
+Por definición del espectro, 
+si $\omega \geq 0$, entonces
+$\Sigma_{x}(\omega) = \sigma_{n} (x, \omega)$,
+donde los coeficientes
+$\sigma_{n} (x, \omega)$ son como se definieron en
+la proposición \ref{prp: ammm}.
+Por la periodicidad y simetría del espectro, basta
+analizar la continuidad de $\Sigma_{x}$ sólo en el
+intervalo cerrado $[0, n/2]$. \\
+
+Observe que la fórmula
+\eqref{eq: coef sigma caso 1}, que sirve
+para calcular $\sigma_{n} (x, \omega)$
+cuando $\omega \in ]0, n/2[$, es una combinación
+de sumas y productos de senos y cosenos
+evaluados en funciones de la frecuencia $\omega$, luego, 
+es una función continua, por lo tanto $\Sigma_{x}$
+es continua en el interior del intervalo 
+$[0, n/2]$. No pudimos determinar la
+continuidad de $\Sigma_{x}$ en los puntos
+extremos $0$ y $n/2$, ni encontramos un criterio que deba
+cumplir la señal que implique la continuidad en uno
+de estos puntos extremos.
+No escribimos en detalle los intentos para
+determinar los límites
+\[
+\limite{\omega \rightarrow 0^{+}}{\sigma_{n}(x, \omega)}
+\hspace{0.2cm} \textit{y} \hspace{0.2cm}
+\limite{\omega \rightarrow \frac{n}{2}^{-}}{\sigma_{n}(x, \omega)},
+\]
+pero comentamos que el problema que encontramos fue
+intentar determinar el límite
+(cuando $\omega \rightarrow 0^{+}$ y cuando $\omega \rightarrow \frac{n}{2}^{-}$)
+de la expresión
+\[
+\sqrt{2} \left(
+n - \frac{sen(2 \pi \omega) cos (2 \pi \omega \frac{n-1}{n})}{sen(2 \pi \omega/n)}
+\right)^{-1/2}
+\cdot
+\suma{m=0}{n-1}{x_{m} sen(2 \pi \omega m/n)};
+\]
+puesto que se tiene una indeterminación de tipo
+$\infty \cdot 0$, se aplicó la Regla de L'Hôpital
+(c.f. \cite{hopital}) 
+para intentar determinar el límite, pero esto sólo
+nos llevó a una expresión más complicada que presentaba una indeterminación
+de tipo $\frac{0}{0}$. No esperabamos que la tarea
+de determinar la continuidad por los extremos fuese sencilla,
+pues después de graficar algunos espectros notamos que algunos
+de ellos eran continuos por ambos extremos, mientras que otros
+presentaban discountinuidades (que, por estár acotados los valores
+del espectro por $0$ y $1$, necesariamente son de salto)
+en uno o ambos extremos, y no notamos características de 
+la señal $x$ a partir de la cual se calcula el espectro
+que indicaran cuándo se tenía la discontinuidad por uno 
+de los puntos extremos.
+
+
+
+
 
 \section{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}
 
@@ -260,34 +327,88 @@ Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
 	$x$ es casi perpendicular a toda señal de frecuencia $\omega$
 	(c.f. nota \ref{nota: significado de los sigma en AE}).
 	\end{itemize}
-	\begin{defi}
+\end{itemize}
+
+Nos gustaría, así como hicimos en la definición
+\ref{def: FM0}, definir la frecuencia principal 
+de una señal $x$ basada en el espectro
+$\Sigma_{x}$ de esta. No es tan sencillo hacer esto, pues,
+como comentamos en la sección
+\ref{sec: simetria, periodicidad, continuidad}, no parece
+que para toda señal $x \in \IR^{n}$ el espectro
+$\Sigma_{x}$ sea continuo en los puntos extremos
+$0$ y $n/2$, por lo que intentar definir una
+frecuencia principal como
+\[
+\omega \in [0, n/2] \textit{ tal que }
+a_{x} = \Sigma_{x}(\omega), \textit{ donde }
+a_{x} = sup \{ \Sigma_{x}(w): \hspace{0.2cm} \omega
+\in [0, n/2] \}
+\]
+no es adecuado, pues no está excluida la 
+posibilidad de que exista un espectro $\Sigma_{x}$
+para el que no exista una $\omega \in [0, n/2]$ 
+tal que $\Sigma_{x}(\omega) = a_{x}$, o sea, tal que 
+$a_{x}$ que no sea máximo
+del conjunto 
+$\{ \Sigma_{x}(w): \hspace{0.2cm} \omega
+\in [0, n/2] \}$. \\
+
+\begin{figure}[H]
+	\sidecaption{
+	Se muestra un dibujo hipotético de un espectro
+	$\Sigma_{x}$ para el que $a_{x} = 1$ pero no exista
+	ninguna frecuencia $\omega \geq 0$ (una candidata
+	a frecuencia principal) tal que $\Sigma_{x}(\omega) = a_{x}$.
+ 	\label{fig: ej FP1}
+	}
+	\centering
+	\includegraphics[scale = 1]{ejemplo_FP1.png} 
+\end{figure}	
+Sorteamos este problema si restringimos las frecuencias
+$\omega$ a considerar a un subconjunto finito del
+rango inicial de frecuencias
+$[0, n/2]$.
+
+\begin{defi}
 	\label{def: FM1}
-	Llamaremos \textbf{frecuencia principal-$1$}
+	Sean $n \geq 2$, $x \in \IR^{n}$. Sea
+	$\cali{P}$ un subconjunto finito
+	de $[0, n/2]$.
+	Llamaremos la \textbf{frecuencia principal-$1$}
 	(y denotaremos
-	por $FP1(x)$) a una frecuencia $\omega \in [0, \frac{n}{2}]$ 
-	tal que, para cualquier otra $\omega'$ del rango, se tenga que
+	por $FP1(x)$) 
+	de $x$ respecto al conjunto $\cali{P}$	
+	a una frecuencia $\omega \in \cali{P}$ 
+	tal que, para cualquier otra $\omega'$ del $\cali{P}$, se tenga que
 	\[
 	\sigma_{n, \omega'}(x) = \Sigma_{x}(\omega') 
 	\leq \Sigma_{x}(\omega) = \sigma_{n, \omega}(x).
 	\]
-	\end{defi}
-\end{itemize}
-
+\end{defi}
+En la práctica, el que se tenga que fijar un conjunto
+finito $\cali{P} \subseteq [0, n/2]$ de frecuencias
+para calcular la FP1 no es un problema, pues ya teníamos que hacer
+esto para calcular, de forma computacional, el espectro
+$\Sigma_{x}$. Para respetar la convención
+puesta en la nota 
+\ref{nota: muestreo dom frecuencia}, vamos
+a tomar a $\cali{P}$ como en 
+\eqref{eq: malla frecuencias}.
+	
 \begin{nota}
-Note que la existencia de frecuencias principales para
-ambos espectros (como se definieron en
-\ref{def: FM0} y \ref{def: FM1})
-están aseguradas por estár estas definidas
-en términos de máximos de
-conjuntos finitos de números, pero no estamos asegurando
-que tales frecuencias sean únicas.
+Observe que no estamos asegurando
+que las frecuencias principales
+$FP0(x)$ y $FP1(x)$ como se definieron en 
+\ref{def: FM0} y \ref{def: FM1}
+sean únicas.
 Si hay dos o más frecuencias $\omega'$ que satisfagan
-la definición de frecuencia principal-1, tomamos
-como valor de $FP0(x)$ a la mayor de tales $\omega'$.
-Hacemos lo mismo para determinar el valor de 
-$FP1(x)$. 
+la definición de frecuencia principal-0 
+(resp. frecuencia principal-1), tomamos
+como valor de $FP0(x)$ 
+(resp. $FP1(x)$)
+a la mayor de tales $\omega'$.
 \end{nota}
-
 
 
 Demostremos ahora que, de hecho, el espectro-0

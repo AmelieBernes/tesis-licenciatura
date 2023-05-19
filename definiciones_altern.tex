@@ -8,7 +8,7 @@ se definió a la base de Legendre discreta $\cali{L}^{n}$
 (en la subsección 
 \ref{Generalización que involucra a la discretización Omega n}),
 y además, como prometimos en la introducción,
-vamos a dar una segunda forma natural de
+vamos a dar una segunda forma natural
 de abordar el problema, cambiando el método de 
 discretización
 (en la subsección 
@@ -16,7 +16,7 @@ discretización
 llegando, como se anticipó, a la base
 $\cali{L}^{n}$.
 
-\subsection{Generalización que involucra a la discretización $\Omega_{n}$}
+\subsection{Construcción generalizada de los PDL usando la discretización $\Omega_{n}$}
 \label{Generalización que involucra a la discretización Omega n}
 
 Recuerde que, al definir a los espacios
@@ -32,7 +32,7 @@ disponemos a probar que, si hubiésemos escogido
 \begin{itemize}
 \item funciones polinomiales
 \[
-g_{k}(t) \in \IR[x], \hspace{1cm} 
+g_{k}(t) \in \IR[t], \hspace{1cm} 
 \text{con }\hspace{0.5cm} 0 \leq k \leq n-1 \hspace{0.2cm} \text{entero},
 \]
 donde
@@ -81,6 +81,10 @@ g_{2}(t):=t^{2}+2t+3 \right\}.
 Las colecciones \eqref{eq11: 10Dic} y \eqref{eq12: 10Dic}
 tienen en común que contienen, por cada $0 \leq k \leq 2$,
 un polinomio de grado $k$ y coeficiente principal positivo.
+Sean $\cali{P}_{3}$ la malla dada por 
+\eqref{malla Pn} con $n=3$, o sea, sea 
+$\cali{P}_{3}=\{0, 1, 2 \}$, y sea $\cali{P}:= \{
+-2, -\frac{1}{2}, 1 \}$ otra malla uniforme de tres puntos.
 
 
 \begin{figure}[H]
@@ -91,9 +95,9 @@ un polinomio de grado $k$ y coeficiente principal positivo.
     discretizándolas, respectivamente, en las mallas uniformes 
     $\cali{P}_{3}$ y $\cali{P} =\{-2, -\frac{1}{2}, 1 \}$.
 	\label{fig: generalizacion def basada en discr puntual}
-	}
+	} 
 	\centering
-	\includegraphics[scale=0.6]{EsquemaGral} 
+	\includegraphics[scale=0.25]{EsquemaGral} 
 \end{figure}	
 
 Afirmamos que, si
@@ -211,9 +215,12 @@ entonces, ocurre que
 
 \begin{itemize}
 \item[\textbf{Paso I}] 
-Primero demostremos que vectores $w_{k}$ así
+Se sigue directamente de la proposición 
+\eqref{Teorema1} que
+los vectores $w_{k}$ así
 construidos forman bases para los espacios
-de polinomios discretos.
+de polinomios discretos. Dejamos esto por escrito 
+en el siguiente resultado.
 \begin{prop}
 \label{prop: los wk forman bases de los Wnk}
 Sea 
@@ -233,32 +240,6 @@ w_{k} \hspace{0.2cm} \text{con } 0 \leq k \leq i
 \]
 conforman una base del espacio $W_{n,i}$.
 \end{prop}
-\noindent
-\textbf{Demostración.}
-Observe que el subconjunto \eqref{eq5: 2En}
-de $\IR[x]$
-es linealmente independiente 
-en tal espacio (por cuestión de grados,
-ningún $g_{k}$ puede expresarse como combinación lineal de
-los anteriores); así, según 
-la proposición \ref{Teorema1},
-para toda $0 \leq k \leq n-1$, los $n$ vectores $w_{k}$
-de $\IR^{n}$ 
-definidos en 
-\eqref{eq1: 31Oct}
-son linealmente independientes en $\IR^{n}$.
-
-Puesto que
-los $i+1$ primeros de ellos son elementos del 
-espacio $W_{n,i}$
-(c.f. proposición \ref{Obs1}) y 
-como $dim(W_{n,i})=i+1$
-(c.f. teorema \ref{cor: propiedades importantes de espacios Wi}), 
-estos $i+1$ vectores conforman
-una base del espacio $W_{n,i}$.
-\QEDB
-\vspace{0.2cm}
-
 
 \item[\textbf{Paso II}] 
 Tenemos entonces dos bases de 
@@ -283,7 +264,9 @@ Sean
 \end{equation}
 
 las bases que resultan de ortogonalizar a 
-las bases dadas en \eqref{eq2: 31Oct} con G-S, y 
+las bases dadas en \eqref{eq2: 31Oct} el
+algoritmo de Gram-Schmidt
+(c.f. proposición \ref{Prop:Gram-Schmidt2}) y 
 \begin{equation}
 \label{eq4: 31Oct}
 \{\xi_{i}: \hspace{0.1cm} 0 \leq i \leq n-1  \}, \hspace{0.5cm}
@@ -301,7 +284,7 @@ respectivamente,
 con $0 \leq i \leq n-1$.
 
 De la definición de los vectores \eqref{eq0: 1En}
-y el teorema \eqref{cor: propiedades importantes de espacios Wi} se
+y la proposición \ref{prop: los wk forman bases de los Wnk} se
 sigue inmediantamente lo siguiente:
 
 \begin{obs}
@@ -316,7 +299,7 @@ subespacio $W_{n, i}$ de $\IR^{n}$.
 
 La importancia del \textbf{Paso I} es que, 
 para efectuar los dos
-procesos de G-S necesarios para
+procesos de Gram-Schmidt necesarios para
 construir las bases 
 \eqref{eq3: 31Oct}, a pesar de que trabajaremos
 con dos bases distintas de $\IR^{n}$,
@@ -411,7 +394,7 @@ a $\xi_{0}, \ldots , \xi_{i-1}$, luego,
 según la ecuación \eqref{eq1: 1En},
 $\xi_{i} \in V_{n,i}$.
 
-\item Dualmente, $\eta_{i} \in V_{n,i}$.
+\item Análogamente, $\eta_{i} \in V_{n,i}$.
 \end{itemize}
 
 En conclusión, $\xi_{i}$ y $\eta_{i}$ 
@@ -424,7 +407,7 @@ queríamos, que $\xi_{i} = \pm \eta_{i} $. \QEDB
 Del razonamiento de la demostración anterior se sigue una propiedad
 importante de los vectores $\xi_{i}$ y $\eta_{i}$,
 a saber, su pertenencia a los espacios $V_{n,i}$
-definidos en \eqref{eq1: 1En};
+definidos en \eqref{eq1: 1En}.
 
 \begin{cor} \label{cor: xi y eta ortogonales a elementos de...}
 Sea $n \in \IN$.
@@ -449,9 +432,10 @@ establecer antes el siguiente
 Sea $n \in \IN$. 
 Para toda
 $1 \leq i \leq n-1$, 
-sean $w_{i}$ y $\overline{\eta_{i}}$ los vectores
+sean $w_{i}$, $\overline{\eta_{i}}$ y $\eta_{i}$ los vectores
 de $\IR^{n}$ definidos como en 
-\eqref{eq1: 31Oct} y
+\eqref{eq1: 31Oct},
+\eqref{eq4: 31Oct} y
 \eqref{eq3: 31Oct}.
 Los números reales
 \[
@@ -471,7 +455,7 @@ se definió como la normalización
 del vector $\bar{\eta}_{i}$), basta demostrar que 
 ocurre $\langle\bar{\eta}_{i}, w_{i} \rangle >0$. \\
 Recuerde que, según la versión del 
-teorema de G-S dada en \ref{Prop:Gram-Schmidt2},
+teorema de Gram-Schmidt dada en \ref{Prop:Gram-Schmidt2},
 \[
 w_{i}= \bar{\eta}_{i} + \Pi_{W_{n,i-1}}(w_{i});
 \]
@@ -479,8 +463,7 @@ puesto que los vectores $\bar{\eta}_{i}$
 y $\Pi_{W_{n,i-1}}(w_{i})$ de $\IR^{n}$  son ortogonales entre sí, 
 podemos
 aplicar la identidad de Parseval (c.f. 
-inciso f) del teorema 
-\ref{thm: Coway, 4.13})
+nota \ref{nota: sobre la identidad de parseval})
 para establecer la siguiente igualdad en $\IR$:
 
 \[
@@ -561,16 +544,17 @@ como
 \begin{equation}
 \label{eq9: 1Nov}
 \xi_{i}= d_{i} (v_{i}-\Pi_{W_{n,i-1}}(v_{i})),
-\hspace{0.2cm} \text{ con } d_{i}= \frac{1}{||v_{i}-\Pi_{W_{n,i-1}}(v_{i})||},
+\hspace{0.2cm} \text{ con } d_{i}= \frac{1}{||v_{i}-\Pi_{W_{n,i-1}}(v_{i})||}
 >0
 \end{equation}
-tenemos que
+tenemos, por \eqref{eq10: 1Nov} y
+\eqref{eq9: 1Nov} que
 \begin{align*}
 a_{i} =  a_{i} \langle\eta_{i} , \eta_{i} \rangle &
 = \langle a_{i}\eta_{i} , \eta_{i} \rangle \\
-(\text{ por \eqref{eq10: 1Nov} }) & = 
+& = 
 \langle \xi_{i} , \eta_{i} \rangle \\
-(\text{ por \eqref{eq9: 1Nov} }) & =  
+& =  
 \langle  d_{i} (v_{i}-\Pi_{W_{n,i-1}}(v_{i})), \eta_{i} \rangle \\
 & =  d_{i} \left( \langle  v_{i} , \eta_{i} \rangle -
 \langle \Pi_{W_{n,i-1}}(v_{i}) , \eta_{i} \rangle  \right) \\
@@ -593,7 +577,8 @@ En este punto del argumento,
 nos interesa pues conocer el signo de
 $\langle  v_{i} , \eta_{i} \rangle$; como los vectores $\eta_{i}$
 se definieron a partir de los vectores $w_{i}$ por el 
-proceso de G-S, lo que sí sabemos, gracias al lema
+algoritmo de Gram-Schmidt, 
+lo que sí sabemos, gracias al lema
 \ref{Lema1}, es que 
 \begin{equation}
 \label{eq1: 1Nov}
@@ -603,7 +588,7 @@ proceso de G-S, lo que sí sabemos, gracias al lema
 Recuerde que, por hipótesis,
 $g_{i}$ es un polinomio de grado $i$
 con coeficiente principal $c_{i}$ positivo; digamos pues que
-$g(x)= \suma{k=0}{i}{c_{k}f_{k}}$,
+$g_{i}(t)= \suma{k=0}{i}{c_{k}t^{k}}$,
 donde 
 \begin{equation}
 \label{eq2: 1Nov}
@@ -632,19 +617,27 @@ donde
 
 \[
 G_{i}(t):= (g_{i} \circ \phi)(t) =
-\suma{k=0}{i}{c_{k}(ht+t_{0})^{k}}= c_{i}h^{i}t^{i}+
-\suma{k=0}{i-1}{c_{k}(ht+t_{0})^{k}}.
+\suma{k=0}{i}{c_{k}(ht+t_{0})^{k}},
 \]
-Así, 
+o sea, 
+\begin{equation}
+\label{eq0: 19May23}
+G_{i}(t) = c_{i}h^{i}t^{i}+ q_{i-1}(t) +
+\suma{k=0}{i-1}{c_{k}(ht+t_{0})^{k}},
+\end{equation}
+donde $q_{i-1}(t) := c_{i}(ht+t_{0})^{i}- c_{i}h^{i}t^{i}$
+es un polinomio de grado a lo más $i-1$.
+De las igualdades \eqref{eq2: 1En} y 
+\eqref{eq0: 19May23} se deduce que
 \begin{align*}
 w_{i}= & (g_{i}(t_{j}))_{j=0}^{n-1} \\ 
-\text{(por \eqref{eq2: 1En})} = & (G_{i}(j))_{j=0}^{n-1} \\
-= & \left( c_{i}h^{i}j^{i}+
+= & (G_{i}(j))_{j=0}^{n-1} \\
+= & \left( c_{i}h^{i}j^{i}+ q_{i-1}(t) +
  \suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}\right)_{j=0}^{n-1}}\\
- = & \left( c_{i}h^{i}j^{i}\right)_{j=0}^{n-1}
- +\left(\suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1} \\
+ = & \left(c_{i}h^{i}j^{i}\right)_{j=0}^{n-1}
+ +\left( q_{i-1}(t) + \suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1} \\
   = & c_{i}h^{i}\left(j^{i}\right)_{j=0}^{n-1}
- +\left(\suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1};
+ +\left(q_{i-1}(t) + \suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1};
 \end{align*}
 según la notación \ref{notacion: Pn, fk, Wi, vk}, esta
 última igualdad puede escribirse como sigue:
@@ -654,7 +647,7 @@ w_{i}= c_{i}h^{i} v_{i}+ z_{i-1},
 \end{equation}
 donde 
 \begin{equation*}
-z_{i-1}:=\left(\suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1};
+z_{i-1}:=\left(q_{i-1}(t) + \suma{k=0}{i-1}{c_{k}(hj+t_{0})^{k}}\right)_{j=0}^{n-1};
 \end{equation*}
 como $z_{i-1}$ es la discretización en una malla uniforme
 (a saber, $\cali{P}_{n}$) de un polinomio de grado a lo más $i-1$, 
@@ -674,7 +667,7 @@ Despejando a $v_{i}$ de \eqref{eq6: 1Nov}, llegamos a que
 \label{eq7: 1Nov}
 v_{i}= \frac{1}{c_{i}h^{i}} \left( w_{i} -  z_{i-1} \right),
 \end{equation}
-luego,
+luego, por \eqref{eq5: 1Nov}
 \begin{align}
 \label{eq8: 1Nov}
 \left\langle v_{i}, \eta_{i} \right\rangle = & 
@@ -682,14 +675,14 @@ luego,
  \right\rangle \nonumber \\
 = & \frac{1}{c_{i}h^{i}} \langle w_{i}, \eta_{i} \rangle -
 \frac{1}{c_{i}h^{i}} \langle z_{i-1}, \eta_{i} \rangle \nonumber \\
-(\textit{por \eqref{eq5: 1Nov}}) = & \frac{1}{c_{i}h^{i}} \langle w_{i}, \eta_{i} \rangle.
+= & \frac{1}{c_{i}h^{i}} \langle w_{i}, \eta_{i} \rangle.
 \end{align}
 Según 
 \eqref{eq2: 1Nov} y 
 \eqref{eq3: 1Nov}, $\frac{1}{c_{i}h^{i}}$ es
 un número positivo, además, según 
 \eqref{eq1: 1Nov}, $\langle w_{i}, \eta_{i} \rangle$ también;
-así,\eqref{eq8: 1Nov} expone a $\langle v_{i}, \eta_{i} \rangle$
+así, \eqref{eq8: 1Nov} expone a $\langle v_{i}, \eta_{i} \rangle$
 como el producto de números positivos. 
 Concluimos así, como queríamos,
 que $\langle v_{i}, \eta_{i} \rangle>0$.
@@ -702,7 +695,7 @@ que $\langle v_{i}, \eta_{i} \rangle>0$.
 \subsection{Construcción de $\cali{L}^{n}$ en base a discretizaciones integrales}
 \label{Construcción de Ln en base a discretizaciones con sumas integrales}
 Para terminar la sección de construcciones alternativas
-de la base de Legendre,
+de la base de Legendre discreta,
 en esta subsección daremos una segunda
 forma natural de discretizar funciones continuas
 (esta basada en promedios integrales) a partir de 
@@ -733,7 +726,7 @@ es decir, consideramos la partición
 t_{j}=j\frac{b-a}{n}+a \hspace{0.4cm} \text{para}\hspace{0.4cm}
  0 \leq j \leq n.
 \end{equation}
-Definimos entonces a la función $\Delta_{n,a,b}$ 
+Definimos entonces al operador $\Delta_{n,a,b}$ 
 de $\cali{C}[a,b]$ en $\mathbb{R}^{n}$ como
 \begin{center}
 $\Delta_{n,a,b}(f)= \frac{1}{h} (u_{n,j}(f))_{j=1}^{n},$ \hspace{0.3cm}
@@ -751,7 +744,7 @@ $u_{n,j}:= \integ{t_{j-1}}{t_{j}}{f(t)dt}$.
 Demostremos que, si escogemos
 \begin{itemize}
 \item para $0 \leq k \leq n-1$ funciones polinomiales
-$g_{k}(t) \in \IR[x]$
+$g_{k}(t) \in \IR[t]$
 \begin{equation}
 \label{eq10: 3Nov}
 g_{k}(t)= \suma{i=0}{k}{c_{k,i}t^{i}},
@@ -779,7 +772,7 @@ entonces los primeros $i$ vectores
 de la forma \eqref{eq1: 3Nov}
 generan a los espacios $W_{n,i}$
 definidos antes en 
-\ref{notacion: Pn, fk, Wi, vk},
+\ref{def: espacis Wni},
 son linealmente independientes y,
 después de ortonormalizarse con 
 el proceso de G-S,
@@ -787,9 +780,9 @@ obtenemos a los elementos de la base $\cali{L}^{n}$.
 
 Comencemos demostrando la independencia lineal
 de los $n$ vectores \eqref{eq1: 3Nov}. Al igual que para
-la demostración del resultado análogo 
+la demostración de la proposición análoga 
 \ref{Teorema1},
-la prueba de este hecho se basa en el teorema
+la prueba de este hecho se basa en el Teorema
 fundamental del álgebra.
 
 \begin{prop}
@@ -808,7 +801,7 @@ que existen números reales $a_{k}$, con $0 \leq k \leq n-1$,
 no todos cero tales que se tenga la siguiente igualdad en $\IR^{n}$:
 \begin{equation}
 \label{eq8: 3Nov}
-\suma{k=0}{n-1}{a_{k}u_{k}}=0
+\suma{k=0}{n-1}{a_{k}u_{k}}=0.
 \end{equation}
 Desglosando
 la igualdad \eqref{eq8: 3Nov} 
@@ -842,7 +835,7 @@ p(t):=\suma{k=0}{n-1}{a_{k}g_{k}(t)}.
 Como todos los polinomios $g_{i}$ son,
 por hipótesis, de 
 grado menor a $n$ y linealmente independientes
-(en el espacio $\IR[x]$),
+(en el espacio $\IR[t]$),
 y se ha supuesto que no
 todos los
 coeficientes $a_{i}$ son cero, el polinomio
@@ -875,9 +868,10 @@ $b_{j}$ (y que entonces será punto
 interior de $I_{j}$) tal que $p(r_{j})=0$;
 así, para cada $1 \leq j \leq n$,
 hemos
-encontrado una raíz $r_{j}$ de $p$ en int($I_{j}$);
+encontrado una raíz $r_{j}$ de $p$ en 
+el interior de $I_{j}$;
 por ser ajenos los interiores de los intervalos $I_{j}$,
-estamos seguros de que las $n$ raices $r_{j}$ son distintas
+estamos seguros de que las $n$ raíces $r_{j}$ son distintas
 entre sí.
 Llegamos así
 a que el polinomio no cero $p$, cuyo grado es a lo más $n-1$,
@@ -889,7 +883,7 @@ contradice la proposición \ref{prop: cita TFA}.
 \begin{prop}
 \label{prop: uk son discretizaciones pol...}
 Sean $n \in \IN$. Para toda $0 \leq k\leq n-1$, si
-$g_{k} \in \IR[x]$ es como en \eqref{eq10: 3Nov}
+$g_{k} \in \IR[t]$ es como en \eqref{eq10: 3Nov}
 y $u_{k} \in \IR^{n}$ como en
 \eqref{eq1: 3Nov}, entonces
 $u_{k}$ es la discretización en una malla uniforme
@@ -981,7 +975,7 @@ en la malla uniforme
 $\cali{P}_{n}=\{t_{j}\}_{j=0}^{n-1}$.
 De esto y el teorema 
 \ref{cor: propiedades importantes de espacios Wi}
-se deduce la pertenecia de $u_{k}$ al espacio $W_{n,k}$.
+se deduce la pertenencia de $u_{k}$ al espacio $W_{n,k}$.
 \QEDB
 \vspace{0.2cm}
 

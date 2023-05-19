@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {2.2}Una definición del concepto de grado para señales finitas}{15}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Construcción canónica de las bases de Legendre discretas}{18}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{21}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Generalización que involucra a la discretización $\Omega _{n}$}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}Construcción generalizada de los PDL usando la discretización $\Omega _{n}$}{21}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones integrales}{28}{subsection.2.4.2}%
 \contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{33}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Estudio para dimensiones impares}{35}{section.3.1}%
@@ -41,21 +41,21 @@
 \contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{87}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Desfase de la proyección de una señal a espacios monofrecuenciales}{91}{subsection.6.4.4}%
 \contentsline {section}{\numberline {6.5}Simetría, periodicidad y continuidad del espectro $\Sigma _{x}$}{92}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{94}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{101}{subsection.6.6.1}%
-\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{104}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{104}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{107}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Lista de conclusiones}{130}{subsection.7.2.1}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{132}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{132}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{134}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{136}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{137}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{139}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{141}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{142}{section.Alph1.7}%
-\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{142}{subsection.Alph1.7.1}%
-\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{143}{subsection.Alph1.7.2}%
-\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{145}{subsection.Alph1.7.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{147}{appendix.Alph2}%
+\contentsline {section}{\numberline {6.6}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{95}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{102}{subsection.6.6.1}%
+\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{105}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{105}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{108}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Conclusiones del análisis espectral de los PDL}{131}{subsection.7.2.1}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{133}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{133}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{135}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{137}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{138}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{140}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{142}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{143}{section.Alph1.7}%
+\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{143}{subsection.Alph1.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{144}{subsection.Alph1.7.2}%
+\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{146}{subsection.Alph1.7.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{148}{appendix.Alph2}%

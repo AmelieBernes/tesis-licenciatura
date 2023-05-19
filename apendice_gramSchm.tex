@@ -15,7 +15,7 @@ por una base ortogonal $S'$ para este, que
 fácilmente puede normalizarse multiplicando a cada elemento 
 de $S'$ por el reciproco de su norma.
 Al proceso descrito a continuación lo llamaremos
-el \textbf{proceso de ortonormalización de Gram-Schmidt.}
+el \textbf{proceso de ortogonalización de Gram-Schmidt.}
 y lo abreviaremos como ``G-S''.\\
 
 \begin{teo} \label{Teo:Gram-Schmidt}
@@ -128,6 +128,18 @@ que $\xi_{k} \in W_{k-1}^{\perp}$.
 
 \QEDB
 \vspace{0.2cm}
+
+
+\begin{nota}
+Algunos autores prefieren realizar, como parte del 
+algoritmo de Gram-Schmidt descrito antes, un paso
+de normalización del conjunto ortogonal que se obtiene, esto
+para obtener BONs del espacio generado por el conjunto
+linealmente independiente inicial. Nosotros preferimos
+usar la versión de Gram-Schmidt que sólo involucra
+la ortogonalización, y en la teoría siempre realizamos
+el paso final de normalización aparte.
+\end{nota}
 
 Comentemos una consecuencia sencilla del teorema
 de Gram-Schmidt. 

@@ -163,6 +163,43 @@ def figura_cambioDeMalla():
 
     return plt.show()
 
+
+def figura_generalizacion_operadorOmega():
+    def g0(t):
+        return 0*t+3
+    def g1(t):
+        return 0.5*t + 1
+    def g2(t):
+        return t**2 + 2*t +3
+
+    fig, axis = plt.subplots(1,2)
+    X = np.arange(-1.3, 2.3, 0.001)
+    P = [0, 1, 2]
+    axis[0].plot(X, 0*X+1, color = 'mediumturquoise', label = '$f_{0}$')
+    axis[0].scatter(P, [1,1,1], color = 'mediumturquoise')
+    axis[0].plot(X, X, color = 'rebeccapurple', label = '$f_{1}$')
+    axis[0].scatter(P, [0, 1, 2], color = 'rebeccapurple')
+    axis[0].plot(X, X**2, color = 'goldenrod', label = '$f_{2}$')
+    axis[0].scatter(P, [0, 1, 4], color = 'goldenrod')
+
+    X = np.arange(-2.3, 1.3, 0.001)
+    P = [-2, -0.5, 1]
+    axis[1].plot(X, g0(X), color = 'mediumturquoise', label = '$g_{0}$')
+    axis[1].scatter(P, [3, 3, 3], color = 'mediumturquoise')
+    axis[1].plot(X, g1(X), color = 'rebeccapurple', label = '$g_{1}$')
+    axis[1].scatter(P, [g1(p) for p in P], color = 'rebeccapurple')
+    axis[1].plot(X, g2(X), color = 'goldenrod', label = '$g_{2}$')
+    axis[1].scatter(P, [g2(p) for p in P], color = 'goldenrod')
+
+    for i in range(2):
+        axis[i].grid()
+        axis[i].legend()
+        axis[i].axhline(y = 0, color = 'gray')
+        axis[i].axvline(x = 0, color = 'gray')
+
+    return plt.show()
+
+
 def figura_coseno():
 
     fig=plt.figure()
@@ -567,10 +604,11 @@ if __name__=='__main__':
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
     #figura_cosenoMuestreo(5/2, 0.3,20)
-    figura_cosenoMuestreo(12, 0, 18)
-    figura_cosenoMuestreo(12, 0, 24)
+    #figura_cosenoMuestreo(12, 0, 18)
+    #figura_cosenoMuestreo(12, 0, 24)
     #figura_raicesUnidad(5, 8)
     #PDL_grafica_versionContinua(8,5)  
+    figura_generalizacion_operadorOmega()
     lista_colores =['#fe00fa', '#feaf16', '#782ab6', '#1c8356','#3283fe', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
     #for n in range(2,9):
     #    PDLdim_n_graficas_continuas(n, lista_colores)
