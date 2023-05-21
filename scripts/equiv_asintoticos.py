@@ -9,7 +9,6 @@ import random
 # n = len(x), pero lo pasamos como argumento para no calcularlo todo el tiempo.
 
 pi = np.pi
-n = 7
 # -------- MOMENTOS -------------
 def X0(x):
     suma = 0
@@ -61,11 +60,11 @@ def eta_asintotica(w):
 
 
 def prod_punto(w):
-    vect_coseno = [np.cos(2*np.pi*w*(m)/n) for m in range(n)]
-    vect_seno = [np.sin(2*np.pi*w*(m)/n) for m in range(n)]
+    vect_coseno = [np.cos(2*np.pi*w*m/n) for m in range(n)]
+    vect_seno = [np.sin(2*np.pi*w*m/n) for m in range(n)]
     suma = 0
-    for i in range(n):
-        suma += vect_coseno[i]*vect_seno[i]
+    for m in range(n):
+        suma += vect_coseno[m]*vect_seno[m]
     return suma
     
 def prod_punto_asintotico(w):
@@ -115,7 +114,7 @@ def figura_xi_eta():
     axis[1].grid()
     plt.show()
 
-#No se ve bien :(
+# TODO No se ve bien :(
 def figura_prod_punto():
     fig, axis = plt.subplots()
     W= np.arange(0.00001, 0.25, 0.001) # dominio de w
@@ -153,5 +152,6 @@ def figura_coseno(x):
     plt.show()
 n = 20
 x = legendre.calculo_base(n)[8]
-figura_coseno(x)
+#figura_coseno(x)
+figura_prod_punto()
 #figura_xi_eta()
