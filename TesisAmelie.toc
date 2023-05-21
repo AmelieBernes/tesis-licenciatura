@@ -43,19 +43,20 @@
 \contentsline {section}{\numberline {6.5}Simetría, periodicidad y continuidad del espectro $\Sigma _{x}$}{92}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{95}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{102}{subsection.6.6.1}%
-\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{105}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{105}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{108}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Conclusiones del análisis espectral de los PDL}{131}{subsection.7.2.1}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{133}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{133}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{135}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{137}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{138}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{140}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{142}{section.Alph1.6}%
-\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{143}{section.Alph1.7}%
-\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{143}{subsection.Alph1.7.1}%
-\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{144}{subsection.Alph1.7.2}%
-\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{146}{subsection.Alph1.7.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{148}{appendix.Alph2}%
+\contentsline {section}{\numberline {6.7}PROVISIONAL; límites}{104}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{107}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{107}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{110}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Conclusiones del análisis espectral de los PDL}{133}{subsection.7.2.1}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{135}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{135}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{137}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{139}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{140}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{142}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{144}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{145}{section.Alph1.7}%
+\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{145}{subsection.Alph1.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{146}{subsection.Alph1.7.2}%
+\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{148}{subsection.Alph1.7.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{150}{appendix.Alph2}%

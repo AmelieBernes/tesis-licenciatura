@@ -458,6 +458,12 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
     else:
       sigma = sigma_caso1(x, w)
       sigmas.append(sigma)
+  
+  #TODO inicio nuevo:
+  X = np.arange(0, n/2, 0.001)
+  axis1.axhline(y = sum(x)**2/n, color = 'green')
+
+  #TODO fin nuevo
 
   axis1.scatter(frecuencias, sigmas, color=colores[1], s=5, marker = '*', zorder = 2)
   sigma_max = max(sigmas)

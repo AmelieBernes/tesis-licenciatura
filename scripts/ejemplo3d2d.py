@@ -215,7 +215,7 @@ if __name__=='__main__':
     fig = plt.figure()
     axis = fig.add_subplot(1,1,1, projection='3d')
     titulo = 'probando'
-    dibujar_plano_por_tres_puntos(p0, p1, p2, axis, titulo)
+    dibujar_plano_por_tres_puntos(p0, p1, p2, axis, titulo, 'magenta')
     plt.show()
 
     #legendre_3=legendre.calculo_base(3)

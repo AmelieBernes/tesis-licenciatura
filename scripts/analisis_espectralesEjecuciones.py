@@ -125,7 +125,8 @@ frecuencias = [a/100 for a in range(int(25*100/2) + 1)]
 n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 #x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
 
-#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+x = legendre.calculo_base(12)[1]
+ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
 
 #ae.grafica_analisisGlobal_k_fijo(55, graficar = True) 
@@ -134,8 +135,6 @@ n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 
 #ae.grafica_pendientes_oOrigen_RMC()
 
-for k in range(10, 70):
-    ae.grafica_coefEspectrales_de_frecPrincipales(k, False)
 """
 #No ejecutar más:
 
@@ -148,6 +147,9 @@ for n in range(2,70):
 
 for k in range(2,70):
     ae.grafica_analisisGlobal_k_fijo(k, graficar = False)
+
+for k in range(10, 70):
+    ae.grafica_coefEspectrales_de_frecPrincipales(k, False)
 """
  
  
