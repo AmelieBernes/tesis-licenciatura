@@ -1,0 +1,62 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Bases ortonormales}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Lista de deseos}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Polinomios de Legendre de variable continua}{5}{section.1.3}%
+\contentsline {part}{I\hspace {1em}Definición y estudio de los polinomios discretos de Legendre}{8}{part.1}%
+\contentsline {chapter}{\numberline {2}Construcción de las bases de Legendre discretas}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Discretización puntual, polinomios discretos y espacios asociados}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Una definición del concepto de grado para señales finitas}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Construcción canónica de las bases de Legendre discretas}{18}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sobre formas alternativas de definición de la base $\mathcal {L}^{n}$}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Construcción generalizada de los PDL usando la discretización $\Omega _{n}$}{21}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Construcción de $\mathcal {L}^{n}$ en base a discretizaciones integrales}{28}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Sobre simetrías en las entradas de los polinomios de Legendre discretos}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Estudio para dimensiones impares}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Estudio para dimensiones pares}{37}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Cálculo de los PDL}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Revisión de literatura}{39}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Uso de polinomios discretos en problemas de ajuste de datos}{39}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Polinomios discretos de Legendre en la literatura}{41}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Expresión analítica de los PDL}{42}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Fórmulas explícitas para los primeros vectores (máximo hasta el cuarto) de la base $\mathcal {L}^{n}$}{45}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Implementación computacional de las bases discretas de Legendre}{47}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Análisis de la expresión de los PDL}{48}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Pseudocódigos algoritmos usados para calcular las BDL}{49}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Análisis de señales en base a coeficientes respecto a las BLDs}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Expresiones de señales finitas respecto a BLDs}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Caracterización de morfología en base a coeficientes respecto a las BLDs}{57}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{62}{section.5.3}%
+\contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{65}{part.2}%
+\contentsline {chapter}{\numberline {6}Análisis espectral de señales finitas}{66}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{66}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{69}{section.6.2}%
+\contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{70}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{71}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{72}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{76}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{81}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{82}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{85}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{87}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Desfase de la proyección de una señal a espacios monofrecuenciales}{91}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Simetría, periodicidad y continuidad del espectro $\Sigma _{x}$}{92}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{97}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{104}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}PROVISIONAL; límites}{106}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{109}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{109}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{112}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Conclusiones del análisis espectral de los PDL}{135}{subsection.7.2.1}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{137}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{137}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{139}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{141}{section.Alph1.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{142}{section.Alph1.4}%
+\contentsline {section}{\numberline {A.5}La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}{144}{section.Alph1.5}%
+\contentsline {section}{\numberline {A.6}El teorema de Gram-Schmidt}{146}{section.Alph1.6}%
+\contentsline {section}{\numberline {A.7}El concepto de ángulo en un espacio de Hilbert}{147}{section.Alph1.7}%
+\contentsline {subsection}{\numberline {A.7.1}Ángulo entre elementos de un espacio con producto punto}{147}{subsection.Alph1.7.1}%
+\contentsline {subsection}{\numberline {A.7.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{148}{subsection.Alph1.7.2}%
+\contentsline {subsection}{\numberline {A.7.3}Similitud coseno}{150}{subsection.Alph1.7.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{152}{appendix.Alph2}%

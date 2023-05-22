@@ -108,7 +108,7 @@ def prod_x_cos(x, w):
     vect_cos = [np.cos(2*np.pi*w*(m)/n) for m in range(n)]
     suma = 0
     for m in range(n):
-        suma += vect_cos[m] * x[m]
+        suma += xi(n) * vect_cos[m] * x[m]
     return suma
 
 def prod_x_cos_asint(x, w):
@@ -172,29 +172,34 @@ def figura_seno(x):
     axis.grid()
     plt.show()
 
-#se ve super bien!!
+#Perfecto !
 def figura_coseno(x):
     fig, axis = plt.subplots()
     W= np.arange(0.00001, 0.25, 0.0001) # dominio de w
     
     axis.plot(W, prod_x_cos(x, W), color = 'green') 
     axis.plot(W, prod_x_cos_asint(x, W), color = 'yellowgreen')
-    axis.axhline(y = X0(x)/math.sqrt(n), color = 'red', linestyle = 'dotted')
+    axis.axhline(y = X0(x)/math.sqrt(n), color = 'red', linestyle = 'dotted') 
     axis.set_title(r'$\langle x, c_{{ {0}, \omega }}  \rangle$'.format(str(n)))
     
     axis.grid()
     plt.show()
-n = 50
-x = legendre.calculo_base(n)[1]
+#n = 50
+#x = legendre.calculo_base(n)[1]
+#figura_seno(x)
+#figura_coseno(x)
+#
+#n = 13
+##x = legendre.calculo_base(n)[12]
+##figura_seno(x)
+##figura_coseno(x)
+#n = 15
+#x = legendre.calculo_base(15)[5]
+
+x = np.array([-1,2,5,6,6,7.3,2.4])
+n = len(x)
 figura_seno(x)
 figura_coseno(x)
-
-n = 13
-x = legendre.calculo_base(n)[12]
-figura_seno(x)
-x = legendre.calculo_base(15)[4]
-figura_seno(x)
-#figura_coseno(x)
 #TODO noto que para los PDL de grado alto las aproximaciones no parecen muy creíbles. Serán errores numéricos?
 
 

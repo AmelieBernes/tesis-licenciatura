@@ -165,16 +165,62 @@ $\left[ 0, \frac{n}{2}\right]$
 
 Para terminar, hagamos algunos comentarios
 sobre la continuidad del espectro $\Sigma_{x}$
-de una señal $x \in \IR^{n}$. \\
+de una señal $x \in \IR^{n}$.
+Por la periodicidad y simetría del espectro, basta
+analizar la continuidad de $\Sigma_{x}$ sólo en el
+intervalo cerrado $[0, n/2]$. \\
+
+Será de utilidad introducir la siguiente notación.
+\begin{defi}
+\label{def: momentos de x}
+Sean $n \geq 2$, $x= (x_{m})_{m=0}^{n-1} \in \IR^{n}$, $k \geq 0$.
+Se define el número real $M_{k}(x)$ como sigue;
+	\begin{equation}
+	\label{eq: momento k esimo de x}
+	M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}}.
+	\end{equation}
+\end{defi}
+
+\TODO{cambiar la notación para los momentos.}
+\begin{prop}
+\label{prop: limite del espectro por cero}
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ el espectro de $x$ como se definió
+en \ref{def: espectro monofrecuenciales inicial}.
+Sea 
+\begin{align*}
+\alpha(x)= \begin{cases}
+1 & \textit{si } M_{1}(x) \geq \frac{2\pi^{2}}{3n^{2}}M_{3}(x), \\
+-1 & \textit{ en otro caso}.
+\end{cases}
+\end{align*}
+
+El espectro $\Sigma_{x}$ es continuo en $]0, n/2[$. Además,
+\begin{equation}
+\label{eq: limite del espectro a cero}
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
+=
+\left(
+\frac{
+\frac{M_{0}(x)^{2}}{n} + \frac{6M_{1}(x)^{2}}{n(2n-1)(n-1)}
+- (-1)^{\alpha(x)}M_{0}(x) \frac{6 |M_{1}(x)|}{n(2n-1	)}
+}{
+||x||^{2} \left(
+1- 1.5 \frac{n-1}{2n-1}
+\right)
+}
+\right)^{1/2}
+\end{equation}
+\end{prop}
+\noindent
+\textbf{Demostración.}
 Por definición del espectro, 
 si $\omega \geq 0$, entonces
 $\Sigma_{x}(\omega) = \sigma_{n} (x, \omega)$,
 donde los coeficientes
 $\sigma_{n} (x, \omega)$ son como se definieron en
 la proposición \ref{prp: ammm}.
-Por la periodicidad y simetría del espectro, basta
-analizar la continuidad de $\Sigma_{x}$ sólo en el
-intervalo cerrado $[0, n/2]$. \\
+
 
 Observe que la fórmula
 \eqref{eq: coef sigma caso 1}, que sirve
@@ -184,7 +230,224 @@ de sumas y productos de senos y cosenos
 evaluados en funciones de la frecuencia $\omega$, luego, 
 es una función continua, por lo tanto $\Sigma_{x}$
 es continua en el interior del intervalo 
-$[0, n/2]$. No pudimos determinar la
+$[0, n/2]$.
+
+Determinemos ahora 
+el límite
+\begin{equation}
+\label{eq0: 22May}
+\limite{\omega \rightarrow 0^{+}}{
+\Sigma_{x}(\omega)}
+= \limite{\omega \rightarrow 0^{+}}
+{
+\left(		  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2}
+}.
+\end{equation}
+
+Para la tarea, usaremos las series de Taylor
+de las funciones seno y coseno alrededor del cero
+con términos de hasta la potencia $5$ para aproximar
+a los sinusoides que aparecen en la expresión 
+de la derecha de \eqref{eq0: 22May}, es decir, usaremos
+las siguientes aproximaciones, válidas en las cercanías
+del cero;
+\[
+sen(\omega) \sim \omega - \frac{\omega^{3}}{!}
++ o(\omega^{5}),
+\hspace{0.2cm} \omega \sim 0.
+\]
+\[
+cos(\omega) \sim 1 - \frac{\omega^{2}}{2!}
++ \frac{\omega^{4}}{4!} + o(\omega^{5}),
+\hspace{0.2cm} \omega \sim 0.
+\]
+Obtenemos entonces los siguientes equivalentes asintóticos;
+
+\begin{align*}
+\xi_{n, \omega} \sim &
+\sqrt{2} 
+\left(
+4 \pi
+\frac{                                                                                                                                          
+\omega - \frac{2\pi^{2}}{3n^{2}}(2n^2-3n+2)\omega^{3} + o(\omega^{5})
+}{
+\frac{2\pi}{n} \omega -
+\frac{4 \pi^{3}}{3 n^{3}} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} \\
+\sim &
+\sqrt{2} 
+\left(
+2n
+\frac{                                                                                                                                          
+\omega - \frac{2\pi^{2}}{3n^{2}}(2n^2-3n+2)\omega^{3} + o(\omega^{5})
+}{
+\omega -
+\frac{2 \pi^{2}}{3 n^{2}} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} 
+\rightarrow \frac{1}{\sqrt{n}},
+\end{align*}
+
+\begin{align*}
+\eta_{n, \omega} \sim &
+\sqrt{2} 
+\left(
+\frac{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}{
+6 \pi n \omega -
+\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} \\
+\sim & 
+\sqrt{2} 
+\left(
+4\pi^{2}
+\frac{
+(2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}{
+3 n \omega -
+\frac{2 \pi^{2}}{n} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} 
+ \rightarrow \infty.
+\end{align*}
+A partir de estas expresiones se calcula que
+\[
+\langle x,
+c_{n, \omega}
+\rangle = 
+\xi_{n, \omega} 
+\left(
+X_{0} - \frac{2 \pi^{2}}{n^{2}}X_{2} \omega^{2} 
++ \frac{2 \pi^{4}}{3n^{4}} X_{4} \omega^{4} + o(\omega^{5})
+\right) \rightarrow \frac{X_{0}}{\sqrt{n}} ,
+\]
+\TODO{Da más detalles para los otros dos.}
+\begin{align*}
+\langle x,
+s_{n, \omega}
+\rangle = &
+\eta_{n, \omega} 
+\left(
+\frac{2 \pi}{n} X_{1} \omega - \frac{4 \pi^{3}}{3n^{3}}X_{3} \omega^{3} 
+ + o(\omega^{5})
+\right)\\
+= &
+\begin{cases}
+\sqrt{2} \left(
+\frac{
+\frac{24 \pi^{3}}{n}X_{1}^{2}\omega^{3} + o(\omega^{5}) }{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\rightarrow \left(
+\frac{6 X_{1}^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) \geq 0 \\
+-\sqrt{2} \left(
+\frac{
+\frac{24 \pi^{3}}{n}X_{1}^{2}\omega^{3} + o(\omega^{5}) }{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\rightarrow -\left(
+\frac{6 X_{1}^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) < 0,\\
+\end{cases}
+\end{align*}
+y
+\begin{align*}
+\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle \sim &
+\frac{2\pi}{n}
+\xi_{n, \omega} \eta_{n, \omega}
+(n-1)  
+\left(
+\frac{n}{2} \omega - \frac{2\pi^{2}}{3} (n-1) \omega^{3} + o(\omega^{5})
+\right) \\
+= & 
+\frac{2 \sqrt{2}}{n \sqrt{n}} \pi (n-1)
+\left(
+\frac{
+\frac{3}{2} \pi n^{3}\omega^{3} + o(\omega^{5})
+}{
+8 \pi^{3}(2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\rightarrow \frac{
+\sqrt{6(n-1)}
+}{2 \sqrt{2n-1}}.
+\end{align*} 
+De estos límites se deduce que 
+
+\begin{equation}
+\label{ec: limite x, cnw cuadr}
+\limite{\omega \rightarrow 0^{+}}{\langle
+x, c_{n, \omega}
+\rangle^{2} }
+= \frac{M_{0}(x)^{2}}{\sqrt{n}},
+\end{equation}
+\begin{equation}
+\label{ec: limite x, snw cuad}
+\limite{\omega \rightarrow 0^{+}}{\langle
+x, s_{n, \omega}
+\rangle^{2} }
+= \frac{6M_{1}(x)^{2}}{(2n-1)(n-1)n},
+\end{equation}
+
+\begin{equation}
+\label{ec: limite -2abc}
+\limite{\omega \rightarrow 0^{+}}{
+-2 \langle x, c_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle
+\langle c_{n, \omega}, s_{n, \omega} \rangle
+= 
+-(-1)^{\alpha(x)} \frac{6M_{0}(x)|M_{1}(x)|}{n(2n-1)},
+}
+\end{equation}
+\begin{equation}
+\label{ec: limite cnw, snw cuad}
+\limite{\omega \rightarrow 0^{+}}{\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle^{2} }
+= \frac{3(n-1)}{2(2n-1)}.
+\end{equation}
+Observe que $1-\frac{3(n-1)}{2(2n-1)}$
+nunca es cero, o sea, que sustituyendo la 
+expresión \eqref{ec: limite cnw, snw cuad}
+en 
+\begin{equation}
+\label{eq1: 22May}
+\left(		  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2}
+\end{equation}
+no se tiene un denominador igual a cero, por lo que podemos
+sustituir los límites
+\eqref{ec: limite x, cnw cuadr},
+\eqref{ec: limite x, snw cuad},
+\eqref{ec: limite -2abc} y
+\eqref{ec: limite cnw, snw cuad}
+en \eqref{eq1: 22May}
+para concluir que el límite buscado
+\eqref{eq0: 22May} existe y es igual
+a la expresión propuesta 
+\ref{eq: limite del espectro a cero}.
+
+\QEDB
+\vspace{0.2cm}
+
+
+\TODO{Antiguo:}
+No pudimos determinar la
 continuidad de $\Sigma_{x}$ en los puntos
 extremos $0$ y $n/2$, ni encontramos un criterio que deba
 cumplir la señal que implique la continuidad en uno
