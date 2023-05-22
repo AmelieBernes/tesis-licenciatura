@@ -1,7 +1,10 @@
 \section{PROVISIONAL; límites}
 
 En \TODO{rojo} se resaltan las fórmulas que YA se han
-verificado calculándolas dos veces.
+verificado calculándolas dos veces. En 
+\textcolor{blue}{azul} cuando la aproximación ha sido
+simulada exitosamente.
+
 
 \TODO{
 \[
@@ -19,7 +22,7 @@ verificado calculándolas dos veces.
 }
 por lo que
 
-\TODO{
+\textcolor{blue}{
 \begin{align*}
 \xi_{n, \omega} \sim &
 \sqrt{2} 
@@ -47,7 +50,7 @@ por lo que
 \end{align*}
 }
 
-\TODO{
+\textcolor{blue}{
 \begin{align*}
 \eta_{n, \omega} \sim &
 \sqrt{2} 
@@ -74,21 +77,38 @@ por lo que
 \end{align*}
 }
 
-\TODO{
-\[
+\textcolor{blue}{
+\begin{align*}
 \langle
 c_{n, \omega}, s_{n, \omega}
-\rangle = 
+\rangle \sim &
 \frac{2\pi}{n}
 \xi_{n, \omega} \eta_{n, \omega}
 (n-1)  
 \left(
 \frac{n}{2} \omega - \frac{2\pi^{2}}{3} (n-1) \omega^{3} + o(\omega^{5})
-\right) \rightarrow ?.    
-\]
+\right) \\
+= & 
+\frac{2 \sqrt{2}}{n \sqrt{n}} \pi (n-1)
+\left(
+\frac{
+\frac{3}{2} \pi n^{3}\omega^{3} + o(\omega^{5})
+}{
+8 \pi^{3}(2n-1)(n-1)\omega^{3} + o(\omega^{5})
 }
+\right)^{1/2}
+\rightarrow \frac{
+\sqrt{6(n-1)}
+}{2 \sqrt{2n-1}}.
+\end{align*} 
+}
+Tuve que usar la expresión asintótica
+de $\eta_{n, \omega}$ para poder determinar este
+último límite, pues con la expresión de la
+primera linea tenía una indeterminación
+de tipo $\infty \cdot 0$.
 
-\TODO{
+\textcolor{blue}{
 \[
 \langle x,
 c_{n, \omega}
@@ -101,18 +121,35 @@ X_{0} - \frac{2 \pi^{2}}{n^{2}}X_{2} \omega^{2}
 \]
 }
 
-\TODO{
-\[
+
+\begin{align*}
 \langle x,
 s_{n, \omega}
-\rangle = 
+\rangle = &
 \eta_{n, \omega} 
 \left(
 \frac{2 \pi}{n} X_{1} \omega - \frac{4 \pi^{3}}{3n^{3}}X_{3} \omega^{3} 
  + o(\omega^{5})
-\right),
-\]
+\right)\\
+= &
+\begin{cases}
+a & b \\
+c & d
+\end{cases}
+\end{align*}
+
+\[
+\sqrt{2} \left(
+\frac{24 \pi^{3}X_{1}^{2}\omega^{3} + o(\omega^{5}) }{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
 }
+\right)^{1/2}
+\rightarrow \left(
+\frac{6 X_{1}^{2}}{(2n-1)(n-1)}
+\right)^{1/2}.
+\]
+
+
 
 Así, los elementos que parecen en la fórmula
 para $\sigma_{n}(x, \omega)$ cuando $\omega \not\in \frac{n}{2} \IZ$ son
@@ -129,7 +166,7 @@ c_{n, \omega}, s_{n, \omega}
 \right)
 \]
 }
-
+sigue desarrollando el eta  !!!
 \item
 \TODO{
 \[
