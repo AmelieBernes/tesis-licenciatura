@@ -588,7 +588,6 @@ def grafica_analisisEspectrales(x, nombre, graficar = True):
   Función para graficar o guardar (dependiendo del valor del booleano 'graficar')
   el análisis espectral de cualquier señal finita (no cero).
   'x' (tipo array) tiene las mediciones.
-  'frecuencias' (tipo array) es un array de frecuencias.
   'nombre' (tipo string) es el nombre de la señal.
 
   """
