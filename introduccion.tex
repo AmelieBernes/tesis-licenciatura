@@ -63,46 +63,107 @@ que la señal es \textbf{cuadrática}.
 	\includegraphics[scale=0.6]{ejemplo_intro} 
  \end{figure}
 
-\section{Bases ortonormales}
+\section{Bases ortonormales de espacios vectoriales finito dimensionales}
 
-
+Sea $F \in \{ \IR, \IC \}$.  
 En general, dado un $F-$espacio vectorial $V$ de dimensión finita,
 uno siempre cuenta con 
 bases para este espacio,
-es decir, de subconjuntos de $V$ que son tanto linealmente
+es decir, con subconjuntos de $V$ que son tanto linealmente
 independientes (término abreviado como ``l.i.'') como generadores
-de todo el espacio; la importancia de 
-estas es obvia pues, por definición, una base permite representar
-de forma única a un elemento $v \in V$ por medio
-de una colección de escalares. Es por eso que, en ocasiones,
+de todo el espacio. La importancia de 
+estas es obvia, ya que una base permite representar
+de forma única a cualquier elemento $v \in V$ por medio
+de una colección finita de escalares
+(c.f. \TODO{busca referencia.}). 
+Es por eso que, en ocasiones,
 usamos el nombre ``sistema de representación''
 para referirnos a
 \sidenote{El orden de los elementos en una base es importante;
 nosotros no 
 denotamos esto en la notación para bases, pero suponemos que el orden
 en el que se enlistan los elementos es el orden en el que deben usarse.}
-una base $\{ v_{k} : \hspace{0.2cm} 0 \leq k \leq n-1 \}$
-del espacio.
+una base $\{ v_{k} : \hspace{0.2cm} k \in I \}$
+del espacio V.
+
+Se sabe que todo $F-$espacio vectorial tiene
+base (c.f. \TODO{ref}) y que cualesquiera dos bases del espacio
+tienen la misma cardinalidad (c.f. \TODO{ref}). \TODO{ver si dejo eso.} 
+A lo largo de este trabajo
+nos limitaremos a usar
+\begin{itemize}
+\item los $\IR-$ espacios vectoriales $\IR^{n}$, con $n \geq 1$, y
+\item los $\IC-$ espacios vectoriales $\IC^{n}$, con $n \geq 1$, 
+\end{itemize}
+todos estos de dimensión finita, por lo tanto,
+\TODO{aquí di lo de espacios de Hilbert.}
 
 El tener además en $V$ definido un \textbf{producto punto}
 (c.f. apéndice \ref{sec: def basicas Hilbert})
-dota de estructura extra al espacio, en particular, 
+dota de estructura extra al espacio. En particular, 
 en este contexto podemos también hablar del ángulo entre vectores
 del espacio (c.f.
-\ref{angulo entre elementos de un espacio con producto punto}) 
+\ref{angulo entre elementos de un espacio con producto punto})
+- en particular, se tiene una noción 
+de ortogonalidad de vectores
+(c.f. definición \ref{def: ortogonalidad})-
 y de la norma de estos
 (c.f \ref{prop: La norma inducida por un producto punto}).
 
 \begin{prop}
 (\textbf{La ortogonalidad implica independencia lineal})
 Si $V$ es un $F-$espacio vectorial finito dimensional y 
-$\{ v_{k} : 0\leq k \leq j \}$ es un subconjunto ortogonal de
-$V$, entonces $V$ es linealmente independiente.
+$W :=\{ v_{k} : 0\leq k \leq j \}$ es un subconjunto ortogonal de
+$V$, 
+con ningún $v_{k}$ igual a cero, 
+entonces $W$ es linealmente independiente.
 \end{prop}
+\noindent
+\textbf{Demostración.}
+Sea
+$\{a_{k} \}_{k=0}^{j} \subseteq F$
+una colección de escalares para los que se
+tenga la siguiente igualdad en $V$.
+\[
+\suma{k=0}{j}{a_{k}v_{k}} = 0.
+\]
+Sea un índice $0 \leq k' \leq j$.
+Calculando el producto punto de ambos lados
+de la ecuación anterior con el vector $v_{k}$
+resulta, por la hipótesis de ortogonalidad, la
+siguiente ecuación en $F$. 
+\[
+0 = 
+\langle
+0, v_{k'}
+\rangle =
+\left\langle
+\suma{k=0}{j}{a_{k}v_{k}}
+, v_{k'}
+\right\rangle
+= 
+\suma{k=0}{j}{
+a_{k}
+\langle
+v_{k}
+, v_{k'}
+\rangle
+}
+= 
+a_{k'} ||v_{k'} ||^{2};
+\]
+
+puesto que $v_{k'}$ no es cero,
+se tiene que 
+$||v_{k'} ||^{2} \neq 0$. De esto y la igualdad 
+$0 = a_{k'} ||v_{k'} ||^{2}$ se deduce la igualdad
+a cero del escalar $a_{k'}$.
+\QEDB
+\vspace{0.2cm}
 
 En particular, todo subconjunto ortogonal de cardinalidad
 $dim(V)$ es una base del espacio $V$; si además todos los elementos
-de $V$ tiene norma uno, decimos que tenemos una
+de una tal base tienen norma uno, llamamos a esta una
 \textbf{base ortonormal} del espacio $V$. 
 \sidenote{Abreviamos ``base ortonormal'' como ``BON''.}
 
@@ -122,7 +183,7 @@ x = \suma{k=0}{n-1}{\langle x , e_{k} \rangle e_{k}}
 y además
 
 \begin{equation}
-\label{eq1: 11ap}
+\label{eq1: parseval}
 || x ||^{2} = \suma{k=0}{n-1}{\langle x , e_{k} \rangle^{2}}
 \hspace{0.4cm} \textit{(Identidad de Parseval).}
 \end{equation}
@@ -138,13 +199,15 @@ por medio de sus $n$ coeficientes respecto a $\cali{E}$), se tiene que
 	\eqref{eq0: 11ap}), y
 	\item se tiene una relación lineal muy sencilla entre el cuadrado
 	de la norma de $x$ y el cuadrado de los coeficientes de la representación
-	(c.f. \eqref{eq0: 11ap}).
+	(c.f. \eqref{eq1: parseval}).
 \end{itemize}
 
 Estos dos hechos permiten \textbf{usar la magnitud de un coeficiente en 
 \eqref{eq0: 11ap} para valorar la contribución del respectivo 
-elemento de la base $\cali{B}$ para sintetizar a $x$};
-en efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
+elemento de la base $\cali{B}$ para sintetizar a $x$},
+i.e. para reconstruir a $x$ a partir de sus coeficientes
+$\langle x, e_{k} \rangle$ respecto a la base $\cali{E}$.
+En efecto, si, por ejemplo, el coeficiente $\langle x, e_{k_{1}} \rangle$
 es ``muy cercano a cero'', digamos 
 $|\langle x, e_{k_{1}} \rangle| = \epsilon$,  
 entonces el vector 
@@ -158,7 +221,9 @@ es, en la misma medida, cercano al vector inicial $x$, pues
 
 
 \noindent
-Llamaremos al proceso de calcular los coeficientes
+En concordancia con la terminología usual empleada
+en el área de procesamiento de señales, 
+llamaremos al proceso de calcular los coeficientes
 de una señal $x$ respecto a una base ortonormal 
 (i.e. el calcular los productos punto de $x$ con
 los elementos de la base) \textbf{análisis}, y al proceso
@@ -206,30 +271,16 @@ x = \suma{k=0}{n-1}{a_{k}v_{k}};
 observe entonces que $x$ 
 queda completamente determinado por los
 números $a_{k}$. Si lo que nos interesa es
-la forma de la gráfica de $x$, es natural preguntarse lo siguiente:
-
-\begin{preg}
-\label{preg: sist repr}
-Si $\cali{B}$ es como en \eqref{eq0: 13Feb}, $x \in \IR^{n}$
-y $a_{k}$ con $0 \leq k \leq n-1$ son como en 
-\eqref{eq1: 13Feb}, ¿es posible establecer condiciones
-necesarias y suficientes que deban cumplir los coeficientes
-$a_{k}$ para que $x$ sea constante, afín o cuadrática?
-\end{preg}
-
-Después de un poco de reflexión, se llega a que la respuesta 
-a la pregunta \ref{preg: sist repr} depende de la base
-$\cali{B}$, y que por lo general la respuesta es negativa.
-Observe además que, en la formulación de la pregunta,
-se supone que para una señal $x$ se pudo dar
-explícitamente a los coeficientes $a_{k}$ aunque,
-en realidad,  esta es una suposición optimista.
-A pesar de que la existencia y unicidad de tales
-coeficientes está asegurada, el calcularlos
-puede requerir el tener que resolver sistemas cuadrados
-de ecuaciones con una cantidad de parámetros que
-depende linealmente de $n$, sistemas que son computacionalmente
-difíciles de resolver si $n$ es ``grande''.
+la forma de la gráfica de $x$, es natural 
+buscar un sistema de representación
+para el que sea posible establecer criterios
+relativamente sencillos
+que relacionen 1. los coeficientes de un $x \in V$
+respecto a $\cali{B}$ con
+2. la forma de la gráfica de $x$ (interesándonos
+particularmente por los patrones descritos en 
+\ref{def: grafica senial}). \\
+ 
 
 Esto motiva la
 creación de la siguiente lista de deseos.
@@ -262,7 +313,7 @@ bondades entre las que se encuentran
 las que a continuación citamos.
 \begin{itemize}
 \item 
-\textbf{\color{ameMorado}{(Los coeficientes de $x$ respecto
+\textbf{\color{violet}{(Los coeficientes de $x$ respecto
 a $\cali{B}$ son muy fáciles de calcular, ...)}}
 El poder no sólo dar explícitamente los coeficientes
 de un vector respecto a la base, 
@@ -283,7 +334,7 @@ x= \suma{k=0}{n-1}{a_{k}\cali{L}^{n,k}},
 a_{k}= \langle x , \cali{L}^{n,k} \rangle.
 \end{equation}
 \item
-\textbf{\textcolor{ameMorado}{(... dan información sobre el tamaño (norma) de $x$...)}}
+\textbf{\textcolor{violet}{(... dan información sobre el tamaño (norma) de $x$...)}}
 El tener disponible una igualdad de tipo Parseval, igualdad que
 relaciona de manera sencilla (de hecho, lineal)
 el cuadrado de
@@ -295,18 +346,19 @@ respecto a la base;
 \[
 ||x||^{2}= \suma{k=0}{n-1}{|a_{k}|^{2}}.
 \]
-
-Esto es útil al momento
-de intentar determinar
-(de forma intuitiva) 
-	\marginnote{
-		Si $x':= \suma{k=0, }{n-1}{a_{k} \cali{L}^{n,k}}$
-	y $|a_{i}|$ es un número ``cercano a cero'', entonces
+\marginnote{
+		Si 
+	$x' := \suma{\substack{ {k=0}, \\  {k \neq k'} }}{n-1}{
+	a_{k} \cali{L}^{n,k}}$ y 		
+	$|a_{k'}|$ es un número ``cercano a cero'', entonces
 	$||x '|| \approx ||x||$. Pensando en la norma de $x$ como
 	la cantidad de información que tenía, parafraseamos esto
 	como ``quitar coeficientes pequeños no hace que se
 	pierda mucha información''	
 	.}
+Esto es útil al momento
+de intentar determinar
+(de forma intuitiva) 
 la importancia 
 de cierto vector de la base para describir a $x$.
 También es bueno contar con esta igualdad
@@ -321,7 +373,7 @@ un vector $x'$ similar al vector original $x$
 en magnitud.
 \end{itemize}
 \item \textbf{
-\textcolor{ameMorado}{(...y sobre la forma de la
+\textcolor{violet}{(...y sobre la forma de la
 gráfica de $x$.)}} El que,
 dada la expresión \eqref{eq2: 13Feb},
 sea posible establecer
@@ -330,6 +382,7 @@ $a_{k}$
 (en base a su tamaño y signo) y
 \textbf{la forma de la gráfica de la señal}.
 En particular, nos gustaría encontrar condiciones
+sencillas,
 necesarias y suficientes 
 en términos de los coeficientes $a_{k}$ para determinar
 si la gráfica de $x$ es afín o cuadrática.
@@ -367,7 +420,9 @@ de una señal $n-$dimensional $x$
 respecto a esta, dar
 criterios para determinar si $x$ es afín, lineal o cuadrática.
 Como se menciona, también nos gustaría poder dar medidas
-de qué tanto tiende $x$ a alguna de estas formas.
+de qué tanto tiende 
+la gráfica de
+$x$ a parecerse a alguna de estas formas.
 
 
 
@@ -382,8 +437,8 @@ f_{i}(t)= t^{i}, \hspace{0.4cm}
 -1 \leq t \leq 1, \hspace{0.2cm}
 i \in \overline{\IN};
 \end{equation}
-restringiendo su dominio al intervalo $[-1,1]$;
-estas funciones son 
+restringiendo su dominio al intervalo $[-1,1]$,
+las funciones resultantes son 
 elementos del 
 espacio de Hilbert $L^{2}[-1,1]$. \sidenote{
 Puede consultar la definición del espacio de Hilbert
@@ -424,10 +479,9 @@ $f_{i}$ son como en \eqref{eq0: 8En}, entonces,
 para toda $k \geq 0$, $\{f_{i}(t): \hspace{0.2cm} 0 \leq i \leq k \}$
 es una base del espacio $\IR_{k,-1,1}[t]$, luego, con el 
 método de Gram-Schmidt
-(c.f. \ref{ap: gram schmidt}) esta puede ortonormalizarse para
-obtener una BON de $\IR_{k,-1,1}[t]$; haciendo esto
-para toda $k$, se obtiene una BON 
-para todo el espacio $\IR_{-1,1}[t]$. Esta consta de los polinomios
+(c.f. \ref{ap: gram schmidt}) esta puede ortonormalizarse; haciendo esto
+para toda $k$, se obtiene la colección
+de polinomios mutuamente ortogonales
 
 
 \begin{equation}
@@ -450,7 +504,7 @@ A los polinomios \eqref{eq1: 8En}
 se les conoce como \textbf{polinomios de Legendre}
 \sidenote{Muchas veces
 esta condición de normalización cambia; algunos 
-prefieren tomar como condiciones de ortonormalización a 
+prefieren tomar como condiciones de normalización a 
 \[
 \int_{-1}^{1}{P_{k}(t)P_{m}(t)} dt = \frac{2 \delta_{km}}{2n+1}.
 \]
