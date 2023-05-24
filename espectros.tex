@@ -641,11 +641,11 @@ globalmente,
 conforme $n$ aumenta, la 
 pendiente que mejor parece modelar las
 frecuencias principales no es
-$0.5 \cdot k$ (como afirmamos en nuestra hipótesis), 
-sino algo menor, cercana a $0.4 \cdot k$. 
+$0.5$ (como afirmamos en nuestra hipótesis), 
+sino algo menor, cercana a $0.4$. 
 Ya desde el visualizar algunos espectros
 de los PDL se percibía que las frecuencias principales
-parecían siempre ubicarse a la izquierda de $0.5 \cdot k$.
+parecían siempre ubicarse a la izquierda de $0.5$.
 
 Grafiquemos los puntos de la forma
 $(n, m_{n,0})$, $(n, m_{n,1})$ y 
@@ -1002,13 +1002,28 @@ $k = 2$), este límite no parece ser cercano
 al valor propuesto $k/2$.
 
 \item \textbf{Sobre la pregunta \ref{preg 3}}:
+Si la hipótesis \ref{ref: hipotesis} fuese cierta, debería
+esperarse que las pendientes
+$m_{n,0}$ y $m_{n,1}$ se encontraban, para toda $n$,
+cercanas a $0.5$, mientras que las ordenadas al origen
+$b_{n,0}$ y $b_{n,1}$ se ubicarían cerca de cero. Lo que en realidad
+encontramos durante el análisis numérico fue que
+las pendientes, conforme $n$ crece, parecen tender a un 
+valor cercano a 
+$0.4$, mientras que las ordenadas al origen parecen
+disminuir conforme $n$ aumenta. 
 
 
-\item Si $n$ y $k$ son ambos grandes, 
+\item 
+En general, para todas las dimensiones $n$ estudiadas,
+se encontró que los PDL $\cali{L}^{n,k}$ con $k$
+pequeño parecían responder particularmente bien
+a su frecuencia principal, siendo el espectro
+evaluado en esta muy cercano a uno, pero conforme
+$n$ crece y 
+$k$ tiende a $n-1$ (su cota superior),
+los valores $\sigma_{n}(\cali{L}^{n,k}, \omega)$
+parecen estár muy alejados de $1$, por lo que no parece
 no parece ser factible aproximar la gráfica
-del PDL $\cali{L}^{n,k}$ sólo con un sinusoide. Los valores
-de los coeficientes espectrales $\sigma_{n}(\cali{L}^{n,k}, \omega)$
-parecen estár todos muy alejados de $1$.
-\item Incluso para valores grandes de $n$, los primeros
-PDL de dimensión $n$ parecen tener una clara frecuencia.
+de tales PDL sólo con un sinusoide.
 \end{itemize}
