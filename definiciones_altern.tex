@@ -956,7 +956,7 @@ así, el coeficiente buscado es
 \frac{1}{h} \frac{c_{k,k}}{k+1}(k+1)\frac{b-a}{n} 
 +\frac{1}{h} \frac{c_{k,k-1}}{k}-
 \frac{1}{h} \frac{c_{k,k-1}}{k} = 
-\frac{1}{h} \frac{c_{k,k}(b-a)}{kn}.
+\frac{c_{k,k}(b-a)}{hn}.
 \end{equation}
 Puesto que, por hipótesis (c.f. 
 condición \eqref{eq10: 3Nov})
@@ -993,7 +993,10 @@ de $\IR^{n}$
 es la discretización en una malla uniforme
 de $n$ puntos de un polinomio de grado $k$
 y coeficiente principal positivo
-(c.f. proposición \ref{prop: uk son discretizaciones pol...});
+(c.f. proposición \ref{prop: uk son discretizaciones pol...}),
+luego, 
+$u_{k} \in W_{n, k}$ (c.f. teorema 
+\ref{cor: propiedades importantes de espacios Wi});
 \end{itemize}
 así, \eqref{eq4: 2En} es una colección de
 polinomios que satisface las condiciones pedidas  
@@ -1010,11 +1013,13 @@ discreta definida en
 
 \begin{figure}[H]
 	\sidecaption{
-	Al comenzar este
-	trabajo de tesis,
-	nuestra definición original de la base $\cali{L}^{n}$
-	consistía en discretizar a los polinomios
-	$f_{k}$, $0 \leq k \leq n-1$ con el operador $\Delta_{n,-1,1}$.
+	Según lo demostrado, podemos discretizar a los
+	polinomios 
+	$f_{k}$, $0 \leq k \leq n-1$ con el operador $\Delta_{n,-1,1}$
+	para obtener una colección de vectores
+	$\{u_{k} : \hspace{0.1cm} 0 \leq k \leq n-1\}$
+	que, después de ortonormalizarse con el algoritmo de
+	Gram-Schmidt, de lugar a la base $\cali{L}^{n}$.
 	En la figura se ilustra este proceso para cuando $n=4$.
 	\label{fig: definicion original legendre discreto}
 	}

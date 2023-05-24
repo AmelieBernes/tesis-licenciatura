@@ -132,7 +132,8 @@ def limite_cero(x, n):
     b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
     c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
     
-    det = 2*pi *X1*0.001/n-4*pi**3*X3*0.001**3/(3*n**3)
+    #det = 2*pi *X1*0.001/n-4*pi**3*X3*0.001**3/(3*n**3)
+    det = X1 - 2*pi**2*X3*0.001**2/(3*n**2)
     if det > 0:
         signo = 1
     else:
@@ -143,6 +144,37 @@ def limite_cero(x, n):
     limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
     return limite
 
+def limite_n_medios(x, n):
+    """
+    Función que da el límite por la izquierda de n/2 del 
+    espectro de la señal x de dimensión n.
+    """
+    pi = np.pi
+    def momento_skew(x, k):
+        suma = 0
+        for m in range(n):
+            suma += (-1)**m * m**k *x[m]
+        return suma
+
+    norma = np.linalg.norm(x)
+    X0 = momento_skew(x, 0) 
+    X1 = momento_skew(x, 1) 
+    X3 = momento_skew(x, 3) 
+    
+    a_nw_cuadrado = X0**2/n
+    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
+    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
+    
+    det = X1 - 2*pi**2*X3/(3*n**2)
+    if det > 0:
+        signo = 1
+    else:
+        signo = -1
+    
+    d_nw = signo* X0* 6*abs(X1)/(n*(2*n-1)) 
+    
+    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
+    return limite
 """
 #  ---------------------------------------- -- ----------------------------------------
 
@@ -512,8 +544,11 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   
   axis1.scatter(frecuencias, sigmas, color=colores[1], s=5, marker = '*', zorder = 2)
   limite_0 = limite_cero(x, n) #NUEVO 
-  print(limite_0)
+  limite_n_2 = limite_n_medios(x, n) #NUEVO 
+  #print(limite_0) 
+  #print(limite_n_2)
   axis1.axhline(y = limite_0, color = 'blue', linestyle = 'dotted' ) #NUEVO
+  axis1.axhline(y = limite_n_2, color = 'blue', linestyle = 'dotted' ) #NUEVO
   sigma_max = max(sigmas)
   frec_max = frecuencias[sigmas.index(sigma_max)]
   
