@@ -4,7 +4,7 @@ Fijada una dimensión $n \geq 2$,
 si $x \in \IR^{n}$ es cualquier señal y 
 $\Sigma_{x}$
 es su espectro como se definió en
-\ref{def: espectro monofrecuenciales},
+\ref{def: espectro monofrecuenciales inicial},
 en esta sección vamos a demostrar 
 algunos resultados sobre la periodicidad 
 de esta función y su simetría 
@@ -150,13 +150,15 @@ usar usar como dominio
 del espectro
 $\Sigma_{x}$ de una señal $x \in \IR^{n}$
 al conjunto
-\TODO{revisa!}
 \begin{equation}
 \label{eq: malla frecuencias}
 \left\{ \frac{a}{100} : \hspace{0.2cm}
-0 \leq a \leq \frac{100n}{2} \right\},
+0 \leq a \leq 
+\lfloor\frac{100n}{2}\rfloor,
+\right\}
 \end{equation}
 
+\noindent
 es decir, se toman $100$ muestras por
 cada unidad del intervalo 
 $\left[ 0, \frac{n}{2}\right]$
@@ -165,16 +167,105 @@ $\left[ 0, \frac{n}{2}\right]$
 
 Para terminar, hagamos algunos comentarios
 sobre la continuidad del espectro $\Sigma_{x}$
-de una señal $x \in \IR^{n}$. \\
-Por definición del espectro, 
-si $\omega \geq 0$, entonces
+de una señal $x \in \IR^{n}$.
+Por la periodicidad y simetría del espectro, basta
+analizar la continuidad de $\Sigma_{x}$ sólo en el
+intervalo cerrado $[0, n/2]$. \\
+
+Será de utilidad introducir la siguiente notación.
+\begin{defi}
+\label{def: momentos de x}
+Sean $n \geq 2$, $x= (x_{m})_{m=0}^{n-1} \in \IR^{n}$, $k \geq 0$.
+Se definen a los números $M_{k}(x)$ y 
+$\tilde{M}_{k}(x)$ como sigue;
+	\begin{equation}
+	\label{eq: momento k esimo de x}
+	M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}}.
+	\end{equation}
+	
+	\begin{equation}
+	\label{eq: momento skew k esimo de x}
+	\tilde{M}_{k}(x) := \suma{m=0}{n-1}{(-1)^{m}m^{k}x_{m}}.
+	\end{equation}
+\end{defi}
+
+
+\begin{teo}
+\label{teo: limite del espectro por cero}
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ el espectro de $x$ como se definió
+en \ref{def: espectro monofrecuenciales inicial}.
+Sean
+
+\begin{align}
+\label{ec: alpha}
+\alpha(x)= \begin{cases}
+1 & \textit{si } M_{1}(x) \geq \frac{2\pi^{2}}{3n^{2}}M_{3}(x), \\
+-1 & \textit{ en otro caso}. \\
+\end{cases}
+\end{align}
+
+y
+
+\begin{align}
+\label{ec: alpha tilde}
+\tilde{\alpha}(x)= 
+\begin{cases}
+1 & \textit{si } \tilde{M}_{1}(x) \geq \frac{2\pi^{2}}{3n^{2}} \tilde{M}_{3}(x), \\
+-1 & \textit{ en otro caso}. \\
+\end{cases}
+\end{align}
+
+
+El espectro $\Sigma_{x}$ es continuo en $]0, n/2[$, pero no 
+necesariamente en los puntos extremos $0$ y $n/2$.
+
+Además,
+\begin{equation}
+\label{eq: limite del espectro a cero}
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
+=
+\left(
+\frac{
+\frac{M_{0}(x)^{2}}{n} + \frac{6M_{1}(x)^{2}}{n(2n-1)(n-1)}
+- (-1)^{\alpha(x)}M_{0}(x) \frac{6 |M_{1}(x)|}{n(2n-1	)}
+}{
+||x||^{2} \left(
+1- 1.5 \frac{n-1}{2n-1}
+\right)
+}
+\right)^{1/2}
+\end{equation}
+
+y
+
+\begin{equation}
+\label{eq: limite del espectro a cero}
+\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
+=
+\left(
+\frac{
+\frac{\tilde{M}_{0}(x)^{2}}{n} + \frac{6\tilde{M}_{1}(x)^{2}}{n(2n-1)(n-1)}
++(-1)^{\alpha(x)}\tilde{M}_{0}(x) \frac{6 |\tilde{M}_{1}(x)|}{n(2n-1)}
+}{
+||x||^{2} \left(
+1- 1.5 \frac{n-1}{2n-1}
+\right)
+}
+\right)^{1/2}.
+\end{equation}
+\end{teo}
+\noindent
+\textbf{Demostración.}
+Recuerde que
+para toda frecuencia
+$0 \leq \omega \leq n/2$
+el espectro de $x$ se define como 
 $\Sigma_{x}(\omega) = \sigma_{n} (x, \omega)$,
 donde los coeficientes
 $\sigma_{n} (x, \omega)$ son como se definieron en
 la proposición \ref{prp: ammm}.
-Por la periodicidad y simetría del espectro, basta
-analizar la continuidad de $\Sigma_{x}$ sólo en el
-intervalo cerrado $[0, n/2]$. \\
+
 
 Observe que la fórmula
 \eqref{eq: coef sigma caso 1}, que sirve
@@ -184,48 +275,740 @@ de sumas y productos de senos y cosenos
 evaluados en funciones de la frecuencia $\omega$, luego, 
 es una función continua, por lo tanto $\Sigma_{x}$
 es continua en el interior del intervalo 
-$[0, n/2]$. No pudimos determinar la
-continuidad de $\Sigma_{x}$ en los puntos
-extremos $0$ y $n/2$, ni encontramos un criterio que deba
-cumplir la señal que implique la continuidad en uno
-de estos puntos extremos.
-No escribimos en detalle los intentos para
-determinar los límites
+$[0, n/2]$.
+
+Determinemos ahora 
+el límite
+\begin{equation}
+\label{eq0: 22May}
+\limite{\omega \rightarrow 0^{+}}{
+\Sigma_{x}(\omega)}
+= \limite{\omega \rightarrow 0^{+}}
+{
+\left(		  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2}
+}.
+\end{equation}
+
+Para la tarea, usaremos las series de Taylor
+de las funciones seno y coseno alrededor del cero
+con términos de hasta la potencia $5$ para aproximar
+a los sinusoides que aparecen en la expresión 
+\begin{equation}
+\label{eq1: 22May}
+\left(		  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2},
+\end{equation}
+es decir, usaremos
+las siguientes aproximaciones, válidas en las cercanías
+del cero;
 \[
-\limite{\omega \rightarrow 0^{+}}{\sigma_{n}(x, \omega)}
-\hspace{0.2cm} \textit{y} \hspace{0.2cm}
-\limite{\omega \rightarrow \frac{n}{2}^{-}}{\sigma_{n}(x, \omega)},
+sen(\omega) 
+\sim
+\omega - \frac{\omega^{3}}{3!}
++ o(\omega^{5}),
+\hspace{0.2cm} \omega \sim 0,
 \]
-pero comentamos que el problema que encontramos fue
-intentar determinar el límite
-(cuando $\omega \rightarrow 0^{+}$ y cuando $\omega \rightarrow \frac{n}{2}^{-}$)
-de la expresión
 \[
+cos(\omega) \sim 1 - \frac{\omega^{2}}{2!}
++ \frac{\omega^{4}}{4!} + o(\omega^{5}),
+\hspace{0.2cm} \omega \sim 0.
+\]
+
+Con estas aproximaciones, vamos a tener
+a nuestra disposición expresiones como las siguientes;
+
+\[
+cos\left(
+2 \pi \omega \frac{n-1}{n}\right) \sim
+1-2\pi^{2}\frac{(n-1)^{2}}{n^{2}} \omega^{2}
++\frac{2}{3} \frac{(n-1)^{4}}{n^{4}} \pi^{4} \omega^{4}
++ o(\omega^{5}),
+\]
+
+\[
+sen\left(
+2 \pi \omega \frac{m}{n}\right) \sim
+2 \pi \frac{m}{n} \omega 
+- \frac{4}{3n^{3}}\pi^{3} \omega^{3}
++ o(\omega^{5}).
+\]
+
+Usando dichas aproximaciones en 
+las definiciones
+\eqref{eq7: 19Marzo} y \eqref{eq8: 19Marzo}
+de los factores de normalización
+$\xi_{n, \omega}$ y $\eta_{n, \omega}$,
+encontramos las siguientes aproximaciones,
+válidas en las cercanías del cero.
+ 
+\begin{align*}
+\xi_{n, \omega} \sim &
+\sqrt{2} 
+\left(
+4 \pi
+\frac{                                                                                                                                          
+\omega - \frac{2\pi^{2}}{3n^{2}}(2n^2-3n+2)\omega^{3} + o(\omega^{5})
+}{
+\frac{2\pi}{n} \omega -
+\frac{4 \pi^{3}}{3 n^{3}} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} \\
+\sim &
+\sqrt{2} 
+\left(
+2n
+\frac{                                                                                                                                          
+\omega - \frac{2\pi^{2}}{3n^{2}}(2n^2-3n+2)\omega^{3} + o(\omega^{5})
+}{
+\omega -
+\frac{2 \pi^{2}}{3 n^{2}} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} \\ &
+\xrightarrow{\omega \rightarrow 0^{+}} 
+\frac{1}{\sqrt{n}},
+\end{align*}
+
+\begin{align*}
+\eta_{n, \omega} & \sim 
+\sqrt{2} 
+\left(
+\frac{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}{
+6 \pi n \omega -
+\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2} \\
+& \sim 
+\sqrt{2} 
+\left(
+4\pi^{2}
+\frac{
+(2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}{
+3 n \omega -
+\frac{2 \pi^{2}}{n} \omega^{3} + o(\omega^{5})
+}
+\right)^{-1/2}  \\  &
+\xrightarrow{\omega \rightarrow 0^{+}} 
+\infty.
+\end{align*}
+De la expresión para $\xi_{n, \omega}$ se calcula que
+
+\noindent
+\begin{align*}
+\langle x,
+c_{n, \omega}
+\rangle = & 
+\xi_{n, \omega} \langle x,
+\tilde{c}_{n, \omega}
+\rangle =  
+\xi_{n, \omega} \suma{m=0}{n-1}{x_{m} cos \left(
+2 \pi \omega \frac{m}{n}
+\right)}
+\\
+\sim &
+\xi_{n, \omega} 
+\left(
+M_{0}(x) - \frac{2 \pi^{2}}{n^{2}}X_{2} \omega^{2} 
++ \frac{2 \pi^{4}}{3n^{4}} M_{4}(x) \omega^{4} + o(\omega^{5})
+\right) \\ &
+\xrightarrow{\omega \rightarrow 0^{+}} \frac{M_{0}(x)}{\sqrt{n}}
+. \\
+\end{align*}
+
+\noindent
+Ahora bien, de la expresión para
+$\eta_{n, \omega}$ se deduce la siguiente aproximación.
+
+\begin{align*}
+\langle x,
+s_{n, \omega}
+\rangle =
+& 
+\eta_{n, \omega} \langle x,
+\tilde{s}_{n, \omega}
+\rangle =  
+\eta_{n, \omega} \suma{m=0}{n-1}{x_{m} sen \left(
+2 \pi \omega \frac{m}{n}
+\right)} \\
+\sim &
+\eta_{n, \omega}
+\left(
+\frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
+ + o(\omega^{5})
+\right)
+\hspace{0.2cm}
+\textit{cuando } \omega \sim 0
+\\
+\sim & 
+\sqrt{2} 
+\left(
+\frac{
+6 \pi n \omega -
+\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
+}{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\cdot 
+\left(
+\frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
+ + o(\omega^{5})
+\right).
+\end{align*}
+Del intentar evaluar el límite de
+$\langle x,
+s_{n, \omega}
+\rangle $ cuando $\omega \rightarrow 0^{+}$
+con esta última aproximación asintótica se llega a una
+indeterminación de tipo $\infty \cdot 0$.
+Para desarrollar más esta última expresión para intentar
+eliminar esta indeterminación, vamos a expresar 
+el segundo factor 
+$
+\frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
+ + o(\omega^{5})
+$
+como la raíz cuadrada de su cuadrado; puesto que
+a veces este factor es positivo y a veces negativo, para realizar
+este paso deberemos tomar en consideración
+este signo, que, por estar considerando en este análisis
+frecuencias $\omega$ no negativas, tiene
+el mismo signo que 
+$M_{1}(x) - \frac{2\pi^{2}}{3n^{2}}M_{3}(x) \omega^{2}$.
+Definiendo pues a $\alpha(x)$
+como en  
+\ref{ec: alpha},
+podemos seguir la cadena
+de aproximaciones asintóticas de 
+$\langle x,
+s_{n, \omega}
+\rangle $ como sigue;
+
+\begin{align*}
+\langle x,
+s_{n, \omega}
+\rangle = &
+\alpha(x)
+\sqrt{2} 
+\left(
+\frac{
+6 \pi n \omega -
+\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
+}{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\cdot 
+\left(
+\left(
+\frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
+ + o(\omega^{5})
+\right)^{2}
+\right)^{1/2}\\
+= &
+\begin{cases}
 \sqrt{2} \left(
-n - \frac{sen(2 \pi \omega) cos (2 \pi \omega \frac{n-1}{n})}{sen(2 \pi \omega/n)}
-\right)^{-1/2}
-\cdot
-\suma{m=0}{n-1}{x_{m} sen(2 \pi \omega m/n)};
+\frac{
+\frac{24 \pi^{3}}{n}X_{1}^{2}\omega^{3} + o(\omega^{5}) }{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\rightarrow \left(
+\frac{6 M_{1}(x)^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) \geq 0, \\
+-\sqrt{2} \left(
+\frac{
+\frac{24 \pi^{3}}{n}M_{1}(x)^{2}\omega^{3} + o(\omega^{5}) }{
+8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\rightarrow -\left(
+\frac{6 M_{1}(x)^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) < 0.\\
+\end{cases}
+\end{align*}
+
+Por último, encontremos un equivalente
+asintótico, válido en las cercanías de $0$, de 
+$\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle $.
+\begin{align*}
+\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle = &
+\xi_{n, \omega} \eta_{n, \omega}
+\suma{m=0}{n-1}{
+cos\left(
+2 \pi \omega\frac{m}{n}
+\right)
+sen\left(
+2 \pi \omega\frac{m}{n}
+\right)
+} \\
+\sim &
+\frac{2\pi}{n}
+\xi_{n, \omega} \eta_{n, \omega}
+(n-1)  
+\left(
+\frac{n}{2} \omega - \frac{2\pi^{2}}{3} (n-1) \omega^{3} + o(\omega^{5})
+\right) 
+\hspace{0.2cm} \textit{ cuando } \omega \sim 0
+\\
+\sim &
+\frac{2\pi}{n \sqrt{n}}
+(n-1) 
+\eta_{n, \omega} 
+\left(
+\frac{n}{2} \omega - \frac{2\pi^{2}}{3} (n-1) \omega^{3} + o(\omega^{5})
+\right). \\
+\end{align*}
+Nuevamente, el factor 
+$\eta_{n, \omega}$, que tiende a $\infty$
+conforme $\omega \rightarrow 0^{+}$,
+nos hace tener una indeterminación
+del tipo $\infty \cdot 0$
+cuando intentamos calcular el límite
+de 
+$
+\limite{\omega \rightarrow 0^{+}}{
+\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle}
+$.
+Observe que, puesto que sólo nos interesan los valores
+de $\omega$ cercanos a cero, el factor 
+$
+\frac{n}{2} \omega - \frac{2\pi^{2}}{3} (n-1) \omega^{3} + o(\omega^{5})
+$
+es positivo 
+para $\omega$ lo suficientemente pequeño
+(pues siempre es posible encontrar una cota
+superior para $\omega$, cercana a cero, de tal forma que se 
+cumpla la desigualdad $\frac{n}{2} \geq \frac{2 \pi^{2}}{3}(n-1)
+\omega^{2}$ para las frecuencias $\omega$ menores a tal cota), luego, 
+en este caso podemos proceder sin problemas a expresar este
+factor
+como la raíz cuadrada de su cuadrado, para poder concluir lo siguiente; 
+
+
+\begin{align*}
+\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle \sim & 
+\frac{2 \sqrt{2}}{n \sqrt{n}} \pi (n-1)
+\left(
+\frac{
+\frac{3}{2} \pi n^{3}\omega^{3} + o(\omega^{5})
+}{
+8 \pi^{3}(2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2} 
+\hspace{0.2cm} \textit{ cuando } \omega \sim 0
+\\
+\rightarrow & \frac{
+\sqrt{6(n-1)}
+}{2 \sqrt{2n-1}}.
+\end{align*} 
+De estos límites se deduce que 
+
+\begin{equation}
+\label{ec: limite x, cnw cuadr}
+\limite{\omega \rightarrow 0^{+}}{\langle
+x, c_{n, \omega}
+\rangle^{2} }
+= \frac{M_{0}(x)^{2}}{n},
+\end{equation}
+\begin{equation}
+\label{ec: limite x, snw cuad}
+\limite{\omega \rightarrow 0^{+}}{\langle
+x, s_{n, \omega}
+\rangle^{2} }
+= \frac{6M_{1}(x)^{2}}{(2n-1)(n-1)n},
+\end{equation}
+
+\begin{equation}
+\label{ec: limite -2abc}
+\limite{\omega \rightarrow 0^{+}}{
+-2 \langle x, c_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle
+\langle c_{n, \omega}, s_{n, \omega} \rangle
+= 
+- \alpha(x) \frac{6M_{0}(x)|M_{1}(x)|}{n(2n-1)},
+}
+\end{equation}
+\begin{equation}
+\label{ec: limite cnw, snw cuad aa}
+\limite{\omega \rightarrow 0^{+}}{\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle^{2} }
+= \frac{3(n-1)}{2(2n-1)}.
+\end{equation}
+Observe que $1-\frac{3(n-1)}{2(2n-1)}$
+nunca es cero, o sea, que sustituyendo la 
+expresión \eqref{ec: limite cnw, snw cuad}
+en 
+\eqref{eq1: 22May}
+no se tiene un denominador igual a cero, por lo que podemos
+sustituir los límites
+\eqref{ec: limite x, cnw cuadr},
+\eqref{ec: limite x, snw cuad},
+\eqref{ec: limite -2abc} y
+\eqref{ec: limite cnw, snw cuad aa}
+en \eqref{eq1: 22May}
+para concluir que el límite buscado
+\eqref{eq0: 22May} existe y es igual
+a la expresión propuesta 
+\eqref{eq: limite del espectro a cero}. \\
+
+
+Determinemos ahora el límite de
+\eqref{eq1: 22May} cuando $\omega \rightarrow (n/2)^{-}$.
+Para aprovechar todo lo calculado antes, vamos a hacer
+el cambio de variable 
+\[
+\omega = \frac{n}{2} - \tilde{w},
 \]
-puesto que se tiene una indeterminación de tipo
-$\infty \cdot 0$, se aplicó la Regla de L'Hôpital
-(c.f. \cite{hopital}) 
-para intentar determinar el límite, pero esto sólo
-nos llevó a una expresión más complicada que presentaba una indeterminación
-de tipo $\frac{0}{0}$. No esperabamos que la tarea
-de determinar la continuidad por los extremos fuese sencilla,
-pues después de graficar algunos espectros notamos que algunos
-de ellos eran continuos por ambos extremos, mientras que otros
-presentaban discountinuidades (que, por estár acotados los valores
-del espectro por $0$ y $1$, necesariamente son de salto)
-en uno o ambos extremos, y no notamos características de 
-la señal $x$ a partir de la cual se calcula el espectro
-que indicaran cuándo se tenía la discontinuidad por uno 
-de los puntos extremos.
+pues $\omega \rightarrow (n/2)^{-}$ si y sólo si
+$\tilde{\omega} \rightarrow (0)^{+}$.
 
 
+Se calcula que 
+\[
+cos\left(
+2 \pi \omega\frac{n-1}{n}
+\right) = (-1)^{n-1} cos\left(
+2 \pi \tilde{\omega}\frac{n-1}{n}
+\right), \hspace{0.2cm}
+cos\left(
+2 \pi \omega\frac{m}{n}
+\right) = (-1)^{m} cos\left(
+2 \pi \tilde{\omega}\frac{m}{n}
+\right), 
+\]
+\[
+cos\left(
+2 \pi \frac{\omega}{n}
+\right) = -cos\left(
+2 \pi \frac{\tilde{\omega}}{n}
+\right), 
+\]
 
 
+\[
+sen \left( 2 \pi \omega \right)
+= (-1)^{n-1} sen (2 \pi \tilde{\omega})
+, \hspace{0.2cm}
+sen\left(
+2 \pi \omega\frac{m}{n}
+\right) = (-1)^{m+1} sen\left(
+2 \pi \tilde{\omega}\frac{m}{n}
+\right), 
+\]
+\[
+sen\left(
+2 \pi \frac{\omega}{n}
+\right) = sen\left(
+2 \pi \frac{\tilde{\omega}}{n}
+\right).
+\]
+
+De usar las definiciones
+de $\xi_{n, \omega}$ y $\eta_{n, \omega}$
+y las relaciones anteriores entre senos y cosenos
+de ángulos que involucran a $\omega$ y $\tilde{\omega}$
+se sigue de inmediato que
+\[
+\xi_{n, \omega} = \xi_{n, \tilde{\omega}}
+\hspace{0.2cm} \textit{ y } \hspace{0.2cm}
+\eta_{n, \omega} = \eta_{n, \tilde{\omega}},
+\]
+luego, 
+
+\begin{align*}
+\xi_{n, \omega} = &
+\xi_{n, \tilde{\omega}} \\
+\sim &
+\sqrt{2} 
+\left(
+2n
+\frac{                                                                                                                                          
+\tilde{\omega} - \frac{2\pi^{2}}{3n^{2}}(2n^2-3n+2)\tilde{\omega}^{3} 
++ o(\tilde{\omega}^{5})
+}{
+\tilde{\omega} -
+\frac{2 \pi^{2}}{3 n^{2}} \tilde{\omega}^{3} + o(\tilde{\omega}^{5})
+}
+\right)^{-1/2}
+\hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0
+\\ &
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}} 
+\frac{1}{\sqrt{n}},
+\end{align*}
+y 
+\begin{align*}
+\eta_{n, \omega} = &
+\eta_{n, \tilde{\omega}} \\
+& \sim 
+\sqrt{2} 
+\left(
+4\pi^{2}
+\frac{
+(2n-1)(n-1)\tilde{\omega}^{3} + o(\tilde{\omega}^{5})
+}{
+3 n \tilde{\omega} -
+\frac{2 \pi^{2}}{n} \tilde{\omega}^{3} + o(\tilde{\omega}^{5})
+}
+\right)^{-1/2}  
+\hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0
+\\  &
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}} 
+\infty.
+\end{align*}
+Tenemos entonces que
+\[
+\limite{\omega \rightarrow (n/2)^{-}}{
+\xi_{n, \omega}} = \frac{1}{\sqrt{n}},
+\hspace{0.2cm}
+\limite{\omega \rightarrow (n/2)^{-}}{
+\eta_{n, \omega}} = \infty.
+\]
+
+De forma análoga pueden reutilizarse los cálculos anteriores,
+cambiando los factores $M_{k}(x)$ por los $\tilde{M}_{k}(x)$
+para deducir los siguientes límites.
+
+
+\begin{align*}
+\langle x,
+c_{n, \omega}
+\rangle = & 
+\xi_{n, \omega} \langle x,
+\tilde{c}_{n, \omega}
+\rangle =  
+\xi_{n, \omega} \suma{m=0}{n-1}{x_{m} cos \left(
+2 \pi \omega \frac{m}{n}
+\right)}
+\\
+= &  
+\xi_{n, \tilde{\omega}} \suma{m=0}{n-1}{(-1)^{m}x_{m} cos \left(
+2 \pi \tilde{\omega} \frac{m}{n}
+\right)}\\
+\sim &
+\xi_{n, \tilde{\omega}} 
+\left(
+\tilde{M}_{0}(x) - \frac{2 \pi^{2}}{n^{2}}\tilde{M}_{2} \tilde{\omega}^{2} 
++ \frac{2 \pi^{4}}{3n^{4}} \tilde{M}_{4}(x) \tilde{\omega}^{4} + o(\tilde{\omega}^{5})
+\right) 
+\hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0
+\\
+& 
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}}
+\frac{\tilde{M}_{0}(x)}{\sqrt{n}},
+\end{align*}
+
+\begin{align*}
+\langle x,
+s_{n, \omega}
+\rangle = &
+\eta_{n, \omega}
+\langle
+x, \tilde{s}_{n, \omega}
+\rangle
+= \eta_{n, \omega}
+\suma{m=0}{n-1}{
+x_{m}sen\left(
+2 \pi \omega\frac{m}{n}
+\right)
+} \\
+= &
+- \eta_{n, \tilde{\omega}}
+\suma{m=0}{n-1}{
+(-1)^{m}
+x_{m}sen\left(
+2 \pi \tilde{\omega} \frac{m}{n}
+\right)
+} \\
+\sim &
+-\alpha(x)
+\sqrt{2} 
+\left(
+\frac{
+6 \pi n \omega -
+\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
+}{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+}
+\right)^{1/2}
+\cdot 
+\left(
+\left(
+\frac{2 \pi}{n} \tilde{M}_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}
+\tilde{M}_{3}(x) \omega^{3} 
+ + o(\omega^{5})
+\right)^{2}
+\right)^{1/2}\\
+= &
+\begin{cases}
+\rightarrow  - \left(
+\frac{6 \tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \tilde{\alpha}(x) \geq 0, \\
+\rightarrow   \left(
+\frac{6 \tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n}
+\right)^{1/2} & \textit{si } \tilde{\alpha}(x) < 0.\\
+\end{cases}
+\end{align*}
+donde $\tilde{\alpha}(x)$
+es como se definión en
+\ref{ec: alpha tilde}.
+
+Por último, 
+
+\begin{align*}
+\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle = &
+\xi_{n, \omega} \eta_{n, \omega}
+\suma{m=0}{n-1}{
+cos\left(
+2 \pi \omega\frac{m}{n}
+\right)
+sen\left(
+2 \pi \omega\frac{m}{n}
+\right)
+} \\
+= &
+\xi_{n, \tilde{\omega}} \eta_{n, \tilde{\omega}}
+\suma{m=0}{n-1}{
+(-1)^{m}cos\left(
+2 \pi \tilde{\omega} \frac{m}{n}
+\right) \cdot (-1)^{m+1}
+sen\left(
+2 \pi \tilde{\omega} \frac{m}{n}
+\right)
+}
+\\
+= &
+-\xi_{n, \tilde{\omega}} \eta_{n, \tilde{\omega}}
+\suma{m=0}{n-1}{
+cos\left(
+2 \pi \tilde{\omega}\frac{m}{n}
+\right) 
+sen\left(
+2 \pi \tilde{\omega}\frac{m}{n}
+\right)
+}
+\\
+\rightarrow &
+- \frac{\sqrt{6(n-1)}}{2 \sqrt{2n-1}}.
+\end{align*}
+
+Obtenemos así los siguientes límites.
+\begin{equation}
+\label{ec: limite x, cnw cuadr n med}
+\limite{\omega \rightarrow (n/2)^{-}}{\langle
+x, c_{n, \omega}
+\rangle^{2} }
+= \frac{\tilde{M}_{0}(x)^{2}}{n},
+\end{equation}
+\begin{equation}
+\label{ec: limite x, snw cuad n med}
+\limite{\omega \rightarrow (n/2)^{-}}{\langle
+x, s_{n, \omega}
+\rangle^{2} }
+= \frac{6\tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n},
+\end{equation}
+
+\begin{equation}
+\label{ec: limite -2abc n med}
+\limite{\omega \rightarrow (n/2)^{-}}{
+-2 \langle x, c_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle
+\langle c_{n, \omega}, s_{n, \omega} \rangle
+= 
+\alpha(x) \frac{6\tilde{M}_{0}(x)| \tilde{M}_{1}(x)|}{n(2n-1)},
+}
+\end{equation}
+\begin{equation}
+\label{ec: limite cnw, snw cuad}
+\limite{\omega \rightarrow (n/2)^{-}}{\langle
+c_{n, \omega}, s_{n, \omega}
+\rangle^{2} }
+= \frac{3(n-1)}{2(2n-1)}.
+\end{equation}
+De nuevo no hay problemas de indeterminación al 
+sustituir \eqref{ec: limite cnw, snw cuad} en 
+\eqref{eq1: 22May}, por lo que podemos 
+sustituir 
+\eqref{ec: limite x, cnw cuadr n med}, 
+\eqref{ec: limite x, snw cuad n med}, 
+\eqref{ec: limite -2abc n med} y 
+\eqref{ec: limite cnw, snw cuad} en 
+\eqref{eq1: 22May} para concluir que el límite por la izquierda
+de $n/2$ del espectro $\Sigma_{x}$ es, en efecto,
+el propuesto
+en 
+\eqref{eq: limite del espectro a cero}. \\
+
+
+Con unos ejemplos 
+fijando a una señal $x$
+es fácil comprobar que los límites extremos del espectro
+que acabamos de calcular no siempre coinciden con los valores
+del espectro $\Sigma_{x}$ en tales extremos.
+\QEDB
+\vspace{0.2cm}
+
+%\input{limite} aquí están algunos resultados en limpio (sin desarrollo) de lo que calculé para poder determinar los límites extremos del espectro de una señal.
+
+\begin{figure}[H]
+	\sidecaption{
+	Se grafica el espectro del PDL
+	$\cali{L}^{12,1}$. Observe que el espectro
+	es continuo por la derecha de $1/2$, pero tiene
+	una discontinuidad de salto a la izquierda de $0$.
+	\label{fig: lim 1}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{lim_1} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Observe que el espectro de $\cali{L}^{12,8}$ es, por el 
+	contrario, continuo por $0$ pero discontinuo por $1/2$.
+	\label{fig: lim 2}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{lim_2} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	El espectro de $\cali{L}^{12,9}$ es
+	continuo por ambos extremos.
+	\label{fig: lim 2}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{lim_3} 
+\end{figure}
+
+\begin{figure}[H]
+	\sidecaption{
+	El espectro de la señal
+	$x = (1, 2, -3, -6) \in \IR^{4}$
+	es discontinuo por ambos extremos.
+	\label{fig: lim 4}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{lim_4} 
+\end{figure}
 
 \section{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}
 
@@ -334,10 +1117,13 @@ Nos gustaría, así como hicimos en la definición
 de una señal $x$ basada en el espectro
 $\Sigma_{x}$ de esta. No es tan sencillo hacer esto, pues,
 como comentamos en la sección
-\ref{sec: simetria, periodicidad, continuidad}, no parece
-que para toda señal $x \in \IR^{n}$ el espectro
-$\Sigma_{x}$ sea continuo en los puntos extremos
-$0$ y $n/2$, por lo que intentar definir una
+\ref{sec: simetria, periodicidad, continuidad}, 
+tenemos expresiones para los límites del 
+espectro $\Sigma_{x}$ de una señal $x$
+en los puntos extremos $0$ y n/2,
+pero estos límites no necesariamente coinciden con los
+valores del espectro en tales puntos extremos,
+por lo que intentar definir una
 frecuencia principal como
 \[
 \omega \in [0, n/2] \textit{ tal que }
@@ -363,7 +1149,7 @@ $\{ \Sigma_{x}(w): \hspace{0.2cm} \omega
  	\label{fig: ej FP1}
 	}
 	\centering
-	\includegraphics[scale = 1]{ejemplo_FP1.png} 
+	\includegraphics[scale = 1.4]{ejemplo_FP1.png} 
 \end{figure}	
 Sorteamos este problema si restringimos las frecuencias
 $\omega$ a considerar a un subconjunto finito del
@@ -717,5 +1503,3 @@ $g$, siendo $25$ el tamaño de la muestra.
 \end{ejemplo}
 
 \input{frec_muestreo}
-\input{limite}
-

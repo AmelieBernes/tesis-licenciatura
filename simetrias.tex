@@ -158,7 +158,7 @@ Sea $M = \lceil \frac{n}{2} \rceil$.
 Definimos al 
 \textbf{espacio de señales antisimétricas} $S_{n,-}$ como 
 	\begin{equation}
-	\label{eq1: 5Dic}
+	\label{eq: def de Sn-}
 	S_{n, -}:= \{ x=(x_{m})_{m=0}^{n-1}  \in \IR^{n}
 	\hspace{0.2cm} |
 	\hspace{0.2cm} \forall  
@@ -171,7 +171,7 @@ y, además, definimos al
 \textbf{espacio de señales simétricas} $S_{n,+}$ como 
  
 	\begin{equation}
-	\label{eq0: 5Dic}
+	\label{eq: def de Sn+}
 	S_{n, +}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
 	| \hspace{0.2cm} \forall  
 	\hspace{0.1cm}
@@ -212,7 +212,7 @@ Las siguientes dos observaciones se siguen de inmediato.
 Sea $n \geq 2$ entero.  
 Los conjuntos $S_{n,+}$ y $S_{n,-}$ definidos como en  
 \ref{def: espacios de seniales simetricas y antisimetricas}. 
-son subespacios de $\IR^{n}$.
+son subespacios vectoriales de $\IR^{n}$.
 \end{obs}
 
 \begin{obs}
@@ -234,15 +234,14 @@ Para toda $0 \leq k \leq n-1$ se tiene que
 \item $w_{k} \in S_{n,-}$ si $k$ es impar,
 \end{itemize}
 donde $S_{n,+}$ es como en
-\eqref{eq0: 5Dic} o \eqref{eq0: 17ap}
-(dependiendo de la paridad de $n$) y 
+\eqref{eq: def de Sn+} y
 $S_{n,-}$ es como en 
-\eqref{eq1: 5Dic}.
+\eqref{eq: def de Sn-}.
 \end{obs}
 
 Es fácil establecer la perpendicularidad entre
 señales simétricas con señales antisimétricas.
-Hacemos esto a continuación
+Hacemos esto a continuación.
 
 \begin{lema}
 \label{lema: ortogonalidad entre sim y antisim}
@@ -281,11 +280,12 @@ A lo largo de esta subsección vamos
 estudiar las simetrías presentes en las entradas
 de los PDL $\cali{L}^{n,k}$, con $0 \leq k \leq n-1$,
 cuando la dimensión $n$ es impar;
-$n \in \IN$ impar; digamos que
+si $M := \lceil \frac{n}{2} \rceil$,
+entonces
 
 \begin{equation}
 \label{eq1: 19En}
-n=2M - 1 \hspace{0.2cm} \text{ con } M \in \IN.
+n=2M - 1.
 \end{equation}
 
 \begin{teo}
@@ -431,29 +431,7 @@ se infiere que
 \overline{\eta}_{1} = w_{1} + 0 \cdot \overline{\eta}_{0}=
 w_{1} \in S_{n,-}.
 \]
-Digamos pues que
-
-\[
-\overline{\eta}_{1} = 
-(a_{0}, \ldots , a_{M-2}, a_{M-1}, -a_{M-2}, \ldots , -a_{0} );
-\]
-para completar la base de inducción debemos demostrar
-que $a_{M-1}$, la entrada central de $\overline{\eta}_{1}$,
-es cero. Según \eqref{eq3: 19En} y
-la definición del polinomio discreto $w_{0}$, 
-$\overline{\eta}_{0}$ es el vector constante uno de $\IR^{n}$;
-ahora bien, puesto que $\overline{\eta}_{0}$
-y $\overline{\eta}_{1}$
-son ortogonales entre sí, llegamos, como queríamos, a que
-
-\[
-0 = \langle \overline{\eta}_{0}, \overline{\eta}_{1}\rangle
-= \suma{m=0}{n-1}{a_{m}} = 
-\suma{m=0}{M-2}{a_{m}} + a_{M-1} -
-\suma{m=0}{M-2}{a_{m}} = a_{M-1}.
-\]
-
-
+La base de inducción queda así completa.
 
 \item (Paso inductivo) Sea $0 \leq k \leq n-1$ par, y
 supongamos la afirmación cierta para todo polinomio de Legendre

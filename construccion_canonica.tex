@@ -1,5 +1,17 @@
 \chapter{Construcción de las bases de Legendre discretas}
 \label{cap 2}
+
+En este capítulo vamos a construir,
+para toda dimensión $n\geq $,
+una base ortonormal de $\IR^{n}$,
+que llamaremos ``base de Legendre discreta'',
+y que en principio se basa en discretizaciones puntuales
+de polinomios de ciertos grados
+y ortonormalizaciones de las colecciones
+de vectores de $\IR^{n}$ que de esto resulta. 
+A lo largo del capítulo 
+daremos construcciones alternativas de esta base.
+
 Comenzamos planteando algunas definiciones.
 
 \section{Discretización puntual, polinomios discretos y espacios asociados}
@@ -521,9 +533,10 @@ es base de $W_{n,i}$.
 	W_{n,i} \subsetneq W_{n,i+1}.
 	\end{equation}
 
-\item El espacio $W_{n,i}$ consta \textbf{exactamente}
-de los polinomios discretos de dimensión $n$ con dominio uniforme
-de grado a lo más $i$.
+\item Para toda $x \in \IR^{n}$, $x \in W_{n,i}$ si y sólo si
+existen $\cali{P}$ una malla uniforme de $n$ puntos
+y $g=g(x)$ un polinomio de grado a lo más $i$
+tales que $x = \Omega_{n, \cali{P}}(g)$.
 
 \item $\IR^{n}= W_{n,n-1}$.
 \end{itemize}
@@ -648,15 +661,48 @@ $f, \tilde{f}$ de grados menores a $n$ (pero no
 iguales entre sí), tales que
 $\Omega_{n, \cali{P}}(f) = x = \Omega_{n, \tilde{\cali{P}}}(\tilde{f})$.
 Comprobamos que esto no ocurre
-en el siguiente resultado.
+en la siguiente proposición.
+
+
+
+\begin{ejemplo}
+Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se quita la restricción en los grados de los polinomios a discretizar.
+
+Considere, por ejemplo a la señal
+\[
+x = (1,1,1) \in \IR^{3}.
+\]
+Los polinomios 
+$f(t)=1$, $g(t)= 1-5t(t-0.4)(t-0.8)(t-1)(t-2)$
+y $h(t) = 1+3t(t-1)(t-2)$,
+de grados $0$, $5$ y $3$, respectivamente, son tales
+que al ser evaluados en el operador
+$\Omega_{3, \cali{P_{3}}}$ dan lugar a la señal $x$.
+
+La señal 
+\[
+x = (1,1,0) \in \IR^{3}
+\]
+puede obtenerse como la discretización
+del polinomio de grado $3$
+$p(t) = 1+t(t-1)(t-2.5)$ en la  
+malla uniforme $\cali{P}_{3}$, pero también como
+la discretización del polinomio de grado $2$
+$q(t)= 0.625 + t - 0.5t^{2}$
+en la malla uniforme $\cali{P} = \{
+0.5, 1.5, 2.5 \}$.
 
 \begin{figure}[H]
-	\sidecaption{Lo que sí es seguro es que la unicidad establecida en la proposición \ref{prop: el operador de discretizacion puntual es un isomorfismo (...)} no es válida si se quita la restricción en los grados de los polinomios a discretizar.
+	\sidecaption{
+	Gráficas de los polinomios y señales de $\IR^{3}$
+	expuestas en el ejemplo.
 	\label{fig: restriccion en grado pol}
 	}
 	\centering
 	\includegraphics[scale=0.52]{25Nov_1} 
 \end{figure}	
+\final 
+\end{ejemplo}
 
 
 \begin{prop}
@@ -839,7 +885,7 @@ por lo establecido en la proposición \ref{prop: grado de x}.
 Sean $n \geq 2$, $0 \leq i \leq n-1$ enteros. 
 Al subespacio $W_{n,i}$ definido en \eqref{espacios Wi}
 se le denominará el \textbf{espacio de señales $n-$dimensionales
-de grado $i$.}
+de grado a lo más $i$.}
 \end{defi}
 
 
@@ -942,9 +988,9 @@ por lo tanto, a todo elemento de este.
 \begin{figure}[H]
 	\sidecaption{
 	Dado el polinomio discreto de Legendre $\cali{L}^{n,k}=(\cali{L}^{n,k}_{m})$,
-	debe pensar a $n$ como la variable de \textbf{dimensión}, 
-	a $k \in \{0,\ldots,n-1 \}$ como la de 
-	\textbf{grado}, mientras que $m$ es el contador de \textbf{posición.}
+	$n$ es la variable de \textbf{dimensión}, 
+	$k \in \{0,\ldots,n-1 \}$ la de 
+	\textbf{grado} y $m$ es el índice de \textbf{posición.}
 	\label{fig: pdl}
 	}
 	\centering
@@ -972,7 +1018,7 @@ para el caso continuo (c.f. \ref{notacion: 17ap}),
 y, con el 
 método de Gram-Schmidt, ortonormalizamos estas bases para obtener
 una BON del espacio ambiente que contiene a la familia
-(que es $\IR^{n}$ en el primer caso y $\IR_{-1,1}[t]$
+(que es $\IR^{n}$ en el primer caso y $L^{2}[-1,1]$
 en el segundo). \\
 
 Observe sin embargo que, en el caso discreto, además

@@ -114,23 +114,28 @@ def sinusoide_espectros(n, w, A, phi, nombre, ruido = True):
 def f(t):
       return 3* np.sin(2*np.pi*t) + np.sin(2*np.pi*4*t) + 0.5* np.cos(2*np.pi*7*t)
 
-Fs = 25
-ts = 1/Fs
-t = np.arange(0,1,ts)
-x = f(t) #muestreando y guardando los resultados, dando lugar a la señal 'x'.
-frecuencias = [a/100 for a in range(int(25*100/2) + 1)]
-#ae.grafica_analisisEspectrales(x, 'x')
-
-
-n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
-#x = [cos_sin_ruido(t/20, A, 3.5, phi) for t in range(20)]
-
-x = legendre.calculo_base(12)[1]
+#Fs = 25
+#ts = 1/Fs
+#t = np.arange(0,1,ts)
+#x = f(t) #muestreando y guardando los resultados, dando lugar a la señal 'x'.
+#frecuencias = [a/100 for a in range(int(25*100/2) + 1)]
+##ae.grafica_analisisEspectrales(x, 'x')
+#
+#
+#n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
+#x = [cos_con_ruido(t/20, A, 3.5, phi) for t in range(20)]
+x = [1,2,-3,-6]
+nombre = 'x'
 ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#
+#x = legendre.calculo_base(12)[1]
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#
+#x = legendre.calculo_base(35)[1]
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
+#ae.grafica_analisisEspectrales_PDL(12,2)
 
-#ae.grafica_analisisGlobal_k_fijo(55, graficar = True) 
-#ae.grafica_analisisGlobal_k_fijo(10, graficar = True) 
 #ae.grafica_nube_b0m0_b1m1() 
 
 #ae.grafica_pendientes_oOrigen_RMC()
