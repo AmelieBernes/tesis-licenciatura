@@ -46,7 +46,7 @@
 \contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{112}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{112}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Gráficas y comentarios}{115}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Conclusiones del análisis espectral de los PDL}{138}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Conclusiones del análisis espectral de los PDL}{138}{section.7.3}%
 \contentsline {chapter}{\numberline {A}Apéndice: teoría}{140}{appendix.Alph1}%
 \contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{140}{section.Alph1.1}%
 \contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{142}{section.Alph1.2}%

@@ -134,7 +134,7 @@ ae.grafica_analisisEspectrales(x, nombre, graficar = True)
 #x = legendre.calculo_base(35)[1]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
-#ae.grafica_analisisEspectrales_PDL(12,2)
+ae.grafica_analisisEspectrales_PDL(7,1)
 
 #ae.grafica_nube_b0m0_b1m1() 
 

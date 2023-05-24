@@ -1,17 +1,16 @@
 \subsection{Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}
 
-Para hacer nuestros análisis espectrales, hemos
-usado la dimensión $n$ del PDL $\cali{L}^{n, k} \in \IR^{n}$
-en cuestión
+Para hacer nuestros análisis espectrales
+numéricos de una señal $x \in \IR^{n}$, hemos
+usado la dimensión $n$ de la señal en cuestión 
 para buscar, en base a máximos globales
 del espectro 
 $\Sigma_{x}: [0, \frac{n}{2}] \longrightarrow [0,1]$, la
 mejor frecuencia $\omega$ para aproximar la gráfica
-de $\cali{L}^{n,k}$ en base a un sinusoide discreto
+de $x$ en base a un sinusoide discreto
 de dimensión $n$. \\
 
-
-Note que en esa discusión nunca hablamos de 
+Note que en esta discusión nunca hablamos de 
 parámetros importantes para, de forma canónica, hacer
 un análisis espectral, como lo son la
 duración en tiempo de la señal o la frecuencia
@@ -23,8 +22,7 @@ La cantidad de muestras tomadas (de forma uniforme)
 de una señal por unidad de tiempo 
 será denotada por $F_{s}$ y llamada \textbf{frecuencia
 de muestreo} de la señal. A la cantidad de unidades de
-tiempo que dura la medición se le denotará por $T$. \\
-
+tiempo que dura la medición se le denotará por $T$. 
 A la cantidad total de muestras tomadas se le denotará
 por $L$.
 \end{defi}
@@ -59,12 +57,12 @@ Nosotros, por el momento, sólo nos
 hemos enfocado en buscar
 una frecuencia $\omega \in [0, \frac{n}{2}]$ que de lugar
 a un sinusoide que aproxime bien la gráfica
-de $\cali{L}^{n,k}$;
+de $x$;
 observe que, al hacer esto, hemos supuesto de forma
 implícita que estamos estudiando una señal
 de duración una unidad de tiempo
-($T = 1$) de longitud $n$
-(o sea, $L = F_{s} = n$). \\
+(i.e. $T = 1$) y de longitud $n$
+(i.e. $L = F_{s} = n$). \\
 Supongamos ahora que
 tenemos una señal $x$ que consta de $L$ mediciones, siendo
 $F_{s}$ la frecuencia de muestreo.

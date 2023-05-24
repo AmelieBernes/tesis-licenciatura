@@ -154,7 +154,7 @@ al conjunto
 \label{eq: malla frecuencias}
 \left\{ \frac{a}{100} : \hspace{0.2cm}
 0 \leq a \leq 
-\lfloor\frac{100n}{2}\rfloor,
+\left\lfloor\frac{100n}{2}\right\rfloor,
 \right\}
 \end{equation}
 
@@ -192,6 +192,7 @@ $\tilde{M}_{k}(x)$ como sigue;
 
 \begin{teo}
 \label{teo: limite del espectro por cero}
+\textbf{(Sobre la continuidad del espectro)}
 Sean $n \geq 2$, $x \in \IR^{n}$.
 Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ el espectro de $x$ como se definió
 en \ref{def: espectro monofrecuenciales inicial}.
@@ -971,7 +972,7 @@ del espectro $\Sigma_{x}$ en tales extremos.
 	\sidecaption{
 	Se grafica el espectro del PDL
 	$\cali{L}^{12,1}$. Observe que el espectro
-	es continuo por la derecha de $1/2$, pero tiene
+	es continuo por la derecha de $6$, pero tiene
 	una discontinuidad de salto a la izquierda de $0$.
 	\label{fig: lim 1}
 	}
@@ -982,7 +983,7 @@ del espectro $\Sigma_{x}$ en tales extremos.
 \begin{figure}[H]
 	\sidecaption{
 	Observe que el espectro de $\cali{L}^{12,8}$ es, por el 
-	contrario, continuo por $0$ pero discontinuo por $1/2$.
+	contrario, continuo por $0$ pero discontinuo por $6$.
 	\label{fig: lim 2}
 	}
 	\centering
@@ -992,7 +993,7 @@ del espectro $\Sigma_{x}$ en tales extremos.
 \begin{figure}[H]
 	\sidecaption{
 	El espectro de $\cali{L}^{12,9}$ es
-	continuo por ambos extremos.
+	continuo por ambos extremos $0$ y $6$.
 	\label{fig: lim 2}
 	}
 	\centering
@@ -1003,7 +1004,8 @@ del espectro $\Sigma_{x}$ en tales extremos.
 	\sidecaption{
 	El espectro de la señal
 	$x = (1, 2, -3, -6) \in \IR^{4}$
-	es discontinuo por ambos extremos.
+	es discontinuo por ambos extremos
+	$0$ y $2$.
 	\label{fig: lim 4}
 	}
 	\centering
@@ -1174,7 +1176,8 @@ $[0, n/2]$.
 \end{defi}
 En la práctica, el que se tenga que fijar un conjunto
 finito $\cali{P} \subseteq [0, n/2]$ de frecuencias
-para calcular la FP1 no es un problema, pues ya teníamos que hacer
+para calcular la FP1 de una
+señal $x$ no es un problema, pues ya teníamos que hacer
 esto para calcular, de forma computacional, el espectro
 $\Sigma_{x}$. Para respetar la convención
 puesta en la nota 
