@@ -124,8 +124,14 @@ def f(t):
 #
 #n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 #x = [cos_con_ruido(t/20, A, 3.5, phi) for t in range(20)]
-x = [1,2,-3,-6]
+x = [1,2,-3,-6, -9, 5, 8, 7, 7, 2.3, 6.9]
 nombre = 'x'
+ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+
+x = np.array([12,4,3,-3.5,4.3,21,8, 9])
+norma = np.linalg.norm(x)
+x = (1/norma) * x
+nombre = 'prueba'
 ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 #
 #x = legendre.calculo_base(12)[1]
@@ -134,7 +140,7 @@ ae.grafica_analisisEspectrales(x, nombre, graficar = True)
 #x = legendre.calculo_base(35)[1]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
-ae.grafica_analisisEspectrales_PDL(7,1)
+ae.grafica_analisisEspectrales_PDL(7,5)
 
 #ae.grafica_nube_b0m0_b1m1() 
 

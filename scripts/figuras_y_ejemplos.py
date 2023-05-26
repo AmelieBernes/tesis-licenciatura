@@ -503,6 +503,13 @@ def figura_cosenoMuestreo(w, phi, n):
     axis.axhline(y=0, color = 'gray')
     axis.axvline(x=0, color = 'gray')
     axis.grid(True)
+
+    dominio = [t/n for t in range(n)]
+    valores = [np.sin(2 * pi * w * t+ 2*pi*phi) for t in dominio]
+    axis.plot(X1, np.sin(2 * pi * w * X1 + 2*pi*phi), color = 'black', linestyle = 'dotted')
+    axis.plot(X2, np.sin(2 * pi * w * X2+ 2*pi*phi), color = 'blue', linestyle = 'dotted')
+    axis.scatter(dominio, valores, color = 'blue')
+    axis.plot(X3, np.sin(2 * pi * w * X3+ 2*pi*phi), color = 'black', linestyle = 'dotted')
     
     return plt.show()
 
@@ -603,13 +610,13 @@ if __name__=='__main__':
     #figura_demSimetrias()
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
-    #figura_cosenoMuestreo(5/2, 0.3,20)
+    figura_cosenoMuestreo(0.0001,0.3, 20)
     #figura_cosenoMuestreo(12, 0, 18)
     #figura_cosenoMuestreo(12, 0, 24)
     #figura_raicesUnidad(5, 8)
     #PDL_grafica_versionContinua(8,5)  
-    figura_generalizacion_operadorOmega()
-    lista_colores =['#fe00fa', '#feaf16', '#782ab6', '#1c8356','#3283fe', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
+    #figura_generalizacion_operadorOmega()
+    #lista_colores =['#fe00fa', '#feaf16', '#782ab6', '#1c8356','#3283fe', '#16ff32', '#dea0fd',  '#325a9b', '#feaf16', '#feaf16', '#1cffce'] 
     #for n in range(2,9):
     #    PDLdim_n_graficas_continuas(n, lista_colores)
 

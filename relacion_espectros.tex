@@ -198,26 +198,6 @@ Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ el espectro de $x$ como se definió
 en \ref{def: espectro monofrecuenciales inicial}.
 Sean
 
-\begin{align}
-\label{ec: alpha}
-\alpha(x)= \begin{cases}
-1 & \textit{si } M_{1}(x) \geq \frac{2\pi^{2}}{3n^{2}}M_{3}(x), \\
--1 & \textit{ en otro caso}. \\
-\end{cases}
-\end{align}
-
-y
-
-\begin{align}
-\label{ec: alpha tilde}
-\tilde{\alpha}(x)= 
-\begin{cases}
-1 & \textit{si } \tilde{M}_{1}(x) \geq \frac{2\pi^{2}}{3n^{2}} \tilde{M}_{3}(x), \\
--1 & \textit{ en otro caso}. \\
-\end{cases}
-\end{align}
-
-
 El espectro $\Sigma_{x}$ es continuo en $]0, n/2[$, pero no 
 necesariamente en los puntos extremos $0$ y $n/2$.
 
@@ -228,31 +208,23 @@ Además,
 =
 \left(
 \frac{
-\frac{M_{0}(x)^{2}}{n} + \frac{6M_{1}(x)^{2}}{n(2n-1)(n-1)}
-- (-1)^{\alpha(x)}M_{0}(x) \frac{6 |M_{1}(x)|}{n(2n-1	)}
+2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
 }{
-||x||^{2} \left(
-1- 1.5 \frac{n-1}{2n-1}
-\right)
-}
+||x||^{2} (n-1)(n+1)n}
 \right)^{1/2}
 \end{equation}
 
 y
 
 \begin{equation}
-\label{eq: limite del espectro a cero}
+\label{eq: limite del espectro a n medios}
 \limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
-=
-\left(
+= \left(
 \frac{
-\frac{\tilde{M}_{0}(x)^{2}}{n} + \frac{6\tilde{M}_{1}(x)^{2}}{n(2n-1)(n-1)}
-+(-1)^{\alpha(x)}\tilde{M}_{0}(x) \frac{6 |\tilde{M}_{1}(x)|}{n(2n-1)}
+2\tilde{M}_{0}(x)^{2}(2n-1)(n-1) + 12\tilde{M}_{1}(x)^{2} - 
+12\tilde{M}_{0}(x)\tilde{M}_{1}(x)(n-1)
 }{
-||x||^{2} \left(
-1- 1.5 \frac{n-1}{2n-1}
-\right)
-}
+||x||^{2} (n-1)(n+1)n}
 \right)^{1/2}.
 \end{equation}
 \end{teo}
@@ -473,31 +445,52 @@ indeterminación de tipo $\infty \cdot 0$.
 Para desarrollar más esta última expresión para intentar
 eliminar esta indeterminación, vamos a expresar 
 el segundo factor 
-$
+\begin{equation}
+\label{ec: seg factor}
 \frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
  + o(\omega^{5})
-$
-como la raíz cuadrada de su cuadrado; puesto que
-a veces este factor es positivo y a veces negativo, para realizar
-este paso deberemos tomar en consideración
-este signo, que, por estar considerando en este análisis
-frecuencias $\omega$ no negativas, tiene
-el mismo signo que 
-$M_{1}(x) - \frac{2\pi^{2}}{3n^{2}}M_{3}(x) \omega^{2}$.
-Definiendo pues a $\alpha(x)$
-como en  
-\ref{ec: alpha},
-podemos seguir la cadena
-de aproximaciones asintóticas de 
-$\langle x,
-s_{n, \omega}
-\rangle $ como sigue;
+\end{equation}
+como la raíz cuadrada de su cuadrado.
+Para hacer esto, deberemos de considerar el signo de este factor
+\[
+\frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
+ + o(\omega^{5}) = 
+ \frac{2\pi}{n} \omega \left(
+ M_{1}(x) - \frac{2\pi^{2}}{3n^{2}}M_{3}(x)\omega^{2}
+\right)
+\]
+que, por ser $\omega$ positivo, es el signo de 
+\begin{equation}
+\label{ec: seg factor 2}
+M_{1}(x) - \frac{2\pi^{2}}{3n^{2}}M_{3}(x)\omega^{2}.
+\end{equation}
+Recuerde que en realidad sólo nos interesan valores de 
+$\omega$ muy cercanos a cero (pues lo que queremos es evaluar
+el límite de $\langle x, s_{n, \omega} \rangle$
+cuando $\omega$ tiende a cero), luego, es posible escoger
+un rango de $\omega$ de tal forma que el sumando 
+$\frac{2\pi^{2}}{3n^{2}}M_{3}(x)\omega^{2}$ sea tan pequeño (comparado
+con $M_{1}(x)$) que el signo de la expresión
+\eqref{ec: seg factor 2}
+(i.e. el de \eqref{ec: seg factor}) sea 
+el de $M_{1}(x)$. Si
+\begin{align*}
+sgn(M_{1}(x))= \begin{cases}
+1 & \hspace{0.2cm} \textit{ si } M_{1}(x) \geq 0, \\
+-1 & \hspace{0.2cm} \textit{ si } M_{1}(x) < 0,
+\end{cases}
+\end{align*}
+
+\noindent
+podemos entonces seguir la cadena de
+aproximaciones asintóticas de $\langle x, s_{n, \omega} \rangle$ 
+como sigue.
 
 \begin{align*}
 \langle x,
 s_{n, \omega}
-\rangle = &
-\alpha(x)
+\rangle \sim &
+sgn(M_{1}(x))
 \sqrt{2} 
 \left(
 \frac{
@@ -513,29 +506,21 @@ s_{n, \omega}
  + o(\omega^{5})
 \right)^{2}
 \right)^{1/2}\\
-= &
-\begin{cases}
-\sqrt{2} \left(
+= & 
+sgn(M_{1}(x)) \sqrt{2} \left(
 \frac{
 \frac{24 \pi^{3}}{n}X_{1}^{2}\omega^{3} + o(\omega^{5}) }{
 8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
 }
-\right)^{1/2}
-\rightarrow \left(
+\right)^{1/2} \\
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}}& sgn(M_{1}(x))\left(
 \frac{6 M_{1}(x)^{2}}{(2n-1)(n-1)n}
-\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) \geq 0, \\
--\sqrt{2} \left(
-\frac{
-\frac{24 \pi^{3}}{n}M_{1}(x)^{2}\omega^{3} + o(\omega^{5}) }{
-8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
-}
-\right)^{1/2}
-\rightarrow -\left(
-\frac{6 M_{1}(x)^{2}}{(2n-1)(n-1)n}
-\right)^{1/2} & \textit{si } \alpha_{n, \omega}(x) < 0.\\
-\end{cases}
+\right)^{1/2} 
+= M_{1}(x) 
+\left(
+\frac{6 }{(2n-1)(n-1)n}
+\right)^{1/2} 
 \end{align*}
-
 Por último, encontremos un equivalente
 asintótico, válido en las cercanías de $0$, de 
 $\langle
@@ -614,10 +599,11 @@ c_{n, \omega}, s_{n, \omega}
 \right)^{1/2} 
 \hspace{0.2cm} \textit{ cuando } \omega \sim 0
 \\
-\rightarrow & \frac{
+\xrightarrow{\omega \rightarrow 0^{+}} & \frac{
 \sqrt{6(n-1)}
 }{2 \sqrt{2n-1}}.
 \end{align*} 
+
 De estos límites se deduce que 
 
 \begin{equation}
@@ -635,16 +621,19 @@ x, s_{n, \omega}
 = \frac{6M_{1}(x)^{2}}{(2n-1)(n-1)n},
 \end{equation}
 
-\begin{equation}
+\begin{align}
 \label{ec: limite -2abc}
 \limite{\omega \rightarrow 0^{+}}{
 -2 \langle x, c_{n, \omega} \rangle
 \langle x, s_{n, \omega} \rangle
-\langle c_{n, \omega}, s_{n, \omega} \rangle
-= 
-- \alpha(x) \frac{6M_{0}(x)|M_{1}(x)|}{n(2n-1)},
-}
-\end{equation}
+\langle c_{n, \omega}, s_{n, \omega} \rangle} = &
+-2 
+\frac{M_{0}(x)}{\sqrt{n}} \cdot 
+\frac{M_{1}(x) \sqrt{6}}{\sqrt(n(n-1)(2n-1)} \cdot
+\frac{\sqrt{6} \sqrt{n-1}}{\sqrt{2n-1}} \nonumber \\
+= &
+-\frac{6 M_{0}M_{1}(x)}{n(2n-1)},
+\end{align}
 \begin{equation}
 \label{ec: limite cnw, snw cuad aa}
 \limite{\omega \rightarrow 0^{+}}{\langle
@@ -654,7 +643,7 @@ c_{n, \omega}, s_{n, \omega}
 \end{equation}
 Observe que $1-\frac{3(n-1)}{2(2n-1)}$
 nunca es cero, o sea, que sustituyendo la 
-expresión \eqref{ec: limite cnw, snw cuad}
+expresión \eqref{ec: limite cnw, snw cuad aa}
 en 
 \eqref{eq1: 22May}
 no se tiene un denominador igual a cero, por lo que podemos
@@ -664,10 +653,28 @@ sustituir los límites
 \eqref{ec: limite -2abc} y
 \eqref{ec: limite cnw, snw cuad aa}
 en \eqref{eq1: 22May}
-para concluir que el límite buscado
+y concluir que el límite buscado
 \eqref{eq0: 22May} existe y es igual
-a la expresión propuesta 
-\eqref{eq: limite del espectro a cero}. \\
+\begin{align*}
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
+= & 
+\left(
+\frac{
+\frac{M_{0}(x)^{2}}{n} + \frac{6M_{1}(x)^{2}}{n(2n-1)(n-1)}
+- \frac{6 M_{0}(x) M_{1}(x)}{n(2n-1)}
+}{
+||x||^{2} \left(
+1- 1.5 \frac{n-1}{2n-1}
+\right)
+}
+\right)^{1/2} \\
+= &
+\frac{
+2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
+}{
+||x||^{2} (n-1)(n+1)n.
+}
+\end{align*}
 
 
 Determinemos ahora el límite de
@@ -838,36 +845,41 @@ x_{m}sen\left(
 \right)
 } \\
 \sim &
--\alpha(x)
+-\eta_{n, \tilde{\omega}}
+\left(
+\frac{2\pi}{n} \tilde{M}_{1}(x)\tilde{\omega}
+-\frac{4\pi^{3}}{3n^{3}} \tilde{M}_{3}(x)\tilde{\omega}^{3}
++ o(\tilde{\omega}^{5})
+\right)
+\hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0 \\
+\sim &
+- sgn(\tilde{M}_{1}(x))
 \sqrt{2} 
 \left(
 \frac{
-6 \pi n \omega -
-\frac{4 \pi^{3}}{n} \omega^{3} + o(\omega^{5})
-}{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
+6 \pi n \tilde{\omega} -
+\frac{4 \pi^{3}}{n} \tilde{\omega}^{3} + o(\tilde{\omega}^{5})
+}{8 \pi^{3} (2n-1)(n-1)\tilde{\omega}^{3} + o(\tilde{\omega}^{5})
 }
 \right)^{1/2}
 \cdot 
 \left(
 \left(
-\frac{2 \pi}{n} \tilde{M}_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}
-\tilde{M}_{3}(x) \omega^{3} 
- + o(\omega^{5})
+\frac{2 \pi}{n} \tilde{M}_{1}(x) \tilde{\omega} - \frac{4 \pi^{3}}{3n^{3}}
+\tilde{M}_{3}(x) \tilde{\omega}^{3} 
+ + o(\tilde{\omega}^{5})
 \right)^{2}
 \right)^{1/2}\\
-= &
-\begin{cases}
-\rightarrow  - \left(
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}} & - 
+sgn(\tilde{M}_{1}(x))
+\left(
 \frac{6 \tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n}
-\right)^{1/2} & \textit{si } \tilde{\alpha}(x) \geq 0, \\
-\rightarrow   \left(
-\frac{6 \tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n}
-\right)^{1/2} & \textit{si } \tilde{\alpha}(x) < 0.\\
-\end{cases}
+\right)^{1/2}
+= -M_{1}(x)
+\left(
+\frac{6}{(2n-1)(n-1)n}
+\right)^{1/2}
 \end{align*}
-donde $\tilde{\alpha}(x)$
-es como se definión en
-\ref{ec: alpha tilde}.
 
 Por último, 
 
@@ -906,9 +918,27 @@ sen\left(
 \right)
 }
 \\
-\rightarrow &
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}}&
 - \frac{\sqrt{6(n-1)}}{2 \sqrt{2n-1}}.
 \end{align*}
+
+Así,
+\begin{align*}
+-2 \langle x, c_{n, \omega} \rangle
+\langle x, s_{n, \omega} \rangle
+\langle c_{n, \omega}, s_{n, \omega} \rangle & \\
+\xrightarrow{\tilde{\omega} \rightarrow 0^{+}} & 
+-2 \frac{\tilde{M}_{0}(x)}{\sqrt{n}}
+\cdot 
+(-1) \tilde{M}_{1}(x)\frac{\sqrt{6}}{
+\sqrt{(2n-1)(n-1)n}}
+\cdot (-1)
+\frac{\sqrt{6(n-1)}}{2 \sqrt{2n-1}}
+\\
+= & - \frac{6 \tilde{M}_{0}(x)\tilde{M}_{1}(x)}{n(2n-1)}.
+\end{align*}
+
+
 
 Obtenemos así los siguientes límites.
 \begin{equation}
@@ -933,7 +963,7 @@ x, s_{n, \omega}
 \langle x, s_{n, \omega} \rangle
 \langle c_{n, \omega}, s_{n, \omega} \rangle
 = 
-\alpha(x) \frac{6\tilde{M}_{0}(x)| \tilde{M}_{1}(x)|}{n(2n-1)},
+- \frac{6\tilde{M}_{0}(x)\tilde{M}_{1}(x)}{n(2n-1)},
 }
 \end{equation}
 \begin{equation}
@@ -1012,6 +1042,230 @@ del espectro $\Sigma_{x}$ en tales extremos.
 	\includegraphics[scale = 0.5]{lim_4} 
 \end{figure}
 
+
+Vamos a terminar esta sección con expresiones
+más sencillas (e ilustrativas) de los límites
+laterales \eqref{eq: limite del espectro a cero}
+y \eqref{eq: limite del espectro n medios}
+de un espectro $\Sigma_{x}$.
+Para ello necesitamos antes el siguiente
+\begin{lema}
+Sean $n \neq 2$, $x \in \IR^{n}$.
+Si
+\[
+c_{i} := \langle x, \cali{L}^{m,i} \rangle,
+\hspace{0.2cm} i = 0,1
+\]
+son los dos coeficientes primeros coeficientes
+de $x$ respecto a la BLD $\cali{L}^{n,k}$,
+entonces 
+\begin{equation}
+\label{ec: momento cero y coef 0}
+M_{0}(x) = \sqrt{n} c_{0}
+\end{equation}
+y
+ \begin{equation}
+\label{ec: momento cero y coef 1}
+M_{1}(x) = \frac{c_{1}}{\ell_{1}} + 
+\frac{\sqrt{n}(n-1)}{2}c_{0},
+\end{equation}
+donde
+\begin{equation}
+\label{ec: l1}
+\ell_{1}:= \sqrt{\frac{
+12
+}{(n-1)n(n+1)}}.
+\end{equation}
+
+
+Si 
+\[
+\tilde{c}_{i} := \langle x, (-1)^{m}\cali{L}^{m,i} \rangle,
+\hspace{0.2cm} i = 0,1,
+\]
+entonces
+\begin{equation}
+\label{ec: momento cero y coef 0 tilde}
+\tilde{M}_{0}(x) = \sqrt{n} c_{0}
+\end{equation}
+y
+ \begin{equation}
+\label{ec: momento cero y coef 1 tilde}
+\tilde{M}_{1}(x) = \frac{c_{1}}{\ell_{1}} + 
+\frac{\sqrt{n}(n-1)}{2}c_{0},
+\end{equation}
+\end{lema}
+\noindent
+\textbf{Demostración.}
+En efecto, según la ecuación
+\eqref{eq: Ln, 0, m}, 
+\[
+c_{0}= 
+\langle x, \cali{L}^{m,0} \rangle
+= \frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m}}
+= \frac{1}{\sqrt{n}} M_{0}(x),
+\]
+luego, 
+$M_{0}(x) = \sqrt{n} c_{0}$.
+Además, según \eqref{eq: Ln, 1, m},
+\[
+c_{1}= 
+\langle x, \cali{L}^{m,1} \rangle
+= \ell_{1} \suma{m=0}{n-1}{x_{m} \left(
+m-  \frac{n-1}{2}
+\right)}
+= \ell_{1} \left(
+M_{1}(x)-\frac{n-1}{2}M_{0}(x)
+\right);
+\]
+despejando a $M_{1}(x)$ y usando la relación dada
+de $M_{0}(x)$ obtenemos 
+\eqref{ec: momento cero y coef 1}.
+Las demostraciones de 
+\eqref{ec: momento cero y coef 0 tilde} y 
+\eqref{ec: momento cero y coef 1 tilde} son
+totalmente análogas.
+\QEDB
+\vspace{0.2cm}
+
+En la siguiente proposición establecemos
+una interesante relación entre el espectro de una señal $x$
+con sus primeros dos coeficientes respecto a la base
+de Legendre discreta $\cali{L}^{n}$.
+\begin{prop}
+\label{prop: relacion limite cero con legendre}
+Sean $n \geq 2$, $x \in \IR^{n}$,
+$\Sigma_{x}$ el espectro de $x$.
+Si $W_{n,1}$ es como en \TODO{ref}, el espacio
+de los polinomios discretos de grado $1$ y dimensión $n$, entonces
+\begin{equation}
+\label{eq: limite por cero como angulo}
+\limite{\omega \rightarrow 0^{+}}{
+\Sigma_{x}(\omega)} = \measuredangle(x, W_{n,1}).
+\end{equation}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Según la proposición 
+\ref{prop: proyecciones a espacios Wn,k}, 
+\begin{equation}
+\label{eq0: 25May23} 
+||\Pi_{W_{n,1}}(x)|| = \sqrt{c_{0}^{2} + c_{1}^{2}}.
+\end{equation}
+
+Sustituyendo las expresiones 
+\eqref{ec: momento cero y coef 0} y
+\eqref{ec: momento cero y coef 1} en la expresión 
+\eqref{eq: limite del espectro a cero} del límite para 
+$\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}$,
+tenemos que
+\begin{align*}
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)^{2}}
+= & 
+\left(
+\frac{
+2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
+}{
+||x||^{2} (n-1)(n+1)n}
+\right)^{1/2} \\
+= & \frac{1}{||x||^{2}
+(n-1)(n+1)n
+} 
+\left(
+2nc_{0}^{2}(n-1)(2n-1) + 12
+\left(
+\frac{c_{1}}{\ell_{1}} + 
+\frac{\sqrt{n}(n-1)}{2}c_{0}
+\right)^{2}-12
+\sqrt{n} c_{0} \sqrt{\frac{12}{
+(n-1)n(n+1)
+}} 
+\right) \\
+= & \frac{1}{||x||^{2}
+(n-1)(n+1)n}
+\left(
+(2n(n-1)(2n-1) + 3n(n-1)^{2}-6(n-1)^{2}n)c_{0}^{2}
++ \frac{12}{\ell^{2}_{1}}c_{1}^{2}
+\right) \\
+= & \frac{c_{0}^{2} + c_{1}^{2}}{||x||^{2}}.
+\end{align*}
+
+Usando \eqref{eq0: 25May23} podemos concluir
+que
+\[
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)^{2}}
+=  \frac{c_{0}^{2} + c_{1}^{2}}{||x||^{2}}
+=  \frac{||\Pi_{W_{n,1}}(x)||}{||x||^{2}},
+\]
+siendo esta última expresión, según la proposición
+\ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}, 
+el coseno del ángulo que $x$ forma con $W_{n,1}$.  
+\QEDB
+\vspace{0.2cm}
+
+Haciendo unos cambios de signo, se demuestra el resultado
+análogo para el límite por la derecha de $n/2$ del espectro
+$\Sigma_{x}$ de una señal $x \in \IR^{n}$.
+\begin{prop}
+\label{prop: relacion limite n medios con legendre}
+Sean $n \geq 2$, $x \in \IR^{n}$,
+$\Sigma_{x}$ el espectro de $x$.
+Si $\tilde{W}_{n,1}$ es el espacio
+\[
+\tilde{W}_{n,1} := span \{ (-1^{m}\cali{L}^{n,0}_{m})_{m=0}^{n-1}, 
+(-1^{m}\cali{L}^{n,1}_{m})_{m=0}^{n-1} \}
+\]
+entonces
+\begin{equation}
+\label{eq: limite por cero como angulo}
+\limite{\omega \rightarrow \frac{n}{2}^{-}}{
+\Sigma_{x}(\omega)} = \measuredangle(x, \tilde{W}_{n,1}).
+\end{equation}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Sólo note que de la ortogonalidad de los
+vectores $\cali{L}^{n,0}$ y $\cali{L}^{m,1}$
+se sigue la de los vectores que por definición generan
+al espacio $\tilde{W}_{n,1}$, 
+luego, 
+\begin{equation*}
+||\Pi_{W_{n,1}}(x)|| = \sqrt{c_{0}^{2} + c_{1}^{2}}.
+\end{equation*}
+Haciendo cálculos análogos a los
+de la demostración de la proposición 
+\ref{prop: relacion limite cero con legendre} se llega
+al resultado deseado.
+\QEDB
+\vspace{0.2cm}
+
+\begin{comment}
+Esta última proposición es importante, pues relaciona
+el espectro de una señal 
+con sus primeros dos coeficientes respecto a la base
+de Legendre discreta $\cali{L}^{n}$. \\
+Note que este es un resultado razonable, pues, por
+definición del espectro $\Sigma_{x}$, si $\omega \geq 0$,
+$\Sigma_{x}(\omega)$ es el coseno del ángulo que
+$x$ forma con el espacio $P_{n, \omega} = 
+span \left\{ cos \left(
+2 \pi \omega\frac{m}{n}
+\right)_{m=0}^{n-1},  
+sen \left(
+2 \pi \omega\frac{m}{n}
+\right)_{m=0}^{n-1} \right\}$, y, conforme
+$\omega$ tiende a cero por la derecha, 
+las discretizaciones de coseno y seno que generan
+el espacio $P_{n, \omega}$ tienden a ser las discretizaciones
+de cosenos y senos de muy baja frecuencia, luego, intuitivamente
+son las discretizaciones de las rectas tangentes de un coseno
+y un seno en $t =0$, que son las rectas $y=1$
+y $y =x$. Observe que discretizaciones de estas dos rectas
+conforman una base para el espacio $W_{n,1}$.
+\end{comment}
+ 
+ 
+ 
 \section{Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}
 
 Después de todo lo expuesto en las secciones anteriores, tenemos

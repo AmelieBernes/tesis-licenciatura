@@ -142,6 +142,9 @@ $\langle a, w \rangle =
 luego, $a \in W^{\perp}$.
 \end{nota}
 
+
+\begin{comment}
+% ESTO PARA LA DE MAESTRIA
 \begin{cor} \label{cor: proyeccion en terminos de una BON}
 \TODO{Creo que debo quitar este.}
 \textbf{(Dando explícitamente a la proyección de un vector
@@ -156,12 +159,13 @@ tenemos que
 \]
 donde $W := \overline{\{e_{k}| k \in \IN \}}$. 
 \end{cor}
+\end{comment}
 
-\begin{cor}
+\begin{prop}
 \label{cor: proyeccion en terminos de BON}
-\textbf{(Caso particular del
-corolario \ref{cor: proyeccion en terminos de una BON} para
-espacios de dimensión finita)}
+%\textbf{(Caso particular del corolario \ref{cor: proyeccion en terminos de una BON} para espacios de dimensión finita)}
+\textbf{(Dando explícitamente a la proyección de un vector
+a un subespacio cerrado respecto a una BON de este último)}
 Sean $V$ un espacio de Hilbert, $W$ un subespacio cerrado de $V$
 y de dimensión finita. Si 
 $\cali{B} = \{ e_{k}: \hspace{0.2cm} 0 \leq k \leq n \}$
@@ -169,9 +173,11 @@ es una BON de $W$, entonces, para todo $x \in V$,
 \[
 \Pi_{W}(x) = \suma{k=0}{n-1}{ \langle x, e_{k} \rangle e_{k}}.
 \]  
-\end{cor}
+\end{prop}
+\TODO{Cita a kolmogorov.}
 
-
+\begin{comment}
+% ESTO PARA LA DE MAESTRIA
 \begin{cor} \label{cor: representacion de un vector respecto a una BON}
 Si $V$ es un espacio con producto punto 
 y $B=(e_{k})_{k \in \Delta}$ es una BON de este
@@ -185,6 +191,7 @@ La proyección de un $x \in V$ sobre $V$ es trivialmente $x$
 \ref{cor: proyeccion en terminos de una BON}, esta
 proyección es la serie propuesta. \QEDB
 \vspace{0.2cm}
+\end{comment}
 
 
 

@@ -500,6 +500,35 @@ de los PDL $\cali{L}^{n,1}$ de grado $1$,
 que siempre se tiene que $ \omega = 0.01$ es la frecuencia
 que maximiza el coeficiente espectral
 $\sigma_{n}(\cali{L}^{n,k}, \omega)$.
+Esto se explica notando lo siguiente.
+Como se expuso en la proposición
+\ref{prop: relacion limite cero con legendre}, 
+\[
+\limite{\omega\rightarrow 0^{+}}{\Sigma_{\cali{L}^{n,1}}(\omega)}
+= cos(\measuredangle(\cali{L}^{n,1}, W_{n,0})).
+\]
+Recuerde ahora que, según el teorema
+\ref{cor: BON de legendre para espacios Wk},
+$\cali{L}^{n,1}$ es elemento de el espacio $W_{n,0}$, luego,
+\[
+cos(\measuredangle(\cali{L}^{n,1}, W_{n,0})) = 
+cos(\measuredangle(\cali{L}^{n,1}, \cali{L}^{n,1}))
+= cos(0) = 1,
+\]
+así, 
+$\limite{\omega\rightarrow 0^{+}}{\Sigma_{\cali{L}^{n,1}}(\omega)} =1$, por lo 
+que frecuencias muy cercanas a cero son apropiadas
+para modelar la gráfica de un PDL de grado $1$.
+Observe, sin embargo, que 
+$\Sigma_{\cali{L}^{n,1}}(0)=0$, pues
+$P_{n, 0}$ está generado por
+$c_{n,0}$, que es el vector constante uno, y que,
+por ser paralelo a $\cali{L}^{n,0}$,
+es ortogonal a $\cali{L}^{n,k}$. Así, los espectros
+de los PDL de grado $1$ tienen una discontinuidad de salto
+por la derecha del cero. 
+
+\begin{comment}
 Esto se explica observando que
 lo que estamos haciendo con este análisis espectral
 es aproximar las gráficas de señales con sinusoides, que son
@@ -522,7 +551,8 @@ $c_{n,0}$, que es el vector constante uno, y que,
 por ser paralelo a $\cali{L}^{n,0}$,
 es ortogonal a $\cali{L}^{n,k}$. Así, los espectros
 de los PDL de grado $1$ tienen una discontinuidad de salto
-por la derecha del cero. \\
+por la derecha del cero. 
+\end{comment}
 
 
 Graficando algunos PDL de dimensión

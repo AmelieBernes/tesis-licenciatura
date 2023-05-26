@@ -105,44 +105,93 @@ X1 (segundo momento): \suma{m=0}{n-1}{m*x[m]}
 Por las pruebas numéricas que he hecho, parece que sí funciona.
 #  ---------------------------------------- -- ----------------------------------------
 """
+
+#def limite_cero(x, n):
+#    """
+#    Esta es la función que tenía originalmente, funciona perfectamente.
+#    Función que da el límite por la derecha del cero del 
+#    espectro de la señal x de dimensión n.
+#    """
+#    pi = np.pi
+#    def primer_momento(x):
+#        suma = 0
+#        for m in range(n):
+#            suma += m * x[m]
+#        return suma
+#    
+#    def tercer_momento(x):
+#        suma = 0
+#        for m in range(n):
+#            suma += m**3 * x[m]
+#        return suma
+#    
+#    norma = np.linalg.norm(x)
+#    X0 = sum(x)
+#    X1 = primer_momento(x)
+#    X3 = tercer_momento(x)
+#    
+#    a_nw_cuadrado = X0**2/n
+#    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
+#    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
+#    
+#    #det = 2*pi *X1*0.001/n-4*pi**3*X3*0.001**3/(3*n**3)
+#    det = X1 - 2*pi**2*X3*0.001**2/(3*n**2)
+#    if det > 0:
+#        signo = 1
+#    else:
+#        signo = -1
+#    
+#    d_nw = -1 * signo* X0* 6*abs(X1)/(n*(2*n-1)) 
+#    
+#    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
+#    return limite
+#
+
+#def limite_cero(x, n):
+#    """
+#    Función que da el límite por la derecha del cero del 
+#    espectro de la señal x de dimensión n.
+#    Sí funcionó.
+#    """
+#    pi = np.pi
+#    def momento_k(x, k):
+#        suma = 0
+#        for m in range(n):
+#            suma += m**k  * x[m]
+#        return suma
+#
+#    norma = np.linalg.norm(x)
+#    X0 = momento_k(x, 0)
+#    X1 = momento_k(x, 1)
+#    
+#    a = X0**2/n
+#    b = 6*X1**2/(n*(n-1)*(2*n-1))
+#    c = 6*X0*X1/(n*(2*n-1))
+#    num = a+b-c
+#    den = norma**2 *(1-1.5*(n-1)/(2*n-1))
+#
+#    return math.sqrt(num/den) 
+
 def limite_cero(x, n):
     """
     Función que da el límite por la derecha del cero del 
     espectro de la señal x de dimensión n.
     """
     pi = np.pi
-    def primer_momento(x):
+    def momento_k(x, k):
         suma = 0
         for m in range(n):
-            suma += m * x[m]
+            suma += m**k  * x[m]
         return suma
-    
-    def tercer_momento(x):
-        suma = 0
-        for m in range(n):
-            suma += m**3 * x[m]
-        return suma
-    
+
     norma = np.linalg.norm(x)
-    X0 = sum(x)
-    X1 = primer_momento(x)
-    X3 = tercer_momento(x)
+    X0 = momento_k(x, 0)
+    X1 = momento_k(x, 1)
     
-    a_nw_cuadrado = X0**2/n
-    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
-    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
-    
-    #det = 2*pi *X1*0.001/n-4*pi**3*X3*0.001**3/(3*n**3)
-    det = X1 - 2*pi**2*X3*0.001**2/(3*n**2)
-    if det > 0:
-        signo = 1
-    else:
-        signo = -1
-    
-    d_nw = -1 * signo* X0* 6*abs(X1)/(n*(2*n-1)) 
-    
-    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
-    return limite
+    num = 2*X0**2*(2*n-1)*(n-1) +12*X1**2-12*X0*X1*(n-1)
+    den = norma**2 * n * (n-1)*(n+1)
+
+    return math.sqrt(num/den) 
 
 def limite_n_medios(x, n):
     """
@@ -159,22 +208,52 @@ def limite_n_medios(x, n):
     norma = np.linalg.norm(x)
     X0 = momento_skew(x, 0) 
     X1 = momento_skew(x, 1) 
-    X3 = momento_skew(x, 3) 
-    
-    a_nw_cuadrado = X0**2/n
-    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
-    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
-    
-    det = X1 - 2*pi**2*X3/(3*n**2)
-    if det > 0:
-        signo = 1
-    else:
-        signo = -1
-    
-    d_nw = signo* X0* 6*abs(X1)/(n*(2*n-1)) 
-    
-    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
-    return limite
+
+    num = 2* X0**2* (2*n-1)* (n-1) +12* X1**2 -12* X0* X1*(n-1)
+    den = norma**2 * n * (n-1)*(n+1)
+
+    return math.sqrt(num/den) 
+
+#def limite_n_medios(x, n):
+#    """
+#    Esta fue la primera versión y funcionó bien.
+#    Función que da el límite por la izquierda de n/2 del 
+#    espectro de la señal x de dimensión n.
+#    """
+#    pi = np.pi
+#    def momento_skew(x, k):
+#        suma = 0
+#        for m in range(n):
+#            suma += (-1)**m * m**k *x[m]
+#        return suma
+#
+#    norma = np.linalg.norm(x)
+#    X0 = momento_skew(x, 0) 
+#    X1 = momento_skew(x, 1) 
+#    X3 = momento_skew(x, 3) 
+#    
+#    a_nw_cuadrado = X0**2/n
+#    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
+#    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
+#    
+#    det = X1 - 2*pi**2*X3/(3*n**2)
+#    if det > 0:
+#        signo = 1
+#    else:
+#        signo = -1
+#    
+#    d_nw = signo* X0* 6*abs(X1)/(n*(2*n-1)) 
+#
+#    #TODO nuevo
+#    if X1 >= 0:
+#        sgn = 1
+#    else:
+#        sgn = -1
+#    print(sgn == signo)
+#    #TODO nuevo
+#    
+#    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
+#    return limite
 """
 #  ---------------------------------------- -- ----------------------------------------
 
