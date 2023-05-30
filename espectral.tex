@@ -958,28 +958,7 @@ del espectro de una señal
 \ref{def: espectro DFT} para ver la definición de espectro
 basada en la TDF).
 
-\begin{defi}
-\label{def: espectro monofrecuenciales inicial}
-Sean $n \geq 2$, $x \in \IR^{n}$. 
-
-Si $x \neq 0$, definimos a su \textbf{espectro basado
-en espacios monofrecuenciales} como la función 
-$\Sigma_{x}: \IR^{+}_{0} \longrightarrow [0,1]$
-dada por
-\[
-\Sigma(\omega) = \sigma_{n} (x, \omega) \hspace{0.2cm}
-\text{ para toda }
-\hspace{0.2cm} \omega \in Dom_{\omega},
-\]
-donde los coeficientes
-$\sigma_{n}(x, \omega)$ son como se definieron en 
-la proposición \ref{prp: ammm}. \\
-
-Si $x = 0$, definimos su espectro como la 
-función
-constante cero.
-\end{defi}
-
+\input{contin_simetr_period_espectro}
 
 \begin{comment}
 \begin{nota}
@@ -1018,7 +997,7 @@ P_{\omega + \frac{n}{1}} := & span(c_{n, \omega}, s_{n, \omega}) \\
 \end{nota}
 \end{comment}
 
-\subsection{Desfase de la proyección de una señal a espacios monofrecuenciales}
+\section{Desfase de la proyección de una señal a espacios monofrecuenciales}
 
 
 Fijada una dimensión $n$ y 
