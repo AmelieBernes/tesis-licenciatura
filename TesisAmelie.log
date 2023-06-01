@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  31 MAY 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  1 JUN 2023 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1831,28 +1831,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 535--547
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--562
+Underfull \hbox (badness 10000) in paragraph at lines 548--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--568
+Underfull \hbox (badness 10000) in paragraph at lines 571--575
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 569--576
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 576--583
 
  []
 
-[6] [7]
+[7]
 <./imagenes/discr_ortog.png, id=520, 361.35pt x 481.8pt>
 File: ./imagenes/discr_ortog.png Graphic file (type png)
 <use ./imagenes/discr_ortog.png>
-Package pdftex.def Info: ./imagenes/discr_ortog.png  used on input line 596.
+Package pdftex.def Info: ./imagenes/discr_ortog.png  used on input line 603.
 (pdftex.def)             Requested size: 469.75496pt x 626.33992pt.
 
-Overfull \hbox (113.08829pt too wide) in paragraph at lines 595--600
+Overfull \hbox (113.08829pt too wide) in paragraph at lines 602--607
  [] 
  []
 
@@ -1898,114 +1898,105 @@ Overfull \hbox (5.86969pt too wide) in paragraph at lines 351--352
 [][] 
  []
 
-
-Overfull \vbox (9.18073pt too high) detected at line 407
- []
-
-[13 <./imagenes/mall.png>]
-Underfull \hbox (badness 1603) in paragraph at lines 458--458
-[]$[]$ \OT1/cmr/m/n/10 Usan-do fun-cio-nes de
- []
-
-[14]
+[13 <./imagenes/mall.png>] [14]
 <./imagenes/nuevas_lupas.png, id=621, 346.4142pt x 171.7617pt>
 File: ./imagenes/nuevas_lupas.png Graphic file (type png)
 <use ./imagenes/nuevas_lupas.png>
-Package pdftex.def Info: ./imagenes/nuevas_lupas.png  used on input line 548.
+Package pdftex.def Info: ./imagenes/nuevas_lupas.png  used on input line 558.
 (pdftex.def)             Requested size: 277.13173pt x 137.40953pt.
  [15] [16 <./imagenes/nuevas_lupas.png>]
 Package marginnote Info: Margin note 25.1 is on absolute page 25 on input line 
-701.
-Package marginnote Info: right page because not two side mode on input line 701
+711.
+Package marginnote Info: right page because not two side mode on input line 711
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 701.
+Package marginnote Info: xpos seems to be 72.0pt on input line 711.
 <./imagenes/25Nov_1.png, id=652, 604.50844pt x 313.9228pt>
 File: ./imagenes/25Nov_1.png Graphic file (type png)
 <use ./imagenes/25Nov_1.png>
-Package pdftex.def Info: ./imagenes/25Nov_1.png  used on input line 702.
+Package pdftex.def Info: ./imagenes/25Nov_1.png  used on input line 712.
 (pdftex.def)             Requested size: 314.34619pt x 163.24078pt.
- [17 <./imagenes/25Nov_1.png>]
-Package marginnote Info: Margin note 26.1 is on absolute page 26 on input line 
-791.
-Package marginnote Info: right page because not two side mode on input line 791
-.
-Package marginnote Info: xpos seems to be 72.0pt on input line 791.
 
-[18]
-Underfull \vbox (badness 10000) detected at line 949
+[17 <./imagenes/25Nov_1.png>]
+Package marginnote Info: Margin note 26.1 is on absolute page 26 on input line 
+801.
+Package marginnote Info: right page because not two side mode on input line 801
+.
+Package marginnote Info: xpos seems to be 72.0pt on input line 801.
+ [18]
+Underfull \vbox (badness 10000) detected at line 959
  []
 
 [19]
 Package marginnote Info: Margin note 28.1 is on absolute page 28 on input line 
-996.
-Package marginnote Info: right page because not two side mode on input line 996
-.
-Package marginnote Info: xpos seems to be 72.0pt on input line 996.
+1006.
+Package marginnote Info: right page because not two side mode on input line 100
+6.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1006.
 <./imagenes/pdl.png, id=698, 525.46312pt x 191.21437pt>
 File: ./imagenes/pdl.png Graphic file (type png)
 <use ./imagenes/pdl.png>
-Package pdftex.def Info: ./imagenes/pdl.png  used on input line 997.
+Package pdftex.def Info: ./imagenes/pdl.png  used on input line 1007.
 (pdftex.def)             Requested size: 183.91484pt x 66.92603pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1023
+Underfull \hbox (badness 10000) in paragraph at lines 1026--1033
 
  []
 
 Package marginnote Info: Margin note 28.2 is on absolute page 29 on input line 
-1054.
-Package marginnote Info: right page because not two side mode on input line 105
+1064.
+Package marginnote Info: right page because not two side mode on input line 106
 4.
-Package marginnote Info: xpos seems to be 72.0pt on input line 1054.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1064.
 <./imagenes/graficasLegendre2.png, id=701, 596.2275pt x 331.7193pt>
 File: ./imagenes/graficasLegendre2.png Graphic file (type png)
 <use ./imagenes/graficasLegendre2.png>
 Package pdftex.def Info: ./imagenes/graficasLegendre2.png  used on input line 1
-055.
+065.
 (pdftex.def)             Requested size: 298.11302pt x 165.85924pt.
 [20 <./imagenes/pdl.png>]
 Package marginnote Info: Margin note 29.1 is on absolute page 29 on input line 
-1065.
-Package marginnote Info: right page because not two side mode on input line 106
+1075.
+Package marginnote Info: right page because not two side mode on input line 107
 5.
-Package marginnote Info: xpos seems to be 72.0pt on input line 1065.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1075.
 <./imagenes/graficasLegendre3.png, id=713, 1169.87062pt x 360.59718pt>
 File: ./imagenes/graficasLegendre3.png Graphic file (type png)
 <use ./imagenes/graficasLegendre3.png>
 Package pdftex.def Info: ./imagenes/graficasLegendre3.png  used on input line 1
-066.
+076.
 (pdftex.def)             Requested size: 350.9639pt x 108.17998pt.
 Package marginnote Info: Margin note 29.2 is on absolute page 30 on input line 
-1122.
-Package marginnote Info: right page because not two side mode on input line 112
+1132.
+Package marginnote Info: right page because not two side mode on input line 113
 2.
-Package marginnote Info: xpos seems to be 72.0pt on input line 1122.
+Package marginnote Info: xpos seems to be 72.0pt on input line 1132.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
 []\OT1/cmr/m/n/8 Figura 2.8: |Gr^^Safi-cas de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
 \OT1/cmr/m/n/8 que son, res-pec-ti-va-men-te,
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 1122--1122
+Underfull \hbox (badness 2903) in paragraph at lines 1132--1132
 \OT1/cmr/m/n/8 dos re-gio-nes aje-nas a sus
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1132
 \OT1/cmr/m/n/8 co-rres-pon-dien-tes es-pa-cios
  []
 
 <./imagenes/legendre2y3.png, id=714, 950.3505pt x 563.706pt>
 File: ./imagenes/legendre2y3.png Graphic file (type png)
 <use ./imagenes/legendre2y3.png>
-Package pdftex.def Info: ./imagenes/legendre2y3.png  used on input line 1123.
+Package pdftex.def Info: ./imagenes/legendre2y3.png  used on input line 1133.
 (pdftex.def)             Requested size: 361.13695pt x 214.2105pt.
 
-Overfull \hbox (1.13695pt too wide) in paragraph at lines 1123--1124
+Overfull \hbox (1.13695pt too wide) in paragraph at lines 1133--1134
  [][] 
  []
 
@@ -2302,7 +2293,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--409
  []
 
 [44] [45]
-Overfull \hbox (30.59445pt too wide) detected at line 579
+Overfull \hbox (30.59445pt too wide) detected at line 576
 \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 L[]\OT1/cmr/m/n/10 )[] = \OMS/cmsy/m/n/10 L[]
  \OT1/cmr/m/n/10 = (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1)[] \OMS/cmsy/m/n/10 ^
 ^A [] [][] \OML/cmm/m/it/10 :
@@ -2518,6 +2509,12 @@ Package pdftex.def Info: ./imagenes/2Dic_3.png  used on input line 503.
 
 Underfull \hbox (badness 10000) in paragraph at lines 550--550
 []$[]$  \OT1/cmr/m/n/10 En ge-ne-ral, si
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--550
+\OML/cmm/m/it/10 C \OT1/cmr/m/n/10 := \OMS/cmsy/m/n/10 jj\OT1/cmr/m/n/10 ^^E[](
+\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 jj[]$\OT1/cmr/m/n/10 ,
  []
 
 Package marginnote Info: Margin note 69.2 is on absolute page 70 on input line 
@@ -4506,8 +4503,8 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
 ### simple group (level 1) entered at line 789 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 45975 strings out of 476025
- 917421 string characters out of 5796533
+ 45974 strings out of 476025
+ 917410 string characters out of 5796533
  1897388 words of memory out of 5000000
  64602 multiletter control sequences out of 15000+600000
  533881 words of font info for 109 fonts, out of 8000000 for 9000
@@ -4546,10 +4543,10 @@ blic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TesisAmelie.pdf (167 pages, 11709841 bytes).
+Output written on TesisAmelie.pdf (167 pages, 11710362 bytes).
 PDF statistics:
  3185 PDF objects out of 3580 (max. 8388607)
  2576 compressed objects within 26 object streams
- 874 named destinations out of 1000 (max. 500000)
+ 873 named destinations out of 1000 (max. 500000)
  1304 words of extra memory for PDF output out of 10000 (max. 10000000)
 

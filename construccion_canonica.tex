@@ -2,7 +2,7 @@
 \label{cap 2}
 
 En este capítulo vamos a construir,
-para toda dimensión $n\geq $,
+para toda dimensión $n \geq 2$,
 una base ortonormal de $\IR^{n}$,
 que llamaremos ``base de Legendre discreta'',
 y que en principio se basa en discretizaciones puntuales
@@ -354,7 +354,8 @@ $\Omega_{n, \cali{P}}(f)$ a $W_{n,i}$. \\
  
 \begin{cor}
 \label{cor: 18ap}
-Sean $n\geq 2$, $0 \leq i \leq n-1$ enteros. 
+Sean $n\geq 2$, $0 \leq i \leq n-1$ enteros,
+$\cali{P}$ una malla uniforme de $n$ puntos. 
 Sea
 \begin{equation*}
 \label{def de espacios Wk}
@@ -362,13 +363,23 @@ W_{n,i}= span\{ v_{k} : 0 \leq k \leq i \},
 \end{equation*}
 el subespacio de $\IR^{n}$ 
 definido en \eqref{espacios Wi}.
+La señal
 $x \in \IR^{n}$ es elemento de $W_{n,i}$ si y sólo si 
-existen $\cali{P}$ una malla uniforme de $n$ puntos y
+existe
 $g(t) \in \IR[t]$ un polinomio de grado a lo más $i$
-tales que 
-$x = \Omega_{n, \cali{P}}(f)$.
+tal que 
+$x = \Omega_{n, \cali{P}}(g)$.
 \end{cor}
-
+\noindent
+\textbf{Demostración.}
+En efecto, según la 
+proposición \ref{obs: s en Wi sii es la discretizacion en malla Pn de un pol de grado a lo más i}, x es elemento de $W_{n,i}$ si y sólo si existe $q(t)$ polinomio
+de grado a lo más $i$ tal que $x = \Omega_{n, \cali{P}_{n}}(q)$. Usando una función
+de cambio de malla, se puede obtener a partir de $q$, componiendo con el 
+cambio de malla, un polinomio $g(t)$ tal que 
+$x = \Omega_{n, \cali{P}}(f)$.
+\QEDB
+\vspace{0.2cm}
 
 \begin{prop} \label{Teorema1}
 \textbf{(Caracterización de las bases
@@ -394,14 +405,15 @@ w_{k} := \Omega_{n, \cali{P}}(p_{k}), \hspace{0.4cm} 0 \leq k \leq i
 \end{equation}
 conforman una base del espacio $W_{n,i}$.
 
-Recíprocamente, si $\cali{B}_{i} := \{ w_{k} \}_{k=0}^{i}$
+Recíprocamente, si $\cali{P}$ es una malla uniforme de $n$ puntos y
+$\cali{B}_{i} := \{ w_{k} \}_{k=0}^{i}$
 es una base de $W_{n,i}$, entonces 
 \begin{itemize}
-	\item[a)] todo $w_{k}$ es un polinomio discreto $p_{k}$ de dimensión $n$, 
+	\item[a)] todo $w_{k}$ es un polinomio discreto de dimensión $n$, 
 	es decir, existe un polinomio $p_{k}$ de grado $k$ tal que 
 	$w_{k} = \Omega_{n, \cali{P}}(p_{k})$,	
 	y
-	\item[b)] para cada $0 \leq k^{'} \leq i$, uno y sólo uno de los polinomios
+	\item[b)] para cada $0 \leq k' \leq i$, uno y sólo uno de los polinomios
 	$p_{k}$ tiene grado $k'$.
 \end{itemize}
 \end{prop}
@@ -452,12 +464,8 @@ igualdad a cero de los escalares $b_{k}$.
 Recíprocamente, sea $\cali{B}_{i} := \{ w_{k} \}_{k=0}^{i}$
 una base de $W_{n,i}$. Del corolario 
 \ref{cor: 18ap} se sigue el punto a);
-sean pues $\cali{P}$ una malla uniforme
-\sidenote{Usando funciones de cambio de malla,
-en efecto podemos elegir una sola malla uniforme
-para obtener a todos los polinomios discretos $w_{k}$.}
-de $n$ puntos
-y $p_{k}$ con $0 \leq k \leq i-1$ polinomios de grado
+sean pues $p_{k}$, con $0 \leq k \leq i-1$, 
+polinomios de grado
 a lo más $i$ tales que 
 $\Omega_{n, \cali{P}}(p_{k})=w_{k}$.
 Supongamos que existe $0 \leq k' \leq i$
@@ -481,9 +489,9 @@ obtenemos que
 \[
 \Omega_{n, \cali{P}}
 \left( g_{k'} - \suma{k=0}{i}{a_{k}p_{k}}
-\right) = 0;
+\right) = 0.
 \]
-según la proposición
+Según la proposición
 \ref{prop: consecuencia del TFA}, de esto se deduce que 
 $g_{k'}$, un polinomio de grado $k'$, es 
 igual a $\suma{k=0}{i}{a_{k}p_{k}}$, donde ninguno de los 
@@ -533,10 +541,12 @@ es base de $W_{n,i}$.
 	W_{n,i} \subsetneq W_{n,i+1}.
 	\end{equation}
 
-\item Para toda $x \in \IR^{n}$, $x \in W_{n,i}$ si y sólo si
-existen $\cali{P}$ una malla uniforme de $n$ puntos
-y $g=g(x)$ un polinomio de grado a lo más $i$
-tales que $x = \Omega_{n, \cali{P}}(g)$.
+\item 
+Fijada una malla uniforme de $n$ puntos $\cali{P}$, 
+para toda $x \in \IR^{n}$
+se tiene que $x \in W_{n,i}$ si y sólo si
+existe $g=g(x)$ un polinomio de grado a lo más $i$
+tal que $x = \Omega_{n, \cali{P}}(g)$.
 
 \item $\IR^{n}= W_{n,n-1}$.
 \end{itemize}
@@ -677,7 +687,7 @@ $f(t)=1$, $g(t)= 1-5t(t-0.4)(t-0.8)(t-1)(t-2)$
 y $h(t) = 1+3t(t-1)(t-2)$,
 de grados $0$, $5$ y $3$, respectivamente, son tales
 que al ser evaluados en el operador
-$\Omega_{3, \cali{P_{3}}}$ dan lugar a la señal $x$.
+$\Omega_{3, \cali{P}_{3}}$ dan lugar a la señal $x$.
 
 La señal 
 \[

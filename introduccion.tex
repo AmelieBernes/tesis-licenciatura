@@ -11,7 +11,7 @@ a intervalos regulares de tiempo; dicha
 información perfectamente puede expresarse como 
 una $n-$tupla. En lo que sigue, a menos que se diga
 lo contrario, usaremos indistintamente los nombres
-``vector'' y ``señal'.
+``vector'' y ``señal''.
 
 Es costumbre empezar
 a enumerar las entradas de un vector
@@ -152,7 +152,7 @@ v_{k}
 = 
 a_{k'} ||v_{k'} ||^{2};
 \]
-
+\noindent
 puesto que $v_{k'}$ no es cero,
 se tiene que 
 $||v_{k'} ||^{2} \neq 0$. De esto y la igualdad 
@@ -486,7 +486,7 @@ de polinomios mutuamente ortogonales
 
 \begin{equation}
 \label{eq1: 8En}
-P_{k}(t)\in \{\IR_{k, -1,1}\}_{k \in \overline{\IN}}, \hspace{0.4cm}
+\{ P_{k}(t)\in \IR_{k, -1,1}\}_{k \in \overline{\IN}}, \hspace{0.4cm}
 -1 \leq t \leq 1, \hspace{0.2cm}
  k \in \overline{\IN},
 \end{equation}
@@ -553,12 +553,19 @@ un proceso de discretización (por ejemplo,
 puntual) y luego realizar
 un proceso de ortogonalización. La figura
 de abajo
-ilustra, para el caso $n=4$, estos dos caminos.
-Como ahí se aprecia, estos dos caminos llevan 
-a resultados distintos. Sin embargo, puesto que lo
+ilustra, para el caso $n=4$, estos dos caminos,
+o sea, el que consiste en primero ortonormalizar
+polinomios en el espacio $L^{2}[-1,1]$ y luego discretizarlos,
+y en el que consiste en primero discretizar polinomios
+para obtener vectores de $\IR^{n}$ que pueden ortonormalizarse
+en este espacio. Observe que sólo usando este segundo camino 
+obtenemos con seguridad un subconjunto ortonormal de $\IR^{n}$,
+pero no se puede asegurar lo mismo usando el primer camino.
+\TODO{Aquí referencia.}
+Puesto que lo
 que interesa es tener condiciones de ortogonalidad
 en el espacio $\IR^{n}$, es obvio que 
-el camino a seguir debe ser uno parecido al segundo. \\
+el camino a seguir debe ser pues uno parecido al segundo. \\
 
 
 Escogida pues la opción de primero 
