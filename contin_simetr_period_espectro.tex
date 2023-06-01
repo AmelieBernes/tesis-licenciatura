@@ -159,6 +159,7 @@ contenidas en el intervalo $[0, n/2]$, pues los valores
 del espectro para otros valores pueden deducirse por periodicidad
 y simetría. \\
 
+\TODO{tal vez debería mover esto.}
 Ahora bien, para poder escribir programas
 para calcular una tal función $\Sigma_{x}$,
 se debe de usar como dominio de esta
@@ -1373,3 +1374,60 @@ y un seno en $t =0$, que son las rectas $y=1$
 y $y =x$. Observe que discretizaciones de estas dos rectas
 conforman una base para el espacio $W_{n,1}$.
 \end{comment}
+
+\begin{prop}
+\label{prop: formula explicita espectro}
+Sean $n \neq 2$, $x \in \IR^{n}$ no cero.
+Sea $\Sigma_{x}$ el espectro de $x$ como se definió en 
+\ref{def: espectro monofrecuenciales inicial}.
+Si $\omega \in ]0, n/2[$, entonces
+
+\[
+\Sigma_{x}(\omega) = 
+\sigma_{n}(x, \omega) =
+	\left(		  
+		  \frac{\langle x, c_{n, \omega } \rangle^{2} +  \langle x, s_{n, \omega } \rangle^{2}	
+	       -2  \langle x, c_{n, \omega } \rangle \langle x, s_{n, \omega } \rangle \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- \langle c_{n, \omega }, s_{n, \omega } \rangle^{2})}	  
+\right) ^{1/2},
+\]
+donde los vectores $c_{n, \omega}$ y $s_{n, \omega}$
+son como en \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}.
+Además, 
+\[
+\Sigma_{x}(0) = 
+\left(
+\frac{
+2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
+}{
+||x||^{2} (n-1)(n+1)n}
+\right)^{1/2}
+\]
+y
+\[
+\Sigma_{x}(n/2) = 
+\left(
+\frac{
+2\tilde{M}_{0}(x)^{2}(2n-1)(n-1) + 12
+\tilde{M}_{1}(x)^{2} - 12 \tilde{M}_{0}(x) \tilde{M}_{1}(x)(n-1)
+}{
+||x||^{2} (n-1)(n+1)n}
+\right)^{1/2},
+\]
+donde los coeficientes $M_{i}(x)$ y $\tilde{M}_{i}(x)$
+son como se definieron en 
+\ref{def: momentos de x}. 
+\end{prop}
+
+Sólo para referenciar más adelante la continuidad del espectro de una 
+señal, plasmamos este resultado en la siguiente proposición
+(que es cierto por la forma en que definimos el espectro).
+
+\begin{prop}
+\label{prop: continuidad espctro espacois monof.}
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $\Sigma_{x}:[0, n/2] \rightarrow [0,1]$ el espectro 
+de $x$ como se definió en 
+\ref{def: espectro monofrecuenciales inicial}.
+$\Sigma_{x}$ es una función continua en su dominio.
+\end{prop}

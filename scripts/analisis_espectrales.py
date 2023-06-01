@@ -473,7 +473,7 @@ def vectores_frecuencia(n, w): #TODO quita a n del argumento.
     c_nw= xi_nw * C_nw
     s_nw= eta_nw * S_nw
 
-  return (c_nw, s_nw, xi_nw, eta_nw)
+  return c_nw, s_nw, xi_nw, eta_nw
 
 #Funciones para el caso 1
 
@@ -610,24 +610,18 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   axis0.scatter(dominio_tiempo, x, color= colores[0], s= 50, label = "${0}$".format(nombre), zorder = 3)
   axis0.set_title('Gráfica de '+ "${0}$".format(nombre))
 
+  #Calculando el espectro
   sigmas = []
-  #TODO recuerda que debes de quitar este if-else. Es innecesario, pues ya sabes que sólo
-  #los casos extremos cumplen la condición.
-  for w in frecuencias: 
-    if w % (n/2) == 0 :
-      sigma = sigma_caso2(x, w)
-      sigmas.append(sigma)
-    else:
-      sigma = sigma_caso1(x, w)
-      sigmas.append(sigma)
-  
+  for w in frecuencias:
+    sigmas.append(sigma_caso1(x,w))
   axis1.scatter(frecuencias, sigmas, color=colores[1], s=5, marker = '*', zorder = 2)
-  limite_0 = limite_cero(x, n) #NUEVO 
-  limite_n_2 = limite_n_medios(x, n) #NUEVO 
-  #print(limite_0) 
-  #print(limite_n_2)
-  axis1.axhline(y = limite_0, color = 'blue', linestyle = 'dotted' ) #NUEVO
-  axis1.axhline(y = limite_n_2, color = 'blue', linestyle = 'dotted' ) #NUEVO
+
+  sigmas.insert(0, limite_cero(x,n))
+  axis1.scatter(0, sigmas[0],color=colores[1], s=5, marker = '*', zorder = 2)
+  sigmas.append(limite_n_medios(x,n))
+  axis1.scatter(n/2, sigmas[-1], color=colores[1], s=5, marker = '*', zorder = 2)
+  #limite_0 = limite_cero(x, n) #NUEVO 
+  #limite_n_2 = limite_n_medios(x, n) #NUEVO 
   sigma_max = max(sigmas)
   frec_max = frecuencias[sigmas.index(sigma_max)]
   
@@ -672,6 +666,10 @@ def grafica_analisisEspectrales(x, nombre, graficar = True):
   """
   n = len(x) 
   frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
+  #Quitamos las frecuencias extremas, que son casos especiales.
+  frecuencias.pop(0)
+  frecuencias.pop(-1)
+
   fig = plt.figure()
   gs = fig.add_gridspec(2,2)
   
@@ -709,7 +707,10 @@ def grafica_analisisEspectrales_PDL(n,k, graficar = True):
   #TODO poner a la ruta como argumento. Como es siempre la misma ruta, ponla como una variable global,
   #para no tener que pedirla siempre como argumento.
   x = legendre.calculo_base(n)[k]
-  frecuencias = [a/100 for a in range(int(n*100/2) + 1)]
+  frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
+  #Quitamos las frecuencias extremas, que son casos especiales.
+  frecuencias.pop(0)
+  frecuencias.pop(-1)
   nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n)+','+str(k)) 
 
   fig = plt.figure()

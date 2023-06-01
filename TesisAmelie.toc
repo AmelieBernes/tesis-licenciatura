@@ -39,13 +39,13 @@
 \contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{83}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{86}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{88}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Algunas propiedades de $\Sigma _{x}$}{91}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Periodicidad}{92}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Simetría}{92}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Continuidad}{93}{subsection.6.5.3}%
-\contentsline {section}{\numberline {6.6}Definición del espectro de una señal basado en espacios monofrecuenciales}{101}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Desfase de la proyección de una señal a espacios monofrecuenciales}{104}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{106}{section.6.8}%
+\contentsline {section}{\numberline {6.5}Desfase de la proyección de una señal a espacios monofrecuenciales}{91}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Algunas propiedades de $\Sigma _{x}$}{93}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Periodicidad}{93}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Simetría}{94}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Continuidad}{95}{subsection.6.6.3}%
+\contentsline {section}{\numberline {6.7}Definición del espectro de una señal basado en espacios monofrecuenciales}{103}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{107}{section.6.8}%
 \contentsline {subsection}{\numberline {6.8.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{113}{subsection.6.8.1}%
 \contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{116}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{116}{section.7.1}%

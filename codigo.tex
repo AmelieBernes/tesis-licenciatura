@@ -196,9 +196,9 @@ se compartieron en \TODO{referencia.}
 \ref{alg: sumandoV2}) para calcular el número
 \begin{equation}
 \label{eq0: 1Abril}
-B_{n, k, m, j};
+B_{n, k, m, j}.
 \end{equation}
-el primero usa directamente la fórmula \eqref{eq4: 6En},
+El primero usa directamente la fórmula \eqref{eq4: 6En},
 mientras que en el segundo 
 simplificamos los factoriales que
 aparecen en la definición \eqref{eq4: 6En}
@@ -271,7 +271,7 @@ Para los pseudocódigos usamos las siguiente abreviaciones:
 \begin{algorithmic} [1]
 \REQUIRE $n$, $k$, $m$, $j$, todas de tipo int, con $n \geq 2$, 
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
-\ENSURE El número \eqref{eq0: 1Abril}
+\ENSURE El número $B_{n, k, m, j}$ definido en \eqref{eq0: 1Abril}.
 \RETURN $\frac{(k+j)! * (n-j-1)! }{(j!)^{2}* (k-j)! * (m-j)!}$
 \end{algorithmic}
 \end{algorithm}
@@ -283,16 +283,16 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \ENSURE El número \eqref{eq0: 1Abril}
 \STATE $B1, B2, B3, B4 \leftarrow [\hspace{0.2cm}]$
-\FOR {$t=m-j+1$ a $t=m$} 
+\FOR {$t=m-j+1$ \textbf{to} $t=m$} 
 \STATE $APPEND(B1, t)$
 \ENDFOR
-\FOR {$t=k-j+1$ a $t=k+j$} 
+\FOR {$t=k-j+1$ \textbf{to} $t=k+j$} 
 \STATE $APPEND(B2, t)$
 \ENDFOR
-\FOR {$t=n-j$ a $t=n-1$} 
+\FOR {$t=n-j$ \textbf{to} $t=n-1$} 
 \STATE $APPEND(B3, t)$
 \ENDFOR
-\FOR {$t=1$ a $t=j$} 
+\FOR {$t=1$ \textbf{to} $t=j$} 
 \STATE $APPEND(B4, t)$
 \ENDFOR
 \STATE $num \leftarrow CONCATENATE(B1, B2)$
@@ -317,10 +317,10 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \STATE $factor \leftarrow \frac{m!}{(n-1)!}$
 \STATE $sumandos\_pares \leftarrow [ \hspace{0.2cm} ]$
 \STATE $sumandos\_impares \leftarrow [ \hspace{0.2cm}]$
-\FOR {$j=0$ a $j=limite$ y $j$ par} 
+\FOR {$j=0$ \textbf{to} $j=limite$ \textbf{and} $j$ \textbf{even}} 
 \STATE $APPEND$($sumandos\_pares$, $sumandoV1(n,k,m,j)$)
 \ENDFOR
-\FOR {$j=0$ a $j=limite$ y $j$ impar} 
+\FOR {$j=0$ \textbf{to} $j=limite$ \textbf{and} $j$ \textbf{odd}} 
 \STATE $APPEND$($sumandos\_impares$, $sumandoV1(n,k,m,j)$)
 \ENDFOR
 \STATE $suma\_pares \leftarrow SUM(sumandos\_pares)$
@@ -339,10 +339,10 @@ $0 \leq k, m \leq n-1$, $0 \leq j \leq min(k,m)$
 \STATE $limite \leftarrow minimo(m,k)$
 \STATE $sumandos\_pares \leftarrow [ \hspace{0.2cm} ]$
 \STATE $sumandos\_impares \leftarrow [\hspace{0.2cm} ]$
-\FOR {$j=0$ a $j=limite$ y $j$ par} 
+\FOR {$j=0$ \textbf{to} $j=limite$ \textbf{and} $j$ \textbf{even}} 
 \STATE $APPEND$($sumandos\_pares$, $sumandoV2(n,k,m,j)$)
 \ENDFOR
-\FOR {$j=0$ a $j=limite$ y $j$ impar} 
+\FOR {$j=0$ \textbf{to} $j=limite$ \textbf{and} $j$ \textbf{odd}} 
 \STATE $APPEND$($sumandos\_impares$, $sumandoV2(n,k,m,j)$)
 \ENDFOR
 \STATE $suma\_pares \leftarrow SUM(sumandos\_pares)$
@@ -366,7 +366,7 @@ grado $k$ y dimensión $n$.
 \STATE $M \leftarrow CEIL(n/2)$
 \STATE $base\_legendre=[ \hspace{0.2cm} ]$ 
 \STATE $signo \leftarrow 1$ 
-\FOR {$k=0$ a $k=n-1$} 
+\FOR {$k=0$ \textbf{to} $k=n-1$} 
 \STATE $A\_nk \leftarrow signo * (n-1)!*
 \sqrt{\frac{
 2k+1
@@ -375,7 +375,7 @@ grado $k$ y dimensión $n$.
 }}$
 
 \STATE $vector\_legendre \leftarrow [ 0, \ldots , 0]$ \COMMENT{Lista con $n$ ceros} 
-\FOR {$m=0$ a $m=M-2$} 
+\FOR {$m=0$ \textbf{to} $m=M-2$} 
 \STATE $entrada \leftarrow A\_nk * sumatoria(n,k,m)$
 \STATE $vector\_legendre[m] \leftarrow entrada$ 
 \STATE $vector\_legendre[n-m-1] \leftarrow signo*entrada$ 
@@ -409,7 +409,7 @@ grado $k$ y dimensión $n$.
 \STATE $base\_legendre=[ \hspace{0.2cm} ]$ 
 \STATE $signo \leftarrow 1$ 
 
-\FOR {$k=0$ a $k=n-1$} 
+\FOR {$k=0$ \textbf{to} $k=n-1$} 
 \STATE $A\_nk \leftarrow signo * (n-1)!*
 \sqrt{\frac{
 2k+1
@@ -418,7 +418,7 @@ grado $k$ y dimensión $n$.
 }}$
 
 \STATE $vector\_legendre \leftarrow [ 0, \ldots , 0]$ \COMMENT{Lista con $n$ ceros} 
-\FOR {$m=0$ a $m=M-1$} 
+\FOR {$m=0$ \textbf{to} $m=M-1$} 
 \STATE $entrada \leftarrow A\_nk * sumatoria(n,k,m)$
 \STATE $vector\_legendre[m] \leftarrow entrada$ \COMMENT{Agregamos en la $m-$ésima posición}
 \STATE $vector\_legendre[n-m-1] \leftarrow signo *entrada\_legendre$
