@@ -193,26 +193,44 @@ def limite_cero(x, n):
 
     return math.sqrt(num/den) 
 
-def limite_n_medios(x, n):
+#TODO optimiza.
+def alternado(x):
+    """
+    Dado un array 'x', la función regresa el vector alternado de 'x'.
+    """
+    Ax = []
+    n = len(x)
+    for m in range(n):
+        Ax.append((-1)**m * x[m])
+    return Ax
+
+#def limite_n_medios(x, n):
+#    """
+#    Función que da el límite por la izquierda de n/2 del 
+#    espectro de la señal x de dimensión n.
+#    """
+#    pi = np.pi
+#    def momento_skew(x, k):
+#        suma = 0
+#        for m in range(n):
+#            suma += (-1)**m * m**k *x[m]
+#        return suma
+#
+#    norma = np.linalg.norm(x)
+#    X0 = momento_skew(x, 0) 
+#    X1 = momento_skew(x, 1) 
+#
+#    num = 2* X0**2* (2*n-1)* (n-1) +12* X1**2 -12* X0* X1*(n-1)
+#    den = norma**2 * n * (n-1)*(n+1)
+#
+#    return math.sqrt(num/den) 
+
+def limite_n_medios(x,n):
     """
     Función que da el límite por la izquierda de n/2 del 
     espectro de la señal x de dimensión n.
     """
-    pi = np.pi
-    def momento_skew(x, k):
-        suma = 0
-        for m in range(n):
-            suma += (-1)**m * m**k *x[m]
-        return suma
-
-    norma = np.linalg.norm(x)
-    X0 = momento_skew(x, 0) 
-    X1 = momento_skew(x, 1) 
-
-    num = 2* X0**2* (2*n-1)* (n-1) +12* X1**2 -12* X0* X1*(n-1)
-    den = norma**2 * n * (n-1)*(n+1)
-
-    return math.sqrt(num/den) 
+    return limite_cero(alternado(x), n)
 
 #def limite_n_medios(x, n):
 #    """
@@ -683,7 +701,7 @@ def grafica_analisisEspectrales(x, nombre, graficar = True):
   grafica_taus_axis(x, n, nombre, ax0, ax2)
   analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2)
 
-  fig.suptitle('Análisis espectrales de '+ nombre, fontsize = 18)
+  fig.suptitle('Análisis espectrales de '+ '${0}$'.format(nombre), fontsize = 18)
   #fig.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
   if graficar == True:
     fig.tight_layout()

@@ -130,13 +130,27 @@ x = [f(t/25) for t in range(25)]
 #x = [cos_sin_ruido(t/36, -1.5, 5, 0.2) for t in range(36)]
 #x = [1,2,-3,-6, -9, 5, 8, 7, 7, 2.3, 6.9]
 nombre = 'x'
-ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
-x = np.array([12,4,3,-3.5,4.3,21,8, 9])
-norma = np.linalg.norm(x)
-x = (1/norma) * x
-nombre = 'prueba'
+#x = [1,2,3,4,6,5]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#x = [1,-2,3,-4,6,-5]
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#
+#x = np.array([12,4,3,-3.5,4.3,21,8, 9])
+#norma = np.linalg.norm(x)
+#x = (1/norma) * x
+
+
+
+nombre = r'\mathcal{L}^{28,5}'
+x = legendre.calculo_base(28)[5]
+ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+nombre = r'A_{28}(\mathcal{L}^{28,5})'
+x_alter = ae.alternado(x)
+ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) 
+
+
+
 #
 #x = legendre.calculo_base(12)[1]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 

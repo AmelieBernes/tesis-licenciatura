@@ -198,6 +198,7 @@ intervalo cerrado $[0, n/2]$. Establecer la continuidad
 de $\Sigma_{x}$ en el interior de este intervalo no es un problema. \\
 
 \begin{prop}
+\label{prop: cont interior espectro}
 Sean $n \geq 2$, $x \in \IR^{n}$,
 $\Sigma_{x}$ como se definió en \eqref{eq: estudiando espectro}.
 La función $\Sigma_{x}$ es continua en 
@@ -220,23 +221,140 @@ $[0, n/2]$.
 Sólo resta analizar la continuidad de 
 $\Sigma_{x}$ en los puntos extremos $0$ y $n/2$.
 Para ello,
-será de utilidad introducir la siguiente notación.
+será dede utilidad introducir algunos conceptos.
+
+\subsection{Operador de alternancia}
+
+\begin{defi}
+Sea $n \geq 2$. Definimos a la función 
+$A_{n}: \IR^{n} \longrightarrow \IR^{n}$ como sigue;
+\[
+\forall x= (x_{m})_{m=0}^{n-1} \in \IR^{n}: \hspace{0.2cm}
+A_{n}(x) = ((-1)^{m}x_{m})_{m=0}^{n-1}.
+\]
+Llamaremos a $A$ el \textbf{operador de alternancia $n$ dimensional.}
+\end{defi}
+
+\TODO{Aquí unos ejemplos gráficos. Di cómo modifica a una
+señal de alta frecuencia a una de baja.}
+
+\begin{obs}
+El operador de alternancia $A_{n}: \IR^{n} \longrightarrow A_{n}$
+tiene las siguientes propiedades.
+\begin{itemize}
+\item Es una transformación lineal de $\IR^{n}$ en si mismo
+\item Es una isometría de $\IR^{n}$, es decir, para toda
+$x \in \IR^{n}$ se tiene que $|| A_{n}(x) || = || x ||$
+\end{itemize}
+\end{obs}
+
+\begin{prop}
+\label{prop: operaodr de alternancia y sigmas}
+Sean $n \geq 2$ y $x \in \IR^{n}$. 
+Para toda $\omega \in [0, n/4]$ se tiene que
+\begin{equation}
+	\label{eq: 1Jun23}
+	\sigma_{n}(x, n/2-\omega) = \sigma_{n}(A(x), \omega).
+\end{equation}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, sólo note que, para toda
+$0 \leq m \leq n-1$,
+\[
+cos\left( 
+2 \pi \left(
+\frac{n}{2} - \omega
+\right) \frac{m}{n}
+\right) = 
+(-1)^{m}
+cos\left( 
+2 \pi \omega \frac{m}{n}
+\right)
+\]
+y 
+\[
+sen\left( 
+2 \pi \left(
+\frac{n}{2} - \omega
+\right) \frac{m}{n}
+\right) = 
+-(-1)^{m}
+sen\left( 
+2 \pi \omega \frac{m}{n}
+\right),
+\]
+luego, 
+\[
+\langle 
+x, c_{n, n/2-\omega} 
+\rangle
+= 
+\xi_{n, \omega} \suma{m=0}{n-1}{
+x_{m}(-1)^{m} cos\left( 
+2 \pi \omega \frac{m}{n}
+\right)
+} = \langle 
+A(x), c_{n, n/2-\omega} 
+\rangle,
+\]
+\[
+\langle 
+x, s_{n, n/2-\omega} 
+\rangle
+= 
+-\eta_{n, \omega} \suma{m=0}{n-1}{
+x_{m}(-1)^{m} sen\left( 
+2 \pi \omega \frac{m}{n}
+\right)
+} = - \langle 
+A(x), s_{n, n/2-\omega} 
+\rangle,
+\]
+\[
+\langle 
+c_{n, n/2-\omega}, s_{n, n/2-\omega}
+\rangle
+= 
+-\xi_{n, \omega} \eta_{n, \omega} \suma{m=0}{n-1}{
+cos\left( 
+2 \pi \omega \frac{m}{n}
+\right) sen\left( 
+2 \pi \omega \frac{m}{n}
+\right)
+} = - \langle 
+c_{n, n/2-\omega}, s_{n, n/2-\omega}
+\rangle.
+\]
+De estas igualdades y 
+del que $A$ sea una isometría, se sigue aplicando
+directamente
+la definición de
+los números $\sigma_{n}(x, \omega)$
+dada en la proposición \ref{prp: ammm},
+la igualdad \ref{eq: 1Jun23}.
+\QEDB
+\vspace{0.2cm}
+
+\TODO{Esta proposición nos dice que analizar la presencia
+de una frecuencia ``alta'' (i.e. cercana a $n/2$) en una señal $x \in \IR^{n}$
+es lo mismo que analizar la presencia de una frecuencia baja en la
+señal alternada $A(x)$. Esto concuerda con lo observado en el ejemplo 
+AAA, que el alternar una señal con muchas oscilaciones da lugar a una
+mucho más estable.}
+
 \begin{defi}
 \label{def: momentos de x}
-Sean $n \geq 2$, $x= (x_{m})_{m=0}^{n-1} \in \IR^{n}$, $k \geq 0$.
-Se definen a los números $M_{k}(x)$ y 
-$\tilde{M}_{k}(x)$ como sigue;
+Sean $n \geq 2$ y $x= (x_{m})_{m=0}^{n-1} \in \IR^{n}$.
+Para todo $k \geq 0$
+se definen a los números $M_{k}(x)$ como
 	\begin{equation}
 	\label{eq: momento k esimo de x}
 	M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}}.
 	\end{equation}
-	
-	\begin{equation}
-	\label{eq: momento skew k esimo de x}
-	\tilde{M}_{k}(x) := \suma{m=0}{n-1}{(-1)^{m}m^{k}x_{m}}.
-	\end{equation}
 \end{defi}
 
+\subsection{Límites de la función $\Sigma_{x}$ en $0$ y $n/2$}
 
 \begin{teo}
 \label{teo: limite del espectro por cero}
@@ -261,13 +379,7 @@ y
 \begin{equation}
 \label{eq: limite del espectro a n medios}
 \limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
-= \left(
-\frac{
-2\tilde{M}_{0}(x)^{2}(2n-1)(n-1) + 12\tilde{M}_{1}(x)^{2} - 
-12\tilde{M}_{0}(x)\tilde{M}_{1}(x)(n-1)
-}{
-||x||^{2} (n-1)(n+1)n}
-\right)^{1/2}.
+= \limite{\omega \rightarrow 0^{+}}{\Sigma_{A_{n}(x)}(\omega)}.
 \end{equation}
 \end{teo}
 \noindent
@@ -815,7 +927,7 @@ Tenemos entonces que
 \]
 
 De forma análoga pueden reutilizarse los cálculos anteriores,
-cambiando los factores $M_{k}(x)$ por los $\tilde{M}_{k}(x)$
+cambiando los factores $M_{k}(x)$ por $M_{k}(A_{n}(x))$
 para deducir los siguientes límites.
 
 
@@ -837,14 +949,14 @@ c_{n, \omega}
 \sim &
 \xi_{n, \tilde{\omega}} 
 \left(
-\tilde{M}_{0}(x) - \frac{2 \pi^{2}}{n^{2}}\tilde{M}_{2} \tilde{\omega}^{2} 
-+ \frac{2 \pi^{4}}{3n^{4}} \tilde{M}_{4}(x) \tilde{\omega}^{4} + o(\tilde{\omega}^{5})
+M_{0}(A_{n}(x)) - \frac{2 \pi^{2}}{n^{2}}M_{2}(A_{n}(x)) \tilde{\omega}^{2} 
++ \frac{2 \pi^{4}}{3n^{4}} M_{4}(A_{n}(x)) \tilde{\omega}^{4} + o(\tilde{\omega}^{5})
 \right) 
 \hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0
 \\
 & 
 \xrightarrow{\tilde{\omega} \rightarrow 0^{+}}
-\frac{\tilde{M}_{0}(x)}{\sqrt{n}},
+\frac{M_{0}(A_{n}(x))}{\sqrt{n}},
 \end{align*}
 
 \begin{align*}
@@ -872,13 +984,13 @@ x_{m}sen\left(
 \sim &
 -\eta_{n, \tilde{\omega}}
 \left(
-\frac{2\pi}{n} \tilde{M}_{1}(x)\tilde{\omega}
--\frac{4\pi^{3}}{3n^{3}} \tilde{M}_{3}(x)\tilde{\omega}^{3}
+\frac{2\pi}{n} M_{1}(A_{n}(x)) \tilde{\omega}
+-\frac{4\pi^{3}}{3n^{3}} M_{3}(A_{n}(x)) \tilde{\omega}^{3}
 + o(\tilde{\omega}^{5})
 \right)
 \hspace{0.2cm} \textit{ cuando } \tilde{\omega} \sim 0 \\
 \sim &
-- sgn(\tilde{M}_{1}(x))
+- sgn(M_{1}(A_{n}(x)))
 \sqrt{2} 
 \left(
 \frac{
@@ -890,20 +1002,20 @@ x_{m}sen\left(
 \cdot 
 \left(
 \left(
-\frac{2 \pi}{n} \tilde{M}_{1}(x) \tilde{\omega} - \frac{4 \pi^{3}}{3n^{3}}
-\tilde{M}_{3}(x) \tilde{\omega}^{3} 
- + o(\tilde{\omega}^{5})
+\frac{2 \pi}{n} M_{1}(A_{n}(x)) \tilde{\omega} - \frac{4 \pi^{3}}{3n^{3}}
+M_{3}(A_{n}(x)) \tilde{\omega}^{3} 
++ o(\tilde{\omega}^{5})
 \right)^{2}
 \right)^{1/2}\\
 \xrightarrow{\tilde{\omega} \rightarrow 0^{+}} & - 
-sgn(\tilde{M}_{1}(x))
+sgn(M_{1}(A_{n}(x)))
 \left(
-\frac{6 \tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n}
+\frac{6 M_{1}(A_{n}(x))^{2}}{(2n-1)(n-1)n}
 \right)^{1/2}
-= -M_{1}(x)
+= -M_{1}(A_{n}(x))
 \left(
 \frac{6}{(2n-1)(n-1)n}
-\right)^{1/2}
+\right)^{1/2}.
 \end{align*}
 
 Por último, 
@@ -953,16 +1065,15 @@ Así,
 \langle x, s_{n, \omega} \rangle
 \langle c_{n, \omega}, s_{n, \omega} \rangle & \\
 \xrightarrow{\tilde{\omega} \rightarrow 0^{+}} & 
--2 \frac{\tilde{M}_{0}(x)}{\sqrt{n}}
+-2 \frac{M_{0}(A_{n}(x))}{\sqrt{n}}
 \cdot 
-(-1) \tilde{M}_{1}(x)\frac{\sqrt{6}}{
+(-1) M_{1}(A_{n}(x)) \frac{\sqrt{6}}{
 \sqrt{(2n-1)(n-1)n}}
 \cdot (-1)
 \frac{\sqrt{6(n-1)}}{2 \sqrt{2n-1}}
 \\
-= & - \frac{6 \tilde{M}_{0}(x)\tilde{M}_{1}(x)}{n(2n-1)}.
+= & - \frac{6 M_{0}(A_{n}(x)) M_{1}(A_{n}(x)) }{n(2n-1)}.
 \end{align*}
-
 
 
 Obtenemos así los siguientes límites.
@@ -971,14 +1082,14 @@ Obtenemos así los siguientes límites.
 \limite{\omega \rightarrow (n/2)^{-}}{\langle
 x, c_{n, \omega}
 \rangle^{2} }
-= \frac{\tilde{M}_{0}(x)^{2}}{n},
+= \frac{M_{0}(A_{n}(x))^{2}}{n},
 \end{equation}
 \begin{equation}
 \label{ec: limite x, snw cuad n med}
 \limite{\omega \rightarrow (n/2)^{-}}{\langle
 x, s_{n, \omega}
 \rangle^{2} }
-= \frac{6\tilde{M}_{1}(x)^{2}}{(2n-1)(n-1)n},
+= \frac{6M_{1}(A_{n}(x))^{2}}{(2n-1)(n-1)n},
 \end{equation}
 
 \begin{equation}
@@ -988,7 +1099,7 @@ x, s_{n, \omega}
 \langle x, s_{n, \omega} \rangle
 \langle c_{n, \omega}, s_{n, \omega} \rangle
 = 
-- \frac{6\tilde{M}_{0}(x)\tilde{M}_{1}(x)}{n(2n-1)},
+- \frac{6M_{0}(A_{n}(x))M_{1}(A_{n}(x))}{n(2n-1)},
 }
 \end{equation}
 \begin{equation}
@@ -998,7 +1109,7 @@ c_{n, \omega}, s_{n, \omega}
 \rangle^{2} }
 = \frac{3(n-1)}{2(2n-1)}.
 \end{equation}
-De nuevo no hay problemas de indeterminación al 
+No hay problemas de indeterminación al 
 sustituir \eqref{ec: limite cnw, snw cuad} en 
 \eqref{eq1: 22May}, por lo que podemos 
 sustituir 
@@ -1007,10 +1118,31 @@ sustituir
 \eqref{ec: limite -2abc n med} y 
 \eqref{ec: limite cnw, snw cuad} en 
 \eqref{eq1: 22May} para concluir que el límite por la izquierda
-de $n/2$ del espectro $\Sigma_{x}$ es, en efecto,
-el propuesto
-en 
-\eqref{eq: limite del espectro a cero}. \\
+de $n/2$ del espectro $\Sigma_{x}$ es
+
+\begin{align*}
+\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
+= &
+\left(
+\frac{
+2M_{0}(A_{n}(x))^{2}(2n-1)(n-1) + 
+12M_{1}(A_{n}(x))^{2} - 12M_{0}(A_{n}(x))
+M_{1}(A_{n}(x))(n-1)
+}{
+||x||^{2} (n-1)(n+1)n}
+\right)^{1/2} \\
+= &
+\left(
+\frac{
+2M_{0}(A_{n}(x))^{2}(2n-1)(n-1) + 
+12M_{1}(A_{n}(x))^{2} - 12M_{0}(A_{n}(x))
+M_{1}(A_{n}(x))(n-1)
+}{
+||A_{n}(x)||^{2} (n-1)(n+1)n}
+\right)^{1/2} \\
+= & 
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{A_{n}(x)}(\omega)}.
+\end{align*}
 \QEDB
 \vspace{0.2cm}
 
@@ -1115,22 +1247,23 @@ Para ello necesitamos antes el siguiente
 \begin{lema}
 Sean $n \neq 2$, $x \in \IR^{n}$.
 Si
-\[
-c_{i} := \langle x, \cali{L}^{m,i} \rangle,
+\begin{equation}
+\label{ec: funcionales coordenadas}
+c_{i}(x) := \langle x, \cali{L}^{m,i} \rangle,
 \hspace{0.2cm} i = 0,1
-\]
+\end{equation}
 son los dos coeficientes primeros coeficientes
 de $x$ respecto a la BLD $\cali{L}^{n,k}$,
 entonces 
 \begin{equation}
 \label{ec: momento cero y coef 0}
-M_{0}(x) = \sqrt{n} c_{0}
+M_{0}(x) = \sqrt{n} c_{0}(x)
 \end{equation}
 y
  \begin{equation}
 \label{ec: momento cero y coef 1}
-M_{1}(x) = \frac{c_{1}}{\ell_{1}} + 
-\frac{\sqrt{n}(n-1)}{2}c_{0},
+M_{1}(x) = \frac{c_{1}(x)}{\ell_{1}} + 
+\frac{\sqrt{n}(n-1)}{2}c_{0}(x),
 \end{equation}
 donde
 \begin{equation}
@@ -1139,32 +1272,14 @@ donde
 12
 }{(n-1)n(n+1)}}.
 \end{equation}
-
-
-Si 
-\[
-\tilde{c}_{i} := \langle x, (-1)^{m}\cali{L}^{m,i} \rangle,
-\hspace{0.2cm} i = 0,1,
-\]
-entonces
-\begin{equation}
-\label{ec: momento cero y coef 0 tilde}
-\tilde{M}_{0}(x) = \sqrt{n} c_{0}
-\end{equation}
-y
- \begin{equation}
-\label{ec: momento cero y coef 1 tilde}
-\tilde{M}_{1}(x) = \frac{c_{1}}{\ell_{1}} + 
-\frac{\sqrt{n}(n-1)}{2}c_{0},
-\end{equation}
 \end{lema}
 \noindent
 \textbf{Demostración.}
 En efecto, según la ecuación
 \eqref{eq: Ln, 0, m}, 
 \[
-c_{0}= 
-\langle x, \cali{L}^{m,0} \rangle
+c_{0}(x)= 
+\langle x, \cali{L}^{n,0} \rangle
 = \frac{1}{\sqrt{n}} \suma{m=0}{n-1}{x_{m}}
 = \frac{1}{\sqrt{n}} M_{0}(x),
 \]
@@ -1172,7 +1287,7 @@ luego,
 $M_{0}(x) = \sqrt{n} c_{0}$.
 Además, según \eqref{eq: Ln, 1, m},
 \[
-c_{1}= 
+c_{1}(x)= 
 \langle x, \cali{L}^{m,1} \rangle
 = \ell_{1} \suma{m=0}{n-1}{x_{m} \left(
 m-  \frac{n-1}{2}
@@ -1184,10 +1299,6 @@ M_{1}(x)-\frac{n-1}{2}M_{0}(x)
 despejando a $M_{1}(x)$ y usando la relación dada
 de $M_{0}(x)$ obtenemos 
 \eqref{ec: momento cero y coef 1}.
-Las demostraciones de 
-\eqref{ec: momento cero y coef 0 tilde} y 
-\eqref{ec: momento cero y coef 1 tilde} son
-totalmente análogas.
 \QEDB
 \vspace{0.2cm}
 
@@ -1206,7 +1317,13 @@ a lo más $1$ y dimensión $n$, entonces
 \begin{equation}
 \label{eq: limite por cero como angulo}
 \limite{\omega \rightarrow 0^{+}}{
-\Sigma_{x}(\omega)} = \measuredangle(x, W_{n,1}).
+\Sigma_{x}(\omega)} = cos(\measuredangle(x, W_{n,1}))
+\end{equation}
+y
+\begin{equation}
+\label{eq: limite por cero como angulo}
+\limite{\omega \rightarrow \frac{n}{2}^{-}}{
+\Sigma_{x}(\omega)} = cos(\measuredangle(A_{n}(x), W_{n,1})).
 \end{equation}
 \end{prop}
 \noindent
@@ -1215,8 +1332,11 @@ Según la proposición
 \ref{prop: proyecciones a espacios Wn,k}, 
 \begin{equation}
 \label{eq0: 25May23} 
-||\Pi_{W_{n,1}}(x)|| = \sqrt{c_{0}^{2} + c_{1}^{2}}.
+||\Pi_{W_{n,1}}(x)|| = \sqrt{c_{0}(x)^{2} + c_{1}(x)^{2}},
 \end{equation}
+donde los $c_{i}$ son funcionales coordenada respecto
+a la BON $\cali{L}^{n}$ como se definieron en 
+\ref{ec: funcionales coordenadas}.
 
 Sustituyendo las expresiones 
 \eqref{ec: momento cero y coef 0} y
@@ -1237,70 +1357,46 @@ tenemos que
 (n-1)(n+1)n
 } 
 \left(
-2nc_{0}^{2}(n-1)(2n-1) + 12
+2nc_{0}(x)^{2}(n-1)(2n-1) + \right. \\
+& \left.
+12
 \left(
-\frac{c_{1}}{\ell_{1}} + 
-\frac{\sqrt{n}(n-1)}{2}c_{0}
+\frac{c_{1}(x)}{\ell_{1}} + 
+\frac{\sqrt{n}(n-1)}{2}c_{0}(x)
 \right)^{2}-12
-\sqrt{n} c_{0} \sqrt{\frac{12}{
+\sqrt{n} c_{0}(x) \sqrt{\frac{12}{
 (n-1)n(n+1)
 }} 
 \right) \\
 = & \frac{1}{||x||^{2}
 (n-1)(n+1)n}
 \left(
-(2n(n-1)(2n-1) + 3n(n-1)^{2}-6(n-1)^{2}n)c_{0}^{2}
-+ \frac{12}{\ell^{2}_{1}}c_{1}^{2}
+[2n(n-1)(2n-1) + \right. \\
+& \left.
+3n(n-1)^{2}-6(n-1)^{2}n]c_{0}(x)^{2}
++ \frac{12}{\ell^{2}_{1}}c_{1}(x)^{2}
 \right) \\
-= & \frac{c_{0}^{2} + c_{1}^{2}}{||x||^{2}}.
+= & \frac{c_{0}(x)^{2} + c_{1}(x)^{2}}{||x||^{2}}.
 \end{align*}
 
+\noindent
 Usando \eqref{eq0: 25May23} podemos concluir
 que
 \[
 \limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)^{2}}
-=  \frac{c_{0}^{2} + c_{1}^{2}}{||x||^{2}}
+=  \frac{c_{0}(x)^{2} + c_{1}(x)^{2}}{||x||^{2}}
 =  \frac{||\Pi_{W_{n,1}}(x)||}{||x||^{2}},
 \]
 siendo esta última expresión, según la proposición
 \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio}, 
 el coseno del ángulo que $x$ forma con $W_{n,1}$.  
-\QEDB
-\vspace{0.2cm}
 
-Haciendo unos cambios de signo, se demuestra el resultado
-análogo para el límite por la derecha de $n/2$ del espectro
-$\Sigma_{x}$ de una señal $x \in \IR^{n}$.
-\begin{prop}
-\label{prop: relacion limite n medios con legendre}
-Sean $n \geq 2$, $x \in \IR^{n}$,
-$\Sigma_{x}$ el espectro de $x$.
-Si $\tilde{W}_{n,1}$ es el espacio
-\[
-\tilde{W}_{n,1} := span \{ (-1^{m}\cali{L}^{n,0}_{m})_{m=0}^{n-1}, 
-(-1^{m}\cali{L}^{n,1}_{m})_{m=0}^{n-1} \}
-\]
-entonces
-\begin{equation}
-\label{eq: limite por cero como angulo}
-\limite{\omega \rightarrow \frac{n}{2}^{-}}{
-\Sigma_{x}(\omega)} = \measuredangle(x, \tilde{W}_{n,1}).
-\end{equation}
-\end{prop}
-\noindent
-\textbf{Demostración.}
-Sólo note que de la ortogonalidad de los
-vectores $\cali{L}^{n,0}$ y $\cali{L}^{m,1}$
-se sigue la de los vectores que por definición generan
-al espacio $\tilde{W}_{n,1}$, 
-luego, 
-\begin{equation*}
-||\Pi_{W_{n,1}}(x)|| = \sqrt{c_{0}^{2} + c_{1}^{2}}.
-\end{equation*}
-Haciendo cálculos análogos a los
-de la demostración de la proposición 
-\ref{prop: relacion limite cero con legendre} se llega
-al resultado deseado.
+Por último, usando
+\eqref{eq: limite del espectro a n medios}
+y lo ya demostrado se tiene que
+$$\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
+= \limite{\omega \rightarrow 0^{+}}{\Sigma_{A_{n}(x)}(\omega)}
+= \measuredangle(A_{n}(x), W_{n,1}).$$
 \QEDB
 \vspace{0.2cm}
 
@@ -1420,15 +1516,75 @@ son como se definieron en
 \ref{def: momentos de x}. 
 \end{prop}
 
-Sólo para referenciar más adelante la continuidad del espectro de una 
-señal, plasmamos este resultado en la siguiente proposición
-(que es cierto por la forma en que definimos el espectro).
+Sólo para referenciar más adelante 
+la continuidad del espectro de una 
+señal y la forma en que se relacionan los valores
+del espectro para pares de frecuencias $\omega$ y $n/2-\omega$,
+plasmamos estos resultados 
+-que son consecuencias directas de la forma en que hemos
+definido el espectro $\Sigma_{x}$-
+en la siguiente proposición.
+
 
 \begin{prop}
 \label{prop: continuidad espctro espacois monof.}
+\textbf{(Propiedades importantes del espectro $\Sigma_{x}$ de una señal).}
 Sean $n \geq 2$, $x \in \IR^{n}$.
 Sea $\Sigma_{x}:[0, n/2] \rightarrow [0,1]$ el espectro 
 de $x$ como se definió en 
 \ref{def: espectro monofrecuenciales inicial}.
-$\Sigma_{x}$ es una función continua en su dominio.
+\begin{itemize}
+	\item $\Sigma_{x}$ es una función continua.
+	\item Para toda $\omega \in [0, n/4]$,
+	\[
+	\Sigma_{x}(n/2-\omega) = \Sigma_{A_{n}(x)}(\omega).
+	\]
+\end{itemize}
 \end{prop}
+\noindent
+\textbf{Demostración.}
+La continuidad de $\Sigma_{x}$ en el interior de
+$[0, n/2]$ se estableció en
+\ref{prop: cont interior espectro}, y la continuidad
+en los puntos extremos $0$ y $n/2$
+se sigue del
+teorema \ref{teo: limite del espectro por cero},
+la proposición
+\ref{prop: relacion limite cero con legendre}
+y la definición \ref{def: espectro monofrecuenciales inicial}
+del espectro. \\
+
+La veracidad del segundo punto para toda
+$\omega \in ]0, n/4[$ se sigue directamente de 
+la proposición 
+\ref{prop: operaodr de alternancia y sigmas}. Por último,
+haciendo $\omega = 0$ se tiene también la igualdad, pues
+
+\begin{align*}
+\Sigma_{x}(n/2) = &
+\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(n/2)} \\
+= & \measuredangle(A_{n}(x)m W_{n,1}) \\
+= & \limite{\omega \rightarrow 0^{+}}{ \Sigma_{A_{n}(x)}(\omega)} \\
+= & \Sigma_{A_{n}(x)}(0),
+\end{align*}
+donde la primera y última igualdad son ciertas
+por ser continuo el espectro $\Sigma_{x}$.
+\QEDB
+\vspace{0.2cm}
+
+\begin{figure}[H]
+	\sidecaption{
+	Según la proposición 
+	\ref{prop: continuidad espctro espacois monof.}, 
+	si se quieren calcular los valores del espectro
+	$\Sigma_{\cali{L}^{28,5}}$-
+	cuyo dominio es $[0, 14]$- 
+	en frecuencias $\omega \in [7, 14]$, estos pueden hallarse
+	usando los valores del espectro del vector
+	alternado $A_{28}(\cali{L}^{28,5})$ en el rango 
+	de frecuencias $[0, 7]$. 
+	\label{fig: espectro alternado}
+	}
+	\centering
+	\includegraphics[scale = 1]{espectro_alternado} 
+\end{figure}	
