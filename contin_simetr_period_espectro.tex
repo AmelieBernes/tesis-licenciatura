@@ -95,6 +95,7 @@ cos (\measuredangle(x, P_{n, \omega}))
 
 \subsection{Simetría}
 \begin{prop}
+\label{ref: simetria espectro}
 \textbf{(Simetría de la función
 \eqref{eq: estudiando espectro})}
 Sean
@@ -192,7 +193,8 @@ $\Sigma_{x}$ como se definió
 en \eqref{eq: estudiando espectro}.
 Por la periodicidad y simetría establecidas
 en las proposiciones 
-\TODO{ref}, basta
+\ref{prop: periodicidad espectro}
+y \ref{ref: simetria espectro}, basta
 analizar la continuidad de $\Sigma_{x}$ sólo en el
 intervalo cerrado $[0, n/2]$. Establecer la continuidad
 de $\Sigma_{x}$ en el interior de este intervalo no es un problema. \\
@@ -235,8 +237,6 @@ A_{n}(x) = ((-1)^{m}x_{m})_{m=0}^{n-1}.
 Llamaremos a $A$ el \textbf{operador de alternancia $n$ dimensional.}
 \end{defi}
 
-\TODO{Aquí unos ejemplos gráficos. Di cómo modifica a una
-señal de alta frecuencia a una de baja.}
 
 \begin{obs}
 El operador de alternancia $A_{n}: \IR^{n} \longrightarrow A_{n}$
@@ -245,8 +245,29 @@ tiene las siguientes propiedades.
 \item Es una transformación lineal de $\IR^{n}$ en si mismo
 \item Es una isometría de $\IR^{n}$, es decir, para toda
 $x \in \IR^{n}$ se tiene que $|| A_{n}(x) || = || x ||$
+\item Es un operador involutivo, es decir, es invertible e igual
+a su inversa
 \end{itemize}
 \end{obs}
+
+\begin{ejemplo}
+Veamos qué efecto tiene en la geometría y oscilaciones
+de una señal $x \in \IR^{n}$ el evaluarlo con el operador 
+de alternancia $A_{n}$.
+
+Puesto que por definición $A_{n}$ agrega cambios de signos
+intercalados en las entradas de una señal, es intuitivamente
+obvio que si esta tenía pocas oscilaciones (hecho que,
+informalmente hablando, podría pensarse como el pocos cambios
+de signo de la forma $+-+$ y $-+-$), $A_{n}(x)$ por el contrario
+tendrá muchas oscilaciones, y que, recíprocamente,
+si $x$ tiene muchos oscilaciones el vector $A_{n}(x)$ no los tendrá.
+
+En este contexto, puede pensarse a $A_{n}$ como un operador
+que, dependiendo de la naturaleza oscilatoria de $x$, aumente
+o disminuya las oscilaciones de la señal $x$. \TODO{Termina.}
+
+\end{ejemplo}
 
 \begin{prop}
 \label{prop: operaodr de alternancia y sigmas}

@@ -641,6 +641,8 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   #limite_0 = limite_cero(x, n) #NUEVO 
   #limite_n_2 = limite_n_medios(x, n) #NUEVO 
   sigma_max = max(sigmas)
+  #TODO cuidado, parece que en la siguiente linea hay un error cuando x tiene la máxima frecuencia.
+  print(sigma_max)
   frec_max = frecuencias[sigmas.index(sigma_max)]
   
   axis1.scatter(frec_max, sigma_max, s = 100, color = colores[2], label = '( ' + str(round(frec_max, 2)) + ', ' + str(round(sigma_max, 2)) + ' )', marker = 'v', zorder=4)

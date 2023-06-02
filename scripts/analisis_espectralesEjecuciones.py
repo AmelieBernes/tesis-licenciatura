@@ -125,11 +125,31 @@ x = [f(t/25) for t in range(25)]
 #
 #n, w, A, phi, nombre = 16, 3, 2.3, 0, 'x'
 
-#x = [cos_con_ruido(t/36, -1.5, 3.4, 0.2) for t in range(36)]
 #x = [cos_sin_ruido(t/36, -1.5, 3.4, 0.2) for t in range(36)]
 #x = [cos_sin_ruido(t/36, -1.5, 5, 0.2) for t in range(36)]
 #x = [1,2,-3,-6, -9, 5, 8, 7, 7, 2.3, 6.9]
+
+
+
+# -------------- Ejemplo alternado 0 ----------------
+#x = [cos_con_ruido(t/50,A = -1.5, w = 22.4, phi = 0.2) for t in range(50)]
+#nombre = 'x'
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#x_alter = ae.alternado(x)
+#nombre = r'A_{50}(x)'
+#ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) 
+# -------------- Fin ejemplo alternado 0 ----------------
+
+# -------------- Ejemplo alternado 0 ----------------
+x = [t/12 for t in range(12)] 
 nombre = 'x'
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True)  #Sí funciona
+x_alter = ae.alternado(x)
+print(len(x_alter))
+nombre = r'A_{12}(x)'
+ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) #No funciona
+# -------------- Fin ejemplo alternado 0 ----------------
+
 
 #x = [1,2,3,4,6,5]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
@@ -141,13 +161,14 @@ nombre = 'x'
 #x = (1/norma) * x
 
 
-
-nombre = r'\mathcal{L}^{28,5}'
-x = legendre.calculo_base(28)[5]
-ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
-nombre = r'A_{28}(\mathcal{L}^{28,5})'
-x_alter = ae.alternado(x)
-ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) 
+# -------------- Ejemplo alternado 1 ----------------
+#nombre = r'\mathcal{L}^{28,5}'
+#x = legendre.calculo_base(28)[5]
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#nombre = r'A_{28}(\mathcal{L}^{28,5})'
+#x_alter = ae.alternado(x)
+#ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) 
+# -------------- Fin ejemplo alternado 1 ----------------
 
 
 
