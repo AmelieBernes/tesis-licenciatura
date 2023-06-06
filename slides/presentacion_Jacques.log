@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  6 JUN 2023 01:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.4.6)  6 JUN 2023 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -934,7 +934,8 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.0.1'
 \c@defi=\count373
 \c@ej=\count374
 \c@notacion=\count375
-\c@nota=\count376
+\c@hip=\count376
+\c@nota=\count377
  (/usr/share/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty)
 (/usr/share/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty)
@@ -943,33 +944,40 @@ Library (tcolorbox): 'tcbposter.code.tex' version '6.0.1'
 (/usr/share/texmf-dist/tex/latex/beamer/beamerinnerthemecircles.sty)
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count377
+\l__color_backend_stack_int=\count378
 \l__pdf_internal_box=\box96
 )
 (./presentacion_Jacques.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
+
+
+LaTeX Warning: Label `def: taus' multiply defined.
+
+
+LaTeX Warning: Label `eq: limite por cero como angulo' multiply defined.
+
 )
 \openout1 = `presentacion_Jacques.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1007,16 +1015,16 @@ LaTeX Font Info:    ... okay on input line 72.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count378
+\scratchcounter=\count379
 \scratchdimen=\dimen325
 \scratchbox=\box97
-\nofMPsegments=\count379
-\nofMParguments=\count380
+\nofMPsegments=\count380
+\nofMParguments=\count381
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count381
+\MPscratchCnt=\count382
 \MPscratchDim=\dimen326
-\MPnumerator=\count382
-\makeMPintoPDFobject=\count383
+\MPnumerator=\count383
+\makeMPintoPDFobject=\count384
 \everyMPtoPDFconversion=\toks52
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1027,64 +1035,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 72.
+Package hyperref Info: Link coloring OFF on input line 73.
 
 (./presentacion_Jacques.out) (./presentacion_Jacques.out)
 \@outlinefile=\write5
 \openout5 = `presentacion_Jacques.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 72.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 72.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 72.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 72.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 72.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 72.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 72.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 72.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 73.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 72.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 72.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 72.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 72.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 72.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 73.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 72.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 72.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 73.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 73.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 7
-2.
+3.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 7
-2.
+3.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 72.
+ut line 73.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1110,16 +1118,16 @@ Dictionary: translator-numbers-dictionary, Language: English
 sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \. on input line 72.
-LaTeX Info: Redefining \% on input line 72.
-\c@lstlisting=\count384
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+\c@lstlisting=\count385
  (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks53
 \inpenc@posthook=\toks54
 )
 (./presentacion_Jacques.nav)
-Overfull \hbox (17.73851pt too wide) in paragraph at lines 72--72
+Overfull \hbox (17.73851pt too wide) in paragraph at lines 73--73
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
@@ -1131,25 +1139,6 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 103
-.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 103
-.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 103.
-
-(/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-)
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
@@ -1157,10 +1146,28 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [2
 
 ]
-<a.png, id=137, 576.7146pt x 293.4162pt>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 122
+.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 122
+.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 122.
+
+(/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+<a.png, id=134, 576.7146pt x 293.4162pt>
 File: a.png Graphic file (type png)
 <use a.png>
-Package pdftex.def Info: a.png  used on input line 119.
+Package pdftex.def Info: a.png  used on input line 122.
 (pdftex.def)             Requested size: 230.68175pt x 117.3644pt.
 
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
@@ -1184,19 +1191,6 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [5
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 195.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 195.
-
-
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
@@ -1204,24 +1198,13 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [6
 
 ]
-<nuevas_lupas.png, id=268, 346.4142pt x 171.7617pt>
-File: nuevas_lupas.png Graphic file (type png)
-<use nuevas_lupas.png>
-Package pdftex.def Info: nuevas_lupas.png  used on input line 207.
-(pdftex.def)             Requested size: 346.41335pt x 171.76128pt.
-
-Overfull \hbox (4.11804pt too wide) in paragraph at lines 207--207
- [] 
- []
-
-
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [7
 
- <./nuevas_lupas.png>]
+]
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
@@ -1229,11 +1212,18 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [8
 
 ]
-<25Nov_1.png, id=336, 604.50844pt x 313.9228pt>
-File: 25Nov_1.png Graphic file (type png)
-<use 25Nov_1.png>
-Package pdftex.def Info: 25Nov_1.png  used on input line 239.
-(pdftex.def)             Requested size: 302.25348pt x 156.96101pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 246.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 246.
+
 
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1241,14 +1231,25 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 
 [9
 
- <./25Nov_1.png>]
+]
+<nuevas_lupas.png, id=358, 346.4142pt x 171.7617pt>
+File: nuevas_lupas.png Graphic file (type png)
+<use nuevas_lupas.png>
+Package pdftex.def Info: nuevas_lupas.png  used on input line 258.
+(pdftex.def)             Requested size: 346.41335pt x 171.76128pt.
+
+Overfull \hbox (4.11804pt too wide) in paragraph at lines 258--258
+ [] 
+ []
+
+
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [10
 
-]
+ <./nuevas_lupas.png>]
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
@@ -1256,11 +1257,11 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 [11
 
 ]
-<1.png, id=441, 312.9291pt x 130.3269pt>
-File: 1.png Graphic file (type png)
-<use 1.png>
-Package pdftex.def Info: 1.png  used on input line 282.
-(pdftex.def)             Requested size: 312.92831pt x 130.32657pt.
+<25Nov_1.png, id=425, 604.50844pt x 313.9228pt>
+File: 25Nov_1.png Graphic file (type png)
+<use 25Nov_1.png>
+Package pdftex.def Info: 25Nov_1.png  used on input line 292.
+(pdftex.def)             Requested size: 302.25348pt x 156.96101pt.
 
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1268,50 +1269,39 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 
 [12
 
- <./1.png>]
-<discretization.png, id=469, 194.4063pt x 125.268pt>
-File: discretization.png Graphic file (type png)
-<use discretization.png>
-Package pdftex.def Info: discretization.png  used on input line 288.
-(pdftex.def)             Requested size: 272.16693pt x 175.374pt.
-
+ <./25Nov_1.png>]
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [13
 
- <./discretization.png>]
-<orthonorm.png, id=498, 246.9225pt x 118.5228pt>
-File: orthonorm.png Graphic file (type png)
-<use orthonorm.png>
-Package pdftex.def Info: orthonorm.png  used on input line 294.
-(pdftex.def)             Requested size: 345.68912pt x 165.93076pt.
-
-Overfull \hbox (3.39381pt too wide) in paragraph at lines 294--294
- [] 
- []
-
-
+]
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [14
 
- <./orthonorm.png>]
+]
+<1.png, id=543, 312.9291pt x 130.3269pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 348.
+(pdftex.def)             Requested size: 312.92831pt x 130.32657pt.
+
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [15
 
-]
-<18Sept_1.png, id=553, 368.0952pt x 222.8325pt>
-File: 18Sept_1.png Graphic file (type png)
-<use 18Sept_1.png>
-Package pdftex.def Info: 18Sept_1.png  used on input line 312.
-(pdftex.def)             Requested size: 331.28261pt x 200.5474pt.
+ <./1.png>]
+<discretization.png, id=571, 194.4063pt x 125.268pt>
+File: discretization.png Graphic file (type png)
+<use discretization.png>
+Package pdftex.def Info: discretization.png  used on input line 354.
+(pdftex.def)             Requested size: 272.16693pt x 175.374pt.
 
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1319,86 +1309,14 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 
 [16
 
- <./18Sept_1.png>]
-<borrador.png, id=581, 2007.5pt x 941.5175pt>
-File: borrador.png Graphic file (type png)
-<use borrador.png>
-Package pdftex.def Info: borrador.png  used on input line 323.
-(pdftex.def)             Requested size: 301.11201pt x 141.22153pt.
+ <./discretization.png>]
+<orthonorm.png, id=599, 246.9225pt x 118.5228pt>
+File: orthonorm.png Graphic file (type png)
+<use orthonorm.png>
+Package pdftex.def Info: orthonorm.png  used on input line 360.
+(pdftex.def)             Requested size: 345.68912pt x 165.93076pt.
 
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[17
-
- <./borrador.png>]
-<abee.png, id=609, 910.90312pt x 563.85657pt>
-File: abee.png Graphic file (type png)
-<use abee.png>
-Package pdftex.def Info: abee.png  used on input line 331.
-(pdftex.def)             Requested size: 318.82086pt x 197.35275pt.
-
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[18
-
- <./abee.png (PNG copy)>]
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[19
-
-]
-<2Dic_4.png, id=664, 1105.731pt x 400.3758pt>
-File: 2Dic_4.png Graphic file (type png)
-<use 2Dic_4.png>
-Package pdftex.def Info: 2Dic_4.png  used on input line 354.
-(pdftex.def)             Requested size: 331.72186pt x 120.11365pt.
-
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[20
-
- <./2Dic_4.png>]
-<6Dic_0.png, id=692, 1134.639pt x 605.6226pt>
-File: 6Dic_0.png Graphic file (type png)
-<use 6Dic_0.png>
-Package pdftex.def Info: 6Dic_0.png  used on input line 360.
-(pdftex.def)             Requested size: 340.39433pt x 181.68817pt.
-
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[21
-
- <./6Dic_0.png>]
-<6Dic_1.png, id=720, 1123.0758pt x 624.4128pt>
-File: 6Dic_1.png Graphic file (type png)
-<use 6Dic_1.png>
-Package pdftex.def Info: 6Dic_1.png  used on input line 366.
-(pdftex.def)             Requested size: 336.92534pt x 187.32527pt.
-
-Overfull \hbox (17.73851pt too wide) has occurred while \output is active
- [][]  \OT1/cmss/m/n/6 ([])  
- []
-
-[22
-
- <./6Dic_1.png>]
-<6Dic_2.png, id=749, 1149.093pt x 592.614pt>
-File: 6Dic_2.png Graphic file (type png)
-<use 6Dic_2.png>
-Package pdftex.def Info: 6Dic_2.png  used on input line 372.
-(pdftex.def)             Requested size: 344.73056pt x 177.78557pt.
-
-Overfull \hbox (2.43526pt too wide) in paragraph at lines 372--372
+Overfull \hbox (3.39381pt too wide) in paragraph at lines 360--360
  [] 
  []
 
@@ -1407,27 +1325,87 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
+[17
+
+ <./orthonorm.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[18
+
+]
+<18Sept_1.png, id=654, 368.0952pt x 222.8325pt>
+File: 18Sept_1.png Graphic file (type png)
+<use 18Sept_1.png>
+Package pdftex.def Info: 18Sept_1.png  used on input line 378.
+(pdftex.def)             Requested size: 331.28261pt x 200.5474pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[19
+
+ <./18Sept_1.png>]
+<borrador.png, id=683, 2007.5pt x 941.5175pt>
+File: borrador.png Graphic file (type png)
+<use borrador.png>
+Package pdftex.def Info: borrador.png  used on input line 389.
+(pdftex.def)             Requested size: 301.11201pt x 141.22153pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[20
+
+ <./borrador.png>]
+<abee.png, id=711, 910.90312pt x 563.85657pt>
+File: abee.png Graphic file (type png)
+<use abee.png>
+Package pdftex.def Info: abee.png  used on input line 397.
+(pdftex.def)             Requested size: 318.82086pt x 197.35275pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[21
+
+ <./abee.png (PNG copy)>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[22
+
+]
+<4Jun23_1.png, id=765, 371.13657pt x 304.13625pt>
+File: 4Jun23_1.png Graphic file (type png)
+<use 4Jun23_1.png>
+Package pdftex.def Info: 4Jun23_1.png  used on input line 439.
+(pdftex.def)             Requested size: 148.45198pt x 121.65233pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
 [23
 
- <./6Dic_2.png>]
-<6Dic_3.png, id=777, 1121.6304pt x 599.841pt>
-File: 6Dic_3.png Graphic file (type png)
-<use 6Dic_3.png>
-Package pdftex.def Info: 6Dic_3.png  used on input line 378.
-(pdftex.def)             Requested size: 336.49171pt x 179.95367pt.
-
+ <./4Jun23_1.png>]
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [24
 
- <./6Dic_3.png>]
-<6Dic_4.png, id=805, 1134.639pt x 624.4128pt>
-File: 6Dic_4.png Graphic file (type png)
-<use 6Dic_4.png>
-Package pdftex.def Info: 6Dic_4.png  used on input line 384.
-(pdftex.def)             Requested size: 340.39433pt x 187.32527pt.
+]
+<2Dic_4.png, id=822, 1105.731pt x 400.3758pt>
+File: 2Dic_4.png Graphic file (type png)
+<use 2Dic_4.png>
+Package pdftex.def Info: 2Dic_4.png  used on input line 464.
+(pdftex.def)             Requested size: 331.72186pt x 120.11365pt.
 
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
@@ -1435,21 +1413,592 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 
 [25
 
- <./6Dic_4.png>]
+ <./2Dic_4.png>]
+<6Dic_0.png, id=851, 1134.639pt x 605.6226pt>
+File: 6Dic_0.png Graphic file (type png)
+<use 6Dic_0.png>
+Package pdftex.def Info: 6Dic_0.png  used on input line 470.
+(pdftex.def)             Requested size: 340.39433pt x 181.68817pt.
+
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [26
 
-]
+ <./6Dic_0.png>]
+<6Dic_1.png, id=880, 1123.0758pt x 624.4128pt>
+File: 6Dic_1.png Graphic file (type png)
+<use 6Dic_1.png>
+Package pdftex.def Info: 6Dic_1.png  used on input line 476.
+(pdftex.def)             Requested size: 336.92534pt x 187.32527pt.
+
 Overfull \hbox (17.73851pt too wide) has occurred while \output is active
  [][]  \OT1/cmss/m/n/6 ([])  
  []
 
 [27
 
+ <./6Dic_1.png>]
+<6Dic_2.png, id=908, 1149.093pt x 592.614pt>
+File: 6Dic_2.png Graphic file (type png)
+<use 6Dic_2.png>
+Package pdftex.def Info: 6Dic_2.png  used on input line 482.
+(pdftex.def)             Requested size: 344.73056pt x 177.78557pt.
+
+Overfull \hbox (2.43526pt too wide) in paragraph at lines 482--482
+ [] 
+ []
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[28
+
+ <./6Dic_2.png>]
+<6Dic_3.png, id=936, 1121.6304pt x 599.841pt>
+File: 6Dic_3.png Graphic file (type png)
+<use 6Dic_3.png>
+Package pdftex.def Info: 6Dic_3.png  used on input line 488.
+(pdftex.def)             Requested size: 336.49171pt x 179.95367pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[29
+
+ <./6Dic_3.png>]
+<6Dic_4.png, id=964, 1134.639pt x 624.4128pt>
+File: 6Dic_4.png Graphic file (type png)
+<use 6Dic_4.png>
+Package pdftex.def Info: 6Dic_4.png  used on input line 494.
+(pdftex.def)             Requested size: 340.39433pt x 187.32527pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[30
+
+ <./6Dic_4.png>]
+<2Dic_1.png, id=993, 561.5379pt x 294.8616pt>
+File: 2Dic_1.png Graphic file (type png)
+<use 2Dic_1.png>
+Package pdftex.def Info: 2Dic_1.png  used on input line 508.
+(pdftex.def)             Requested size: 168.46266pt x 88.45915pt.
+<2Dic_2.png, id=994, 569.4876pt x 294.8616pt>
+File: 2Dic_2.png Graphic file (type png)
+<use 2Dic_2.png>
+Package pdftex.def Info: 2Dic_2.png  used on input line 508.
+(pdftex.def)             Requested size: 170.8476pt x 88.45915pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[31
+
+ <./2Dic_1.png> <./2Dic_2.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[32
+
 ]
+Overfull \hbox (75.38869pt too wide) detected at line 552
+\OT1/cmss/m/n/10.95 (\OMS/cmsy/m/n/10.95 L[]\OT1/cmss/m/n/10.95 )[] = \OMS/cmsy
+/m/n/10.95 L[] \OT1/cmss/m/n/10.95 = (\OMS/cmsy/m/n/10.95 ^^@\OT1/cmss/m/n/10.9
+5 1)[] \OMS/cmsy/m/n/10.95 ^^A [] [][] \OML/cmm/m/it/10.95 :
+ []
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[33
+
+]
+<symm.png, id=1093, 974.13937pt x 590.95781pt>
+File: symm.png Graphic file (type png)
+<use symm.png>
+Package pdftex.def Info: symm.png  used on input line 561.
+(pdftex.def)             Requested size: 292.24406pt x 177.2887pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[34
+
+ <./symm.png (PNG copy)>]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 581.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/b/it' undefined
+(Font)              using `OT1/cmss/b/n' instead on input line 581.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 581.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 581.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/it' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 581.
+
+<sim_antisim.png, id=1132, 542.9886pt x 186.4566pt>
+File: sim_antisim.png Graphic file (type png)
+<use sim_antisim.png>
+Package pdftex.def Info: sim_antisim.png  used on input line 581.
+(pdftex.def)             Requested size: 217.19159pt x 74.58131pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[35
+
+ <./sim_antisim.png>]
+<simetria1.png, id=1172, 361.35pt x 74.9199pt>
+File: simetria1.png Graphic file (type png)
+<use simetria1.png>
+Package pdftex.def Info: simetria1.png  used on input line 602.
+(pdftex.def)             Requested size: 180.67456pt x 37.45985pt.
+<simetria2.png, id=1173, 347.8596pt x 61.1886pt>
+File: simetria2.png Graphic file (type png)
+<use simetria2.png>
+Package pdftex.def Info: simetria2.png  used on input line 602.
+(pdftex.def)             Requested size: 173.92937pt x 30.59421pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[36
+
+ <./simetria1.png> <./simetria2.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[37
+
+]
+<oscil1.png, id=1230, 319.6743pt x 185.0112pt>
+File: oscil1.png Graphic file (type png)
+<use oscil1.png>
+Package pdftex.def Info: oscil1.png  used on input line 621.
+(pdftex.def)             Requested size: 191.80605pt x 111.00757pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[38
+
+ <./oscil1.png>]
+<oscil2.png, id=1258, 301.125pt x 191.7564pt>
+File: oscil2.png Graphic file (type png)
+<use oscil2.png>
+Package pdftex.def Info: oscil2.png  used on input line 627.
+(pdftex.def)             Requested size: 271.00998pt x 172.57913pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[39
+
+ <./oscil2.png>]
+<oscil3.png, id=1286, 299.9205pt x 191.0337pt>
+File: oscil3.png Graphic file (type png)
+<use oscil3.png>
+Package pdftex.def Info: oscil3.png  used on input line 633.
+(pdftex.def)             Requested size: 269.92593pt x 171.92873pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[40
+
+ <./oscil3.png>]
+<hip_0,1.png, id=1314, 615.0177pt x 240.9pt>
+File: hip_0,1.png Graphic file (type png)
+<use hip_0,1.png>
+Package pdftex.def Info: hip_0,1.png  used on input line 641.
+(pdftex.def)             Requested size: 307.50809pt x 120.44969pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[41
+
+ <./hip_0,1.png>]
+<hip_2,3.png, id=1343, 618.6312pt x 240.9pt>
+File: hip_2,3.png Graphic file (type png)
+<use hip_2,3.png>
+Package pdftex.def Info: hip_2,3.png  used on input line 649.
+(pdftex.def)             Requested size: 309.31483pt x 120.44969pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[42
+
+ <./hip_2,3.png>]
+<hip_4,5.png, id=1371, 612.8496pt x 240.9pt>
+File: hip_4,5.png Graphic file (type png)
+<use hip_4,5.png>
+Package pdftex.def Info: hip_4,5.png  used on input line 656.
+(pdftex.def)             Requested size: 306.42404pt x 120.44969pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[43
+
+ <./hip_4,5.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[44
+
+]
+<tiempo_freq.png, id=1438, 238.9728pt x 90.3375pt>
+File: tiempo_freq.png Graphic file (type png)
+<use tiempo_freq.png>
+Package pdftex.def Info: tiempo_freq.png  used on input line 685.
+(pdftex.def)             Requested size: 143.38477pt x 54.2029pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[45
+
+ <./tiempo_freq.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[46
+
+]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[47
+
+]
+<desfase_ejemplo.png, id=1532, 773.289pt x 377.2494pt>
+File: desfase_ejemplo.png Graphic file (type png)
+<use desfase_ejemplo.png>
+Package pdftex.def Info: desfase_ejemplo.png  used on input line 738.
+(pdftex.def)             Requested size: 309.31012pt x 150.89708pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[48
+
+ <./desfase_ejemplo.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[49
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 780.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 780.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 780.
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[50
+
+]
+<muestreo_coseno.png, id=1626, 584.6643pt x 310.0383pt>
+File: muestreo_coseno.png Graphic file (type png)
+<use muestreo_coseno.png>
+Package pdftex.def Info: muestreo_coseno.png  used on input line 786.
+(pdftex.def)             Requested size: 233.86157pt x 124.0131pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[51
+
+ <./muestreo_coseno.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[52
+
+]
+<20Mar23_1.png, id=1693, 293.6571pt x 144.54pt>
+File: 20Mar23_1.png Graphic file (type png)
+<use 20Mar23_1.png>
+Package pdftex.def Info: 20Mar23_1.png  used on input line 810.
+(pdftex.def)             Requested size: 293.65639pt x 144.53963pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[53
+
+ <./20Mar23_1.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{def:\040taus}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.822 \end{frame}
+                 
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[54
+
+]
+
+LaTeX Warning: Reference `eq5: 19Marzo' on page 55 undefined on input line 851.
+
+
+
+LaTeX Warning: Reference `eq6: 19Marzo' on page 55 undefined on input line 851.
+
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[55
+
+]
+
+LaTeX Warning: Reference `def: final de sigmas' on page 56 undefined on input l
+ine 892.
+
+
+Overfull \hbox (52.9989pt too wide) detected at line 892
+[][][]\OT1/cmss/m/n/10.95 ^^E[](\OT1/mathkerncmss/m/sl/10.95 x\OT1/cmss/m/n/10.
+95 ) = []\OT1/mathkerncmss/m/sl/10.95 c[] \OT1/cmss/m/n/10.95 + []\OT1/mathkern
+cmss/m/sl/10.95 s[]
+ []
+
+
+Overfull \hbox (6.56448pt too wide) detected at line 892
+[][][]\OML/cmm/m/it/10.95 ^^[[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.9
+5 x\OML/cmm/m/it/10.95 ; !\OT1/cmss/m/n/10.95 ) = [][] \OML/cmm/m/it/10.95 ;
+ []
+
+
+LaTeX Warning: Reference `eq5: 19Marzo' on page 56 undefined on input line 892.
+
+
+
+LaTeX Warning: Reference `eq6: 19Marzo' on page 56 undefined on input line 892.
+
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[56
+
+]
+
+LaTeX Warning: Reference `ec: 4: 23ap' on page 57 undefined on input line 908.
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[57
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 936.
+
+
+LaTeX Warning: Reference `eq6: 23Ap' on page 58 undefined on input line 936.
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[58
+
+]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[59
+
+]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[60
+
+]
+
+LaTeX Warning: Reference `eq0: 23Ap' on page 61 undefined on input line 985.
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[61
+
+]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[62
+
+]
+<simetria_espectro.png, id=2039, 187.1793pt x 103.3461pt>
+File: simetria_espectro.png Graphic file (type png)
+<use simetria_espectro.png>
+Package pdftex.def Info: simetria_espectro.png  used on input line 1013.
+(pdftex.def)             Requested size: 187.17885pt x 103.34584pt.
+<periodicidad_espectro.png, id=2040, 361.35pt x 114.6684pt>
+File: periodicidad_espectro.png Graphic file (type png)
+<use periodicidad_espectro.png>
+Package pdftex.def Info: periodicidad_espectro.png  used on input line 1013.
+(pdftex.def)             Requested size: 289.0804pt x 91.73483pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[63
+
+ <./simetria_espectro.png> <./periodicidad_espectro.png>]
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[64
+
+]
+
+LaTeX Warning: Reference `eq: estudiando espectro' on page 65 undefined on inpu
+t line 1051.
+
+
+Overfull \hbox (44.69221pt too wide) detected at line 1051
+[][][] [] [] \OT1/cmss/m/n/10.95 = [][]
+ []
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[65
+
+]
+
+LaTeX Warning: Reference `espacios Wi' on page 66 undefined on input line 1074.
+
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[66
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{eq:\040limite
+\040por\040cero\040como\040angulo}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1074 \end{frame}
+                  ]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 1099.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/b/it' instead on input line 1099.
+
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[67
+
+]
+<esp_ang.png, id=2221, 235.3593pt x 108.405pt>
+File: esp_ang.png Graphic file (type png)
+<use esp_ang.png>
+Package pdftex.def Info: esp_ang.png  used on input line 1106.
+(pdftex.def)             Requested size: 329.50075pt x 151.76595pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[68
+
+ <./esp_ang.png>]
+<espectro_alternado.png, id=2248, 332.442pt x 347.3778pt>
+File: espectro_alternado.png Graphic file (type png)
+<use espectro_alternado.png>
+Package pdftex.def Info: espectro_alternado.png  used on input line 1112.
+(pdftex.def)             Requested size: 232.70781pt x 243.1628pt.
+
+Overfull \hbox (17.73851pt too wide) has occurred while \output is active
+ [][]  \OT1/cmss/m/n/6 ([])  
+ []
+
+[69
+
+ <./espectro_alternado.png>]
 \tf@nav=\write6
 \openout6 = `presentacion_Jacques.nav'.
 
@@ -1463,34 +2012,77 @@ Overfull \hbox (17.73851pt too wide) has occurred while \output is active
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `presentacion_Jacques.out' has not changed.
-(rerunfilecheck)             Checksum: C6C5B5FCAEB7ECEA5D29B5B062680BCF;517.
+(rerunfilecheck)             Checksum: 4B1157894AB459F75DB3F37972F72C4E;517.
  ) 
 Here is how much of TeX's memory you used:
- 33904 strings out of 476025
- 706554 string characters out of 5796533
+ 34457 strings out of 476025
+ 718173 string characters out of 5796533
  1865388 words of memory out of 5000000
- 53659 multiletter control sequences out of 15000+600000
- 531253 words of font info for 99 fonts, out of 8000000 for 9000
+ 54099 multiletter control sequences out of 15000+600000
+ 525694 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,422b,653s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmssi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-si17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on presentacion_Jacques.pdf (27 pages, 2548676 bytes).
+ 128i,21n,122p,422b,677s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+pdfTeX warning (dest): name{espacios\040Wi} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{eq:\040estudiando\040espectro} has been referenced 
+but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{eq0:\04023Ap} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{eq6:\04023Ap} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{ec:\0404:\04023ap} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{def:\040final\040de\040sigmas} has been referenced 
+but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{eq6:\04019Marzo} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{eq5:\04019Marzo} has been referenced but does not e
+xist, replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb>
+Output written on presentacion_Jacques.pdf (69 pages, 5659682 bytes).
 PDF statistics:
- 968 PDF objects out of 1000 (max. 8388607)
- 807 compressed objects within 9 object streams
- 58 named destinations out of 1000 (max. 500000)
- 472 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2391 PDF objects out of 2487 (max. 8388607)
+ 2035 compressed objects within 21 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 1153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
