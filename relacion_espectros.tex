@@ -4,7 +4,7 @@ Después de todo lo expuesto en las secciones anteriores, tenemos
 ya dos alternativas para realizar un análisis
 espectral de una señal $x \in \IR^{n}$.
 
-Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$, $x \in \IR^{n}$.
+Sean $n \geq 2$, $M := \lceil \frac{n}{2} \rceil$ y $x \in \IR^{n}$.
 \begin{itemize}
 	\item \textbf{(Espectro-0: basado en la TDF)} 
 	Usando la transformada discreta de Fourier
@@ -210,7 +210,9 @@ se tiene que
 \]
 \end{cor}
 
-Así, \textbf{el espectro basado en espacios monofrecuenciales
+Así, a excepción de los valores de $\Sigma_{x}$
+en los puntos extremos $0$ y $n/2$,
+\textbf{el espectro basado en espacios monofrecuenciales
 es una extensión de la definición del espectro 
 basado en la transformada discreta de Fourier}.
 Como ya recordamos al inicio, la
@@ -222,32 +224,111 @@ de $x$ a partir de sinusoides, sino también uno de síntesis
 (c.f. nota \ref{nota: ya?}), se limita a considerar las frecuencias 
 en $Dom_{TDF, n}$. \\
 
-Observe que,
-para toda $n$, el conjunto de frecuencias enteras 
-consideradas por la TDF, $Dom_{TDF, n}$, está
-contenido en $[0, n/2]$, luego, 
-según el corolario 
-\ref{cor: relacion espectros},
-basta calcular 
-a $\Sigma_{x}$ en $[0, n/2]$
-para tener ambos análisis espectrales.
-
-
 \begin{nota}
-\label{nota: la mejor frecuencia}
-Fijados $n \geq 2$
-y $x \in \IR^{n}$, \textbf{entre más cercano a $1$ sea 
-el coeficiente 
-$\sigma_{n}(x, \omega)$, mejor es usar un sinusoide
-de frecuencia $\omega$ para ajustar la gráfica de $x$}.
-Esto porque, recuerde, entre más cercano a uno sea uno de
-esos coeficientes, más cercana estará la señal $x$ 
-al espacio monofrecuencial $P_{n, \omega}$, luego, más
-cercana está $x$
-a tener
-la propiedad de ser una discretización de un sinusoide
-de la respectiva frecuencia $\omega$.
+\label{nota: muestreo dom frecuencia}
+Para poder escribir programas
+para calcular el espectro $\Sigma_{x}$ de una señal $x$,
+se debe de usar como dominio de esta
+un conjunto discreto de puntos.
+Para los espectros que calcularemos de ahora en 
+adelante, adoptamos la convención de 
+usar como dominio 
+de la función
+$\Sigma_{x}$ de una señal $x \in \IR^{n}$-
+que en teoría es el intervalo $[0, n/2]$-
+al conjunto
+\begin{equation}
+\label{eq: malla frecuencias}
+\left\{ \frac{a}{100} : \hspace{0.2cm}
+0 \leq a \leq 
+\left\lfloor\frac{100n}{2}\right\rfloor,
+\right\}
+\end{equation}
+
+\noindent
+es decir, se toman $100$ muestras por
+cada unidad del intervalo 
+$\left[ 0, \frac{n}{2}\right]$.
+
+Así, cuando hablemos de ``frecuencia principal 1''
+de una señal, en realidad no estamos hablando con seguridad
+del punto en el que $\Sigma_{x}$ alcanza su máximo, sino el punto
+de la malla de frecuencias \eqref{eq: malla frecuencias} en el que
+computacionalmente
+se calculó el valor máximo para $\Sigma_{x}$.
 \end{nota}
+
+\begin{ejemplo}
+Sea la señal 
+\[
+x = (1, 3, 5, 7, 9, 19, 3.4, 8) \in \IR^{8}.
+\]
+En este ejemplo, $n =8$.
+A continuación graficamos los dos espectros
+$\Tau_{x}$ y $\Sigma_{x}$ de $x$.
+\begin{figure}[H]
+	\sidecaption{
+	De ahora en adelante, siempre que grafiquemos 
+	espectros de señales finitas, usaremos los
+	colores y notaciones usados para esta figura.
+	\label{fig: 3 jun 23 1}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{3Jun23_1} 
+\end{figure}	
+
+Como se esperaba (según lo establecido en 
+el corolario \ref{cor: relacion espectros}), 
+las gráficas de $\Sigma_{x}$ y $\Tau_{x}$ coinciden
+en el interior del intervalo de frecuencias $[0,4]$, 
+pero de hecho no coinciden en los puntos extremos.
+
+Según la gráfica, 
+\[
+FP0_{x} = 0 \hspace{0.2cm} \textit{ y }
+\hspace{0.2cm} FP1_{x} = 0.45.
+\]
+
+\begin{itemize}
+	\item Según el estudio basado en el espectro de Fourier 
+	$T_{x}$, la frecuencia entera en $Dom_{TDF, 8}$ que es
+	mejor para modelar la gráfica de $x$ es $0$, luego, 
+	de este estudio se concluye que lo mehor es modelar
+	a la gráfica de $x$ con una recta horizontal.
+	
+	\item Según la nota 
+	\ref{nota: la mejor frecuencia} y el estudio basado
+	en el espectro $\Sigma_{x}$,
+	usando una frecuencia de $0.45$ se obtiene el sinusoide que mejor
+	modela la gráfica de $x$.
+\end{itemize}
+A continuación graficamos
+\begin{itemize}
+	\item la parte de la descomposición de $x$ en base
+	a la TDF correspondiente a la frecuencia $0 = FP0(x)$, y
+	\item el sinusoide de frecuencia $0.45 = FP1(x)$, con 
+	amplitud y desfase los dados en el teorema 
+	\ref{teo: amelie1}.
+\end{itemize}
+
+\begin{figure}[H]
+	\sidecaption{
+	Gráfica de $x$ comparada con las
+	de los sinusoides cuyas frecuencias
+	fueron obtenidas al realizar un análisis
+	espectral de $x$ con $T_{x}$ y $\Sigma_{x}$.
+	Observe que el sinusoide naranja, el obtenido en base
+	al espectro $\Sigma_{x}$, parece ajustar mucho mejor la 
+	gráfica de $x$ que el sinusoide morado, el obtenido 
+	como resultado de hacer un análisis con la 
+	transformada discreta de Fourier.
+	\label{fig: 3 jun 23 2}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{3Jun23_2} 
+\end{figure}	
+\final
+\end{ejemplo}
 
 \begin{nota}
 \label{nota: proyeciones monof TDF}
@@ -314,9 +395,7 @@ establecido en la nota
 
 \begin{figure}[H]
 \centering
-	\sidecaption{De ahora en adelante, siempre que
-	grafiquemos espectros, usaremos los colores y notaciones
-	de esta figura. \label{fig: ejemplo_comparacion}}
+	\sidecaption{\label{fig: ejemplo_comparacion}}
     \includegraphics[scale = 1.4]{./estudios_espectrales/ejemplo_comparacion_1}
 \end{figure}
 

@@ -28,6 +28,7 @@ Puesto que por definición se realizó un proceso de ortonormalización
 para obtener a $\cali{L}^{n}$, este primer punto se cumple trivialmente.
 
 \begin{obs}
+\label{obs: norma x bld}
 Sean $n \geq 2$, $\cali{L}^{n}$ la BLD definida en 
 \ref{def: base de Legendre discreta}.
 Para toda $x \in \IR^{n}$ se tiene que 
@@ -327,22 +328,19 @@ $\langle x , \cali{L}^{n,1} \rangle$ y
 $\langle x , \cali{L}^{n,2} \rangle$,
 son pequeños, entonces, a pesar de que
 $x$ no pertenezca a $W_{n,2}$ (o sea, no sea cuadrática),
-será cercana a ser cuadrática.
+será cercana a ser cuadrática. \\
 
-\begin{ejemplo}
-\label{subs: ejm 3}
+\[
+------- \diamond \cdot \diamond \cdot \diamond -------
+\]
 
-En este ejemplo 
-damos dos propuestas naturales,
+Tenemos
+dos propuestas naturales,
 usando los espacios de polinomios discretos $W_{n,k}$,
 para poder dar no sólo respuestas del tipo
 ``sí/no'' a preguntas sobre la morfología de una señal, sino,
 de forma más general, del tipo ``qué tanto sí'' o
 ``qué tanto no''.
-
-
-
-%Inicio ejemplo 3--------------------------------------------
 
 Sea $x \in \IR^{n}$. Digamos que 
 \[
@@ -424,10 +422,147 @@ al plano $W_{n,1}$ por lo general sí es afectada por multiplicaciones escalares
 
 \textbf{Tomamos pues al coseno del ángulo que forma $x$ con su proyección
 al plano $W_{n,1}$ como una medida de cercanía de $x$ a la propiedad de 
-ser afín.}
+ser afín.} 
+\TODO{generaliza lo anterior para cualquier grado $k$.}
+Es decir, no usamos la distancia euclidea de 
+$x$ al espacio de señales $W_{n,k}$ para dar una medida
+de qué tanto tiene $x$ la propiedad de ``ser un polinomio
+discreto de grado a lo más $k$'', sino que 
+usamos la distancia coseno de $x$ a $W_{n,k}$
+(c.f. apéndice \ref{cosine similarity}). \\
+
+Es muy fácil obtener fórmulas para el seno, coseno y tangente
+del ángulo que una señal $x \in \IR^{n}-\{ 0 \}$ forma con
+el espacio
+$W_{n,k}$, usando sólamente los $n$ coeficientes
+\[
+a_{n} := \langle x, \cali{L}^{n,k} \rangle
+\]
+de $x$ respecto a la BLD $\cali{L}^{n}$.
+
+\begin{figure}[H]
+	\sidecaption{
+	Lo que haremos será simplemente
+	expresar a las tres cantidades $||x||$,
+	$|| \Pi_{W_{n,k}}(x) ||$ y  
+	$|| \Pi_{W_{n,k}^{\perp}}(x) ||$ en términos
+	de los coeficientes $a_{k}$.
+	\label{fig: 4Jun23 1}
+	}
+	\centering
+	\includegraphics[scale = 1.4]{4Jun23_1} 
+\end{figure}	
+Según la observación \ref{obs: norma x bld}, 
+\[
+||x||^{2} = \suma{i=0}{n-1}{a_{i}^{2}}
+\]
+y, según la proposición \ref{prop: proyecciones a espacios Wn,k}, 
+\[
+||\Pi_{W_{n, k}}(x)||^{2} = \suma{i=0}{k}{a_{i}^{2}}.
+\]
+Note además que, según el corolario \ref{cor: x como suma de proyecciones},
+\[
+x - \Pi_{W_{n,k}}(x) = \Pi_{W_{n,k}^{\perp}}(x),
+\]
+y, como
+\[
+\{ \cali{L}^{n, i}: \hspace{0.2cm} k+1 \leq i \leq n-1 \}
+\]
+es una base ortonormal de
+$W_{n, k}^{\perp}$, se tiene que 
+\[
+||x - \Pi_{W_{n,k}}(x)||^{2} = 
+||\Pi_{W_{n,k}^{\perp}}(x)||^{2} = 
+\suma{i=k+1}{n-1}{a_{i}^{2}}.
+\]
+
+Concluimos así que
+\begin{equation}
+\label{eq: coseno y seno en terminos de coeficientes de bld}
+cos(\measuredangle(x, W_{n, k}))
+= \sqrt{
+\frac{
+\suma{i=0}{k}{a_{i}^{2}}
+}{
+\suma{i=0}{n-1}{a_{i}^{2}} },
+}
+\hspace{0.2cm}
+sen(\measuredangle(x, W_{n, k}))
+= \sqrt{
+\frac{
+\suma{i=k+1}{n-1}{a_{i}^{2}}
+}{
+\suma{i=0}{n-1}{a_{i}^{2}}}
+}
+\end{equation}
+y, si $x \not\in W_{n, k}^{\perp}$, entonces
+también puede calcularse la tangente del ángulo 
+$\measuredangle(x, W_{n, k})$, y es
+\[
+tan(\measuredangle(x, W_{n, k}))
+= \sqrt{
+\frac{
+\suma{i=k+1}{n-1}{a_{i}^{2}}
+}{
+\suma{i=0}{k}{a_{i}^{2}}}.
+}
+\]
+Puesto que $x$ es cercano a pertenecer al espacio
+$W_{n,k}$ si y sólo si 
+$cos(\measuredangle(x, W_{n, k}))$ es aproximadamente uno,
+podemos usar la expresión 
+\eqref{eq: coseno y seno en terminos de coeficientes de bld} para
+tal coseno para establecer los siguientes criterios.
+
+\begin{prop}
+Sean $n \geq 2$, $x \in \IR^{n}$, $0 \leq k \leq n-1$.
+Sean $a_{i} := \langle x, \cali{L}^{n,i} \rangle$ los coeficientes
+de $x$ respecto a la base de Legendre discreta $\cali{L}^{n}$.
+\begin{itemize}
+	\item La señal $x$ es cercana a ser constante si
+	$a_{0}^{2} \sim ||x||^{2}$
+	\item La señal $x$ es cercana a ser afín si
+	$a_{0}^{2} + a_{1}^{2} \sim ||x||^{2}$
+	\item  La señal $x$ es cercana a ser cuadrática si
+	$a_{0}^{2} + a_{1}^{2} + a_{2}^{2} \sim ||x||^{2}$
+\end{itemize}
+En general,
+\begin{itemize}
+	\item La señal $x$ es cercana a ser un polinomio $n-$dimensional
+	de grado $k$ si
+	$\suma{i=0}{k}{a_{i}^{2}} \sim ||x||^{2}$
+\end{itemize}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+En efecto, $x$ es cercana a ser un polinomio $n-$dimensional
+de grado $k$ si y sólo si $x$ es cercana a pertenecer al espacio
+$W_{n,k}$ (pues este es exactamente el subconjunto de $\IR^{n}$
+que consta de tales polinomios discretos). Esto ocurre si y sólo si
+$\measuredangle(x, W_{n,k})$, el ángulo que $x$ forma con su proyección
+a $W_{n,k}$ (que es, por definición, el vector de este espacio
+más cercano a $x$), es cercano a cero. Esto último equivale a que
+$cos(\measuredangle(x, W_{n,k}))$ sea cercano a $1$. Usando la fórmula 
+\eqref{eq: coseno y seno en terminos de coeficientes de bld}
+para tal coseno, tenemos que esta proposición equivale a que
+$\suma{i=0}{k}{a_{i}^{1}}$ sea cercana a 
+$\suma{i=0}{n-1}{a_{i}^{1}} = ||x||^{2}$.
+\QEDB
+\vspace{0.2cm}
+
+Según esta última proposición, una señal $x$ 
+(que, gracias a la proposición
+\ref{prop: el operador de discretizacion puntual es un isomorfismo (...)},
+sabemos es un polinomio de dimensión $n$)
+es cercano a tener grado $k$ si la energía
+$||x||^{2}$ de la señal se concentra en los primeros
+$k$ coeficientes $a_{i}$ de $x$. 
 
 
-Para dar un ejemplo concreto, fijemos $n=3$.
+\begin{ejemplo}
+\label{subs: ejm 3}
+Para dar un ejemplo concreto 
+con las ideas explicadas antes, fijemos $n=3$.
 Como se calculó en \eqref{eq2: 1Dic},
 el subespacio $W_{3,1} \leq \IR^{3}$ de señales afines es el plano
 de ecuación cartesiana
@@ -460,7 +595,7 @@ definida como
 \end{equation}
 
 
-
+\noindent
 las tres regiones ajenas en las
 que $W_{3,1}$ divide al espacio
 $\IR^{3}$ son 
@@ -491,37 +626,22 @@ región a la que pertenece $-\cali{L}^{3,2}$.
 	\includegraphics[scale=0.3]{2Dic_4} 
 \end{figure}
 
-Es fácil obtener una expresión para el coseno del ángulo
-$\alpha$ en términos de los coeficientes de $x$ respecto a $\cali{L}^{3}$:
-
-\begin{figure}[H]
-	\sidecaption{Encontrando una fórmula explícita del 
-	ángulo que forma $x$ con $\Pi_{W_{3,1}}(x)$.
-	\label{fig: angulo x y proy} 
-	}
-	\centering
-	\includegraphics[scale=0.7]{2Dic_3}
-\end{figure}
+Usando la expresión \eqref{eq: coseno y seno en terminos de coeficientes de bld}
+para $n =3$, obtenemos que
 
 
-De las relaciones de la figura 
-\ref{fig: angulo x y proy} 
-obtenemos una igualdad que relaciona el ángulo 
-$\alpha$ que forma una señal $x \in \IR^{3}$ 
-con su proyección al espacio $W_{3,1}$
-con los coeficientes $a_{i}$
-de $x$ respecto a $\cali{L}^{3}$:
 \begin{equation}
 \label{eq0: 3Dic}
-cos(\alpha)= \sqrt{\frac{a_{0}^{2}+a_{1}^{2}}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}}}.
+cos(\measuredangle(x, W_{3,1}))= 
+\sqrt{\frac{a_{0}^{2}+a_{1}^{2}}{a_{0}^{2}+a_{1}^{2}+a_{2}^{2}}}.
 \end{equation}
 
-Para un ejemplo aún más concreto, hagamos 
+\noindent
+Fijemos
 \begin{equation}
 \label{eq1: 19Sept}
 a_{0}= \sqrt{3}, \hspace{0.2cm} a_{1}= \sqrt{2},
 \end{equation}
-
 
 \noindent
 es decir, consideremos a todos los vectores de $\IR^{3}$
@@ -533,7 +653,7 @@ el vector
 \end{equation}
 Es obvio que el conjunto de los puntos
 del espacio cuya proyección a
-$W_{3,1}$ es \eqref{eq1: 6Dic} de hecho la recta
+$W_{3,1}$ es el vector \eqref{eq1: 6Dic} de hecho la recta
 con ecuación vectorial
 \begin{equation}
 \label{eq0: 6Dic}
@@ -549,9 +669,9 @@ En general, si $C:= || \Pi_{W_{3,1}}(x) || ^{2}$,
 entonces $a_{2}^{2}= C \cdot4 tg^{2}(\alpha).$
 }, obtenemos 
 \[
-|a_{2}|= \sqrt{5 tg^{2}(\alpha)};
+|a_{2}|= \sqrt{5 tg^{2}(\alpha)}.
 \]
-el signo del coeficiente $a_{2}$ (que corresponde a la dirección
+El signo del coeficiente $a_{2}$ (que corresponde a la dirección
 de $\cali{L}^{3,2}$ en la descomposición de $x$) se determina por
 la región en la que se encuentre $x$;
 
@@ -570,7 +690,7 @@ mayoría de los casos, han sido redondeados.
 
 \begin{figure}[H]
 	\sidecaption{Aquí se considera al vector 
-		$x$ que forma un ángulo $\alpha=\pi/3$
+		$x$ que forma un ángulo de $\pi/3$ radianes
 		con el plano $W_{3,1}$ y que se ubica en la región I.
 	\label{fig: angulo x y proy} 
 	}
@@ -582,7 +702,7 @@ mayoría de los casos, han sido redondeados.
 
 \begin{figure}[H]
 	\sidecaption{Aquí se considera al vector 
-		$x$ que forma un ángulo $\alpha=\pi/3$
+		$x$ que forma un ángulo de $\pi/4$ radianes
 		con el plano $W_{3,1}$ y que se ubica en la región I.
 	\label{fig: angulo x y proy} 
 	}
@@ -592,8 +712,11 @@ mayoría de los casos, han sido redondeados.
 
 \begin{figure}[H]
 	\sidecaption{Aquí se considera al vector 
-		$x$ que forma un ángulo $\alpha=0$
+		$x$ que forma un ángulo de $0 radianes$
 		con el plano $W_{3,1}$ y que se ubica en la región II.
+		Observe que tal $x$ de hecho se ubica en
+		$W_{3,1}$, hecho que se corresponde con que su gráfica
+		sea la discretización puntual de una recta.
 	\label{fig: angulo x y proy} 
 	}
 	\centering
@@ -602,7 +725,7 @@ mayoría de los casos, han sido redondeados.
 
 \begin{figure}[H]
 	\sidecaption{Aquí se considera al vector 
-		$x$ que forma un ángulo $\alpha=\pi/3$
+		$x$ que forma un ángulo de $\pi/3$ radianes
 		con el plano $W_{3,1}$ y que se ubica en la región III.
 	\label{fig: angulo x y proy} 
 	}
@@ -612,7 +735,7 @@ mayoría de los casos, han sido redondeados.
 
 \begin{figure}[H]
 	\sidecaption{Aquí se considera al vector 
-		$x$ que forma un ángulo $\alpha=6\pi/17$
+		$x$ que forma un ángulo de $6\pi/17$ radianes
 		con el plano $W_{3,1}$ y que se ubica en la región III.
 	\label{fig: angulo x y proy} 
 	}

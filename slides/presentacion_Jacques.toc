@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Primera parte}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation and goals}{4}{0}{1}
+\beamer@sectionintoc {2}{Some properties of the subspaces $W_{n,k}$}{6}{0}{2}

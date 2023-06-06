@@ -74,8 +74,7 @@ independientes (término abreviado como ``l.i.'') como generadores
 de todo el espacio. La importancia de 
 estas es obvia, ya que una base permite representar
 de forma única a cualquier elemento $v \in V$ por medio
-de una colección finita de escalares
-(c.f. \TODO{busca referencia.}). 
+de una colección finita de escalares.
 Es por eso que, en ocasiones,
 usamos el nombre ``sistema de representación''
 para referirnos a
@@ -86,9 +85,6 @@ en el que se enlistan los elementos es el orden en el que deben usarse.}
 una base $\{ v_{k} : \hspace{0.2cm} k \in I \}$
 del espacio V.
 
-Se sabe que todo $F-$espacio vectorial tiene
-base (c.f. \TODO{ref}) y que cualesquiera dos bases del espacio
-tienen la misma cardinalidad (c.f. \TODO{ref}). \TODO{ver si dejo eso.} 
 A lo largo de este trabajo
 nos limitaremos a usar
 \begin{itemize}
@@ -96,7 +92,9 @@ nos limitaremos a usar
 \item los $\IC-$ espacios vectoriales $\IC^{n}$, con $n \geq 1$, 
 \end{itemize}
 todos estos de dimensión finita, por lo tanto,
-\TODO{aquí di lo de espacios de Hilbert.}
+todos ellos espacios de Hilbert 
+(c.f. apéndice 
+\ref{sec: def basicas Hilbert}).
 
 El tener además en $V$ definido un \textbf{producto punto}
 (c.f. apéndice \ref{sec: def basicas Hilbert})
@@ -560,8 +558,8 @@ y en el que consiste en primero discretizar polinomios
 para obtener vectores de $\IR^{n}$ que pueden ortonormalizarse
 en este espacio. Observe que sólo usando este segundo camino 
 obtenemos con seguridad un subconjunto ortonormal de $\IR^{n}$,
-pero no se puede asegurar lo mismo usando el primer camino.
-\TODO{Aquí referencia.}
+pero no se puede asegurar lo mismo usando el primer camino
+(c.f. \cite{stockel}).
 Puesto que lo
 que interesa es tener condiciones de ortogonalidad
 en el espacio $\IR^{n}$, es obvio que 
@@ -579,7 +577,9 @@ En base a estos objetos lograremos definir
 una base ortonormal de $\IR^{n}$ que cumple satisfactoriamente
 los requisitos explicados en la lista de deseos
 \ref{lista de objetivos}, y a la que llamaremos
-la \textbf{base de Legendre discreta de dimensión $n$}. \\
+la \textbf{base de Legendre discreta de dimensión $n$}. 
+A sus elementos los llamaremos los \textbf{polinomios de Legendre
+discretos de dimensión $n$}.\\
 
 Un segundo punto de vista, basado
 en discretizaciones por promedios integrales,
@@ -594,7 +594,6 @@ que, como se ilustra en el capítulo
 resulta ser un sistema de representación
 realmente útil para el estudio morfológico de señales finitas.
 
-\newpage %Nueva página para la figura enorme que sigue.
 
 \begin{figure}[H]
 \centering\captionsetup{format = hang}
@@ -605,3 +604,96 @@ realmente útil para el estudio morfológico de señales finitas.
 		ortogonalización y discretización no conmutan.}
  	\end{measuredfigure}
  \end{figure}
+
+
+\section{Sobre los polinomios discretos de Legendre en la literatura}
+\label{sec: Sobre los polinomios discretos de Legendre en la literatura}
+
+Después de revisar la literatura, encontramos que
+las funciones que llamamos ``polinomios discretos de Legendre
+de dimensión $n$'', y que denotamos
+por $\cali{L}^{n,k}$ con $0 \leq k \leq n-1$, ya se han estudiado.
+
+En \cite{nikiforov} se desarrolla la teoría 
+de los polinomios ortogonales de variable discreta
+en un contexto
+más general, y se refieren a los que resultan ser
+los polinomios discretos $\cali{L}^{n,k}$ que definimos
+en este trabajo
+como``polinomios de Chebyshev de variable discreta'', 
+siendo estos un caso particular
+de los polinomios de Hahn 
+de variable discreta.
+Se menciona que estos polinomios
+fueron introducidos
+por P.L. Chebyschev en 1858,
+y redescubiertos por
+Gram en 1915
+(véase \cite{tcheb}, \cite{Neuman}).
+
+Para una discusión histórica muy completa
+sobre el desarrollo de los polinomios
+ortogonales discretos,
+véase \cite{roy}. Como ahí se explica, esta
+noción fue desarrollada por Chebyshev a partir
+de estudios de probabilidad y de ajuste de datos
+por mínimos cuadrados. Explicamos con más detalle las ideas
+contenidas en el artículo \cite{george}
+sobre esta última aplicación en
+la subsección \eqref{subsec: ajuste de datos}. \\
+
+Otras fuentes más modernas no usan el nombre de 
+``polinomios de Chebyshev de variable discreta'', sino que
+adoptan el nombre de ``polinomios ortogonales discretos de Legendre''
+(``Discrete Legendre
+Orthogonal Polynomials'' en inglés, por lo tanto abreviados
+como ``DLOPs''), pues, como se nota en 
+\cite{Neuman}, los coeficientes de estos polinomios son,
+exceptuando cambios de signo, 
+los coeficientes de los polinomios de Legendre de variable
+continua definidos en $[0,1]$.
+La referencia \cite{Neuman} es un compendio de fórmulas
+-que serán utilizadas más adelante en nuestro trabajo-
+de estos polinomios ampliamente citado. \\
+
+
+Los polinomios ortogonales de variable discreta
+ya han sido estudiados y utilizados en la práctica,
+no sólo para optimizar el proceso de ajuste de
+datos por mínimos cuadrados 
+(c.f. \cite{george}), sino más recientemente como 
+una herramienta en el área de procesamiento de señales.
+Por ejemplo, en 
+\cite{colomer}
+se utilizan los polinomios
+discretos de Legendre
+(bajo el nombre de
+``Discrete Legendre Transform'', abreviado DLT) 
+para la compresión de datos de electrocardiogramas
+y, más recientemente, se han
+relacionados los polinomios discretos de Legendre 
+con un tipo de redes neuronales, a
+saber, las ``Legendre Delay Networks''
+(c.f. \cite{stockel}).
+En \cite{furlong} se continúa esta línea y 
+se introduce el algoritmo de aprendizaje ``Learned Legendre Predictor'' (LLP),
+basado en redes neuronales, para la predicción de datos en tiempo real. \\
+
+Por ser objetos tan usados en las aplicaciones, no es de
+extrañarse que se hayan estudiado ya
+algoritmos para el cálculo eficiente
+de los polinomios discretos de Legendre
+(c.f. \cite{Neuman}, \cite{abur}, \cite{abur2}, \cite{dris}, \cite{mukun}) \\
+
+
+Sin embargo,
+no encontramos en la literatura
+un uso de los polinomios discretos
+de Legendre para el estudio morfológico de señales finitas
+como el que proponemos (después de construir cuidadosamente
+estos objetos en el capítulo \ref{cap 2})
+en el capítulo 
+\ref{chap: Analisis de señales en base a coeficientes respecto a las BLDs}.
+Dedicamos la segunda parte de esta tesis, con una metodología 
+definida por nosotros, a realizar un análisis espectral de las gráficas
+de estos polinomios discretos.

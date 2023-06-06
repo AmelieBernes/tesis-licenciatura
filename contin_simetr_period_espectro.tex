@@ -35,7 +35,7 @@ de la función $\Sigma_{x}$.
 Sean $n \geq 2$, $x \in \IR^{n}$.
 Sea $\Sigma_{x}$ la función definida como en 
 \eqref{eq: estudiando espectro}. La función 
-$\Sigma_{x}$ $n-$periódica, es decir, 
+$\Sigma_{x}$ es $n-$periódica, es decir, 
 para cualquier frecuencia
 $0 \leq \omega \leq n$
 y toda $K \in \IZ$, se tiene que 
@@ -149,41 +149,7 @@ la igualdad deseada.
 	\centering
 	\includegraphics[scale = 1.4]{simetria_espectro} 
 \end{figure}	
- 
 
-\begin{nota}
-\label{nota: muestreo dom frecuencia}
-Según estas propiedades de periodicidad y simetría,
-podemos limitarnos a evaluar la función
-$\Sigma_{x}$ sólo en frecuencias
-contenidas en el intervalo $[0, n/2]$, pues los valores
-del espectro para otros valores pueden deducirse por periodicidad
-y simetría. \\
-
-\TODO{tal vez debería mover esto.}
-Ahora bien, para poder escribir programas
-para calcular una tal función $\Sigma_{x}$,
-se debe de usar como dominio de esta
-un conjunto discreto de puntos.
-Para los espectros que calcularemos de ahora en 
-adelante, adoptamos la convención de 
-usar usar como dominio 
-de la función
-$\Sigma_{x}$ de una señal $x \in \IR^{n}$
-al conjunto
-\begin{equation}
-\label{eq: malla frecuencias}
-\left\{ \frac{a}{100} : \hspace{0.2cm}
-0 \leq a \leq 
-\left\lfloor\frac{100n}{2}\right\rfloor,
-\right\}
-\end{equation}
-
-\noindent
-es decir, se toman $100$ muestras por
-cada unidad del intervalo 
-$\left[ 0, \frac{n}{2}\right]$
-\end{nota}
 
 \subsection{Continuidad}
 
@@ -251,6 +217,7 @@ a su inversa
 \end{obs}
 
 \begin{ejemplo}
+\label{ej: alternado}
 Veamos qué efecto tiene en la geometría y oscilaciones
 de una señal $x \in \IR^{n}$ el evaluarlo con el operador 
 de alternancia $A_{n}$.
@@ -265,7 +232,38 @@ si $x$ tiene muchos oscilaciones el vector $A_{n}(x)$ no los tendrá.
 
 En este contexto, puede pensarse a $A_{n}$ como un operador
 que, dependiendo de la naturaleza oscilatoria de $x$, aumente
-o disminuya las oscilaciones de la señal $x$. \TODO{Termina.}
+o disminuya las oscilaciones de la señal $x$. 
+
+\begin{figure}[H]
+	\sidecaption{
+	Una señal constante $x \in \IR^{n}$ es, por excelencia, aquella
+	que no presenta oscilaciones. Por el contrario, la gráfica de
+	$A_{n}(x)$ presenta el número máximo de oscilaciones posibles
+	para una señal de tamaño $n$.
+	\label{fig: alter 1}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{alter_1} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	\label{fig: alter 2}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{alter_2} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Por el contrario, si la gráfica de $x \in \IR^{n}$ 
+	presenta muchas oscilaciones, entonces la de6
+	$A_{n}(x)$ es más suave. 
+	\label{fig: alter 3}
+	}
+	\centering
+	\includegraphics[scale = 0.45]{alter_3} 
+\end{figure}	
 
 \end{ejemplo}
 
@@ -357,12 +355,15 @@ la igualdad \ref{eq: 1Jun23}.
 \QEDB
 \vspace{0.2cm}
 
-\TODO{Esta proposición nos dice que analizar la presencia
-de una frecuencia ``alta'' (i.e. cercana a $n/2$) en una señal $x \in \IR^{n}$
+Según esta última proposición, 
+analizar la presencia
+de una frecuencia ``alta'' (i.e. cercana a $n/2$) 
+en una señal $x \in \IR^{n}$
 es lo mismo que analizar la presencia de una frecuencia baja en la
-señal alternada $A(x)$. Esto concuerda con lo observado en el ejemplo 
-AAA, que el alternar una señal con muchas oscilaciones da lugar a una
-mucho más estable.}
+señal alternada $A(x)$. Esto concuerda con lo explicado en el ejemplo
+\ref{ej: alternado}, a saber, 
+que el alternar una señal con muchas oscilaciones da lugar a una
+mucho más estable y viceversa.
 
 \begin{defi}
 \label{def: momentos de x}
@@ -588,7 +589,8 @@ s_{n, \omega}
 }{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
 }
 \right)^{1/2}
-\cdot 
+\cdot \\
+& \cdot 
 \left(
 \frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
  + o(\omega^{5})
@@ -657,7 +659,8 @@ sgn(M_{1}(x))
 }{8 \pi^{3} (2n-1)(n-1)\omega^{3} + o(\omega^{5})
 }
 \right)^{1/2}
-\cdot 
+\cdot \\
+& \cdot
 \left(
 \left(
 \frac{2 \pi}{n} M_{1}(x) \omega - \frac{4 \pi^{3}}{3n^{3}}M_{3}(x) \omega^{3} 
@@ -1020,7 +1023,8 @@ x_{m}sen\left(
 }{8 \pi^{3} (2n-1)(n-1)\tilde{\omega}^{3} + o(\tilde{\omega}^{5})
 }
 \right)^{1/2}
-\cdot 
+\cdot \\ 
+& 
 \left(
 \left(
 \frac{2 \pi}{n} M_{1}(A_{n}(x)) \tilde{\omega} - \frac{4 \pi^{3}}{3n^{3}}
@@ -1039,7 +1043,7 @@ sgn(M_{1}(A_{n}(x)))
 \right)^{1/2}.
 \end{align*}
 
-Por último, 
+Por último,  
 
 \begin{align*}
 \langle
@@ -1088,7 +1092,9 @@ Así,
 \xrightarrow{\tilde{\omega} \rightarrow 0^{+}} & 
 -2 \frac{M_{0}(A_{n}(x))}{\sqrt{n}}
 \cdot 
-(-1) M_{1}(A_{n}(x)) \frac{\sqrt{6}}{
+(-1) M_{1}(A_{n}(x)) \cdot \\
+& \cdot
+\frac{\sqrt{6}}{
 \sqrt{(2n-1)(n-1)n}}
 \cdot (-1)
 \frac{\sqrt{6(n-1)}}{2 \sqrt{2n-1}}
@@ -1421,19 +1427,80 @@ $$\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
 \QEDB
 \vspace{0.2cm}
 
-\TODO{Aquí la explicación (+). Recuerda decir lo que en este
-contexto significa la frecuencia cero, y cambiar más abajo
-la observación sobre la extensión de este del espectro de fourier, pues
-ya no va a a ser válida en los puntos extremos.}
+
+
+Veamos por qué el resultado expuesto en la proposición
+\ref{prop: relacion limite cero con legendre}
+era de esperarse. Usando las expansiones
+en series de Taylor de las funciones seno y coseno
+cerca del origen
+\[
+sen(\omega) = \omega + o(\omega^{3}), \hspace{0.2cm}
+\omega \sim 0
+\]
+y
+\[
+cos(\omega) = 1 + o(\omega^{2}), \hspace{0.2cm}
+\omega \sim 0,
+\]
+tenemos que
+\begin{align*}
+\tilde{s}_{n, \omega} := & \left(sen\left(2 \pi \omega \frac{m}{n} \right)\right)_{m=0}^{n-1}\\
+= & \left( 2 \pi \omega \frac{m}{n} + o(\omega^{3}) \right)_{m=0}^{n-1} \\
+= & \left( 2 \pi \frac{\omega}{n} m \right)_{m=0}^{n-1} + 
+\left( o(\omega^{3}) \right)_{m=0}^{n-1},
+\end{align*}
+luego, cuando la frecuencia $\omega$ es cercana a cero, 
+los vectores 
+$\tilde{s}_{n, \omega}$ y $\left( 2 \pi \frac{\omega}{n} m \right)_{m=0}^{n-1} $
+son semejantes.
+
+Análogamente, 
+\begin{align*}
+\tilde{c}_{n, \omega} := & \left(cos\left(2 \pi \omega \frac{m}{n} \right)\right)_{m=0}^{n-1}\\
+= & \left( 1 + o(\omega^{2}) \right)_{m=0}^{n-1} \\
+= & \left( 1 \right)_{m=0}^{n-1} + 
+\left( o(\omega^{2}) \right)_{m=0}^{n-1},
+\end{align*}
+o sea, cuando $\omega$ es cercano a cero
+los vectores 
+$\tilde{c}_{n, \omega}$ y $\left(1 \right)_{m=0}^{n-1} $
+son semejantes. \\
+
+Ahora bien, recuerde que, por definición del espacio
+monofrecuencial $P_{n, \omega}$ (c.f. ecuación 
+\eqref{eq: espacio Pnw}), 
+$P_{n, \omega}$ es generado por 
+$\tilde{s}_{n, \omega}$ y $\tilde{c}_{n, \omega}$. Según las aproximaciones
+anteriores, conforme $\omega \rightarrow 0^{+}$, 
+$P_{n, \omega}$ se asemeja al espacio
+$span\{ \left( 2 \pi \frac{\omega}{n} m \right)_{m=0}^{n-1},
+\left( 1 \right)_{m=0}^{n-1} \}$, que, según la proposición
+\ref{Teorema1}
+es $W_{n,1}$ -el espacio de polinomios discretos $n$-dimensionales
+de grado a lo más $1$. Tiene sentido entonces que,
+como se demuestra en la proposición 
+\ref{prop: relacion limite cero con legendre},
+los números
+$$\Sigma_{x}(\omega) := \sigma_{n}(x, \omega) := 
+cos( \measuredangle(x, P_{n, \omega}))$$
+tiendan al número 
+$$ cos( \measuredangle(x, W_{n,1}))$$
+conforme $\omega$ tiende a cero por la derecha. \\
+
+
 
 Tenemos todo para definir el espectro de $x$
 basado en espacios monofrecuenciales.
 
+
+\marginnote{Claro que el codominio de $\Sigma_{x}$ es $[0,1]$,
+pues esta función se define en función del coseno.}
 \begin{defi}
 \label{def: espectro monofrecuenciales inicial}
 \textbf{(Definición del espectro de una señal
 basado en espacios monofrecuenciales)}
-sean $n \geq 2$, $x \in \IR^{n}$. \\
+Sean $n \geq 2$, $x \in \IR^{n}$. \\
 
 Si $x \neq 0$, definimos a su \textbf{espectro basado
 en espacios monofrecuenciales} como la función 
@@ -1444,7 +1511,7 @@ definida como
 cos(\measuredangle(x, P_{n, \omega})) & 
 \hspace{0.2cm} \textit{ si } \omega \in ]0, n/2[, \\
 cos(\measuredangle(x, W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = 0, \\
-cos(\measuredangle(x, \tilde{W}_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = n/2.
+cos(\measuredangle(A_{n}(x), W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = n/2.
 \end{cases}
 \end{align*}
 
@@ -1493,6 +1560,18 @@ y $y =x$. Observe que discretizaciones de estas dos rectas
 conforman una base para el espacio $W_{n,1}$.
 \end{comment}
 
+La definición \ref{def: espectro monofrecuenciales inicial}
+es importante desde el punto de vista teórico, pues 
+hace evidente la relación entre el número
+$\Sigma_{x}(\omega)$ y la cercanía de $x$ a cierto subespacio
+de $\IR^{n}$ (medida en términos del coseno del ángulo
+que $x$ forma con tal espacio, la llamada
+``distancia coseno'' en el apéndice \ref{cosine similarity}). 
+Sin embargo, para 
+poder usar en la práctica tal definición para realizar
+un análisis espectral, es conveniente establecer fórmulas
+más concretas para el espectro. En realidad, ya tenemos tales
+fórmulas, y las reunimos en la siguiente proposición.
 \begin{prop}
 \label{prop: formula explicita espectro}
 Sean $n \neq 2$, $x \in \IR^{n}$ no cero.
@@ -1511,7 +1590,8 @@ Si $\omega \in ]0, n/2[$, entonces
 \]
 donde los vectores $c_{n, \omega}$ y $s_{n, \omega}$
 son como en \eqref{eq5: 19Marzo} y \eqref{eq6: 19Marzo}.
-Además, 
+Además
+
 \[
 \Sigma_{x}(0) = 
 \left(
@@ -1519,24 +1599,26 @@ Además,
 2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
 }{
 ||x||^{2} (n-1)(n+1)n}
-\right)^{1/2}
+\right)^{1/2},
 \]
 y
 \[
 \Sigma_{x}(n/2) = 
 \left(
 \frac{
-2\tilde{M}_{0}(x)^{2}(2n-1)(n-1) + 12
-\tilde{M}_{1}(x)^{2} - 12 \tilde{M}_{0}(x) \tilde{M}_{1}(x)(n-1)
+2M_{0}(\tilde{x})^{2}(2n-1)(n-1) + 12
+M_{1}(\tilde{x})^{2} - 12 M_{0}(\tilde{x}) M_{1}(\tilde{x})(n-1)
 }{
-||x||^{2} (n-1)(n+1)n}
+||\tilde{x}||^{2} (n-1)(n+1)n}
 \right)^{1/2},
 \]
-donde los coeficientes $M_{i}(x)$ y $\tilde{M}_{i}(x)$
+donde $\tilde{x} := A_{n}(x)$ y
+los coeficientes $M_{i}(x)$ 
 son como se definieron en 
 \ref{def: momentos de x}. 
 \end{prop}
 
+\subsection{Propiedades importantes del espectro $\Sigma_{x}$ de una señal finita}
 Sólo para referenciar más adelante 
 la continuidad del espectro de una 
 señal y la forma en que se relacionan los valores
@@ -1549,7 +1631,6 @@ en la siguiente proposición.
 
 \begin{prop}
 \label{prop: continuidad espctro espacois monof.}
-\textbf{(Propiedades importantes del espectro $\Sigma_{x}$ de una señal).}
 Sean $n \geq 2$, $x \in \IR^{n}$.
 Sea $\Sigma_{x}:[0, n/2] \rightarrow [0,1]$ el espectro 
 de $x$ como se definió en 
@@ -1584,7 +1665,7 @@ haciendo $\omega = 0$ se tiene también la igualdad, pues
 \begin{align*}
 \Sigma_{x}(n/2) = &
 \limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(n/2)} \\
-= & \measuredangle(A_{n}(x)m W_{n,1}) \\
+= & \measuredangle(A_{n}(x), W_{n,1}) \\
 = & \limite{\omega \rightarrow 0^{+}}{ \Sigma_{A_{n}(x)}(\omega)} \\
 = & \Sigma_{A_{n}(x)}(0),
 \end{align*}
@@ -1609,3 +1690,60 @@ por ser continuo el espectro $\Sigma_{x}$.
 	\centering
 	\includegraphics[scale = 1]{espectro_alternado} 
 \end{figure}	
+
+\subsection{Sobre la interpretación de los valores de $\Sigma_{x}$}
+Sea $\Sigma_{x}:[0, n/2] \longrightarrow [0,1]$ el espectro 
+de una señal $x \in \IR^{n}$
+como se definió en \ref{def: espectro monofrecuenciales inicial}.
+Según esta definición,
+\begin{itemize}
+	\item Para toda $\omega \in ]0, n/2[$, entre más cercano 
+	a $1$ sea $\Sigma_{x}(\omega)$, más cercana estará $x$
+	al espacio monofrecuencial $P_{n, \omega}$; puesto que,
+	según el teorema \ref{prop: Pw consta de las señales de frecuencia omega},
+	$P_{n, \omega}$ consta exactamente de las señales 
+	$n-$dimensionales de frecuencia $\omega$, tenemos que 
+	entre más cercano a $1$ sea $\Sigma_{x}(\omega)$, más cerca
+	está $x$ de la propiedad de tener frecuencia $\omega$. Dualmente,
+	si $\Sigma_{x}(\omega)$ es muy cercana a cero, $\omega$ es una frecuencia
+	poco adecuada para modelar a $x$.
+	
+	\item Puesto que $\Sigma_{x}(0)$ es  $\measuredangle(x, W_{n,1})$, 
+	y como $W_{n,1}$ es el espacio de los polinomios discretos
+	$n-$dimensionales de grado o lo más $1$ (c.f. 
+	corolario \ref{cor: 18ap}),
+	si $\Sigma_{x}(0)$ es cercano a $1$, entonces la gráfica de
+	$x$ será muy cercana a parecer una recta (ya sea constante o no).
+	
+	\item Por ser $\Sigma_{x}(n/2)$ igual a  $\measuredangle(A_{n}(x), W_{n,1})$,
+	si $\Sigma_{x}(n/2)$ es cercano a $1$ entonces $A_{n}(x)$ -la señal 
+	alternada de $x$- es cercana a ser la discretización de una recta, luego,
+	$x$ es cercana a ser el alternado de una tal señal.
+	
+\end{itemize}
+
+Observe entonces que, para toda frecuencia $\omega \in ]0, n/2[$,
+$\Sigma_{x}(\omega)$ indica qué tanto reacciona $x$ a la frecuencia
+$\omega$ (en términos precisos, $\Sigma_{x}(\omega)$ indica la distancia
+coseno al espacio monofrecuencial de dimensión $n$ y frecuencia $\omega$),
+pero los valores del espectro $\Sigma_{x}$ en los puntos 
+extremos $0$ y $n/2$ \textbf{no indican distancias a espacios monofrecuenciales}.
+En su lugar, indican la distancia coseno de $x$ y $A_{n}(x)$, respectivamente,
+al espacio $W_{n,1}$ de señales afines $n-$dimensionales.
+
+
+\begin{nota}
+\label{nota: la mejor frecuencia}
+Fijados $n \geq 2$,
+$x \in \IR^{n}$ una señal y
+$\omega >0$ una frecuencia, \textbf{entre más cercano a $1$ sea 
+$\Sigma_{x}(\omega) = \sigma_{n}(x, \omega)$, mejor es usar un sinusoide
+de frecuencia $\omega$ para ajustar la gráfica de $x$}.
+Esto porque, recuerde, entre más cercano a uno sea uno de
+esos coeficientes, más cercana estará la señal $x$ 
+al espacio monofrecuencial $P_{n, \omega}$, luego, más
+cercana está $x$
+a tener
+la propiedad de ser una discretización de un sinusoide
+de la respectiva frecuencia $\omega$.
+\end{nota}

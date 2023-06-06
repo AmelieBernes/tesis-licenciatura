@@ -17,6 +17,83 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
+  \entry{abur}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AMF}{%
+         family={Aburdene},
+         familyi={A\bibinitperiod},
+         given={Maurice\bibnamedelima F.},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AMF1}
+    \strng{fullhash}{AMF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Abu93}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{181\bibrangedash 186}
+    \field{title}{On the computation of discrete Legendre polynomial
+  coefficients}
+    \field{journaltitle}{Multidimensional systems and signal processing}
+    \field{year}{1993}
+  \endentry
+
+  \entry{abur2}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AJEDMF}{%
+         family={Aburdene},
+         familyi={A\bibinitperiod},
+         suffix={Maurice\bibnamedelima F.},
+         suffixi={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={John E.\bibnamedelima Dorband},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AMFJED1}
+    \strng{fullhash}{AMFJED1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Abu96}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Parallel computation of discrete Legendre transforms}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE International Conference on Acoustics, Speech,
+  and Signal Processing Conference Proceedings}
+    \field{year}{1996}
+  \endentry
+
+  \entry{stockel}{article}{}
+    \name{author}{2}{}{%
+      {{hash=fbD}{%
+         prefix={function},
+         prefixi={f\bibinitperiod},
+         family={bases},
+         familyi={b\bibinitperiod},
+         given={Discrete},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=cnn}{%
+         prefix={convolutional\bibnamedelima neural},
+         prefixi={c\bibinitperiod\bibinitdelim n\bibinitperiod},
+         family={networks},
+         familyi={n\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{bDfncn1}
+    \strng{fullhash}{bDfncn1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{bn}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Stöckel, Andreas}
+    \field{journaltitle}{arXiv preprint arXiv:2103.05609 (2021)}
+  \endentry
+
   \entry{carothers}{book}{}
     \name{author}{1}{}{%
       {{hash=CNL}{%
@@ -41,29 +118,30 @@
     \field{year}{2000}
   \endentry
 
-  \entry{DSmath}{book}{}
+  \entry{colomer}{article}{}
     \name{author}{1}{}{%
-      {{hash=CN}{%
-         family={Carter},
+      {{hash=CAACAA}{%
+         family={Colomer},
          familyi={C\bibinitperiod},
-         given={Nathan},
-         giveni={N\bibinitperiod},
+         suffix={Alberto\bibnamedelima Albiol},
+         suffixi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+         given={Antonio Albiol\bibnamedelima Colomer},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
       }}%
     }
-    \list{publisher}{2}{%
-      {Chapman}%
-      {Hall, CRC Press}%
-    }
-    \strng{namehash}{CN1}
-    \strng{fullhash}{CN1}
+    \strng{namehash}{CAAAAC1}
+    \strng{fullhash}{CAAAAC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Car20}
+    \field{labelalpha}{Col97}
     \field{sortinit}{C}
     \field{sortinithash}{C}
-    \field{edition}{1st Edition}
-    \field{title}{Data Science for Mathematicians}
-    \field{year}{2020}
+    \field{pages}{222\bibrangedash 228}
+    \field{title}{Adaptive ECG data compression using discrete legendre
+  transform}
+    \field{journaltitle}{Digital Signal Processing}
+    \field{year}{1997}
   \endentry
 
   \entry{cosineSim}{misc}{}
@@ -100,6 +178,33 @@
     \field{title}{Data science and machine learning: mathematical and
   statistical methods}
     \field{year}{2022}
+  \endentry
+
+  \entry{dris}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DDMHJDNRJR}{%
+         family={Driscoll},
+         familyi={D\bibinitperiod},
+         suffix={James\bibnamedelima R.},
+         suffixi={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={Dennis M. Healy Jr Daniel N.\bibnamedelima Rockmore.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  D\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJRDMHJDNR1}
+    \strng{fullhash}{DJRDMHJDNR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dri97}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{1066\bibrangedash 1099}
+    \field{title}{Fast discrete polynomial transforms with applications to data
+  analysis for distance transitive graphs}
+    \field{journaltitle}{SIAM Journal on Computing}
+    \field{year}{1997}
   \endentry
 
   \entry{FFTscipy}{misc}{}
@@ -162,6 +267,30 @@
     \field{year}{2002}
   \endentry
 
+  \entry{furlong}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FeaPM}{%
+         family={Furlong},
+         familyi={F\bibinitperiod},
+         suffix={P.\bibnamedelima Michael},
+         suffixi={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={et\bibnamedelima al.},
+         giveni={e\bibinitperiod\bibinitdelim a\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FPMea1}
+    \strng{fullhash}{FPMea1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Fur22}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{Learned legendre predictor. Learning with compressed
+  representaitons for efficient online multistep prediction}
+    \field{journaltitle}{Technical Report}
+    \field{year}{2022}
+  \endentry
+
   \entry{godement}{book}{}
     \name{author}{1}{}{%
       {{hash=GR}{%
@@ -207,16 +336,6 @@
     \field{sortinithash}{H}
     \field{title}{Process Analysis by Statistical Methods}
     \field{year}{1970}
-  \endentry
-
-  \entry{hopital}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{labelalpha}{Hop}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-  \field{howpublished}{\url{https://en.wikipedia.org/wiki/L\%27H\%C3\%B4pital\%27s_rule}}
-    \field{note}{Accessed: 2023-05-18}
-    \field{title}{L'Hopital's rule}
   \endentry
 
   \entry{interpolation}{misc}{}
@@ -401,6 +520,28 @@
   complete}
   \endentry
 
+  \entry{mukun}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MR}{%
+         family={Mukundan},
+         familyi={M\bibinitperiod},
+         given={Ramakrishnan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MR1}
+    \strng{fullhash}{MR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Muk04}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{1055\bibrangedash 1059}
+    \field{title}{Some computational aspects of discrete orthonormal moments}
+    \field{journaltitle}{IEEE Transactions on image processing}
+    \field{year}{2004}
+  \endentry
+
   \entry{munkres}{book}{}
     \name{author}{1}{}{%
       {{hash=MJR}{%
@@ -423,6 +564,30 @@
     \field{edition}{2dn edition}
     \field{title}{Topology}
     \field{year}{2000}
+  \endentry
+
+  \entry{nikiforov}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NSSVUA}{%
+         family={Nikiforov},
+         familyi={N\bibinitperiod},
+         suffix={A.F.},
+         suffixi={A\bibinitperiod},
+         given={S.K. Suslov V.B.\bibnamedelima Uvarov},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  V\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NASSVU1}
+    \strng{fullhash}{NASSVU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Nik91}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Classical orthogonal polynomials of a discrete variable}
+    \field{journaltitle}{Springer Berlin Heidelberg}
+    \field{year}{1991}
   \endentry
 
   \entry{Nimark}{unpublished}{}
@@ -502,6 +667,29 @@
     \field{series}{Graduate Studies in Mathematics}
     \field{title}{Advanced Modern Algebra}
     \field{year}{2010}
+  \endentry
+
+  \entry{roy}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Roy},
+         familyi={R\bibinitperiod},
+         given={Ranjan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Roy93}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{495\bibrangedash 512}
+    \field{title}{The work of Chebyshev on orthogonal polynomials}
+    \field{volume}{Topics In Polynomials Of One And Several Variables And Their
+  Applications: Volume Dedicated to the Memory of PL Chebyshev (1821–1894)}
+    \field{year}{1993}
   \endentry
 
   \entry{rabin}{book}{}
@@ -600,6 +788,28 @@
     \field{title}{The Discrete Fourier Transform: Theory, Algorithms and
   Applications}
     \field{year}{2001}
+  \endentry
+
+  \entry{tcheb}{article}{}
+    \name{author}{1}{}{%
+      {{hash=TP}{%
+         family={Tchebychef},
+         familyi={T\bibinitperiod},
+         given={P.L.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TP1}
+    \strng{fullhash}{TP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Tch58}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{pages}{381\bibrangedash 384}
+    \field{title}{Sur une nouvelle série}
+    \field{journaltitle}{in Oeuvres, T.I. (Chelsea, New York, 1961)}
+    \field{year}{1858}
   \endentry
 
   \entry{TDFwiki}{misc}{}

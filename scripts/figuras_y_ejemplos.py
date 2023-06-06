@@ -18,17 +18,18 @@ import proyecciones as pr
 
 
 #Código para cambiar el tipo de fuente
+#TODO no sé por qué no siempre funciona, a veces da muchos problemas y no deja que se genere la imagen!
 
-plt.style.use('seaborn-v0_8-poster') 
-#plt.style.use('seaborn-v0_8-pastel') 
-params = {"ytick.color" : "black",
-          "xtick.color" : "black",
-          "axes.labelcolor" : "black",
-          "axes.edgecolor" : "black",
-          "text.usetex" : True,
-          "font.family" : "serif",
-          "font.serif" : ["Computer Modern Serif"]}
-plt.rcParams.update(params)
+#plt.style.use('seaborn-v0_8-poster') 
+##plt.style.use('seaborn-v0_8-pastel') 
+#params = {"ytick.color" : "black",
+#          "xtick.color" : "black",
+#          "axes.labelcolor" : "black",
+#          "axes.edgecolor" : "black",
+#          "text.usetex" : True,
+#          "font.family" : "serif",
+#          "font.serif" : ["Computer Modern Serif"]}
+#plt.rcParams.update(params)
 
 
 def formato_axis(axis):
@@ -600,9 +601,36 @@ def PDLdim_n_graficas_continuas(n, lista_colores):
     plt.title('Gráficas de los polinomios de Legendre discretos de dimensión '+str(n))
     return plt.show()
 
+def ejemplificando_operador_alternancia(x, nombre):
+    """
+    x es un array.
+    Se grafican la gráfica de x y la de su alternado.
+    """
+    n = len(x)
+    Ax = []
+    for m in range(n):
+        Ax.append((-1)**m * x[m])
+    
+    fig, axis = plt.subplots(1,2)
+    X = np.arange(0,1,0.05)
+    dominio = [m/n for m in range(n)]
+    axis[0].scatter(dominio, x, color = 'hotpink')
+    axis[1].scatter(dominio, Ax, color = 'hotpink')
+    axis[0].plot(dominio, x, color = 'hotpink', linestyle = 'dotted')
+    axis[1].plot(dominio, Ax, color = 'hotpink', linestyle = 'dotted')
 
+    formato_axis(axis[0])
+    axis[0].set_title('Gráfica de '+ '${0}$'.format(nombre))
+    formato_axis(axis[1])
+    axis[1].set_title('Gráfica de '+ r'$A_{{ {0}  }}($'.format(str(n)) + '${0}$'.format(nombre) + ')')
+
+    return plt.show()
 
 if __name__=='__main__':
+    n, k = 15,1
+    x = legendre.calculo_base(n)[k]
+    nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n) + ', ' + str(k))
+    ejemplificando_operador_alternancia(x, nombre)
     #figura_discretizacionPuntual()
     #figura_cambioDeMalla()
     #figura_introduccion()
@@ -610,7 +638,7 @@ if __name__=='__main__':
     #figura_demSimetrias()
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
-    figura_cosenoMuestreo(0.0001,0.3, 20)
+    #figura_cosenoMuestreo(0.0001,0.3, 20)
     #figura_cosenoMuestreo(12, 0, 18)
     #figura_cosenoMuestreo(12, 0, 24)
     #figura_raicesUnidad(5, 8)

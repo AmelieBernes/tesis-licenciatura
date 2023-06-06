@@ -141,15 +141,23 @@ x = [f(t/25) for t in range(25)]
 # -------------- Fin ejemplo alternado 0 ----------------
 
 # -------------- Ejemplo alternado 0 ----------------
-x = [t/12 for t in range(12)] 
-nombre = 'x'
-#ae.grafica_analisisEspectrales(x, nombre, graficar = True)  #Sí funciona
-x_alter = ae.alternado(x)
-print(len(x_alter))
-nombre = r'A_{12}(x)'
-ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) #No funciona
+#x = [t/12 for t in range(12)] 
+#nombre = 'x'
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
+#x_alter = ae.alternado(x)
+#nombre = r'A_{12}(x)'
+#ae.grafica_analisisEspectrales(x_alter, nombre, graficar = True) 
 # -------------- Fin ejemplo alternado 0 ----------------
 
+#ae.grafica_coefEspectrales_de_frecPrincipales(37, graficar = True)
+
+
+#x = [1,3,5,7,9,19,3.4,8]
+#nombre = 'x'
+#ae.grafica_analisisEspectrales(x, nombre, graficar = True)  
+#
+#
+#ae.grafica_analisisEspectrales_PDL(25,7, graficar = True)
 
 #x = [1,2,3,4,6,5]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 

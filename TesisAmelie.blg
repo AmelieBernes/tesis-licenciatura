@@ -17,9 +17,10 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated field_info (elt_size=8) to 10460 items from 5000.
 Database file #1: TesisAmelie-blx.bib
 Database file #2: Referencias.bib
-Repeated entry---line 263 of file Referencias.bib
+Repeated entry---line 341 of file Referencias.bib
  : @misc{leg
  :          ,
 I'm skipping whatever remains of this entry
@@ -56,6 +57,70 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2699 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2699 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2699 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
@@ -92,26 +157,48 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2703 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2703 of file biblatex.bst
-Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
 while executing---line 2703 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2703 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2703 of file biblatex.bst
-Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+while executing---line 2703 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
 while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2709 of file biblatex.bst
-Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2709 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
-while executing---line 2713 of file biblatex.bst
+while executing---line 2709 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2713 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
@@ -122,7 +209,19 @@ Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. 
 while executing---line 2713 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2713 of file biblatex.bst
-Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2713 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2713 of file biblatex.bst
@@ -135,31 +234,67 @@ while executing---line 2713 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2713 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2713 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
 while executing---line 2717 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2717 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2717 of file biblatex.bst
-Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2717 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2717 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2717 of file biblatex.bst
-Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+while executing---line 2717 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
 while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2723 of file biblatex.bst
-Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2723 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
-while executing---line 2727 of file biblatex.bst
+while executing---line 2723 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
@@ -170,7 +305,19 @@ Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. 
 while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2727 of file biblatex.bst
-Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2727 of file biblatex.bst
@@ -181,12 +328,38 @@ while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2727 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
 while executing---line 2727 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2767 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2767 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2767 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2767 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2767 of file biblatex.bst
@@ -213,7 +386,41 @@ Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, R
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Dirk P. Kroese, Zdravko I. Botev, Thomas Taimre, Radislav Vaisman" for entry DSML
 while executing---line 2815 of file biblatex.bst
-Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Driscoll, James R., Dennis M. Healy Jr, Daniel N. Rockmore." for entry dris
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
+while executing---line 2815 of file biblatex.bst
+Too many commas in name 1 of "Nikiforov, A.F., S.K. Suslov, V.B. Uvarov" for entry nikiforov
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2815 of file biblatex.bst
@@ -231,45 +438,47 @@ Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. 
 while executing---line 2815 of file biblatex.bst
 Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
 while executing---line 2815 of file biblatex.bst
-You've used 30 entries,
+Too many commas in name 1 of "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein" for entry algorithms
+while executing---line 2815 of file biblatex.bst
+You've used 38 entries,
             6399 wiz_defined-function locations,
-            1356 strings with 12080 characters,
-and the built_in function-call counts, 164780 in all, are:
-= -- 12213
-> -- 2326
-< -- 1219
-+ -- 2729
-- -- 663
-* -- 11710
-:= -- 14898
+            1395 strings with 13401 characters,
+and the built_in function-call counts, 230295 in all, are:
+= -- 17625
+> -- 3074
+< -- 1459
++ -- 3876
+- -- 915
+* -- 17143
+:= -- 21956
 add.period$ -- 0
-call.type$ -- 30
-change.case$ -- 703
+call.type$ -- 38
+change.case$ -- 781
 chr.to.int$ -- 44
-cite$ -- 72
-duplicate$ -- 15187
-empty$ -- 16765
-format.name$ -- 1178
-if$ -- 35953
+cite$ -- 86
+duplicate$ -- 20395
+empty$ -- 23206
+format.name$ -- 1662
+if$ -- 49762
 int.to.chr$ -- 0
-int.to.str$ -- 69
+int.to.str$ -- 85
 missing$ -- 0
-newline$ -- 628
-num.names$ -- 1400
-pop$ -- 9881
+newline$ -- 827
+num.names$ -- 1780
+pop$ -- 12679
 preamble$ -- 1
-purify$ -- 732
+purify$ -- 834
 quote$ -- 0
-skip$ -- 5276
+skip$ -- 6633
 stack$ -- 0
-substring$ -- 23311
-swap$ -- 3818
-text.length$ -- 819
-text.prefix$ -- 45
+substring$ -- 35190
+swap$ -- 4881
+text.length$ -- 1067
+text.prefix$ -- 61
 top$ -- 1
-type$ -- 1008
+type$ -- 1280
 warning$ -- 0
-while$ -- 1502
+while$ -- 2164
 width$ -- 0
-write$ -- 599
-(There were 103 error messages)
+write$ -- 790
+(There were 207 error messages)

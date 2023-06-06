@@ -472,7 +472,7 @@ def vectores_frecuencia(n, w): #TODO quita a n del argumento.
   n es la dimensión, w la frecuencia 
   
   """
-  C_nw = np.array([math.cos(2*pi*w*m/n) for m in range(n) ])
+  C_nw = np.array([np.cos(2*pi*w*m/n) for m in range(n) ])
 
   if w % (n/2) == 0: # caso 2
     c_nw= 1/math.sqrt(n) * C_nw
@@ -486,7 +486,7 @@ def vectores_frecuencia(n, w): #TODO quita a n del argumento.
     xi_nw=math.sqrt(2) * (n+a*b/c)**(-1/2)
     eta_nw=math.sqrt(2) * (n-a*b/c)**(-1/2)
 
-    S_nw = np.array([math.sin(2*pi*w*m/n) for m in range(n) ])
+    S_nw = np.array([np.sin(2*pi*w*m/n) for m in range(n) ])
 
     c_nw= xi_nw * C_nw
     s_nw= eta_nw * S_nw
@@ -534,6 +534,8 @@ def amplDesfase_caso1(x,w):
     phi = (tan + 2*pi)/(2*pi)
   return A, phi
 
+
+#TODO quita lo de 'caso 1' del nombre
 def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   """
   
@@ -555,7 +557,8 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   proyeccion_Pnw = [coseno_amplDes(m/n) for m in range(n)]
 
   #axis.scatter(dominio, x, color=colores[0], s=80)
-  axis.scatter(dominio, proyeccion_Pnw, color=colores[2], s=80, label = r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n), str(round(w, 2))) )
+
+  #axis.scatter(dominio, proyeccion_Pnw, color='green', s=80, label = r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n), str(round(w, 2))) )
   
   X=np.arange(0, 1, 0.0001)
   axis.plot(X, coseno_amplDes(X), color=colores[2])
@@ -563,44 +566,44 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   formato_axis_leyenda_exterior(axis)
 
 #Funciones para el caso 2
-
-def elementos_basicos_caso2(x, w):
-  x = np.array(x) #Convirtiendo a 'x' (array) a np.array en caso de ser necesario.
-  n=len(x)
-  c_nw = vectores_frecuencia(n, w)
-  q = np.dot(x, c_nw)
-  s = np.dot(x, x)
-
-  return c_nw, q, s
-
-
-def sigma_caso2(x, w):
-  """
-  "x" es un np.array, w es un float mayor o igual a cero tal que
-  n/2 (donde n= len(x)) no divide a w.
-  """
-
-  c_nw, q, s = elementos_basicos_caso2(x, w)
-
-  sigma = abs(q)/math.sqrt(s)
-  return sigma
-
-#TODO hay muchísimas repeticiones en todas estas funciones !!!
-def amplDesfase_caso2(x,w):
-  n = len(x)
-  c_nw, q, s = elementos_basicos_caso2(x, w)
-  A = q/math.sqrt(n)
-  return A, 0
-
-def grafica_sigma_amplDesfase_axis_caso2(x, w, axis):
-  """
-  Se dibujan la gráfica de x junto con la de su proyección al espacio de frecuencias P_{w}.
-
-  """
-  n = len(x)
-
-  sigma = sigma_caso2(x, w)
-  A, phi = amplDesfase_caso2(x, w)
+#TODO ver si ya puedo quitar todo lo del caso 2
+#def elementos_basicos_caso2(x, w):
+#  x = np.array(x) #Convirtiendo a 'x' (array) a np.array en caso de ser necesario.
+#  n=len(x)
+#  c_nw = vectores_frecuencia(n, w)
+#  q = np.dot(x, c_nw)
+#  s = np.dot(x, x)
+#
+#  return c_nw, q, s
+#
+#
+#def sigma_caso2(x, w):
+#  """
+#  "x" es un np.array, w es un float mayor o igual a cero tal que
+#  n/2 (donde n= len(x)) no divide a w.
+#  """
+#
+#  c_nw, q, s = elementos_basicos_caso2(x, w)
+#
+#  sigma = abs(q)/math.sqrt(s)
+#  return sigma
+#
+##TODO hay muchísimas repeticiones en todas estas funciones !!!
+#def amplDesfase_caso2(x,w):
+#  n = len(x)
+#  c_nw, q, s = elementos_basicos_caso2(x, w)
+#  A = q/math.sqrt(n)
+#  return A, 0
+#
+#def grafica_sigma_amplDesfase_axis_caso2(x, w, axis):
+#  """
+#  Se dibujan la gráfica de x junto con la de su proyección al espacio de frecuencias P_{w}.
+#
+#  """
+#  n = len(x)
+#
+#  sigma = sigma_caso2(x, w)
+#  A, phi = amplDesfase_caso2(x, w)
 
   def coseno_amplDes(t):
     return A * np.cos(2*pi*w*t-2*pi*phi)
@@ -641,17 +644,38 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   #limite_0 = limite_cero(x, n) #NUEVO 
   #limite_n_2 = limite_n_medios(x, n) #NUEVO 
   sigma_max = max(sigmas)
-  #TODO cuidado, parece que en la siguiente linea hay un error cuando x tiene la máxima frecuencia.
-  print(sigma_max)
-  frec_max = frecuencias[sigmas.index(sigma_max)]
+
   
+  #Se tiene que agregar un ciclo if-else porque acorté el vector de frecuencias.
+  # posiciones de sigmas =[0, 1, 2, ... , n*100/2]
+  # posiciones de frecuencias = [1, 2, ..., n*100/2 -1]
+  indice_sigmaMax = sigmas.index(sigma_max) #Mayor frecuencia en la que el espectro tiene su máximo
+  if indice_sigmaMax == 0:
+      frec_max = 0
+  elif indice_sigmaMax == n*100/2:
+      frec_max = n/2
+  else:
+    frec_max = frecuencias[indice_sigmaMax - 1] #TODO esto está bien ??
+
   axis1.scatter(frec_max, sigma_max, s = 100, color = colores[2], label = '( ' + str(round(frec_max, 2)) + ', ' + str(round(sigma_max, 2)) + ' )', marker = 'v', zorder=4)
   stemlines = axis1.stem(frec_max, sigma_max, markerfmt = ' ', linefmt = '--')
   plt.setp(stemlines, color = colores[2]) 
   
-  if frec_max % (n/2) == 0:
-    grafica_sigma_amplDesfase_axis_caso2(x, frec_max, axis0)
-  else: 
+  if frec_max == 0:
+    X = np.arange(0,1, 0.0001)
+    proyeccion_W_n1 = proy.proyeccion(x,1)
+    b0, b1 = proy.coef_RMC(dominio_tiempo, proyeccion_W_n1)
+    axis0.scatter(dominio_tiempo, proyeccion_W_n1, color=colores[2], s=80, label = r'Gráfica de $\Pi_{{ W_{{ {0}, 1 }} }}(x)$'.format(str(n)) )
+    axis0.plot(X, b0 + b1*X, color = colores[2])
+    formato_axis_leyenda_exterior(axis0)
+  elif frec_max == n/2:
+    X = np.arange(0,1, 0.0001)
+    x_alter = alternado(x)
+    proyeccion_W_n1 = proy.proyeccion(x_alter,1)
+    axis0.scatter(dominio_tiempo, proyeccion_W_n1, color=colores[2], s=80, label = r'Gráfica de $\Pi_{{ W_{{ {0}, 1 }} }}(A_{{ {0}  }} (x))$'.format(str(n)) )
+    axis0.plot(dominio_tiempo, x_alter, color = colores[2])
+    formato_axis_leyenda_exterior(axis0)
+  else:    
     grafica_sigma_amplDesfase_axis_caso1(x, frec_max, axis0)
 
   axis0.set_xlabel('Tiempo')
@@ -777,17 +801,22 @@ def calculo_sigmaMax(x, n, frecuencias):
     y regresa la sigma máxima (la que se resalta cuando se grafica el espectro.)
     #TODO en realidad, la descripción es incorrecta.
     """
+    #TODO cambiar el vector de frecuencias del argumento de la función.
     sigmas = []
     for w in frecuencias: 
-      if w % (n/2) == 0 :
-        sigma = sigma_caso2(x, w)
-        sigmas.append(sigma)
-      else:
-        sigma = sigma_caso1(x, w)
-        sigmas.append(sigma)
-    
+        sigmas.append(sigma_caso1(x,w))
+    sigmas.insert(0, limite_cero(x,n))
+    sigmas.append(limite_n_medios(x, n))
+
     sigma_max = max(sigmas) #Buscamos la sigma mayor...
-    frec_max = frecuencias[sigmas.index(sigma_max)] #...y la frecuencia asociada a esta.
+    #Y ahora buscamos la frecuencia asociada a esta sigma.
+    indice_sigmaMax = sigmas.index(sigma_max) #Mayor frecuencia en la que el espectro tiene su máximo
+    if indice_sigmaMax == 0:
+        frec_max = 0
+    elif indice_sigmaMax == n*100/2:
+        frec_max = n/2
+    else:
+      frec_max = frecuencias[indice_sigmaMax - 1] 
     #Regresamos tal frecuencia
     return frec_max
 
@@ -803,8 +832,8 @@ def analisis_espectralPDL_global(n):
     """
     'n' es un entero mayor o igual a dos, y es la dimensión de los PDL para los que se
     calcula
-    	1.- la frecuencia principal 1
-    	2.- la frecuencia principal 0
+    	1.- el vector de las frecuencias principales 1 de los PDL de dimensión n
+    	2.- el vector de las frecuencias principales 0 de los PDL de dimensión n
     	3.- la ordenada al origen y pendiente (b0 _n y m0_n respect) de la recta de mínimos cuadrados (?)
     	4.- la la ordenada al origen y pendiente (b1_n y m1_n respect) de la recta de mínimos cuadrados (?)
     
@@ -812,7 +841,11 @@ def analisis_espectralPDL_global(n):
     """
     base_legendre = legendre.calculo_base(n)
     dominio_grados = [k for k in range(n)]
+
     frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
+    #Quitamos las frecuencias extremas, que son casos especiales.
+    frecuencias.pop(0)
+    frecuencias.pop(-1)
 
     sigmasMax_n, tausMax_n = [], [] 
     for k in range(n): #iteramos en los grados de los PDL de dimensión n
@@ -858,9 +891,40 @@ def tabla_informacion():
     f.close()
 
 
+
+#TODO NUEVO, espectro basado en espacios monofrecuenciales
+def Sigma(x, n, w):
+    """
+    Se calcula $\Sigma_{x}(w)$, con n la dimensión de la señal x.
+    """
+    if w == 0:
+        return limite_cero(x, n)
+    elif w == n/2:
+        return limite_n_medios(x, n)
+    else:
+        return sigma_caso1(x, w)
+
+def Tau_legendre(x, n, w):
+    """
+    Se calcula $\Tau_{x}(w)$, con n la dimensión de la señal x, que es un PDL.
+    No tenemos entonces que dividir por la norma de x.
+    """
+    M = math.ceil(n/2)
+    dominio = [m/n for m in range(n)]
+    if w == 0:
+        c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*0) for t in dominio]
+        return abs(np.dot(c_n,x))
+    elif (1 <= w and w <= M-1):
+        c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*w) for t in dominio]
+        s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*w) for t in dominio]
+        return math.sqrt(np.dot(c_n, x)**2 + np.dot(s_n, x)**2 )
+    elif w == M : #caso que sólo se da cuando n es par.
+        c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*M) for t in dominio]
+        return abs(np.dot(c_n,x))
+
+
 #TODO creo que antes usas el nombre 'sigmaMax' de forma incorrecta. Sería mucho mejor usar 'frecMax0'
 def guardando_sigmasYtaus_eval_en_frecPrin(n):
-    #sí funcionó!
     """
     'n' es un entero mayor o igual a dos, y es la dimensión de los PDL para los que se
     calcula, para toda 0 \leq k \leq n-1
@@ -869,47 +933,37 @@ def guardando_sigmasYtaus_eval_en_frecPrin(n):
     
     Tales coeficientes se almacenan en el diccionario guardado en 'data_AE_FP.txt'
         * llave: (n,k)
-        *valor: (w1, sigma_{n}(L^{n,k}, w1)),  (w0, sigma_{n}(L^{n,k}, w0))
+        *valor: (w1, Sigma_{L^{n,k}}(w1)),  (w0, Tau_{L^{n,k}}(w0))
     """
-    base_legendre = legendre.calculo_base(n)
-    frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
     dominio = [m/n for m in range(n)]
+
+    # TODO En vez de calcular todo de nuevo, voy a abrir en data_AE.txt y extraer los datos
+    #	1.- la frecuencia principal 1
+    #	2.- la frecuencia principal 0
 
     with open('data_AE_FP.txt', 'rb') as f:
         diccionario = pickle.load(f)
-
-    sigmasMax_n, tausMax_n = [], [] 
-    for k in range(n): #iteramos en los grados de los PDL de dimensión n
-        vector_legendre = base_legendre[k]
-        frecMax1_n_k = calculo_sigmaMax(vector_legendre, n, frecuencias)
-        if frecMax1_n_k == 0 or frecMax1_n_k == n/2:
-            sigmaMax_n_k = sigma_caso2(vector_legendre, frecMax1_n_k)
-        else:
-            sigmaMax_n_k = sigma_caso1(vector_legendre, frecMax1_n_k)
-
-        frecMax0_n_k = calculo_tauMax(vector_legendre)
-        norma = np.linalg.norm(vector_legendre)
-        if n%2 ==1:
-            if frecMax0_n_k == 0:
-                c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                tauMax_n_k = abs(np.dot(c_n,vector_legendre))/norma
-            else:
-                c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                tauMax_n_k = math.sqrt(np.dot(c_n, vector_legendre)**2 + np.dot(s_n, vector_legendre)**2 )/norma
-        else:
-            if frecMax0_n_k == 0 or frecMax0_n_k == math.ceil(n/2) :
-                c_n=[math.sqrt(1/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                tauMax_n_k = abs(np.dot(c_n, vector_legendre))/norma
-            else:
-                c_n=[math.sqrt(2/n)*np.cos(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                s_n=[math.sqrt(2/n)*np.sin(2*np.pi*t*frecMax0_n_k) for t in dominio]
-                tauMax_n_k = math.sqrt(np.dot(c_n, vector_legendre)**2 + np.dot(s_n, vector_legendre)**2 )/norma
         
-        diccionario[(n, k)] = (frecMax1_n_k, sigmaMax_n_k), (frecMax0_n_k, tauMax_n_k)
+    with open('data_AE.txt', 'rb') as dataAE:
+        data_AE = pickle.load(dataAE)
+
+    #Extrayendo los vectores de frecuencias principales de los PDL de dimensión n
+    F1_legendre_dim_n = data_AE[n][0]
+    F0_legendre_dim_n = data_AE[n][1]
+    
+    #Calculamos la BLD de dimensión n.
+    BLD_dim_n = legendre.calculo_base(n)
+
+    for k in range(n):
+        x = BLD_dim_n[k] #extraemos el k-ésimo vector de Legendre de dim m
+        FP1_nk = F1_legendre_dim_n[k]
+        FP0_nk = F0_legendre_dim_n[k]
+        diccionario[(n,k)] = (FP1_nk, Sigma(x, n, FP1_nk)), (FP0_nk, Tau_legendre(x, n, FP0_nk))  
 
     with open('data_AE_FP.txt', 'wb') as f:
         pickle.dump(diccionario, f)
+
+
 """
 #  ---------------------------------------- -- ----------------------------------------
 
@@ -1175,6 +1229,8 @@ def grafica_coefEspectrales_de_frecPrincipales(k, graficar = True):
 
  
 if __name__ == '__main__':
+
+
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')
   print(' "analisis_espectralesEjecuciones.py" ')
@@ -1189,11 +1245,14 @@ if __name__ == '__main__':
   #.html.
 
   #------------- Guardando datos con pickle
-  #TODO ya arruiné este .txt. Ejecuta entonces este código de nuevo!!
   #Ya ejecuté este loop y guardé los datos en data_AE.txt. No lo ejecutes más!
   #for n in range(2, 70):
   #    analisis_espectralPDL_global(n)
-  
-  for n in range(2, 70):
+ 
+
+  for n in range(2, 75):
+    analisis_espectralPDL_global(n)
+
+  for n in range(2, 65):
     guardando_sigmasYtaus_eval_en_frecPrin(n)
   """

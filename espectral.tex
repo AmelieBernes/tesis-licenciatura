@@ -164,7 +164,7 @@ de proceder sistemáticamente, hagamos un análisis empírico.
 	\includegraphics[scale = 0.8]{sinusoide} 
 \end{figure}	
 
-Pongamos una dimensión de $n = 60$; a continuación,
+Pongamos una dimensión de $n = 60$. A continuación,
 graficamos los PDL de dimensión $60$ para los primeros grados,
 e intentamos aproximar tales gráficas con sinusoides continuos.
 
@@ -1136,21 +1136,26 @@ se deduce que
 Hemos probado el siguiente
 \begin{teo}
 \label{teo: amelie1}
+\textbf{(Amplitud y desfase de la proyección de $x \in \IR^{n}$ al
+espacio monofrecuencial $P_{n, \omega}$)}
 Sean $n \geq 2$ y $\omega > 0$ con $\omega \not\in \frac{n}{2}\IZ$.
 Si $P_{n, \omega}$ es el subespacio de $\IR^{n}$ definido como 
 en \eqref{eq6: 23Ap}, entonces, para todo 
 $x \in \IR^{n}$ no cero, se tiene que
 \begin{equation}
 \label{ec: desfase explicito 1}
-\Pi_{P_{n, \omega}} (x) = \sqrt{c^{2}+d^{2}} \cdot (
+\Pi_{P_{n, \omega}} (x) = A \cdot (
 cos (2 \pi \omega t - 2 \pi \phi)
 )_{t \in I_{n}} \in \IR^{n},
 \end{equation}
 
 \noindent
-donde 
+donde la amplitud $A$ es
+\[
+\sqrt{c^{2}+d^{2}},
+\]
 $c$ y $d$ son como en \eqref{eq4: 20Marzo} y 
-\eqref{eq5: 20Marzo}, resp., y $\phi$ está 
+\eqref{eq5: 20Marzo}, resp., y el desfase $\phi$ está 
 dado por \eqref{eq: desfase phi 1}.
 \end{teo}
 Observe que tenemos una fórmula para obtener a
