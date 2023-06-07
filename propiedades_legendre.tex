@@ -350,13 +350,13 @@ x = \suma{k=0}{n-1}{a_{k} \cali{L}^{n, k}}.
 
 Como se argumentó ya, las proposiciones
 \begin{center}
-``$x \in \IR^{n}$ es afín'' \hspace{0.2cm} y \hspace{0.2cm} 
-``$x \in W_{n,1}$''
+``$x \in \IR^{n}$ tiene grado $k$'' \hspace{0.2cm} y \hspace{0.2cm} 
+``$x \in W_{n,k}$''
 \end{center} 
 son equivalentes.
 Observe que, aún cuando no se cumpla el caso
 extremos de que $x$ sea elemento 
-de $W_{n,1}$ (y, por lo tanto, no podamos aseverar que
+de $W_{n,k}$ (y, por lo tanto, no podamos aseverar que
 $x$ es afín), provistos
 de nociones como las de norma y ortogonalidad, es fácil dar 
 una propuesta legítima de
@@ -367,27 +367,27 @@ espacio ambiente.
 
 Como se explica en la subsección \ref{cosine similarity}, hay
 dos formas plausibles de dar medidas de qué tan cerca está
-$x$ del plano $W_{n,1}$;
+$x$ del espacio $W_{n,k}$;
 
 \begin{itemize}
 \item[a)] Una forma obvia de proceder es calcular
-la distancia de $x$ al espacio $W_{n,1}$, que por definición es 
+la distancia de $x$ al espacio $W_{n,k}$, que por definición es 
 la norma
 del vector 
 \[
-x - \Pi_{W_{n,1}}(x)= \suma{k=2}{n-1}{a_{k} \cali{L}^{n, k}},
+x - \Pi_{W_{n,k}}(x)= \suma{i=k+1}{n-1}{a_{i} \cali{L}^{n, i}},
 \]
 es decir, tomar al número no negativo
 \[
-\sqrt{ \suma{k=2}{n-1}{a_{k}^{2}}}
+\sqrt{ \suma{i=k+1}{n-1}{a_{i}^{2}}}
 \]
-como una medida de qué tanto se aleja $x$ del plano $W_{n,1}$
+como una medida de qué tanto se aleja $x$ del plano $W_{n,k}$
 (o sea, de qué tanto se aleja $x$ de ser afín).
 
 \item[b)] Otro acercamiento podría ser preguntarse por
 el ángulo $\alpha \in [0, \frac{\pi}{2}]$ 
 que forma el vector $x$ con
-$W_{n,1}$, el espacio de señales afines $n-$dimensionales.
+$W_{n,k}$, el espacio de señales $n-$dimensionales de grado $k$.
 \end{itemize}
 Veamos por qué la segunda
 es la mejor forma de proceder.
@@ -403,8 +403,7 @@ horizontal.
 La morfología de la gráfica de $x$ es entonces,
 salvo reflexiones horizontales, invariante bajo multiplicación
 escalar; otro atributo de $x$ que no se ve afectado por esta acción
-es el ángulo que forma con el plano $W_{n,1}$ de señales afines
-(c.f. proposición \ref{prop: angulo se conserva bajo mult. esc.}), 
+es el ángulo que forma con el espacio $W_{n,k}$ de señales de grado $k$,
 aunque la distancia euclidea de la señal
 al plano $W_{n,1}$ por lo general sí es afectada por multiplicaciones escalares.
 
@@ -421,9 +420,8 @@ al plano $W_{n,1}$ por lo general sí es afectada por multiplicaciones escalares
 \end{figure}
 
 \textbf{Tomamos pues al coseno del ángulo que forma $x$ con su proyección
-al plano $W_{n,1}$ como una medida de cercanía de $x$ a la propiedad de 
-ser afín.} 
-\TODO{generaliza lo anterior para cualquier grado $k$.}
+al plano $W_{n,k}$ como una medida de cercanía de $x$ a la propiedad de 
+tener grado $k$.} 
 Es decir, no usamos la distancia euclidea de 
 $x$ al espacio de señales $W_{n,k}$ para dar una medida
 de qué tanto tiene $x$ la propiedad de ``ser un polinomio

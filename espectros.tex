@@ -14,7 +14,7 @@ la hipótesis hecha en
 \ref{ref: hipotesis}. 
 
 Puede encontrar el código, implementado en Python,
-en \TODO{cita al repositorio.} \\
+en \url{https://github.com/AmelieBernes/tesis-licenciatura/tree/main}. \\
 
 Antes de mostrar las gráficas de los espectros
 de algunos PDL, 
@@ -243,7 +243,10 @@ Intentaremos responder a la pregunta \ref{pregunta 1}
 con gráficas análogas
 a las expuestas en el ejemplo
 \ref{ej: espectros comparacion},
-esta vez para analizar algunos PDL; la función con la que
+esta vez para analizar algunos PDL. 
+
+\begin{comment}
+la función con la que
 hacemos esto es
 \texttt{analisis$\_$espectrales$\_$PDL$\_$mostrarGrafica}. 
 Para calcular los datos necesarios para responder
@@ -276,14 +279,10 @@ de bytes. El archivo binario en el que se almacenaron los
 datos calculados con la función 
 \texttt{analisis$\_$espectralPDL$\_$global(n)}
 es \texttt{data$\_$AE.txt}. \\
+\end{comment}
 
-La función con la que obtenemos gráficas análogas 
-a la de la figura 
-\ref{fig: ejemplo_pregunta2} es
-\texttt{grafica$\_$analisisGlobal$\_$k$\_$fijo}
-y, para obtener gráficas análogas a la de la figura
-\ref{fig: ejemplo_pregunta3_0},
-usamos \texttt{graficar$\_$analisis$\_$espectralPDL$\_$global}.
+\marginnote{Calculamos una sola vez y guardamos los datos
+necesarios para dibujar estas gráficas con el módulo \texttt{pickle} de python.}
 
 Recordamos que,
 para cada análisis espectral,
@@ -298,9 +297,8 @@ como gráficas análogas a las de las figuras
 \ref{fig: ejemplo_pregunta2}
 y 
 \ref{fig: ejemplo_pregunta3_0}
-se han guardado en \TODO{cita la carpeta del
-repositorio
-con las imágenes.}
+se han guardado en 
+\url{https://github.com/AmelieBernes/tesis-licenciatura/tree/main/imagenes/graficas_analisisEspectrales}.
 A continuación, mostramos algunas
 de estas imágenes con algunos comentarios
 que nos ayuden a responder numéricamente a 
@@ -465,12 +463,6 @@ $n=7$ o si también ocurre para otros valores de $n$.
 	\includegraphics[scale = 0.45]{./estudios_espectrales/3_1} 
 \end{figure}	
 
-Comprobemos, graficando los espectros 
-de algunos PDL de grado $1$ y dimensión mayor a $3$, 
-que frecuencias muy cercanas a $0$ son buenas para modelar
-la gráfica de $\cali{L}^{n,1}$, hecho que es 
-sugerido por la figura \ref{fig: k_1}.
-
 \begin{figure}[H]
 	\sidecaption{
 	Note que en este espectro no ocurre lo que se tenía
@@ -494,65 +486,18 @@ sugerido por la figura \ref{fig: k_1}.
 	\includegraphics[scale = 0.45]{./estudios_espectrales/34_1} 
 \end{figure}	
 
-Puede comprobar, mirando los espectros
-\TODO{Cambiar!!}
-de los PDL $\cali{L}^{n,1}$ de grado $1$,
-que siempre se tiene que $ \omega = 0$ es la frecuencia
-que maximiza el coeficiente espectral
-$\sigma_{n}(\cali{L}^{n,k}, \omega)$.
-Esto se explica notando lo siguiente.
-Como se expuso en la proposición
-\ref{prop: relacion limite cero con legendre}, 
+Observe que las frecuencias que maximizan los
+coeficientes espectrales $\Sigma_{\cali{L}^{n,1}}$
+de los 
+PDL de grado $1$ son todas cero, pues
+como $\cali{L}^{n,1}$ es elemento de $W_{n,1}$, 
+coincide con su proyección a este espacio, luego,
 \[
-\limite{\omega\rightarrow 0^{+}}{\Sigma_{\cali{L}^{n,1}}(\omega)}
-= cos(\measuredangle(\cali{L}^{n,1}, W_{n,0})).
-\]
-Recuerde ahora que, según el teorema
-\ref{cor: BON de legendre para espacios Wk},
-$\cali{L}^{n,1}$ es elemento de el espacio $W_{n,0}$, luego,
-\[
-cos(\measuredangle(\cali{L}^{n,1}, W_{n,0})) = 
+\Sigma_{\cali{L}^{n,1}}(0) =
+cos(\measuredangle(\cali{L}^{n,1}, W_{n,1})) = 
 cos(\measuredangle(\cali{L}^{n,1}, \cali{L}^{n,1}))
-= cos(0) = 1,
+= cos(0) = 1.
 \]
-así, 
-$\limite{\omega\rightarrow 0^{+}}{\Sigma_{\cali{L}^{n,1}}(\omega)} =1$, por lo 
-que frecuencias muy cercanas a cero son apropiadas
-para modelar la gráfica de un PDL de grado $1$.
-Observe, sin embargo, que 
-$\Sigma_{\cali{L}^{n,1}}(0)=0$, pues
-$P_{n, 0}$ está generado por
-$c_{n,0}$, que es el vector constante uno, y que,
-por ser paralelo a $\cali{L}^{n,0}$,
-es ortogonal a $\cali{L}^{n,k}$. Así, los espectros
-de los PDL de grado $1$ tienen una discontinuidad de salto
-por la derecha del cero. 
-
-\begin{comment}
-Esto se explica observando que
-lo que estamos haciendo con este análisis espectral
-es aproximar las gráficas de señales con sinusoides, que son
-funciones diferenciables en todo punto
-(hecho que puede
-puede interpretarse
-como que los ``alrededores
-cercanos'' de cualquier
-punto de la gráfica de un sinusoide son 
-parecidos a una recta), luego, tiene sentido que  
-el análisis espectral de mayor peso a las 
-frecuencias cercanas a cero
-para modelar la gráfica de $\cali{L}^{n,k}$
-que, según el teorema 
-\ref{cor: BON de legendre para espacios Wk}, está contenida
-en una recta. Observe que 
-$\sigma_{n}(\cali{L}^{n,k}, 0)$ es cero, pues
-$P_{n, 0}$ está generado por
-$c_{n,0}$, que es el vector constante uno, y que,
-por ser paralelo a $\cali{L}^{n,0}$,
-es ortogonal a $\cali{L}^{n,k}$. Así, los espectros
-de los PDL de grado $1$ tienen una discontinuidad de salto
-por la derecha del cero. 
-\end{comment}
 
 
 Graficando algunos PDL de dimensión
@@ -593,7 +538,8 @@ con un solo sinusoide.
 \end{figure}	
 
 Sin embargo, puede observar en los espectros guardados en 
-\TODO{referencia a carpeta} que, para las dimensiones consideradas,
+\url{https://github.com/AmelieBernes/tesis-licenciatura/tree/main/imagenes/graficas_analisisEspectrales}
+que, para las dimensiones consideradas,
 se consigue aproximar muy bien la gráfica del PDL
 $\cali{L}^{n,k}$ cuando $k$ es cercano a cero, y además 
 que los espectros parecen tener un solo máximo global
@@ -1002,8 +948,8 @@ Para concluir,
 vamos a resumir las observaciones hechas a lo largo 
 de la sección anterior.
 Recordamos que las gráficas análogas a las de tal sección,
-para dimensiones $0 \leq n \leq 69$, se han guardado 
-en \TODO{referencia repositorio.}
+para dimensiones $0 \leq n \leq 69$, se han guardado en 
+\url{https://github.com/AmelieBernes/tesis-licenciatura/tree/main/imagenes/graficas_analisisEspectrales}.
 
 \begin{itemize}
 \item Por ser discretizaciones de rectas,

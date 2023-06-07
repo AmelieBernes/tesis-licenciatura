@@ -178,7 +178,6 @@ y
 || \Pi_{W}(x) ||^{2} = \suma{k=0}{n-1}{|\langle x, e_{k} \rangle |^{2}}.
 \]
 \end{prop}
-\TODO{Cita a kolmogorov.}
 
 \begin{comment}
 % ESTO PARA LA DE MAESTRIA
@@ -198,12 +197,11 @@ proyección es la serie propuesta. \QEDB
 \end{comment}
 
 
-
-\section{La desigualdad de Cauchy-Schwarz y la continuidad del producto punto}
-\noindent Demostremos 
-una de las desigualdades
+Una de las desigualdades
 más importantes con las que se cuenta en un espacio
-con producto punto.
+con producto punto es la de Cauchy-Schwarz. Es un resultado clásico, y su 
+demostración puede encontrarse en casi cualquier libro de análisis, 
+en particular, en \cite{Lang}, p. 292.
 
 \begin{teo}
 (\textbf{Desigualdad de Cauchy-Schwarz}) \label{Teo:CauchySchwarz}
@@ -218,48 +216,9 @@ $ \langle \cdot  , \cdot  \rangle$.
 siendo $|| \cdot ||$
 la norma inducida por el producto punto.
 \end{teo}
-\noindent
-\textbf{Demostración.}
-(basada en la demostración
-ofrecida en ~\cite{Lang}, p. 292)
-\begin{itemize}
-\item Si alguno de los vectores $x$ o $y$ es cero,
-la igualdad se da trivialmente (el vector cero tiene norma
-cero y es ortogonal a cualquier vector). 
-
-\item Si $x=a y$ para algún $a \in F$ no cero, también se 
-da la igualdad:
-\[
-|\langle  x , y \rangle | =
-|\langle  ay , y \rangle | = |a| \cdot  |\langle  y , y \rangle | =  
- |a| \cdot ||y||^{2}
-=||ay|| \cdot ||y|| = ||x|| \cdot ||y||.
-\]
-\item Supongamos por último que no ocurre ninguno
-de los casos de los puntos anteriores, o sea, que
-$x$ y $y$ son linealmente independientes. \\
-Si $c:=\frac{\langle x , y \rangle}{\langle y , y \rangle}$,
-de la linealidad en la primera entrada
-del producto punto se sigue fácilmente que
-$x - cy$ es ortogonal a $y$, por lo tanto, a $cy$,
-luego, 
-por el teorema de pitágoras,
-\begin{align*}
-||x||^{2} & = ||x-cy||^{2} + ||cy||^{2} \\
-& \geq ||cy||^{2}= |c|^{2} \cdot ||y||^{2} \\
-& = \frac{\langle x , y \rangle ^{2}}{\langle y , y \rangle ^{2}} \cdot\langle y , y \rangle
-= \frac{\langle x , y \rangle ^{2}}{|| y ||^{2}},
-\end{align*}
-luego, 
-\[
-\langle x, y \rangle ^{2}  \leq ||x||^{2} \cdot ||y||^{2}.
-\]
-Tomando raíces cuadradas en ambos lados de la
-desigualdad llegamos a la desigualdad deseada. \QEDB
-\end{itemize}
-\vspace{0.2cm}
 
 
+\begin{comment}
 Esta desigualdad, que relaciona la norma de los
 vectores con el valor
 absoluto de su producto punto, permite
@@ -321,6 +280,7 @@ $ \limite{n \rightarrow \infty}{
 \langle  x_{n} , y_{n} \rangle} = \langle  x , y \rangle$.
 \QEDB
 \vspace{0.2cm}
+\end{comment}
 
 
 \begin{comment} Esto es algo que hice que, ahora sé, es incorrecto. \\ 
