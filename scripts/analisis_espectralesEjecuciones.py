@@ -129,7 +129,12 @@ x = [f(t/25) for t in range(25)]
 #x = [cos_sin_ruido(t/36, -1.5, 5, 0.2) for t in range(36)]
 #x = [1,2,-3,-6, -9, 5, 8, 7, 7, 2.3, 6.9]
 
-
+#x1 = (3, 0.8660254, -0.8660254)
+x1 = (1, 0, 0, 1)
+ae.grafica_analisisEspectrales(x1, 'x1', graficar = True)
+#x2 = (2, 2.23205081, -1.2320508)
+x2 = (3, 0, 0, 3)
+ae.grafica_analisisEspectrales(x2, 'x2', graficar = True)
 
 # -------------- Ejemplo alternado 0 ----------------
 #x = [cos_con_ruido(t/50,A = -1.5, w = 22.4, phi = 0.2) for t in range(50)]

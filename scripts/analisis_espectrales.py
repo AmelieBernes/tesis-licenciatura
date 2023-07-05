@@ -281,7 +281,6 @@ def limite_n_medios(x,n):
 #  ---------------------------------------- -- ----------------------------------------
 """
 
-
 #Funciones coseno y coseno a partir de las que se construye todo lo que sigue.
 #En realidad, estos son casos particulares de (???), pero las programamos para evitar
 #realizar cálculos que sabemos son iguales a cero.
