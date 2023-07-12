@@ -1,0 +1,83 @@
+%Presentación examen profesional
+%
+
+\documentclass[]{beamer}
+\usepackage{babel}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox} %para encerrar texto en cajas de colores
+
+%%%% Mis macros %%%%
+
+			%% Secciones:
+	
+			\newtheorem{teo}{\bf Theorem}
+			\newtheorem{lema}{\textbf{Lemma}}
+			\newtheorem{prop}{\bf Proposition}
+			\newtheorem{obs}{\bf Observation}
+			\newtheorem{dem}{\bf Proof}
+			\newtheorem{cor}{\bf Corollary}
+			\newtheorem{defi}{\bf Definition}
+			\newtheorem{ej}{\bf Example}
+			\newtheorem{notacion}{\bf Notation}
+			\newtheorem{hip}{\bf Hypothesis}
+
+			
+			\theoremstyle{definition}
+			\newtheorem{nota}{\bf Nota}
+
+			%% Símbolos matemáticos
+			\newcommand*{\QEDA}{\null\nobreak\hfill\ensuremath{\blacksquare}}%
+			\newcommand*{\QEDB}{\null\nobreak\hfill\ensuremath{\square}}%
+			\newcommand{\TODO}[1]{\textcolor{purple}{#1}}
+			\newcommand*{\final}{\null\nobreak\hfill\ensuremath{\diamond}}
+			\newcommand{\IR}{\mathbb{R}}
+			\newcommand{\IC}{\mathbb{C}}
+			\newcommand{\IN}{\mathbb{N}}
+			\newcommand{\IZ}{\mathbb{Z}}
+			\newcommand{\suma}[3]{\sum\limits_{#1}^{#2}#3} %Sumas y series
+			\newcommand{\union}[3]{\bigcup\limits_{#1}^{#2}{#3}} %uniones
+			\newcommand{\producto}[3]{\prod_{#1}^{#2}{#3}} %productos
+			\newcommand{\limite}[2]{\lim\limits_{#1}{#2}} %límites
+			\newcommand{\limsu}[2]{\lim\limits_{#1 \rightarrow \infty }#2_{#1}}
+			%para límites de sucesiones
+			\newcommand{\Om}{\Omega}
+			\newcommand{\cali}[1]{\mathcal{#1}} %Letras caligráficas
+			\newcommand{\cont}[2]{$\mathcal{C} [#1, #2]$}
+			\newcommand{\integ}[3]{\int_{#1}^{#2}{#3}}
+			\newcommand{\ldos}{\mathit{l}^{2}}
+
+
+			\DeclareMathOperator*{\ameboxplus}{{\boxplus}}
+
+
+
+
+
+\title{La transformada de Haar-Legendre}
+\author{Amélie Bernès}
+
+
+\usecolortheme{owl}
+%\usetheme{Madrid}
+%\useinnertheme{circles}
+
+%\useoutertheme{sidebar} 
+
+\title[PDL]{A study and spectral analysis of the discrete Legendre polynomials} 
+
+\author{Amélie Bernès \and Moisés Soto Bajo \and Javier Herrera Vega} 
+
+\institute[BUAP]{Benemérita Universidad Autónoma de Puebla \\ \smallskip \textit{ammel.bernes@gmail.com}}
+
+\date[\today]{\today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
+
+\begin{document}
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+
+\end{document}
