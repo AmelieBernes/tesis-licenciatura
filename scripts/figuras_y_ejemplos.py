@@ -44,12 +44,10 @@ def formato_axis(axis):
 colores=['hotpink', 'rebeccapurple','goldenrod','gray']
 
 def figura_introduccion():
+    fig, axis = plt.subplots()
     X=np.arange(0, 30.5, 0.05)
-    dominio=[]
-    for i in range(30):
-        dominio.append(i)
+    dominio=[i for i in range(30)]
    
-   #usamos la función random.uniform para agregar ruido a la figura.
     mediciones_parabola=[]
     for i in range(30):
         x=dominio[i]
@@ -60,9 +58,51 @@ def figura_introduccion():
         x=dominio[i]
         mediciones_recta.append(-0.7*x+5+random.uniform(-0.5, 0.5))
     
-    plt.scatter(dominio, mediciones_parabola, color='hotpink')
-    plt.scatter(dominio, mediciones_recta, color='hotpink', marker='x')
-    plt.grid()
+    axis.scatter(dominio, mediciones_parabola, color='hotpink')
+    axis.scatter(dominio, mediciones_recta, color='hotpink', marker='x')
+    axis.grid()
+    return plt.show()
+
+
+def figura_rectaParabola():
+    fig, axis = plt.subplots(2,2)
+    X = np.arange(-0.5, 15.5, 0.05)
+    def recta(t):
+        return 2*t+1
+    def parabola(t):
+        return (0.5*t-3)**2
+
+    dominio = [t for t in range(15)]
+
+    cte_disc = [20 for t in dominio]
+    cte_discNoise = [20 + random.uniform(-1.5,1.5) for t in dominio]
+
+    recta_disc = [recta(t) for t in dominio]
+    recta_discNoise = [t + random.uniform(-1.5,1.5) for t in recta_disc]
+
+    parab_disc = [parabola(t) for t in dominio]
+    parab_discNoise = [t + random.uniform(-1.5,1.5) for t in parab_disc]
+
+    axis[0,0].scatter(dominio, recta_disc, color = 'hotpink')
+    axis[0,0].scatter(dominio, cte_disc, color = 'hotpink', marker = 'x')
+    axis[0,0].plot(X, recta(X), linestyle = 'dotted', color = 'hotpink')
+    axis[0,0].set_title("Señales afines")
+
+    axis[0,1].scatter(dominio, recta_discNoise, color = 'hotpink')
+    axis[0,1].scatter(dominio, cte_discNoise, color = 'hotpink', marker = 'x')
+    axis[0,1].set_title("Señales casi afines")
+
+    axis[1,0].plot(X, parabola(X), linestyle = 'dotted', color = 'hotpink')
+    axis[1,0].scatter(dominio, parab_disc, color = 'hotpink')
+    axis[1,0].set_title("Señal cuadrática")
+
+    axis[1,1].scatter(dominio, parab_discNoise, color = 'hotpink')
+    axis[1,1].set_title("Señal casi cuadrática")
+
+    for i in range(2):
+        for j in range(2):
+            axis[i, j].grid()
+
     return plt.show()
 
 
@@ -627,12 +667,13 @@ def ejemplificando_operador_alternancia(x, nombre):
     return plt.show()
 
 if __name__=='__main__':
-    n, k = 15,1
-    x = legendre.calculo_base(n)[k]
-    nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n) + ', ' + str(k))
-    ejemplificando_operador_alternancia(x, nombre)
+    #n, k = 15,1
+    #x = legendre.calculo_base(n)[k]
+    #nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n) + ', ' + str(k))
+    #ejemplificando_operador_alternancia(x, nombre)
     #figura_discretizacionPuntual()
     #figura_cambioDeMalla()
+    figura_rectaParabola()
     #figura_introduccion()
     #figura_coseno()
     #figura_demSimetrias()
