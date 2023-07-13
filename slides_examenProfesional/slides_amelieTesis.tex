@@ -58,6 +58,12 @@
 
 
 
+%Bibliografía
+\setbeamercolor{bibliography item}{parent=palette primary}
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+\addbibresource{Referencias.bib}
+
+
 
 \title{La transformada de Haar-Legendre}
 \author{Amélie Bernès}
@@ -69,10 +75,10 @@
 
 
 \title[]{Estudio y análisis espectral de los polinomios discretos de Legendre} 
-
 \author[]{Amélie Bernès \and Moisés Soto Bajo \and Javier Herrera Vega} 
-
 \institute[BUAP]{Benemérita Universidad Autónoma de Puebla \\ \smallskip \textit{ammel.bernes@gmail.com}}
+
+
 
 \date[\today]{\today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
 
@@ -108,8 +114,8 @@
 \input{1.espaciosWnk}
 \input{2.PDL}
 \input{3.AE}
-\input{4.Referencias}
-\input{Referencias.bib}
+\printbibliography
+
 
 
 \end{document}

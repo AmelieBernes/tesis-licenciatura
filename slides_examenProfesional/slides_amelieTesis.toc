@@ -8,7 +8,7 @@
 \beamer@subsectionintoc {3}{2}{Construcción}{33}{0}{3}
 \beamer@subsectionintoc {3}{3}{Simetrías en las entradas de los PDL}{39}{0}{3}
 \beamer@subsectionintoc {3}{4}{Cálculo de los PDL}{46}{0}{3}
-\beamer@subsectionintoc {3}{5}{Análisis de señales finitas en base a los PDL}{48}{0}{3}
-\beamer@sectionintoc {4}{Análisis espectral}{48}{0}{4}
-\beamer@subsectionintoc {4}{1}{Desarrollo de metodología}{48}{0}{4}
-\beamer@subsectionintoc {4}{2}{Resultados del análisis numérico de algunos PDL}{48}{0}{4}
+\beamer@sectionintoc {4}{Análisis de señales finitas en base a los PDL}{54}{0}{4}
+\beamer@sectionintoc {5}{Análisis espectral}{60}{0}{5}
+\beamer@subsectionintoc {5}{1}{Desarrollo de metodología}{60}{0}{5}
+\beamer@subsectionintoc {5}{2}{Resultados del análisis numérico de algunos PDL}{60}{0}{5}

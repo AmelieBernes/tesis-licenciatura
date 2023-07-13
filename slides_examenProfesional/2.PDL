@@ -294,7 +294,7 @@ w_{k} - \suma{\substack{ {j=0}, \\  {j\text{ par}}}}{k-1}{
     
     
    \begin{frame}
-   En \TODO{Survey}, fijada una dimensión $n \geq 2$, 
+   En \cite{Neuman}, fijada una dimensión $n \geq 2$, 
    se dan fórmulas para la única colección de $n$ vectores
    \begin{equation}
    \label{eq: base survey}
@@ -306,11 +306,126 @@ w_{k} - \suma{\substack{ {j=0}, \\  {j\text{ par}}}}{k-1}{
    		\item \textcolor{red}{[DLOP-2n]} la primera entrada de todos los $y_{n, k}$ es uno.
    \end{itemize}
    \pause 
-   En realidad, en \TODO{Survey} se habla en términos de funciones
+   En realidad, en \cite{Neuman} se habla en términos de funciones
    $P_{k}(\cdot , m)$ de variable discreta, a las que denomina
    ``discrete legendre orthogonal polynomials''.
+   
+	A partir de las expresiones para \eqref{eq: base survey} queremos
+	encontrar expresiones para los PDL de dimensión $n$.
    \end{frame}
     
     
+	\begin{frame}
+		\begin{lema}
+		Sea $n \geq 2$ entero. Sean $y_{n,k}$ los vectores de \eqref{eq: base survey}.
+		Para toda $0 \leq k \leq n-1$, los vectores $y_{n,k}$ y
+		$\cali{L}^{n,k}$ son paralelos.
+		\end{lema}
+		\pause
+		\begin{prop}
+		Sea $n \geq 2$ entero. Para toda $0 \leq k \leq n-1$
+		\[
+		\cali{L}^{n,k} = (-1)^{k} \cdot \frac{y_{n,k}}{||y_{n, k} ||}.
+		\]
+		\end{prop}
+	\end{frame}	    
     
-    \subsection{Análisis de señales finitas en base a los PDL}
+    \begin{frame}
+    \begin{defi}
+\label{def: fading factorial}
+Sean $K, m \in \overline{\IN}$. Se define
+el \textbf{fading factorial} $K^{(m)}$ como sigue;
+\begin{align*}
+K^{(m)}= \begin{cases}
+\frac{K!}{(K-m)!} & \hspace{0.2cm} \text{si } K \geq m, \\
+0 & \hspace{0.2cm} \text{en otro caso.} 
+\end{cases}
+\end{align*}
+\end{defi}
+
+\begin{teo}
+\label{teo: expresión analítica de BON de Legendre}
+Sea $n\in \IN$. Para toda $0 \leq k \leq n-1$,
+\begin{equation} \small
+\label{eq0: 6En}
+\cali{L}^{n,k}_{m}= (-1)^{k} \sqrt{\frac{(2k+1)(n-1)^{(k)}}{(n+k)^{(k+1)}}}
+\suma{j=0}{k}{(-1)^{j}\binom{k}{j}\binom{k+j}{j}
+\frac{m^{(j)}}{(n-1)^{(j)}}},
+\end{equation}
+donde $\cali{L}^{n,k}=(\cali{L}_{m}^{n,k})_{m=0}^{n-1}$
+es el polinomio discreto de Legendre de
+dimensión $n$ y grado $k$.
+\end{teo}
+    \end{frame}
+    
+    
+	\begin{frame}{Imágenes de PDL para dimensiones bajas}
+	\begin{figure}[h]
+		\includegraphics[scale = 0.65]{PDL_2_3}
+	\end{figure}
+	\end{frame}	    
+    
+    \begin{frame}{Imágenes de PDL para dimensiones bajas}
+	\begin{figure}[h]
+		\includegraphics[scale = 0.65]{PDL_4_5}
+	\end{figure}
+	\end{frame}	
+	
+	\begin{frame}{Imágenes de PDL para dimensiones bajas}
+	\begin{figure}[h]
+		\includegraphics[scale = 0.65]{PDL_6_7}
+	\end{figure}
+	\end{frame}	
+    
+
+\section{Análisis de señales finitas en base a los PDL}
+\begin{frame}
+Recuerde que la distancia de una señal $x \in \IR^{n}$ a un
+espacio $W_{n,k}$ indica qué tanto $x$ tiende a ser la discretización
+de un polinomio de grado $k$.
+
+¿Cómo estamos midiendo esta distancia?
+\pause
+	\begin{figure}[h]
+		\includegraphics[scale = 0.7]{medir_distancia}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{¿Por qué nos conviene más usar similitud coseno?}
+\textbf{Respuesta:} al igual que la forma de la gráfica de una señal,
+la distancia coseno de la señal a un subespacio de su espacio ambiente
+es invariante bajo multiplicación por escalares.
+\pause
+	\begin{figure}[h]
+		\includegraphics[scale = 0.13]{cosSim_mejor}
+	\end{figure}
+	\TODO{Aquí pon la fórmula de sim coseno!!}
+\end{frame}
+
+
+\begin{frame}{Usando los coeficientes de una señal respecto a $\cali{L}^{n}$
+para hacer un análisis morfológico}
+Usando la representación de $x \in \IR^{n}$ respecto a $\cali{L}^{n}$, es muy fácil
+calcular las proyecciones de $x$ a todos los espacios $W_{n, k}$.
+	\begin{figure}[h]
+		\includegraphics[scale = 0.27]{abee}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+Sea $x = \suma{i=0}{n-1}{a_{i} \cali{L}^{n,k}}$. Como $\cali{L}^{n}$
+es BON, claro que $a_{i} = \langle x, \cali{L}^{n,k} \rangle$.
+
+Fijado $0 \leq k < n-1$, 
+$x$ es cercano a $\Pi_{W_{n, k}}(x) = \suma{i=0}{k}{a_{i} \cali{L}^{n,k}}$ si y sólo si 
+$x - \Pi_{W_{n,k}}$ es cercano a cero, o, equivalentemente, si y sólo si
+\[
+||x - \Pi_{W_{n,k}} ||^{2} = \suma{i=k+1}{n-1}{a_{i}^{2}} \approx 0.
+\]
+Puesto que
+
+\end{frame}
+
+
