@@ -8,20 +8,24 @@
 \usepackage{xcolor}
 \usepackage[most]{tcolorbox} %para encerrar texto en cajas de colores
 
+\usepackage{adjustbox} %Para poder ajustar el tamaño de las tablas
+
 %%%% Mis macros %%%%
 
+\let\newemptytheorem\newtheorem
+\usepackage{thmbox}
 			%% Secciones:
 	
-			\newtheorem{teo}{\bf Theorem}
-			\newtheorem{lema}{\textbf{Lemma}}
-			\newtheorem{prop}{\bf Proposition}
-			\newtheorem{obs}{\bf Observation}
-			\newtheorem{dem}{\bf Proof}
-			\newtheorem{cor}{\bf Corollary}
-			\newtheorem{defi}{\bf Definition}
-			\newtheorem{ej}{\bf Example}
-			\newtheorem{notacion}{\bf Notation}
-			\newtheorem{hip}{\bf Hypothesis}
+			\newtheorem{teo}{\bf Teorema}
+			\newtheorem{lema}{\textbf{Lema}}
+			\newtheorem{prop}{\bf Proposición}
+			\newtheorem{obs}{\bf Observación}
+			\newtheorem{dem}{\bf Demostración}
+			\newtheorem{cor}{\bf Corolario}
+			\newtheorem{defi}{\bf Definición}
+			\newtheorem{ej}{\bf Ejemplo}
+			\newtheorem{notacion}{\bf Notación}
+			\newtheorem{hip}{\bf Hipótesis}
 
 			
 			\theoremstyle{definition}
@@ -64,7 +68,7 @@
 %\useinnertheme{circles}
 
 
-\title[]{A study and spectral analysis of the discrete Legendre polynomials} 
+\title[]{Estudio y análisis espectral de los polinomios discretos de Legendre} 
 
 \author[]{Amélie Bernès \and Moisés Soto Bajo \and Javier Herrera Vega} 
 
@@ -99,153 +103,13 @@
 
 
 
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-\section{Motivación}
-\begin{frame}
-Fijado $n \geq 2$ entero, una \textbf{señal de dimensión $n$} será
-representada como un vector $x = (x_{m})_{m=0}^{n-1}$ 
-de $\IR^{n}$. La \textbf{gráfica} de $x$
-será el conjunto
-\[
-G_{x} := \{ (m, x_{m}): \hspace{0.2cm} 0 \leq m \leq n-1 \}. 
-\]
-\pause
 
-
-\begin{figure}[H]
-\centering
-	\begin{figure}
-		\includegraphics[scale=0.4]{graficasAfinCuadr} 
- 	\end{figure}
- \end{figure}
-
-Nos interesa estudiar la forma de la gráfica de una señal, en particular,
-saber si parece tener forma de recta o parábola.
-
-\end{frame}
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-
-
-
-
-
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-\begin{frame}
-Una señal $x \in \IR^{n}$ se dirá \textbf{afín} si su gráfica
-$G_{x}$ es la discretización puntual de una recta 
-$l : y = mx + b$.
-en la malla
-\[
-\cali{P}_{n} := \{0, 1, \ldots , n-1 \}.
-\]
-
-Si la recta es de la forma $l: y = b$, diremos que $x$ es \textbf{constante.}
-
-\begin{figure}[H]
-\centering
-	\begin{figure}
-		\includegraphics[scale=0.4]{afines}
- 	\end{figure}
- \end{figure}
-
-
-\end{frame}
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-
-
-
-
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-\begin{frame}
-Una señal $x \in \IR^{n}$ se dirá \textbf{cuadrática} si su gráfica
-$G_{x}$ es la discretización puntual de una parábola
-$l : y = ax^{2} + bx + c$, con $a \neq 0$, en la malla
-$\cali{P}_{n}$.
-
-\begin{figure}[H]
-\centering
-	\begin{figure}
-		\includegraphics[scale=0.4]{cuadraticas}
- 	\end{figure}
- \end{figure}
-
-\end{frame}
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-
-
-
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-\begin{frame}
-Fijada una dimensión $n \geq 2$, buscamos una base
-$\cali{L}^{n} = \{ \cali{L}^{n,k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$
-de $\IR^{n}$
-
-\begin{itemize}
-	\item (\textcolor{red}{Tamaño}) 
-	que sea ortonormal, pues así se cumplirá que,
-	para toda señal $x \in \IR^{n}$, 
-	\[
-	x = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle x}
-	\hspace{0.2cm} \textit{y} \hspace{0.2cm}
-	||x||^{2} = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle^{2}},
-	\]
-	y
-	
-	\item (\textcolor{red}{Forma}) para la que sea posible establecer criterios
-	sencillos sobre la forma de la gráfica de una señal $x$ en términos
-	de la representación de esta respecto a la base $\cali{L}^{n,k}$.
-	
-\end{itemize}
-\end{frame}
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-
-
-
-
-
-
-
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-\begin{frame}
-
-\begin{figure}[H]
-\centering
-	\begin{figure}
-		\includegraphics[scale= 0.7 ]{cuadr1}
- 	\end{figure}
- \end{figure}
-
-\begin{figure}[H]
-\centering
-	\begin{figure}
-		\includegraphics[scale= 0.7]{cuadr2}
- 	\end{figure}
- \end{figure}
-\end{frame}
-% ------------------------------------------------------------ %
-% ------------------------------------------------------------ %
-
-
-
-
-
-
-
+\input{0.motivacion}
+\input{1.espaciosWnk}
+\input{2.PDL}
+\input{3.AE}
+\input{4.Referencias}
+\input{Referencias.bib}
 
 
 \end{document}

@@ -1,2 +1,14 @@
 \babel@toc {nil}{}\relax 
 \beamer@sectionintoc {1}{Motivación}{3}{0}{1}
+\beamer@sectionintoc {2}{Espacios de polinomios discretos}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Espacios $W_{n,k}$}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Una definición del grado de una señal finita}{22}{0}{2}
+\beamer@sectionintoc {3}{Polinomios discretos de Legendre}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Sobre los PDL en la literatura}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{Construcción}{33}{0}{3}
+\beamer@subsectionintoc {3}{3}{Simetrías en las entradas de los PDL}{39}{0}{3}
+\beamer@subsectionintoc {3}{4}{Cálculo de los PDL}{46}{0}{3}
+\beamer@subsectionintoc {3}{5}{Análisis de señales finitas en base a los PDL}{48}{0}{3}
+\beamer@sectionintoc {4}{Análisis espectral}{48}{0}{4}
+\beamer@subsectionintoc {4}{1}{Desarrollo de metodología}{48}{0}{4}
+\beamer@subsectionintoc {4}{2}{Resultados del análisis numérico de algunos PDL}{48}{0}{4}

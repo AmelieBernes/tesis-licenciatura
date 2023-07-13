@@ -1,0 +1,316 @@
+\section{Polinomios discretos de Legendre}
+\begin{frame}
+Por lo visto antes, 
+\TODO{...} encontrar una base ortonormal para
+cada espacio de polinomios discretos
+$W_{n,k}$. Al hacer esto, 
+\textbf{polinomios discretos de Legendre},
+objetos ya estudiados y aplicados en la literatura.
+\end{frame}
+
+
+	\subsection{Sobre los PDL en la literatura}
+	\TODO{Aquí tienes que hacer referencia a lo que debes leer de tarea.}
+	También habla de la aplicación principal de estos polinomios
+	discretos en la ingeniería; usarlos para facilitar la resolución
+	de problemas de minimización.
+	
+	\begin{figure}[h]
+		\includegraphics[scale = 1]{fitting_problem}
+	\end{figure}
+	
+	
+    \subsection{Construcción}
+    
+    \begin{frame}{Construcción de la base discreta de Legendre}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.65]{construccion1}
+	\end{figure}
+    \end{frame}
+	
+	\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.65]{construccion3}
+	\end{figure}
+    \end{frame}
+    
+    \begin{frame}{Gram-Schmidt geométrico}
+    \begin{figure}[h]
+		\includegraphics[scale = 1]{orthonorm}
+	\end{figure}
+    \end{frame}
+	  
+	\begin{frame}
+	Puesto que $W_{n, n-1} = \IR^{n}$, 
+	\begin{equation}
+		\label{eq: BDL dim n}
+		\cali{L}^{n} := \{ \cali{L}^{n,k}: \hspace{0.2cm} 
+		0 \leq k \leq n-1 \}
+	\end{equation}
+	es una BON de $\IR^{n}$. Llamamos a esta la
+	\textbf{base de Legendre discreta de dimensión $n$}.
+	\pause
+	
+	Al vector $\cali{L}^{n,k} \in \IR^{n}$ le llamaremos
+	el \textbf{vector de Legendre de dimensión $n$ y grado $k$.}
+	\begin{figure}[h]
+		\includegraphics[scale = 0.6]{pdl}
+	\end{figure}
+
+	\end{frame}	    
+    
+    
+    \subsection{Simetrías en las entradas de los PDL}
+    
+	\begin{frame}{Simetrías en las entradas de los PDL}
+
+	Tabulemos los valores de algunos PDL.	
+	
+	%Tabla coloreada para n=2,3,4
+\begin{table}
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{ c c c c c c }
+k $\backslash$ n & 2 & 3 & 4   \\ 
+\hline
+
+0 & $\left(
+{\color{red}{\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
+\right)$ & 
+$\left(
+{\color{red}{\frac{1}{\sqrt{3}}}}, 
+\frac{1}{\sqrt{3}}, 
+{\color{red}{\frac{1}{\sqrt{3}}}} 
+\right)$ &   
+$\left(
+{\color{red}{\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{1}{2}}}
+\right)$ \\ 
+1 & 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
+\right)$ & 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{2}}}}, 0, 
+{\color{blue}{\frac{1}{\sqrt{2}}}} 
+\right) $ & 
+$\left(
+{\color{blue}{-\frac{3}{2\sqrt{5}}, -\frac{1}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}}} 
+\right)$  \\ 
+2 & $---$ & $\left(
+{\color{red}{\frac{1}{\sqrt{6}}}}, -\sqrt{\frac{2}{3}}, 
+{\color{red}{\frac{1}{\sqrt{6}}}} \right) $ & 
+$\left(
+{\color{red}{\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, \frac{1}{2}}} 
+\right)$ \\ 
+3 & $---$ & $---$ & 
+$\left(
+{\color{blue}{-\frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}, -\frac{3}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}}}
+\right)$  \\ 
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+	\end{frame}	    
+    
+    
+    
+    
+    
+
+\begin{frame}
+
+Parece ser que existe una simetría central en las entradas
+de los PDL.
+
+\begin{table}
+%Tabla coloreada para n=5,6
+\begin{adjustbox}{width=\columnwidth,center}
+\begin{tabular}{ c c c c c c }
+k $\backslash$ n & 5 & 6  \\ 
+\hline
+0 & 
+$\left(
+{\color{red}{\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}}}}, \frac{1}{\sqrt{5}},
+{\color{red}{\frac{1}{\sqrt{5}}, \frac{1}{\sqrt{5}}}} 
+\right)$ 
+& $\left(
+{\color{red}{\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}},
+\frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}, \frac{1}{\sqrt{6}}}} 
+\right)$ \\ 
+1 &  
+$\left(
+{\color{blue}{-\sqrt{\frac{2}{5}}, -\frac{1}{\sqrt{10}}}}, 0,
+{\color{blue}{\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}}}} 
+\right)$  & 
+$\left(
+{\color{blue}{-\sqrt{\frac{5}{14}}, -\frac{3}{\sqrt{70}}, -\frac{1}{\sqrt{70}},
+\frac{1}{\sqrt{70}}, \frac{3}{\sqrt{70}}, \sqrt{\frac{5}{14}} }}
+\right)$ \\ 
+2 & 
+$\left(
+{\color{red}{\sqrt{\frac{2}{7}}, -\frac{1}{\sqrt{14}}}}, -\sqrt{\frac{2}{7}},
+{\color{red}{-\frac{1}{\sqrt{14}}, \sqrt{\frac{2}{7}}}} \right)$ 
+& $\left(
+{\color{red}{\frac{5}{2\sqrt{21}}, -\frac{1}{2\sqrt{21}}, -\frac{2}{\sqrt{21}},
+-\frac{2}{\sqrt{21}}, -\frac{1}{2\sqrt{21}}, \frac{5}{2\sqrt{21}}}} 
+\right)$ \\ 
+3 & 
+$\left(
+{\color{blue}{-\frac{1}{\sqrt{10}}, \sqrt{\frac{2}{5}}}}, 0,
+{\color{blue}{-\sqrt{\frac{2}{5}}, \frac{1}{\sqrt{10}}}} 
+\right)$ &
+$\left(
+{\color{blue}{-\frac{\sqrt{5}}{6}, \frac{7}{6\sqrt{5}}, \frac{2}{3\sqrt{5}},
+-\frac{2}{3\sqrt{5}}, -\frac{7}{6\sqrt{5}}, \frac{\sqrt{5}}{6}}}
+\right)$ \\ 
+4 & $\left(
+{\color{red}{\frac{1}{\sqrt{70}}, -\frac{2\sqrt{2}}{\sqrt{35}}}}, 
+\frac{3\sqrt{2}}{\sqrt{35}},
+{\color{red}{-\frac{2\sqrt{2}}{\sqrt{35}}, \frac{1}{\sqrt{70}}}} 
+\right) $ & 
+$\left( 
+{\color{red}{\frac{1}{2\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{\sqrt{7}},
+\frac{1}{\sqrt{7}}, -\frac{3}{2\sqrt{7}}, \frac{1}{2\sqrt{7}}}} 
+\right)$ \\ 
+5 & $---$ & 
+$\left(
+{\color{blue}{-\frac{1}{6\sqrt{7}}, \frac{5}{6\sqrt{7}}, -\frac{5}{3\sqrt{7}},
+\frac{5}{3\sqrt{7}}, -\frac{5}{6\sqrt{7}}, \frac{1}{6\sqrt{7}}}} 
+\right)$ 
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\end{frame}
+
+
+
+\begin{frame}
+\begin{defi}
+\label{def: espacios de seniales simetricas y antisimetricas}
+Sea $n \in \IN$, $n \geq 2$. 
+Sea $M = \lceil \frac{n}{2} \rceil$.
+Definimos al 
+\textbf{espacio de señales antisimétricas} $S_{n,-}$ como 
+	\begin{equation}
+	\label{eq: def de Sn-}
+	S_{n, -}:= \{ x=(x_{m})_{m=0}^{n-1}  \in \IR^{n}
+	\hspace{0.2cm} |
+	\hspace{0.2cm} \forall  
+	\hspace{0.1cm}
+	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= -x_{n-m-1}\}
+	\end{equation}
+
+\noindent	
+y, además, definimos al
+\textbf{espacio de señales simétricas} $S_{n,+}$ como 
+ 
+	\begin{equation}
+	\label{eq: def de Sn+}
+	S_{n, +}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
+	| \hspace{0.2cm} \forall  
+	\hspace{0.1cm}
+	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= x_{n-m-1}\},
+	\end{equation}
+\end{defi}
+\end{frame}
+
+
+\begin{frame}
+Las siguientes propiedades de los conjuntos
+$S_{n, +}$ y $S_{n, -}$ se siguen de inmediato.
+
+\begin{itemize}
+	\item $S_{n, +}$ y $S_{n, -}$ son subespacios de $\IR^{n}$.
+	\item Para cualesquiera $u \in S_{n, +}$ y $v \in S_{n, -}$
+	se cumple que $\langle u, v \rangle = 0$.
+\end{itemize}
+\pause
+
+\begin{figure}[h]
+		\includegraphics[scale = 0.2]{10Dic_1}
+\end{figure}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\begin{teo}
+\label{prop: simetrias en dimensiones impares}
+Sean $n \geq 2$ y
+$0 \leq k \leq n-1$ enteros.
+Se tiene que 
+\begin{itemize}
+\item $\cali{L}^{n,k} \in S_{n,+}$ si $k$ es par, y que
+\item $\cali{L}^{n,k} \in S_{n,-}$ si $k$ es impar.
+\end{itemize}
+\end{teo}
+
+\begin{figure}[h]
+		\includegraphics[scale = 0.6]{simetria1}
+\end{figure}
+
+\begin{figure}[h]
+		\includegraphics[scale = 0.6]{simetria2}
+\end{figure}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Idea de la demostración}
+
+Si $\{ \eta_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$
+es la BON de $\IR^{n}$ que se obtiene al ortogonalizar 
+a $\{ w_{k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$, entonces
+\[
+\forall 0 \leq k \leq n-1: \hspace{0.2cm}
+\cali{L}^{n, k} = \frac{1}{||\eta_{k||}} \eta_{k}.
+\]
+Si $k > 0$,
+\[
+\eta_{k} = w_{k} - \suma{j=0}{k-1}{
+\frac{\langle w_{k}, \eta_{k} \rangle}{\langle 
+\eta_{j}, \eta_{j}\rangle} \eta_{j}.
+}
+\]
+Procedemos por inducción sobre $k$.
+Por ejemplo, si $k$ es par,
+\[
+\eta_{k} = 
+\underbrace{
+w_{k} - \suma{\substack{ {j=0}, \\  {j\text{ par}}}}{k-1}{
+\frac{\langle w_{k}, \eta_{k} \rangle}{\langle 
+\eta_{j}, \eta_{j}\rangle} \eta_{j}
+}}_{\text{Combinación lineal de elementos de } S_{n, +}} \in S_{n, +}.
+\]
+
+\end{frame}
+
+
+\subsection{Cálculo de los PDL}
+    
+    
+   \begin{frame}
+   En \TODO{Survey}, fijada una dimensión $n \geq 2$, 
+   se dan fórmulas para la única colección de $n$ vectores
+   \begin{equation}
+   \label{eq: base survey}
+   		\{ y_{n, k} := (P_{k}(m, n-1))_{m=0}^{n-1}: \hspace{0.2cm} 0 \leq k \leq n-1 \}
+   \end{equation}
+   tal que
+   \begin{itemize}
+   		\item \textcolor{red}{[DLOP-1n]} los vectores $y_{n,k}$ son mutuamente ortogonales y
+   		\item \textcolor{red}{[DLOP-2n]} la primera entrada de todos los $y_{n, k}$ es uno.
+   \end{itemize}
+   \pause 
+   En realidad, en \TODO{Survey} se habla en términos de funciones
+   $P_{k}(\cdot , m)$ de variable discreta, a las que denomina
+   ``discrete legendre orthogonal polynomials''.
+   \end{frame}
+    
+    
+    
+    \subsection{Análisis de señales finitas en base a los PDL}

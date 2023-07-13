@@ -1,0 +1,257 @@
+\section{Espacios de polinomios discretos}
+
+\begin{frame}{Espacios de polinomios discretos}
+
+\TODO{Piensa en cómo introducir esto.}
+
+Fijemos una dimensión $n \neq 2$.
+
+\begin{itemize}
+	\item \textcolor{red}{Mallas uniformes:}
+	\[
+	\cali{P} = \{t_{j}= t_{0} + hj: \hspace{0.2cm} 0 \leq j \leq n-1  \}
+	\]
+\end{itemize}
+
+\pause
+
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+	\item \textcolor{red}{Discretización puntual:} dado 
+	$f \in \IR[t]$ y $\cali{P} = \{ t_{j} \}_{j=0}^{n-1}$ una malla uniforme,
+	\[
+	\Omega_{n, \cali{P}}(f) := (f(t_{j}))_{j=0}^{n-1} \in \IR^{n}.
+	\]
+	
+\end{itemize}
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale= 0.7]{disc_puntual}
+ 	\end{figure}
+ \end{figure}
+\end{minipage}
+
+
+\pause
+\[
+\omega_{n, \cali{P}}: \IR[t] \longrightarrow \IR^{n}
+\]
+es un operador lineal.
+
+\end{frame}
+
+
+\begin{frame}{Propiedad importante de $\Omega_{n, \cali{P}}$}
+La siguiente consecuencia directa del Teorema
+fundamental del Álgebra es de mayor importancia para el
+desarrollo del trabajo. \TODO{parafrasea.}
+
+
+
+\begin{prop}
+Sean $n \geq 2$ entero y $\cali{P}$ una malla uniforme de $n$ puntos.
+Si $f(t) \in \IR[t]$ es un polinomio de grado menor a $n$ 
+y $\Omega_{n, \cali{P}}(f)$ es el vector cero de $\IR^{n}$, entonces 
+$f$ es el polinomio cero.
+\end{prop}
+
+\textcolor{red}{\[
+\forall n\geq 2, 
+\forall \cali{P} = \{ t_{j} \}_{j=0}^{n-1},
+ \forall f \in \IR[t]:
+\hspace{0.2cm} \partial(f) \leq n \land \Omega_{n, \cali{P}} = 0
+\Rightarrow f = 0.
+\]}
+
+\end{frame}
+
+
+\subsection{Espacios $W_{n,k}$}
+
+\begin{frame}
+
+\TODO{Aquí definición de los Wnk.
+Caracterización de las bases? o lo dejo implicito en la proposición grande?}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Usando el operador $\Omega_{n, \cali{P}}$ para reformular 
+propiedades geométricas}
+
+Sea $x = (x_{m})_{m=0}^{n-1} \in \IR^{n}$.
+\begin{align*}
+x \textit{ es afín }  \Leftrightarrow &
+x = (a + bi)_{i=0}^{i} \hspace{0.2cm} \textit{ para algunos } a, b \in \IR \\
+\Leftrightarrow & x = \Omega_{n, \cali{P}_{n}}(l(t)) \textit{ para alguna } l(t) = a+bt \in \IR_{1}[t] \\
+\Leftrightarrow & x = a w_{0} + bw_{1} \\
+\Leftrightarrow & x \in W_{n, 1}.
+\end{align*}
+Análogamente
+\begin{center}
+$x$ es constante sii $x \in W_{n,0}$
+\end{center}
+y
+\begin{center}
+$x$ es cuadrática sii $x \in W_{n,2}$ y $x \not\in W_{n,1}$.
+\end{center}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Propiedades importantes de los espacios $W_{n,k}$}
+\begin{prop}
+		Sea $n \geq 2$ entero. 
+		Para cada $0 \leq k \leq n-1$ entero, sea $W_{n,k} \leq \IR^{n}$
+		el espacio definido en \TODO{ref}.
+		\begin{itemize}
+		\item $dim(W_{n,k}) = k+1$, \pause 
+		\item $\forall 0 \leq i \leq n-2$: $W_{n, i} \subseteq W_{n, i+1}$,
+		\pause
+		\item $\IR^{n} = W_{n, n-1}$
+		\pause
+		\item Sea $\cali{P}$ una malla uniforme de $n$
+		puntos. Para toda señal $x \in \IR^{n}$ 
+		y toda $0 \leq i \leq n-1$, $x \in W_{n,i}$
+		si y sólo si existe un polinomio $g(x)$ de grado a lo más 
+		$i$ tal que $x = \Omega_{n, \cali{P}}(g)$.
+		\end{itemize}
+\end{prop}
+\pause
+Este resultado implica que
+\textcolor{red}{toda señal $n-$dimensional sea la discretización
+puntual uniforme de un polinomio de grado a lo más $n$}.
+\end{frame}
+
+
+
+\begin{frame}
+
+La \textbf{pertenencia} 
+de una señal finita $n-$dimensional
+a un subespacio  $W_{n,k}$ de $\IR^{n}$
+determina la \textbf{forma} de su gráfica.
+
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{nuevas_lupas}
+\end{figure}
+\end{frame}
+
+
+\subsection{Una definición del grado de una señal finita}
+
+\begin{frame}{Una definición del grado de una señal finita}
+\TODO{Pon notación para espacio $\IR_{n-1}[t]$.}
+\begin{prop}
+Sean $n \geq 2$ y $\cali{P}$ una malla uniforme de $n$ puntos.
+La función
+\[
+\Omega_{n, \cali{P}}: \IR_{n-1}[t] \longrightarrow \IR^{n}
+\]
+es un isomorfismo $\IR-$espacios vectoriales.
+\end{prop}
+
+\textcolor{red}{Logramos asociar a una señal $n$-dimensional
+un único polinomio de grado menor a $n$}.
+Observe que, en la proposición, la
+malla $\cali{P}$ se fija en las hipótesis. \\
+
+\textbf{Pregunta:}
+¿Se pueden encontrar dos mallas $\cali{P}$ y $\tilde{\cali{P}}$
+y dos polinomios $f, \tilde{f}$ de grados
+$0 \leq \partial(f) < \partial(\tilde{f}) \leq n-1$
+tales que
+\[
+\Omega_{n, \cali{P}}(f) = x = \Omega_{n, \tilde{\cali{P}}}(\tilde{f}) ?
+\]
+\end{frame}
+
+\begin{frame}
+Lo que es seguro es que no se puede asegurar algún tipo de unicidad
+si quitamos la restricción en los grados de los polinomios a discretizar.
+\pause
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{grado1}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+Lo que es seguro es que no se puede asegurar algún tipo de unicidad
+si quitamos la restricción en los grados de los polinomios a discretizar.
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{grado2}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\textbf{Pregunta:}
+¿Se pueden encontrar dos mallas $\cali{P}$ y $\tilde{\cali{P}}$
+y dos polinomios $f, \tilde{f}$ de grados
+$0 \leq \partial(f) < \partial(\tilde{f}) \leq n-1$
+tales que
+\[
+\Omega_{n, \cali{P}}(f) = x = \Omega_{n, \tilde{\cali{P}}}(\tilde{f}) ?
+\]
+\pause
+\textbf{Respuesta:} no.
+
+\begin{prop}
+Sean 
+$n \geq 2$, $x \in \IR^{n}$. 
+Si $\cali{P}$ y $\tilde{\cali{P}}$
+son mallas uniformes de $n$ puntos y $f, \tilde{f} \in \IR_{n-1}[t]$ 
+son tales que 
+\[
+\Omega_{n, \cali{P}}(f) = x = \Omega_{n, \tilde{\cali{P}}}(\tilde{f}),
+\]
+entonces $\partial(f) = \partial(\tilde{f})$.
+\end{prop}
+\pause
+\begin{defi}
+Sean $n \geq 2$ y $x \in \IR^{n}$. Si $f \in \IR_{n-1}[t]$
+y $\cali{P}$ son tales que
+$x = \Omega_{n, \cali{P}}(f)$, entonces
+\[
+\partial(x) := \partial(f).
+\hspace{0.2cm} (\textcolor{red}{\textit{grado}} \textit{ de } x).
+\]
+\end{defi} 
+\end{frame}
+
+
+
+
+
+\begin{frame}{Así, $W_{n,k}$ es el espacio de las señales $n-$dimensionales de grado $k$}
+\begin{teo}
+Sean $n \geq 2$ y $x \in \IR^{n}$.
+\begin{itemize}
+\item $x$ tiene grado cero sii $x \in W_{n,0}$, y
+\item para toda $1 \leq i \leq n-1$, $x$ tiene grado $i$ sii
+$x \in W_{n,i}$.
+\end{itemize}
+\end{teo}
+\pause
+Luego, si $x \in \IR^{n}$, 
+\begin{itemize}
+	\item la gráfica de $x$ tiene la forma de un polinomio de
+	grado $k$ si y sólo si $x \in W_{n,k}$.
+	\item Es posible medir la distancia del punto
+	$x \in \IR^{n}$ al espacio $W_{n,k} \leq \IR^{n}$, 
+	luego, \textbf{podemos medir qué tanto se aleja
+	$x$ de tener la propiedad ``ser de grado $k$''}.
+\end{itemize}
+\pause
+\end{frame}

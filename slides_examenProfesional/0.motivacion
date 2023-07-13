@@ -1,0 +1,148 @@
+%Motivación
+\section{Motivación}
+
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+\begin{frame}{Motivación}
+Fijado $n \geq 2$ entero, una \textbf{señal de dimensión $n$} será
+representada como un vector $x = (x_{m})_{m=0}^{n-1}$ 
+de $\IR^{n}$. La \textbf{gráfica} de $x$
+será el conjunto
+\[
+G_{x} := \{ (m, x_{m}): \hspace{0.2cm} 0 \leq m \leq n-1 \}. 
+\]
+\pause
+
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale=0.4]{graficasAfinCuadr} 
+ 	\end{figure}
+ \end{figure}
+
+Nos interesa estudiar la forma de la gráfica de una señal, en particular,
+saber si parece tener forma de recta o parábola.
+
+\end{frame}
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+
+
+
+
+
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+\begin{frame}
+Una señal $x \in \IR^{n}$ se dirá \textbf{afín} si su gráfica
+$G_{x}$ es la discretización puntual de una recta 
+$l : y = mx + b$.
+en la malla
+\[
+\cali{P}_{n} := \{0, 1, \ldots , n-1 \}.
+\]
+
+Si la recta es de la forma $l: y = b$, diremos que $x$ es \textbf{constante.}
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale=0.4]{afines}
+ 	\end{figure}
+ \end{figure}
+
+
+\end{frame}
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+
+
+
+
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+\begin{frame}
+Una señal $x \in \IR^{n}$ se dirá \textbf{cuadrática} si su gráfica
+$G_{x}$ es la discretización puntual de una parábola
+$l : y = ax^{2} + bx + c$, con $a \neq 0$, en la malla
+$\cali{P}_{n}$.
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale=0.4]{cuadraticas}
+ 	\end{figure}
+ \end{figure}
+
+\end{frame}
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+
+
+
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+\begin{frame}{Lista de deseos}
+Fijada una dimensión $n \geq 2$, buscamos una base
+$\cali{L}^{n} = \{ \cali{L}^{n,k}: \hspace{0.2cm} 0 \leq k \leq n-1 \}$
+de $\IR^{n}$
+
+\begin{itemize}
+	\item (\textcolor{red}{Tamaño}) 
+	que sea ortonormal, pues así se cumplirá que,
+	para toda señal $x \in \IR^{n}$, 
+	\[
+	x = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle x}
+	\hspace{0.2cm} \textit{y} \hspace{0.2cm}
+	||x||^{2} = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle^{2}},
+	\]
+	y
+	
+	\item (\textcolor{red}{Forma}) para la que sea posible establecer criterios
+	sencillos sobre la forma de la gráfica de una señal $x$ en términos
+	de la representación de esta respecto a la base $\cali{L}^{n,k}$.
+	
+\end{itemize}
+\end{frame}
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+
+
+
+
+
+
+
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+\begin{frame}
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale= 0.7 ]{cuadr1}
+ 	\end{figure}
+ \end{figure}
+ 
+ \pause
+
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale= 0.7]{cuadr2}
+ 	\end{figure}
+ \end{figure}
+\end{frame}
+% ------------------------------------------------------------ %
+% ------------------------------------------------------------ %
+
+
+
