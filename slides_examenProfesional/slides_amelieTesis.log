@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  14 JUL 2023 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  14 JUL 2023 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2367,11 +2367,11 @@ Package pdftex.def Info: ejemplo_pregunta2.png  used on input line 699.
 [118
 
  <./ejemplo_pregunta2.png>]
-<ejemplo_pregunta3.png, id=2697, 184.7703pt x 95.6373pt>
+<ejemplo_pregunta3.png, id=2697, 315.0972pt x 112.5003pt>
 File: ejemplo_pregunta3.png Graphic file (type png)
 <use ejemplo_pregunta3.png>
 Package pdftex.def Info: ejemplo_pregunta3.png  used on input line 720.
-(pdftex.def)             Requested size: 166.29172pt x 86.07274pt.
+(pdftex.def)             Requested size: 283.58485pt x 101.24931pt.
  [119
 
  <./ejemplo_pregunta3.png>]
@@ -2444,9 +2444,6 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `slides_amelieTesis.out' has not changed.
 (rerunfilecheck)             Checksum: 9B24EF159F11CDEE54934DDDECA8CD20;2946.
 Package logreq Info: Writing requests to 'slides_amelieTesis.run.xml'.
@@ -2454,37 +2451,33 @@ Package logreq Info: Writing requests to 'slides_amelieTesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42005 strings out of 477985
- 866331 string characters out of 5840059
+ 42002 strings out of 477985
+ 866300 string characters out of 5840059
  1891388 words of memory out of 5000000
- 61166 multiletter control sequences out of 15000+600000
+ 61164 multiletter control sequences out of 15000+600000
  532729 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,20n,122p,1896b,1479s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Navigation123} has been referenced but does not exi
-st, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pf
-b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on slides_amelieTesis.pdf (122 pages, 8375403 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on slides_amelieTesis.pdf (122 pages, 8450137 bytes).
 PDF statistics:
- 2937 PDF objects out of 2984 (max. 8388607)
- 2604 compressed objects within 27 object streams
- 297 named destinations out of 1000 (max. 500000)
+ 2936 PDF objects out of 2984 (max. 8388607)
+ 2603 compressed objects within 27 object streams
+ 296 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 

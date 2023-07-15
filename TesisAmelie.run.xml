@@ -59,7 +59,6 @@
       <file>alphabetic.bbx</file>
       <file>alphabetic.cbx</file>
       <file>biblatex.cfg</file>
-      <file>spanish.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="1">

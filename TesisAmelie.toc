@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {nil}{}\relax 
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Bases ortonormales de espacios vectoriales finito dimensionales}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Lista de deseos}{3}{section.1.2}%
@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{70}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{73}{section.6.2}%
 \contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{74}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{75}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{74}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{76}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{80}{subsection.6.3.3}%
 \contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{85}{section.6.4}%
@@ -56,14 +56,14 @@
 \contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{125}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Gráficas y comentarios}{128}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Conclusiones del análisis espectral de los PDL}{151}{section.7.3}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{153}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{153}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{155}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{157}{section.Alph1.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{158}{section.Alph1.4}%
-\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{160}{section.Alph1.5}%
-\contentsline {section}{\numberline {A.6}El concepto de ángulo en un espacio de Hilbert}{162}{section.Alph1.6}%
-\contentsline {subsection}{\numberline {A.6.1}Ángulo entre elementos de un espacio con producto punto}{162}{subsection.Alph1.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{163}{subsection.Alph1.6.2}%
-\contentsline {subsection}{\numberline {A.6.3}Similitud coseno}{165}{subsection.Alph1.6.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{167}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{153}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{153}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{155}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{157}{section.A.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{158}{section.A.4}%
+\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{160}{section.A.5}%
+\contentsline {section}{\numberline {A.6}El concepto de ángulo en un espacio de Hilbert}{162}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Ángulo entre elementos de un espacio con producto punto}{162}{subsection.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{163}{subsection.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}Similitud coseno}{165}{subsection.A.6.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{167}{appendix.B}%
