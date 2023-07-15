@@ -223,15 +223,15 @@ $n+1$ vectores de $\IR^{n+1}$ que resultan
 de evaluar estas funciones discretas en su rango,
 es decir, en los vectores
 \begin{equation}
-y_{k}:= (P_{k}(m, n))_{m=0}^{m=n}, \hspace{0.2cm}
-0 \leq k \leq m,
+y_{n+1, k}:= (P_{k}(m, n))_{m=0}^{m=n} \in \IR^{n+1}, \hspace{0.2cm}
+0 \leq k \leq n,
 \end{equation}
 las condiciones \eqref{eq:dlop1} y \eqref{eq:dlop2}
 se reinterpretan como
 \begin{equation}
-\{ y_{k}: \hspace{0.2cm} 0 \leq k \leq n\}
+\{ y_{n+1, k}: \hspace{0.2cm} 0 \leq k \leq n\}
 \hspace{0.3cm} \text{es una
-base ortogonal de} \hspace{0.2cm} \IR^{n}
+base ortogonal de} \hspace{0.2cm} \IR^{n+1}
 \tag{DLOP'-1[n]} \label{eq:dlop'1}
 \end{equation}
 y 
@@ -285,7 +285,7 @@ elementos de la base
 \{
 y_{n,k}:= (P_{k}(m, n-1))_{m=0}^{m=n-1}
 : \hspace{0.2cm} 0 \leq k \leq n-1
-\}
+\} \subseteq \IR^{n}
 \end{equation}
 
 \noindent
@@ -296,7 +296,7 @@ obtener las de la base de Legendre discreta
 \{
 \cali{L}^{n,k}= (\cali{L}^{n,k}_{m})_{m=0}^{m=n-1}
 : \hspace{0.2cm} 0 \leq k \leq n-1
-\}.
+\}\subseteq \IR^{n}.
 \end{equation}
 
 

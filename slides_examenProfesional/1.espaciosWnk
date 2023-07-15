@@ -2,8 +2,6 @@
 
 \begin{frame}{Espacios de polinomios discretos}
 
-\TODO{Piensa en cómo introducir esto.}
-
 Fijemos una dimensión $n \neq 2$.
 
 \begin{itemize}
@@ -39,7 +37,7 @@ Fijemos una dimensión $n \neq 2$.
 
 \pause
 \[
-\omega_{n, \cali{P}}: \IR[t] \longrightarrow \IR^{n}
+\Omega_{n, \cali{P}}: \IR[t] \longrightarrow \IR^{n}
 \]
 es un operador lineal.
 
@@ -48,8 +46,8 @@ es un operador lineal.
 
 \begin{frame}{Propiedad importante de $\Omega_{n, \cali{P}}$}
 La siguiente consecuencia directa del Teorema
-fundamental del Álgebra es de mayor importancia para el
-desarrollo del trabajo. \TODO{parafrasea.}
+fundamental del Álgebra juega un papel fundamental
+en el desarrollo de la teoría.
 
 
 
@@ -60,24 +58,39 @@ y $\Omega_{n, \cali{P}}(f)$ es el vector cero de $\IR^{n}$, entonces
 $f$ es el polinomio cero.
 \end{prop}
 
+\begin{center}
 \textcolor{red}{\[
 \forall n\geq 2, 
 \forall \cali{P} = \{ t_{j} \}_{j=0}^{n-1},
  \forall f \in \IR[t]:
-\hspace{0.2cm} \partial(f) \leq n \land \Omega_{n, \cali{P}} = 0
-\Rightarrow f = 0.
 \]}
+
+\textcolor{red}{
+\[
+\partial(f) \leq n \hspace{0.1cm} \land \hspace{0.1cm} \Omega_{n, \cali{P}} = 0
+\Rightarrow f = 0.
+\]
+}
+\end{center}
 
 \end{frame}
 
 
 \subsection{Espacios $W_{n,k}$}
 
-\begin{frame}
-
-\TODO{Aquí definición de los Wnk.
-Caracterización de las bases? o lo dejo implicito en la proposición grande?}
-
+\begin{frame}{Definición de los espacios de polinomios discretos}
+Sea $n \geq 2$ entero.
+Si $\cali{P}_{n} := \{ 0, \ldots , n-1 \}$ y
+\[
+\forall \hspace{0.1cm} 0 \leq k \leq n-1:
+\hspace{0.2cm} f_{k}(t) := t^{k} \textit{ y }
+v_{k} = \Omega_{n, \cali{P}_{n}}(f_{k}) = (j^{k})_{j=0}^{n-1},
+\]
+Definimos, para toda $0 \leq i \leq n-1$,
+\begin{equation}
+\label{eq: espacio Wni}
+W_{n, i} := span \{ v_{k}: \hspace{0.2cm} 0 \leq k \leq i \} \leq \IR^{n}.
+\end{equation}
 \end{frame}
 
 
@@ -114,7 +127,7 @@ $x$ es cuadrática sii $x \in W_{n,2}$ y $x \not\in W_{n,1}$.
 \begin{prop}
 		Sea $n \geq 2$ entero. 
 		Para cada $0 \leq k \leq n-1$ entero, sea $W_{n,k} \leq \IR^{n}$
-		el espacio definido en \TODO{ref}.
+		el espacio definido en \eqref{eq: espacio Wni}.
 		\begin{itemize}
 		\item $dim(W_{n,k}) = k+1$, \pause 
 		\item $\forall 0 \leq i \leq n-2$: $W_{n, i} \subseteq W_{n, i+1}$,
@@ -152,14 +165,17 @@ determina la \textbf{forma} de su gráfica.
 \subsection{Una definición del grado de una señal finita}
 
 \begin{frame}{Una definición del grado de una señal finita}
-\TODO{Pon notación para espacio $\IR_{n-1}[t]$.}
+
+Notación: $\IR_{k}[t]$ es el espacio de polinomios reales
+de grado a lo más $k$.
+
 \begin{prop}
 Sean $n \geq 2$ y $\cali{P}$ una malla uniforme de $n$ puntos.
 La función
 \[
 \Omega_{n, \cali{P}}: \IR_{n-1}[t] \longrightarrow \IR^{n}
 \]
-es un isomorfismo $\IR-$espacios vectoriales.
+es un isomorfismo de $\IR-$espacios vectoriales.
 \end{prop}
 
 \textcolor{red}{Logramos asociar a una señal $n$-dimensional
@@ -167,6 +183,7 @@ un único polinomio de grado menor a $n$}.
 Observe que, en la proposición, la
 malla $\cali{P}$ se fija en las hipótesis. \\
 
+\pause
 \textbf{Pregunta:}
 ¿Se pueden encontrar dos mallas $\cali{P}$ y $\tilde{\cali{P}}$
 y dos polinomios $f, \tilde{f}$ de grados
@@ -240,18 +257,18 @@ Sean $n \geq 2$ y $x \in \IR^{n}$.
 \begin{itemize}
 \item $x$ tiene grado cero sii $x \in W_{n,0}$, y
 \item para toda $1 \leq i \leq n-1$, $x$ tiene grado $i$ sii
-$x \in W_{n,i}$.
+$x \in W_{n,i}$ pero $x \not\in W_{n, i-1}$.
 \end{itemize}
 \end{teo}
 \pause
 Luego, si $x \in \IR^{n}$, 
 \begin{itemize}
 	\item la gráfica de $x$ tiene la forma de un polinomio de
-	grado $k$ si y sólo si $x \in W_{n,k}$.
+	grado a lo más $k \leq n-2$ si y sólo si $x \in W_{n,k}$
+	pero $x \not\in W_{n,k+1}$.
 	\item Es posible medir la distancia del punto
-	$x \in \IR^{n}$ al espacio $W_{n,k} \leq \IR^{n}$, 
+	$x \in \IR^{n}$ a espacios $W_{n,k} \leq \IR^{n}$, 
 	luego, \textbf{podemos medir qué tanto se aleja
-	$x$ de tener la propiedad ``ser de grado $k$''}.
+	$x$ de ser de cierto grado}. \TODO{Cuidado: corrigiendo.}
 \end{itemize}
-\pause
 \end{frame}

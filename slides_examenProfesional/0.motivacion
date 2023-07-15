@@ -108,7 +108,7 @@ de $\IR^{n}$
 	
 	\item (\textcolor{red}{Forma}) para la que sea posible establecer criterios
 	sencillos sobre la forma de la gráfica de una señal $x$ en términos
-	de la representación de esta respecto a la base $\cali{L}^{n,k}$.
+	de la representación de esta respecto a la base $\cali{L}^{n}$.
 	
 \end{itemize}
 \end{frame}

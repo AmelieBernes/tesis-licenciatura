@@ -435,8 +435,9 @@ En general, si $W \leq \IR^{n}$ es un subespacio de $\IR^{n}$, entonces
 \[
 cos(\measuredangle(x, W_{n,k})) = 
 \frac{|| \Pi_{W_{n,k}}(x)||}{||x||} =
-\sqrt{\frac{\suma{i=0}{k}{a_{i}^{2}}}{\suma{i=0}{n-1}{a_{i}^{2}}}} \in [0, 1]
+\sqrt{\frac{\suma{i=0}{k}{a_{i}^{2}}}{\suma{i=0}{n-1}{a_{i}^{2}}}} \in [0, 1],
 \]
+donde $a_{i} := \langle x, \cali{L}^{n,i} \rangle$.
 \end{frame}
 
 
@@ -450,6 +451,8 @@ si y sólo si $x \in W_{n, k}^{\perp}$ (resp. $x \in W_{n,k}$).
 Observe que $cos(\measuredangle(x, W_{n,k}))$ tiende a uno 
 conforme la energía de $x$ (i.e. $||x||^{2}$) se concentra en sus
 $k+1$ primeros coeficientes de Legendre.
+\TODO{CREO que en la imagen debe en realidad ser ``¿es un polinomio
+discreto de grado a lo más $k$?''}
 \end{frame}
 
 
