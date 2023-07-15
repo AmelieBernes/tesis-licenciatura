@@ -1,3 +1,763 @@
 \section{Análisis espectral}
-	\subsection{Desarrollo de metodología}
-	\subsection{Resultados del análisis numérico de algunos PDL}
+
+\begin{frame}{Análisis espectral}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{oscil1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{oscil2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{oscil3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Una hipótesis sobre las oscilaciones de los PDL}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.42]{hip_0,1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.42]{hip_2,3}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.42]{hip_4,5}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{hip}
+	Sean $n \geq 2$, $0 \leq k \leq n-1$ enteros. 
+	Si $\cali{L}^{n,k}$ es el PDL de dimensión $n$ y grado $k$,
+	entonces el espectro de $\cali{L}^{n,k}$ se concentra alrededor
+	de la frecuencia $k/2$.
+\end{hip}
+
+\begin{center}
+	\textbf{¿Qué espectro?}
+\end{center}
+\end{frame}
+
+\begin{frame}{La transformada discreta de Fourier}
+Esta es la manera clásica de realizar un análisis espectral:
+fijemos primero una dimensión $n \geq 2$ entera.
+Para toda $\omega > 0$, sean 
+\begin{equation}
+	\label{eq: c y s tilde}
+	\tilde{c}_{n, \omega} := \left( cos (2 \pi \omega m /n) \right)_{m=0}^{n-1},
+	\hspace{0.2cm}
+	\tilde{s}_{n, \omega} := \left( sen (2 \pi \omega m /n) \right)_{m=0}^{n-1}.
+\end{equation}
+Sea
+\begin{equation}
+	\label{eq: M}
+	M := \left\lceil \frac{n}{2} \right\rceil.
+\end{equation}
+
+\begin{teo}
+El subconjunto $\cali{F}_{n}$ de $\IR^{n}$ definido como 
+\begin{itemize}
+	\item $\{ \tilde{c}_{n, 0} \} \cup \{ \tilde{c}_{n, \omega}, \tilde{s}_{n, \omega}:
+	\hspace{0.2cm} 1 \leq \omega \leq n-1, \omega \in \IZ\}$ si $n$ es impar, y como
+	\item $\{ \tilde{c}_{n, 0} \} \cup \{ \tilde{c}_{n, \omega}, \tilde{s}_{n, \omega}:
+	\hspace{0.2cm} 1 \leq \omega \leq n-1, \omega \in \IZ\}
+	\cup \{ \tilde{c}_{n, M} \}$ si $n$ es impar
+\end{itemize}
+es una BON de $\IR^{n}$.
+\end{teo}
+\end{frame}
+
+
+\begin{frame}
+Así, el representar a una señal $x \in \IR^{n}$ respecto a la base
+$\cali{F}_{n}$ implica expresar a $x$ como una suma ponderada de
+discretizaciones de sinusoides de ciertas frecuencias enteras.
+
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{tiempo_freq}
+	\end{figure}
+
+
+\begin{center}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{frecFourier}
+	\end{figure}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.7]{four1}
+	\end{figure}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{center}
+    \begin{figure}[h]
+		\includegraphics[scale = 1]{four2}
+	\end{figure}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\begin{defi}
+\label{def: taus}
+Sea $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $.
+Definimos
+	\[
+	\tau_{n}(x, 0) := \frac{|\langle x, c_{n,0} \rangle|}{|| x ||} ,	
+	\]
+	y
+	\[
+	\forall 
+	\hspace{0.1cm}	
+	1 \leq \omega \leq M-1: \hspace{0.2cm} 
+	\tau_{n}(x, \omega) := 
+	\frac{\sqrt{
+	\langle x, c_{n,\omega} \rangle^{2}+
+	\langle x, s_{n,\omega} \rangle^{2}}}{||x||}.	
+	\]	
+	Si $n$ is par, también definimos
+	\[
+	\tau_{n}(x, M) := 
+	\frac{ |\langle x, c_{n,M} \rangle| }{ ||x|| }.
+	\]
+\end{defi}
+La función $T_{x}: Dom_{DFT, n} \longrightarrow [0,1]$
+es el \textbf{espectro de $x$} obtenido usando la TDF.
+\end{frame} 
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.9]{espectroFourier_PDL_18_7}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Desventajas de la TDF}
+Para realizar un análisis espectral de los PDL, nos gustaría
+poder considerar una \textbf{frecuencia arbitraria $\omega$},
+no sólo a las frecuencias enteras tomadas en cuenta en la TDF.
+Queremos pues
+\begin{itemize}
+	\item ser capaces de escoger una frecuencia $\omega \geq 0$
+	respecto a la cual comparar a la señal $x$, y
+	\pause
+	\item una vez fijada una frecuencia $\omega$, ser capaces
+	de calcular el mejor desfase y amplitud para ajustar
+	la gráfica de $x$ con un sinusoide de frecuencia $\omega$.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.36]{desfase_ejemplo}
+	\end{figure}
+\end{frame}
+
+
+
+\subsection{Propuesta de análisis espectral para frecuencias arbitrarias}
+
+
+\begin{frame}{Propuesta para realizar un análisis espectral}
+Para poder hacer esto, proponemos realizar un análisis espectral
+basado en medir la similitud coseno de una señal $x$ a
+\textbf{espacios monofrecuenciales}, compuestos por señales
+discretas de una misma frecuencia $\omega \geq 0$.
+\pause
+\begin{defi}
+Sean $n \geq 2$ entero,  $\omega>0$, $\phi \in [0,1[$ y $A \in \IR$.  
+Llamaremos a toda señal $x$ de la forma
+
+\begin{equation}
+x =A \left(
+cos \left(  2 \pi \omega m/n + 2 \pi \phi
+\right)
+\right)_{m=0}^{n-1}
+\end{equation}
+
+\noindent
+una \textbf{señal $n$-dimensional de frecuencia pura $\omega$}. 
+En este contexto,
+$\phi \in [0,1]$ será llamado el \textbf{desfase normalizado}
+de la señal, y $A \in \IR$ la \textbf{amplitud}.
+\end{defi}
+\end{frame}
+
+
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.43]{muestreo_coseno}
+	\end{figure}
+	\pause
+	Note que toda señal de la forma 
+	$A \left( sen \left(  2 \pi \omega m/n + 2 \pi \phi \right) \right)_{m=0}^{n-1}$
+	es también una señal $n-$dimensional de frecuencia $\omega$.
+\end{frame}
+
+
+\begin{frame}{Espacios monofrecuenciales}
+
+Sean $n \geq 2$ entero, $\omega \geq 0$. Sea
+\begin{equation}
+	\label{eq: espacio Pnw}
+	P_{n, \omega} := span \{ \tilde{c}_{n, \omega}, \tilde{s}_{n, \omega} \} \leq \IR^{n}.
+\end{equation}
+
+\begin{teo}
+El subespacio $P_{n, \omega}$ de $\IR^{n}$ consiste exactamente
+de las señales $n-$dimensionales de frecuencia pura $\omega$.
+\end{teo}
+
+\pause
+Llamamos pues a $P_{n, \omega}$ el \textbf{espacio monofrecuencial}
+de $\IR^{n}$ de frecuencia $\omega$. \TODO{Checa si en la tesis le
+llamas erróneamente ``de dimensión $n$''.}
+
+\begin{nota}
+Se tiene que
+\begin{itemize}
+	\item $P_{n, \omega}$ es un plano (i.e. un subespacio de dimensión $2$)
+	sii $\omega \not\in \frac{n}{2} \IZ$, y
+	\item $P_{n, \omega}$ es una recta (i.e. un subespacio de dimensión $1$)
+	sii $\omega \in \frac{n}{2} \IZ$.
+\end{itemize}
+\end{nota}
+
+\end{frame}
+
+
+\begin{frame}
+	Tiene sentido pues usar el coseno del ángulo que una señal
+	$x$ forma con el espacio $P_{n, \omega}$ para dar una medida
+	de cercanía de $x$ a la \textbf{propiedad} ``ser de frecuencia pura $\omega$''.
+	
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{20Mar23_1}
+\end{figure}	
+	
+\pause
+\begin{defi}
+Sea $n \geq 2$ entero. Para todo $x \in \IR^{n}$ no cero definimos
+\[
+	\sigma_{n}(x, \omega) := cos(\measuredangle(x, P_{n, \omega}))
+	= \frac{|| \Pi_{P_{n, \omega}}(x) ||}{|| x ||}.
+\]
+Si $x = 0$ definimos $\sigma_{n}(x, \omega) = 0$.
+\end{defi}
+
+\end{frame}
+
+
+\begin{frame}{Bases normalizadas para los espacios monofrecuenciales}
+
+\label{prop: aaa}
+Sean $n \geq 2$ entero, $\omega>0$.
+
+	Si $\omega \not\in \frac{n}{2} \IZ$, sean
+
+	\begin{equation}
+	\label{eq5: 19Marzo}
+	c_{n, \omega}=\xi_{n, \omega} \tilde{c}_{n, \omega}
+	\in \IR^{n}
+	\end{equation}
+y 
+
+	\begin{equation}
+	\label{eq6: 19Marzo}
+	s_{n, \omega}= \eta_{n, \omega} \tilde{s}_{n, \omega}
+	\in \IR^{n},
+	\end{equation}
+con 
+\begin{equation}\small
+\label{eq7: 19Marzo}
+	\xi_{n, \omega}= 
+	\sqrt{2} \cdot \left( n + \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left(\frac{n-1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}} 
+\end{equation}
+y
+
+	\begin{equation}\small
+	\label{eq8: 19Marzo}
+	\eta_{n, \omega}= \sqrt{2} \cdot \left( n - \frac{sen(2 \pi \omega)
+	cos(2 \pi \omega \left(\frac{n-1}{n} \right))}{sen \left(2 \pi 
+	\frac{\omega}{n} \right)} \right)^{-\frac{1}{2}}.
+	\end{equation}
+
+\end{frame}
+
+\begin{frame}
+Si $\omega \in \frac{n}{2}\IZ$, definimos
+\begin{equation}
+\label{ec: 4: 23ap}
+	c_{n, \omega} := \frac{1}{\sqrt{n}} \tilde{c}_{n, \omega}
+\end{equation}
+\pause
+
+\begin{prop}
+Si $n\geq 2$ es un entero y $ \omega >0$, entonces
+\begin{itemize}
+	\item $\{ c_{n, \omega}, s_{n, \omega} \}$ es una base normalizada de $P_{n, \omega}$
+	si $\omega \not\in \frac{n}{2} \IZ$, y
+	\item $\{ c_{n, \omega} \}$ es una base normalizada de $P_{n, \omega}$
+	si $\omega \in \frac{n}{2} \IZ$.
+\end{itemize}
+\end{prop}
+\pause
+
+
+\begin{prop}
+\label{prop: producto punto entre f y g}
+Fijados $n \geq 2$ y $\omega \geq 0$ con 
+$\omega \not\in \frac{n}{2}\IZ$, 
+el producto punto entre 
+los vectores
+$c_{n, \omega}$ y $s_{n, \omega}$ es
+
+\begin{equation}
+\label{eq9: 19Marzo}
+\langle c_{n, \omega} , s_{n, \omega} \rangle =
+\frac{\xi_{n, w} \eta_{n, \omega}}{2} \cdot 
+\frac{sen(2 \pi \omega)
+sen(2 \pi \omega \left( 1- \frac{1}{n} \right))}{sen \left(2 \pi 
+\frac{\omega}{n} \right)}.
+\end{equation}
+\end{prop}
+\end{frame}
+
+
+\begin{frame}{Calculando la similitud coseno a espacios monofrecuenciales}
+
+Para todo $x \in \IR^{n}-\{ 0 \}$, si $\omega \not\in \frac{n}{2} \IZ$
+entonces
+
+	$\omega \not\in \frac{n}{2} \IZ$, entonces
+	\begin{align*}
+	\Pi_{P_{n, \omega}}(x) =  &
+	\frac{
+    \hlRed{ \langle x, c_{n, \omega} \rangle} - 
+    \hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle }
+    \hlBlue{\langle x, s_{n, \omega} \rangle }}
+{1-|\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} } \rangle |^{2}  }
+c_{n, \omega} + \\
++ &  \frac{
+\hlBlue{ \langle x, s_{n, \omega} \rangle } - 
+\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle }
+\hlRed{ \langle x, c_{n, \omega} \rangle }
+}
+{1-|
+\hlGreen{\langle c_{n, \omega}, s_{n, \omega} \rangle } |^{2}  }
+s_{n, \omega}
+	\end{align*}
+	y 
+	\begin{equation*}\small
+	\sigma_{n}(x, \omega) =
+	\left(		  
+		  \frac{ \hlRed{ \langle x, c_{n, \omega } \rangle } ^{2} +  
+		  \hlBlue{ \langle x, s_{n, \omega } \rangle}^{2}	
+	       -2  \hlRed{ \langle x, c_{n, \omega } \rangle } 
+	       \hlBlue{ \langle x, s_{n, \omega } \rangle } 
+	       \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       (1- 
+	       \hlGreen{ \langle c_{n, \omega }, s_{n, \omega } \rangle }^{2})}	  
+\right) ^{1/2}
+	\end{equation*}
+
+\end{frame}
+
+\begin{frame}
+Si $\omega \in \frac{n}{2} \IZ$, entonces 
+\begin{equation*}\small
+\Pi_{P_{n, \omega}}(x) = \hlRed{ \langle x, c_{n, \omega} \rangle } c_{n, \omega}
+\end{equation*}
+y 
+\begin{equation*}\small
+\sigma_{n}(x, \omega) = \frac{|\hlRed{ \langle x, c_{n, \omega} \rangle } |}{||x||}.
+\end{equation*}
+\pause
+En cualquier caso, se puede calcular
+$\sigma_{n}(x, \omega)$ y la proyección de $x$ a un espacio
+monofrecuencial $P_{n,\omega}$ de forma sencilla a partir de los datos
+$||x||$,
+$\hlRed{ \langle x, c_{n, \omega } \rangle }$,
+$\hlBlue{ \langle x, s_{n, \omega } \rangle }$ y
+$\hlGreen{ \langle c_{n, \omega }, s_{n, \omega \rangle } }$.
+
+\end{frame}
+
+
+\begin{frame}{Amplitud y desfase de $\Pi_{P_{n, \omega}}(x)$}
+Sean $n \geq 2$ y $\omega > 0$. Sea $x \in \IR^{n} - \{ 0 \}$.
+
+Si $\omega \in \frac{n}{2}\IZ$, entonces 
+		\begin{equation}
+		\label{ec: desfase explicito 2}
+		\Pi_{P_{n, \omega}} (x) = 
+		\frac{1}{\sqrt{n}} 
+		\hlRed{ \langle x, c_{n, \omega} \rangle }
+		\cdot (cos (2 \pi \omega t))_{t \in I_{n}} \in \IR^{n}.
+		\end{equation}
+		
+		
+Si $\omega \not\in \frac{n}{2}\IZ$, sean 
+\begin{equation}
+\label{eq4: 20Marzo}
+c= \frac{
+\hlRed{ \langle x, c_{n, \omega} \rangle } -
+\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle }
+\hlBlue{\langle x, s_{n, \omega} \rangle }
+}{1-\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle}^{2}} \xi_{n, \omega}
+\end{equation}
+\begin{equation}
+\label{eq5: 20Marzo}
+d= \frac{
+\hlBlue{ \langle x, s_{n, \omega} \rangle } - \langle c_{n, \omega}, s_{n, \omega} \rangle
+\hlRed{ \langle x, c_{n, \omega} \rangle }
+}{1-\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle }^{2}} \eta_{n, \omega},
+\end{equation}
+\end{frame}
+
+\begin{frame}
+Entonces
+	\begin{equation}
+	\label{ec: desfase explicito 1}
+	\Pi_{P_{n, \omega}} (x) = A \cdot (
+	cos (2 \pi \omega t - 2 \pi \phi))_{t \in I_{n}} \in \IR^{n},
+\end{equation}
+	\noindent
+	donde
+	\[
+	A = \sqrt{c^{2}+d^{2}}
+	\]
+	y
+	\begin{equation}
+\label{eq: desfase phi 1}
+\phi =
+\begin{cases}
+\frac{tan^{-1}(d/c) }{2 \pi}  \hspace{0.4cm}    \text{   si }   d, c > 0,  \\
+\frac{tan^{-1}(d/c) + \pi }{2 \pi} \hspace{0.2cm}  \text{si }  d, c < 0
+\text{ o } d<0, c>0, \\
+\frac{tan^{-1}(d/c) + 2\pi }{2 \pi} \hspace{0.2cm}  \text{si }  d>0,  c < 0. 
+\end{cases}
+\end{equation}
+\end{frame}
+
+
+\begin{frame}{Buscando una definición de un espectro basado en espacios monofrecuenciales}
+
+Sean $n \geq 2$ entero, $x \in \IR^{n}$ no cero. 
+Un buen candidato para ``espectro de $x$ basado en espacios monofrecuenciales''
+es la función $\Sigma_{x}: [0, \infty [ \longrightarrow [0,1]$
+definida como 
+\[
+\Sigma_{x}(\omega) := \sigma_{n}(x, \omega).
+\]
+\pause
+Algunas propiedades de $\Sigma_{x}$:
+\begin{itemize}
+	\item Es una función $n-$periódica, es decir, para cualquier
+	frecuencia $0 \leq \omega \leq \frac{n}{2}$ y toda $K \in \IZ$,
+	\[
+	\Sigma_{x}(\omega) = \Sigma_{x}(\omega + Kn),
+	\]
+	\item (Simetría) para toda $0 \leq \omega \leq \frac{n}{2}$,
+	\[
+	\Sigma_{x}(\omega) = \Sigma_{x}(n-\omega),
+	\]
+	\item Es continua en $]0, \frac{n}{2}[$.
+\end{itemize}
+ 
+\end{frame}
+
+
+
+
+\begin{frame}
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{periodicidad_espectro}
+\end{figure}	
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{simetria_espectro}
+\end{figure}	
+Podemos entonces restringir el dominio de $\Sigma_{x}$.
+\textbf{¿Qué pasa con la continuidad en los extremos de
+$\Sigma_{x}$?}
+\end{frame}
+
+
+
+
+\begin{frame}{Operador de alternancia}
+Fijado $n \geq 2$ entero, la función $A_{n} : \IR^{n} \longrightarrow \IR^{n}$
+definida como
+\[
+\forall x = (x_{m})_{m=0}^{n-1} \in \IR^{n} : \hspace{0.2cm}
+A_{n}(x) = ((-1)^{m} x_{m})_{m=0}^{n-1}  
+\]
+será llamada el \textbf{operador de alternancia $n-$dimensional}.
+Claro que es una función lineal, involutiva, y una isometría.
+
+\TODO{Imagen para hablar del efecto de cambio de oscilación al aplicar
+el operador de alternancia.}
+\end{frame}
+
+
+\begin{frame}{Momentos de una señal}
+Sean $n \geq 2$ entero, $x = (x_{m})_{m=0}^{n-1} \in \IR^{n}$.
+Para todo $k \geq 2$, se define el \textbf{$k$-ésimo
+momento de $x$}, denotado por $M_{k}(x)$,
+como 
+\[
+M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}}.
+\]
+\pause
+
+Usando expansiones de Taylor del seno y el coseno alrededor del cero, 
+pudimos calcular los límites por $0^{+}$ y $(n/2)^{-}$
+de la función $\Sigma_{x}$ en términos de los momentos de $x$
+y su alternado.
+\end{frame}
+
+
+\begin{frame}
+\begin{teo}
+\label{teo: limite del espectro por cero}
+Sean $n \geq 2$, $x \in \IR^{n}$.
+Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ 
+definida como $\Sigma_{x}(\omega) = \sigma_{n}(x, \omega)$.
+Se tiene que 
+\begin{equation}\small
+\label{eq: limite del espectro a cero}
+\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
+=
+\left(
+\frac{
+2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
+}{
+||x||^{2} (n-1)(n+1)n}
+\right)^{1/2}
+\end{equation}
+
+y
+
+\begin{equation}
+\label{eq: limite del espectro a n medios}
+\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)}
+= \limite{\omega \rightarrow 0^{+}}{\Sigma_{A_{n}(x)}(\omega)}.
+\end{equation}
+\end{teo}
+
+\pause
+
+\begin{teo}
+\begin{equation}
+	\label{eq: limite por cero, version final}
+	\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)} =
+	cos(\measuredangle(x, W_{n,1}))
+\end{equation}
+y
+\begin{equation}
+	\label{eq: limite por n medios, version final}
+	\limite{\omega \rightarrow (n/2)^{-}}{\Sigma_{x}(\omega)} =
+	cos(\measuredangle(A_{n}(x), W_{n,1})).
+\end{equation}
+\end{teo}
+
+\end{frame}
+
+
+\begin{frame}{Definición de un espectro basado en espacios monofrecuenciales}
+Sean $n \geq 2$ entero, $x \in \IR^{n}$. Si $x$ no es cero,
+definimos su \textbf{espectro basado en espacios monofrecuenciales}
+como la función 
+$\Sigma_{x}:[0, n/2] \longrightarrow [0,1]$ definida como
+
+\begin{minipage}{0.5\textwidth}
+
+\begin{align*}
+\Sigma_{x}(\omega)= \begin{cases}
+cos(\measuredangle(x, P_{n, \omega})) & 
+\hspace{0.2cm} \textit{ si } \omega \in ]0, n/2[, \\
+cos(\measuredangle(x, W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = 0, \\
+cos(\measuredangle(A_{n}(x), W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = n/2.
+\end{cases}
+\end{align*}
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+
+\begin{figure}[h]
+\includegraphics[scale = 0.8]{esp_ang}
+\end{figure}	
+
+\end{minipage}
+
+
+
+Si $x = 0$, definimos su espectro como la 
+función constante cero.
+\end{frame}
+
+
+\begin{frame}{Propiedades del espectro de una señal}
+Sean $n \geq 2$ entero, $x \in \IR^{n}$.
+Sea $\Sigma_{x}:[0, n/2] \longrightarrow [0,1]$ el espectro de $x$
+basado en espacios monofrecuenciales.
+\begin{itemize}
+	\item $\Sigma_{x}$ es continua en su dominio compacto $[0, n/2]$, por
+	lo tanto, uniformemente continua
+	\item Para toda $\omega \in [0, n/4]$, 
+	$\Sigma_{x}(n/2-\omega) = \Sigma_{A_{n}(x)}(\omega)$.
+	\item \textbf{$\Sigma_{x}$ es una extensión del espectro $T_{x}$}
+	Para toda $\omega \in DOM_{TDF, n} - \{ 0, n/2 \}$ se tiene que
+	\[
+	T_{x} (\omega) = \Sigma_{x}(\omega).
+	\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.3]{AE_PDL_18_7}
+	\end{figure}
+\end{frame}
+
+
+\subsection{Resultados del análisis numérico de algunos PDL}
+
+	
+\begin{frame}{Preguntas a responder numéricamente}
+\begin{pregunta}
+\label{pregunta 1}
+¿Las frecuencias máximas
+$FP0(\cali{L}^{n,k})$ y 
+$FP1(\cali{L}^{n,k})$ son cercanas a $\frac{k}{2}$?
+\end{pregunta}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.75]{ejemplo_pregunta1}
+	\end{figure}
+
+\textcolor{red}{Respuesta:} Parece ser que el valor
+$k/2$ es, más que una estimación precisa de la frecuencia
+principal de un PDL de grado $k$, una cota superior de tal
+frecuencia principal.
+
+\end{frame}
+	
+	
+	
+\begin{frame}
+\begin{minipage}{0.5\textwidth}
+
+\begin{pregunta}
+\label{preg 2}
+Sea $k \geq 0$ entero. 
+¿Existen los límites
+
+\[
+\limite{n \rightarrow \infty}{FP0(\cali{L}^{n,k})}
+\hspace{0.2cm} \textit{y} \hspace{0.2cm}
+\limite{n \rightarrow \infty}{FP1(\cali{L}^{n,k})} ?
+\]
+De existir estos límites, ¿coinciden entre sí?
+\end{pregunta}
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{ejemplo_pregunta2}
+	\end{figure}
+\end{minipage}
+
+\textcolor{red}{Respuesta:} 
+parece distinguirse una convergencia a cierto límite, pero, salvo
+para el caso $k=2$, este límite no parece ser cercano al valor
+propuesto $k/2$, sino menor a este.
+\end{frame}	
+
+
+\begin{frame}
+\begin{pregunta}
+\label{preg 3}
+
+Sean $m_{n,i}$ y $b_{n,i}$, con $i=0,1$ las pendientes y la ordenadas
+al origen de las rectas de mínimos cuadrados calculadas a 
+partir de los conjuntos 
+$$\{(k, FPi(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1 \},
+\hspace{0.2cm} i = 0,1.$$
+
+¿Estos parámetros parecen seguir una tendencia conforme
+$n$ crece?
+\end{pregunta}
+
+    \begin{figure}[h]
+		\includegraphics[scale = 0.9]{ejemplo_pregunta3}
+	\end{figure}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+
+\begin{minipage}{0.5\textwidth}
+\textcolor{red}{Respuesta:} 
+esperábamos
+que las pendientes $m_{n,0}$ y $m_{n,1}$ se encontraran, para toda $n$, 
+cercanas a $0.5$, 
+mientras que las ordenadas al origen $b_{n,0}$ y $b_{n,1}$ 
+se ubicaran cerca de
+cero. Lo que en realidad encontramos durante el análisis numérico fue que
+las pendientes, conforme $n$ crece, parecen tender a un valor cercano a $0.4$,
+mientras que las ordenadas al origen parecen disminuir.
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+
+
+    \begin{figure}[h]
+		\includegraphics[scale = 1]{pendiente_oOrigen}
+	\end{figure}
+	
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+En general, para todas las dimensiones $n$ estudiadas,
+se encontró que los PDL $\cali{L}^{n,k}$ con $k$
+pequeño parecían responder particularmente bien
+a su frecuencia principal, siendo el espectro
+evaluado en esta muy cercano a uno, pero conforme
+$n$ crece y 
+$k$ tiende a $n-1$ (su cota superior),
+los valores $\sigma_{n}(\cali{L}^{n,k}, \omega)$
+parecen estár muy alejados de $1$, por lo que no parece
+no parece ser factible aproximar la gráfica
+de tales PDL sólo con un sinusoide.
+\end{frame}
+	

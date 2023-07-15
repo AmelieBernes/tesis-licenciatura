@@ -106,72 +106,6 @@ Por las pruebas numéricas que he hecho, parece que sí funciona.
 #  ---------------------------------------- -- ----------------------------------------
 """
 
-#def limite_cero(x, n):
-#    """
-#    Esta es la función que tenía originalmente, funciona perfectamente.
-#    Función que da el límite por la derecha del cero del 
-#    espectro de la señal x de dimensión n.
-#    """
-#    pi = np.pi
-#    def primer_momento(x):
-#        suma = 0
-#        for m in range(n):
-#            suma += m * x[m]
-#        return suma
-#    
-#    def tercer_momento(x):
-#        suma = 0
-#        for m in range(n):
-#            suma += m**3 * x[m]
-#        return suma
-#    
-#    norma = np.linalg.norm(x)
-#    X0 = sum(x)
-#    X1 = primer_momento(x)
-#    X3 = tercer_momento(x)
-#    
-#    a_nw_cuadrado = X0**2/n
-#    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
-#    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
-#    
-#    #det = 2*pi *X1*0.001/n-4*pi**3*X3*0.001**3/(3*n**3)
-#    det = X1 - 2*pi**2*X3*0.001**2/(3*n**2)
-#    if det > 0:
-#        signo = 1
-#    else:
-#        signo = -1
-#    
-#    d_nw = -1 * signo* X0* 6*abs(X1)/(n*(2*n-1)) 
-#    
-#    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
-#    return limite
-#
-
-#def limite_cero(x, n):
-#    """
-#    Función que da el límite por la derecha del cero del 
-#    espectro de la señal x de dimensión n.
-#    Sí funcionó.
-#    """
-#    pi = np.pi
-#    def momento_k(x, k):
-#        suma = 0
-#        for m in range(n):
-#            suma += m**k  * x[m]
-#        return suma
-#
-#    norma = np.linalg.norm(x)
-#    X0 = momento_k(x, 0)
-#    X1 = momento_k(x, 1)
-#    
-#    a = X0**2/n
-#    b = 6*X1**2/(n*(n-1)*(2*n-1))
-#    c = 6*X0*X1/(n*(2*n-1))
-#    num = a+b-c
-#    den = norma**2 *(1-1.5*(n-1)/(2*n-1))
-#
-#    return math.sqrt(num/den) 
-
 def limite_cero(x, n):
     """
     Función que da el límite por la derecha del cero del 
@@ -204,27 +138,6 @@ def alternado(x):
         Ax.append((-1)**m * x[m])
     return Ax
 
-#def limite_n_medios(x, n):
-#    """
-#    Función que da el límite por la izquierda de n/2 del 
-#    espectro de la señal x de dimensión n.
-#    """
-#    pi = np.pi
-#    def momento_skew(x, k):
-#        suma = 0
-#        for m in range(n):
-#            suma += (-1)**m * m**k *x[m]
-#        return suma
-#
-#    norma = np.linalg.norm(x)
-#    X0 = momento_skew(x, 0) 
-#    X1 = momento_skew(x, 1) 
-#
-#    num = 2* X0**2* (2*n-1)* (n-1) +12* X1**2 -12* X0* X1*(n-1)
-#    den = norma**2 * n * (n-1)*(n+1)
-#
-#    return math.sqrt(num/den) 
-
 def limite_n_medios(x,n):
     """
     Función que da el límite por la izquierda de n/2 del 
@@ -232,46 +145,6 @@ def limite_n_medios(x,n):
     """
     return limite_cero(alternado(x), n)
 
-#def limite_n_medios(x, n):
-#    """
-#    Esta fue la primera versión y funcionó bien.
-#    Función que da el límite por la izquierda de n/2 del 
-#    espectro de la señal x de dimensión n.
-#    """
-#    pi = np.pi
-#    def momento_skew(x, k):
-#        suma = 0
-#        for m in range(n):
-#            suma += (-1)**m * m**k *x[m]
-#        return suma
-#
-#    norma = np.linalg.norm(x)
-#    X0 = momento_skew(x, 0) 
-#    X1 = momento_skew(x, 1) 
-#    X3 = momento_skew(x, 3) 
-#    
-#    a_nw_cuadrado = X0**2/n
-#    b_nw_cuadrado = 6*X1**2/(n*(2*n-1)*(n-1))
-#    c_nw_cuadrado = 3*(n-1)/(2*(2*n-1))
-#    
-#    det = X1 - 2*pi**2*X3/(3*n**2)
-#    if det > 0:
-#        signo = 1
-#    else:
-#        signo = -1
-#    
-#    d_nw = signo* X0* 6*abs(X1)/(n*(2*n-1)) 
-#
-#    #TODO nuevo
-#    if X1 >= 0:
-#        sgn = 1
-#    else:
-#        sgn = -1
-#    print(sgn == signo)
-#    #TODO nuevo
-#    
-#    limite = ((a_nw_cuadrado + b_nw_cuadrado + d_nw)/(norma**2 * (1-c_nw_cuadrado)))**(1/2)
-#    return limite
 """
 #  ---------------------------------------- -- ----------------------------------------
 
@@ -1226,9 +1099,34 @@ def grafica_coefEspectrales_de_frecPrincipales(k, graficar = True):
       plt.savefig(ruta_carpeta + 'coef_espectralesFP_'+ str(k) )
 
 
- 
-if __name__ == '__main__':
 
+def espectro_Fourier(x, nombre):
+    """
+    Función que grafica el espectro de Fourier de una señal finita x (tipo array).
+    'nombre' es una cadena que representa el nombre de la señal a analizar.
+    """
+    fig, axis = plt.subplots(1,2)
+    n = len(x)
+    grafica_taus_axis(x, n, nombre, axis[0], axis[1])
+    
+    return plt.show()
+
+def espectro_Fourier_PDL(n,k):
+    """
+    Función que grafica el espectro de Fourier del polinomio
+    discreto de Legendre (PDL) de dimensión n y grado k.
+    """
+    
+    x = legendre.calculo_base(n)[k]
+    nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n)+','+str(k)) 
+    
+    return espectro_Fourier(x, nombre)
+
+
+
+
+if __name__ == '__main__':
+  
 
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')

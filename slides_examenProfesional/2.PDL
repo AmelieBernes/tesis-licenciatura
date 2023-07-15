@@ -400,7 +400,6 @@ es invariante bajo multiplicación por escalares.
 	\begin{figure}[h]
 		\includegraphics[scale = 0.13]{cosSim_mejor}
 	\end{figure}
-	\TODO{Aquí pon la fórmula de sim coseno!!}
 \end{frame}
 
 
@@ -414,18 +413,164 @@ calcular las proyecciones de $x$ a todos los espacios $W_{n, k}$.
 \end{frame}
 
 
-\begin{frame}
-Sea $x = \suma{i=0}{n-1}{a_{i} \cali{L}^{n,k}}$. Como $\cali{L}^{n}$
-es BON, claro que $a_{i} = \langle x, \cali{L}^{n,k} \rangle$.
+\begin{frame}{Midiendo la similitud coseno a espacios de polinomios discretos}
+Fijemos $n \geq 2$ entero. Sea $x \in \IR^{n}$ no cero, y sea
+$0 \leq k < n-1$.
 
-Fijado $0 \leq k < n-1$, 
-$x$ es cercano a $\Pi_{W_{n, k}}(x) = \suma{i=0}{k}{a_{i} \cali{L}^{n,k}}$ si y sólo si 
-$x - \Pi_{W_{n,k}}$ es cercano a cero, o, equivalentemente, si y sólo si
+En general, si $W \leq \IR^{n}$ es un subespacio de $\IR^{n}$, entonces
+
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+	\item $x \in W$ si y sólo si $x = \Pi_{W}(x)$, 
+	\item $x = \Pi_{W}(x) + \Pi_{W^{\perp}}(x)$y
+	\item $\measuredangle(x, W) := \measuredangle(x, \Pi_{W})$
+\end{itemize}
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+	\begin{figure}[h]
+		\includegraphics[scale = 1]{proy}
+	\end{figure}
+\end{minipage}
+\pause
 \[
-||x - \Pi_{W_{n,k}} ||^{2} = \suma{i=k+1}{n-1}{a_{i}^{2}} \approx 0.
+cos(\measuredangle(x, W_{n,k})) = 
+\frac{|| \Pi_{W_{n,k}}(x)||}{||x||} =
+\sqrt{\frac{\suma{i=0}{k}{a_{i}^{2}}}{\suma{i=0}{n-1}{a_{i}^{2}}}} \in [0, 1]
 \]
-Puesto que
-
 \end{frame}
 
 
+\begin{frame}
+Así, $cos(\measuredangle(x, W_{n,k}))$ es cero (resp. uno)
+si y sólo si $x \in W_{n, k}^{\perp}$ (resp. $x \in W_{n,k}$).
+	\begin{figure}[h]
+		\includegraphics[scale = 1]{criterioSencillo1}
+	\end{figure}
+\pause
+Observe que $cos(\measuredangle(x, W_{n,k}))$ tiende a uno 
+conforme la energía de $x$ (i.e. $||x||^{2}$) se concentra en sus
+$k+1$ primeros coeficientes de Legendre.
+\end{frame}
+
+
+\begin{frame}
+\begin{prop}
+Sean $n \geq 2$, $x \in \IR^{n}$, $0 \leq k \leq n-1$.
+Sean $a_{i} := \langle x, \cali{L}^{n,i} \rangle$ los coeficientes
+de $x$ respecto a la base de Legendre discreta $\cali{L}^{n}$.
+\begin{itemize}
+	\item La señal $x$ es cercana a ser constante si
+	$a_{0}^{2} \sim ||x||^{2}$
+	\item La señal $x$ es cercana a ser afín si
+	$a_{0}^{2} + a_{1}^{2} \sim ||x||^{2}$
+	\item  La señal $x$ es cercana a ser cuadrática si
+	$a_{0}^{2} + a_{1}^{2} + a_{2}^{2} \sim ||x||^{2}$
+\end{itemize}
+En general,
+\begin{itemize}
+	\item La señal $x$ es cercana a ser un polinomio $n-$dimensional
+	de grado $k$ si
+	$\suma{i=0}{k}{a_{i}^{2}} \sim ||x||^{2}$
+\end{itemize}
+\end{prop}
+\end{frame}
+
+\begin{frame}{Algunos ejemplos en $\IR^{3}$}
+Observe que $W_{3,1}$ es un hiperplano de $\IR^{3}$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{2Dic_4}
+	\end{figure}
+Como tal, divide al espacio ambiente en tres regiones agenas.
+Digamos que la región $I$ es la que contiene a $\cali{L}^{3,2}$, la
+región $II$ es $W_{3,1}$ y la región $III$ es la última.
+\end{frame}
+
+\begin{frame}
+	Sea $x = (1.58, -2.36, 3.58)$, vector de la región $I$
+	que forma un ángulo de $\pi/3$ radianes con el plano $W_{3,1}$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{6Dic_0}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	Sea $x = (0.91, -0.83, 2.91)$, vector de la región $I$
+	que forma un ángulo de $\pi/4$ radianes con el plano $W_{3,1}$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{6Dic_1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	Sea $x = (0, 1, 2)$, vector de la región $II$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{6Dic_2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	Sea $x = (-1.58, 4.16, 0.42)$, vector de la región $III$
+	que forma un ángulo de $\pi/3$ radianes con el plano $W_{3,1}$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{6Dic_3}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+	Sea $x = (-1.83, 4.67, 0.17)$, vector de la región $III$
+	que forma un ángulo de $6\pi/17$ radianes con el plano $W_{3,1}$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.27]{6Dic_4}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}{Relación con el método de aproximación por mínimos cuadrados}
+Tenemos dos formas de aproximar un conjunto de puntos
+de la forma $\{ (i, x(i)) : \hspace{0.2cm} 0 \leq i \leq n-1 \}$
+con un polinomio de grado $k \leq n-1$. Pongamos $k =1$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{minimos1}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Relación con el método de aproximación por mínimos cuadrados}
+Tenemos dos formas de aproximar un conjunto de puntos
+de la forma $\{ (i, x(i)) : \hspace{0.2cm} 0 \leq i \leq n-1 \}$
+con un polinomio de grado $k \leq n-1$. Pongamos $k =1$.
+    \begin{figure}[h]
+		\includegraphics[scale = 0.8]{minimos2}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+
+\begin{prop}
+\label{prop: discretizacion recta minimos cuadrados}
+Sea $n \geq 2$ y sea el conjunto de $n$ puntos del plano
+\begin{equation}
+\label{eq10: 10Dic}
+\{(i, x_{i}): 0 \leq i \leq n-1 \}
+\subseteq \IR^{2}.
+\end{equation}
+Si $x=(x_{i})_{i=0}^{n-1}$ es la señal cuya
+gráfica $G_{x}$ coincide con el conjunto dado, si
+\begin{itemize}
+\item $l_{min}: y= m_{0}t+ b_{0}$ es la recta obtenida 
+aproximando los puntos del conjunto \eqref{eq10: 10Dic}
+con el método de mínimos cuadrados, y
+
+\item $l_{x}$ es la recta cuya versión discreta 
+respecto a la malla uniforme $\cali{P}_{n}$
+es $\Pi_{W_{n,1}}(x) \in \IR^{n}$, 
+
+\end{itemize} 
+entonces las rectas $l_{x}$ y $l_{min}$ coinciden.
+\end{prop}
+
+\end{frame}

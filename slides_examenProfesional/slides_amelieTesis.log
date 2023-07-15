@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  12 JUL 2023 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  14 JUL 2023 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -992,14 +992,15 @@ Package: thmbox 2005/04/24 v2.0 fancy theorem outlining
 \c@ej=\count376
 \c@notacion=\count377
 \c@hip=\count378
-\c@nota=\count379
+\c@pregunta=\count379
+\c@nota=\count380
 
 (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count380
+\lrq@indent=\count381
 
 (/usr/share/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1007,49 +1008,49 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count381
-\c@listtotal=\count382
-\c@listcount=\count383
-\c@liststart=\count384
-\c@liststop=\count385
-\c@citecount=\count386
-\c@citetotal=\count387
-\c@multicitecount=\count388
-\c@multicitetotal=\count389
-\c@instcount=\count390
-\c@maxnames=\count391
-\c@minnames=\count392
-\c@maxitems=\count393
-\c@minitems=\count394
-\c@citecounter=\count395
-\c@maxcitecounter=\count396
-\c@savedcitecounter=\count397
-\c@uniquelist=\count398
-\c@uniquename=\count399
-\c@refsection=\count400
-\c@refsegment=\count401
-\c@maxextratitle=\count402
-\c@maxextratitleyear=\count403
-\c@maxextraname=\count404
-\c@maxextradate=\count405
-\c@maxextraalpha=\count406
-\c@abbrvpenalty=\count407
-\c@highnamepenalty=\count408
-\c@lownamepenalty=\count409
-\c@maxparens=\count410
-\c@parenlevel=\count411
-\blx@tempcnta=\count412
-\blx@tempcntb=\count413
-\blx@tempcntc=\count414
-\c@blx@maxsection=\count415
-\blx@maxsegment@0=\count416
-\blx@notetype=\count417
-\blx@parenlevel@text=\count418
-\blx@parenlevel@foot=\count419
-\blx@sectionciteorder@0=\count420
-\blx@sectionciteorderinternal@0=\count421
-\blx@entrysetcounter=\count422
-\blx@biblioinstance=\count423
+\c@tabx@nest=\count382
+\c@listtotal=\count383
+\c@listcount=\count384
+\c@liststart=\count385
+\c@liststop=\count386
+\c@citecount=\count387
+\c@citetotal=\count388
+\c@multicitecount=\count389
+\c@multicitetotal=\count390
+\c@instcount=\count391
+\c@maxnames=\count392
+\c@minnames=\count393
+\c@maxitems=\count394
+\c@minitems=\count395
+\c@citecounter=\count396
+\c@maxcitecounter=\count397
+\c@savedcitecounter=\count398
+\c@uniquelist=\count399
+\c@uniquename=\count400
+\c@refsection=\count401
+\c@refsegment=\count402
+\c@maxextratitle=\count403
+\c@maxextratitleyear=\count404
+\c@maxextraname=\count405
+\c@maxextradate=\count406
+\c@maxextraalpha=\count407
+\c@abbrvpenalty=\count408
+\c@highnamepenalty=\count409
+\c@lownamepenalty=\count410
+\c@maxparens=\count411
+\c@parenlevel=\count412
+\blx@tempcnta=\count413
+\blx@tempcntb=\count414
+\blx@tempcntc=\count415
+\c@blx@maxsection=\count416
+\blx@maxsegment@0=\count417
+\blx@notetype=\count418
+\blx@parenlevel@text=\count419
+\blx@parenlevel@foot=\count420
+\blx@sectionciteorder@0=\count421
+\blx@sectionciteorderinternal@0=\count422
+\blx@entrysetcounter=\count423
+\blx@biblioinstance=\count424
 \labelnumberwidth=\skip69
 \labelalphawidth=\skip70
 \biblabelsep=\skip71
@@ -1061,9 +1062,9 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read5
 \blx@bcfout=\write5
 \blx@langwohyphens=\language5
-\c@mincomprange=\count424
-\c@maxcomprange=\count425
-\c@mincompwidth=\count426
+\c@mincomprange=\count425
+\c@maxcomprange=\count426
+\c@mincompwidth=\count427
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1074,74 +1075,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'alphabetic.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count427
-\c@savedafterword=\count428
-\c@annotator=\count429
-\c@savedannotator=\count430
-\c@author=\count431
-\c@savedauthor=\count432
-\c@bookauthor=\count433
-\c@savedbookauthor=\count434
-\c@commentator=\count435
-\c@savedcommentator=\count436
-\c@editor=\count437
-\c@savededitor=\count438
-\c@editora=\count439
-\c@savededitora=\count440
-\c@editorb=\count441
-\c@savededitorb=\count442
-\c@editorc=\count443
-\c@savededitorc=\count444
-\c@foreword=\count445
-\c@savedforeword=\count446
-\c@holder=\count447
-\c@savedholder=\count448
-\c@introduction=\count449
-\c@savedintroduction=\count450
-\c@namea=\count451
-\c@savednamea=\count452
-\c@nameb=\count453
-\c@savednameb=\count454
-\c@namec=\count455
-\c@savednamec=\count456
-\c@translator=\count457
-\c@savedtranslator=\count458
-\c@shortauthor=\count459
-\c@savedshortauthor=\count460
-\c@shorteditor=\count461
-\c@savedshorteditor=\count462
-\c@labelname=\count463
-\c@savedlabelname=\count464
-\c@institution=\count465
-\c@savedinstitution=\count466
-\c@lista=\count467
-\c@savedlista=\count468
-\c@listb=\count469
-\c@savedlistb=\count470
-\c@listc=\count471
-\c@savedlistc=\count472
-\c@listd=\count473
-\c@savedlistd=\count474
-\c@liste=\count475
-\c@savedliste=\count476
-\c@listf=\count477
-\c@savedlistf=\count478
-\c@location=\count479
-\c@savedlocation=\count480
-\c@organization=\count481
-\c@savedorganization=\count482
-\c@origlocation=\count483
-\c@savedoriglocation=\count484
-\c@origpublisher=\count485
-\c@savedorigpublisher=\count486
-\c@publisher=\count487
-\c@savedpublisher=\count488
-\c@language=\count489
-\c@savedlanguage=\count490
-\c@origlanguage=\count491
-\c@savedoriglanguage=\count492
-\c@pageref=\count493
-\c@savedpageref=\count494
+\c@afterword=\count428
+\c@savedafterword=\count429
+\c@annotator=\count430
+\c@savedannotator=\count431
+\c@author=\count432
+\c@savedauthor=\count433
+\c@bookauthor=\count434
+\c@savedbookauthor=\count435
+\c@commentator=\count436
+\c@savedcommentator=\count437
+\c@editor=\count438
+\c@savededitor=\count439
+\c@editora=\count440
+\c@savededitora=\count441
+\c@editorb=\count442
+\c@savededitorb=\count443
+\c@editorc=\count444
+\c@savededitorc=\count445
+\c@foreword=\count446
+\c@savedforeword=\count447
+\c@holder=\count448
+\c@savedholder=\count449
+\c@introduction=\count450
+\c@savedintroduction=\count451
+\c@namea=\count452
+\c@savednamea=\count453
+\c@nameb=\count454
+\c@savednameb=\count455
+\c@namec=\count456
+\c@savednamec=\count457
+\c@translator=\count458
+\c@savedtranslator=\count459
+\c@shortauthor=\count460
+\c@savedshortauthor=\count461
+\c@shorteditor=\count462
+\c@savedshorteditor=\count463
+\c@labelname=\count464
+\c@savedlabelname=\count465
+\c@institution=\count466
+\c@savedinstitution=\count467
+\c@lista=\count468
+\c@savedlista=\count469
+\c@listb=\count470
+\c@savedlistb=\count471
+\c@listc=\count472
+\c@savedlistc=\count473
+\c@listd=\count474
+\c@savedlistd=\count475
+\c@liste=\count476
+\c@savedliste=\count477
+\c@listf=\count478
+\c@savedlistf=\count479
+\c@location=\count480
+\c@savedlocation=\count481
+\c@organization=\count482
+\c@savedorganization=\count483
+\c@origlocation=\count484
+\c@savedoriglocation=\count485
+\c@origpublisher=\count486
+\c@savedorigpublisher=\count487
+\c@publisher=\count488
+\c@savedpublisher=\count489
+\c@language=\count490
+\c@savedlanguage=\count491
+\c@origlanguage=\count492
+\c@savedoriglanguage=\count493
+\c@pageref=\count494
+\c@savedpageref=\count495
 \shorthandwidth=\skip77
 \shortjournalwidth=\skip78
 \shortserieswidth=\skip79
@@ -1177,19 +1178,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count495
-\c@textcitetotal=\count496
-\c@textcitemaxnames=\count497
-\c@biburlbigbreakpenalty=\count498
-\c@biburlbreakpenalty=\count499
-\c@biburlnumpenalty=\count500
-\c@biburlucpenalty=\count501
-\c@biburllcpenalty=\count502
+\c@textcitecount=\count496
+\c@textcitetotal=\count497
+\c@textcitemaxnames=\count498
+\c@biburlbigbreakpenalty=\count499
+\c@biburlbreakpenalty=\count500
+\c@biburlnumpenalty=\count501
+\c@biburlucpenalty=\count502
+\c@biburllcpenalty=\count503
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count503
+\c@smartand=\count504
 )
 Package biblatex Info: Trying to load bibliography style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.bbx' found.
@@ -1201,8 +1202,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count504
-\c@bbx:relatedtotal=\count505
+\c@bbx:relatedcount=\count505
+\c@bbx:relatedtotal=\count506
 ))
 Package biblatex Info: Trying to load citation style 'alphabetic'...
 Package biblatex Info: ... file 'alphabetic.cbx' found.
@@ -1234,7 +1235,7 @@ Package: expl3 2023-02-22 L3 programming layer (loader)
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count506
+\l__color_backend_stack_int=\count507
 \l__pdf_internal_box=\box100
 ))
 Package biblatex Info: ... and expl3
@@ -1263,29 +1264,29 @@ r presentations
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count507
-\@quotereset=\count508
+\@quotelevel=\count508
+\@quotereset=\count509
 (./slides_amelieTesis.aux)
 \openout1 = `slides_amelieTesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1323,16 +1324,16 @@ LaTeX Font Info:    ... okay on input line 85.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count509
+\scratchcounter=\count510
 \scratchdimen=\dimen347
 \scratchbox=\box101
-\nofMPsegments=\count510
-\nofMParguments=\count511
+\nofMPsegments=\count511
+\nofMParguments=\count512
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count512
+\MPscratchCnt=\count513
 \MPscratchDim=\dimen348
-\MPnumerator=\count513
-\makeMPintoPDFobject=\count514
+\MPnumerator=\count514
+\makeMPintoPDFobject=\count515
 \everyMPtoPDFconversion=\toks53
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1343,64 +1344,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 85.
+Package hyperref Info: Link coloring OFF on input line 98.
 
 (./slides_amelieTesis.out) (./slides_amelieTesis.out)
 \@outlinefile=\write6
 \openout6 = `slides_amelieTesis.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 85.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 85.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 98.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 85.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 85.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 85.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 85.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 85.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 85.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 85.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 85.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 85.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 85.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 85.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 85.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 85.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 98.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 85.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 85.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 85.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 85.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 85.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 85.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 85.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 98.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 98.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 8
-5.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 9
+8.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 8
-5.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 9
+8.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 85.
+ut line 98.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1426,7 +1427,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count515
+\c@lstlisting=\count516
  (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks54
@@ -1437,7 +1438,7 @@ Package biblatex Info: ... file 'nil.lbx' not found.
 
 
 Package biblatex Warning: Language 'nil' not supported.
-(biblatex)                Using dummy definitions on input line 85.
+(biblatex)                Using dummy definitions on input line 98.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1450,63 +1451,68 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'slides_amelieTesis.bbl' found.
 (./slides_amelieTesis.bbl)
-Package biblatex Info: Reference section=0 on input line 85.
-Package biblatex Info: Reference segment=0 on input line 85.
+Package biblatex Info: Reference section=0 on input line 98.
+Package biblatex Info: Reference segment=0 on input line 98.
  (./slides_amelieTesis.nav)
-LaTeX Font Info:    Calculating math sizes for size <4> on input line 93.
+<logo_buap.png, id=105, 341.8371pt x 330.2739pt>
+File: logo_buap.png Graphic file (type png)
+<use logo_buap.png>
+Package pdftex.def Info: logo_buap.png  used on input line 112.
+(pdftex.def)             Requested size: 68.3662pt x 66.0536pt.
+LaTeX Font Info:    Calculating math sizes for size <4> on input line 112.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <2> not available
-(Font)              size <3> substituted on input line 93.
+(Font)              size <3> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2.79999> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <2> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2.79999> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <2> not available
-(Font)              size <5> substituted on input line 93.
+(Font)              size <5> substituted on input line 112.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 93.
+ut line 112.
 
 (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./slides_amelieTesis.toc) [2
+ <./logo_buap.png>]
+(./slides_amelieTesis.toc) [2
 
-]
-(./0.motivacion
-<graficasAfinCuadr.png, id=177, 576.7146pt x 293.4162pt>
+] (./0.motivacion
+<graficasAfinCuadr.png, id=183, 576.7146pt x 293.4162pt>
 File: graficasAfinCuadr.png Graphic file (type png)
 <use graficasAfinCuadr.png>
 Package pdftex.def Info: graficasAfinCuadr.png  used on input line 28.
@@ -1518,10 +1524,11 @@ File: graficasAfinCuadr.png Graphic file (type png)
 <use graficasAfinCuadr.png>
 Package pdftex.def Info: graficasAfinCuadr.png  used on input line 28.
 (pdftex.def)             Requested size: 230.68175pt x 117.3644pt.
- [4
+
+[4
 
 ]
-<afines.png, id=225, 683.55376pt x 391.4625pt>
+<afines.png, id=230, 683.55376pt x 391.4625pt>
 File: afines.png Graphic file (type png)
 <use afines.png>
 Package pdftex.def Info: afines.png  used on input line 59.
@@ -1529,7 +1536,7 @@ Package pdftex.def Info: afines.png  used on input line 59.
  [5
 
  <./afines.png>]
-<cuadraticas.png, id=247, 691.08188pt x 377.15906pt>
+<cuadraticas.png, id=252, 691.08188pt x 377.15906pt>
 File: cuadraticas.png Graphic file (type png)
 <use cuadraticas.png>
 Package pdftex.def Info: cuadraticas.png  used on input line 83.
@@ -1539,12 +1546,12 @@ Package pdftex.def Info: cuadraticas.png  used on input line 83.
  <./cuadraticas.png>] [7
 
 ]
-<cuadr1.png, id=292, 383.2719pt x 148.1535pt>
+<cuadr1.png, id=297, 383.2719pt x 148.1535pt>
 File: cuadr1.png Graphic file (type png)
 <use cuadr1.png>
 Package pdftex.def Info: cuadr1.png  used on input line 143.
 (pdftex.def)             Requested size: 268.28848pt x 103.70674pt.
-<cuadr2.png, id=293, 377.9721pt x 139.4811pt>
+<cuadr2.png, id=298, 377.9721pt x 139.4811pt>
 File: cuadr2.png Graphic file (type png)
 <use cuadr2.png>
 Package pdftex.def Info: cuadr2.png  used on input line 143.
@@ -1570,7 +1577,7 @@ sl/10.95 f\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 t[]\OT1/cmss/m/n/10
 .95 ))[] \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 R[]\OML/cmm/m/it/10.95 :
  []
 
-<disc_puntual.png, id=337, 170.0754pt x 131.0496pt>
+<disc_puntual.png, id=342, 170.0754pt x 131.0496pt>
 File: disc_puntual.png Graphic file (type png)
 <use disc_puntual.png>
 Package pdftex.def Info: disc_puntual.png  used on input line 46.
@@ -1649,7 +1656,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ] [20
 
 ]
-<nuevas_lupas.png, id=562, 346.4142pt x 171.7617pt>
+<nuevas_lupas.png, id=567, 346.4142pt x 171.7617pt>
 File: nuevas_lupas.png Graphic file (type png)
 <use nuevas_lupas.png>
 Package pdftex.def Info: nuevas_lupas.png  used on input line 149.
@@ -1659,7 +1666,7 @@ Package pdftex.def Info: nuevas_lupas.png  used on input line 149.
  <./nuevas_lupas.png>] [22
 
 ]
-<grado1.png, id=603, 374.5995pt x 254.6313pt>
+<grado1.png, id=608, 374.5995pt x 254.6313pt>
 File: grado1.png Graphic file (type png)
 <use grado1.png>
 Package pdftex.def Info: grado1.png  used on input line 187.
@@ -1684,7 +1691,7 @@ Overfull \hbox (8.93738pt too wide) in paragraph at lines 187--187
 [24
 
 ]
-<grado2.png, id=646, 374.5995pt x 254.6313pt>
+<grado2.png, id=651, 374.5995pt x 254.6313pt>
 File: grado2.png Graphic file (type png)
 <use grado2.png>
 Package pdftex.def Info: grado2.png  used on input line 195.
@@ -1711,12 +1718,12 @@ Overfull \hbox (8.93738pt too wide) in paragraph at lines 195--195
 ]) (./2.PDL [32
 
 ]
-<fitting_problem.png, id=810, 239.9364pt x 163.0893pt>
+<fitting_problem.png, id=815, 239.9364pt x 163.0893pt>
 File: fitting_problem.png Graphic file (type png)
 <use fitting_problem.png>
 Package pdftex.def Info: fitting_problem.png  used on input line 19.
 (pdftex.def)             Requested size: 239.9358pt x 163.08888pt.
-<construccion1.png, id=811, 435.3063pt x 231.9867pt>
+<construccion1.png, id=816, 435.3063pt x 231.9867pt>
 File: construccion1.png Graphic file (type png)
 <use construccion1.png>
 Package pdftex.def Info: construccion1.png  used on input line 29.
@@ -1727,7 +1734,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [33
 
  <./fitting_problem.png>] [34 <./construccion1.png>]
-<construccion3.png, id=854, 435.3063pt x 231.9867pt>
+<construccion3.png, id=859, 435.3063pt x 231.9867pt>
 File: construccion3.png Graphic file (type png)
 <use construccion3.png>
 Package pdftex.def Info: construccion3.png  used on input line 35.
@@ -1735,7 +1742,7 @@ Package pdftex.def Info: construccion3.png  used on input line 35.
  [35
 
  <./construccion3.png>]
-<orthonorm.png, id=876, 246.9225pt x 118.5228pt>
+<orthonorm.png, id=881, 246.9225pt x 118.5228pt>
 File: orthonorm.png Graphic file (type png)
 <use orthonorm.png>
 Package pdftex.def Info: orthonorm.png  used on input line 41.
@@ -1744,7 +1751,7 @@ Package pdftex.def Info: orthonorm.png  used on input line 41.
 [36
 
  <./orthonorm.png>]
-<pdl.png, id=898, 323.7696pt x 86.2422pt>
+<pdl.png, id=903, 323.7696pt x 86.2422pt>
 File: pdl.png Graphic file (type png)
 <use pdl.png>
 Package pdftex.def Info: pdl.png  used on input line 60.
@@ -1794,7 +1801,7 @@ S/cmsy/m/n/10.95 ^^@ \OT1/cmss/m/n/10.95 1 :  \OT1/mathkerncmss/m/sl/10.95 x[]
 [41
 
 ]
-<10Dic_1.png, id=1005, 1195.46625pt x 663.98062pt>
+<10Dic_1.png, id=1010, 1195.46625pt x 663.98062pt>
 File: 10Dic_1.png Graphic file (type png)
 <use 10Dic_1.png>
 Package pdftex.def Info: 10Dic_1.png  used on input line 233.
@@ -1809,12 +1816,12 @@ Package pdftex.def Info: 10Dic_1.png  used on input line 233.
  [43
 
 ]
-<simetria1.png, id=1048, 361.35pt x 74.9199pt>
+<simetria1.png, id=1053, 361.35pt x 74.9199pt>
 File: simetria1.png Graphic file (type png)
 <use simetria1.png>
 Package pdftex.def Info: simetria1.png  used on input line 259.
 (pdftex.def)             Requested size: 216.81168pt x 44.95227pt.
-<simetria2.png, id=1049, 347.8596pt x 61.1886pt>
+<simetria2.png, id=1054, 347.8596pt x 61.1886pt>
 File: simetria2.png Graphic file (type png)
 <use simetria2.png>
 Package pdftex.def Info: simetria2.png  used on input line 259.
@@ -1876,7 +1883,7 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
 [50
 
 ]
-<PDL_2_3.png, id=1210, 407.8437pt x 205.9695pt>
+<PDL_2_3.png, id=1215, 407.8437pt x 205.9695pt>
 File: PDL_2_3.png Graphic file (type png)
 <use PDL_2_3.png>
 Package pdftex.def Info: PDL_2_3.png  used on input line 366.
@@ -1884,7 +1891,7 @@ Package pdftex.def Info: PDL_2_3.png  used on input line 366.
  [51
 
  <./PDL_2_3.png>]
-<PDL_4_5.png, id=1232, 410.0118pt x 210.7875pt>
+<PDL_4_5.png, id=1237, 410.0118pt x 210.7875pt>
 File: PDL_4_5.png Graphic file (type png)
 <use PDL_4_5.png>
 Package pdftex.def Info: PDL_4_5.png  used on input line 372.
@@ -1892,7 +1899,7 @@ Package pdftex.def Info: PDL_4_5.png  used on input line 372.
  [52
 
  <./PDL_4_5.png>]
-<PDL_6_7.png, id=1254, 409.0482pt x 212.7147pt>
+<PDL_6_7.png, id=1259, 409.0482pt x 212.7147pt>
 File: PDL_6_7.png Graphic file (type png)
 <use PDL_6_7.png>
 Package pdftex.def Info: PDL_6_7.png  used on input line 378.
@@ -1900,7 +1907,7 @@ Package pdftex.def Info: PDL_6_7.png  used on input line 378.
  [53
 
  <./PDL_6_7.png>]
-<medir_distancia.png, id=1276, 368.0952pt x 222.8325pt>
+<medir_distancia.png, id=1281, 368.0952pt x 222.8325pt>
 File: medir_distancia.png Graphic file (type png)
 <use medir_distancia.png>
 Package pdftex.def Info: medir_distancia.png  used on input line 392.
@@ -1915,43 +1922,496 @@ Package pdftex.def Info: medir_distancia.png  used on input line 392.
  [55
 
 ]
-<cosSim_mejor.png, id=1319, 2007.5pt x 941.5175pt>
+<cosSim_mejor.png, id=1324, 2007.5pt x 941.5175pt>
 File: cosSim_mejor.png Graphic file (type png)
 <use cosSim_mejor.png>
-Package pdftex.def Info: cosSim_mejor.png  used on input line 404.
+Package pdftex.def Info: cosSim_mejor.png  used on input line 403.
 (pdftex.def)             Requested size: 260.98416pt x 122.40157pt.
  [56
 
  <./cosSim_mejor.png>]
 File: cosSim_mejor.png Graphic file (type png)
 <use cosSim_mejor.png>
-Package pdftex.def Info: cosSim_mejor.png  used on input line 404.
+Package pdftex.def Info: cosSim_mejor.png  used on input line 403.
 (pdftex.def)             Requested size: 260.98416pt x 122.40157pt.
  [57
 
 ]
-<abee.png, id=1361, 910.90312pt x 563.85657pt>
+<abee.png, id=1366, 910.90312pt x 563.85657pt>
 File: abee.png Graphic file (type png)
 <use abee.png>
-Package pdftex.def Info: abee.png  used on input line 414.
+Package pdftex.def Info: abee.png  used on input line 413.
 (pdftex.def)             Requested size: 245.94713pt x 152.2433pt.
  [58
 
  <./abee.png>]
+<proy.png, id=1388, 128.6406pt x 84.315pt>
+File: proy.png Graphic file (type png)
+<use proy.png>
+Package pdftex.def Info: proy.png  used on input line 440.
+(pdftex.def)             Requested size: 128.64027pt x 84.31477pt.
+
 [59
 
-]) (./3.AE)
+ <./proy.png>]
+File: proy.png Graphic file (type png)
+<use proy.png>
+Package pdftex.def Info: proy.png  used on input line 440.
+(pdftex.def)             Requested size: 128.64027pt x 84.31477pt.
+ [60
+
+]
+<criterioSencillo1.png, id=1433, 266.9172pt x 161.1621pt>
+File: criterioSencillo1.png Graphic file (type png)
+<use criterioSencillo1.png>
+Package pdftex.def Info: criterioSencillo1.png  used on input line 453.
+(pdftex.def)             Requested size: 266.91655pt x 161.1617pt.
+ [61
+
+ <./criterioSencillo1.png>]
+File: criterioSencillo1.png Graphic file (type png)
+<use criterioSencillo1.png>
+Package pdftex.def Info: criterioSencillo1.png  used on input line 453.
+(pdftex.def)             Requested size: 266.91655pt x 161.1617pt.
+ [62
+
+] [63
+
+]
+<2Dic_4.png, id=1496, 1105.731pt x 362.7954pt>
+File: 2Dic_4.png Graphic file (type png)
+<use 2Dic_4.png>
+Package pdftex.def Info: 2Dic_4.png  used on input line 486.
+(pdftex.def)             Requested size: 298.55136pt x 97.95605pt.
+
+Overfull \hbox (7.80873pt too wide) in paragraph at lines 486--486
+ [] 
+ []
+
+[64
+
+ <./2Dic_4.png>]
+<6Dic_0.png, id=1518, 1134.639pt x 605.6226pt>
+File: 6Dic_0.png Graphic file (type png)
+<use 6Dic_0.png>
+Package pdftex.def Info: 6Dic_0.png  used on input line 494.
+(pdftex.def)             Requested size: 306.35663pt x 163.52028pt.
+
+Overfull \hbox (15.614pt too wide) in paragraph at lines 494--494
+ [] 
+ []
+
+[65
+
+ <./6Dic_0.png>]
+<6Dic_1.png, id=1541, 1123.0758pt x 624.4128pt>
+File: 6Dic_1.png Graphic file (type png)
+<use 6Dic_1.png>
+Package pdftex.def Info: 6Dic_1.png  used on input line 503.
+(pdftex.def)             Requested size: 303.23453pt x 168.5937pt.
+
+Overfull \hbox (12.4919pt too wide) in paragraph at lines 503--503
+ [] 
+ []
+
+[66
+
+ <./6Dic_1.png>]
+<6Dic_2.png, id=1563, 1149.093pt x 592.614pt>
+File: 6Dic_2.png Graphic file (type png)
+<use 6Dic_2.png>
+Package pdftex.def Info: 6Dic_2.png  used on input line 510.
+(pdftex.def)             Requested size: 310.25926pt x 160.00792pt.
+
+Overfull \hbox (19.51663pt too wide) in paragraph at lines 510--510
+ [] 
+ []
+
+[67
+
+ <./6Dic_2.png>]
+<6Dic_3.png, id=1586, 1121.6304pt x 599.841pt>
+File: 6Dic_3.png Graphic file (type png)
+<use 6Dic_3.png>
+Package pdftex.def Info: 6Dic_3.png  used on input line 519.
+(pdftex.def)             Requested size: 302.84425pt x 161.95923pt.
+
+Overfull \hbox (12.10162pt too wide) in paragraph at lines 519--519
+ [] 
+ []
+
+[68
+
+ <./6Dic_3.png>]
+<6Dic_4.png, id=1608, 1134.639pt x 624.4128pt>
+File: 6Dic_4.png Graphic file (type png)
+<use 6Dic_4.png>
+Package pdftex.def Info: 6Dic_4.png  used on input line 529.
+(pdftex.def)             Requested size: 306.35663pt x 168.5937pt.
+
+Overfull \hbox (15.614pt too wide) in paragraph at lines 529--529
+ [] 
+ []
+
+[69
+
+ <./6Dic_4.png>]
+<minimos1.png, id=1630, 343.2825pt x 208.6194pt>
+File: minimos1.png Graphic file (type png)
+<use minimos1.png>
+Package pdftex.def Info: minimos1.png  used on input line 539.
+(pdftex.def)             Requested size: 274.62636pt x 166.89574pt.
+ [70
+
+ <./minimos1.png>]
+<minimos2.png, id=1653, 343.2825pt x 208.6194pt>
+File: minimos2.png Graphic file (type png)
+<use minimos2.png>
+Package pdftex.def Info: minimos2.png  used on input line 548.
+(pdftex.def)             Requested size: 274.62636pt x 166.89574pt.
+ [71
+
+ <./minimos2.png>] [72
+
+]) (./3.AE
+<oscil1.png, id=1698, 319.6743pt x 185.0112pt>
+File: oscil1.png Graphic file (type png)
+<use oscil1.png>
+Package pdftex.def Info: oscil1.png  used on input line 7.
+(pdftex.def)             Requested size: 255.73978pt x 148.00916pt.
+
+[73
+
+ <./oscil1.png>]
+<oscil2.png, id=1720, 301.125pt x 191.7564pt>
+File: oscil2.png Graphic file (type png)
+<use oscil2.png>
+Package pdftex.def Info: oscil2.png  used on input line 13.
+(pdftex.def)             Requested size: 240.90031pt x 153.4053pt.
+ [74
+
+ <./oscil2.png>]
+<oscil3.png, id=1742, 299.9205pt x 191.0337pt>
+File: oscil3.png Graphic file (type png)
+<use oscil3.png>
+Package pdftex.def Info: oscil3.png  used on input line 19.
+(pdftex.def)             Requested size: 239.9367pt x 152.82715pt.
+ [75
+
+ <./oscil3.png>]
+<hip_0,1.png, id=1765, 615.0177pt x 240.9pt>
+File: hip_0,1.png Graphic file (type png)
+<use hip_0,1.png>
+Package pdftex.def Info: hip_0,1.png  used on input line 25.
+(pdftex.def)             Requested size: 258.30566pt x 101.17729pt.
+ [76
+
+ <./hip_0,1.png>]
+<hip_2,3.png, id=1787, 618.6312pt x 240.9pt>
+File: hip_2,3.png Graphic file (type png)
+<use hip_2,3.png>
+Package pdftex.def Info: hip_2,3.png  used on input line 31.
+(pdftex.def)             Requested size: 259.82333pt x 101.17729pt.
+ [77
+
+ <./hip_2,3.png>]
+<hip_4,5.png, id=1809, 612.8496pt x 240.9pt>
+File: hip_4,5.png Graphic file (type png)
+<use hip_4,5.png>
+Package pdftex.def Info: hip_4,5.png  used on input line 37.
+(pdftex.def)             Requested size: 257.39507pt x 101.17729pt.
+ [78
+
+ <./hip_4,5.png>] [79
+
+] [80
+
+]
+<tiempo_freq.png, id=1875, 238.9728pt x 90.3375pt>
+File: tiempo_freq.png Graphic file (type png)
+<use tiempo_freq.png>
+Package pdftex.def Info: tiempo_freq.png  used on input line 98.
+(pdftex.def)             Requested size: 191.17848pt x 72.27008pt.
+<frecFourier.png, id=1876, 306.9066pt x 115.8729pt>
+File: frecFourier.png Graphic file (type png)
+<use frecFourier.png>
+Package pdftex.def Info: frecFourier.png  used on input line 98.
+(pdftex.def)             Requested size: 245.5256pt x 92.69843pt.
+ [81
+
+ <./tiempo_freq.png> <./frecFourier.png>]
+<four1.png, id=1899, 386.8854pt x 263.0628pt>
+File: four1.png Graphic file (type png)
+<use four1.png>
+Package pdftex.def Info: four1.png  used on input line 109.
+(pdftex.def)             Requested size: 270.81793pt x 184.1427pt.
+ [82
+
+ <./four1.png>]
+<four2.png, id=1921, 259.6902pt x 113.7048pt>
+File: four2.png Graphic file (type png)
+<use four2.png>
+Package pdftex.def Info: four2.png  used on input line 120.
+(pdftex.def)             Requested size: 259.68954pt x 113.70451pt.
+ [83
+
+ <./four2.png>] [84
+
+]
+<espectroFourier_PDL_18_7.png, id=1964, 292.6935pt x 263.7855pt>
+File: espectroFourier_PDL_18_7.png Graphic file (type png)
+<use espectroFourier_PDL_18_7.png>
+Package pdftex.def Info: espectroFourier_PDL_18_7.png  used on input line 154.
+(pdftex.def)             Requested size: 263.4217pt x 237.40475pt.
+ [85
+
+ <./espectroFourier_PDL_18_7.png>] [86
+
+] [87
+
+]
+<desfase_ejemplo.png, id=2028, 773.289pt x 377.2494pt>
+File: desfase_ejemplo.png Graphic file (type png)
+<use desfase_ejemplo.png>
+Package pdftex.def Info: desfase_ejemplo.png  used on input line 176.
+(pdftex.def)             Requested size: 278.38383pt x 135.80968pt.
+ [88
+
+ <./desfase_ejemplo.png>] [89
+
+] [90
+
+]
+<muestreo_coseno.png, id=2090, 584.6643pt x 310.0383pt>
+File: muestreo_coseno.png Graphic file (type png)
+<use muestreo_coseno.png>
+Package pdftex.def Info: muestreo_coseno.png  used on input line 218.
+(pdftex.def)             Requested size: 251.40074pt x 133.31386pt.
+ [91
+
+ <./muestreo_coseno.png>]
+File: muestreo_coseno.png Graphic file (type png)
+<use muestreo_coseno.png>
+Package pdftex.def Info: muestreo_coseno.png  used on input line 218.
+(pdftex.def)             Requested size: 251.40074pt x 133.31386pt.
+ [92
+
+] [93
+
+] [94
+
+]
+<20Mar23_1.png, id=2174, 293.6571pt x 144.54pt>
+File: 20Mar23_1.png Graphic file (type png)
+<use 20Mar23_1.png>
+Package pdftex.def Info: 20Mar23_1.png  used on input line 271.
+(pdftex.def)             Requested size: 234.926pt x 115.63214pt.
+ [95
+
+ <./20Mar23_1.png>]
+File: 20Mar23_1.png Graphic file (type png)
+<use 20Mar23_1.png>
+Package pdftex.def Info: 20Mar23_1.png  used on input line 271.
+(pdftex.def)             Requested size: 234.926pt x 115.63214pt.
+ [96
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 310.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 310.
+
+[97
+
+] [98
+
+] [99
+
+] [100
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 389.
+
+
+Overfull \hbox (46.73505pt too wide) detected at line 389
+\OML/cmm/m/it/10.95 ^^[[]\OT1/cmss/m/n/10.95 (\OT1/mathkerncmss/m/sl/10.95 x\OM
+L/cmm/m/it/10.95 ; !\OT1/cmss/m/n/10.95 ) = [][]
+ []
+
+[101
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 409.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 409.
+
+[102
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 409.
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 409.
+
+[103
+
+] [104
+
+] [105
+
+] [106
+
+] [107
+
+]
+<periodicidad_espectro.png, id=2455, 361.35pt x 114.6684pt>
+File: periodicidad_espectro.png Graphic file (type png)
+<use periodicidad_espectro.png>
+Package pdftex.def Info: periodicidad_espectro.png  used on input line 508.
+(pdftex.def)             Requested size: 289.0804pt x 91.73483pt.
+<simetria_espectro.png, id=2456, 187.1793pt x 103.3461pt>
+File: simetria_espectro.png Graphic file (type png)
+<use simetria_espectro.png>
+Package pdftex.def Info: simetria_espectro.png  used on input line 508.
+(pdftex.def)             Requested size: 149.74364pt x 82.67699pt.
+ [108
+
+ <./periodicidad_espectro.png> <./simetria_espectro.png>] [109
+
+] [110
+
+] [111
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 589.
+
+
+Overfull \hbox (61.85788pt too wide) detected at line 589
+[][][] [] [] \OT1/cmss/m/n/10 = [][]
+ []
+
+[112
+
+]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 589.
+
+
+Overfull \hbox (61.85788pt too wide) detected at line 589
+[][] [] [] \OT1/cmss/m/n/10 = [][]
+ []
+
+[113
+
+]
+Overfull \hbox (87.82768pt too wide) detected at line 622
+[]
+ []
+
+<esp_ang.png, id=2586, 235.3593pt x 108.405pt>
+File: esp_ang.png Graphic file (type png)
+<use esp_ang.png>
+Package pdftex.def Info: esp_ang.png  used on input line 622.
+(pdftex.def)             Requested size: 188.28767pt x 86.7241pt.
+
+Overfull \hbox (57.45439pt too wide) in paragraph at lines 622--622
+ [] 
+ []
+
+[114
+
+ <./esp_ang.png>] [115
+
+]
+<AE_PDL_18_7.png, id=2629, 688.0104pt x 726.3135pt>
+File: AE_PDL_18_7.png Graphic file (type png)
+<use AE_PDL_18_7.png>
+Package pdftex.def Info: AE_PDL_18_7.png  used on input line 646.
+(pdftex.def)             Requested size: 206.40471pt x 217.89574pt.
+ [116
+
+ <./AE_PDL_18_7.png>]
+<ejemplo_pregunta1.png, id=2652, 390.9807pt x 121.4136pt>
+File: ejemplo_pregunta1.png Graphic file (type png)
+<use ejemplo_pregunta1.png>
+Package pdftex.def Info: ejemplo_pregunta1.png  used on input line 668.
+(pdftex.def)             Requested size: 293.2348pt x 91.05997pt.
+
+Overfull \hbox (2.49217pt too wide) in paragraph at lines 668--668
+ [] 
+ []
+
+[117
+
+ <./ejemplo_pregunta1.png>]
+Overfull \hbox (20.51158pt too wide) detected at line 699
+[] [] []  [] []\OT1/cmss/m/n/10.95 ?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+\OT1/cmss/m/sl/10.95 De existir estos l^^S^^Pmites,
+ []
+
+<ejemplo_pregunta2.png, id=2674, 144.54pt x 113.4639pt>
+File: ejemplo_pregunta2.png Graphic file (type png)
+<use ejemplo_pregunta2.png>
+Package pdftex.def Info: ejemplo_pregunta2.png  used on input line 699.
+(pdftex.def)             Requested size: 115.63214pt x 90.77122pt.
+[118
+
+ <./ejemplo_pregunta2.png>]
+<ejemplo_pregunta3.png, id=2697, 184.7703pt x 95.6373pt>
+File: ejemplo_pregunta3.png Graphic file (type png)
+<use ejemplo_pregunta3.png>
+Package pdftex.def Info: ejemplo_pregunta3.png  used on input line 720.
+(pdftex.def)             Requested size: 166.29172pt x 86.07274pt.
+ [119
+
+ <./ejemplo_pregunta3.png>]
+Underfull \hbox (badness 1565) in paragraph at lines 747--747
+[][]\OT1/cmss/m/n/10.95 Respuesta:[] esper^^Sabamos que
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 747--747
+\OT1/cmss/m/n/10.95 las pendientes $\OT1/mathkerncmss/m/sl/10.95 m[]$ \OT1/cmss
+/m/n/10.95 y $\OT1/mathkerncmss/m/sl/10.95 m[]$
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 747--747
+\OT1/cmss/m/n/10.95 cercano a $0\OML/cmm/m/it/10.95 :\OT1/cmss/m/n/10.95 4$, mi
+entras que
+ []
+
+<pendiente_oOrigen.png, id=2720, 105.0324pt x 205.9695pt>
+File: pendiente_oOrigen.png Graphic file (type png)
+<use pendiente_oOrigen.png>
+Package pdftex.def Info: pendiente_oOrigen.png  used on input line 747.
+(pdftex.def)             Requested size: 105.03214pt x 205.96898pt.
+[120
+
+ <./pendiente_oOrigen.png>] [121
+
+])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 117.
+(hyperref)                removing `\translate ' on input line 136.
 
 
 Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry 'Neuman' on input line 117.
+(biblatex)                at entry 'Neuman' on input line 136.
 
 
 Package biblatex Warning: Bibliography string 'in' untranslated
-(biblatex)                at entry 'Neuman' on input line 117.
+(biblatex)                at entry 'Neuman' on input line 136.
 
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
@@ -1962,9 +2422,9 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 
 
 Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry 'Neuman' on input line 117.
+(biblatex)                at entry 'Neuman' on input line 136.
 
-[60
+[122
 
 ]
 \tf@nav=\write7
@@ -1984,38 +2444,47 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `slides_amelieTesis.out' has not changed.
-(rerunfilecheck)             Checksum: 694299E5C65C0A4AC3F43901E290C373;2758.
+(rerunfilecheck)             Checksum: 9B24EF159F11CDEE54934DDDECA8CD20;2946.
 Package logreq Info: Writing requests to 'slides_amelieTesis.run.xml'.
 \openout1 = `slides_amelieTesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41384 strings out of 477985
- 856432 string characters out of 5840059
+ 42005 strings out of 477985
+ 866331 string characters out of 5840059
  1891388 words of memory out of 5000000
- 60697 multiletter control sequences out of 15000+600000
+ 61166 multiletter control sequences out of 15000+600000
  532729 words of font info for 106 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,19n,122p,1896b,1475s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/sha
-re/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on slides_amelieTesis.pdf (60 pages, 3586375 bytes).
+ 128i,20n,122p,1896b,1479s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Navigation123} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on slides_amelieTesis.pdf (122 pages, 8375403 bytes).
 PDF statistics:
- 1530 PDF objects out of 1728 (max. 8388607)
- 1344 compressed objects within 14 object streams
- 145 named destinations out of 1000 (max. 500000)
- 414 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2937 PDF objects out of 2984 (max. 8388607)
+ 2604 compressed objects within 27 object streams
+ 297 named destinations out of 1000 (max. 500000)
+ 579 words of extra memory for PDF output out of 10000 (max. 10000000)
 
