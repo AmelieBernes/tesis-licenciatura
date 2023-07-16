@@ -79,6 +79,16 @@ def graficar_distancias_espacios_Wnk(x, nombre):
         formato_axis(axis[i])
     return plt.show()
 
+def graficar_distancias_dePDL_espacios_Wnk(n,k):
+    """
+    n es la dimensión del polinomio discreto de Legendre (PDL)
+    y k es su grado.
+    """
+    x = legendre.calculo_base(n)[k]
+    graficar_distancias_espacios_Wnk(x, r"\mathcal{{L}}^{{{0}}}".format(str(n) + ', ' + (str(k))))
+
+#------------------------------------------------
+
 def f(t):
     return (t-2)**2 * (t-5) * (t-7)**2
 
@@ -86,7 +96,8 @@ def f(t):
     return (t-3)*(t-5)*(t-7)*(t-9)
 
 
-x = [f(t) for t in range(12)]
-#x = [f(t) + random.uniform(-0.3, 0.3) for t in range(30)]
+#x = [f(t) for t in range(12)]
+x = [f(t) + random.uniform(-0.5, 0.5) for t in range(12)]
 nombre = "x"
 graficar_distancias_espacios_Wnk(x, nombre)
+#graficar_distancias_dePDL_espacios_Wnk(30,4)

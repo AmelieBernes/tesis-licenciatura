@@ -97,7 +97,6 @@ los vectores $\cali{L}^{n, j}$ con $0 \leq j \leq i$
 conforman una BON de $W_{n,i}$
 (c.f. corolario \ref{cor: BON de legendre para espacios Wk}) y
 que $a_{k}= \langle x, \cali{L}^{n,j} \rangle$.
-Use el corolario \ref{cor: proyeccion en terminos de una BON}.
 \QEDB 
 \vspace{0.2cm}
 
@@ -748,6 +747,86 @@ mayoría de los casos, han sido redondeados.
 
 
 
+
+\section{Determinando el grado de una señal finita a partir de sus coeficientes respecto a $\cali{L}^{n}$}
+
+Fijemos una dimensión $n \geq 2$. 
+Recuerde que, en la sección 
+\ref{definicion del concepto de grado para seniales finitas},
+definimos el grado de una señal finita en términos de la pertenencia
+de esta a espacios $W_{n,k}$. El grado de una señal es relevante
+para nosotros pues este nos indica la morfología de la gráfica de
+esta.
+
+En general, si $W$ es un subespacio de $\IR^{n}$, entonces
+$x \in \IR^{n}$ es elemento de $W$ si y sólo si 
+$x$ coincide con su proyección, hecho que equivale a que
+$cos(\measuredangle(x, W))$ sea 1.
+
+\begin{notacion}
+Para todo grado $0 \leq k \leq n-1$ y toda señal $x \in \IR^{n}$,
+\begin{equation}
+	\label{eq: distancia de x a Wnk}
+	d_{k}(x) = cos(\measuredangle(x, W_{n,k})).
+\end{equation}
+\end{notacion}
+Claro que toda distancia $d_{k}(x)$ está entre cero y uno
+(inclusivo).
+
+Podemos entonces reinterpretar a la proposición
+\ref{prop: grado de x} como sigue;
+\begin{itemize}
+	\item Si $d_{0}(x) = 1$, entonces $x$ tiene grado cero. En caso 
+	contrario,
+	\item el índice $k$ para el que se cumpla que $d_{k}(x) < 1$
+	y $d_{k}(x) = 1$ es el grado de la señal $x$.
+\end{itemize} 
+
+Considerando el posible ruido presente al tomar
+mediciones, es razonable aceptar un error $\epsilon > 0$
+para redondear las similitudes coseno $d_{k}(x)$ y
+determinar un posible grado para la señal $x$ en cuestión.
+
+
+\begin{ejemplo}
+Considere al polinomio $f(t) = (t-3)(t-5)(t-7)(t-9)$
+y fijemos $n = 12$. Puesto que este es un polinomio de grado 
+$4$, su discretización en $\cali{P}_{12}$ es una señal de
+grado $4$. Consideremos una señal que se obtiene muestreando
+este polinomio y agregando un ruido uniforme; sea pues
+\begin{equation}
+	\label{eq: x con ruido}
+	x = (f(t) + U )_{t=0}^{11},
+\end{equation}
+con $U \sim (-0.5, 0.5)$ una variable aleatoria con distribución
+uniforme en $(-0.5, 0.5)$.
+
+Puesto que estamos agregando ruido a las mediciones,
+ya no podemos asegurar que $x$ sea una 
+señal de grado $4$, o sea, que cumpla la (bastante restrictiva)
+condición de ser elemento de $W_{12,4}$. Sin embargo,
+usando un error de $\epsilon = 10^-4$, es decir, 
+redondeando toda distancia $d_{k}(x)$ que sea mayor o igual
+a $1 - \epsilon$ a $1$, concluimos que el grado de $x$ es,
+al igual que el grado de $f$, igual a $4$. 
+
+\begin{figure}[H]
+	\sidecaption{
+	Se muestra la gráfica de $x$ que, en efecto,
+	parece poder ajustarse bien con el polinomio $f$. Sin embargo,
+	como hay ruido en las mediciones, $x \neq \Omega_{12, \cali{P}_{12}}(f)$.
+	Sin embargo, usando el margen de error $\epsilon = 10^{-4}$, pudimos 
+	asociar el grado $4$ a la señal $x$. Así, a pesar de que, teóricamente,
+	$4$ puede no ser el grado de $x$, $x$ se encuentra a una 
+	distancia coseno de $W_{12,4}$ considerablemente cercana a uno como 
+	para poder aceptar que $x$ está bien modelado por un polinomio de grado $4$.
+	\label{fig: 15 jul 1}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{15Jul_1} 
+\end{figure}	
+\final
+\end{ejemplo}
 
 
 %-----------------------------------------------------

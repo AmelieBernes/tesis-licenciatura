@@ -264,8 +264,7 @@ $x \in W_{n,i}$ pero $x \not\in W_{n, i-1}$.
 Luego, si $x \in \IR^{n}$, 
 \begin{itemize}
 	\item la gráfica de $x$ tiene la forma de un polinomio de
-	grado a lo más $k \leq n-2$ si y sólo si $x \in W_{n,k}$
-	pero $x \not\in W_{n,k+1}$.
+	grado a lo más $k \leq n-1$ si y sólo si $x \in W_{n,k}$.
 	\item Es posible medir la distancia del punto
 	$x \in \IR^{n}$ a espacios $W_{n,k} \leq \IR^{n}$, 
 	luego, \textbf{podemos medir qué tanto se aleja
