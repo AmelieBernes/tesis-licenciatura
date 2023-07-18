@@ -67,4 +67,4 @@
 \contentsline {subsection}{\numberline {A.6.1}Ángulo entre elementos de un espacio con producto punto}{163}{subsection.A.6.1}%
 \contentsline {subsection}{\numberline {A.6.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{164}{subsection.A.6.2}%
 \contentsline {subsection}{\numberline {A.6.3}Similitud coseno}{166}{subsection.A.6.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{168}{appendix.B}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{169}{appendix.B}%

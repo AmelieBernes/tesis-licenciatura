@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  15 JUL 2023 19:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  17 JUL 2023 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3444,80 +3444,80 @@ File: ./imagenes/15Jul_1.png Graphic file (type png)
 Package pdftex.def Info: ./imagenes/15Jul_1.png  used on input line 826.
 (pdftex.def)             Requested size: 344.00436pt x 173.08621pt.
 
-Overfull \hbox (41.19293pt too wide) in paragraph at lines 834--834
+Overfull \hbox (41.19293pt too wide) in paragraph at lines 842--842
 |[]\OT1/cmr/bx/n/14.4 Relaci^^Son entre proyecciones a espacios de polinomios
  []
 
 
-Overfull \hbox (28.19963pt too wide) in paragraph at lines 834--834
+Overfull \hbox (28.19963pt too wide) in paragraph at lines 842--842
 \OT1/cmr/bx/n/14.4 discretos y aproximaciones por m^^S^^Pnimos cuadrados| 
  []
 
-Package marginnote Info: Margin note 77.2 is on absolute page 78 on input line 
-886.
-Package marginnote Info: right page because not two side mode on input line 886
+[67 <./imagenes/15Jul_1.png>]
+Package marginnote Info: Margin note 78.1 is on absolute page 78 on input line 
+894.
+Package marginnote Info: right page because not two side mode on input line 894
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 886.
+Package marginnote Info: xpos seems to be 72.0pt on input line 894.
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 []\OT1/cmr/m/n/8 Figure 5.12: |Partimos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 del conjunto $\OML/cmm/m/it/8 G$ \OT1/cmr/m/n/8 cuyos
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 886--886
+Underfull \hbox (badness 4024) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4\OML/cmm/m/it/8 :\OT1/cmr/m/
 n/8 6)$, $(3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 0)$ y $(4\OML/cmm/m/it/8 ; \OMS/cm
 sy/m/n/8 ^^@\OT1/cmr/m/n/8 0\OML/cmm/m/it/8 :\OT1/cmr/m/n/8 3)$,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 y calculamos la recta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 de m^^S^^Pnimos cuadrados
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--886
+Underfull \hbox (badness 10000) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 correspondiente a este
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 886--886
+Underfull \hbox (badness 6493) in paragraph at lines 894--894
 \OT1/cmr/m/n/8 conjunto, que resulta ser
  []
 
-<./imagenes/2Dic_1.png, id=1548, 561.5379pt x 294.8616pt>
+<./imagenes/2Dic_1.png, id=1557, 561.5379pt x 294.8616pt>
 File: ./imagenes/2Dic_1.png Graphic file (type png)
 <use ./imagenes/2Dic_1.png>
-Package pdftex.def Info: ./imagenes/2Dic_1.png  used on input line 887.
+Package pdftex.def Info: ./imagenes/2Dic_1.png  used on input line 895.
 (pdftex.def)             Requested size: 308.8468pt x 162.17438pt.
-[67 <./imagenes/15Jul_1.png>]
-Package marginnote Info: Margin note 78.1 is on absolute page 78 on input line 
-921.
-Package marginnote Info: right page because not two side mode on input line 921
+Package marginnote Info: Margin note 78.2 is on absolute page 78 on input line 
+929.
+Package marginnote Info: right page because not two side mode on input line 929
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 921.
+Package marginnote Info: xpos seems to be 72.0pt on input line 929.
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
 []\OT1/cmr/m/n/8 Figure 5.13: |El vector
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 921--921
+Underfull \hbox (badness 8038) in paragraph at lines 929--929
 \OML/cmm/m/it/8 G$ \OT1/cmr/m/n/8 de la figura [][]5.12[][] es
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
 \OML/cmm/m/it/8 x \OT1/cmr/m/n/8 = (5\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3\OML/cmm
 /m/it/8 :\OT1/cmr/m/n/8 2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4\OML/cmm/m/it/8 :\OT
 1/cmr/m/n/8 6\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 0\OML/cmm/m/it/8 ; \OMS/cmsy/m/n/
@@ -3525,28 +3525,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 921--921
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
 \OT1/cmr/m/n/8 Su proyecci^^Son al espacio
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--921
+Underfull \hbox (badness 10000) in paragraph at lines 929--929
 \OML/cmm/m/it/8 W[]$ \OT1/cmr/m/n/8 es $^^E[](\OML/cmm/m/it/8 x\OT1/cmr/m/n/8 )
  =
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 921--921
+Underfull \hbox (badness 1062) in paragraph at lines 929--929
 \OT1/cmr/m/n/8 la recta cuya discretizaci^^Son
  []
 
 <./imagenes/2Dic_2.png, id=1562, 569.4876pt x 294.8616pt>
 File: ./imagenes/2Dic_2.png Graphic file (type png)
 <use ./imagenes/2Dic_2.png>
-Package pdftex.def Info: ./imagenes/2Dic_2.png  used on input line 922.
+Package pdftex.def Info: ./imagenes/2Dic_2.png  used on input line 930.
 (pdftex.def)             Requested size: 313.21915pt x 162.17438pt.
+
+Overfull \vbox (28.65854pt too high) detected at line 982
+ []
+
 [68 <./imagenes/2Dic_1.png> <./imagenes/2Dic_2.png>])
-Overfull \hbox (10.5748pt too wide) in paragraph at lines 1028--34
+Overfull \hbox (10.5748pt too wide) in paragraph at lines 1036--34
 \OT1/cmr/m/n/10 aproximar), por ejemplo, cuando se buscan aproximaciones cuadr^
 ^Saticas (resp. c^^Subicas)
  []
@@ -6459,20 +6463,24 @@ Underfull \vbox (badness 10000) detected at line 192
  []
 
 [165]
-Package marginnote Info: Margin note 176.1 is on absolute page 176 on input lin
-e 230.
-Package marginnote Info: right page because not two side mode on input line 230
+Overfull \hbox (8.88005pt too wide) detected at line 281
+\OML/cmm/m/it/10 cos\OT1/cmr/m/n/10 (\U/msa/m/n/10 ]\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 x; y\OT1/cmr/m/n/10 ) = [] = [] = [] = [] == []\OML/cmm/m/it/10 :
+ []
+
+[166]
+Package marginnote Info: right page because not two side mode on input line 322
 .
-Package marginnote Info: xpos seems to be 72.0pt on input line 230.
-<./imagenes/18Sept_1.png, id=2969, 368.0952pt x 222.8325pt>
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 322.
+<./imagenes/18Sept_1.png, id=2979, 368.0952pt x 222.8325pt>
 File: ./imagenes/18Sept_1.png Graphic file (type png)
 <use ./imagenes/18Sept_1.png>
-Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 231.
+Package pdftex.def Info: ./imagenes/18Sept_1.png  used on input line 323.
 (pdftex.def)             Requested size: 331.28261pt x 200.5474pt.
- [166 <./imagenes/18Sept_1.png>])) (./Notacion.tex [167]
+ [167 <./imagenes/18Sept_1.png>])) (./Notacion.tex [168]
 Appendix B.
 
-LaTeX Warning: Citation 'wolfram' on page 168 undefined on input line 38.
+LaTeX Warning: Citation 'wolfram' on page 169 undefined on input line 38.
 
 
 Overfull \hbox (60.08105pt too wide) in paragraph at lines 10--39
@@ -6622,9 +6630,9 @@ Overfull \hbox (69.77863pt too wide) in paragraph at lines 50--61
 [][] 
  []
 
-[168
+[169
 
-] [169])
+] [170])
 
 Package biblatex Warning: Bibliography string 'in' untranslated
 (biblatex)                at entry 'abur' on input line 40.
@@ -6802,7 +6810,7 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                loaded, is faulty or does not contain a definition
 (biblatex)                for \mkbibdatelong.
 
-[170
+[171
 
 ]
 
@@ -7000,7 +7008,7 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 Package biblatex Warning: Bibliography string 'pages' untranslated
 (biblatex)                at entry 'tcheb' on input line 40.
 
-[171]
+[172]
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                The command should be defined in the .lbx file.
@@ -7008,7 +7016,7 @@ Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                loaded, is faulty or does not contain a definition
 (biblatex)                for \mkbibdatelong.
 
-[172] (./TesisAmelie.aux)
+[173] (./TesisAmelie.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -7028,13 +7036,13 @@ Package logreq Info: Writing requests to 'TesisAmelie.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 989 ({)
+### simple group (level 1) entered at line 997 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 44932 strings out of 477985
- 900196 string characters out of 5840059
+ 44939 strings out of 477985
+ 900289 string characters out of 5840059
  1896388 words of memory out of 5000000
- 63265 multiletter control sequences out of 15000+600000
+ 63267 multiletter control sequences out of 15000+600000
  533936 words of font info for 108 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  106i,18n,107p,1912b,1879s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -7073,10 +7081,10 @@ sbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/tex
 mf-dist/fonts/type1/public/cm-super/sfsl1000.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1000.pfb>
-Output written on TesisAmelie.pdf (179 pages, 12401537 bytes).
+Output written on TesisAmelie.pdf (180 pages, 12405191 bytes).
 PDF statistics:
- 3370 PDF objects out of 3580 (max. 8388607)
- 2729 compressed objects within 28 object streams
- 916 named destinations out of 1000 (max. 500000)
+ 3381 PDF objects out of 3580 (max. 8388607)
+ 2739 compressed objects within 28 object streams
+ 921 named destinations out of 1000 (max. 500000)
  1379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -97,7 +97,7 @@ def f(t):
 
 
 #x = [f(t) for t in range(12)]
-x = [f(t) + random.uniform(-0.5, 0.5) for t in range(12)]
+x = [f(t) + random.uniform(-1, 1) for t in range(12)]
 nombre = "x"
 graficar_distancias_espacios_Wnk(x, nombre)
 #graficar_distancias_dePDL_espacios_Wnk(30,4)

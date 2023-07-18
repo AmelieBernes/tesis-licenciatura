@@ -798,14 +798,14 @@ este polinomio y agregando un ruido uniforme; sea pues
 	\label{eq: x con ruido}
 	x = (f(t) + U )_{t=0}^{11},
 \end{equation}
-con $U \sim (-0.5, 0.5)$ una variable aleatoria con distribución
+con $U \sim (1, 1)$ una variable aleatoria con distribución
 uniforme en $(-0.5, 0.5)$.
 
 Puesto que estamos agregando ruido a las mediciones,
 ya no podemos asegurar que $x$ sea una 
 señal de grado $4$, o sea, que cumpla la (bastante restrictiva)
 condición de ser elemento de $W_{12,4}$. Sin embargo,
-usando un error de $\epsilon = 10^-4$, es decir, 
+usando un error de $\epsilon = 10^{-4}$, es decir, 
 redondeando toda distancia $d_{k}(x)$ que sea mayor o igual
 a $1 - \epsilon$ a $1$, concluimos que el grado de $x$ es,
 al igual que el grado de $f$, igual a $4$. 
@@ -828,7 +828,15 @@ al igual que el grado de $f$, igual a $4$.
 \final
 \end{ejemplo}
 
-
+Este último ejemplo muestra lo robusta que es la metodología
+de usar a $\cali{L}^{n}$ como sistema de representación
+de señales $n-$dimensionales cuando lo que se quiere es 
+conocer el grado (la forma) de una señal; incluso cuando hay 
+un nivel de ruido en las mediciones, puede 
+recuperarse el grado del polinomio que origina la señal.
+\TODO{Poner aquí un esquema de la señal y agregar un poco de ruido;
+decir que, como la distancia euclidea no será mucha, es normal
+suponer que el grado de ambas señales puede ser el mismo.}
 %-----------------------------------------------------
 
 \section{Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}

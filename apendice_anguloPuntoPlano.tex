@@ -104,7 +104,7 @@ Si $V$, $W$ y $x$ son como en la definición
 $\measuredangle (x, W) = min \{ \measuredangle(x,w) \hspace{0.1cm} :
  \hspace{0.1cm} w \in W \}$, y
 
-\item 
+\item para todo $x \neq 0$,
 \begin{equation}
 \label{eq: coseno a subespacio}
 cos \left( \measuredangle (x, W) \right) = \frac{|| \Pi_{W}(x) ||}{||x||}.
@@ -190,6 +190,98 @@ siempre no negativo; esto nos permite acotar el rango en el que
 se encuentra el ángulo (que, por definición, es $[0, \pi]$)
 y afirmar que $\measuredangle(x, W) \in [0, \frac{\pi}{2}]$.
 \end{nota}
+
+
+\begin{prop}
+Sean $V$ un espacio con producto punto, $W \leq V$ un subespacio
+cerrado.  Para todo $x \in V$, se tiene que
+\begin{align*}
+cos(\measuredangle(x, W)) = \begin{cases}
+0 & \textit{ sii } x \in W^{\perp}, \\
+1 & \textit{ sii } x \in W.
+\end{cases}
+\end{align*}
+\end{prop}
+\noindent
+\textbf{Demostración.}
+
+Observe que $x \in W$ si y sólo si 
+$x$ coincide con su proyección a $W$, hecho que equivale
+a que el ángulo entre $x$ y $\Pi_{W}(x)$ sea cero (recuerde que
+este ángulo se encuentra entre $0$ y $pi/2$), o sea, 
+a que $cos(\measuredangle(x, W))$ sea uno.
+
+El que $x$ sea elemento de $W^{\perp}$ implique 
+que $cos(\measuredangle(x, W))$ sea cero es evidente, pues
+$x$ será ortogonal a todo elemento de $W$, en particular,
+a su proyección a este espacio.
+Para terminar, mostremos el recíproco.
+Según la proposición 
+\ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio},
+\begin{equation}
+\forall y \in W: \hspace{0.2cm}
+\frac{\pi}{2} = \measuredangle(x, W) \leq  \measuredangle(x, y),
+\end{equation}
+luego, 
+\begin{equation}
+\label{eq: condicion 17 jul 1}
+\forall y \in W: \hspace{0.2cm}
+\frac{\pi}{2} = cos(\measuredangle(x, y)) \leq  cos(\measuredangle(x, W)) = 0.
+\end{equation}
+
+Supongamos que existe $y \in W$ para el que se tenga que 
+$\measuredangle(x, y) > \frac{\pi}{2}$.
+Como $W$ es un subespacio de $V$, $ -y \in W $, y además
+\[
+cos (\measuredangle(x, -y)) = \frac{
+\langle x, -y \rangle 
+}{||x|| \cdot ||-y||} =
+-  \frac{
+\langle x, y \rangle 
+}{||x|| \cdot ||y||} = - cos (\measuredangle(x, y)) \geq 0;
+\]
+esto contradice \eqref{eq: condicion 17 jul 1}.
+
+\QEDB
+\vspace{0.2cm}
+
+\begin{prop}
+Sean $V$ un espacio con producto punto, $W \leq V$ un subespacio
+cerrado. Para toda
+$x \in V$ no cero, 
+si $\measuredangle(x, W) \approx 0$ entonces $d(x, W) \approx 0$.
+\end{prop}
+\noindent
+\textbf{Demostración.}
+Debemos demostrar que el que 
+$\measuredangle(x, \Pi_{W}(x))$ sea cercano a cero -
+o, equivalentemente, que $cos(\measuredangle(x, \Pi_{W}(x)))$
+sea cercano a uno - implica que $x$ sea cercano
+(en términos de distancia euclidea) a $\Pi_{W}(x)$.
+Hagamos $y:= \Pi_{W}(x)$.
+
+Note primero que, como $x$ y $x-y$ son ortogonales,
+\[
+cos(\measuredangle(x, y) = 
+\frac{
+\langle x, y \rangle 
+}{||x|| \cdot ||y||} = \frac{
+\langle x-y + y, y \rangle 
+}{||x|| \cdot ||y||}
+=
+\frac{
+\langle x-y, y \rangle + \langle y, y \rangle
+}{||x|| \cdot ||y||}
+= \frac{
+||y||^{2}
+}{||x|| \cdot ||y||} = 
+= \frac{
+||y||
+}{||x||}. 
+\]
+
+\QEDB
+\vspace{0.2cm}
 
 \subsection{Similitud coseno}
 \label{cosine similarity}
