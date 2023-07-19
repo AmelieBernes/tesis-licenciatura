@@ -193,6 +193,7 @@ y afirmar que $\measuredangle(x, W) \in [0, \frac{\pi}{2}]$.
 
 
 \begin{prop}
+\label{prop: pertenencia u ortogonalidad en terminos de cosine sim}
 Sean $V$ un espacio con producto punto, $W \leq V$ un subespacio
 cerrado.  Para todo $x \in V$, se tiene que
 \begin{align*}
@@ -226,7 +227,7 @@ luego,
 \begin{equation}
 \label{eq: condicion 17 jul 1}
 \forall y \in W: \hspace{0.2cm}
-\frac{\pi}{2} = cos(\measuredangle(x, y)) \leq  cos(\measuredangle(x, W)) = 0.
+cos(\measuredangle(x, y)) \leq  cos(\measuredangle(x, W)) = 0.
 \end{equation}
 
 Supongamos que existe $y \in W$ para el que se tenga que 
@@ -241,44 +242,6 @@ cos (\measuredangle(x, -y)) = \frac{
 }{||x|| \cdot ||y||} = - cos (\measuredangle(x, y)) \geq 0;
 \]
 esto contradice \eqref{eq: condicion 17 jul 1}.
-
-\QEDB
-\vspace{0.2cm}
-
-\begin{prop}
-Sean $V$ un espacio con producto punto, $W \leq V$ un subespacio
-cerrado. Para toda
-$x \in V$ no cero, 
-si $\measuredangle(x, W) \approx 0$ entonces $d(x, W) \approx 0$.
-\end{prop}
-\noindent
-\textbf{Demostración.}
-Debemos demostrar que el que 
-$\measuredangle(x, \Pi_{W}(x))$ sea cercano a cero -
-o, equivalentemente, que $cos(\measuredangle(x, \Pi_{W}(x)))$
-sea cercano a uno - implica que $x$ sea cercano
-(en términos de distancia euclidea) a $\Pi_{W}(x)$.
-Hagamos $y:= \Pi_{W}(x)$.
-
-Note primero que, como $x$ y $x-y$ son ortogonales,
-\[
-cos(\measuredangle(x, y) = 
-\frac{
-\langle x, y \rangle 
-}{||x|| \cdot ||y||} = \frac{
-\langle x-y + y, y \rangle 
-}{||x|| \cdot ||y||}
-=
-\frac{
-\langle x-y, y \rangle + \langle y, y \rangle
-}{||x|| \cdot ||y||}
-= \frac{
-||y||^{2}
-}{||x|| \cdot ||y||} = 
-= \frac{
-||y||
-}{||x||}. 
-\]
 
 \QEDB
 \vspace{0.2cm}

@@ -6,6 +6,7 @@ import base_legendreDiscreta as legendre
 import random
 
 
+
 def distancias_espacios_Wnk(x):
     """
     Dado un array x no cero, n:= dim(x) y se regresa un array de n puntos,
@@ -47,7 +48,7 @@ def grado_senal_redondeado(x, distancias_espacios, epsilon = 0.00001):
             return k
     #en el caso en el que ninguna de las distancias sea lo suficientemente cercana a 1
     #como para haber sido redondeada a uno, regresamos el mayor grado posible.
-    return n
+    return n-1
 
 def formato_axis(axis):
     axis.axhline(y=0, color = 'gray')
@@ -87,6 +88,45 @@ def graficar_distancias_dePDL_espacios_Wnk(n,k):
     x = legendre.calculo_base(n)[k]
     graficar_distancias_espacios_Wnk(x, r"\mathcal{{L}}^{{{0}}}".format(str(n) + ', ' + (str(k))))
 
+def proyeccion_Wnk(x, k):
+    """
+    Dada la señal x, se regresa su proyección al espacio
+    Wnk de grado k.
+    """
+    n = len(x)
+    x = np.array(x) 
+    if (0 <= k and k <= n-1) == False or type(k) != int :
+        raise Exception("Grado inválido")
+    else:
+        base_legendre = legendre.calculo_base(n)
+        proyeccion = 0
+        for i in range(k+1):
+            vector_legendre = np.array(base_legendre[i])
+            proyeccion += np.dot(x, vector_legendre) * vector_legendre
+        return proyeccion
+
+
+def grafica_x_proyeccion_grado(x, nombre, epsilon = 0.001):
+    """
+    Dado un array x de longitud n, se calcula su grado k
+    y se grafica su proyección al espacio W_{n,k}.
+    """
+    n = len(x)
+    similitudes_coseno = distancias_espacios_Wnk(x)
+    grado = grado_senal_redondeado(x, similitudes_coseno, epsilon)
+    proyeccion = proyeccion_Wnk(x, grado)
+
+    fig, axis = plt.subplots()
+    dominio = [t for t in range(n)]
+    axis.scatter(dominio, x, label = nombre + r" $ \in \mathbb{{R}}^{{ {0}  }}$".format(str(n)) + ". Grado estimado: " + str(grado), color = "hotpink", s = 100)
+    axis.scatter(dominio, proyeccion, label = r"$\Pi_{{ W_{{ {0} }} }}$".format(str(n) + ", " + str(grado)), marker = "x", color = "black", s = 100)
+
+    plt.suptitle("Error usado: " + str(epsilon))
+    formato_axis(axis)
+    plt.legend()
+    plt.legend()
+    return plt.show()
+
 #------------------------------------------------
 
 def f(t):
@@ -99,5 +139,27 @@ def f(t):
 #x = [f(t) for t in range(12)]
 x = [f(t) + random.uniform(-1, 1) for t in range(12)]
 nombre = "x"
-graficar_distancias_espacios_Wnk(x, nombre)
+#graficar_distancias_espacios_Wnk(x, nombre)
 #graficar_distancias_dePDL_espacios_Wnk(30,4)
+ 
+
+if __name__ == "__main__":
+    random.seed(20)
+
+    x = [8.5, 1.3, 2.5, 3, 0.6, -9.8, -10, -12]
+    nombre = "x"
+    #grafica_x_proyeccion_grado(x, nombre)
+
+
+    def g(t):
+        return (t-2)**2 * (t-4)*(t-6)*(t-8)
+    x = [g(t) + random.uniform(-50,50) for t in range(8)]
+    #grafica_x_proyeccion_grado(x, nombre)
+    
+    def g(t):
+        return (t-2)**2 * (t-5)
+
+    x = [g(t) + random.uniform(-5,5) for t in range(8)]
+    grafica_x_proyeccion_grado(x, nombre, 0.01)
+    grafica_x_proyeccion_grado(x, nombre, 0.001)
+

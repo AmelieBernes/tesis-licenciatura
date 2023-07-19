@@ -834,9 +834,25 @@ de señales $n-$dimensionales cuando lo que se quiere es
 conocer el grado (la forma) de una señal; incluso cuando hay 
 un nivel de ruido en las mediciones, puede 
 recuperarse el grado del polinomio que origina la señal.
-\TODO{Poner aquí un esquema de la señal y agregar un poco de ruido;
-decir que, como la distancia euclidea no será mucha, es normal
-suponer que el grado de ambas señales puede ser el mismo.}
+
+\begin{figure}[H]
+	\sidecaption{
+	Según la proposición \ref{prop: pertenencia u ortogonalidad en terminos de cosine sim},
+	un vector $x$ es elemento de $W_{n,k}$ si y sólo si 
+	$d_{k}(x)$ es uno. Aceptando que puede haber errores 
+	de cálculo, podemos fijar un $\epsilon >0$ de tal forma que
+	concluyamos que todo $x$ para el que se cumpla 
+	$1-\epsilon \leq d_{x} \leq 1$ es elemento de $W_{n,k}$.
+	Cuando aceptemos usar un error $\epsilon$, hablaremos
+	del ``grado estimado'' de una señal.
+	\label{fig: escala pertenencia}
+	}
+	\centering
+	\includegraphics[scale = 1]{escala_pertenenciaWnk} 
+\end{figure}	
+
+
+
 %-----------------------------------------------------
 
 \section{Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}
