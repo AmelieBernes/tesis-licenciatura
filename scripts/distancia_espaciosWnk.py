@@ -113,6 +113,7 @@ def grafica_x_proyeccion_grado(x, nombre, epsilon = 0.001):
     """
     n = len(x)
     similitudes_coseno = distancias_espacios_Wnk(x)
+    print(similitudes_coseno)
     grado = grado_senal_redondeado(x, similitudes_coseno, epsilon)
     proyeccion = proyeccion_Wnk(x, grado)
 
@@ -159,7 +160,7 @@ if __name__ == "__main__":
     def g(t):
         return (t-2)**2 * (t-5)
 
-    x = [g(t) + random.uniform(-5,5) for t in range(8)]
+    x = [g(t) + random.uniform(-3,3) for t in range(8)]
     grafica_x_proyeccion_grado(x, nombre, 0.01)
     grafica_x_proyeccion_grado(x, nombre, 0.001)
 

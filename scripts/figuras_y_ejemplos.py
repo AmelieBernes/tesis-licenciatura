@@ -20,7 +20,7 @@ import proyecciones as pr
 #Código para cambiar el tipo de fuente
 #TODO no sé por qué no siempre funciona, a veces da muchos problemas y no deja que se genere la imagen!
 
-#plt.style.use('seaborn-v0_8-poster') 
+plt.style.use('seaborn-v0_8-poster') 
 ##plt.style.use('seaborn-v0_8-pastel') 
 #params = {"ytick.color" : "black",
 #          "xtick.color" : "black",
@@ -545,12 +545,12 @@ def figura_cosenoMuestreo(w, phi, n):
     axis.axvline(x=0, color = 'gray')
     axis.grid(True)
 
-    dominio = [t/n for t in range(n)]
-    valores = [np.sin(2 * pi * w * t+ 2*pi*phi) for t in dominio]
-    axis.plot(X1, np.sin(2 * pi * w * X1 + 2*pi*phi), color = 'black', linestyle = 'dotted')
-    axis.plot(X2, np.sin(2 * pi * w * X2+ 2*pi*phi), color = 'blue', linestyle = 'dotted')
-    axis.scatter(dominio, valores, color = 'blue')
-    axis.plot(X3, np.sin(2 * pi * w * X3+ 2*pi*phi), color = 'black', linestyle = 'dotted')
+    #dominio = [t/n for t in range(n)]
+    #valores = [np.sin(2 * pi * w * t+ 2*pi*phi) for t in dominio]
+    #axis.plot(X1, np.sin(2 * pi * w * X1 + 2*pi*phi), color = 'black', linestyle = 'dotted')
+    #axis.plot(X2, np.sin(2 * pi * w * X2+ 2*pi*phi), color = 'blue', linestyle = 'dotted')
+    #axis.scatter(dominio, valores, color = 'blue')
+    #axis.plot(X3, np.sin(2 * pi * w * X3+ 2*pi*phi), color = 'black', linestyle = 'dotted')
     
     return plt.show()
 
@@ -680,7 +680,7 @@ if __name__=='__main__':
     #figura_ortogYoscil(2)  
     #figura_defGrado() #problemas
     #figura_cosenoMuestreo(0.0001,0.3, 20)
-    #figura_cosenoMuestreo(12, 0, 18)
+    figura_cosenoMuestreo(4.6, 0.3, 18)
     #figura_cosenoMuestreo(12, 0, 24)
     #figura_raicesUnidad(5, 8)
     #PDL_grafica_versionContinua(8,5)  

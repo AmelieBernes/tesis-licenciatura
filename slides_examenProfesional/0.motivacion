@@ -10,7 +10,8 @@ representada como un vector $x = (x_{m})_{m=0}^{n-1}$
 de $\IR^{n}$. La \textbf{gráfica} de $x$
 será el conjunto
 \[
-G_{x} := \{ (m, x_{m}): \hspace{0.2cm} 0 \leq m \leq n-1 \}. 
+G_{x} := \{ (m, x_{m}): \hspace{0.2cm} 0 \leq m \leq n-1 \}
+\subseteq \IR^{2}. 
 \]
 \pause
 
@@ -100,7 +101,7 @@ de $\IR^{n}$
 	que sea ortonormal, pues así se cumplirá que,
 	para toda señal $x \in \IR^{n}$, 
 	\[
-	x = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle x}
+	x = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle \cali{L}^{n,k}}
 	\hspace{0.2cm} \textit{y} \hspace{0.2cm}
 	||x||^{2} = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle^{2}},
 	\]

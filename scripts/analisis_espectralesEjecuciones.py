@@ -131,10 +131,10 @@ x = [f(t/25) for t in range(25)]
 
 #x1 = (3, 0.8660254, -0.8660254)
 x1 = (1, 0, 0, 1)
-ae.grafica_analisisEspectrales(x1, 'x1', graficar = True)
+#ae.grafica_analisisEspectrales(x1, 'x1', graficar = True)
 #x2 = (2, 2.23205081, -1.2320508)
 x2 = (3, 0, 0, 3)
-ae.grafica_analisisEspectrales(x2, 'x2', graficar = True)
+#ae.grafica_analisisEspectrales(x2, 'x2', graficar = True)
 
 # -------------- Ejemplo alternado 0 ----------------
 #x = [cos_con_ruido(t/50,A = -1.5, w = 22.4, phi = 0.2) for t in range(50)]
@@ -192,7 +192,9 @@ ae.grafica_analisisEspectrales(x2, 'x2', graficar = True)
 #x = legendre.calculo_base(35)[1]
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
-ae.grafica_analisisEspectrales_PDL(18,7)
+
+ae.espectro_Fourier_PDL(23,9)
+ae.grafica_analisisEspectrales_PDL(23,9)
 
 #ae.grafica_nube_b0m0_b1m1() 
 

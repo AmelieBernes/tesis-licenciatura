@@ -28,43 +28,43 @@
 \contentsline {section}{\numberline {5.1}Expresiones de señales finitas respecto a BLDs}{56}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Caracterización de morfología en base a coeficientes respecto a las BLDs}{59}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Determinando el grado de una señal finita a partir de sus coeficientes respecto a $\mathcal {L}^{n}$}{66}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{67}{section.5.4}%
-\contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{71}{part.2}%
-\contentsline {chapter}{\numberline {6}Análisis espectral de señales finitas}{72}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{72}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{75}{section.6.2}%
-\contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{76}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{76}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{78}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{82}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{87}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{88}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{91}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{93}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Desfase de la proyección de una señal a espacios monofrecuenciales}{96}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Algunas propiedades de $\Sigma _{x}$}{98}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Periodicidad}{98}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Simetría}{99}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Continuidad}{100}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}Operador de alternancia}{100}{subsection.6.6.4}%
-\contentsline {subsection}{\numberline {6.6.5}Límites de la función $\Sigma _{x}$ en $0$ y $n/2$}{103}{subsection.6.6.5}%
-\contentsline {section}{\numberline {6.7}Definición del espectro de una señal basado en espacios monofrecuenciales}{110}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Propiedades importantes del espectro $\Sigma _{x}$ de una señal finita}{114}{subsection.6.7.1}%
-\contentsline {subsection}{\numberline {6.7.2}Sobre la interpretación de los valores de $\Sigma _{x}$}{115}{subsection.6.7.2}%
-\contentsline {section}{\numberline {6.8}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{116}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{124}{subsection.6.8.1}%
-\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{127}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{127}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{130}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Conclusiones del análisis espectral de los PDL}{153}{section.7.3}%
-\contentsline {chapter}{\numberline {A}Apéndice: teoría}{155}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{155}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{157}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{159}{section.A.3}%
-\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{160}{section.A.4}%
-\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{162}{section.A.5}%
-\contentsline {section}{\numberline {A.6}El concepto de ángulo en un espacio de Hilbert}{164}{section.A.6}%
-\contentsline {subsection}{\numberline {A.6.1}Ángulo entre elementos de un espacio con producto punto}{164}{subsection.A.6.1}%
-\contentsline {subsection}{\numberline {A.6.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{165}{subsection.A.6.2}%
-\contentsline {subsection}{\numberline {A.6.3}Similitud coseno}{167}{subsection.A.6.3}%
-\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{169}{appendix.B}%
+\contentsline {section}{\numberline {5.4}Relación entre proyecciones a espacios de polinomios discretos y aproximaciones por mínimos cuadrados}{68}{section.5.4}%
+\contentsline {part}{II\hspace {1em}Análisis espectral de los PDL}{72}{part.2}%
+\contentsline {chapter}{\numberline {6}Análisis espectral de señales finitas}{73}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivación para realizar un estudio espectral de los PDL}{73}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Hipótesis sobre las oscilaciones de los PDL}{76}{section.6.2}%
+\contentsline {section}{\numberline {6.3}La transformada discreta de Fourier}{77}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}La exponencial compleja y raíces $n-$ésimas de la unidad}{77}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}La transformada discreta de Fourier}{79}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Versión real de la TDF}{83}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Metodología para realizar un análisis espectral que considere frecuencias arbitrarias}{88}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Espacios monofrecuenciales}{89}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Fórmulas para el coseno del ángulo de un punto a un plano}{92}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Estudio espectral basado en ángulos a espacios monofrecuenciales}{94}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Desfase de la proyección de una señal a espacios monofrecuenciales}{97}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Algunas propiedades de $\Sigma _{x}$}{99}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Periodicidad}{99}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Simetría}{100}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Continuidad}{101}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Operador de alternancia}{101}{subsection.6.6.4}%
+\contentsline {subsection}{\numberline {6.6.5}Límites de la función $\Sigma _{x}$ en $0$ y $n/2$}{104}{subsection.6.6.5}%
+\contentsline {section}{\numberline {6.7}Definición del espectro de una señal basado en espacios monofrecuenciales}{111}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Propiedades importantes del espectro $\Sigma _{x}$ de una señal finita}{115}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Sobre la interpretación de los valores de $\Sigma _{x}$}{116}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}Relación entre los espectros basados en la TDF y en espacios monofrecuenciales}{117}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Adaptación del análisis espectral a señales reales con una frecuencia de muestreo dada}{125}{subsection.6.8.1}%
+\contentsline {chapter}{\numberline {7}Análisis espectral numérico de los PDL}{128}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Preguntas a responder numéricamente sobre las oscilaciones de los PDL}{128}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Gráficas y comentarios}{131}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Conclusiones del análisis espectral de los PDL}{154}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Apéndice: teoría}{156}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Polinomios y teorema fundamental del álgebra}{156}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Definiciones básicas de espacios de Hilbert}{158}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Hiperplanos de espacios con producto punto de dimensión finita}{160}{section.A.3}%
+\contentsline {section}{\numberline {A.4}El teorema de la proyección ortogonal}{161}{section.A.4}%
+\contentsline {section}{\numberline {A.5}El teorema de Gram-Schmidt}{163}{section.A.5}%
+\contentsline {section}{\numberline {A.6}El concepto de ángulo en un espacio de Hilbert}{165}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Ángulo entre elementos de un espacio con producto punto}{165}{subsection.A.6.1}%
+\contentsline {subsection}{\numberline {A.6.2}Definición de ángulo entre un punto y un subespacio cerrado de un espacio euclideo}{166}{subsection.A.6.2}%
+\contentsline {subsection}{\numberline {A.6.3}Similitud coseno}{168}{subsection.A.6.3}%
+\contentsline {chapter}{\numberline {B}Notaciones y abreviaciones}{170}{appendix.B}%

@@ -1,28 +1,78 @@
 \section{Polinomios discretos de Legendre}
 \begin{frame}
+
+
 Por lo visto antes, 
-\TODO{...} encontrar una base ortonormal para
-cada espacio de polinomios discretos
-$W_{n,k}$. Al hacer esto, 
+el saber si una señal es elemento o no de $W_{n,k}$
+es importante para tener información sobre el grado
+(por lo tanto, sobre la forma de la gráfica) de la señal. \\
+
+
+Para facilitar la tarea, es de utilidad
+encontrar base ortonormales de estos espacios de polinomios
+discretos.
+Al hacer esto, obtenemos los
 \textbf{polinomios discretos de Legendre},
 objetos ya estudiados y aplicados en la literatura.
 \end{frame}
 
-
 	\subsection{Sobre los PDL en la literatura}
+
+\begin{frame}{Sobre los PDL en la literatura}
 	\TODO{Aquí tienes que hacer referencia a lo que debes leer de tarea.}
-	También habla de la aplicación principal de estos polinomios
-	discretos en la ingeniería; usarlos para facilitar la resolución
-	de problemas de minimización.
+	
+	Se han hecho esfuerzos por
+	crear algoritmos eficientes para el cálculo de los PDL
+	(c.f. \cite{Neuman}, \cite{abur2}, \cite{abur}, \cite{dris},
+	\cite{mukun}).
+\end{frame}
+
+	\begin{frame}{Aplicación principal de los PDL: ajuste de datos}
+
+	Los siguientes son extractos del artículo
+	\cite{george}.
 	
 	\begin{figure}[h]
-		\includegraphics[scale = 1]{fitting_problem}
+		\includegraphics[scale = 1.35]{forne0}
 	\end{figure}
+	
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+
+	\begin{figure}[h]
+		\includegraphics[scale = 1.4]{forne1}
+	\end{figure}
+	
+	\end{frame}
+
+	
+	
+	\begin{frame}
+
+	\begin{figure}[h]
+		\includegraphics[scale = 1.4]{forne2}
+	\end{figure}
+	
+	\end{frame}
+	
+	
+	
+	\begin{frame}
+
+	\begin{figure}[h]
+		\includegraphics[scale = 1.3]{forne3}
+	\end{figure}
+	
+	\end{frame}
 	
 	
     \subsection{Construcción}
     
     \begin{frame}{Construcción de la base discreta de Legendre}
+    Fijamos $n \geq 2$ entero.
     \begin{figure}[h]
 		\includegraphics[scale = 0.65]{construccion1}
 	\end{figure}
@@ -184,54 +234,7 @@ $\left(
 
 
 
-\begin{frame}
-\begin{defi}
-\label{def: espacios de seniales simetricas y antisimetricas}
-Sea $n \in \IN$, $n \geq 2$. 
-Sea $M = \lceil \frac{n}{2} \rceil$.
-Definimos al 
-\textbf{espacio de señales antisimétricas} $S_{n,-}$ como 
-	\begin{equation}
-	\label{eq: def de Sn-}
-	S_{n, -}:= \{ x=(x_{m})_{m=0}^{n-1}  \in \IR^{n}
-	\hspace{0.2cm} |
-	\hspace{0.2cm} \forall  
-	\hspace{0.1cm}
-	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= -x_{n-m-1}\}
-	\end{equation}
-
-\noindent	
-y, además, definimos al
-\textbf{espacio de señales simétricas} $S_{n,+}$ como 
  
-	\begin{equation}
-	\label{eq: def de Sn+}
-	S_{n, +}:= \{ x=(x_{m})_{m=0}^{n-1} \in \IR^{n} \hspace{0.2cm} 
-	| \hspace{0.2cm} \forall  
-	\hspace{0.1cm}
-	0 \leq m \leq M-1 : \hspace{0.2cm} x_{m}= x_{n-m-1}\},
-	\end{equation}
-\end{defi}
-\end{frame}
-
-
-\begin{frame}
-Las siguientes propiedades de los conjuntos
-$S_{n, +}$ y $S_{n, -}$ se siguen de inmediato.
-
-\begin{itemize}
-	\item $S_{n, +}$ y $S_{n, -}$ son subespacios de $\IR^{n}$.
-	\item Para cualesquiera $u \in S_{n, +}$ y $v \in S_{n, -}$
-	se cumple que $\langle u, v \rangle = 0$.
-\end{itemize}
-\pause
-
-\begin{figure}[h]
-		\includegraphics[scale = 0.2]{10Dic_1}
-\end{figure}
-
-\end{frame}
-
 
 
 
@@ -248,17 +251,19 @@ Se tiene que
 \end{teo}
 
 \begin{figure}[h]
-		\includegraphics[scale = 0.6]{simetria1}
+		\includegraphics[scale = 0.7]{simetria1}
 \end{figure}
 
 \begin{figure}[h]
-		\includegraphics[scale = 0.6]{simetria2}
+		\includegraphics[scale = 0.7]{simetria2}
 \end{figure}
 
 
 \end{frame}
 
 
+
+\begin{comment}
 
 \begin{frame}{Idea de la demostración}
 
@@ -289,11 +294,14 @@ w_{k} - \suma{\substack{ {j=0}, \\  {j\text{ par}}}}{k-1}{
 
 \end{frame}
 
+\end{comment}
+
+
 
 \subsection{Cálculo de los PDL}
     
     
-   \begin{frame}
+   \begin{frame}{Dando una fórmula para los PDL}
    En \cite{Neuman}, fijada una dimensión $n \geq 2$, 
    se dan fórmulas para la única colección de $n$ vectores
    \begin{equation}
@@ -379,10 +387,10 @@ dimensión $n$ y grado $k$.
     
 
 \section{Análisis de señales finitas en base a los PDL}
-\begin{frame}
-Recuerde que la distancia de una señal $x \in \IR^{n}$ a un
-espacio $W_{n,k}$ indica qué tanto $x$ tiende a ser la discretización
-de un polinomio de grado $k$.
+\begin{frame}{Análisis de señales finitas en base a los PDL}
+Recuerde que queremos usar la distancia de una señal $x \in \IR^{n}$ a un
+espacio $W_{n,k}$ para indicar qué tanto $x$ tiende a ser la discretización
+de un polinomio de grado a lo más $k$.
 
 ¿Cómo estamos midiendo esta distancia?
 \pause
@@ -451,8 +459,6 @@ si y sólo si $x \in W_{n, k}^{\perp}$ (resp. $x \in W_{n,k}$).
 Observe que $cos(\measuredangle(x, W_{n,k}))$ tiende a uno 
 conforme la energía de $x$ (i.e. $||x||^{2}$) se concentra en sus
 $k+1$ primeros coeficientes de Legendre.
-\TODO{CREO que en la imagen debe en realidad ser ``¿es un polinomio
-discreto de grado a lo más $k$?''}
 \end{frame}
 
 
@@ -472,7 +478,7 @@ de $x$ respecto a la base de Legendre discreta $\cali{L}^{n}$.
 En general,
 \begin{itemize}
 	\item La señal $x$ es cercana a ser un polinomio $n-$dimensional
-	de grado $k$ si
+	de grado a lo más $k$ si
 	$\suma{i=0}{k}{a_{i}^{2}} \sim ||x||^{2}$
 \end{itemize}
 \end{prop}
@@ -530,6 +536,62 @@ región $II$ es $W_{3,1}$ y la región $III$ es la última.
 		\includegraphics[scale = 0.27]{6Dic_4}
 	\end{figure}
 \end{frame}
+
+
+\begin{frame}{Estimando el grado de una señal}
+Sea $x \in \IR^{n}$. Para cada $0 \leq k \leq n-1$, sea
+\[
+d_{k}(x) := cos(\measuredangle(x, W_{n,k})) \in [0,1].
+\]
+Claro que $\{ d_{k}(x) \}_{k=0}^{n-1}$ es una sucesión creciente
+con $d_{n-1}(x) = 1$. El teorema \ref{teo: est grad} es traduce en que
+
+\begin{itemize}
+    \item Si $d_{0}(x) = 1$, entonces $x$ tiene grado cero. En caso contrario,
+	\item el índice $k$ para el que se cumpla que $d_{k}(x) < 1 $ 
+	y $d_{k}(x) = 1$ es el grado de la señal x.
+\end{itemize}
+
+Podemos usar un error $\epsilon > 0$ para tomar en cuenta la presencia de ruido
+en las mediciones.
+\end{frame}
+
+\begin{frame}
+
+\begin{figure}[h]
+\includegraphics[scale = 0.4]{15Jul_1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale = 0.63]{escala_pertenenciaWnk}
+\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Ejemplo}
+Sea la señal $x \in \IR^{8}$ el resultado de 
+muestrear uniformemente en $\cali{P}_{8}$ al polinomio
+de grado $3$ $f(t) = (t-2)^{2}(t-5)$ con un ruido uniforme
+distribuido en $(-5,5)$.
+
+\begin{figure}[h]
+\includegraphics[scale = 0.4 ]{0.01}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Ejemplo}
+Sea la señal $x \in \IR^{8}$ el resultado de 
+muestrear uniformemente en $\cali{P}_{8}$ al polinomio
+de grado $3$ $f(t) = (t-2)^{2}(t-5)$ con un ruido uniforme
+distribuido en $(-5,5)$.
+
+\begin{figure}[h]
+\includegraphics[scale = 0.4]{0.001}
+\end{figure}
+\end{frame}
+
+
 
 
 \begin{frame}{Relación con el método de aproximación por mínimos cuadrados}

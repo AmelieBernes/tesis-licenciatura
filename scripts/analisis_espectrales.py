@@ -1105,7 +1105,7 @@ def espectro_Fourier(x, nombre):
     Función que grafica el espectro de Fourier de una señal finita x (tipo array).
     'nombre' es una cadena que representa el nombre de la señal a analizar.
     """
-    fig, axis = plt.subplots(1,2)
+    fig, axis = plt.subplots(2,1)
     n = len(x)
     grafica_taus_axis(x, n, nombre, axis[0], axis[1])
     

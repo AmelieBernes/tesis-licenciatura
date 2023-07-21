@@ -851,6 +851,72 @@ recuperarse el grado del polinomio que origina la señal.
 	\includegraphics[scale = 1]{escala_pertenenciaWnk} 
 \end{figure}	
 
+\begin{ejemplo}
+\label{ej: estimando grado senal ruidosa}
+Sea la señal $x \in \IR^{8}$ el resultado de muestrear
+uniformemente en $\cali{P}_{8}$ al polinomio
+$f(t) = (t-2)^2(t-5)$ con un ruido uniforme
+en $(-5, 5)$. Calculamos que
+la sucesión de similitudes coseno $d_{k}(x)$ de $x$
+a los espacios de polinomios discretos $W_{8, k} \leq \IR^{8}$
+es
+
+\[ 0.21736762184489677, 0.8350140717863705, 0.9026494011237881, 0.9891048269951728, 
+\]
+\[
+0.989106814868772, 0.9968972495107041, 0.9975812235176584, 1.0
+\]
+
+Vemos entonces que, a pesar de que se muestreó un polinomio
+de grado $3$, la presencia de ruido en las mediciones
+hizo que la señal resultante tenga grado $7$.
+Observe sin embargo que las últimas similitudes coseno 
+pueden considerarse cercanas a $1$. Si se aceptan 
+distintos márgenes de error $\epsilon$, podemos hacer otras
+inferencias sobre el grado de $x$.
+
+
+\begin{figure}[H]
+	\sidecaption{
+	Usando $\epsilon = 0.01$, estimamos que
+	$\partial(x) = 3$.
+	\label{fig: 001}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{0.01} 
+\end{figure}	
+
+\begin{figure}[H]
+	\sidecaption{
+	Usando $\epsilon = 0.001$, estimamos que
+	$\partial(x) = 6$.
+	\label{fig: 0001}
+	}
+	\centering
+	\includegraphics[scale = 0.5]{0.001} 
+\end{figure}	
+
+
+\end{ejemplo}
+
+\begin{nota}
+Por estar el subespacio $W_{n,k}$ contenido en 
+$W_{n,k+1}$ para toda $0 \leq k \leq n-2$, es claro que 
+para todo tal índice $k$ y para toda señal $x \in \IR^{n}$ se tiene
+que $d_{k}(x) \leq d_{k+1}(x)$. En efecto,
+$\Pi_{W_{n,k}} \in W_{n, k} \subseteq W_{n, k+1}$, luego, según 
+la proposición \ref{prop: algunos hechos sobre el angulo entre un vector y un subespacio},
+$\measuredangle(x, W_{n, k+1}) \leq 
+\measuredangle(x, \Pi_{W_{n,k}})
+= \measuredangle(x, W_{n, k})$, luego, 
+$d_{k}(x) = cos(\measuredangle(x, W_{n, k})) \leq 
+cos( \measuredangle(x, W_{n, k+1}) ) = d_{k+1}(x)$.
+
+Así, al usar un error $\epsilon$ para estimar el grado
+de una señal como lo hicimos en el ejemplo 
+\ref{ej: estimando grado senal ruidosa},
+la estimación siempre será menor o igual al grado real de la señal.
+\end{nota}
 
 
 %-----------------------------------------------------

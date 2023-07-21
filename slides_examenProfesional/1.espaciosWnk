@@ -2,7 +2,7 @@
 
 \begin{frame}{Espacios de polinomios discretos}
 
-Fijemos una dimensión $n \neq 2$.
+Fijemos una dimensión $n \leq 2$.
 
 \begin{itemize}
 	\item \textcolor{red}{Mallas uniformes:}
@@ -105,7 +105,7 @@ Sea $x = (x_{m})_{m=0}^{n-1} \in \IR^{n}$.
 x \textit{ es afín }  \Leftrightarrow &
 x = (a + bi)_{i=0}^{i} \hspace{0.2cm} \textit{ para algunos } a, b \in \IR \\
 \Leftrightarrow & x = \Omega_{n, \cali{P}_{n}}(l(t)) \textit{ para alguna } l(t) = a+bt \in \IR_{1}[t] \\
-\Leftrightarrow & x = a w_{0} + bw_{1} \\
+\Leftrightarrow & x = a v_{0} + bv_{1} \\
 \Leftrightarrow & x \in W_{n, 1}.
 \end{align*}
 Análogamente
@@ -251,8 +251,10 @@ $x = \Omega_{n, \cali{P}}(f)$, entonces
 
 
 
-\begin{frame}{Así, $W_{n,k}$ es el espacio de las señales $n-$dimensionales de grado $k$}
+\begin{frame}{Así, $W_{n,k}$ es el espacio de las señales $n-$dimensionales de grado 
+a lo más $k$}
 \begin{teo}
+\label{teo: est grad}
 Sean $n \geq 2$ y $x \in \IR^{n}$.
 \begin{itemize}
 \item $x$ tiene grado cero sii $x \in W_{n,0}$, y
@@ -268,6 +270,6 @@ Luego, si $x \in \IR^{n}$,
 	\item Es posible medir la distancia del punto
 	$x \in \IR^{n}$ a espacios $W_{n,k} \leq \IR^{n}$, 
 	luego, \textbf{podemos medir qué tanto se aleja
-	$x$ de ser de cierto grado}. \TODO{Cuidado: corrigiendo.}
+	$x$ de ser de cierto grado}. 
 \end{itemize}
 \end{frame}

@@ -17,6 +17,130 @@
 \endgroup
 
 \datalist[entry]{anyt/global//global/global}
+  \entry{abur}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AMF}{%
+         family={Aburdene},
+         familyi={A\bibinitperiod},
+         given={Maurice\bibnamedelima F.},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AMF1}
+    \strng{fullhash}{AMF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Abu93}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{181\bibrangedash 186}
+    \field{title}{On the computation of discrete Legendre polynomial
+  coefficients}
+    \field{journaltitle}{Multidimensional systems and signal processing}
+    \field{year}{1993}
+  \endentry
+
+  \entry{abur2}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AJEDMF}{%
+         family={Aburdene},
+         familyi={A\bibinitperiod},
+         suffix={Maurice\bibnamedelima F.},
+         suffixi={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={John E.\bibnamedelima Dorband},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AMFJED1}
+    \strng{fullhash}{AMFJED1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Abu96}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Parallel computation of discrete Legendre transforms}
+    \field{volume}{6}
+    \field{journaltitle}{IEEE International Conference on Acoustics, Speech,
+  and Signal Processing Conference Proceedings}
+    \field{year}{1996}
+  \endentry
+
+  \entry{dris}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DDMHJDNRJR}{%
+         family={Driscoll},
+         familyi={D\bibinitperiod},
+         suffix={James\bibnamedelima R.},
+         suffixi={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={Dennis M. Healy Jr Daniel N.\bibnamedelima Rockmore.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
+  H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  D\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJRDMHJDNR1}
+    \strng{fullhash}{DJRDMHJDNR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Dri97}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{1066\bibrangedash 1099}
+    \field{title}{Fast discrete polynomial transforms with applications to data
+  analysis for distance transitive graphs}
+    \field{journaltitle}{SIAM Journal on Computing}
+    \field{year}{1997}
+  \endentry
+
+  \entry{george}{article}{}
+    \name{author}{1}{}{%
+      {{hash=FGE}{%
+         family={Forsythe},
+         familyi={F\bibinitperiod},
+         given={George\bibnamedelima E.},
+         giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FGE1}
+    \strng{fullhash}{FGE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Forne}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{2}
+    \field{pages}{74\bibrangedash 88}
+    \field{title}{Generation and use of orthogonal polynomials for data-fitting
+  with a digital computer}
+    \field{volume}{5}
+    \field{journaltitle}{Journal of the Society for Industrial and Applied
+  Mathematics}
+    \field{year}{June 1957}
+  \endentry
+
+  \entry{mukun}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MR}{%
+         family={Mukundan},
+         familyi={M\bibinitperiod},
+         given={Ramakrishnan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MR1}
+    \strng{fullhash}{MR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Muk04}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{1055\bibrangedash 1059}
+    \field{title}{Some computational aspects of discrete orthonormal moments}
+    \field{journaltitle}{IEEE Transactions on image processing}
+    \field{year}{2004}
+  \endentry
+
   \entry{Neuman}{article}{}
     \name{author}{2}{}{%
       {{hash=NCP}{%

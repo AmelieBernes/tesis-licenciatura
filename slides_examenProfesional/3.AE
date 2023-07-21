@@ -122,7 +122,8 @@ discretizaciones de sinusoides de ciertas frecuencias enteras.
 \begin{frame}
 \begin{defi}
 \label{def: taus}
-Sea $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $.
+Sea $n \geq 2$, $M = \lceil \frac{n}{2} \rceil $,
+$x \in \IR^{n}$.
 Definimos
 	\[
 	\tau_{n}(x, 0) := \frac{|\langle x, c_{n,0} \rangle|}{|| x ||} ,	
@@ -144,12 +145,13 @@ Definimos
 	\]
 \end{defi}
 La función $T_{x}: Dom_{DFT, n} \longrightarrow [0,1]$
+dada por $T_{x}(\omega) = \tau_{n}(x, \omega)$
 es el \textbf{espectro de $x$} obtenido usando la TDF.
 \end{frame} 
 
 \begin{frame}
     \begin{figure}[h]
-		\includegraphics[scale = 0.9]{espectroFourier_PDL_18_7}
+		\includegraphics[scale = 0.33]{23_9_TDF}
 	\end{figure}
 \end{frame}
 
@@ -260,7 +262,7 @@ Se tiene que
 	
 \pause
 \begin{defi}
-Sea $n \geq 2$ entero. Para todo $x \in \IR^{n}$ no cero definimos
+Sean $n \geq 2$ entero, $\omega \geq 0$. Para todo $x \in \IR^{n}$ no cero definimos
 \[
 	\sigma_{n}(x, \omega) := cos(\measuredangle(x, P_{n, \omega}))
 	= \frac{|| \Pi_{P_{n, \omega}}(x) ||}{|| x ||}.
@@ -373,17 +375,18 @@ c_{n, \omega} + \\
 s_{n, \omega}
 	\end{align*}
 	y 
-	\begin{equation*}\small
-	\sigma_{n}(x, \omega) =
-	\left(		  
-		  \frac{ \hlRed{ \langle x, c_{n, \omega } \rangle } ^{2} +  
+	\begin{equation*}
+	\resizebox{.9\hsize}{!}{
+	$\sigma_{n}(x, \omega) = \left(\frac{ \hlRed{ \langle x, c_{n, \omega } \rangle } ^{2} +  
 		  \hlBlue{ \langle x, s_{n, \omega } \rangle}^{2}	
 	       -2  \hlRed{ \langle x, c_{n, \omega } \rangle } 
 	       \hlBlue{ \langle x, s_{n, \omega } \rangle } 
-	       \langle c_{n, \omega }, s_{n, \omega } \rangle}{ || x ||^{2} \cdot
+	       \hlGreen{\langle c_{n, \omega }, s_{n, \omega } \rangle }
+	       }{ || x ||^{2} \cdot
 	       (1- 
 	       \hlGreen{ \langle c_{n, \omega }, s_{n, \omega } \rangle }^{2})}	  
-\right) ^{1/2}
+\right) ^{1/2} $
+}
 	\end{equation*}
 
 \end{frame}
@@ -434,7 +437,8 @@ c= \frac{
 \begin{equation}
 \label{eq5: 20Marzo}
 d= \frac{
-\hlBlue{ \langle x, s_{n, \omega} \rangle } - \langle c_{n, \omega}, s_{n, \omega} \rangle
+\hlBlue{ \langle x, s_{n, \omega} \rangle } - 
+\hlGreen{\langle c_{n, \omega}, s_{n, \omega} \rangle }
 \hlRed{ \langle x, c_{n, \omega} \rangle }
 }{1-\hlGreen{ \langle c_{n, \omega}, s_{n, \omega} \rangle }^{2}} \eta_{n, \omega},
 \end{equation}
@@ -502,7 +506,8 @@ Algunas propiedades de $\Sigma_{x}$:
 \begin{figure}[h]
 \includegraphics[scale = 0.8]{simetria_espectro}
 \end{figure}	
-Podemos entonces restringir el dominio de $\Sigma_{x}$.
+Podemos entonces restringir el dominio de $\Sigma_{x}$
+a $[0, n/2]$.
 \textbf{¿Qué pasa con la continuidad en los extremos de
 $\Sigma_{x}$?}
 \end{frame}
@@ -549,16 +554,18 @@ Sean $n \geq 2$, $x \in \IR^{n}$.
 Sea $\Sigma_{x}: [0, n/2] \rightarrow [0,1]$ 
 definida como $\Sigma_{x}(\omega) = \sigma_{n}(x, \omega)$.
 Se tiene que 
-\begin{equation}\small
+\begin{equation}
 \label{eq: limite del espectro a cero}
-\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
+\resizebox{.9\hsize}{!}{
+$\limite{\omega \rightarrow 0^{+}}{\Sigma_{x}(\omega)}
 =
 \left(
 \frac{
 2M_{0}(x)^{2}(2n-1)(n-1) + 12M_{1}(x)^{2} - 12M_{0}(x)M_{1}(x)(n-1)
 }{
 ||x||^{2} (n-1)(n+1)n}
-\right)^{1/2}
+\right)^{1/2}$ 
+}
 \end{equation}
 
 y
@@ -641,7 +648,14 @@ basado en espacios monofrecuenciales.
 
 \begin{frame}
     \begin{figure}[h]
-		\includegraphics[scale = 0.3]{AE_PDL_18_7}
+		\includegraphics[scale = 0.7]{espectro_alternado}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \begin{figure}[h]
+		\includegraphics[scale = 0.3]{23_9}
 	\end{figure}
 \end{frame}
 
@@ -702,8 +716,8 @@ propuesto $k/2$, sino menor a este.
 \begin{frame}
 \begin{pregunta}
 \label{preg 3}
-
-Sean $m_{n,i}$ y $b_{n,i}$, con $i=0,1$ las pendientes y la ordenadas
+Fijado $n \geq 2$ entero,
+sean $m_{n,i}$ y $b_{n,i}$, con $i=0,1$ las pendientes y la ordenadas
 al origen de las rectas de mínimos cuadrados calculadas a 
 partir de los conjuntos 
 $$\{(k, FPi(\cali{L}^{n,k})), \hspace{0.2cm} 0 \leq k \leq n-1 \},
