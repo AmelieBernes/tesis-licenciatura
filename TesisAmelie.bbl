@@ -66,6 +66,33 @@
     \field{year}{1996}
   \endentry
 
+  \entry{libroRusia}{book}{}
+    \name{author}{1}{}{%
+      {{hash=ANVUSS}{%
+         family={A.F.\bibnamedelima Nikiforov},
+         familyi={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+         suffix={S.K.\bibnamedelima Suslov},
+         suffixi={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={V.B.\bibnamedelima Uvarov},
+         giveni={V\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{ANSSVU1}
+    \strng{fullhash}{ANSSVU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{AN91}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{edition}{1st edition}
+    \field{series}{Springer Series in Computational Physics}
+    \field{title}{Classical Orthogonal Polynomials of a Discrete Variable}
+    \field{year}{1991}
+  \endentry
+
   \entry{stockel}{article}{}
     \name{author}{2}{}{%
       {{hash=fbD}{%

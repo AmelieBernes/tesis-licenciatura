@@ -495,21 +495,17 @@ por las $k$ condiciones de ortogonalidad
 \int_{-1}^{1}{P_{k}(t)P_{m}(t)} dt = 0
 \]
 y por la condición de normalización 
-\[
-\int_{-1}^{1}{P_{k}(t)^{2}} dt = 1.
-\]
+\begin{equation}
+	\label{eq: de normalizacion legendre continuo}
+	\int_{-1}^{1}{P_{k}(t)^{2}} dt = 1.
+\end{equation}
+
+
 A los polinomios \eqref{eq1: 8En}
-se les conoce como \textbf{polinomios de Legendre}
-\sidenote{Muchas veces
-esta condición de normalización cambia; algunos 
-prefieren tomar como condiciones de normalización a 
-\[
-\int_{-1}^{1}{P_{k}(t)P_{m}(t)} dt = \frac{2 \delta_{km}}{2n+1}.
-\]
-Por eso las fórmulas que usualmente uno encuentra para
-los polinomios de Legendre (por ejemplo \cite{leg})
-son distintas a las presentadas aquí.} (c.f. \cite{friedberg} p.346
+se les conoce como \textbf{polinomios de Legendre} 
+(c.f. \cite{friedberg} p.346
 y \cite{DSML} p.390).
+
 
 Se calcula fácilmente que los primeros cuatro 
 polinomios de Legendre son
@@ -529,6 +525,31 @@ y
 \[
 P_{3}(t) = \frac{5}{2} \sqrt{\frac{7}{2}}\left( t^{3}- \frac{3}{5}t\right).
 \]
+
+
+\begin{nota}
+
+En algunas ocasiones la condición de normalización
+pedida no es la misma que la dada en 
+\eqref{eq: de normalizacion legendre continuo};
+algunos autores  
+prefieren tomar como condiciones de normalización a 
+\[
+\int_{-1}^{1}{P_{k}(t)P_{m}(t)} dt = \frac{2 \delta_{km}}{2n+1}.
+\]
+Por eso las fórmulas que usualmente uno encuentra para
+los polinomios de Legendre (por ejemplo, en \cite{leg})
+son distintas a las presentadas aquí.
+Sin embargo, según el resultado 
+1.4.2.2. de \cite{libroRusia}, salvo un
+múltiplo escalar, los polinomios de Legendre obtenidos
+con estas otras condiciones de normalización son los mismos que los 
+obtenidos usando \eqref{eq: de normalizacion legendre continuo},
+esto porque el intervalo de integración y la función
+peso ($(-1,1)$ y la funcion constante uno en $(-1,1)$, respectivamente)
+son los mismos para estas construcciones.
+\end{nota}
+
 
 En esta discusión tenemos ya involucrada una base ortogonal
 (en el espacio de funciones $L^{2}[-1,1]$);

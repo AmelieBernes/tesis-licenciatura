@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.4)  20 JUL 2023 18:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.20)  21 JUL 2023 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2506,7 +2506,7 @@ Package logreq Info: Writing requests to 'slides_amelieTesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  42123 strings out of 477985
- 868179 string characters out of 5840059
+ 868179 string characters out of 5840058
  1891388 words of memory out of 5000000
  61267 multiletter control sequences out of 15000+600000
  532729 words of font info for 106 fonts, out of 8000000 for 9000
