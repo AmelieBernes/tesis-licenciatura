@@ -525,8 +525,10 @@ A_{n}(x) = ((-1)^{m} x_{m})_{m=0}^{n-1}
 será llamada el \textbf{operador de alternancia $n-$dimensional}.
 Claro que es una función lineal, involutiva, y una isometría.
 
-\TODO{Imagen para hablar del efecto de cambio de oscilación al aplicar
-el operador de alternancia.}
+\begin{figure}[h]
+\includegraphics[scale = 0.4]{alter_3}
+\end{figure}	
+
 \end{frame}
 
 

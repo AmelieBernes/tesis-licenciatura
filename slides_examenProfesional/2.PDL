@@ -12,16 +12,26 @@ Para facilitar la tarea, es de utilidad
 encontrar base ortonormales de estos espacios de polinomios
 discretos.
 Al hacer esto, obtenemos los
-\textbf{polinomios discretos de Legendre},
+\textbf{polinomios discretos de Legendre}
+(PDL),
 objetos ya estudiados y aplicados en la literatura.
 \end{frame}
 
 	\subsection{Sobre los PDL en la literatura}
 
 \begin{frame}{Sobre los PDL en la literatura}
-	\TODO{Aquí tienes que hacer referencia a lo que debes leer de tarea.}
-	
-	Se han hecho esfuerzos por
+Resumen histórico en \cite{roy} y \cite{nikiforov}.
+	\begin{itemize}
+		\item Legendre, Laplace (Mecánica celeste)
+		\item Chebyshev (1858), durante sus trabajos
+		en probabilidad y teoría de aproximación por
+		mínimos cuadrados. Aplicados a problemas
+		de interpolación y aproximación de cuadratura
+		\item Gram (1915)
+	\end{itemize}
+
+\pause
+Se han hecho esfuerzos por
 	crear algoritmos eficientes para el cálculo de los PDL
 	(c.f. \cite{Neuman}, \cite{abur2}, \cite{abur}, \cite{dris},
 	\cite{mukun}).
