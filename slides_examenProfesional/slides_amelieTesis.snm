@@ -1,35 +1,33 @@
-\beamer@slide {eq: espacio Wni}{14}
-\beamer@slide {teo: est grad}{30}
-\beamer@slide {eq: BDL dim n}{42}
-\beamer@slide {prop: simetrias en dimensiones impares}{46}
-\beamer@slide {eq: base survey}{47}
-\beamer@slide {def: fading factorial}{51}
-\beamer@slide {teo: expresión analítica de BON de Legendre}{51}
-\beamer@slide {eq0: 6En}{51}
-\beamer@slide {prop: discretizacion recta minimos cuadrados}{77}
-\beamer@slide {eq10: 10Dic}{77}
-\beamer@slide {eq: c y s tilde}{85}
-\beamer@slide {eq: M}{85}
-\beamer@slide {def: taus}{89}
-\beamer@slide {eq: espacio Pnw}{98}
-\beamer@slide {prop: aaa}{102}
-\beamer@slide {eq5: 19Marzo}{102}
-\beamer@slide {eq6: 19Marzo}{102}
-\beamer@slide {eq7: 19Marzo}{102}
-\beamer@slide {eq8: 19Marzo}{102}
-\beamer@slide {ec: 4: 23ap}{103}
-\beamer@slide {prop: producto punto entre f y g}{103}
-\beamer@slide {eq9: 19Marzo}{103}
-\beamer@slide {ec: desfase explicito 2}{109}
-\beamer@slide {eq4: 20Marzo}{109}
-\beamer@slide {eq5: 20Marzo}{109}
-\beamer@slide {ec: desfase explicito 1}{110}
-\beamer@slide {eq: desfase phi 1}{110}
-\beamer@slide {teo: limite del espectro por cero}{117}
-\beamer@slide {eq: limite del espectro a cero}{117}
-\beamer@slide {eq: limite del espectro a n medios}{117}
-\beamer@slide {eq: limite por cero, version final}{117}
-\beamer@slide {eq: limite por n medios, version final}{117}
-\beamer@slide {pregunta 1}{123}
-\beamer@slide {preg 2}{124}
-\beamer@slide {preg 3}{125}
+\beamer@slide {eq: espacio Wni}{15}
+\beamer@slide {teo: est grad}{27}
+\beamer@slide {eq: BDL dim n}{39}
+\beamer@slide {prop: simetrias en dimensiones impares}{42}
+\beamer@slide {eq: base survey}{43}
+\beamer@slide {def: fading factorial}{47}
+\beamer@slide {teo: expresión analítica de BON de Legendre}{47}
+\beamer@slide {eq0: 6En}{47}
+\beamer@slide {eq: c y s tilde}{72}
+\beamer@slide {eq: M}{72}
+\beamer@slide {def: taus}{76}
+\beamer@slide {eq: espacio Pnw}{85}
+\beamer@slide {prop: aaa}{89}
+\beamer@slide {eq5: 19Marzo}{89}
+\beamer@slide {eq6: 19Marzo}{89}
+\beamer@slide {eq7: 19Marzo}{89}
+\beamer@slide {eq8: 19Marzo}{89}
+\beamer@slide {ec: 4: 23ap}{90}
+\beamer@slide {prop: producto punto entre f y g}{90}
+\beamer@slide {eq9: 19Marzo}{90}
+\beamer@slide {ec: desfase explicito 2}{96}
+\beamer@slide {eq4: 20Marzo}{96}
+\beamer@slide {eq5: 20Marzo}{96}
+\beamer@slide {ec: desfase explicito 1}{97}
+\beamer@slide {eq: desfase phi 1}{97}
+\beamer@slide {teo: limite del espectro por cero}{104}
+\beamer@slide {eq: limite del espectro a cero}{104}
+\beamer@slide {eq: limite del espectro a n medios}{104}
+\beamer@slide {eq: limite por cero, version final}{104}
+\beamer@slide {eq: limite por n medios, version final}{104}
+\beamer@slide {pregunta 1}{110}
+\beamer@slide {preg 2}{111}
+\beamer@slide {preg 3}{112}

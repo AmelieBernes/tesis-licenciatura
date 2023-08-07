@@ -9,7 +9,7 @@ es importante para tener información sobre el grado
 
 
 Para facilitar la tarea, es de utilidad
-encontrar base ortonormales de estos espacios de polinomios
+encontrar bases ortonormales de estos espacios de polinomios
 discretos.
 Al hacer esto, obtenemos los
 \textbf{polinomios discretos de Legendre}
@@ -121,62 +121,9 @@ Se han hecho esfuerzos por
     
     
     \subsection{Simetrías en las entradas de los PDL}
-    
-	\begin{frame}{Simetrías en las entradas de los PDL}
 
-	Tabulemos los valores de algunos PDL.	
-	
-	%Tabla coloreada para n=2,3,4
-\begin{table}
-\begin{adjustbox}{width=\columnwidth,center}
-\begin{tabular}{ c c c c c c }
-k $\backslash$ n & 2 & 3 & 4   \\ 
-\hline
-
-0 & $\left(
-{\color{red}{\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
-\right)$ & 
-$\left(
-{\color{red}{\frac{1}{\sqrt{3}}}}, 
-\frac{1}{\sqrt{3}}, 
-{\color{red}{\frac{1}{\sqrt{3}}}} 
-\right)$ &   
-$\left(
-{\color{red}{\frac{1}{2}, \frac{1}{2}, \frac{1}{2}, \frac{1}{2}}}
-\right)$ \\ 
-1 & 
-$\left(
-{\color{blue}{-\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}}}
-\right)$ & 
-$\left(
-{\color{blue}{-\frac{1}{\sqrt{2}}}}, 0, 
-{\color{blue}{\frac{1}{\sqrt{2}}}} 
-\right) $ & 
-$\left(
-{\color{blue}{-\frac{3}{2\sqrt{5}}, -\frac{1}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}}} 
-\right)$  \\ 
-2 & $---$ & $\left(
-{\color{red}{\frac{1}{\sqrt{6}}}}, -\sqrt{\frac{2}{3}}, 
-{\color{red}{\frac{1}{\sqrt{6}}}} \right) $ & 
-$\left(
-{\color{red}{\frac{1}{2}, -\frac{1}{2}, -\frac{1}{2}, \frac{1}{2}}} 
-\right)$ \\ 
-3 & $---$ & $---$ & 
-$\left(
-{\color{blue}{-\frac{1}{2\sqrt{5}}, \frac{3}{2\sqrt{5}}, -\frac{3}{2\sqrt{5}}, \frac{1}{2\sqrt{5}}}}
-\right)$  \\ 
-\end{tabular}
-\end{adjustbox}
-\end{table} 
-
-	\end{frame}	    
-    
-    
-    
-    
-    
-
-\begin{frame}
+\begin{frame}{Simetrías en las entradas de los PDL}
+Tabulemos los valores de algunos PDL. \\
 
 Parece ser que existe una simetría central en las entradas
 de los PDL.
@@ -414,7 +361,6 @@ de un polinomio de grado a lo más $k$.
 \textbf{Respuesta:} al igual que la forma de la gráfica de una señal,
 la distancia coseno de la señal a un subespacio de su espacio ambiente
 es invariante bajo multiplicación por escalares.
-\pause
 	\begin{figure}[h]
 		\includegraphics[scale = 0.13]{cosSim_mejor}
 	\end{figure}
@@ -494,6 +440,10 @@ En general,
 \end{prop}
 \end{frame}
 
+
+\begin{comment}
+
+
 \begin{frame}{Algunos ejemplos en $\IR^{3}$}
 Observe que $W_{3,1}$ es un hiperplano de $\IR^{3}$.
     \begin{figure}[h]
@@ -547,6 +497,8 @@ región $II$ es $W_{3,1}$ y la región $III$ es la última.
 	\end{figure}
 \end{frame}
 
+
+\end{comment}
 
 \begin{frame}{Estimando el grado de una señal}
 Sea $x \in \IR^{n}$. Para cada $0 \leq k \leq n-1$, sea
@@ -604,6 +556,9 @@ distribuido en $(-5,5)$.
 
 
 
+\begin{comment}
+
+
 \begin{frame}{Relación con el método de aproximación por mínimos cuadrados}
 Tenemos dos formas de aproximar un conjunto de puntos
 de la forma $\{ (i, x(i)) : \hspace{0.2cm} 0 \leq i \leq n-1 \}$
@@ -649,3 +604,5 @@ entonces las rectas $l_{x}$ y $l_{min}$ coinciden.
 \end{prop}
 
 \end{frame}
+
+\end{comment}

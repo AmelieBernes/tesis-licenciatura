@@ -1,8 +1,18 @@
 \section{Espacios de polinomios discretos}
 
+\begin{frame}
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale= 1.1]{parteI}
+ 	\end{figure}
+ \end{figure}
+\end{frame}
+
+
 \begin{frame}{Espacios de polinomios discretos}
 
-Fijemos una dimensión $n \leq 2$.
+Fijemos una dimensión $n \geq 2$.
 
 \begin{itemize}
 	\item \textcolor{red}{Mallas uniformes:}
@@ -182,18 +192,10 @@ es un isomorfismo de $\IR-$espacios vectoriales.
 un único polinomio de grado menor a $n$}.
 Observe que, en la proposición, la
 malla $\cali{P}$ se fija en las hipótesis. \\
-
-\pause
-\textbf{Pregunta:}
-¿Se pueden encontrar dos mallas $\cali{P}$ y $\tilde{\cali{P}}$
-y dos polinomios $f, \tilde{f}$ de grados
-$0 \leq \partial(f) < \partial(\tilde{f}) \leq n-1$
-tales que
-\[
-\Omega_{n, \cali{P}}(f) = x = \Omega_{n, \tilde{\cali{P}}}(\tilde{f}) ?
-\]
 \end{frame}
 
+
+\begin{comment}
 \begin{frame}
 Lo que es seguro es que no se puede asegurar algún tipo de unicidad
 si quitamos la restricción en los grados de los polinomios a discretizar.
@@ -210,6 +212,7 @@ si quitamos la restricción en los grados de los polinomios a discretizar.
 \includegraphics[scale = 0.8]{grado2}
 \end{figure}
 \end{frame}
+\end{comment}
 
 
 \begin{frame}

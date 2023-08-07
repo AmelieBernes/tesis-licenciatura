@@ -18,212 +18,192 @@
 \headcommand {\beamer@sectionpages {3}{9}}
 \headcommand {\beamer@subsectionpages {3}{9}}
 \headcommand {\sectionentry {2}{Espacios de polinomios discretos}{10}{Espacios de polinomios discretos}{0}}
-\headcommand {\slideentry {2}{0}{1}{10/12}{}{0}}
-\headcommand {\beamer@framepages {10}{12}}
-\headcommand {\slideentry {2}{0}{2}{13/13}{}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionpages {10}{13}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{14}{Espacios $W_{n,k}$}}
-\headcommand {\slideentry {2}{1}{1}{14/14}{Espacios $W_{n,k}$}{0}}
+\headcommand {\slideentry {2}{0}{1}{10/10}{}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {2}{0}{2}{11/13}{}{0}}
+\headcommand {\beamer@framepages {11}{13}}
+\headcommand {\slideentry {2}{0}{3}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {2}{1}{2}{15/15}{Espacios $W_{n,k}$}{0}}
+\headcommand {\beamer@subsectionpages {10}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{15}{Espacios $W_{n,k}$}}
+\headcommand {\slideentry {2}{1}{1}{15/15}{Espacios $W_{n,k}$}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {2}{1}{3}{16/20}{Espacios $W_{n,k}$}{0}}
-\headcommand {\beamer@framepages {16}{20}}
-\headcommand {\slideentry {2}{1}{4}{21/21}{Espacios $W_{n,k}$}{0}}
-\headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@subsectionpages {14}{21}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{22}{Una definición del grado de una señal finita}}
-\headcommand {\slideentry {2}{2}{1}{22/23}{Una definición del grado de una señal finita}{0}}
-\headcommand {\beamer@framepages {22}{23}}
-\headcommand {\slideentry {2}{2}{2}{24/25}{Una definición del grado de una señal finita}{0}}
-\headcommand {\beamer@framepages {24}{25}}
-\headcommand {\slideentry {2}{2}{3}{26/26}{Una definición del grado de una señal finita}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {2}{2}{4}{27/29}{Una definición del grado de una señal finita}{0}}
-\headcommand {\beamer@framepages {27}{29}}
-\headcommand {\slideentry {2}{2}{5}{30/31}{Una definición del grado de una señal finita}{0}}
+\headcommand {\slideentry {2}{1}{2}{16/16}{Espacios $W_{n,k}$}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {2}{1}{3}{17/21}{Espacios $W_{n,k}$}{0}}
+\headcommand {\beamer@framepages {17}{21}}
+\headcommand {\slideentry {2}{1}{4}{22/22}{Espacios $W_{n,k}$}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionpages {15}{22}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{23}{Una definición del grado de una señal finita}}
+\headcommand {\slideentry {2}{2}{1}{23/23}{Una definición del grado de una señal finita}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {2}{2}{2}{24/26}{Una definición del grado de una señal finita}{0}}
+\headcommand {\beamer@framepages {24}{26}}
+\headcommand {\slideentry {2}{2}{3}{27/28}{Una definición del grado de una señal finita}{0}}
+\headcommand {\beamer@framepages {27}{28}}
+\headcommand {\beamer@sectionpages {10}{28}}
+\headcommand {\beamer@subsectionpages {23}{28}}
+\headcommand {\sectionentry {3}{Polinomios discretos de Legendre}{29}{Polinomios discretos de Legendre}{0}}
+\headcommand {\slideentry {3}{0}{1}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{30}{Sobre los PDL en la literatura}}
+\headcommand {\slideentry {3}{1}{1}{30/31}{Sobre los PDL en la literatura}{0}}
 \headcommand {\beamer@framepages {30}{31}}
-\headcommand {\beamer@sectionpages {10}{31}}
-\headcommand {\beamer@subsectionpages {22}{31}}
-\headcommand {\sectionentry {3}{Polinomios discretos de Legendre}{32}{Polinomios discretos de Legendre}{0}}
-\headcommand {\slideentry {3}{0}{1}{32/32}{}{0}}
+\headcommand {\slideentry {3}{1}{2}{32/32}{Sobre los PDL en la literatura}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@subsectionpages {32}{32}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{33}{Sobre los PDL en la literatura}}
-\headcommand {\slideentry {3}{1}{1}{33/34}{Sobre los PDL en la literatura}{0}}
-\headcommand {\beamer@framepages {33}{34}}
-\headcommand {\slideentry {3}{1}{2}{35/35}{Sobre los PDL en la literatura}{0}}
+\headcommand {\slideentry {3}{1}{3}{33/33}{Sobre los PDL en la literatura}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {3}{1}{4}{34/34}{Sobre los PDL en la literatura}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {3}{1}{5}{35/35}{Sobre los PDL en la literatura}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {3}{1}{3}{36/36}{Sobre los PDL en la literatura}{0}}
+\headcommand {\beamer@subsectionpages {30}{35}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{36}{Construcción}}
+\headcommand {\slideentry {3}{2}{1}{36/36}{Construcción}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {3}{1}{4}{37/37}{Sobre los PDL en la literatura}{0}}
+\headcommand {\slideentry {3}{2}{2}{37/37}{Construcción}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {3}{1}{5}{38/38}{Sobre los PDL en la literatura}{0}}
+\headcommand {\slideentry {3}{2}{3}{38/38}{Construcción}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@subsectionpages {33}{38}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{39}{Construcción}}
-\headcommand {\slideentry {3}{2}{1}{39/39}{Construcción}{0}}
-\headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {3}{2}{2}{40/40}{Construcción}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\slideentry {3}{2}{3}{41/41}{Construcción}{0}}
+\headcommand {\slideentry {3}{2}{4}{39/40}{Construcción}{0}}
+\headcommand {\beamer@framepages {39}{40}}
+\headcommand {\beamer@subsectionpages {36}{40}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{41}{Simetrías en las entradas de los PDL}}
+\headcommand {\slideentry {3}{3}{1}{41/41}{Simetrías en las entradas de los PDL}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {3}{2}{4}{42/43}{Construcción}{0}}
-\headcommand {\beamer@framepages {42}{43}}
-\headcommand {\beamer@subsectionpages {39}{43}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{44}{Simetrías en las entradas de los PDL}}
-\headcommand {\slideentry {3}{3}{1}{44/44}{Simetrías en las entradas de los PDL}{0}}
-\headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {3}{3}{2}{45/45}{Simetrías en las entradas de los PDL}{0}}
-\headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {3}{3}{3}{46/46}{Simetrías en las entradas de los PDL}{0}}
-\headcommand {\beamer@framepages {46}{46}}
-\headcommand {\beamer@subsectionpages {44}{46}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{47}{Cálculo de los PDL}}
-\headcommand {\slideentry {3}{4}{1}{47/48}{Cálculo de los PDL}{0}}
-\headcommand {\beamer@framepages {47}{48}}
-\headcommand {\slideentry {3}{4}{2}{49/50}{Cálculo de los PDL}{0}}
-\headcommand {\beamer@framepages {49}{50}}
-\headcommand {\slideentry {3}{4}{3}{51/51}{Cálculo de los PDL}{0}}
-\headcommand {\beamer@framepages {51}{51}}
-\headcommand {\slideentry {3}{4}{4}{52/52}{Cálculo de los PDL}{0}}
-\headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {3}{4}{5}{53/53}{Cálculo de los PDL}{0}}
+\headcommand {\slideentry {3}{3}{2}{42/42}{Simetrías en las entradas de los PDL}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\beamer@subsectionpages {41}{42}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{43}{Cálculo de los PDL}}
+\headcommand {\slideentry {3}{4}{1}{43/44}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {43}{44}}
+\headcommand {\slideentry {3}{4}{2}{45/46}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {45}{46}}
+\headcommand {\slideentry {3}{4}{3}{47/47}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {3}{4}{4}{48/48}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {3}{4}{5}{49/49}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\slideentry {3}{4}{6}{50/50}{Cálculo de los PDL}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@sectionpages {29}{50}}
+\headcommand {\beamer@subsectionpages {43}{50}}
+\headcommand {\sectionentry {4}{Análisis de señales finitas en base a los PDL}{51}{Análisis de señales finitas en base a los PDL}{0}}
+\headcommand {\slideentry {4}{0}{1}{51/52}{}{0}}
+\headcommand {\beamer@framepages {51}{52}}
+\headcommand {\slideentry {4}{0}{2}{53/53}{}{0}}
 \headcommand {\beamer@framepages {53}{53}}
-\headcommand {\slideentry {3}{4}{6}{54/54}{Cálculo de los PDL}{0}}
+\headcommand {\slideentry {4}{0}{3}{54/54}{}{0}}
 \headcommand {\beamer@framepages {54}{54}}
-\headcommand {\beamer@sectionpages {32}{54}}
-\headcommand {\beamer@subsectionpages {47}{54}}
-\headcommand {\sectionentry {4}{Análisis de señales finitas en base a los PDL}{55}{Análisis de señales finitas en base a los PDL}{0}}
-\headcommand {\slideentry {4}{0}{1}{55/56}{}{0}}
+\headcommand {\slideentry {4}{0}{4}{55/56}{}{0}}
 \headcommand {\beamer@framepages {55}{56}}
-\headcommand {\slideentry {4}{0}{2}{57/58}{}{0}}
+\headcommand {\slideentry {4}{0}{5}{57/58}{}{0}}
 \headcommand {\beamer@framepages {57}{58}}
-\headcommand {\slideentry {4}{0}{3}{59/59}{}{0}}
+\headcommand {\slideentry {4}{0}{6}{59/59}{}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\slideentry {4}{0}{4}{60/61}{}{0}}
-\headcommand {\beamer@framepages {60}{61}}
-\headcommand {\slideentry {4}{0}{5}{62/63}{}{0}}
-\headcommand {\beamer@framepages {62}{63}}
-\headcommand {\slideentry {4}{0}{6}{64/64}{}{0}}
+\headcommand {\slideentry {4}{0}{7}{60/60}{}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {4}{0}{8}{61/61}{}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {4}{0}{9}{62/62}{}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {4}{0}{10}{63/63}{}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\beamer@sectionpages {51}{63}}
+\headcommand {\beamer@subsectionpages {51}{63}}
+\headcommand {\sectionentry {5}{Análisis espectral}{64}{Análisis espectral}{0}}
+\headcommand {\slideentry {5}{0}{1}{64/64}{}{0}}
 \headcommand {\beamer@framepages {64}{64}}
-\headcommand {\slideentry {4}{0}{7}{65/65}{}{0}}
+\headcommand {\slideentry {5}{0}{2}{65/65}{}{0}}
 \headcommand {\beamer@framepages {65}{65}}
-\headcommand {\slideentry {4}{0}{8}{66/66}{}{0}}
+\headcommand {\slideentry {5}{0}{3}{66/66}{}{0}}
 \headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {4}{0}{9}{67/67}{}{0}}
+\headcommand {\slideentry {5}{0}{4}{67/67}{}{0}}
 \headcommand {\beamer@framepages {67}{67}}
-\headcommand {\slideentry {4}{0}{10}{68/68}{}{0}}
+\headcommand {\slideentry {5}{0}{5}{68/68}{}{0}}
 \headcommand {\beamer@framepages {68}{68}}
-\headcommand {\slideentry {4}{0}{11}{69/69}{}{0}}
+\headcommand {\slideentry {5}{0}{6}{69/69}{}{0}}
 \headcommand {\beamer@framepages {69}{69}}
-\headcommand {\slideentry {4}{0}{12}{70/70}{}{0}}
+\headcommand {\slideentry {5}{0}{7}{70/70}{}{0}}
 \headcommand {\beamer@framepages {70}{70}}
-\headcommand {\slideentry {4}{0}{13}{71/71}{}{0}}
+\headcommand {\slideentry {5}{0}{8}{71/71}{}{0}}
 \headcommand {\beamer@framepages {71}{71}}
-\headcommand {\slideentry {4}{0}{14}{72/72}{}{0}}
+\headcommand {\slideentry {5}{0}{9}{72/72}{}{0}}
 \headcommand {\beamer@framepages {72}{72}}
-\headcommand {\slideentry {4}{0}{15}{73/73}{}{0}}
+\headcommand {\slideentry {5}{0}{10}{73/73}{}{0}}
 \headcommand {\beamer@framepages {73}{73}}
-\headcommand {\slideentry {4}{0}{16}{74/74}{}{0}}
+\headcommand {\slideentry {5}{0}{11}{74/74}{}{0}}
 \headcommand {\beamer@framepages {74}{74}}
-\headcommand {\slideentry {4}{0}{17}{75/75}{}{0}}
+\headcommand {\slideentry {5}{0}{12}{75/75}{}{0}}
 \headcommand {\beamer@framepages {75}{75}}
-\headcommand {\slideentry {4}{0}{18}{76/76}{}{0}}
+\headcommand {\slideentry {5}{0}{13}{76/76}{}{0}}
 \headcommand {\beamer@framepages {76}{76}}
-\headcommand {\slideentry {4}{0}{19}{77/77}{}{0}}
+\headcommand {\slideentry {5}{0}{14}{77/77}{}{0}}
 \headcommand {\beamer@framepages {77}{77}}
-\headcommand {\beamer@sectionpages {55}{77}}
-\headcommand {\beamer@subsectionpages {55}{77}}
-\headcommand {\sectionentry {5}{Análisis espectral}{78}{Análisis espectral}{0}}
-\headcommand {\slideentry {5}{0}{1}{78/78}{}{0}}
-\headcommand {\beamer@framepages {78}{78}}
-\headcommand {\slideentry {5}{0}{2}{79/79}{}{0}}
-\headcommand {\beamer@framepages {79}{79}}
-\headcommand {\slideentry {5}{0}{3}{80/80}{}{0}}
+\headcommand {\slideentry {5}{0}{15}{78/79}{}{0}}
+\headcommand {\beamer@framepages {78}{79}}
+\headcommand {\slideentry {5}{0}{16}{80/80}{}{0}}
 \headcommand {\beamer@framepages {80}{80}}
-\headcommand {\slideentry {5}{0}{4}{81/81}{}{0}}
-\headcommand {\beamer@framepages {81}{81}}
-\headcommand {\slideentry {5}{0}{5}{82/82}{}{0}}
-\headcommand {\beamer@framepages {82}{82}}
-\headcommand {\slideentry {5}{0}{6}{83/83}{}{0}}
-\headcommand {\beamer@framepages {83}{83}}
-\headcommand {\slideentry {5}{0}{7}{84/84}{}{0}}
-\headcommand {\beamer@framepages {84}{84}}
-\headcommand {\slideentry {5}{0}{8}{85/85}{}{0}}
-\headcommand {\beamer@framepages {85}{85}}
-\headcommand {\slideentry {5}{0}{9}{86/86}{}{0}}
-\headcommand {\beamer@framepages {86}{86}}
-\headcommand {\slideentry {5}{0}{10}{87/87}{}{0}}
-\headcommand {\beamer@framepages {87}{87}}
-\headcommand {\slideentry {5}{0}{11}{88/88}{}{0}}
-\headcommand {\beamer@framepages {88}{88}}
-\headcommand {\slideentry {5}{0}{12}{89/89}{}{0}}
+\headcommand {\beamer@subsectionpages {64}{80}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{81}{Propuesta de análisis espectral para frecuencias arbitrarias}}
+\headcommand {\slideentry {5}{1}{1}{81/82}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {81}{82}}
+\headcommand {\slideentry {5}{1}{2}{83/84}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {83}{84}}
+\headcommand {\slideentry {5}{1}{3}{85/86}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {85}{86}}
+\headcommand {\slideentry {5}{1}{4}{87/88}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {87}{88}}
+\headcommand {\slideentry {5}{1}{5}{89/89}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {89}{89}}
-\headcommand {\slideentry {5}{0}{13}{90/90}{}{0}}
-\headcommand {\beamer@framepages {90}{90}}
-\headcommand {\slideentry {5}{0}{14}{91/92}{}{0}}
-\headcommand {\beamer@framepages {91}{92}}
-\headcommand {\slideentry {5}{0}{15}{93/93}{}{0}}
+\headcommand {\slideentry {5}{1}{6}{90/92}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {90}{92}}
+\headcommand {\slideentry {5}{1}{7}{93/93}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {93}{93}}
-\headcommand {\beamer@subsectionpages {78}{93}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{94}{Propuesta de análisis espectral para frecuencias arbitrarias}}
-\headcommand {\slideentry {5}{1}{1}{94/95}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{1}{8}{94/95}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {94}{95}}
-\headcommand {\slideentry {5}{1}{2}{96/97}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {96}{97}}
-\headcommand {\slideentry {5}{1}{3}{98/99}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{1}{9}{96/96}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\slideentry {5}{1}{10}{97/97}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\slideentry {5}{1}{11}{98/99}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {98}{99}}
-\headcommand {\slideentry {5}{1}{4}{100/101}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {100}{101}}
-\headcommand {\slideentry {5}{1}{5}{102/102}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {102}{102}}
-\headcommand {\slideentry {5}{1}{6}{103/105}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {103}{105}}
-\headcommand {\slideentry {5}{1}{7}{106/106}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{1}{12}{100/100}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {100}{100}}
+\headcommand {\slideentry {5}{1}{13}{101/101}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {101}{101}}
+\headcommand {\slideentry {5}{1}{14}{102/103}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {102}{103}}
+\headcommand {\slideentry {5}{1}{15}{104/105}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {104}{105}}
+\headcommand {\slideentry {5}{1}{16}{106/106}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {106}{106}}
-\headcommand {\slideentry {5}{1}{8}{107/108}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {107}{108}}
-\headcommand {\slideentry {5}{1}{9}{109/109}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{1}{17}{107/107}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\slideentry {5}{1}{18}{108/108}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\slideentry {5}{1}{19}{109/109}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
 \headcommand {\beamer@framepages {109}{109}}
-\headcommand {\slideentry {5}{1}{10}{110/110}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\beamer@subsectionpages {81}{109}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{110}{Resultados del análisis numérico de algunos PDL}}
+\headcommand {\slideentry {5}{2}{1}{110/110}{Resultados del análisis numérico de algunos PDL}{0}}
 \headcommand {\beamer@framepages {110}{110}}
-\headcommand {\slideentry {5}{1}{11}{111/112}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {111}{112}}
-\headcommand {\slideentry {5}{1}{12}{113/113}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{2}{2}{111/111}{Resultados del análisis numérico de algunos PDL}{0}}
+\headcommand {\beamer@framepages {111}{111}}
+\headcommand {\slideentry {5}{2}{3}{112/112}{Resultados del análisis numérico de algunos PDL}{0}}
+\headcommand {\beamer@framepages {112}{112}}
+\headcommand {\slideentry {5}{2}{4}{113/113}{Resultados del análisis numérico de algunos PDL}{0}}
 \headcommand {\beamer@framepages {113}{113}}
-\headcommand {\slideentry {5}{1}{13}{114/114}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
+\headcommand {\slideentry {5}{2}{5}{114/114}{Resultados del análisis numérico de algunos PDL}{0}}
 \headcommand {\beamer@framepages {114}{114}}
-\headcommand {\slideentry {5}{1}{14}{115/116}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {115}{116}}
-\headcommand {\slideentry {5}{1}{15}{117/118}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {117}{118}}
-\headcommand {\slideentry {5}{1}{16}{119/119}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {119}{119}}
-\headcommand {\slideentry {5}{1}{17}{120/120}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {120}{120}}
-\headcommand {\slideentry {5}{1}{18}{121/121}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {121}{121}}
-\headcommand {\slideentry {5}{1}{19}{122/122}{Propuesta de análisis espectral para frecuencias arbitrarias}{0}}
-\headcommand {\beamer@framepages {122}{122}}
-\headcommand {\beamer@subsectionpages {94}{122}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{123}{Resultados del análisis numérico de algunos PDL}}
-\headcommand {\slideentry {5}{2}{1}{123/123}{Resultados del análisis numérico de algunos PDL}{0}}
-\headcommand {\beamer@framepages {123}{123}}
-\headcommand {\slideentry {5}{2}{2}{124/124}{Resultados del análisis numérico de algunos PDL}{0}}
-\headcommand {\beamer@framepages {124}{124}}
-\headcommand {\slideentry {5}{2}{3}{125/125}{Resultados del análisis numérico de algunos PDL}{0}}
-\headcommand {\beamer@framepages {125}{125}}
-\headcommand {\slideentry {5}{2}{4}{126/126}{Resultados del análisis numérico de algunos PDL}{0}}
-\headcommand {\beamer@framepages {126}{126}}
-\headcommand {\slideentry {5}{2}{5}{127/127}{Resultados del análisis numérico de algunos PDL}{0}}
-\headcommand {\beamer@framepages {127}{127}}
-\headcommand {\beamer@sectionpages {78}{127}}
-\headcommand {\beamer@subsectionpages {123}{127}}
-\headcommand {\sectionentry {6}{\translate {References}}{128}{\translate {References}}{0}}
-\headcommand {\beamer@partpages {1}{129}}
-\headcommand {\beamer@subsectionpages {123}{129}}
-\headcommand {\beamer@sectionpages {78}{129}}
-\headcommand {\beamer@documentpages {129}}
-\headcommand {\gdef \inserttotalframenumber {95}}
+\headcommand {\beamer@sectionpages {64}{114}}
+\headcommand {\beamer@subsectionpages {110}{114}}
+\headcommand {\sectionentry {6}{\translate {References}}{115}{\translate {References}}{0}}
+\headcommand {\beamer@partpages {1}{116}}
+\headcommand {\beamer@subsectionpages {110}{116}}
+\headcommand {\beamer@sectionpages {64}{116}}
+\headcommand {\beamer@documentpages {116}}
+\headcommand {\gdef \inserttotalframenumber {85}}

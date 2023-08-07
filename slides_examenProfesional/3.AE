@@ -1,6 +1,15 @@
 \section{Análisis espectral}
 
-\begin{frame}{Análisis espectral}
+\begin{frame}
+\begin{figure}[H]
+\centering
+	\begin{figure}
+		\includegraphics[scale= 1.1]{parteII}
+ 	\end{figure}
+ \end{figure}
+\end{frame}
+
+\begin{frame}{Motivación para realizar un análisis espectral de los PDL}
     \begin{figure}[h]
 		\includegraphics[scale = 0.8]{oscil1}
 	\end{figure}
@@ -235,8 +244,7 @@ de las señales $n-$dimensionales de frecuencia pura $\omega$.
 
 \pause
 Llamamos pues a $P_{n, \omega}$ el \textbf{espacio monofrecuencial}
-de $\IR^{n}$ de frecuencia $\omega$. \TODO{Checa si en la tesis le
-llamas erróneamente ``de dimensión $n$''.}
+de $\IR^{n}$ de frecuencia $\omega$.
 
 \begin{nota}
 Se tiene que
@@ -538,7 +546,7 @@ Para todo $k \geq 2$, se define el \textbf{$k$-ésimo
 momento de $x$}, denotado por $M_{k}(x)$,
 como 
 \[
-M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}}.
+M_{k}(x) := \suma{m=0}{n-1}{m^{k}x_{m}} \in \IR.
 \]
 \pause
 
