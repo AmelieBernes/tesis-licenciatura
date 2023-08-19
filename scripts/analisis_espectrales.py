@@ -609,7 +609,12 @@ def grafica_analisisEspectrales(x, nombre, graficar = True):
     fig.set_size_inches(11.25, 12.34) 
     fig.tight_layout()
     plt.savefig(ruta_carpeta + str(n) + '_' + nombre)
-  
+ 
+
+#TODO tienes que cambiar cómo se pone la opción de guardar, está muy mal. Cómo pides 
+#el argumento de la ruta?
+
+
 def grafica_analisisEspectrales_PDL(n,k, graficar = True):
   """
   

@@ -140,7 +140,7 @@ $x$ es cuadrática sii $x \in W_{n,2}$ y $x \not\in W_{n,1}$.
 		el espacio definido en \eqref{eq: espacio Wni}.
 		\begin{itemize}
 		\item $dim(W_{n,k}) = k+1$, \pause 
-		\item $\forall 0 \leq i \leq n-2$: $W_{n, i} \subseteq W_{n, i+1}$,
+		\item $\forall \hspace{0.1cm} 0 \leq i \leq n-2$: $W_{n, i} \subseteq W_{n, i+1}$,
 		\pause
 		\item $\IR^{n} = W_{n, n-1}$
 		\pause

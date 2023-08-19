@@ -114,7 +114,7 @@ def sinusoide_espectros(n, w, A, phi, nombre, ruido = True):
 def f(t):
       return 3* np.sin(2*np.pi*t) + np.sin(2*np.pi*4*t) + 0.5* np.cos(2*np.pi*7*t)
 
-x = [f(t/25) for t in range(25)]
+#x = [f(t/25) for t in range(25)]
 #Fs = 25
 #ts = 1/Fs
 #t = np.arange(0,1,ts)
@@ -130,10 +130,10 @@ x = [f(t/25) for t in range(25)]
 #x = [1,2,-3,-6, -9, 5, 8, 7, 7, 2.3, 6.9]
 
 #x1 = (3, 0.8660254, -0.8660254)
-x1 = (1, 0, 0, 1)
+#x1 = (1, 0, 0, 1)
 #ae.grafica_analisisEspectrales(x1, 'x1', graficar = True)
 #x2 = (2, 2.23205081, -1.2320508)
-x2 = (3, 0, 0, 3)
+#x2 = (3, 0, 0, 3)
 #ae.grafica_analisisEspectrales(x2, 'x2', graficar = True)
 
 # -------------- Ejemplo alternado 0 ----------------
@@ -193,12 +193,55 @@ x2 = (3, 0, 0, 3)
 #ae.grafica_analisisEspectrales(x, nombre, graficar = True) 
 
 
-ae.espectro_Fourier_PDL(23,9)
-ae.grafica_analisisEspectrales_PDL(23,9)
+#ae.espectro_Fourier_PDL(23,9)
+#ae.grafica_analisisEspectrales_PDL(23,9)
 
-#ae.grafica_nube_b0m0_b1m1() 
 
-#ae.grafica_pendientes_oOrigen_RMC()
+def f(t):
+    return 2*np.cos(2*pi*10*t)
+
+#Aliasing:
+#x = [f(t/6) for t in range(6)]
+#ae.espectro_Fourier(x, 'x')
+
+# ----------------------------------------
+
+
+def f(t, phi):
+    return 2*np.cos(2*pi*t + phi*2*pi) + 5*np.sin(2*pi*2*t + phi*2*pi)
+
+n = 20
+desfases = [t/10 for t in range(10)]
+print(desfases)
+#ruidos = [random.uniform(-1.5, 1.5) for t in range(n)]
+
+for a in range(len(desfases)):
+    #x = [f(t/n, desfases[a]) + ruidos[a] for t in range(n)]
+    x = [f(t/n, desfases[a]) for t in range(n)]
+    ae.grafica_analisisEspectrales(x, ' Desfase ' + str(desfases[a]))
+
+
+
+def curvas_continuas():
+
+    fig, axis = plt.subplots(2,1)
+    X = np.linspace(-0, 1, 100)
+    desfases_1 = desfases[:5]
+    desfases_2 = desfases[5:]
+    for phi in desfases_1:
+        axis[0].plot(X, f(X, phi), label = str(phi))
+    
+    for phi in desfases_2:
+        axis[1].plot(X, f(X, phi), label = str(phi))
+    
+    for i in range(2):
+        axis[i].grid(True)
+        axis[i].legend()
+        axis[i].axhline(y=0, color = 'gray')
+        axis[i].axvline(x=0, color = 'gray')
+    
+    plt.show()
+
 
 """
 #No ejecutar más:
