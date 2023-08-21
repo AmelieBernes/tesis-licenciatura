@@ -43,6 +43,7 @@ def formato_axis(axis):
 
 colores=['hotpink', 'rebeccapurple','goldenrod','gray']
 
+
 def figura_introduccion():
     fig, axis = plt.subplots()
     X=np.arange(0, 30.5, 0.05)

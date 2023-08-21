@@ -11,7 +11,26 @@
 \usepackage{amsmath,amsthm, amssymb, latexsym}
 %\usefonttheme[onlymath]{serif}
 \boldmath
+
+
+
+% ------------ Imágenes ----------------------
+%Global Background must be put in preamble
+\graphicspath{{figures/}}
+\usepackage{graphicx}
+\usebackgroundtemplate%
+
+%{%
+%    \includegraphics[width=\paperwidth,height=\paperheight]{fondo}%
+%}
+
+% -------------------------------------------
+
 \usepackage[orientation=portrait,size=a0,scale=1,debug]{beamerposter}
+
+
+
+
 % change list indention level
 % \setdefaultleftmargin{3em}{}{}{}{}{}
 
@@ -28,6 +47,9 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TODO ponerlos en un archivo sty:) así puedes tener tu propia paleta de colores
+%para todos tus archivos de LaTeX!
 
 % custom colors
 \definecolor{i6blue}{cmyk}{1,0.305,0,0.06}
@@ -95,17 +117,24 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\graphicspath{{figures/}}
 
+
+%Datos de la portada
 \setlogo{logo_BUAP}
 \setauthorurl{https://github.com/AmelieBernes/tesis-licenciatura}
 \setauthoremail{ammel.bernes@gmail.com}
+\setlugar{D\'ecimo Congreso Internacional de Matem\'aticas y sus Aplicaciones, CIMA 10}
 
 \title{\huge Estudio y an\'alisis espectral de los polinomios discretos de Legendre}
-\author{Am\'elie Bern\`es, Moises Soto y Javier Herrera}
-%\institute[BUAP]{Benem\érita Universidad Aut\'onoma de Puebla}
-\institute[BUAP]{Benemerita Universidad Autonoma de Puebla}
+\author{Am\'elie Bern\`es Carmona, Moises Soto Bajo y Javier Herrera Vega}
+\institute[BUAP]{Benem\'erita Universidad Auton\'oma de Puebla}
 \date[Sep. 8th, 2009]{Sep. 8th, 2009}
+
+
+% -----------------------------------------  Bibliografía
+\setbeamercolor{bibliography item}{parent=palette primary}
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+\addbibresource{Referencias.bib}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,7 +166,7 @@
             de $\IR^{n}$
               \begin{itemize}
               
-             \item (\textcolor{red}{Tama\~no}) 
+             \item (\textcolor{i6colorblockbg}{Tama\~no}) 
 			que sea ortonormal, pues as\'i se cumplir\'a que,
 			para toda se\~nal $x \in \IR^{n}$, 
 			\[
@@ -147,46 +176,137 @@
 			\]
 			y
 	           
-	        \item (\textcolor{red}{Forma}) para la que sea posible establecer criterios
-			sencillos sobre la forma de la gr\'afica de una se\~nal $x$ en t\'erminos
+	        \item (\textcolor{i6colorblockbg}{Forma}) 
+	        para la que sea posible establecer criterios
+			sencillos sobre la forma de la gr\'afica  
+			\[
+			G_{x} := \{ (m, x_{m}): \hspace{0.2cm} 0 \leq m \leq n-1 \}
+			\]			
+			de $x$ en t\'erminos
 			de la representaci\'on de esta respecto a la base $\cali{L}^{n}$.
                \end{itemize}
                
             \includegraphics[width=0.95\linewidth]{cuadr2}
             \end{block}
             \vfill
-            
+		    \vspace{1cm}            
   
 			\begin{block}{Construcci\'on}
-			\includegraphics[width=0.95\linewidth]{esquema_construccion}	
+			\includegraphics[width=0.95\linewidth]{esquema_construccion_bien}	
+			Al vector $\cali{L}^{n,k} \in \IR^{n}$ se le llamar\'a el
+			\textbf{polinomio discreto de Legendre de dimensi\'on $n$
+			y grado $k$}, abreviado com PDL. Se encontraron referencias
+			importantes a estos objetos en \cite{Neuman}, \cite{roy},
+			\cite{nikiforov}.
 			\end{block}			                        
             \vfill
-
+		    \vspace{1cm}
             
             
-			\begin{block}{Espacios de polinomios discretos }
+			\begin{block}{Espacios de polinomios discretos}
+			\begin{center}
 			\includegraphics[width=0.7\linewidth]{nuevas_lupas}
-			Noci\'on
-			de grado para se\~nales $n-$dimensionales
-			
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
-			a\\
+			\end{center}
+		
+			\textbf{Noci\'on de grado para se\~nales $n-$dimensionales;}
+			si $\cali{P}$ es una malla uniforme de $n$ puntos cualquiera,  
+			\begin{itemize}
+			\item el operador de discretizaci\'on puntual
+			\[
+			\Omega_{n, \cali{P}}: \IR_{n-1}[t] \longrightarrow \IR^{n}
+			\]
+			es un isomorfismo. Definimos el \textbf{grado de $x$}
+			como el grado del \'unico polinomio $g \in \IR_{n-1}[t]$
+			tal que $\Omega_{n, \cali{P}} (g) = x$ (se comprueba que esta
+			definici\'on del grado no depende de la malla $\cali{P}$ fijada antes).
+			\item Para toda se\~nal $x \in \IR^{n}$ y toda $0 \leq i \leq n-1$,
+			$x \in W_{n, i}$ sii existe un polinomio $g(x)$ de grado a lo 
+			m\'as $i$ tal que $x = \Omega_{n, \cali{P}}(g)$.
+			\item Para toda $1 \leq i \leq n-1$, $x$ tiene grado $i$
+			sii $x \in W_{n,i}$ pero $x \not\in W_{n, i-1}$.
+			\end{itemize}
+				
 			\end{block}		
 			\vfill	
+			\vspace{1cm}
 			
-			            
 
+			%\begin{block}{Borrador}
+			%Se\~nal $n-$dimensional de frecuencia pura $\omega$
+			%$x = A \left( cos \left( 2 \pi \omega \frac{m}{n} + 
+			%2 \pi \phi  \right) \right)_{m=0}^{n-1} \in \IR^{n}$ \\
+			
+			%$x \in P_{n, \omega} = span \{ c_{n, \omega}, s_{n, \omega} \}$ 		
+			%si y s\'olo si $x$ tiene frecuencia pura $\omega$. \\
+			
+			%Si $x \neq 0$, 
+			%\begin{align*}
+			%\sigma_{n, \omega} (x) =  cos(\measuredangle(x, P_{n, \omega})) 
+			%  \frac{||\Pi_{P_{n, \omega}}(x)||}{||x||}.
+			%\end{align*}
+			
+			%Definimos el espectro de $x \in \IR^{n}-\{ 0 \}$ como la 
+			%funci\'on continua 
+			%$\Sigma_{x}: [0, n/2] \longrightarrow [0,1]$
+			%dada por la expresi\'on
+			
+			%\begin{align*}
+%\Sigma_{x}(\omega)= \begin{cases}
+%cos(\measuredangle(x, P_{n, \omega})) & 
+%\hspace{0.2cm} \textit{ si } \omega \in ]0, n/2[, \\
+%cos(\measuredangle(x, W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = 0, \\
+%cos(\measuredangle(A_{n}(x), W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = n/2.
+%\end{cases}
+%\end{align*}
+			%\begin{itemize}
+			%	\item Amplitud $A \in \IR$
+			%	\item Frecuencia $\omega \geq 0$
+			%	\item Desfase normalizado $\phi \in [0,1[$
+			%\end{itemize}						
+			
+			%Operador de alternancia $A_{n}$
+			%\[
+			%\forall x = (x_{m})_{m=0}^{n-1} \in \IR^{n}:
+			%\hspace{0.2cm}
+			%A_{n}(x) = ((-1)^{m})_{m=0}^{n-1}.
+			%\]			
+			
+
+                  %\begin{itemize}
+			%\item El espectro $\Sigma_{x}$ as\'i definido es una funci\'on
+			%continua y, exceptuando los puntos extremos, una extensi\'on
+			%del espectro de Fourier.
+			%\item Para toda $0 < \omega < n/2$,
+			%entre m\'as cercano a uno sea $\Sigma_{x}(\omega)$,
+			%m\'as cerca estar\'a $x$ de tener la propiedad de ser
+			%de frecuencia pura $\omega$. A los $\omega \in [0, n/2]$
+			%en los que $\Sigma_{x}$ alcance su m\'aximo se les llamar\'a
+			%\textbf{frecuencias principales} de $x$.
+			%\end{itemize}
+
+			
+			
+			%\[
+			%\cali{L}^{n, 0} = \frac{w_{n,0}}{||w_{n,0}||}
+			%\]
+			%y, para toda $0 \leq k \leq n-1$,
+			%\[
+			%\tilde{\xi}_{n,k} = w_{n, k} - \Pi_{W_{n, k-1}}(w_{n,k}),
+			%\]
+			%\[
+			%\cali{L}^{n,k} = \frac{\tilde{\xi}_{n,k}}{||\tilde{\xi}_{n,k}||}.
+			%\]
+			
+			%$w_{k} = \left( f_{k}(m) \right)_{m=0}^{n-1} \in \IR^{n}$		\\
+			%$f_{k}(t) = t^{k} \in \IR_{k}[t]$ \\
+			%$W_{n, i} = span \{ w_{n,k}: \hspace{0.2cm} 0 \leq k \leq i \}$
+			
+			%\textbf{Discretizaci\'on} \\
+			%\textbf{Ortonormalizaci\'on}
+			%\end{block}
+			
+			
+			
          % }
        % \end{minipage}
       \end{beamercolorbox}
@@ -203,64 +323,99 @@
             % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
             % ---------------------------------------------------------%
 
-            \begin{block}{Results: Unaligned Faces}
+            	\begin{block}{Usando representaciones respecto a 
+            	$\cali{L}^{n}$ para hacer an\'alisis de morfolog\'ia}
+            	Se mide la distancia de una se\~nal $x$ a tener 
+            	grado $k$ usando sus similitudes coseno a los espacios
+            	$W_{n,k}$. Puesto que la forma de la gr\'afica de una se\~nal
+            	es invariante ante multiplicaciones por escalares, note que
+            	el usar similitudes coseno en vez de distancias euclideas es
+            	mejor para medir la cercan\'ia de $x$ a un espacio
+            	de polinomios discretos $n-$dimensionales.
+			\includegraphics[width=0.95\linewidth]{analisis_forma}	
+			Si $x \neq 0$ y $a_{i} := \langle x, \cali{L}^{n,i} \rangle$, entonces 
+			\[
+			cos(\measuredangle(x, W_{n,k})) = 
+			\frac{||\Pi_{W_{n,k}}(x)||}{||x||}			
+			=
+			\frac{
+			\sqrt{\suma{i=0}{k}{a_{i}^{2}}}}
+			{\sqrt{\suma{i=0}{n-1}{a_{i}^{2}}}},
+			\hspace{0.2cm} \textit{y} \hspace{0.2cm}
+			x \in W_{n,k} \iff cos(\measuredangle(x, W_{n,k})) = 1.
+			\]			
+			\end{block}			                        
+            \vfill
+            \vspace{1cm}
+
+
+            \begin{block}{An\'alisis espectrales de los PDL}
               \begin{columns}
                 \begin{column}{.59\textwidth}
-                  \begin{itemize}
-                  \item Automatically aligned by Viola \& Jones
-                  \end{itemize}
-                  \vskip-0.5ex
-                  \begin{table}
-                    \centering
-                    \small
-                    \begin{tabular}{@{} p{.4\linewidth} r r @{}}
-                      \toprule 
-                      Descriptor  &      \multicolumn{2}{c @{}}{Error Rates [\%]}      \\
-                      \cmidrule(l){2-3}   
-                      &   AR-Face       & CMU-PIE  \\
-                      \cmidrule(r){1-1}  \cmidrule(lr){2-2}  \cmidrule(l){3-3}  
-                      SURF-64     &   5.97          & 15.32    \\ 
-                      SURF-128    &   5.71          & 11.42    \\ 
-                      SIFT        &   5.45          & 8.32     \\  
-                      \addlinespace
-                      U-SURF-64   &   5.32          & 5.52     \\  
-                      U-SURF-128  &   5.71          & \textbf{4.86}  \\ 
-                      U-SIFT      &   \textbf{4.15} & 8.99     \\  
-                      \bottomrule
-                    \end{tabular}
-                  \end{table}
+                  \vskip-3ex     
+                  \begin{center}
+                  \includegraphics[width=0.4\linewidth]{oscil_motiv}
+                  \end{center}
+              	
+              	Las condiciones de ortogonalidad en la definici\'on de los
+              	PDL $\cali{L}^{n,k}$ 
+              	implican un aumento en los cambios de signo de sus entradas
+              	conforme la variable de grado $k$ aumenta.
                 \end{column}
                 \begin{column}{.39\textwidth}                
                   \vskip-3ex
-                  \begin{itemize}
-                  \item Manually aligned faces 
+                  Usando la transformada discreta de Fourier
+                  \begin{center}
+                   \includegraphics[width=0.7\linewidth]{espectroFourier_PDL_18_7}
+                  \end{center}
 
-                      \includegraphics[width=0.9\linewidth]{oscil2}
-
-                  \item Unaligned faces 
-
-                      \includegraphics[width=0.9\linewidth]{oscil3}
-
-                  \end{itemize}
+                  Objetivo: poder tomar en consideraci\'on
+                   frecuencias $\omega \geq 0$ arbitrarias.
+                 
                 \end{column}
               \end{columns}
             \end{block}
             \vfill
+            \vspace{1cm}
             
-            			\begin{block}{Construcci\'on}
-			\includegraphics[width=0.95\linewidth]{esquema_construccion}	
+            \begin{block}{An\'alisis espectral usando espacios monofrecuenciales}
+            
+            \begin{center}
+            \includegraphics[width=1\linewidth]{espectro_espMono_bien}
+            \end{center}
+				
+						
 			\end{block}			                        
             \vfill
+            \vspace{1cm}
+            
+            \usebackgroundtemplate%
 
+
+             \begin{block}{Conclusiones del an\'alisis espectral num\'erico}
+             Parece ser que el valor $k/2$ es, m\'as que una estimaci\'on precisa de la
+			frecuencia principal de un PDL de grado $k$, 
+			una cota superior para tal frecuencia
+			principal.
+            En general, para todas las dimensiones $n$ estudiadas, se
+		    encontr\'o que los PDL $\cali{L}^{n,k}$
+			con $k$ peque\~no parec\'ian responder
+			particularmente bien a su frecuencia principal, siendo el
+			espectro evaluado en esta muy cercano a uno, pero conforme $n$
+			crece y $k$ tiende a $n-1$ (su cota superior), los valores
+			$\sigma_{n}(\cali{L}^{n,k}, \omega)$
+			parecen est\'ar muy alejados de $1$, por lo que no
+			parece ser factible aproximar la gr\'afica de tales PDL
+			s\'olo con un sinusoide.
+			\begin{center}
+				\includegraphics[width=0.6\linewidth]{resultados}
+			\end{center}
+			
+			\end{block}			                    
+            \vfill
+            \vspace{1cm}
             
-            
-			\begin{block}{Espacios de polinomios discretos }
-			\includegraphics[width=0.7\linewidth]{nuevas_lupas}
-			Noci\'on
-			de grado para se\~nales $n-$dimensionales
-			\end{block}		
-			\vfill	
-            
+
             
           %}
           % ---------------------------------------------------------%
@@ -273,7 +428,6 @@
   \end{columns}
   \vskip1ex
   %\tiny\hfill\textcolor{ta2gray}{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php}}
-  \tiny\hfill{Created with \LaTeX \texttt{beamerposter}  \url{http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php} \hskip1em}
 \end{frame}
 \end{document}
 

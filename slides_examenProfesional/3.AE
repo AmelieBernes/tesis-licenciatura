@@ -780,7 +780,7 @@ evaluado en esta muy cercano a uno, pero conforme
 $n$ crece y 
 $k$ tiende a $n-1$ (su cota superior),
 los valores $\sigma_{n}(\cali{L}^{n,k}, \omega)$
-parecen estár muy alejados de $1$, por lo que no parece
+parecen estár muy alejados de $1$, por lo que 
 no parece ser factible aproximar la gráfica
 de tales PDL sólo con un sinusoide.
 \end{frame}

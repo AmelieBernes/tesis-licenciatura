@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.20)  19 AUG 2023 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.7.20)  21 AUG 2023 02:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,8 +683,8 @@ Package grffile Info: This package is an empty stub for compatibility on input
 line 40.
 ) (./beamerthemeI6pd2.sty
 Package: beamerthemeI6pd2 
-
-(./tangocolors.sty)) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count333
 \U@D=\dimen294
@@ -1354,35 +1354,281 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@cols=\count351
 \TX@ftn=\toks51
 )
-\columnheight=\skip71
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count352
+
+(/usr/share/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count353
+\c@listtotal=\count354
+\c@listcount=\count355
+\c@liststart=\count356
+\c@liststop=\count357
+\c@citecount=\count358
+\c@citetotal=\count359
+\c@multicitecount=\count360
+\c@multicitetotal=\count361
+\c@instcount=\count362
+\c@maxnames=\count363
+\c@minnames=\count364
+\c@maxitems=\count365
+\c@minitems=\count366
+\c@citecounter=\count367
+\c@maxcitecounter=\count368
+\c@savedcitecounter=\count369
+\c@uniquelist=\count370
+\c@uniquename=\count371
+\c@refsection=\count372
+\c@refsegment=\count373
+\c@maxextratitle=\count374
+\c@maxextratitleyear=\count375
+\c@maxextraname=\count376
+\c@maxextradate=\count377
+\c@maxextraalpha=\count378
+\c@abbrvpenalty=\count379
+\c@highnamepenalty=\count380
+\c@lownamepenalty=\count381
+\c@maxparens=\count382
+\c@parenlevel=\count383
+\blx@tempcnta=\count384
+\blx@tempcntb=\count385
+\blx@tempcntc=\count386
+\c@blx@maxsection=\count387
+\blx@maxsegment@0=\count388
+\blx@notetype=\count389
+\blx@parenlevel@text=\count390
+\blx@parenlevel@foot=\count391
+\blx@sectionciteorder@0=\count392
+\blx@sectionciteorderinternal@0=\count393
+\blx@entrysetcounter=\count394
+\blx@biblioinstance=\count395
+\labelnumberwidth=\skip71
+\labelalphawidth=\skip72
+\biblabelsep=\skip73
+\bibitemsep=\skip74
+\bibnamesep=\skip75
+\bibinitsep=\skip76
+\bibparsep=\skip77
+\bibhang=\skip78
+\blx@bcfin=\read4
+\blx@bcfout=\write5
+\blx@langwohyphens=\language5
+\c@mincomprange=\count396
+\c@maxcomprange=\count397
+\c@mincompwidth=\count398
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count399
+\c@savedafterword=\count400
+\c@annotator=\count401
+\c@savedannotator=\count402
+\c@author=\count403
+\c@savedauthor=\count404
+\c@bookauthor=\count405
+\c@savedbookauthor=\count406
+\c@commentator=\count407
+\c@savedcommentator=\count408
+\c@editor=\count409
+\c@savededitor=\count410
+\c@editora=\count411
+\c@savededitora=\count412
+\c@editorb=\count413
+\c@savededitorb=\count414
+\c@editorc=\count415
+\c@savededitorc=\count416
+\c@foreword=\count417
+\c@savedforeword=\count418
+\c@holder=\count419
+\c@savedholder=\count420
+\c@introduction=\count421
+\c@savedintroduction=\count422
+\c@namea=\count423
+\c@savednamea=\count424
+\c@nameb=\count425
+\c@savednameb=\count426
+\c@namec=\count427
+\c@savednamec=\count428
+\c@translator=\count429
+\c@savedtranslator=\count430
+\c@shortauthor=\count431
+\c@savedshortauthor=\count432
+\c@shorteditor=\count433
+\c@savedshorteditor=\count434
+\c@labelname=\count435
+\c@savedlabelname=\count436
+\c@institution=\count437
+\c@savedinstitution=\count438
+\c@lista=\count439
+\c@savedlista=\count440
+\c@listb=\count441
+\c@savedlistb=\count442
+\c@listc=\count443
+\c@savedlistc=\count444
+\c@listd=\count445
+\c@savedlistd=\count446
+\c@liste=\count447
+\c@savedliste=\count448
+\c@listf=\count449
+\c@savedlistf=\count450
+\c@location=\count451
+\c@savedlocation=\count452
+\c@organization=\count453
+\c@savedorganization=\count454
+\c@origlocation=\count455
+\c@savedoriglocation=\count456
+\c@origpublisher=\count457
+\c@savedorigpublisher=\count458
+\c@publisher=\count459
+\c@savedpublisher=\count460
+\c@language=\count461
+\c@savedlanguage=\count462
+\c@origlanguage=\count463
+\c@savedoriglanguage=\count464
+\c@pageref=\count465
+\c@savedpageref=\count466
+\shorthandwidth=\skip79
+\shortjournalwidth=\skip80
+\shortserieswidth=\skip81
+\shorttitlewidth=\skip82
+\shortauthorwidth=\skip83
+\shorteditorwidth=\skip84
+\locallabelnumberwidth=\skip85
+\locallabelalphawidth=\skip86
+\localshorthandwidth=\skip87
+\localshortjournalwidth=\skip88
+\localshortserieswidth=\skip89
+\localshorttitlewidth=\skip90
+\localshortauthorwidth=\skip91
+\localshorteditorwidth=\skip92
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back bibtex backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count467
+\c@textcitetotal=\count468
+\c@textcitemaxnames=\count469
+\c@biburlbigbreakpenalty=\count470
+\c@biburlbreakpenalty=\count471
+\c@biburlnumpenalty=\count472
+\c@biburlucpenalty=\count473
+\c@biburllcpenalty=\count474
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count475
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
+File: alphabetic.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count476
+\c@bbx:relatedtotal=\count477
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
+File: alphabetic.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'latin1' detected.
+Package biblatex Info: Document encoding not detected as UTF8.
+(biblatex)             Setting 'casechanger=latex2e'.
+
+(/usr/share/texmf-dist/tex/latex/biblatex/blx-case-latex2e.sty
+Package: blx-case-latex2e 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+))
+\columnheight=\skip93
 
 (/usr/share/texmf-dist/tex/latex/beamer/beamerpatchparalist.sty)
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count478
+\@quotereset=\count479
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count352
+\l__color_backend_stack_int=\count480
 \l__pdf_internal_box=\box78
 )
-No file posterCIMA10_tesisLic_Amelie.aux.
+(./posterCIMA10_tesisLic_Amelie.aux)
 \openout1 = `posterCIMA10_tesisLic_Amelie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1419,16 +1665,16 @@ LaTeX Font Info:    ... okay on input line 117.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count353
+\scratchcounter=\count481
 \scratchdimen=\dimen316
 \scratchbox=\box79
-\nofMPsegments=\count354
-\nofMParguments=\count355
+\nofMPsegments=\count482
+\nofMParguments=\count483
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count356
+\MPscratchCnt=\count484
 \MPscratchDim=\dimen317
-\MPnumerator=\count357
-\makeMPintoPDFobject=\count358
+\MPnumerator=\count485
+\makeMPintoPDFobject=\count486
 \everyMPtoPDFconversion=\toks53
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1439,62 +1685,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 117.
-\@outlinefile=\write5
-\openout5 = `posterCIMA10_tesisLic_Amelie.out'.
+Package hyperref Info: Link coloring OFF on input line 146.
+
+(./posterCIMA10_tesisLic_Amelie.out) (./posterCIMA10_tesisLic_Amelie.out)
+\@outlinefile=\write6
+\openout6 = `posterCIMA10_tesisLic_Amelie.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 117.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 146.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 146.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 117.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 146.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 117.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 146.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 117.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 117.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 146.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 146.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 146.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 117.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 117.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 117.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 117.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 117.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 146.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 117.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 117.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 146.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 146.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 1
-17.
+46.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 1
-17.
+46.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 117.
+ut line 146.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1520,99 +1768,117 @@ Dictionary: translator-numbers-dictionary, Language: English
 sh.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-No file posterCIMA10_tesisLic_Amelie.nav.
-<figures//logo_BUAP.png, id=13, 611.28375pt x 617.30624pt>
+Package biblatex Info: Trying to load language 'nil'...
+Package biblatex Info: ... file 'nil.lbx' not found.
+
+
+Package biblatex Warning: Language 'nil' not supported.
+(biblatex)                Using dummy definitions on input line 146.
+
+Package biblatex Info: Input encoding 'latin1' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'latin1'.
+Package biblatex Info: Input encoding 'latin1' detected.
+Package biblatex Info: Data encoding 'latin1' specified.
+(biblatex)             No need to reencode data.
+\openout5 = `posterCIMA10_tesisLic_Amelie-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'posterCIMA10_tesisLic_Amelie.bbl' found.
+(./posterCIMA10_tesisLic_Amelie.bbl)
+Package biblatex Info: Reference section=0 on input line 146.
+Package biblatex Info: Reference segment=0 on input line 146.
+ (./posterCIMA10_tesisLic_Amelie.nav)
+<figures//logo_BUAP.png, id=13, 246.9225pt x 246.9225pt>
 File: figures//logo_BUAP.png Graphic file (type png)
 <use figures//logo_BUAP.png>
-Package pdftex.def Info: figures//logo_BUAP.png  used on input line 117.
-(pdftex.def)             Requested size: 567.36038pt x 572.97739pt.
+Package pdftex.def Info: figures//logo_BUAP.png  used on input line 146.
+(pdftex.def)             Requested size: 358.33768pt x 358.35999pt.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <24.88> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 431.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <20.74> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 431.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <17.28> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 431.
 
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 277.
+ut line 431.
+
 (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <24.88> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 277.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 431.
 
 
 <figures//cuadr2.png, id=15, 377.9721pt x 139.4811pt>
 File: figures//cuadr2.png Graphic file (type png)
 <use figures//cuadr2.png>
-Package pdftex.def Info: figures//cuadr2.png  used on input line 277.
+Package pdftex.def Info: figures//cuadr2.png  used on input line 431.
 (pdftex.def)             Requested size: 1085.54912pt x 400.6964pt.
-<figures//esquema_construccion.png, id=16, 392.4261pt x 290.0436pt>
-File: figures//esquema_construccion.png Graphic file (type png)
-<use figures//esquema_construccion.png>
-Package pdftex.def Info: figures//esquema_construccion.png  used on input line 
-277.
-(pdftex.def)             Requested size: 1085.54912pt x 802.43307pt.
-<figures//nuevas_lupas.png, id=17, 346.4142pt x 171.7617pt>
+<figures//esquema_construccion_bien.png, id=16, 374.1177pt x 322.806pt>
+File: figures//esquema_construccion_bien.png Graphic file (type png)
+<use figures//esquema_construccion_bien.png>
+Package pdftex.def Info: figures//esquema_construccion_bien.png  used on input 
+line 431.
+(pdftex.def)             Requested size: 1085.54912pt x 936.95078pt.
+<figures//nuevas_lupas.png, id=20, 346.4142pt x 171.7617pt>
 File: figures//nuevas_lupas.png Graphic file (type png)
 <use figures//nuevas_lupas.png>
-Package pdftex.def Info: figures//nuevas_lupas.png  used on input line 277.
+Package pdftex.def Info: figures//nuevas_lupas.png  used on input line 431.
 (pdftex.def)             Requested size: 799.87738pt x 396.64494pt.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <12> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
-
-<figures//oscil2.png, id=18, 301.125pt x 191.7564pt>
-File: figures//oscil2.png Graphic file (type png)
-<use figures//oscil2.png>
-Package pdftex.def Info: figures//oscil2.png  used on input line 277.
-(pdftex.def)             Requested size: 361.65994pt x 230.32594pt.
-<figures//oscil3.png, id=19, 299.9205pt x 191.0337pt>
-File: figures//oscil3.png Graphic file (type png)
-<use figures//oscil3.png>
-Package pdftex.def Info: figures//oscil3.png  used on input line 277.
-(pdftex.def)             Requested size: 361.65994pt x 230.36736pt.
-File: figures//esquema_construccion.png Graphic file (type png)
-<use figures//esquema_construccion.png>
-Package pdftex.def Info: figures//esquema_construccion.png  used on input line 
-277.
-(pdftex.def)             Requested size: 1085.54912pt x 802.43307pt.
-File: figures//nuevas_lupas.png Graphic file (type png)
-<use figures//nuevas_lupas.png>
-Package pdftex.def Info: figures//nuevas_lupas.png  used on input line 277.
-(pdftex.def)             Requested size: 799.87738pt x 396.64494pt.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 277.
-
+<figures//analisis_forma.png, id=21, 1330.9725pt x 616.55344pt>
+File: figures//analisis_forma.png Graphic file (type png)
+<use figures//analisis_forma.png>
+Package pdftex.def Info: figures//analisis_forma.png  used on input line 431.
+(pdftex.def)             Requested size: 1085.54912pt x 502.89586pt.
+<figures//oscil_motiv.png, id=22, 226.9278pt x 245.2362pt>
+File: figures//oscil_motiv.png Graphic file (type png)
+<use figures//oscil_motiv.png>
+Package pdftex.def Info: figures//oscil_motiv.png  used on input line 431.
+(pdftex.def)             Requested size: 269.66832pt x 291.44926pt.
+<figures//espectroFourier_PDL_18_7.png, id=23, 292.6935pt x 263.7855pt>
+File: figures//espectroFourier_PDL_18_7.png Graphic file (type png)
+<use figures//espectroFourier_PDL_18_7.png>
+Package pdftex.def Info: figures//espectroFourier_PDL_18_7.png  used on input l
+ine 431.
+(pdftex.def)             Requested size: 311.95169pt x 281.14484pt.
+<figures//espectro_espMono_bien.png, id=24, 428.5611pt x 225.2415pt>
+File: figures//espectro_espMono_bien.png Graphic file (type png)
+<use figures//espectro_espMono_bien.png>
+Package pdftex.def Info: figures//espectro_espMono_bien.png  used on input line
+ 431.
+(pdftex.def)             Requested size: 1142.68697pt x 600.65051pt.
+<figures//resultados.png, id=25, 340.6326pt x 234.6366pt>
+File: figures//resultados.png Graphic file (type png)
+<use figures//resultados.png>
+Package pdftex.def Info: figures//resultados.png  used on input line 431.
+(pdftex.def)             Requested size: 685.61914pt x 472.27945pt.
 File: figures//logo_BUAP.png Graphic file (type png)
 <use figures//logo_BUAP.png>
-Package pdftex.def Info: figures//logo_BUAP.png  used on input line 277.
-(pdftex.def)             Requested size: 567.36038pt x 572.97739pt.
+Package pdftex.def Info: figures//logo_BUAP.png  used on input line 431.
+(pdftex.def)             Requested size: 358.33768pt x 358.35999pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./figures//lo
-go_BUAP.png> <./figures//cuadr2.png> <./figures//esquema_construccion.png> <./f
-igures//nuevas_lupas.png> <./figures//oscil2.png> <./figures//oscil3.png>]
-\tf@nav=\write6
-\openout6 = `posterCIMA10_tesisLic_Amelie.nav'.
+go_BUAP.png> <./figures//cuadr2.png> <./figures//esquema_construccion_bien.png>
+ <./figures//nuevas_lupas.png> <./figures//analisis_forma.png> <./figures//osci
+l_motiv.png> <./figures//espectroFourier_PDL_18_7.png> <./figures//espectro_esp
+Mono_bien.png> <./figures//resultados.png>]
+\tf@nav=\write7
+\openout7 = `posterCIMA10_tesisLic_Amelie.nav'.
 
-\tf@toc=\write7
-\openout7 = `posterCIMA10_tesisLic_Amelie.toc'.
+\tf@toc=\write8
+\openout8 = `posterCIMA10_tesisLic_Amelie.toc'.
 
-\tf@snm=\write8
-\openout8 = `posterCIMA10_tesisLic_Amelie.snm'.
+\tf@snm=\write9
+\openout9 = `posterCIMA10_tesisLic_Amelie.snm'.
 
-
-(./posterCIMA10_tesisLic_Amelie.aux)
+ (./posterCIMA10_tesisLic_Amelie.aux)
 
  *File List*
   beamer.cls    2023/02/20 v3.69 A class for typesetting presentations
@@ -1721,7 +1987,6 @@ beamerouterthemedefault.sty
  grffile.sty    2019/11/11 v2.1 Extended file name support for graphics (legacy
 )
 beamerthemeI6pd2.sty    
-tangocolors.sty    
    babel.sty    2023/02/13 3.86 The Babel package
      nil.ldf    2023/02/13 3.86 Nil language
 inputenc.sty    2021/02/14 v1.3d Input encoding file
@@ -1748,63 +2013,88 @@ paralist.sty    2017/01/22 v2.7 Extended list environments
    array.sty    2022/09/04 v2.5g Tabular extension package (FMi)
 booktabs.sty    2020/01/12 v1.61803398 Publication quality tables
 tabularx.sty    2020/01/15 v2.11c `tabularx' package (DPC)
+biblatex.sty    2023/03/05 v3.19 programmable bibliographies (PK/MW)
+  logreq.sty    2010/08/04 v1.0 xml request logger
+  logreq.def    2010/08/04 v1.0 logreq spec v1.0
+  ifthen.sty    2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+  blx-dm.def    2023/03/05 v3.19 biblatex localization (PK/MW)
+blx-compat.def    2023/03/05 v3.19 biblatex compatibility (PK/MW)
+blx-bibtex.def    2023/03/05 v3.19 biblatex compatibility (PK/MW)
+biblatex.def    2023/03/05 v3.19 biblatex compatibility (PK/MW)
+standard.bbx    2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+alphabetic.bbx    2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+alphabetic.cbx    2023/03/05 v3.19 biblatex citation style (PK/MW)
+biblatex.cfg    
+blx-case-latex2e.sty    2023/03/05 v3.19 biblatex compatibility (PK/MW)
 beamerpatchparalist.sty    
 l3backend-pdftex.def    2023-01-16 L3 backend support: PDF output (pdfTeX)
 supp-pdf.mkii
 epstopdf-base.sty    2020-01-24 v2.11 Base part for package epstopdf
 epstopdf-sys.cfg    2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+posterCIMA10_tesisLic_Amelie.out
+posterCIMA10_tesisLic_Amelie.out
 translator-basic-dictionary-English.dict    
 translator-bibliography-dictionary-English.dict    
 translator-environment-dictionary-English.dict    
 translator-months-dictionary-English.dict    
 translator-numbers-dictionary-English.dict    
 translator-theorem-dictionary-English.dict    
+posterCIMA10_tesisLic_Amelie.bbl
 figures//logo_BUAP.png
 ot1mathkerncmss.fd    2020/01/31 Fontinst v1.933 font definitions for OT1/mathk
 erncmss.
 figures//cuadr2.png
-figures//esquema_construccion.png
+figures//esquema_construccion_bien.png
 figures//nuevas_lupas.png
-figures//oscil2.png
-figures//oscil3.png
-figures//esquema_construccion.png
-figures//nuevas_lupas.png
+figures//analisis_forma.png
+figures//oscil_motiv.png
+figures//espectroFourier_PDL_18_7.png
+figures//espectro_espMono_bien.png
+figures//resultados.png
 figures//logo_BUAP.png
  ***********
 
+Package rerunfilecheck Info: File `posterCIMA10_tesisLic_Amelie.out' has not ch
+anged.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'posterCIMA10_tesisLic_Amelie.run.xml'
+.
+\openout1 = `posterCIMA10_tesisLic_Amelie.run.xml'.
 
-Package rerunfilecheck Warning: File `posterCIMA10_tesisLic_Amelie.out' has cha
-nged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `posterCIMA10_tesisLic_Amelie.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24399 strings out of 477985
- 466482 string characters out of 5840058
- 1893388 words of memory out of 5000000
- 44056 multiletter control sequences out of 15000+600000
- 535266 words of font info for 106 fonts, out of 8000000 for 9000
+ 30677 strings out of 477985
+ 593772 string characters out of 5840058
+ 1903388 words of memory out of 5000000
+ 50284 multiletter control sequences out of 15000+600000
+ 526415 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 128i,20n,122p,423b,1293s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfso1728
-.pfb>
-Output written on posterCIMA10_tesisLic_Amelie.pdf (1 page, 1348570 bytes).
+ 128i,20n,122p,1906b,2118s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.0@nikiforov} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@roy} has been referenced but does not exist,
+ replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@Neuman} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/cm-super/sfso1728.pfb>
+Output written on posterCIMA10_tesisLic_Amelie.pdf (1 page, 1829895 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
