@@ -121,7 +121,7 @@
 
 %Datos de la portada
 \setlogo{logo_BUAP}
-\setauthorurl{https://github.com/AmelieBernes/tesis-licenciatura}
+%\setauthorurl{https://github.com/AmelieBernes/tesis-licenciatura}
 \setauthoremail{ammel.bernes@gmail.com}
 \setlugar{D\'ecimo Congreso Internacional de Matem\'aticas y sus Aplicaciones, CIMA 10}
 
@@ -161,9 +161,8 @@
             de dimensi\'on $n$ con vectores $x = (x_{m})_{m=0}^{n-1}$
             de $\IR^{n}$.
      
-            Buscamos una base
+            Buscamos una base de $\IR^{n}$
             $$\cali{L}^{n} := \{ \cali{L}^{n,k} : \hspace{0.2cm} 0 \leq k \leq n-1 \}$$
-            de $\IR^{n}$
               \begin{itemize}
               
              \item (\textcolor{i6colorblockbg}{Tama\~no}) 
@@ -171,7 +170,7 @@
 			para toda se\~nal $x \in \IR^{n}$, 
 			\[
 			x = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle \cali{L}^{n,k}}
-			\hspace{0.2cm} \textit{y} \hspace{0.2cm}
+			\hspace{1cm} \textit{y} \hspace{1cm}
 			||x||^{2} = \suma{k=0}{n-1}{\langle x, \cali{L}^{n,k} \rangle^{2}},
 			\]
 			y
@@ -195,9 +194,7 @@
 			\includegraphics[width=0.95\linewidth]{esquema_construccion_bien}	
 			Al vector $\cali{L}^{n,k} \in \IR^{n}$ se le llamar\'a el
 			\textbf{polinomio discreto de Legendre de dimensi\'on $n$
-			y grado $k$}, abreviado com PDL. Se encontraron referencias
-			importantes a estos objetos en \cite{Neuman}, \cite{roy},
-			\cite{nikiforov}.
+			y grado $k$}, abreviado como PDL.
 			\end{block}			                        
             \vfill
 		    \vspace{1cm}
@@ -230,6 +227,157 @@
 			\vfill	
 			\vspace{1cm}
 			
+			
+			\begin{block}{Referencias}
+			\tiny{
+			Charles P. Neuman y Dave I. Schonbach. "Discrete (Legendre) orthogonal
+polynomials -a survey", International Journal for Numerical Methods in
+Engineering: 8.4 (1974), p. 743-770 $\diamond$
+Ranjan Roy. "The work of Chebyshev on orthogonal polynomials", Topics In 
+Polynomials Of One And Several Variables And Their Applications: Volume
+Dedicated to the Memory of P.L. Chebyshev $\diamond$
+S.K. Suslov, V.B. Uvarov y Nikiforov A.F.  "Classical orthogonal polynomials
+of a discrete variable". Springer Berlin Heidelberg (1991).}
+			\end{block}
+       
+       
+      \end{beamercolorbox}
+    \end{column}
+    % ---------------------------------------------------------%
+    % end the column
+
+    % ---------------------------------------------------------%
+    % Set up a column 
+    \begin{column}{.49\textwidth}
+      %\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+       % \begin{minipage}[T]{.95\textwidth} % tweaks the width, makes a new \textwidth
+         % \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
+            % ---------------------------------------------------------%
+
+            	\begin{block}{Usando representaciones respecto a 
+            	$\cali{L}^{n}$ para hacer an\'alisis de morfolog\'ia}
+            	Se determina qu\'e tanto tiende una una se\~nal $x \in \IR^{n}$ a tener 
+            	grado $k$ usando sus similitudes coseno a los espacios
+            	$W_{n,k}$. Puesto que la forma de la gr\'afica de una se\~nal
+            	es invariante ante multiplicaciones por escalares, note que
+            	el usar similitudes coseno en vez de distancias euclideas es
+            	mejor para dar una medida de la cercan\'ia de $x$ a un espacio
+            	de polinomios discretos $n-$dimensionales.
+			\includegraphics[width=0.95\linewidth]{analisis_forma}	
+			Si $x \neq 0$ y $a_{i} := \langle x, \cali{L}^{n,i} \rangle$, entonces 
+			\[
+			cos(\measuredangle(x, W_{n,k})) = 			
+			\frac{
+			\sqrt{\suma{i=0}{k}{a_{i}^{2}}}}
+			{\sqrt{\suma{i=0}{n-1}{a_{i}^{2}}}},
+			\hspace{1.3cm} \textit{y} \hspace{1.3cm}
+			x \in W_{n,k} \iff cos(\measuredangle(x, W_{n,k})) = 1.
+			\]			
+			\end{block}			                        
+            \vfill
+            \vspace{1cm}
+
+
+            \begin{block}{An\'alisis espectrales de los PDL}
+              \begin{columns}
+                \begin{column}{.59\textwidth}
+                  \vskip-3ex     
+                  \begin{center}
+                  \includegraphics[width=0.4\linewidth]{oscil_motiv}
+                  \end{center}
+              	
+              	Las condiciones de ortogonalidad en la definici\'on de los
+              	PDL $\cali{L}^{n,k}$ 
+              	implican un aumento en los cambios de signo de sus entradas
+              	conforme la variable de grado $k$ aumenta.
+                \end{column}
+                \begin{column}{.39\textwidth}                
+                  \vskip-3ex
+                  Usando la transformada discreta de Fourier
+                  \begin{center}
+                   \includegraphics[width=0.7\linewidth]{espectroFourier_PDL_18_7}
+                  \end{center}
+
+                  Objetivo: poder tomar en consideraci\'on
+                   frecuencias $\omega \geq 0$ arbitrarias.
+                 
+                \end{column}
+              \end{columns}
+            \end{block}
+            \vfill
+            \vspace{1cm}
+            
+            
+            % ----------------------------------
+            \begin{block}{An\'alisis espectral usando espacios monofrecuenciales}
+              \begin{columns}
+                \begin{column}{.59\textwidth}
+                  \vskip-3ex     
+                  Se\~nal $n-$dimensional de frecuencia pura $\omega$
+				  $x = A \left( cos \left( 2 \pi \omega \frac{m}{n} + 
+			      2 \pi \phi  \right) \right)_{m=0}^{n-1} \in \IR^{n}$. \\
+              	
+				\begin{center}
+				Amplitud $A \geq 0$, frecuencia $\omega \geq 0$, desfase 
+				$\phi \in [0,1[$.
+				\end{center}				              	
+              	Haciendo $A =1$ y $\phi = 0, \pi/2$ obtenemos los vectores
+              	$c_{n, \omega}$ y $s_{n, \omega}$.
+              	$x \in P_{n, \omega} := span \{ c_{n, \omega}, s_{n, \omega} \}$
+              	sii $x$ es de frecuencia pura $\omega$. Si $x \neq 0$, definimos
+              	\[
+              	\sigma_{n, \omega} (x) =  cos(\measuredangle(x, P_{n, \omega})),
+              	\]
+              	y a su espectro $\Sigma_{x}: [0, n/2] \longrightarrow [0,1]$
+              	como la funci\'on continua 
+              	
+              	\begin{align*}
+\Sigma_{x}(\omega)= \begin{cases}
+cos(\measuredangle(x, P_{n, \omega})) & 
+\hspace{0.2cm} \textit{ si } \omega \in ]0, n/2[, \\
+cos(\measuredangle(x, W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = 0, \\
+cos(\measuredangle(A_{n}(x), W_{n,1})) & \hspace{0.2cm} \textit{ si } \omega = n/2.
+\end{cases}
+\end{align*}
+              
+                \end{column}
+                \begin{column}{.39\textwidth}                
+                  \vskip-3ex
+                  Operador de alternancia $A_{n} : \IR^{n} \longrightarrow \IR^{n}$
+                  \[
+					\forall x = (x_{m})_{m=0}^{n-1} \in \IR^{n}:
+			\hspace{0.5cm}
+			A_{n}(x) = ((-1)^{m})_{m=0}^{n-1}.
+			\]
+                  \begin{center}
+                   \includegraphics[width=0.6\linewidth]{alter_3}
+                  \end{center}
+
+				{\small{El espectro $\Sigma_{x}$ es una funci\'on
+			\textbf{continua} y, exceptuando los puntos extremos, 
+			\textbf{una extensi\'on
+			del espectro de Fourier}.
+				
+					Para toda $0 < \omega < n/2$,
+			entre m\'as cercano a uno sea $\Sigma_{x}(\omega)$,
+			m\'as cerca estar\'a $x$ de tener la propiedad de ser
+			de frecuencia pura $\omega$. A los $\omega \in [0, n/2]$
+			en los que $\Sigma_{x}$ alcance su m\'aximo se les llamar\'a
+			\textbf{frecuencias principales} de $x$.}}
+%\vspace{1cm}
+                \end{column}
+              \end{columns}
+              
+              \begin{center}
+                   \includegraphics[width=0.7\linewidth]{alter_espec}
+                  \end{center}
+              
+            \end{block}
+            \vfill
+            \vspace{1cm}
+            
+            
 
 			%\begin{block}{Borrador}
 			%Se\~nal $n-$dimensional de frecuencia pura $\omega$
@@ -307,87 +455,8 @@
 			
 			
 			
-         % }
-       % \end{minipage}
-      \end{beamercolorbox}
-    \end{column}
-    % ---------------------------------------------------------%
-    % end the column
-
-    % ---------------------------------------------------------%
-    % Set up a column 
-    \begin{column}{.49\textwidth}
-      %\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
-       % \begin{minipage}[T]{.95\textwidth} % tweaks the width, makes a new \textwidth
-         % \parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
-            % Since all columns are the same length, it is all nice and tidy.  You have to get the height empirically
-            % ---------------------------------------------------------%
-
-            	\begin{block}{Usando representaciones respecto a 
-            	$\cali{L}^{n}$ para hacer an\'alisis de morfolog\'ia}
-            	Se mide la distancia de una se\~nal $x$ a tener 
-            	grado $k$ usando sus similitudes coseno a los espacios
-            	$W_{n,k}$. Puesto que la forma de la gr\'afica de una se\~nal
-            	es invariante ante multiplicaciones por escalares, note que
-            	el usar similitudes coseno en vez de distancias euclideas es
-            	mejor para medir la cercan\'ia de $x$ a un espacio
-            	de polinomios discretos $n-$dimensionales.
-			\includegraphics[width=0.95\linewidth]{analisis_forma}	
-			Si $x \neq 0$ y $a_{i} := \langle x, \cali{L}^{n,i} \rangle$, entonces 
-			\[
-			cos(\measuredangle(x, W_{n,k})) = 
-			\frac{||\Pi_{W_{n,k}}(x)||}{||x||}			
-			=
-			\frac{
-			\sqrt{\suma{i=0}{k}{a_{i}^{2}}}}
-			{\sqrt{\suma{i=0}{n-1}{a_{i}^{2}}}},
-			\hspace{0.2cm} \textit{y} \hspace{0.2cm}
-			x \in W_{n,k} \iff cos(\measuredangle(x, W_{n,k})) = 1.
-			\]			
-			\end{block}			                        
-            \vfill
-            \vspace{1cm}
-
-
-            \begin{block}{An\'alisis espectrales de los PDL}
-              \begin{columns}
-                \begin{column}{.59\textwidth}
-                  \vskip-3ex     
-                  \begin{center}
-                  \includegraphics[width=0.4\linewidth]{oscil_motiv}
-                  \end{center}
-              	
-              	Las condiciones de ortogonalidad en la definici\'on de los
-              	PDL $\cali{L}^{n,k}$ 
-              	implican un aumento en los cambios de signo de sus entradas
-              	conforme la variable de grado $k$ aumenta.
-                \end{column}
-                \begin{column}{.39\textwidth}                
-                  \vskip-3ex
-                  Usando la transformada discreta de Fourier
-                  \begin{center}
-                   \includegraphics[width=0.7\linewidth]{espectroFourier_PDL_18_7}
-                  \end{center}
-
-                  Objetivo: poder tomar en consideraci\'on
-                   frecuencias $\omega \geq 0$ arbitrarias.
-                 
-                \end{column}
-              \end{columns}
-            \end{block}
-            \vfill
-            \vspace{1cm}
+         % }            
             
-            \begin{block}{An\'alisis espectral usando espacios monofrecuenciales}
-            
-            \begin{center}
-            \includegraphics[width=1\linewidth]{espectro_espMono_bien}
-            \end{center}
-				
-						
-			\end{block}			                        
-            \vfill
-            \vspace{1cm}
             
             \usebackgroundtemplate%
 
@@ -404,7 +473,7 @@
 			espectro evaluado en esta muy cercano a uno, pero conforme $n$
 			crece y $k$ tiende a $n-1$ (su cota superior), los valores
 			$\sigma_{n}(\cali{L}^{n,k}, \omega)$
-			parecen est\'ar muy alejados de $1$, por lo que no
+			parecen estar muy alejados de $1$, por lo que no
 			parece ser factible aproximar la gr\'afica de tales PDL
 			s\'olo con un sinusoide.
 			\begin{center}
