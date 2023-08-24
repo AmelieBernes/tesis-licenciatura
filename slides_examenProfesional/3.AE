@@ -9,25 +9,9 @@
  \end{figure}
 \end{frame}
 
-\begin{frame}{Motivación para realizar un análisis espectral de los PDL}
-    \begin{figure}[h]
-		\includegraphics[scale = 0.8]{oscil1}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-    \begin{figure}[h]
-		\includegraphics[scale = 0.8]{oscil2}
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-    \begin{figure}[h]
-		\includegraphics[scale = 0.8]{oscil3}
-	\end{figure}
-\end{frame}
-
 \begin{frame}{Una hipótesis sobre las oscilaciones de los PDL}
+Intentemos aproximar las gráficas de algunos PDL de dimensión
+$n = 60$ y grado bajo con sinusoides.
     \begin{figure}[h]
 		\includegraphics[scale = 0.42]{hip_0,1}
 	\end{figure}
@@ -106,27 +90,6 @@ discretizaciones de sinusoides de ciertas frecuencias enteras.
 
 \end{frame}
 
-
-\begin{frame}
-
-\begin{center}
-    \begin{figure}[h]
-		\includegraphics[scale = 0.7]{four1}
-	\end{figure}
-\end{center}
-
-\end{frame}
-
-
-\begin{frame}
-
-\begin{center}
-    \begin{figure}[h]
-		\includegraphics[scale = 1]{four2}
-	\end{figure}
-\end{center}
-
-\end{frame}
 
 \begin{frame}
 \begin{defi}

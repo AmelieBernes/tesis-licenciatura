@@ -151,10 +151,6 @@ $x$ es cuadrática sii $x \in W_{n,2}$ y $x \not\in W_{n,1}$.
 		$i$ tal que $x = \Omega_{n, \cali{P}}(g)$.
 		\end{itemize}
 \end{prop}
-\pause
-Este resultado implica que
-\textcolor{red}{toda señal $n-$dimensional sea la discretización
-puntual uniforme de un polinomio de grado a lo más $n$}.
 \end{frame}
 
 
