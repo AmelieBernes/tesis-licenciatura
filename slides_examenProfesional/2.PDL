@@ -489,7 +489,7 @@ con $d_{n-1}(x) = 1$. El teorema \ref{teo: est grad} es traduce en que
 
 \begin{itemize}
     \item Si $d_{0}(x) = 1$, entonces $x$ tiene grado cero. En caso contrario,
-	\item el índice $k$ para el que se cumpla que $d_{k}(x) < 1 $ 
+	\item el índice $k$ para el que se cumpla que $d_{k-1}(x) < 1 $ 
 	y $d_{k}(x) = 1$ es el grado de la señal x.
 \end{itemize}
 
