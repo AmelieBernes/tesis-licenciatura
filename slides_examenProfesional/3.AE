@@ -175,7 +175,7 @@ cos \left(  2 \pi \omega m/n + 2 \pi \phi
 una \textbf{señal $n$-dimensional de frecuencia pura $\omega$}. 
 En este contexto,
 $\phi \in [0,1]$ será llamado el \textbf{desfase normalizado}
-de la señal, y $A \in \IR$ la \textbf{amplitud}.
+de la señal, y $A \geq 0$ la \textbf{amplitud}.
 \end{defi}
 \end{frame}
 
