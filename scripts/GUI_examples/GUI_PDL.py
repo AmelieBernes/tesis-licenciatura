@@ -7,42 +7,23 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib
 matplotlib.use('TkAgg')
 
+#sg.theme('DarkPurple2')
+sg.theme('DarkPurple1')
 
-sg.theme('DarkPurple2')
-
-
-#fig = matplotlib.figure.Figure(figsize=(5, 4), dpi=100)
 # ------------------------------- Beginning of Matplotlib helper code -----------------------
 
 
-#Quisiera quitar esta y quedarme con las demás.
-def draw_figure(canvas, figure):
+
+def draw_figure(canvas, figure, clear = False):
+    if clear == True:
+        if canvas.children:
+            for child in canvas.winfo_children():
+                child.destroy()
+
     figure_canvas_agg = FigureCanvasTkAgg(figure, canvas)
     figure_canvas_agg.draw()
     figure_canvas_agg.get_tk_widget().pack(side='top', fill='both', expand=1)
     return figure_canvas_agg
-
-
-
-def pack_figure(graph, figure):
-    canvas = FigureCanvasTkAgg(figure, graph.Widget)
-    plot_widget = canvas.get_tk_widget()
-    plot_widget.pack(side='top', fill='both', expand=1)
-    return plot_widget
-
-def plot_figure(index, theta):
-    fig = plt.figure(index)         # Active an existing figure
-    ax = plt.gca()                  # Get the current axes
-    x = [degree for degree in range(1080)]
-    y = [math.sin((degree+theta)/180*math.pi) for degree in range(1080)]
-    ax.cla()                        # Clear the current axes
-    ax.set_title(f"Sensor Data {index}")
-    ax.set_xlabel("X axis")
-    ax.set_ylabel("Y axis")
-    ax.set_xscale('log')
-    ax.grid()
-    plt.plot(x, y)                  # Plot y versus x as lines and/or markers
-    fig.canvas.draw() 
 
 
 # ----------------------- Funciones auxiliares ---------------------------------
@@ -74,8 +55,7 @@ file_header = [
         ],
     [
         sg.Text("Introduzca la dimensión (entero entre 2 y 69, inclusivo) y el grado (entero no negativo y no mayor a la dimensión) del PDL a analizar")
-        ],
-        [sg.Text(size=(40, 1), key="-WARNING-")],
+        ]
         ]
 
 inputs =[
@@ -86,28 +66,36 @@ inputs =[
         sg.Text("Grado"), sg.InputText(key = "-GRADO-")
         ],
     [
-        sg.Button("OK", key = "-OK-")
+        sg.Button("OK", key = "-OK-"), sg.Button("Cancelar", key = "-CANCEL-")
         ],
-    [
-        sg.Button("Cancelar", key = "-CANCEL-")
-        ]
         ]
 
 layout = [
     [
-        sg.Column(file_header),
+        #sg.Column(file_header),
         #sg.VSeparator(),
-        sg.Column(inputs),
+        file_header,
+        inputs, 
         sg.Canvas(size=(700,500), background_color='grey', key='-CANVAS-')
         ]
         ]
 
-window = sg.Window("PDL", layout )
+
 
 
 # ------------------------ Lógica de la GUI --------------------------------------
 
 t = np.arange(0, 3, .01)
+
+
+#Creamos la imagen en la que se mostrarán los espectros pedidos por el usuario
+#antes del loop
+plt.figure(1)
+fig = plt.gcf()
+
+
+
+window = sg.Window("PDL", layout )
 
 while True:
     event, values = window.read()
@@ -120,24 +108,24 @@ while True:
             n, k = int(values["-DIM-"]), int(values["-GRADO-"])
 
             inputs_validez = are_inputs_valid(n, k)
-            #sg.popup(str(inputs_validez) + str(type(n)) + str(k))
-            #TODO agregar un botón de clear.
+
             if inputs_validez  == False:
-                #TODO tal vez sea mejor poner un sg.popup!
-                window["-WARNING-"].update("INPUT INVÁLIDO", background_color = "black", text_color = "white")
+                sg.popup("INPUT INVÁLIDO")
             else:
-                window["-WARNING-"].update(" ")
-
-                fig= matplotlib.figure.Figure(dpi=100)
                 
-                fig.add_subplot(111).plot(t, n*t + k)
+                x = np.linspace(0, 2 * np.pi)
+                y = np.sin(x)
+                plt.plot(x, y)
+                plt.title('y=sin(x)')
+                plt.xlabel('X')
+                plt.ylabel('Y')
+                plt.grid()
 
-                #TODO i need to clear this window first...
-                fig_canvas_agg = draw_figure(window['-CANVAS-'].TKCanvas, fig)
+                draw_figure(window['-CANVAS-'].TKCanvas, fig, clear = True)
 
 
         except ValueError:
-            window["-WARNING-"].update("INPUT INVÁLIDO", background_color = "black", text_color = "white")
+            sg.popup("INPUT INVÁLIDO")
 
     #TODO poner la grafica del espectro en un sg.popup!
 

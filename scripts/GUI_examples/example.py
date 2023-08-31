@@ -33,9 +33,9 @@ class Toolbar(NavigationToolbar2Tk):
 # ------------------------------- PySimpleGUI CODE
 
 layout = [
-    [sg.T('Graph: y=sin(x)')],
-    [sg.B('Plot'), sg.B('Exit')],
-    [sg.T('Controls:')],
+    [sg.T('Graph: y=sin(x)')], #T means text
+    [sg.B('Plot'), sg.B('Exit')], #B means button
+    [sg.T('Controls:')], 
     [sg.Canvas(key='controls_cv')],
     [sg.T('Figure:')],
     [sg.Column(
