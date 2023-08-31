@@ -662,6 +662,44 @@ def grafica_analisisEspectrales_PDL(n,k, graficar = True):
 
 
 
+# Función para la GUI. Simplificar el código!
+def grafica_analisisEspectrales_PDL_GUI(fig, n,k):
+  """
+  
+  Función para graficar el análisis espectral de un polinomio discreto de Legendre (PDL).
+  
+  'n' (entero mayor o igual a dos) es la dimensión del PDL, 
+  'k' \in \{0, 1, ... , n-1 \} es su grado.
+  
+  """
+  #TODO nombre antiguo: analisis_espectrales_PDL_guardarGrafica(n,k)
+  #TODO poner a la ruta como argumento. Como es siempre la misma ruta, ponla como una variable global,
+  #para no tener que pedirla siempre como argumento.
+  x = legendre.calculo_base(n)[k]
+  frecuencias = [a/100 for a in range(int(n*100/2) + 1)] 
+  #Quitamos las frecuencias extremas, que son casos especiales.
+  frecuencias.pop(0)
+  frecuencias.pop(-1)
+  nombre = r'\mathcal{{L}}^{{{0}}}'.format(str(n)+','+str(k)) 
+
+
+  gs = fig.add_gridspec(2,2)
+  ax0 = fig.add_subplot(gs[1, :1])
+  ax1 = fig.add_subplot(gs[1, 1:])
+  ax2 = fig.add_subplot(gs[0, :2])
+
+  ax2.set_title('Espectros')
+  ax2.axvline(x = k/2, color = colores[8], linewidth = 2, label = "x = " + str(k/2))
+  ax2.axhline(y = 1, color = colores[8], linewidth = 2, linestyle = 'dotted')
+
+  grafica_taus_axis(x, n, nombre, ax0, ax2)
+  analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, ax1, ax2)
+
+  fig.suptitle('Análisis espectrales de ' + "${0}$".format(nombre) + r'$\in \mathbb{{R}}^{{{0}}}$'.format(str(n)), fontsize = 18)
+
+  return fig 
+
+
 """
 #  ---------------------------------------- -- ----------------------------------------
 
