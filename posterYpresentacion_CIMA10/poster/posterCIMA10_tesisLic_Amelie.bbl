@@ -1,0 +1,101 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{anyt/global//global/global}
+  \entry{nikiforov}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NSSVUA}{%
+         family={Nikiforov},
+         familyi={N\bibinitperiod},
+         suffix={A.F.},
+         suffixi={A\bibinitperiod},
+         given={S.K. Suslov V.B.\bibnamedelima Uvarov},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  V\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NASSVU1}
+    \strng{fullhash}{NASSVU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Nik91}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Classical orthogonal polynomials of a discrete variable}
+    \field{journaltitle}{Springer Berlin Heidelberg}
+    \field{year}{1991}
+  \endentry
+
+  \entry{Neuman}{article}{}
+    \name{author}{2}{}{%
+      {{hash=NCP}{%
+         family={Neuman},
+         familyi={N\bibinitperiod},
+         given={Charles\bibnamedelima P},
+         giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=SDI}{%
+         family={Schonbach},
+         familyi={S\bibinitperiod},
+         given={Dave\bibnamedelima I},
+         giveni={D\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{NCPSDI1}
+    \strng{fullhash}{NCPSDI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{NS74}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{4}
+    \field{pages}{743\bibrangedash 770}
+    \field{title}{Discrete (Legendre) orthogonal polynomials—a survey}
+    \field{volume}{8}
+    \field{journaltitle}{International Journal for Numerical Methods in
+  Engineering}
+    \field{year}{1974}
+  \endentry
+
+  \entry{roy}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RR}{%
+         family={Roy},
+         familyi={R\bibinitperiod},
+         given={Ranjan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RR1}
+    \strng{fullhash}{RR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Roy93}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{495\bibrangedash 512}
+    \field{title}{The work of Chebyshev on orthogonal polynomials}
+    \field{volume}{Topics In Polynomials Of One And Several Variables And Their
+  Applications: Volume Dedicated to the Memory of PL Chebyshev (1821–1894)}
+    \field{year}{1993}
+  \endentry
+\enddatalist
+\endinput
