@@ -334,28 +334,45 @@ def grafica_taus_axis(x, n, nombre, axis1, axis2, leyenda_interior = False):
 
 def vectores_frecuencia(n, w): #TODO quita a n del argumento.
   """
+
   n y w ambas de tipo int, n mayor o igual a dos, w no negativa.
-  n es la dimensión, w la frecuencia 
-  
+  n se interpreta como dimensión y w como frecuencias.
+
+  Si w es elemento de (n/2)Z, como la discretización n-dim del seno de frecuencia
+  w es cero, se regresa sólamente la discretización normalizada del
+  coseno n-dim de frecuencia w. 
+
+  En caso contrario, 
+  se regresan los vectores c_nw, s_nw (normalizaciones de discretizaciones
+  del coseno y seno discretos n-dimensionales de frecuencia w), 
+  así como sus factores de normalización
+
   """
+  #vector coseno no normalizado
   C_nw = np.array([np.cos(2*pi*w*m/n) for m in range(n) ])
 
-  if w % (n/2) == 0: # caso 2
+  if w % (n/2) == 0: # Si w es congruente módulo n/2, entonces la discretización
+    #del seno es el vector cero, y la discretización del coseno tiene norma 1/2
+
+    #vector coseno normalizado
     c_nw= 1/math.sqrt(n) * C_nw
     return c_nw
   
-  else: #caso 1
-    a= math.sin(2*pi*w) 
-    b= math.cos(2*pi*w*(1-1/n))
-    c= math.sin(2*pi*w/n)
+  else: 
+    a = math.sin(2*pi*w) 
+    b = math.cos(2*pi*w*(1-1/n))
+    c = math.sin(2*pi*w/n)
 
-    xi_nw=math.sqrt(2) * (n+a*b/c)**(-1/2)
-    eta_nw=math.sqrt(2) * (n-a*b/c)**(-1/2)
+    #Calculamos los factores de normalización
+    xi_nw = math.sqrt(2) * (n+a*b/c)**(-1/2)
+    eta_nw = math.sqrt(2) * (n-a*b/c)**(-1/2)
 
+    #vector seno no normalizado
     S_nw = np.array([np.sin(2*pi*w*m/n) for m in range(n) ])
 
-    c_nw= xi_nw * C_nw
-    s_nw= eta_nw * S_nw
+    #vectores coseno y seno normalizados
+    c_nw = xi_nw * C_nw
+    s_nw = eta_nw * S_nw
 
   return c_nw, s_nw, xi_nw, eta_nw
 
@@ -395,13 +412,14 @@ def amplDesfase_caso1(x,w):
   if c>0 and d>0:
     phi = tan/(2*pi)
   elif (c<0 and d>0) or (c<0 and d<0): #tenía mal el último caso; esto era el error que buscabas:)
+    #TODO agregar lo casos extremos c = 0 y d =0 !!
     phi = (tan + pi)/(2*pi)
   else:
     phi = (tan + 2*pi)/(2*pi)
   return A, phi
 
 
-#TODO quita lo de 'caso 1' del nombre
+#TODO quita lo de 'caso 1' del nombre: cambiar nombre a grafica_amplDesfase_axis_caso1
 def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   """
   
@@ -410,7 +428,7 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
   donde n = len(x) y w>0 es la frecuencia dada como input.
   
   """
-  #TODO cambiar nombre a grafica_amplDesfase_axis_caso1
+  #TODO por qué ignoro el caso 2?
   n = len(x)
 
   #sigma = sigma_caso1(x, w) #TODO por qué calculo la sigma? esto no es necesario.
@@ -421,25 +439,12 @@ def grafica_sigma_amplDesfase_axis_caso1(x, w, axis):
 
   dominio=[k/n for k in range(n)]
   proyeccion_Pnw = [coseno_amplDes(m/n) for m in range(n)]
-
-  #axis.scatter(dominio, x, color=colores[0], s=80)
-
-  #axis.scatter(dominio, proyeccion_Pnw, color='green', s=80, label = r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n), str(round(w, 2))) )
   
-
-  #TODO checa esta repetición de código.
   X=np.arange(0, 1, 0.0001)
   axis.plot(X, coseno_amplDes(X), color=colores[2])
 
   formato_axis(axis, leyenda_interior = False)
 
-  def coseno_amplDes(t):
-    return A * np.cos(2*pi*w*t-2*pi*phi)
-
-  dominio=[k/n for k in range(n)]
-  proyeccion_Pnw = [coseno_amplDes(m/n) for m in range(n)]
-
-  #axis.scatter(dominio, x, color=colores[0], s=80)
   axis.scatter(dominio, proyeccion_Pnw, color=colores[2], s=80, label=r'Gráfica de $\Pi_{{P_{{ {0}, {1} }} }}(x)$'.format(str(n),str( round(w, 2) ) ))
   
   X=np.arange(0, 1, 0.0001)
@@ -452,12 +457,15 @@ def analisis_espectral_espaciosMonofrecuenciales(x, n, frecuencias, nombre, axis
   """
   x es un array
   'frecuencias' es un vector de frecuencias.
-  En 'axis0' se grafica la señal x, en el 'axis1' el espectro.
+  En 'axis0' se dibuja la gráfica la señal x, en el 'axis1' la gráfica de 
+  su espectro basado en espacios monofrecuenciales.
   """
   dominio_tiempo=[m/n for m in range(n)] 
 
+  #gráfica de x
   axis0.scatter(dominio_tiempo, x, color= colores[0], s= 50, label = "${0}$".format(nombre), zorder = 3)
   axis0.set_title('Gráfica de '+ "${0}$".format(nombre))
+
 
   #Calculando el espectro
   sigmas = []
@@ -1140,6 +1148,7 @@ def grafica_analisisEspectrales_PDL_GUI(fig, n,k):
 
 if __name__ == '__main__':
   
+  print(calculo_baseFourier(6))
 
   print('No se supone que se ejecute más este script. \n')
   print('Para usar las funciones de graficación definidas en él, hágalo a través del módulo')

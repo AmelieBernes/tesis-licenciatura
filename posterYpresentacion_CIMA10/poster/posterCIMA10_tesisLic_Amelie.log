@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.25)  4 SEP 2023 11:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.25)  7 SEP 2023 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1795,16 +1795,16 @@ File: figures//logo_BUAP.png Graphic file (type png)
 Package pdftex.def Info: figures//logo_BUAP.png  used on input line 146.
 (pdftex.def)             Requested size: 358.33768pt x 358.35999pt.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <24.88> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <20.74> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <17.28> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 500.
+ut line 501.
 
 (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1812,52 +1812,52 @@ thkerncmss.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <24.88> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 501.
 
 
 <figures//cuadr2.png, id=15, 377.9721pt x 139.4811pt>
 File: figures//cuadr2.png Graphic file (type png)
 <use figures//cuadr2.png>
-Package pdftex.def Info: figures//cuadr2.png  used on input line 500.
+Package pdftex.def Info: figures//cuadr2.png  used on input line 501.
 (pdftex.def)             Requested size: 1085.54912pt x 400.6964pt.
 <figures//esquema_construccion_bien.png, id=16, 374.1177pt x 322.806pt>
 File: figures//esquema_construccion_bien.png Graphic file (type png)
 <use figures//esquema_construccion_bien.png>
 Package pdftex.def Info: figures//esquema_construccion_bien.png  used on input 
-line 500.
+line 501.
 (pdftex.def)             Requested size: 1085.54912pt x 936.95078pt.
 <figures//nuevas_lupas.png, id=17, 346.4142pt x 171.7617pt>
 File: figures//nuevas_lupas.png Graphic file (type png)
 <use figures//nuevas_lupas.png>
-Package pdftex.def Info: figures//nuevas_lupas.png  used on input line 500.
+Package pdftex.def Info: figures//nuevas_lupas.png  used on input line 501.
 (pdftex.def)             Requested size: 799.87738pt x 396.64494pt.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <12> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 <figures//analisis_forma.png, id=18, 1330.9725pt x 616.55344pt>
 File: figures//analisis_forma.png Graphic file (type png)
 <use figures//analisis_forma.png>
-Package pdftex.def Info: figures//analisis_forma.png  used on input line 500.
+Package pdftex.def Info: figures//analisis_forma.png  used on input line 501.
 (pdftex.def)             Requested size: 1085.54912pt x 502.89586pt.
 <figures//oscil_motiv.png, id=19, 226.9278pt x 245.2362pt>
 File: figures//oscil_motiv.png Graphic file (type png)
 <use figures//oscil_motiv.png>
-Package pdftex.def Info: figures//oscil_motiv.png  used on input line 500.
+Package pdftex.def Info: figures//oscil_motiv.png  used on input line 501.
 (pdftex.def)             Requested size: 269.66832pt x 291.44926pt.
 <figures//espectroFourier_PDL_18_7.png, id=20, 292.6935pt x 263.7855pt>
 File: figures//espectroFourier_PDL_18_7.png Graphic file (type png)
 <use figures//espectroFourier_PDL_18_7.png>
 Package pdftex.def Info: figures//espectroFourier_PDL_18_7.png  used on input l
-ine 500.
+ine 501.
 (pdftex.def)             Requested size: 311.95169pt x 281.14484pt.
 
-Overfull \hbox (92.63574pt too wide) detected at line 500
+Overfull \hbox (92.63574pt too wide) detected at line 501
 \OMS/cmsy/b/n/24.88 8\OT1/mathkerncmss/bx/sl/24.88 x \OT1/cmss/bx/n/24.88 = (\O
 T1/mathkerncmss/bx/sl/24.88 x[]\OT1/cmss/bx/n/24.88 )[] \OMS/cmsy/b/n/24.88 2 \
 U/msb/m/n/24.88 R[] \OT1/cmss/bx/n/24.88 :  \OT1/mathkerncmss/bx/sl/24.88 A[]\O
@@ -1868,28 +1868,28 @@ OMS/cmsy/b/n/24.88 ^^@\OT1/cmss/bx/n/24.88 1)[])[]\OML/cmm/b/it/24.88 :
 <figures//alter_3.png, id=21, 688.0104pt x 346.1733pt>
 File: figures//alter_3.png Graphic file (type png)
 <use figures//alter_3.png>
-Package pdftex.def Info: figures//alter_3.png  used on input line 500.
+Package pdftex.def Info: figures//alter_3.png  used on input line 501.
 (pdftex.def)             Requested size: 267.39104pt x 134.53693pt.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 500.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 501.
 
 <figures//alter_espec.png, id=22, 679.338pt x 175.1343pt>
 File: figures//alter_espec.png Graphic file (type png)
 <use figures//alter_espec.png>
-Package pdftex.def Info: figures//alter_espec.png  used on input line 500.
+Package pdftex.def Info: figures//alter_espec.png  used on input line 501.
 (pdftex.def)             Requested size: 799.87738pt x 206.21573pt.
 <figures//resultados.png, id=23, 340.6326pt x 234.6366pt>
 File: figures//resultados.png Graphic file (type png)
 <use figures//resultados.png>
-Package pdftex.def Info: figures//resultados.png  used on input line 500.
+Package pdftex.def Info: figures//resultados.png  used on input line 501.
 (pdftex.def)             Requested size: 685.61914pt x 472.27945pt.
 
-Overfull \vbox (16.46074pt too high) detected at line 500
+Overfull \vbox (22.68074pt too high) detected at line 501
  []
 
 File: figures//logo_BUAP.png Graphic file (type png)
 <use figures//logo_BUAP.png>
-Package pdftex.def Info: figures//logo_BUAP.png  used on input line 500.
+Package pdftex.def Info: figures//logo_BUAP.png  used on input line 501.
 (pdftex.def)             Requested size: 358.33768pt x 358.35999pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -2110,7 +2110,7 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/cm-super/sfso1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-
 super/sfso1728.pfb>
-Output written on posterCIMA10_tesisLic_Amelie.pdf (1 page, 1960297 bytes).
+Output written on posterCIMA10_tesisLic_Amelie.pdf (1 page, 1960324 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream

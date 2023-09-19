@@ -110,6 +110,8 @@ def sinusoide_espectros(n, w, A, phi, nombre, ruido = True):
 #  ---------------------------------------- -- ----------------------------------------
 """
 
+x = [12, 5, 8, 9, 7, 4, -1.3,12]
+ae.espectro_Fourier(x, "x")
 
 def f(t):
       return 3* np.sin(2*np.pi*t) + np.sin(2*np.pi*4*t) + 0.5* np.cos(2*np.pi*7*t)

@@ -2,19 +2,18 @@ import PySimpleGUI as sg
 import os.path
 
 
+
+#FileBrowse() and FolderBrowse() are different widgets.
+
+
 layout = [
     [sg.Text("Análisis morfológico y espectral usando los PDL y espacios monofrecuenciales")],
     [
-        sg.Text("Folder con el archivo .txt con las mediciones:"),
-        sg.In(enable_events=True, key="-FOLDER-"),
-        sg.FolderBrowse(),
+        sg.Text("Archivo .txt con las mediciones:"),
+        sg.In(enable_events=True, key="-MEDICIONES-"),
+        sg.FileBrowse(),
     ],
     [sg.Text("Tolerancia para el cálculo del grado:"), sg.Input(enable_events = True, key = "-EPSILON-")],
-    [
-        sg.Listbox(
-            values=[], enable_events=True, size=(40, 20), key="-FILE LIST-"
-        )
-    ],
     [sg.Button("Salir", key = "-SALIR-")]
 ]
 
@@ -28,20 +27,12 @@ while True:
     #The conditional statements are used to control what happens.
     if event == "-SALIR-" or event == sg.WIN_CLOSED:
         break
-    if event == "-FOLDER-":
-        folder = values["-FOLDER-"]
-        try:
-            # Get list of files in folder
-            file_list = os.listdir(folder)
-        except:
-            file_list = []
+    if event == "-MEDICIONES-":
+        archivo = values["-MEDICIONES-"] #Tipo string, es la ruta al archivo seleccionado por el usuario.
+        if archivo.lower().endswith((".txt")) == False: #si el archivo seleccionado no es un txt,
+                                                        #lanzamos un error
+            sg.popup("INPUT INVÁLIDO: Debe de seleccionar un archivo de extensión .txt")
+            window["-MEDICIONES-"].update("")
 
-        fnames = [
-            f
-            for f in file_list
-            if os.path.isfile(os.path.join(folder, f))
-            and f.lower().endswith((".txt"))
-        ]
-        window["-FILE LIST-"].update(fnames)
 
 window.close()
